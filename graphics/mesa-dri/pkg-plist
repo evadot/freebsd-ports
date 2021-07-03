@@ -1,11 +1,9 @@
 @comment include/GL/gl.h
-@comment include/GL/gl_mangle.h
 @comment include/GL/glcorearb.h
 @comment include/GL/glext.h
 include/GL/internal/dri_interface.h
 @comment include/KHR/khrplatform.h
 @comment include/gbm.h
-%%INTEL_VDRIVER%%include/vulkan/vulkan_intel.h
 %%I915_DRIVER%%lib/dri/i915_dri.so
 %%I965_DRIVER%%lib/dri/i965_dri.so
 %%IRIS_GDRIVER%%lib/dri/iris_dri.so

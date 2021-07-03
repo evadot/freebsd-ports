@@ -76,11 +76,13 @@ MESON_ARGS+=	-Ddri-drivers="${DRI_DRIVERS:ts,:tl}" \
 
 # Disable some options
 MESON_ARGS+=	-Dgallium-xa=disabled \
+		-Dgallium-vdpau=disabled \
+		-Dgallium-va=disabled \
 		-Dgles1=disabled \
 		-Dgles2=disabled \
 		-Dglx=disabled \
 		-Degl=disabled \
-		-Dosmesa=none \
+		-Dosmesa=false \
 		-Dtools=""
 
 .for _d in ${ALL_DRI_DRIVERS}

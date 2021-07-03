@@ -32,7 +32,7 @@ MESON_ARGS+=	-Ddri-drivers="" \
 		-Dgbm=disabled \
 		-Dgles1=disabled \
 		-Dgles2=disabled \
-		-Dosmesa=none \
+		-Dosmesa=false \
 		-Dglx=disabled \
 		-Ddri3=disabled
 
