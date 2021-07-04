@@ -17,6 +17,6 @@ lib/libglapi.so
 lib/libglapi.so.0
 lib/libglapi.so.0.0.0
 @comment libdata/pkgconfig/dri.pc
-@comment libdata/pkgconfig/gbm.pc
+libdata/pkgconfig/gbm.pc
 @comment share/drirc.d/00-mesa-defaults.conf
 share/glvnd/egl_vendor.d/50_mesa.json
