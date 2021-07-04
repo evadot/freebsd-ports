@@ -40,6 +40,6 @@ do-configure:
 
 .include <bsd.port.options.mk>
 
-LLVM_DEFAULT=	12
+LLVM_DEFAULT=	10
 
 .include <bsd.port.mk>
