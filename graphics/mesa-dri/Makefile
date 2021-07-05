@@ -34,6 +34,10 @@ ALL_VULKAN_DRIVERS=	INTEL AMD
 
 GALLIUM_DRIVERS+=	SWRAST	# llvmpipe
 
+.if ${ARCH:Marm*}
+DRI_DRIVERS+=	R100
+.endif
+
 .if ${ARCH} == aarch64 || ${ARCH} == amd64 || ${ARCH} == i386 \
  || ${ARCH} == powerpc || ${ARCH} == powerpc64
 DRI_DRIVERS+=		R100 R200
