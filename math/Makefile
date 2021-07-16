@@ -382,6 +382,7 @@
     SUBDIR += lean
     SUBDIR += lemon
     SUBDIR += levmar
+    SUBDIR += lib2geom
     SUBDIR += libRmath
     SUBDIR += libbraiding
     SUBDIR += libccd
@@ -558,6 +559,7 @@
     SUBDIR += octave-forge-zeromq
     SUBDIR += octomap
     SUBDIR += ogdf
+    SUBDIR += oink
     SUBDIR += oleo
     SUBDIR += onednn
     SUBDIR += openblas
@@ -801,6 +803,7 @@
     SUBDIR += py-fastdtw
     SUBDIR += py-flax
     SUBDIR += py-fpylll
+    SUBDIR += py-fvcore
     SUBDIR += py-gau2grid
     SUBDIR += py-gimmik
     SUBDIR += py-gmpy
@@ -869,6 +872,7 @@
     SUBDIR += py-pynndescent
     SUBDIR += py-pyodeint
     SUBDIR += py-pyodesys
+    SUBDIR += py-pyreadr
     SUBDIR += py-pysmt
     SUBDIR += py-pystan
     SUBDIR += py-pysym
@@ -876,6 +880,7 @@
     SUBDIR += py-python-igraph
     SUBDIR += py-python-louvain
     SUBDIR += py-python-picard
+    SUBDIR += py-pytorchvideo
     SUBDIR += py-pyvtk
     SUBDIR += py-qdldl
     SUBDIR += py-quadprog
