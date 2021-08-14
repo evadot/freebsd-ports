@@ -154,6 +154,7 @@
     SUBDIR += kodi-addon-visualization.fishbmc
     SUBDIR += kodi-addon-visualization.shadertoy
     SUBDIR += kodi-addon-visualization.spectrum
+    SUBDIR += kooha
     SUBDIR += kvazaar
     SUBDIR += l-smash
     SUBDIR += libaacs
@@ -233,8 +234,10 @@
     SUBDIR += mkvalidator
     SUBDIR += mkvtoolnix
     SUBDIR += mkxvcd
-    SUBDIR += mlt
-    SUBDIR += mlt-qt5
+    SUBDIR += mlt6
+    SUBDIR += mlt6-qt5
+    SUBDIR += mlt7
+    SUBDIR += mlt7-qt5
     SUBDIR += mmsclient
     SUBDIR += mmsrip
     SUBDIR += motion
@@ -319,8 +322,10 @@
     SUBDIR += py-gstreamer1
     SUBDIR += py-guessit
     SUBDIR += py-librtmp
+    SUBDIR += py-mat2
+    SUBDIR += py-metadata-cleaner
     SUBDIR += py-mido
-    SUBDIR += py-mlt
+    SUBDIR += py-mlt6
     SUBDIR += py-moviepy
     SUBDIR += py-periscope
     SUBDIR += py-pretty_midi

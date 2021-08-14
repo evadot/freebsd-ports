@@ -17,6 +17,7 @@
     SUBDIR += alo-lv2
     SUBDIR += alsa-lib
     SUBDIR += alsa-plugins
+    SUBDIR += alsa-seq-server
     SUBDIR += alsa-sndio
     SUBDIR += alsa-utils
     SUBDIR += alure
@@ -886,6 +887,7 @@
     SUBDIR += zita-njbridge
     SUBDIR += zita-resampler
     SUBDIR += zita-rev1
+    SUBDIR += zplugins-lv2
     SUBDIR += zrythm
     SUBDIR += zynaddsubfx
 

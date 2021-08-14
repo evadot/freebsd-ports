@@ -192,6 +192,7 @@
     SUBDIR += mdbx
     SUBDIR += mdcached
     SUBDIR += memcached
+    SUBDIR += metabase
     SUBDIR += mongodb-tools
     SUBDIR += mongodb36
     SUBDIR += mongodb36-tools
@@ -854,6 +855,7 @@
     SUBDIR += redis5
     SUBDIR += redis_exporter
     SUBDIR += redisdesktopmanager
+    SUBDIR += redisjson
     SUBDIR += retcl
     SUBDIR += rocksdb
     SUBDIR += rocksdb-lite
