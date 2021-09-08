@@ -28,6 +28,7 @@
     SUBDIR += ccextractor
     SUBDIR += cclive
     SUBDIR += celluloid
+    SUBDIR += celluloid-devel
     SUBDIR += cheese
     SUBDIR += chilitags
     SUBDIR += cineencoder
@@ -109,6 +110,7 @@
     SUBDIR += gstreamer1-plugins-openh264
     SUBDIR += gstreamer1-plugins-resindvd
     SUBDIR += gstreamer1-plugins-rtmp
+    SUBDIR += gstreamer1-plugins-rust
     SUBDIR += gstreamer1-plugins-smoothstreaming
     SUBDIR += gstreamer1-plugins-svt-av1
     SUBDIR += gstreamer1-plugins-svt-hevc
@@ -230,6 +232,7 @@
     SUBDIR += minisatip
     SUBDIR += minitube
     SUBDIR += mjpegtools
+    SUBDIR += mjpg-streamer
     SUBDIR += mkclean
     SUBDIR += mkvalidator
     SUBDIR += mkvtoolnix

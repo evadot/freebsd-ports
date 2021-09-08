@@ -1,6 +1,5 @@
 PORTNAME=	siconos
-DISTVERSION=	4.4.0.rc3
-PORTREVISION=	2
+DISTVERSION=	4.4.0.rc4
 CATEGORIES=	science
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -9,6 +8,9 @@ COMMENT=	Simulation framework for nonsmooth dynamical systems
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+BROKEN_i386=		non-constant-expression cannot be narrowed from type 'unsigned int' to 'npy_intp', see https://github.com/siconos/siconos/issues/416
+BROKEN_FreeBSD_11=	error: use of undeclared identifier 'RTLD_DEEPBIND'
+
 BUILD_DEPENDS=	boost-libs>0:devel/boost-libs \
 		${PYTHON_PKGNAMEPREFIX}packaging>0:devel/py-packaging@${PY_FLAVOR} \
 		help2man:misc/help2man
@@ -16,12 +18,14 @@ LIB_DEPENDS=	libcxsparse.so:math/suitesparse-cxsparse \
 		libgmp.so:math/gmp \
 		libldl.so:math/suitesparse-ldl \
 		libopenblas.so:math/openblas
+TEST_DEPENDS=	cppunit>0:devel/cppunit
 
-USES=		cmake compiler:c++17-lang fortran pkgconfig
+USES=		cmake:testing compiler:c++17-lang fortran pkgconfig
 USE_GITHUB=	yes
 USE_LDCONFIG=	yes
 
 CMAKE_ARGS=	-DFREEBSD_PYTHON_VER=${PYTHON_VER}
+CMAKE_TESTING_ON=	WITH_TESTING # tests are broken, see https://github.com/siconos/siconos/issues/415
 
 CFLAGS+=	-DCLOCKTIME -DCLOCKS_PER_SEC=128 # workaround for 'Undefined symbol "ftime"', see https://github.com/siconos/siconos/issues/411
 

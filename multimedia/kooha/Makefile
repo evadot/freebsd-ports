@@ -1,7 +1,7 @@
 PORTNAME=	kooha
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.2.1-615
-DISTVERSIONSUFFIX=	-gec6b216
+DISTVERSION=	1.2.1-668
+DISTVERSIONSUFFIX=	-gb3720a5
 CATEGORIES=	multimedia
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -25,7 +25,8 @@ GLIB_SCHEMAS=	io.github.seadve.Kooha.gschema.xml
 INSTALLS_ICONS=	yes
 
 CARGO_CRATES=	aho-corasick-0.7.18 \
-		anyhow-1.0.42 \
+		anyhow-1.0.43 \
+		approx-0.5.0 \
 		ashpd-0.2.0-alpha-3 \
 		async-broadcast-0.3.3 \
 		async-channel-1.6.1 \
@@ -37,11 +38,11 @@ CARGO_CRATES=	aho-corasick-0.7.18 \
 		atomic_refcell-0.1.7 \
 		atty-0.2.14 \
 		autocfg-1.0.1 \
-		bitflags-1.3.1 \
+		bitflags-1.2.1 \
 		block-0.1.6 \
 		byteorder-1.4.3 \
 		cache-padded-1.1.1 \
-		cairo-rs-0.14.1 \
+		cairo-rs-0.14.3 \
 		cairo-sys-rs-0.14.0 \
 		cc-1.0.69 \
 		cfg-expr-0.8.1 \
@@ -82,9 +83,9 @@ CARGO_CRATES=	aho-corasick-0.7.18 \
 		gettext-rs-0.7.0 \
 		gettext-sys-0.21.2 \
 		gif-0.11.2 \
-		gio-0.14.0 \
+		gio-0.14.3 \
 		gio-sys-0.14.0 \
-		glib-0.14.2 \
+		glib-0.14.4 \
 		glib-macros-0.14.1 \
 		glib-sys-0.14.0 \
 		gobject-sys-0.14.0 \
@@ -94,10 +95,10 @@ CARGO_CRATES=	aho-corasick-0.7.18 \
 		gsk4-sys-0.2.0 \
 		gst-plugin-gif-0.7.1 \
 		gst-plugin-version-helper-0.7.1 \
-		gstreamer-0.17.2 \
+		gstreamer-0.17.3 \
 		gstreamer-base-0.17.2 \
 		gstreamer-base-sys-0.17.0 \
-		gstreamer-sys-0.17.0 \
+		gstreamer-sys-0.17.3 \
 		gstreamer-video-0.17.2 \
 		gstreamer-video-sys-0.17.0 \
 		gtk4-0.2.0 \
@@ -112,18 +113,18 @@ CARGO_CRATES=	aho-corasick-0.7.18 \
 		lazy_static-1.4.0 \
 		libadwaita-0.1.0-alpha-3 \
 		libadwaita-sys-0.1.0-alpha-3 \
-		libc-0.2.99 \
+		libc-0.2.101 \
 		libloading-0.7.0 \
-		libpulse-binding-2.24.0 \
-		libpulse-sys-1.19.1 \
+		libpulse-binding-2.25.0 \
+		libpulse-sys-1.19.2 \
 		locale_config-0.3.0 \
 		log-0.4.14 \
 		malloc_buf-0.0.6 \
-		memchr-2.4.0 \
+		memchr-2.4.1 \
 		memoffset-0.6.4 \
 		muldiv-1.0.0 \
-		nix-0.20.0 \
-		nix-0.21.0 \
+		nix-0.20.1 \
+		nix-0.21.1 \
 		num-derive-0.3.3 \
 		num-integer-0.1.44 \
 		num-rational-0.4.0 \
@@ -132,7 +133,7 @@ CARGO_CRATES=	aho-corasick-0.7.18 \
 		objc-foundation-0.1.1 \
 		objc_id-0.1.1 \
 		once_cell-1.8.0 \
-		pango-0.14.0 \
+		pango-0.14.3 \
 		pango-sys-0.14.0 \
 		parking-2.0.0 \
 		paste-1.0.5 \
@@ -150,7 +151,7 @@ CARGO_CRATES=	aho-corasick-0.7.18 \
 		proc-macro-hack-0.5.19 \
 		proc-macro-nested-0.1.7 \
 		proc-macro2-1.0.28 \
-		pulsectl-rs-0.2.14 \
+		pulsectl-rs-0.3.2 \
 		quick-error-1.2.3 \
 		quote-1.0.9 \
 		rand-0.8.4 \
@@ -163,8 +164,8 @@ CARGO_CRATES=	aho-corasick-0.7.18 \
 		scoped-tls-1.0.0 \
 		semver-0.11.0 \
 		semver-parser-0.10.2 \
-		serde-1.0.127 \
-		serde_derive-1.0.127 \
+		serde-1.0.130 \
+		serde_derive-1.0.130 \
 		serde_repr-0.1.7 \
 		sha1-0.6.0 \
 		slab-0.4.4 \
@@ -174,17 +175,17 @@ CARGO_CRATES=	aho-corasick-0.7.18 \
 		static_assertions-1.1.0 \
 		strum-0.21.0 \
 		strum_macros-0.21.1 \
-		syn-1.0.74 \
+		syn-1.0.75 \
 		system-deps-3.2.0 \
 		temp-dir-0.1.11 \
 		termcolor-1.1.2 \
-		thiserror-1.0.26 \
-		thiserror-impl-1.0.26 \
+		thiserror-1.0.28 \
+		thiserror-impl-1.0.28 \
 		time-0.1.43 \
 		toml-0.5.8 \
 		tracing-0.1.26 \
 		tracing-attributes-0.1.15 \
-		tracing-core-0.1.18 \
+		tracing-core-0.1.19 \
 		ucd-trie-0.1.3 \
 		unicode-segmentation-1.8.0 \
 		unicode-xid-0.2.2 \
@@ -212,5 +213,10 @@ CARGO_CRATES=	aho-corasick-0.7.18 \
 CARGO_BUILD=	no
 CARGO_INSTALL=	no
 CARGO_TEST=	no
+
+post-patch:
+# Make each cargo subcommand very verbose
+	@${REINPLACE_CMD} -e '/cargo/s/ --/&verbose&verbose&/' \
+		${WRKSRC}/build-aux/cargo.sh
 
 .include <bsd.port.mk>

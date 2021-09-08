@@ -1,5 +1,5 @@
 PORTNAME=	biostar-tools
-PORTVERSION=	1.3.0
+PORTVERSION=	1.6.0
 CATEGORIES=	biology python
 
 MAINTAINER=	jwb@FreeBSD.org
@@ -52,6 +52,14 @@ RUN_DEPENDS=	wget>0:ftp/wget \
 		${PYTHON_PKGNAMEPREFIX}goatools>0:biology/py-goatools@${PY_FLAVOR} \
 		erminej>0:biology/erminej \
 		${PYTHON_PKGNAMEPREFIX}ont-fast5-api>0:biology/py-ont-fast5-api@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}multiqc>0:biology/py-multiqc@${PY_FLAVOR} \
+		flash>0:biology/flash \
+		bfc:biology/bfc \
+		Jellyfish>0:biology/jellyfish \
+		mafft>0:biology/mafft \
+		clustal-omega>0:biology/clustal-omega \
+		${PYTHON_PKGNAMEPREFIX}pywgsim>0:biology/py-pywgsim@${PY_FLAVOR} \
+		sam2pairwise:biology/sam2pairwise
 
 USES=		metaport python
 

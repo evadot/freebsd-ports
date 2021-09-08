@@ -65,6 +65,7 @@
     SUBDIR += dlib-cpp
     SUBDIR += drawxtl
     SUBDIR += dvc
+    SUBDIR += dynare
     SUBDIR += eccodes
     SUBDIR += elk
     SUBDIR += elmerfem
@@ -171,8 +172,10 @@
     SUBDIR += nwchem-data
     SUBDIR += octopus
     SUBDIR += openbabel
+    SUBDIR += openems
     SUBDIR += openkim
     SUBDIR += openkim-models
+    SUBDIR += openmx
     SUBDIR += opensim-core
     SUBDIR += opensph
     SUBDIR += opsin
