@@ -1,8 +1,7 @@
 # Created by: Gerald Pfeifer <gerald@FreeBSD.org>
 
 PORTNAME=	wine
-DISTVERSION=	6.16
-PORTREVISION=	1
+DISTVERSION=	6.17
 PORTEPOCH=	1
 CATEGORIES=	emulators
 MASTER_SITES=	SF/${PORTNAME}/Source \
@@ -34,9 +33,13 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--verbose \
 		--disable-kerberos \
 		--disable-tests \
-		--without-alsa --without-capi --without-dbus \
+		--without-alsa \
+		--without-capi \
+		--without-dbus \
 		--without-gettext --without-gettextpo \
-		--without-gphoto --without-gsm --without-gstreamer \
+		--without-gphoto \
+		--without-gsm \
+		--without-gstreamer \
 		--without-inotify \
 		--without-jxrlib \
 		--without-krb5 \
@@ -62,7 +65,7 @@ SUB_FILES=	pkg-message
 
 PORTDATA=	wine.inf
 
-OPTIONS_DEFINE=	CUPS DOCS DOSBOX GNUTLS LDAP LIBXSLT MPG123 OPENAL SDL STAGING V4L VKD3D VULKAN WINEMAKER X11 GECKO MONO
+OPTIONS_DEFINE=	CUPS DOCS DOSBOX GNUTLS LDAP LIBXSLT MPG123 OPENAL SDL STAGING V4L VKD3D WINEMAKER X11 GECKO MONO
 OPTIONS_DEFAULT=GNUTLS X11
 OPTIONS_SUB=	yes
 
@@ -70,8 +73,7 @@ DOSBOX_DESC=	Use DOSBox to run MS-DOS programs
 LIBXSLT_DESC=	Use libxslt (only used by msxml3.dll)
 SDL_DESC=	Use SDL for gamepad support (XInput only)
 STAGING_DESC=	Include Wine Staging patchset (experimental&unsupported)
-VKD3D_DESC=	Direct3D 12 support via Vulkan
-VULKAN_DESC=	Vulkan API support
+VKD3D_DESC=	Vulkan and Direct3D 12 support
 WINEMAKER_DESC=	Fully support winemaker (requires Perl)
 GECKO_DESC=	Bundle Gecko MSI package for Wine
 MONO_DESC=	Bundle Mono MSI package for Wine
@@ -117,10 +119,8 @@ V4L_BUILD_DEPENDS=	${LOCALBASE}/include/linux/videodev2.h:multimedia/v4l_compat
 V4L_LIB_DEPENDS=	libv4l2.so:multimedia/libv4l
 
 VKD3D_CONFIGURE_WITH=	vkd3d
-VKD3D_LIB_DEPENDS=	libvkd3d.so:graphics/vkd3d
-
-VULKAN_CONFIGURE_WITH=	vulkan
-VULKAN_LIB_DEPENDS=	libvulkan.so:graphics/vulkan-loader
+VKD3D_LIB_DEPENDS=	libvulkan.so:graphics/vulkan-loader \
+			libvkd3d.so:graphics/vkd3d
 
 WINEMAKER_RUN_DEPENDS=	p5-XML-LibXML>0:textproc/p5-XML-LibXML
 
@@ -151,7 +151,7 @@ X11_LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 
 # --libdir is required since Wine defaults to "${PREFIX}/lib64" on amd64.
 CONFIGURE_ARGS+=	--enable-win64 --libdir=${PREFIX}/lib
-PLIST_SUB+=		WINE32="@comment " WINE64="" WINEARCH="amd64"
+PLIST_SUB+=		WINE32="@comment " WINE64="" WINEARCH="x86_64"
 
 # Wine assumes a WoW64 package is available, which is not the case on
 # FreeBSD yet.
