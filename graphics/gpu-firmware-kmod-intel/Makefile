@@ -31,101 +31,11 @@ GH_PROJECT=	drm-kmod-firmware
 GH_TAGNAME=	20211014_1
 
 MAKE_ENV=	KMODS="i915kmsfw"
+MAKE_ENV+=	I915KMODS="${FLAVOR}"
 
-.if ${FLAVOR} == skylake
-MAKE_ENV+=	I915KMODS="skylake"
-PLIST_SUB=	SKYLAKE=""
-PLIST_SUB+=	BROXTON="@comment "
-PLIST_SUB+=	KABYLAKE="@comment "
-PLIST_SUB+=	GEMINILAKE="@comment "
-PLIST_SUB+=	COFFEELAKE="@comment "
-PLIST_SUB+=	ICELAKE="@comment "
-PLIST_SUB+=	ELKHARTLAKE="@comment "
-PLIST_SUB+=	TIGERLAKE="@comment "
-.endif
+.include <bsd.port.pre.mk>
 
-.if ${FLAVOR} == broxton
-MAKE_ENV+=	I915KMODS="broxton"
-PLIST_SUB=	SKYLAKE="@comment "
-PLIST_SUB+=	BROXTON=""
-PLIST_SUB+=	KABYLAKE="@comment "
-PLIST_SUB+=	GEMINILAKE="@comment "
-PLIST_SUB+=	COFFEELAKE="@comment "
-PLIST_SUB+=	ICELAKE="@comment "
-PLIST_SUB+=	ELKHARTLAKE="@comment "
-PLIST_SUB+=	TIGERLAKE="@comment "
-.endif
+PLIST_SUB+=	${FLAVORS:N${FLAVOR}:@v@${v:tu}="\@comment "@}
+PLIST_SUB+=	${FLAVOR:tu}=""
 
-.if ${FLAVOR} == kabylake
-MAKE_ENV+=	I915KMODS="kabylake"
-PLIST_SUB=	SKYLAKE="@comment "
-PLIST_SUB+=	BROXTON="@comment "
-PLIST_SUB+=	KABYLAKE=""
-PLIST_SUB+=	GEMINILAKE="@comment "
-PLIST_SUB+=	COFFEELAKE="@comment "
-PLIST_SUB+=	ICELAKE="@comment "
-PLIST_SUB+=	ELKHARTLAKE="@comment "
-PLIST_SUB+=	TIGERLAKE="@comment "
-.endif
-
-.if ${FLAVOR} == geminilake
-MAKE_ENV+=	I915KMODS="geminilake"
-PLIST_SUB=	SKYLAKE="@comment "
-PLIST_SUB+=	BROXTON="@comment "
-PLIST_SUB+=	KABYLAKE="@comment "
-PLIST_SUB+=	GEMINILAKE=""
-PLIST_SUB+=	COFFEELAKE="@comment "
-PLIST_SUB+=	ICELAKE="@comment "
-PLIST_SUB+=	ELKHARTLAKE="@comment "
-PLIST_SUB+=	TIGERLAKE="@comment "
-.endif
-
-.if ${FLAVOR} == coffeelake
-MAKE_ENV+=	I915KMODS="coffeelake"
-PLIST_SUB=	SKYLAKE="@comment "
-PLIST_SUB+=	BROXTON="@comment "
-PLIST_SUB+=	KABYLAKE="@comment "
-PLIST_SUB+=	GEMINILAKE="@comment "
-PLIST_SUB+=	COFFEELAKE=""
-PLIST_SUB+=	ICELAKE="@comment "
-PLIST_SUB+=	ELKHARTLAKE="@comment "
-PLIST_SUB+=	TIGERLAKE="@comment "
-.endif
-
-.if ${FLAVOR} == icelake
-MAKE_ENV+=	I915KMODS="icelake"
-PLIST_SUB=	SKYLAKE="@comment "
-PLIST_SUB+=	BROXTON="@comment "
-PLIST_SUB+=	KABYLAKE="@comment "
-PLIST_SUB+=	GEMINILAKE="@comment "
-PLIST_SUB+=	COFFEELAKE="@comment "
-PLIST_SUB+=	ICELAKE=""
-PLIST_SUB+=	ELKHARTLAKE="@comment "
-PLIST_SUB+=	TIGERLAKE="@comment "
-.endif
-
-.if ${FLAVOR} == elkhartlake
-MAKE_ENV+=	I915KMODS="elkhartlake"
-PLIST_SUB=	SKYLAKE="@comment "
-PLIST_SUB+=	BROXTON="@comment "
-PLIST_SUB+=	KABYLAKE="@comment "
-PLIST_SUB+=	GEMINILAKE="@comment "
-PLIST_SUB+=	COFFEELAKE="@comment "
-PLIST_SUB+=	ICELAKE="@comment "
-PLIST_SUB+=	ELKHARTLAKE=""
-PLIST_SUB+=	TIGERLAKE="@comment "
-.endif
-
-.if ${FLAVOR} == tigerlake
-MAKE_ENV+=	I915KMODS="tigerlake"
-PLIST_SUB=	SKYLAKE="@comment "
-PLIST_SUB+=	BROXTON="@comment "
-PLIST_SUB+=	KABYLAKE="@comment "
-PLIST_SUB+=	GEMINILAKE="@comment "
-PLIST_SUB+=	COFFEELAKE="@comment "
-PLIST_SUB+=	ICELAKE="@comment "
-PLIST_SUB+=	ELKHARTLAKE="@comment "
-PLIST_SUB+=	TIGERLAKE=""
-.endif
-
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
