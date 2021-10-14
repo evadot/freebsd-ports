@@ -1,7 +1,5 @@
-Firmware modules for the linuxkpi-based KMS components.
+Firmware modules for the drm-kmod drivers.
 
-Amdgpu and i915 firmware files encoded in uu format to generate
-loadable kernel modules. Firmware binaries originate from the
-linux-firmware repository.
+Firmware files for AMD GPUs supported by the amdgpu driver.
 
-WWW: https://github.com/FreeBSDDesktop/kms-firmware
+WWW: https://github.com/freebsd/drm-kmod-firmware
