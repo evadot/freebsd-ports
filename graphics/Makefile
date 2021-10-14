@@ -293,6 +293,7 @@
     SUBDIR += gpicview
     SUBDIR += gpsmanshp
     SUBDIR += gpu-firmware-kmod
+    SUBDIR += gpu-firmware-kmod-intel
     SUBDIR += gpxsee
     SUBDIR += gracula
     SUBDIR += grads
