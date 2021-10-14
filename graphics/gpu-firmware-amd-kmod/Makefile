@@ -1,6 +1,6 @@
 # Created by: Emmanuel Vadot <manu@FreeBSD.org>
 
-PORTNAME=	gpu-firmware-kmod-amd
+PORTNAME=	gpu-firmware-amd-kmod
 PORTVERSION=	20211014
 CATEGORIES=	graphics
 

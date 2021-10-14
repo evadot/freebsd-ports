@@ -1,6 +1,6 @@
 # Created by: Emmanuel Vadot <manu@FreeBSD.org>
 
-PORTNAME=	gpu-firmware-kmod-radeon
+PORTNAME=	gpu-firmware-radeon-kmod
 PORTVERSION=	20211014
 CATEGORIES=	graphics
 
