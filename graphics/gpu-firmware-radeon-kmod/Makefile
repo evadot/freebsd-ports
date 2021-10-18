@@ -12,6 +12,9 @@ LICENSE_NAME=	Radeon firmware license (i915)
 LICENSE_FILE=	${WRKSRC}/LICENSE.radeon
 LICENSE_PERMS=	dist-mirror no-dist-sell pkg-mirror no-pkg-sell auto-accept
 
+ONLY_FOR_ARCHS=		aarch64 amd64 i386 powerpc64 powerpc64le
+ONLY_FOR_ARCHS_REASON=	Radeon GPUs are only available on aarch64, x86 and powerpc64
+
 PKGNAMESUFFIX=	-${FLAVOR:C/_/-/g}
 FLAVORS=	aruba \
 		barts \
@@ -55,7 +58,6 @@ FLAVORS=	aruba \
 		tahiti \
 		turks \
 		verde
-
 FLAVOR?=	aruba
 
 USES=		kmod uidfix

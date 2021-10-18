@@ -12,6 +12,9 @@ LICENSE_NAME=	Intel firmware license (i915)
 LICENSE_FILE=	${WRKSRC}/LICENSE.i915
 LICENSE_PERMS=	dist-mirror no-dist-sell pkg-mirror no-pkg-sell auto-accept
 
+ONLY_FOR_ARCHS=		amd64 i386
+ONLY_FOR_ARCHS_REASON=	Intel GPUs are only available on x86
+
 PKGNAMESUFFIX=	-${FLAVOR:C/_/-/g}
 FLAVORS=	skylake \
 		broxton \

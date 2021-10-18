@@ -8,6 +8,9 @@ CATEGORIES=	graphics
 MAINTAINER=	x11@FreeBSD.org
 COMMENT=	Firmware modules for the drm-kmod drivers
 
+ONLY_FOR_ARCHS=		aarch64 amd64 i386 powerpc64 powerpc64le
+ONLY_FOR_ARCHS_REASON=	AMD/Intel and Radeon GPUs are only available on aarch64, x86 and powerpc64
+
 USES=		metaport
 
 RUN_DEPENDS=	gpu-firmware-amd-kmod-banks>0:graphics/gpu-firmware-amd-kmod@banks \
@@ -41,14 +44,6 @@ RUN_DEPENDS=	gpu-firmware-amd-kmod-banks>0:graphics/gpu-firmware-amd-kmod@banks 
 		gpu-firmware-amd-kmod-vega20>0:graphics/gpu-firmware-amd-kmod@vega20 \
 		gpu-firmware-amd-kmod-vegam>0:graphics/gpu-firmware-amd-kmod@vegam \
 		gpu-firmware-amd-kmod-verde>0:graphics/gpu-firmware-amd-kmod@verde \
-		gpu-firmware-intel-kmod-skylake>0:graphics/gpu-firmware-intel-kmod@skylake \
-		gpu-firmware-intel-kmod-broxton>0:graphics/gpu-firmware-intel-kmod@broxton \
-		gpu-firmware-intel-kmod-kabylake>0:graphics/gpu-firmware-intel-kmod@kabylake \
-		gpu-firmware-intel-kmod-geminilake>0:graphics/gpu-firmware-intel-kmod@geminilake \
-		gpu-firmware-intel-kmod-coffeelake>0:graphics/gpu-firmware-intel-kmod@coffeelake \
-		gpu-firmware-intel-kmod-icelake>0:graphics/gpu-firmware-intel-kmod@icelake \
-		gpu-firmware-intel-kmod-elkhartlake>0:graphics/gpu-firmware-intel-kmod@elkhartlake \
-		gpu-firmware-intel-kmod-tigerlake>0:graphics/gpu-firmware-intel-kmod@tigerlake \
 		gpu-firmware-radeon-kmod-aruba>0:graphics/gpu-firmware-radeon-kmod@aruba \
 		gpu-firmware-radeon-kmod-barts>0:graphics/gpu-firmware-radeon-kmod@barts \
 		gpu-firmware-radeon-kmod-bonaire>0:graphics/gpu-firmware-radeon-kmod@bonaire \
@@ -92,4 +87,17 @@ RUN_DEPENDS=	gpu-firmware-amd-kmod-banks>0:graphics/gpu-firmware-amd-kmod@banks 
 		gpu-firmware-radeon-kmod-turks>0:graphics/gpu-firmware-radeon-kmod@turks \
 		gpu-firmware-radeon-kmod-verde>0:graphics/gpu-firmware-radeon-kmod@verde
 
-.include <bsd.port.mk>
+.include <bsd.port.pre.mk>
+
+.if ${ARCH} == amd64 || ${ARCH} == i386
+RUN_DEPENDS+=	gpu-firmware-intel-kmod-skylake>0:graphics/gpu-firmware-intel-kmod@skylake \
+		gpu-firmware-intel-kmod-broxton>0:graphics/gpu-firmware-intel-kmod@broxton \
+		gpu-firmware-intel-kmod-kabylake>0:graphics/gpu-firmware-intel-kmod@kabylake \
+		gpu-firmware-intel-kmod-geminilake>0:graphics/gpu-firmware-intel-kmod@geminilake \
+		gpu-firmware-intel-kmod-coffeelake>0:graphics/gpu-firmware-intel-kmod@coffeelake \
+		gpu-firmware-intel-kmod-icelake>0:graphics/gpu-firmware-intel-kmod@icelake \
+		gpu-firmware-intel-kmod-elkhartlake>0:graphics/gpu-firmware-intel-kmod@elkhartlake \
+		gpu-firmware-intel-kmod-tigerlake>0:graphics/gpu-firmware-intel-kmod@tigerlake
+.endif
+
+.include <bsd.port.post.mk>
