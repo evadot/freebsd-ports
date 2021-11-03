@@ -2,7 +2,7 @@
 
 PORTNAME=	gnome-shell
 PORTVERSION=	41.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME/sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+)\..*/\1/}
 DIST_SUBDIR=	gnome
@@ -61,7 +61,6 @@ WEBPLUGIN_DIR=	${PREFIX}/lib/mozilla/plugins/
 WEBPLUGIN_FILES=	libgnome-shell-browser-plugin.so
 
 MESON_ARGS=	-Dnetworkmanager=false \
-		-Dpython=${PYTHON_CMD} \
 		-Dsystemd=false \
 		-Dtests=false
 CPE_VENDOR=	gnome
