@@ -12,7 +12,6 @@ COMMENT=	Open-source framework for the layout and rendering of i18n text
 LICENSE=	LGPL20
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-MANPAGES_BUILD_DEPENDS=	help2man:misc/help2man
 LIB_DEPENDS=	libfreetype.so:print/freetype2 \
 		libharfbuzz.so:print/harfbuzz \
 		libfontconfig.so:x11-fonts/fontconfig \
@@ -41,6 +40,8 @@ OPTIONS_DEFAULT=X11 MANPAGES
 
 DOCS_MESON_TRUE=	gtk_doc
 DOCS_BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}gi-docgen>=0:textproc/py-gi-docgen
+
+MANPAGES_BUILD_DEPENDS=	help2man:misc/help2man
 
 X11_MESON_ENABLED=	xft
 X11_USES=	xorg

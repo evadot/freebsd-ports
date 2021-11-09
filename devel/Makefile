@@ -35,6 +35,7 @@
     SUBDIR += R-cran-crayon
     SUBDIR += R-cran-data.table
     SUBDIR += R-cran-desc
+    SUBDIR += R-cran-devtools
     SUBDIR += R-cran-diffobj
     SUBDIR += R-cran-doParallel
     SUBDIR += R-cran-ellipsis
@@ -114,6 +115,7 @@
     SUBDIR += R-cran-tidyselect
     SUBDIR += R-cran-tinytest
     SUBDIR += R-cran-tzdb
+    SUBDIR += R-cran-usethis
     SUBDIR += R-cran-uuid
     SUBDIR += R-cran-vcd
     SUBDIR += R-cran-vctrs
@@ -557,6 +559,7 @@
     SUBDIR += electron12
     SUBDIR += elf
     SUBDIR += elf-dissector
+    SUBDIR += elfcat
     SUBDIR += elfio
     SUBDIR += elfkickers
     SUBDIR += elfsh
@@ -5681,6 +5684,7 @@
     SUBDIR += rubygem-aws-sdk-budgets
     SUBDIR += rubygem-aws-sdk-chime
     SUBDIR += rubygem-aws-sdk-chimesdkidentity
+    SUBDIR += rubygem-aws-sdk-chimesdkmeetings
     SUBDIR += rubygem-aws-sdk-chimesdkmessaging
     SUBDIR += rubygem-aws-sdk-cloud9
     SUBDIR += rubygem-aws-sdk-cloudcontrolapi
