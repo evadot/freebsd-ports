@@ -337,6 +337,7 @@
     SUBDIR += libu2f-host
     SUBDIR += libuecc
     SUBDIR += libwhisker
+    SUBDIR += libxcrypt
     SUBDIR += libyubikey
     SUBDIR += libzrtpcppcore
     SUBDIR += linux-bitwarden-cli
@@ -1228,6 +1229,7 @@
     SUBDIR += snort3
     SUBDIR += snortsam
     SUBDIR += snortsnarf
+    SUBDIR += snowflake-tor
     SUBDIR += snuffleupagus
     SUBDIR += softether
     SUBDIR += softether-devel

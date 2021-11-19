@@ -1859,6 +1859,7 @@
     SUBDIR += p5-Callback-Frame
     SUBDIR += p5-Canary-Stability
     SUBDIR += p5-Capture-Tiny
+    SUBDIR += p5-Capture-Tiny-Extended
     SUBDIR += p5-Carp
     SUBDIR += p5-Carp-Always
     SUBDIR += p5-Carp-Always-Color
@@ -2647,6 +2648,7 @@
     SUBDIR += p5-Iterator-IO
     SUBDIR += p5-Iterator-Misc
     SUBDIR += p5-Iterator-Simple
+    SUBDIR += p5-Iterator-Simple-Lookahead
     SUBDIR += p5-Iterator-Util
     SUBDIR += p5-JIRA-REST
     SUBDIR += p5-JQuery
@@ -2988,6 +2990,7 @@
     SUBDIR += p5-Object-Simple
     SUBDIR += p5-Object-Tiny
     SUBDIR += p5-Object-Tiny-Lvalue
+    SUBDIR += p5-Object-Tiny-RW
     SUBDIR += p5-Olson-Abbreviations
     SUBDIR += p5-Opcodes
     SUBDIR += p5-OrePAN2
@@ -5007,6 +5010,7 @@
     SUBDIR += py-pynest2d
     SUBDIR += py-pyopencl
     SUBDIR += py-pyparsing
+    SUBDIR += py-pyparsing2
     SUBDIR += py-pyperclip
     SUBDIR += py-pyperf
     SUBDIR += py-pyplusplus
@@ -6197,6 +6201,7 @@
     SUBDIR += rubygem-ddmetrics
     SUBDIR += rubygem-ddplugin
     SUBDIR += rubygem-ddtrace
+    SUBDIR += rubygem-debug
     SUBDIR += rubygem-debug_inspector
     SUBDIR += rubygem-debugger-linecache
     SUBDIR += rubygem-debugger-ruby_core_source
@@ -6466,6 +6471,7 @@
     SUBDIR += rubygem-librarian
     SUBDIR += rubygem-librarianp
     SUBDIR += rubygem-libyajl2
+    SUBDIR += rubygem-license_finder
     SUBDIR += rubygem-licensee
     SUBDIR += rubygem-listen
     SUBDIR += rubygem-little-plugger
@@ -6648,6 +6654,7 @@
     SUBDIR += rubygem-rblineprof
     SUBDIR += rubygem-rbs
     SUBDIR += rubygem-rbtrace
+    SUBDIR += rubygem-rbtree
     SUBDIR += rubygem-rdoc
     SUBDIR += rubygem-re2
     SUBDIR += rubygem-react-rails
@@ -6774,6 +6781,7 @@
     SUBDIR += rubygem-snowplow-tracker
     SUBDIR += rubygem-soap4r
     SUBDIR += rubygem-solve
+    SUBDIR += rubygem-sorted_set
     SUBDIR += rubygem-spring
     SUBDIR += rubygem-spring-watcher-listen
     SUBDIR += rubygem-sprockets
@@ -6831,6 +6839,7 @@
     SUBDIR += rubygem-test-unit
     SUBDIR += rubygem-thor
     SUBDIR += rubygem-thor0
+    SUBDIR += rubygem-thor10
     SUBDIR += rubygem-thread_safe
     SUBDIR += rubygem-thread_safe1
     SUBDIR += rubygem-thrift
@@ -6920,6 +6929,7 @@
     SUBDIR += rubygem-will_paginate
     SUBDIR += rubygem-windows_error
     SUBDIR += rubygem-wisper
+    SUBDIR += rubygem-with_env
     SUBDIR += rubygem-wmi-lite
     SUBDIR += rubygem-xdg
     SUBDIR += rubygem-xdg2
@@ -7174,11 +7184,13 @@
     SUBDIR += xdg-user-dirs
     SUBDIR += xdg-utils
     SUBDIR += xdgpaths
+    SUBDIR += xelfviewer
     SUBDIR += xeus
     SUBDIR += xeus-cling
     SUBDIR += xfce4-dev-tools
     SUBDIR += xmake
     SUBDIR += xmltooling
+    SUBDIR += xopcodecalc
     SUBDIR += xorg-macros
     SUBDIR += xparam
     SUBDIR += xsd

@@ -1,6 +1,6 @@
-TIMESTAMP = 1636415497
-SHA256 (mesa3d-mesa-21.3-branchpoint-766-g38f0b36f1ac_GH0.tar.gz) = d5d8bc967d5d986080223d600afd060d80e1ac2b634fd4517ddc5db624aa8e24
-SIZE (mesa3d-mesa-21.3-branchpoint-766-g38f0b36f1ac_GH0.tar.gz) = 25391450
+TIMESTAMP = 1637193616
+SHA256 (mesa3d-mesa-21.3-branchpoint-1096-g35ffadb9e7d_GH0.tar.gz) = 57a7f6a04834ee5a1e3a1f9268fe09e349d0b3722218a009c19e651392e353bf
+SIZE (mesa3d-mesa-21.3-branchpoint-1096-g35ffadb9e7d_GH0.tar.gz) = 25452536
 SHA256 (cb8f7a253934.patch) = 9e914ac8325ce15ab0cc38610e72b683f958114c57402d3a948c7533fce65393
 SIZE (cb8f7a253934.patch) = 3512
 SHA256 (700efacda59c.patch) = f034cfbe09edff0baba67e46e7e3812fdef73ff3cf3e579050c024c95234c8d5

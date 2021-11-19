@@ -1,3 +1,416 @@
+  <vuln vid="0bf816f6-3cfe-11ec-86cd-dca632b19f10">
+    <topic>advancecomp -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>advancecomp</name>
+	<range><lt>2.1.6</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Joonun Jang reports:</p>
+	<blockquote cite="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=889270">
+	  <p>heap buffer overflow running advzip with "-l poc" option</p>
+	  <p>Running 'advzip -l poc' with the attached file raises heap buffer overflow
+	  which may allow a remote attacker to cause unspecified impact including denial-of-service attack.
+	  I expected the program to terminate without segfault, but the program crashes as follow. [...]
+	  </p>
+	</blockquote>
+	<p>and other vulnerabilities.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2018-1056</cvename>
+      <cvename>CVE-2019-8379</cvename>
+      <cvename>CVE-2019-8383</cvename>
+      <cvename>CVE-2019-9210</cvename>
+    </references>
+    <dates>
+      <discovery>2018-07-29</discovery>
+      <entry>2021-11-19</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="b8c0cbca-472d-11ec-83dc-3065ec8fd3ec">
+    <topic>chromium -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>chromium</name>
+	<range><lt>96.0.4664.45</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Chrome Releases reports:</p>
+	<blockquote cite="https://chromereleases.googleblog.com/2021/11/stable-channel-update-for-desktop.html">
+	  <p>This release contains 25 security fixes, including:</p>
+	  <ul>
+	    <li>[1263620] High CVE-2021-38008: Use after free in media. Reported
+	      by Marcin Towalski of Cisco Talos on 2021-10-26</li>
+	    <li>[1260649] High CVE-2021-38009: Inappropriate implementation in
+	      cache. Reported by Luan Herrera (@lbherrera_) on 2021-10-16</li>
+	    <li>[1240593] High CVE-2021-38006: Use after free in storage
+	      foundation. Reported by Sergei Glazunov of Google Project Zero on
+	      2021-08-17</li>
+	    <li>[1254189] High CVE-2021-38007: Type Confusion in V8. Reported by
+	      Polaris Feng and SGFvamll at Singular Security Lab on
+	      2021-09-29</li>
+	    <li>[1241091] High CVE-2021-38005: Use after free in loader.
+	      Reported by Sergei Glazunov of Google Project Zero on
+	      2021-08-18</li>
+	    <li>[1264477] High CVE-2021-38010: Inappropriate implementation in
+	      service workers. Reported by Sergei Glazunov of Google Project
+	      Zero on 2021-10-28</li>
+	    <li>[1268274] High CVE-2021-38011: Use after free in storage
+	      foundation. Reported by Sergei Glazunov of Google Project Zero on
+	      2021-11-09</li>
+	    <li>[1262791] Medium CVE-2021-38012: Type Confusion in V8. Reported
+	      by Yonghwi Jin (@jinmo123) on 2021-10-24</li>
+	    <li>[1242392] Medium CVE-2021-38013: Heap buffer overflow in
+	      fingerprint recognition. Reported by raven (@raid_akame) on
+	      2021-08-23</li>
+	    <li>[1248567] Medium CVE-2021-38014: Out of bounds write in
+	      Swiftshader. Reported by Atte Kettunen of OUSPG on 2021-09-10</li>
+	    <li>[957553] Medium CVE-2021-38015: Inappropriate implementation in
+	      input. Reported by David Erceg on 2019-04-29</li>
+	    <li>[1244289] Medium CVE-2021-38016: Insufficient policy
+	      enforcement in background fetch. Reported by Maurice Dauer on
+	      2021-08-28</li>
+	    <li>[1256822] Medium CVE-2021-38017: Insufficient policy enforcement
+	      in iframe sandbox. Reported by NDevTK on 2021-10-05</li>
+	    <li>[1197889] Medium CVE-2021-38018: Inappropriate implementation in
+	      navigation. Reported by Alesandro Ortiz on 2021-04-11</li>
+	    <li>[1251179] Medium CVE-2021-38019: Insufficient policy enforcement
+	      in CORS. Reported by Maurice Dauer on 2021-09-20</li>
+	    <li>[1259694] Medium CVE-2021-38020: Insufficient policy enforcement
+	      in contacts picker. Reported by Luan Herrera (@lbherrera_) on
+	      2021-10-13</li>
+	    <li>[1233375] Medium CVE-2021-38021: Inappropriate implementation in
+	      referrer. Reported by Prakash (@1lastBr3ath) and Jun Kokatsu on
+	      2021-07-27</li>
+	    <li>[1248862] Low CVE-2021-38022: Inappropriate implementation in
+	      WebAuthentication. Reported by Michal Kepkowski on 2021-09-13</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-38005</cvename>
+      <cvename>CVE-2021-38006</cvename>
+      <cvename>CVE-2021-38007</cvename>
+      <cvename>CVE-2021-38008</cvename>
+      <cvename>CVE-2021-38009</cvename>
+      <cvename>CVE-2021-38010</cvename>
+      <cvename>CVE-2021-38011</cvename>
+      <cvename>CVE-2021-38012</cvename>
+      <cvename>CVE-2021-38013</cvename>
+      <cvename>CVE-2021-38014</cvename>
+      <cvename>CVE-2021-38015</cvename>
+      <cvename>CVE-2021-38016</cvename>
+      <cvename>CVE-2021-38017</cvename>
+      <cvename>CVE-2021-38018</cvename>
+      <cvename>CVE-2021-38019</cvename>
+      <cvename>CVE-2021-38020</cvename>
+      <cvename>CVE-2021-38021</cvename>
+      <cvename>CVE-2021-38022</cvename>
+      <url>https://chromereleases.googleblog.com/2021/11/stable-channel-update-for-desktop.html</url>
+    </references>
+    <dates>
+      <discovery>2021-11-15</discovery>
+      <entry>2021-11-16</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="6916ea94-4628-11ec-bbe2-0800270512f4">
+    <topic>rubygem-date -- Regular Expression Denial of Service Vunlerability of Date Parsing Methods</topic>
+    <affects>
+      <package>
+	<name>rubygem-date</name>
+	<range><lt>3.2.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Stanislav Valkanov reports:</p>
+	<blockquote cite="https://www.ruby-lang.org/en/news/2021/11/15/date-parsing-method-regexp-dos-cve-2021-41817/">
+	  <p>
+	    Date's parsing methods including <code>Date.parse</code>
+	    are using Regexps internally, some of which are vulnerable
+	    against regular expression denial of service. Applications
+	    and libraries that apply such methods to untrusted input
+	    may be affected.
+	  </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-41817</cvename>
+      <url>https://www.ruby-lang.org/en/news/2021/11/15/date-parsing-method-regexp-dos-cve-2021-41817/</url>
+    </references>
+    <dates>
+      <discovery>2021-11-15</discovery>
+      <entry>2021-11-15</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="42a4d82d-4603-11ec-8be6-d4c9ef517024">
+    <topic>Roundcube -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>roundcube</name>
+	<range><lt>1.4.12,1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Roundcube project reports:</p>
+	<blockquote cite="https://roundcube.net/news/2021/11/12/security-updates-1.4.12-and-1.3.17-released">
+	  <p>XSS issue in handling attachment filename extension in mimetype mismatch warning</p>
+	  <p>possible SQL injection via some session variables</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://roundcube.net/news/2021/11/12/security-updates-1.4.12-and-1.3.17-released</url>
+    </references>
+    <dates>
+      <discovery>2021-11-12</discovery>
+      <entry>2021-11-15</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="9d7a2b54-4468-11ec-8532-0d24c37c72c8">
+    <topic>mailman -- 2.1.37 fixes XSS via user options, and moderator offline brute-force vuln against list admin password</topic>
+    <affects>
+      <package>
+	<name>mailman</name>
+	<range><lt>2.1.37</lt></range>
+      </package>
+      <package>
+	<name>mailman-exim4</name>
+	<range><lt>2.1.37</lt></range>
+      </package>
+      <package>
+	<name>mailman-exim4-with-htdig</name>
+	<range><lt>2.1.37</lt></range>
+      </package>
+      <package>
+	<name>mailman-postfix</name>
+	<range><lt>2.1.37</lt></range>
+      </package>
+      <package>
+	<name>mailman-postfix-with-htdig</name>
+	<range><lt>2.1.37</lt></range>
+      </package>
+      <package>
+	<name>mailman-with-htdig</name>
+	<range><lt>2.1.37</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Mark Sapiro reports:</p>
+	<blockquote cite="https://bazaar.launchpad.net/~mailman-coders/mailman/2.1/view/1879/NEWS#L8">
+	  <p>A potential XSS attack via the user options page has been reported by
+	    Harsh Jaiswal.  This is fixed.  CVE-2021-43331 (LP: #1949401).</p>
+	  <p>A potential for for a list moderator to carry out an off-line brute force
+	    attack to obtain the list admin password has been reported by Andre
+	    Protas, Richard Cloke and Andy Nuttall of Apple.  This is fixed.
+	    CVE-2021-43332 (LP: #1949403)</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-43331</cvename>
+      <cvename>CVE-2021-43332</cvename>
+      <url>https://bazaar.launchpad.net/~mailman-coders/mailman/2.1/view/1879/NEWS#L8</url>
+      <url>https://bugs.launchpad.net/mailman/+bug/1949401</url>
+      <url>https://bugs.launchpad.net/mailman/+bug/1949403</url>
+    </references>
+    <dates>
+      <discovery>2021-11-01</discovery>
+      <entry>2021-11-13</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="2ccd71bd-426b-11ec-87db-6cc21735f730">
+    <topic>PostgreSQL -- Possible man-in-the-middle attacks</topic>
+    <affects>
+      <package>
+	<name>postgresql14-server</name>
+	<range><lt>14.1</lt></range>
+      </package>
+      <package>
+	<name>postgresql13-server</name>
+	<range><lt>13.5</lt></range>
+      </package>
+      <package>
+	<name>postgresql12-server</name>
+	<range><lt>12.9</lt></range>
+      </package>
+      <package>
+	<name>postgresql11-server</name>
+	<range><lt>11.14</lt></range>
+      </package>
+       <package>
+	<name>postgresql10-server</name>
+	<range><lt>10.19</lt></range>
+      </package>
+      <package>
+	<name>postgresql96-server</name>
+	<range><lt>9.6.24</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The PostgreSQL Project reports:</p>
+	<blockquote cite="https://www.postgresql.org/about/news/postgresql-141-135-129-1114-1019-and-9624-released-2349/">
+	  <p> CVE-2021-23214: A man-in-the-middle with the ability to inject data into the TCP connection could stuff some cleartext data into the start of a supposedly encryption-protected database session. This could be abused to send faked SQL commands to the server, although that would only work if the server did not demand any authentication data. (However, a server relying on SSL certificate authentication might well not do so.) </p>
+	  <p> CVE-2021-23222: A man-in-the-middle with the ability to inject data into the TCP connection could stuff some cleartext data into the start of a supposedly encryption-protected database session.  This could probably be abused to inject faked responses to the client's first few queries, although other details of libpq's behavior make that harder than it sounds.  A different line of attack is to exfiltrate the client's password, or other sensitive data that might be sent early in the session.  That has been shown to be possible with a server vulnerable to CVE-2021-23214. </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-23214</cvename>
+      <cvename>CVE-2021-23222</cvename>
+    </references>
+    <dates>
+      <discovery>2021-11-08</discovery>
+      <entry>2021-11-10</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="bfea59e0-41ee-11ec-9bac-589cfc007716">
+    <topic>puppet -- Silent Configuration Failure</topic>
+    <affects>
+      <package>
+	<name>puppet6</name>
+	<range><lt>6.25.1</lt></range>
+      </package>
+      <package>
+	<name>puppet7</name>
+	<range><lt>7.12.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Puppet reports:</p>
+	<blockquote cite="https://puppet.com/security/cve/cve-2021-27025">
+	  <p>A flaw was discovered in Puppet Agent where the agent may silently ignore Augeas settings or may be vulnerable to a Denial of Service condition prior to the first pluginsync.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-27025</cvename>
+      <url>https://puppet.com/security/cve/cve-2021-27025</url>
+    </references>
+    <dates>
+      <discovery>2021-11-09</discovery>
+      <entry>2021-11-10</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="3bd3c9f8-41ee-11ec-9bac-589cfc007716">
+    <topic>puppet -- Unsafe HTTP Redirect</topic>
+    <affects>
+      <package>
+	<name>puppet6</name>
+	<range><lt>6.25.1</lt></range>
+      </package>
+      <package>
+	<name>puppet7</name>
+	<range><lt>7.12.1</lt></range>
+      </package>
+      <package>
+	<name>puppetserver6</name>
+	<range><lt>6.17.1</lt></range>
+      </package>
+      <package>
+	<name>puppetserver7</name>
+	<range><lt>7.4.2</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Puppet reports:</p>
+	<blockquote cite="https://puppet.com/security/cve/cve-2021-27023">
+	  <p>A flaw was discovered in Puppet Agent and Puppet Server that may result in a leak of HTTP credentials when following HTTP redirects to a different host. This is similar to CVE-2018-1000007.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-27023</cvename>
+      <url>https://puppet.com/security/cve/cve-2021-27023</url>
+    </references>
+    <dates>
+      <discovery>2021-11-09</discovery>
+      <entry>2021-11-10</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="646923b0-41c7-11ec-a3b2-005056a311d1">
+    <topic>samba -- Multiple Vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>samba413</name>
+	<range><lt>4.13.14</lt></range>
+      </package>
+      <package>
+	<name>samba414</name>
+	<range><lt>4.14.10</lt></range>
+      </package>
+      <package>
+	<name>samba415</name>
+	<range><lt>4.15.2</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Samba Team reports:</p>
+	<blockquote cite="https://www.samba.org/samba/history/security.html">
+	  <ul>
+	  <li>CVE-2020-25717: A user in an AD Domain could become root on domain
+	      members.</li>
+	  <li>CVE-2020-25718: Samba AD DC did not correctly sandbox Kerberos
+	      tickets issued by an RODC.</li>
+	  <li>CVE-2020-25719: Samba AD DC did not always rely on the SID and PAC
+	      in Kerberos tickets.</li>
+	  <li>CVE-2020-25721: Kerberos acceptors need easy access to stable
+	      AD identifiers (eg objectSid).</li>
+	  <li>CVE-2020-25722: Samba AD DC did not do sufficient access and
+	      conformance checking of data stored.</li>
+	  <li>CVE-2016-2124: SMB1 client connections can be downgraded to plaintext
+	      authentication.</li>
+	  <li>CVE-2021-3738: Use after free in Samba AD DC RPC server.</li>
+	  <li>CVE-2021-23192: Subsequent DCE/RPC fragment injection vulnerability.</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2020-25717</cvename>
+      <cvename>CVE-2020-25718</cvename>
+      <cvename>CVE-2020-25719</cvename>
+      <cvename>CVE-2020-25721</cvename>
+      <cvename>CVE-2020-25722</cvename>
+      <cvename>CVE-2016-2124</cvename>
+      <cvename>CVE-2021-3738</cvename>
+      <cvename>CVE-2021-23192</cvename>
+      <url>https://www.samba.org/samba/security/CVE-2020-25717.html</url>
+      <url>https://www.samba.org/samba/security/CVE-2020-25718.html</url>
+      <url>https://www.samba.org/samba/security/CVE-2020-25719.html</url>
+      <url>https://www.samba.org/samba/security/CVE-2020-25721.html</url>
+      <url>https://www.samba.org/samba/security/CVE-2020-25722.html</url>
+      <url>https://www.samba.org/samba/security/CVE-2016-2124.html</url>
+      <url>https://www.samba.org/samba/security/CVE-2021-3738.html</url>
+      <url>https://www.samba.org/samba/security/CVE-2021-23192.html</url>
+    </references>
+    <dates>
+      <discovery>2021-11-10</discovery>
+      <entry>2021-11-10</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="17702e54-3da0-11ec-b7e0-3085a9a95629">
     <topic>pyrad -- multiple vulnerabilities</topic>
     <affects>

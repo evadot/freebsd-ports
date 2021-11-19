@@ -292,6 +292,7 @@
     SUBDIR += libecap
     SUBDIR += libepc
     SUBDIR += libevhtp
+    SUBDIR += libhsts
     SUBDIR += libhubbub
     SUBDIR += libjwt
     SUBDIR += libmicrohttpd
@@ -466,6 +467,7 @@
     SUBDIR += npm
     SUBDIR += npm-node14
     SUBDIR += npm-node16
+    SUBDIR += npm-node17
     SUBDIR += nspluginwrapper
     SUBDIR += oauth2-proxy
     SUBDIR += obhttpd
@@ -2342,6 +2344,7 @@
     SUBDIR += webstone-ssl
     SUBDIR += webtrees
     SUBDIR += webtrees20
+    SUBDIR += wget2
     SUBDIR += wgetpaste
     SUBDIR += wikicalc
     SUBDIR += wordpress
@@ -2366,6 +2369,7 @@
     SUBDIR += yarn
     SUBDIR += yarn-node14
     SUBDIR += yarn-node16
+    SUBDIR += yarn-node17
     SUBDIR += yarr
     SUBDIR += yaws
     SUBDIR += you-get
