@@ -1370,6 +1370,7 @@
     SUBDIR += libsmpp34
     SUBDIR += libsmraw
     SUBDIR += libsoup
+    SUBDIR += libsoup3
     SUBDIR += libspark2012
     SUBDIR += libspice-server
     SUBDIR += libstatgrab
@@ -4670,6 +4671,7 @@
     SUBDIR += py-jsonlines
     SUBDIR += py-jsonnet
     SUBDIR += py-jsonpatch
+    SUBDIR += py-jsonpath-ng
     SUBDIR += py-jsonpath-rw
     SUBDIR += py-jsonpickle
     SUBDIR += py-jsonpointer
@@ -7183,6 +7185,7 @@
     SUBDIR += wand-libconfig
     SUBDIR += wandio
     SUBDIR += wasi-compiler-rt11
+    SUBDIR += wasi-compiler-rt12
     SUBDIR += wasi-compiler-rt13
     SUBDIR += wasi-libc
     SUBDIR += wasi-libcxx
