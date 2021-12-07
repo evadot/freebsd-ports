@@ -2,6 +2,7 @@
 
 PORTNAME=	wine
 DISTVERSION=	6.0.2
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	emulators
 MASTER_SITES=	SF/${PORTNAME}/Source \
@@ -41,6 +42,7 @@ CONFIGURE_ARGS+=--verbose \
 		--without-gphoto \
 		--without-gsm \
 		--without-gstreamer \
+		--without-hal \
 		--without-inotify \
 		--without-krb5 \
 		--without-mingw \

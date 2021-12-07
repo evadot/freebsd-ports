@@ -235,6 +235,7 @@
     SUBDIR += gnugrep
     SUBDIR += go-md2man
     SUBDIR += go-yq
+    SUBDIR += gojq
     SUBDIR += goldendict
     SUBDIR += google-ctemplate
     SUBDIR += google-translate-cli
@@ -1620,6 +1621,7 @@
     SUBDIR += rubygem-diff-lcs
     SUBDIR += rubygem-diff_match_patch
     SUBDIR += rubygem-diffy
+    SUBDIR += rubygem-diffy330
     SUBDIR += rubygem-docdiff
     SUBDIR += rubygem-elasticsearch
     SUBDIR += rubygem-elasticsearch-api
