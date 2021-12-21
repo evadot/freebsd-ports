@@ -41,6 +41,7 @@ CONFIGURE_ARGS+=--verbose \
 		--without-gettext --without-gettextpo \
 		--without-gphoto \
 		--without-gsm \
+		--without-gssapi \
 		--without-gstreamer \
 		--without-hal \
 		--without-inotify \
@@ -53,6 +54,7 @@ CONFIGURE_ARGS+=--verbose \
 		--with-pcap \
 		--with-pthread \
 		--without-pulse \
+		--without-quicktime \
 		--without-sane \
 		--with-sdl \
 		--without-tiff \

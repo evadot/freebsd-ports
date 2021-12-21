@@ -149,6 +149,7 @@
     SUBDIR += chroma
     SUBDIR += chromium-bsu
     SUBDIR += circuslinux
+    SUBDIR += cmatrix
     SUBDIR += cockatrice
     SUBDIR += coffeebreak
     SUBDIR += colobot
@@ -638,6 +639,7 @@
     SUBDIR += nazghul
     SUBDIR += nbsdgames
     SUBDIR += nehquake
+    SUBDIR += neo
     SUBDIR += neo-cowsay
     SUBDIR += nethack32
     SUBDIR += nethack33
@@ -952,6 +954,7 @@
     SUBDIR += thegrind
     SUBDIR += tileworld
     SUBDIR += tkmoo
+    SUBDIR += tmatrix
     SUBDIR += tomatoes
     SUBDIR += tome4
     SUBDIR += tome4-beta
@@ -1101,7 +1104,6 @@
     SUBDIR += xmulti
     SUBDIR += xneko
     SUBDIR += xnethack
-    SUBDIR += xnethack-nox11
     SUBDIR += xoct
     SUBDIR += xoids
     SUBDIR += xoj

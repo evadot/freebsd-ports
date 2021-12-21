@@ -283,6 +283,7 @@
     SUBDIR += kf5-kjsembed
     SUBDIR += kiwix-tools
     SUBDIR += kohana
+    SUBDIR += kristall
     SUBDIR += lagrange
     SUBDIR += larbin
     SUBDIR += libapreq2
@@ -1588,6 +1589,7 @@
     SUBDIR += py-django22
     SUBDIR += py-django31
     SUBDIR += py-django32
+    SUBDIR += py-django40
     SUBDIR += py-django_compressor
     SUBDIR += py-djangocms-admin-style
     SUBDIR += py-djangoql
@@ -1659,6 +1661,7 @@
     SUBDIR += py-google-cloud-translate
     SUBDIR += py-google-cloud-vision
     SUBDIR += py-google-resumable-media
+    SUBDIR += py-grafana-dashboard-manager
     SUBDIR += py-graphite-api
     SUBDIR += py-graphite-web
     SUBDIR += py-grequests

@@ -33,6 +33,7 @@
     SUBDIR += R-cran-covr
     SUBDIR += R-cran-cpp11
     SUBDIR += R-cran-crayon
+    SUBDIR += R-cran-cyclocomp
     SUBDIR += R-cran-data.table
     SUBDIR += R-cran-desc
     SUBDIR += R-cran-devtools
@@ -65,6 +66,7 @@
     SUBDIR += R-cran-itertools
     SUBDIR += R-cran-later
     SUBDIR += R-cran-lifecycle
+    SUBDIR += R-cran-lintr
     SUBDIR += R-cran-listenv
     SUBDIR += R-cran-lubridate
     SUBDIR += R-cran-magrittr
@@ -287,6 +289,7 @@
     SUBDIR += brz
     SUBDIR += bsdbuild
     SUBDIR += bsdcflow
+    SUBDIR += bsddialog
     SUBDIR += bsdowl
     SUBDIR += bugzilla44
     SUBDIR += bugzilla50
@@ -296,7 +299,6 @@
     SUBDIR += busybee
     SUBDIR += byacc
     SUBDIR += byaccj
-    SUBDIR += bsddialog
     SUBDIR += c2mdoc
     SUBDIR += caf
     SUBDIR += calibrator
@@ -828,6 +830,7 @@
     SUBDIR += gindent
     SUBDIR += gio-sharp
     SUBDIR += git
+    SUBDIR += git-arc
     SUBDIR += git-absorb
     SUBDIR += git-bug
     SUBDIR += git-cinnabar
@@ -906,6 +909,7 @@
     SUBDIR += google-perftools
     SUBDIR += google-styleguide
     SUBDIR += googletest
+    SUBDIR += gopls
     SUBDIR += goprotobuf
     SUBDIR += goredo
     SUBDIR += goreleaser
@@ -4445,7 +4449,7 @@
     SUBDIR += py-deprecated
     SUBDIR += py-deprecation
     SUBDIR += py-devtools
-    SUBDIR += py-dexml
+    SUBDIR += py-dexml2
     SUBDIR += py-diazo
     SUBDIR += py-dill
     SUBDIR += py-dirspec
@@ -4532,6 +4536,7 @@
     SUBDIR += py-freezegun
     SUBDIR += py-frictionless
     SUBDIR += py-frozendict
+    SUBDIR += py-frozenlist
     SUBDIR += py-fs
     SUBDIR += py-fs2
     SUBDIR += py-fsspec
@@ -4623,6 +4628,7 @@
     SUBDIR += py-iniparse
     SUBDIR += py-installer
     SUBDIR += py-intbitset
+    SUBDIR += py-intelhex
     SUBDIR += py-intervals
     SUBDIR += py-intervaltree
     SUBDIR += py-invoke
@@ -7029,6 +7035,7 @@
     SUBDIR += soapui
     SUBDIR += sobjectizer
     SUBDIR += socket_wrapper
+    SUBDIR += soft-serve
     SUBDIR += sol2
     SUBDIR += sonar-scanner-cli
     SUBDIR += sonarqube-ant-task

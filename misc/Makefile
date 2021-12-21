@@ -41,7 +41,6 @@
     SUBDIR += clifm
     SUBDIR += cloc
     SUBDIR += clpbar
-    SUBDIR += cmatrix
     SUBDIR += colortail
     SUBDIR += colwide
     SUBDIR += compat10x
@@ -273,7 +272,6 @@
     SUBDIR += openmvg
     SUBDIR += opennn
     SUBDIR += openr2
-    SUBDIR += opensubdiv
     SUBDIR += openvdb
     SUBDIR += orange3
     SUBDIR += orion

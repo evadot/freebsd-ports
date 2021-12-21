@@ -165,9 +165,11 @@
     SUBDIR += cfengine-masterfiles316
     SUBDIR += cfengine-masterfiles317
     SUBDIR += cfengine-masterfiles318
+    SUBDIR += cfengine-masterfiles319
     SUBDIR += cfengine316
     SUBDIR += cfengine317
     SUBDIR += cfengine318
+    SUBDIR += cfengine319
     SUBDIR += chaoskube
     SUBDIR += checkrestart
     SUBDIR += chezmoi
@@ -915,6 +917,7 @@
     SUBDIR += parallel
     SUBDIR += parkverbot
     SUBDIR += pass-otp
+    SUBDIR += pass-secrets
     SUBDIR += pass-update
     SUBDIR += password-store
     SUBDIR += passwordsafe
