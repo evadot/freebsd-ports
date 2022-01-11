@@ -10,6 +10,7 @@
     SUBDIR += bochs
     SUBDIR += bsvc
     SUBDIR += cannonball
+    SUBDIR += catapult
     SUBDIR += cemu
     SUBDIR += cingb
     SUBDIR += citra
@@ -22,6 +23,7 @@
     SUBDIR += dolphin-emu
     SUBDIR += dosbox
     SUBDIR += dosbox-staging
+    SUBDIR += dps8m
     SUBDIR += dynamips-community
     SUBDIR += edumips64
     SUBDIR += elliott-803
@@ -106,11 +108,10 @@
     SUBDIR += qemu-powernv
     SUBDIR += qemu-user-static
     SUBDIR += qemu-user-static-devel
-    SUBDIR += qemu-utils
-    SUBDIR += qemu42
     SUBDIR += qemu5
     SUBDIR += qmc2
     SUBDIR += quasi88
+    SUBDIR += ripes
     SUBDIR += riscv-isa-sim
     SUBDIR += rpcs3
     SUBDIR += rtc

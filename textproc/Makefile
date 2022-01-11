@@ -55,7 +55,6 @@
     SUBDIR += apertium
     SUBDIR += artha
     SUBDIR += asciidoc
-    SUBDIR += askgit
     SUBDIR += asm-xml
     SUBDIR += asm2html
     SUBDIR += aspell
@@ -451,6 +450,7 @@
     SUBDIR += mdbook-linkcheck
     SUBDIR += mdocml
     SUBDIR += meld
+    SUBDIR += mergestat
     SUBDIR += metauml
     SUBDIR += mgdiff
     SUBDIR += mi-aspell
@@ -1231,14 +1231,23 @@
     SUBDIR += php74-xmlwriter
     SUBDIR += php74-xsl
     SUBDIR += php80-ctype
+    SUBDIR += php81-ctype
     SUBDIR += php80-dom
+    SUBDIR += php81-dom
     SUBDIR += php80-enchant
+    SUBDIR += php81-enchant
     SUBDIR += php80-pspell
+    SUBDIR += php81-pspell
     SUBDIR += php80-simplexml
+    SUBDIR += php81-simplexml
     SUBDIR += php80-xml
+    SUBDIR += php81-xml
     SUBDIR += php80-xmlreader
+    SUBDIR += php81-xmlreader
     SUBDIR += php80-xmlwriter
+    SUBDIR += php81-xmlwriter
     SUBDIR += php80-xsl
+    SUBDIR += php81-xsl
     SUBDIR += pict
     SUBDIR += po4a
     SUBDIR += pod2mdoc
@@ -1346,6 +1355,7 @@
     SUBDIR += py-m2r
     SUBDIR += py-mako
     SUBDIR += py-markdown
+    SUBDIR += py-markdown-include
     SUBDIR += py-markdown-it-py
     SUBDIR += py-markdown2
     SUBDIR += py-marko
@@ -1358,6 +1368,8 @@
     SUBDIR += py-misaka
     SUBDIR += py-mistune
     SUBDIR += py-mkdocs
+    SUBDIR += py-mkdocs-material
+    SUBDIR += py-mkdocs-material-extensions
     SUBDIR += py-mkdocs-nature
     SUBDIR += py-mwparserfromhell
     SUBDIR += py-myst-parser
@@ -1410,6 +1422,7 @@
     SUBDIR += py-pykwalify
     SUBDIR += py-pylons-sphinx-themes
     SUBDIR += py-pyls-spyder
+    SUBDIR += py-pymdown-extensions
     SUBDIR += py-pypa-docs-theme
     SUBDIR += py-pypandoc
     SUBDIR += py-pyphen

@@ -1,7 +1,7 @@
 # Created by: Robert Gogolok <gogo@cs.uni-sb.de>
 
 PORTNAME=	bundler
-PORTVERSION=	2.2.30
+PORTVERSION=	2.2.33
 PORTEPOCH=	1
 CATEGORIES=	sysutils rubygems
 MASTER_SITES=	RG
@@ -14,6 +14,8 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.md
 
 USES=		cpe gem
 USE_RUBY=	yes
+
+CONFLICTS_INSTALL=	 go-tools # bin/bundle
 
 NO_ARCH=	yes
 

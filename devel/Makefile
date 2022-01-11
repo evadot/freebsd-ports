@@ -300,6 +300,7 @@
     SUBDIR += byacc
     SUBDIR += byaccj
     SUBDIR += c2mdoc
+    SUBDIR += c4core
     SUBDIR += caf
     SUBDIR += calibrator
     SUBDIR += capnproto
@@ -358,7 +359,6 @@
     SUBDIR += cl-trivial-features-sbcl
     SUBDIR += cl-trivial-gray-streams
     SUBDIR += cl-trivial-gray-streams-sbcl
-    SUBDIR += clanlib1
     SUBDIR += clazy
     SUBDIR += cld2
     SUBDIR += clewn
@@ -814,6 +814,7 @@
     SUBDIR += generate
     SUBDIR += gengetopt
     SUBDIR += genie
+    SUBDIR += genromfs
     SUBDIR += getoptions
     SUBDIR += gettext
     SUBDIR += gettext-lint
@@ -961,6 +962,8 @@
     SUBDIR += hgsvn
     SUBDIR += hhdate
     SUBDIR += highlighterkit
+    SUBDIR += highway
+    SUBDIR += hoel
     SUBDIR += horde-content
     SUBDIR += horde-timeobjects
     SUBDIR += horde-whups
@@ -1262,8 +1265,8 @@
     SUBDIR += libgta
     SUBDIR += libgtop
     SUBDIR += libgudev
+    SUBDIR += libgusb
     SUBDIR += libgutenfetch
-    SUBDIR += libhash
     SUBDIR += libhoard
     SUBDIR += libhtp
     SUBDIR += libhyve-remote
@@ -1682,6 +1685,7 @@
     SUBDIR += openocd
     SUBDIR += openwince-include
     SUBDIR += orc
+    SUBDIR += orcania
     SUBDIR += osc
     SUBDIR += ossp-al
     SUBDIR += ossp-cfg
@@ -4034,15 +4038,25 @@
     SUBDIR += php74-sysvshm
     SUBDIR += php74-tokenizer
     SUBDIR += php80-ffi
+    SUBDIR += php81-ffi
     SUBDIR += php80-gettext
+    SUBDIR += php81-gettext
     SUBDIR += php80-intl
+    SUBDIR += php81-intl
     SUBDIR += php80-pcntl
+    SUBDIR += php81-pcntl
     SUBDIR += php80-readline
+    SUBDIR += php81-readline
     SUBDIR += php80-shmop
+    SUBDIR += php81-shmop
     SUBDIR += php80-sysvmsg
+    SUBDIR += php81-sysvmsg
     SUBDIR += php80-sysvsem
+    SUBDIR += php81-sysvsem
     SUBDIR += php80-sysvshm
+    SUBDIR += php81-sysvshm
     SUBDIR += php80-tokenizer
+    SUBDIR += php81-tokenizer
     SUBDIR += phpunit6
     SUBDIR += phpunit7
     SUBDIR += phpunit8
@@ -4129,6 +4143,7 @@
     SUBDIR += py-adb
     SUBDIR += py-addict
     SUBDIR += py-aenum
+    SUBDIR += py-aiocontextvars
     SUBDIR += py-aiofiles
     SUBDIR += py-aioice
     SUBDIR += py-aioitertools
@@ -4254,6 +4269,7 @@
     SUBDIR += py-azure-mgmt-servicebus
     SUBDIR += py-azure-mgmt-servicefabric
     SUBDIR += py-azure-mgmt-servicefabricmanagedclusters
+    SUBDIR += py-azure-mgmt-servicelinker
     SUBDIR += py-azure-mgmt-signalr
     SUBDIR += py-azure-mgmt-sql
     SUBDIR += py-azure-mgmt-sqlvirtualmachine
@@ -4455,7 +4471,6 @@
     SUBDIR += py-dirspec
     SUBDIR += py-distlib
     SUBDIR += py-distributed
-    SUBDIR += py-dj31-django-rq
     SUBDIR += py-dj32-django-rq
     SUBDIR += py-dj32-graphene-django
     SUBDIR += py-django-rq
@@ -4757,6 +4772,7 @@
     SUBDIR += py-maturin
     SUBDIR += py-mccabe
     SUBDIR += py-mdv
+    SUBDIR += py-mediafile
     SUBDIR += py-medikit
     SUBDIR += py-meliae
     SUBDIR += py-memory-profiler
@@ -5099,6 +5115,7 @@
     SUBDIR += py-python-application
     SUBDIR += py-python-bugzilla
     SUBDIR += py-python-dbusmock
+    SUBDIR += py-python-decouple
     SUBDIR += py-python-distutils-extra
     SUBDIR += py-python-dtrace
     SUBDIR += py-python-easyconfig
@@ -5554,6 +5571,7 @@
     SUBDIR += rapidcheck
     SUBDIR += rapidfuzz-cpp
     SUBDIR += rapidjson
+    SUBDIR += rapidyaml
     SUBDIR += raylib
     SUBDIR += rbenv
     SUBDIR += rbtools
@@ -5613,7 +5631,6 @@
     SUBDIR += ruby-build
     SUBDIR += ruby-gems
     SUBDIR += ruby-rbprof
-    SUBDIR += ruby-sdl
     SUBDIR += ruby-setup.rb
     SUBDIR += ruby-subversion
     SUBDIR += rubygem-CFPropertyList
@@ -6659,6 +6676,7 @@
     SUBDIR += rubygem-rbtrace
     SUBDIR += rubygem-rbtree
     SUBDIR += rubygem-rdoc
+    SUBDIR += rubygem-rdoc63
     SUBDIR += rubygem-re2
     SUBDIR += rubygem-react-rails
     SUBDIR += rubygem-react-rails-rails5
@@ -6719,13 +6737,11 @@
     SUBDIR += rubygem-ruby-ole
     SUBDIR += rubygem-ruby-prof
     SUBDIR += rubygem-ruby-progressbar
-    SUBDIR += rubygem-ruby-sdl-ffi
     SUBDIR += rubygem-ruby-statistics
     SUBDIR += rubygem-ruby2_keywords
     SUBDIR += rubygem-ruby2ruby
     SUBDIR += rubygem-ruby_dep
     SUBDIR += rubygem-ruby_parser
-    SUBDIR += rubygem-rubygame
     SUBDIR += rubygem-rubygems-mirror
     SUBDIR += rubygem-rubygems-tasks
     SUBDIR += rubygem-rubygems-test
@@ -6940,6 +6956,7 @@
     SUBDIR += rubygem-zentest
     SUBDIR += rubygem-zhexdump
     SUBDIR += rubygem-zlib
+    SUBDIR += rubymine
     SUBDIR += rudeconfig
     SUBDIR += rudiments
     SUBDIR += rust-analyzer
@@ -6966,7 +6983,6 @@
     SUBDIR += sdl2pp
     SUBDIR += sdl_console
     SUBDIR += sdl_gnat
-    SUBDIR += sdl_sge
     SUBDIR += sdlmm
     SUBDIR += sdlskk
     SUBDIR += sdts++
@@ -7195,6 +7211,7 @@
     SUBDIR += xopcodecalc
     SUBDIR += xorg-macros
     SUBDIR += xparam
+    SUBDIR += xpeviewer
     SUBDIR += xsd
     SUBDIR += xsimd
     SUBDIR += xtensa-esp32-elf
@@ -7215,7 +7232,7 @@
     SUBDIR += yaml-cpp03
     SUBDIR += yaml2argdata
     SUBDIR += yasm
-    SUBDIR += yasm-devel
+    SUBDIR += yder
     SUBDIR += youcompleteme
     SUBDIR += yuck
     SUBDIR += z80-asm

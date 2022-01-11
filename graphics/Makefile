@@ -115,6 +115,7 @@
     SUBDIR += curator
     SUBDIR += cuttlefish
     SUBDIR += darktable
+    SUBDIR += darktable38
     SUBDIR += dataplot
     SUBDIR += dbow2
     SUBDIR += dc20pack
@@ -492,10 +493,8 @@
     SUBDIR += libprojectm
     SUBDIR += libpuzzle
     SUBDIR += libqrencode
-    SUBDIR += librasterlite
     SUBDIR += librasterlite2
     SUBDIR += libraw
-    SUBDIR += libreatlas
     SUBDIR += librsvg2
     SUBDIR += librsvg2-rust
     SUBDIR += librtprocess
@@ -769,7 +768,9 @@
     SUBDIR += php74-exif
     SUBDIR += php74-gd
     SUBDIR += php80-exif
+    SUBDIR += php81-exif
     SUBDIR += php80-gd
+    SUBDIR += php81-gd
     SUBDIR += phplot
     SUBDIR += picpuz
     SUBDIR += piddle

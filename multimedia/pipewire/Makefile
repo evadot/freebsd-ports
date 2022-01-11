@@ -1,6 +1,6 @@
 PORTNAME=	pipewire
 DISTVERSION=	0.3.42
-PORTREVISION=	2
+PORTREVISION=	4
 CATEGORIES=	multimedia
 MASTER_SITES=	https://gitlab.freedesktop.org/pipewire/media-session/-/archive/${MEDIA_SESSION_VERSION}/:media_session
 DISTFILES=	media-session-${MEDIA_SESSION_VERSION}${EXTRACT_SUFX}:media_session
@@ -11,6 +11,7 @@ COMMENT=	Server and user space API to deal with multimedia pipelines
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+BUILD_DEPENDS=	v4l_compat>0:multimedia/v4l_compat
 LIB_DEPENDS=	libasound.so:audio/alsa-lib \
 		libdbus-1.so:devel/dbus \
 		libinotify.so:devel/libinotify \
@@ -20,7 +21,7 @@ LIB_DEPENDS=	libasound.so:audio/alsa-lib \
 		libwebrtc_audio_processing.so:audio/webrtc-audio-processing0
 
 USES=		compiler:c11 gettext-tools gnome localbase:ldflags meson \
-		ncurses pkgconfig python:3.6+,build readline
+		ncurses pkgconfig python:3.6+,build readline ssl
 USE_GNOME=	glib20
 USE_LDCONFIG=	yes
 
@@ -60,6 +61,8 @@ VULKAN_LIB_DEPENDS=	libvulkan.so:graphics/vulkan-loader
 MEDIA_SESSION_VERSION=	0.4.1
 
 MESON_ARGS=	-D pw-cat=enabled \
+		-D v4l2=enabled \
+		-D raop=enabled \
 		-D bluez5=disabled \
 		-D jack=disabled -D pipewire-jack=disabled \
 		-D systemd=disabled \
