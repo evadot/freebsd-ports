@@ -11,6 +11,7 @@ LICENSE=	LGPL21
 BROKEN_mips64=		fails to build: ./config/imake/imake: No such file or directory
 BROKEN_powerpc64=	fails to build: ./config/imake/imake: No such file or directory
 BROKEN_i386=		cannot bind to a temporary of type va_list
+BROKEN_armv7=		STAGEDIR contains intermediate install files
 
 BUILD_DEPENDS=	ksh93:shells/ksh93			\
 		bdftopcf:x11-fonts/bdftopcf		\
@@ -39,6 +40,12 @@ MAKE_ARGS+=	PERL=${PERL} "LOCAL_LDFLAGS=${LDFLAGS}"
 MAKE_JOBS_UNSAFE=yes
 SUB_FILES=	pkg-message
 LDFLAGS+=	-z muldefs #--allow-multiple-definition
+
+.include <bsd.port.pre.mk>
+
+.if ${ARCH} == powerpc64le
+CPPFLAGS+=	-DPOWERPC64LE
+.endif
 
 post-patch:
 	@if [ -f /usr/include/iconv.h ]; then \
@@ -116,4 +123,4 @@ do-install:
 post-install:
 	${FIND} ${STAGEDIR}/${PREFIX}/dt -type f -exec ${SH} -c '${STRIP_CMD} {} > /dev/null 2>&1' \;
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
