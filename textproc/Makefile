@@ -449,6 +449,7 @@
     SUBDIR += mdbook
     SUBDIR += mdbook-linkcheck
     SUBDIR += mdocml
+    SUBDIR += meilisearch
     SUBDIR += meld
     SUBDIR += mergestat
     SUBDIR += metauml
@@ -1211,16 +1212,6 @@
     SUBDIR += peco
     SUBDIR += perl2html
     SUBDIR += php-mecab
-    SUBDIR += php73-ctype
-    SUBDIR += php73-dom
-    SUBDIR += php73-enchant
-    SUBDIR += php73-pspell
-    SUBDIR += php73-simplexml
-    SUBDIR += php73-wddx
-    SUBDIR += php73-xml
-    SUBDIR += php73-xmlreader
-    SUBDIR += php73-xmlwriter
-    SUBDIR += php73-xsl
     SUBDIR += php74-ctype
     SUBDIR += php74-dom
     SUBDIR += php74-enchant
@@ -1445,8 +1436,6 @@
     SUBDIR += py-pytoml
     SUBDIR += py-pyx12
     SUBDIR += py-qrcode
-    SUBDIR += py-qt5-xml
-    SUBDIR += py-qt5-xmlpatterns
     SUBDIR += py-rdflib
     SUBDIR += py-readchar
     SUBDIR += py-recommonmark
@@ -1633,6 +1622,7 @@
     SUBDIR += rubygem-cssmin
     SUBDIR += rubygem-cucumber-gherkin
     SUBDIR += rubygem-cucumber-html-formatter
+    SUBDIR += rubygem-cucumber-html-formatter17
     SUBDIR += rubygem-diff-lcs
     SUBDIR += rubygem-diff_match_patch
     SUBDIR += rubygem-diffy
@@ -1714,6 +1704,7 @@
     SUBDIR += rubygem-multi_xml
     SUBDIR += rubygem-nokogiri
     SUBDIR += rubygem-nokogiri-diff
+    SUBDIR += rubygem-nokogiri111
     SUBDIR += rubygem-nokogumbo
     SUBDIR += rubygem-octopress-escape-code
     SUBDIR += rubygem-opml
@@ -1752,7 +1743,6 @@
     SUBDIR += rubygem-ronn
     SUBDIR += rubygem-rouge
     SUBDIR += rubygem-rouge312
-    SUBDIR += rubygem-rouge326
     SUBDIR += rubygem-rttool
     SUBDIR += rubygem-ruby-augeas
     SUBDIR += rubygem-ruby-xslt

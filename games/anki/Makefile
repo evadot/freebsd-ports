@@ -2,7 +2,7 @@
 
 PORTNAME=	anki
 DISTVERSION=	2.1.48
-PORTREVISION=	3
+PORTREVISION=	4
 # Don't forget to update ${_MY_BUILDHASH} if DISTVERSION changes
 CATEGORIES=	games education python
 MASTER_SITES=	LOCAL/kai/:yarncache
@@ -70,7 +70,7 @@ GH_TUPLE+=	bazelbuild:bazel-skylib:e59b620:bzlskylib \
 		ankitects:rules_rust:f66001a:bzlrrust \
 		ankitects:rules_sass:275ace7:bzlrsass
 
-USE_PYQT=	core gui network printsupport sip svg webchannel webengine widgets xml_build
+USE_PYQT=	pyqt5 sip webengine
 
 SHEBANG_FILES=	qt/tools/runanki.system.in
 

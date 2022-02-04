@@ -277,7 +277,6 @@
     SUBDIR += kpkpass
     SUBDIR += kpmenu
     SUBDIR += krb5
-    SUBDIR += krb5-117
     SUBDIR += krb5-118
     SUBDIR += krb5-119
     SUBDIR += krb5-appl
@@ -799,10 +798,6 @@
     SUBDIR += pgpdump
     SUBDIR += pgpgpg
     SUBDIR += pgpin
-    SUBDIR += php73-filter
-    SUBDIR += php73-hash
-    SUBDIR += php73-openssl
-    SUBDIR += php73-sodium
     SUBDIR += php74-filter
     SUBDIR += php74-openssl
     SUBDIR += php74-sodium
@@ -1089,6 +1084,7 @@
     SUBDIR += rubygem-doorkeeper-rails5
     SUBDIR += rubygem-doorkeeper-rails50
     SUBDIR += rubygem-ed25519
+    SUBDIR += rubygem-ed2551912
     SUBDIR += rubygem-encryptor
     SUBDIR += rubygem-ezcrypto
     SUBDIR += rubygem-googleauth

@@ -78,6 +78,7 @@
     SUBDIR += blender
     SUBDIR += blender-doc
     SUBDIR += blender-lts28
+    SUBDIR += blender-lts29
     SUBDIR += bmeps
     SUBDIR += bmp2html
     SUBDIR += bonzomatic
@@ -114,6 +115,7 @@
     SUBDIR += cptutils
     SUBDIR += crw
     SUBDIR += curator
+    SUBDIR += curtail
     SUBDIR += cuttlefish
     SUBDIR += darktable
     SUBDIR += darktable38
@@ -265,6 +267,7 @@
     SUBDIR += gimp-resynthesizer
     SUBDIR += gkrellkam2
     SUBDIR += glad
+    SUBDIR += glaxnimate
     SUBDIR += gle
     SUBDIR += glee
     SUBDIR += glew
@@ -410,6 +413,7 @@
     SUBDIR += klatexformula
     SUBDIR += kludge3d
     SUBDIR += kmscube
+    SUBDIR += knotter
     SUBDIR += kolourpaint
     SUBDIR += kontrast
     SUBDIR += kooka
@@ -545,6 +549,7 @@
     SUBDIR += mapcache
     SUBDIR += mapserver
     SUBDIR += mapyrus
+    SUBDIR += matplotplusplus
     SUBDIR += megapov
     SUBDIR += meh
     SUBDIR += mesa-demos
@@ -591,6 +596,7 @@
     SUBDIR += opencollada
     SUBDIR += opencolorio
     SUBDIR += opencolorio-tools
+    SUBDIR += opencoloriov1
     SUBDIR += opencsg
     SUBDIR += opencv
     SUBDIR += opendx
@@ -601,6 +607,7 @@
     SUBDIR += opengv
     SUBDIR += openicc-config
     SUBDIR += openimageio
+    SUBDIR += openimageio-ociov1
     SUBDIR += openjpeg
     SUBDIR += openjpeg15
     SUBDIR += openjph
@@ -764,8 +771,6 @@
     SUBDIR += phototonic
     SUBDIR += php-facedetect
     SUBDIR += php-geos
-    SUBDIR += php73-exif
-    SUBDIR += php73-gd
     SUBDIR += php74-exif
     SUBDIR += php74-gd
     SUBDIR += php80-exif
@@ -908,7 +913,6 @@
     SUBDIR += py-pyvips
     SUBDIR += py-pyx
     SUBDIR += py-qrencode
-    SUBDIR += py-qt5-svg
     SUBDIR += py-railroad-diagrams
     SUBDIR += py-rasterio
     SUBDIR += py-rasterstats
