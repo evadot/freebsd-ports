@@ -1,6 +1,6 @@
 PORTNAME=	nuspell
 DISTVERSIONPREFIX=	v
-DISTVERSION=	5.0.1
+DISTVERSION=	5.1.0
 CATEGORIES=	textproc
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -10,19 +10,12 @@ LICENSE=	LGPL3+
 LICENSE_FILE=	${WRKSRC}/COPYING.LESSER
 
 LIB_DEPENDS=	libicuuc.so:devel/icu
-TEST_DEPENDS=	catch>0:devel/catch \
-		bash:shells/bash
+TEST_DEPENDS=	catch>0:devel/catch
 
 USES=		cmake:testing compiler:c++17-lang
 USE_GITHUB=	yes
 USE_LDCONFIG=	yes
 CMAKE_OFF+=	${CMAKE_TESTING_ON}
-
-OPTIONS_DEFINE=	MANPAGES
-OPTIONS_DEFAULT=MANPAGES
-
-MANPAGES_BUILD_DEPENDS=	pandoc:textproc/hs-pandoc
-MANPAGES_PLIST_FILES=	man/man1/${PORTNAME}.1.gz
 
 post-patch:
 # Skip README as it only contains install instructions

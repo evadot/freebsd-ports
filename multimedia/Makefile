@@ -160,6 +160,8 @@
     SUBDIR += kooha
     SUBDIR += kvazaar
     SUBDIR += l-smash
+    SUBDIR += lebiniou
+    SUBDIR += lebiniou-data
     SUBDIR += libaacs
     SUBDIR += libass
     SUBDIR += libbdplus
@@ -273,6 +275,9 @@
     SUBDIR += neolink
     SUBDIR += nordlicht
     SUBDIR += nostt
+    SUBDIR += nymphcast
+    SUBDIR += nymphcastlib
+    SUBDIR += nymphrpc
     SUBDIR += obs-audio-spectralizer
     SUBDIR += obs-ndi
     SUBDIR += obs-qtwebkit
