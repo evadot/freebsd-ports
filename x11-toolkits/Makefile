@@ -7,6 +7,7 @@
     SUBDIR += blt
     SUBDIR += bwidget
     SUBDIR += color-widgets-qt5
+    SUBDIR += copperspice
     SUBDIR += ctk
     SUBDIR += fltk
     SUBDIR += fox14
@@ -32,8 +33,6 @@
     SUBDIR += gtk20
     SUBDIR += gtk30
     SUBDIR += gtk40
-    SUBDIR += gtkada
-    SUBDIR += gtkada3
     SUBDIR += gtkd
     SUBDIR += gtkdatabox
     SUBDIR += gtkextra
@@ -151,13 +150,14 @@
     SUBDIR += plib
     SUBDIR += py-AnyQt
     SUBDIR += py-Pmw
+    SUBDIR += py-awesometkinter
     SUBDIR += py-easygui
     SUBDIR += py-fltk
     SUBDIR += py-guietta
     SUBDIR += py-qt5-chart
     SUBDIR += py-tkinter
     SUBDIR += py-tktreectrl
-    SUBDIR += py-wxPython40
+    SUBDIR += py-wxPython4
     SUBDIR += py-xlib
     SUBDIR += qml-box2d
     SUBDIR += qt5-charts

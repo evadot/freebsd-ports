@@ -9,16 +9,11 @@
     SUBDIR += R-cran-fastmap
     SUBDIR += R-cran-sqldf
     SUBDIR += WWWdb
-    SUBDIR += adabase
     SUBDIR += adminer
     SUBDIR += adodb
     SUBDIR += adodb5
     SUBDIR += akonadi
     SUBDIR += apache-commons-dbutils
-    SUBDIR += apq
-    SUBDIR += apq-mysql
-    SUBDIR += apq-odbc
-    SUBDIR += apq-pgsql
     SUBDIR += arrow
     SUBDIR += ateam_mysql57_ldap_auth
     SUBDIR += ateam_mysql_ldap_auth
@@ -193,6 +188,8 @@
     SUBDIR += mariadb104-server
     SUBDIR += mariadb105-client
     SUBDIR += mariadb105-server
+    SUBDIR += mariadb106-client
+    SUBDIR += mariadb106-server
     SUBDIR += mdbtools
     SUBDIR += mdbx
     SUBDIR += mdcached
@@ -717,14 +714,6 @@
     SUBDIR += postgresql14-plpython
     SUBDIR += postgresql14-pltcl
     SUBDIR += postgresql14-server
-    SUBDIR += postgresql96-client
-    SUBDIR += postgresql96-contrib
-    SUBDIR += postgresql96-docs
-    SUBDIR += postgresql96-pgtcl
-    SUBDIR += postgresql96-plperl
-    SUBDIR += postgresql96-plpython
-    SUBDIR += postgresql96-pltcl
-    SUBDIR += postgresql96-server
     SUBDIR += powa-archivist
     SUBDIR += powa-web
     SUBDIR += powerarchitect
@@ -1057,7 +1046,6 @@
     SUBDIR += xrootd
     SUBDIR += xtrabackup
     SUBDIR += xtrabackup8
-    SUBDIR += zabbix3-libzbxpgsql
     SUBDIR += zodb
 
 .include <bsd.port.subdir.mk>

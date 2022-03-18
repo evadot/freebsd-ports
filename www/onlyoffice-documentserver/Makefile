@@ -1,6 +1,6 @@
 PORTNAME=	onlyoffice-documentserver
 DISTVERSIONPREFIX=	v
-DISTVERSION=	7.0.0.133
+DISTVERSION=	7.0.1.50
 CATEGORIES=	www
 MASTER_SITES+=	LOCAL/mikael/v8/:source1 \
 		LOCAL/mikael/onlyoffice/:source2 \
@@ -10,8 +10,8 @@ DISTFILES+=	v8-6.8.275.32_all.tar.gz:source1 \
 		v8-6.8.275.32_122aarch64.tar.gz:source1 \
 		v8-6.8.275.32_122amd64.tar.gz:source1 \
 		node-v16.13.0.tar.gz:source3 \
-		npm-cache-onlyoffice-${DISTVERSION}.tar.gz:source2 \
-		optipng-0.7.7.tar.gz:source4
+		optipng-0.7.7.tar.gz:source4 \
+		onlyoffice-${DISTVERSION}-npm-cache.tar.gz:source2 \
 
 MAINTAINER=	mikael@FreeBSD.org
 COMMENT=	Secure office and productivity apps
@@ -22,13 +22,9 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 ONLY_FOR_ARCHS=	aarch64 amd64
 ONLY_FOR_ARCHS_REASON=	uses aarch64 or amd64 binaries
 
-BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}Jinja2>=0:devel/py-Jinja2@${PY_FLAVOR} \
-		binutils>=0:devel/binutils \
-		boost-libs>0:devel/boost-libs \
+BUILD_DEPENDS=	boost-libs>0:devel/boost-libs \
 		glib>=2.54:devel/glib20 \
-		gn:devel/gn \
 		java:java/openjdk11 \
-		ninja:devel/ninja \
 		npm:www/npm-node16
 LIB_DEPENDS=	libboost_regex.so:devel/boost-libs \
 		libcurl.so:ftp/curl \
@@ -37,17 +33,16 @@ LIB_DEPENDS=	libboost_regex.so:devel/boost-libs \
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}supervisor>0:sysutils/py-supervisor@${PY_FLAVOR} \
 		gsed:textproc/gsed \
 		nginx:www/nginx \
-		pg_dump:databases/postgresql${PGSQL_VER_NODOT}-server \
 		rabbitmq>0:net/rabbitmq \
 		webfonts>=0:x11-fonts/webfonts
 
-USES=		autoreconf:build dos2unix fakeroot gmake gnome iconv nodejs:16,build pgsql pkgconfig \
+USES=		autoreconf:build dos2unix fakeroot gmake gnome iconv nodejs:16,build pkgconfig \
 		python:3.7+,build qt:5
 USE_QT=		qmake_build
 USE_GITHUB=	yes
 GH_ACCOUNT=	ONLYOFFICE
 GH_PROJECT=	DocumentServer
-GH_TAGNAME=	v7.0.0
+GH_TAGNAME=	v7.0.1
 GH_TUPLE=	ONLYOFFICE:core:v${DISTVERSION}:core/core \
 		ONLYOFFICE:core-fonts:v${DISTVERSION}:corefonts/core-fonts \
 		ONLYOFFICE:dictionaries:v${DISTVERSION}:dictionaries/dictionaries \
@@ -73,6 +68,14 @@ GH_TUPLE=	ONLYOFFICE:core:v${DISTVERSION}:core/core \
 		hackers-painters:katana-parser:499118d3:hackers_painters_katana/core/Common/3dParty/html/katana-parser \
 		google:gumbo-parser:aa91b27:google_gumbo/core/Common/3dParty/html/gumbo-parser
 
+OPTIONS_SINGLE=		DB
+OPTIONS_SINGLE_DB=	MYSQL PGSQL
+OPTIONS_DEFAULT=	PGSQL
+
+MYSQL_USES+=	mysql:client
+PGSQL_USES+=	pgsql
+PGSQL_VARS=	WANT_PGSQL=client
+
 BINARY_ALIAS=	python=${PYTHON_CMD}
 USE_LDCONFIG=	yes
 
@@ -87,7 +90,8 @@ GROUPS=		${DS_GROUPNAME}
 
 PLIST_SUB=	DS_GROUPNAME=${DS_GROUPNAME} \
 		DS_USERNAME=${DS_USERNAME}
-SUB_FILES=	pkg-message
+SUB_FILES=	pkg-message \
+		onlyoffice.newsyslog.sample
 SUB_LIST=	ETCDIR=${ETCDIR} \
 		PREFIX=${PREFIX} \
 		WWWDIR=${WWWDIR}
@@ -95,6 +99,10 @@ SUB_LIST=	ETCDIR=${ETCDIR} \
 MAKE_ENV=	BUILD_NUMBER="1" \
 		PKG_CACHE_PATH=${WRKDIR}/.pkg-cache \
 		PRODUCT_VERSION="${DISTVERSION}"
+
+# Don't create __pycache__ directory when executing node-gyp
+# This is a workaround to avoid filesystem violations during poudriere build
+MAKE_ENV+=	PYTHONDONTWRITEBYTECODE=1
 
 DOS2UNIX_FILES=	document-server-package/common/documentserver/nginx/includes/http-common.conf.m4
 
@@ -150,6 +158,8 @@ post-patch:
 		${WRKSRC}/document-server-package/common/documentserver/bin/documentserver-update-securelink.sh.m4
 	@${REINPLACE_CMD} 's|%%DISTDIR%%|${DISTDIR}|' \
 		${WRKSRC}/web-apps/build/patches/optipng-bin+5.1.0.patch
+	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|' -e 's|%%ETCDIR%%|${ETCDIR}|' \
+		${WRKSRC}/document-server-package/Makefile
 	@${RM} ${WRKSRC}/web-apps/build/patches/optipng-bin+5.1.0.patch.orig
 
 	@${FIND} ${WRKSRC}/server -type f -name npm-shrinkwrap.json -delete
@@ -194,12 +204,15 @@ do-install:
 	${RM} ${WRKSRC}/document-server-package/common/documentserver/config/*-mac.json ${WRKSRC}/document-server-package/common/documentserver/config/*-windows.json
 	cd ${WRKSRC}/document-server-package/common/documentserver/supervisor && ${COPYTREE_SHARE} . ${STAGEDIR}${ETCDIR}/documentserver/supervisor "-name *\.conf"
 	cd ${WRKSRC}/document-server-package/common/documentserver/logrotate && ${COPYTREE_SHARE} . ${STAGEDIR}${ETCDIR}/documentserver/logrotate "-name *\.conf"
-.for f in ds.conf includes/http-common.conf includes/ds-common.conf includes/ds-docservice.conf includes/ds-letsencrypt.conf
+	@${CP} ${WRKSRC}/document-server-package/common/documentserver/nginx/ds-ssl.conf.tmpl ${WRKSRC}/document-server-package/common/documentserver/nginx/ds-ssl.conf
+.for f in ds.conf ds-ssl.conf includes/http-common.conf includes/ds-common.conf includes/ds-docservice.conf includes/ds-letsencrypt.conf
 	${INSTALL_DATA} ${WRKSRC}/document-server-package/common/documentserver/nginx/${f} ${STAGEDIR}${ETCDIR}/documentserver/nginx/${f}.sample
 .endfor
 	cd ${WRKSRC}/document-server-package/common/documentserver/nginx/includes && ${COPYTREE_SHARE} . ${STAGEDIR}${ETCDIR}/documentserver/nginx/includes "-name *\.conf"
 	cd ${WRKSRC}/document-server-package/common/documentserver/config && ${COPYTREE_SHARE} . ${STAGEDIR}${ETCDIR}/documentserver
 	${INSTALL_DATA} ${FILESDIR}/local.json.sample ${STAGEDIR}${ETCDIR}/documentserver
+	${MKDIR} ${STAGEDIR}/${ETCDIR}/documentserver/newsyslog.conf.d
+	${INSTALL_DATA} ${WRKDIR}/onlyoffice.newsyslog.sample ${STAGEDIR}/${ETCDIR}/documentserver/newsyslog.conf.d
 
 # create missing dir
 	${MKDIR} ${STAGEDIR}/var/log/onlyoffice/documentserver/docservice \

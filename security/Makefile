@@ -2,6 +2,7 @@
 
     SUBDIR += 0d1n
     SUBDIR += 1password-client
+    SUBDIR += 1password-client-devel
     SUBDIR += 2fa
     SUBDIR += ADMsmb
     SUBDIR += ADMsnmp
@@ -179,10 +180,12 @@
     SUBDIR += fwlogwatch
     SUBDIR += gcr
     SUBDIR += gef
+    SUBDIR += git-credential-gopass
     SUBDIR += git-crypt
     SUBDIR += git-remote-gcrypt
     SUBDIR += git-secret
     SUBDIR += gitjacker
+    SUBDIR += globalprotect-openconnect
     SUBDIR += gnome-keyring
     SUBDIR += gnome-keyring-sharp
     SUBDIR += gnome-ssh-askpass
@@ -222,6 +225,7 @@
     SUBDIR += hashcat
     SUBDIR += hashcat-legacy
     SUBDIR += heaan
+    SUBDIR += headscale
     SUBDIR += heimdal
     SUBDIR += helib
     SUBDIR += hexl
@@ -292,7 +296,6 @@
     SUBDIR += lasso
     SUBDIR += lastpass-cli
     SUBDIR += lego
-    SUBDIR += libadacrypt
     SUBDIR += libargon2
     SUBDIR += libassuan
     SUBDIR += libcryptui
@@ -1171,6 +1174,7 @@
     SUBDIR += rubygem-securerandom
     SUBDIR += rubygem-signet
     SUBDIR += rubygem-six
+    SUBDIR += rubygem-ssh_data
     SUBDIR += rubygem-sshkey
     SUBDIR += rubygem-sshkit
     SUBDIR += rubygem-sslshake

@@ -494,6 +494,7 @@
     SUBDIR += gstopd
     SUBDIR += gstreamer1-plugins-cdio
     SUBDIR += gtk-imonc
+    SUBDIR += handlr
     SUBDIR += hardlink
     SUBDIR += hare
     SUBDIR += hared
@@ -535,7 +536,6 @@
     SUBDIR += installwatch
     SUBDIR += intel-nvmupdate
     SUBDIR += intel-pcm
-    SUBDIR += intel-pcm-devel
     SUBDIR += intel-undervolt
     SUBDIR += inxi
     SUBDIR += ioc
@@ -627,6 +627,7 @@
     SUBDIR += libretto-config
     SUBDIR += libsunacl
     SUBDIR += libsysstat
+    SUBDIR += libtree
     SUBDIR += libudisks
     SUBDIR += liburcu
     SUBDIR += lineak-defaultplugin

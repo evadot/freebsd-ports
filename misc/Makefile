@@ -53,6 +53,7 @@
     SUBDIR += compat8x
     SUBDIR += compat9x
     SUBDIR += concourse
+    SUBDIR += copperspice-examples
     SUBDIR += countrycodes
     SUBDIR += cpuid
     SUBDIR += crosti
@@ -87,7 +88,6 @@
     SUBDIR += erlang-mimerl
     SUBDIR += erlang-mimetypes
     SUBDIR += estic
-    SUBDIR += excel-writer
     SUBDIR += exercism
     SUBDIR += explosions
     SUBDIR += ezc3d

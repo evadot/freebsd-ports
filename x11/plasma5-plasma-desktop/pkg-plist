@@ -1446,6 +1446,7 @@ share/locale/eu/LC_MESSAGES/kcm_search.mo
 share/locale/eu/LC_MESSAGES/kcm_smserver.mo
 share/locale/eu/LC_MESSAGES/kcm_solid_actions.mo
 share/locale/eu/LC_MESSAGES/kcm_splashscreen.mo
+share/locale/eu/LC_MESSAGES/kcm_tablet.mo
 share/locale/eu/LC_MESSAGES/kcm_touchpad.mo
 share/locale/eu/LC_MESSAGES/kcm_workspace.mo
 share/locale/eu/LC_MESSAGES/kcmkclock.mo
@@ -1721,10 +1722,13 @@ share/locale/hi/LC_MESSAGES/kcm5_kded.mo
 share/locale/hi/LC_MESSAGES/kcm_access.mo
 share/locale/hi/LC_MESSAGES/kcm_componentchooser.mo
 share/locale/hi/LC_MESSAGES/kcm_desktoppaths.mo
+share/locale/hi/LC_MESSAGES/kcm_landingpage.mo
 share/locale/hi/LC_MESSAGES/kcm_launchfeedback.mo
+share/locale/hi/LC_MESSAGES/kcm_search.mo
 share/locale/hi/LC_MESSAGES/kcm_smserver.mo
 share/locale/hi/LC_MESSAGES/kcm_solid_actions.mo
 share/locale/hi/LC_MESSAGES/kcm_splashscreen.mo
+share/locale/hi/LC_MESSAGES/kcm_tablet.mo
 share/locale/hi/LC_MESSAGES/kcmkclock.mo
 share/locale/hi/LC_MESSAGES/kcmkeyboard.mo
 share/locale/hi/LC_MESSAGES/kcmmouse.mo
@@ -2125,6 +2129,7 @@ share/locale/ko/LC_MESSAGES/kcm_search.mo
 share/locale/ko/LC_MESSAGES/kcm_smserver.mo
 share/locale/ko/LC_MESSAGES/kcm_solid_actions.mo
 share/locale/ko/LC_MESSAGES/kcm_splashscreen.mo
+share/locale/ko/LC_MESSAGES/kcm_tablet.mo
 share/locale/ko/LC_MESSAGES/kcm_touchpad.mo
 share/locale/ko/LC_MESSAGES/kcm_workspace.mo
 share/locale/ko/LC_MESSAGES/kcmkclock.mo

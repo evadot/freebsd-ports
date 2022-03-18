@@ -214,8 +214,6 @@ lib/emby-server/system/arm64/libSkiaSharp.dll
 lib/emby-server/system/dashboard-ui/apikeys/apikeys.js
 lib/emby-server/system/dashboard-ui/app.js
 lib/emby-server/system/dashboard-ui/apploader.js
-lib/emby-server/system/dashboard-ui/bower_components/Swiper/css/swiper.css
-lib/emby-server/system/dashboard-ui/bower_components/Swiper/js/swiper.js
 lib/emby-server/system/dashboard-ui/bower_components/abortcontroller-polyfill/umd-polyfill.js
 lib/emby-server/system/dashboard-ui/bower_components/css-vars-ponyfill/css-vars-ponyfill.js
 lib/emby-server/system/dashboard-ui/bower_components/fetch/fetch.js
@@ -383,7 +381,6 @@ lib/emby-server/system/dashboard-ui/modules/common/playback/experimentalwarnings
 lib/emby-server/system/dashboard-ui/modules/common/playback/playaccessvalidation.js
 lib/emby-server/system/dashboard-ui/modules/common/playback/playbackmanager.js
 lib/emby-server/system/dashboard-ui/modules/common/playback/playbackvalidation.js
-lib/emby-server/system/dashboard-ui/modules/common/playback/playmethodhelper.js
 lib/emby-server/system/dashboard-ui/modules/common/playback/playqueueconfirmation.js
 lib/emby-server/system/dashboard-ui/modules/common/playback/playqueuemanager.js
 lib/emby-server/system/dashboard-ui/modules/common/pluginmanager.js
@@ -993,6 +990,7 @@ lib/emby-server/system/plugins/AudioDb.dll
 lib/emby-server/system/plugins/BlurayMounter.dll
 lib/emby-server/system/plugins/DvdMounter.dll
 lib/emby-server/system/plugins/Emby.Dlna.dll
+lib/emby-server/system/plugins/Emby.M3UTuner.dll
 lib/emby-server/system/plugins/Emby.PortMapper.dll
 lib/emby-server/system/plugins/Emby.Server.CinemaMode.dll
 lib/emby-server/system/plugins/Emby.Webhooks.dll

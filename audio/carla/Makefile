@@ -1,6 +1,6 @@
 PORTNAME=	Carla
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.4.1
+DISTVERSION=	2.4.2
 PORTREVISION=	1
 CATEGORIES=	audio
 
@@ -33,6 +33,7 @@ GH_ACCOUNT=	falkTX
 
 MAKE_ARGS=	HAVE_QT4=false \
 		EXTERNAL_PLUGINS=false \
+		PREFIX=${LOCALBASE}
 # Give the Makefile the proper versioned binaries of PyQt
 BINARY_ALIAS=	pyuic5=${LOCALBASE}/bin/pyuic5-${PYTHON_VER} \
 		pyrcc5=${LOCALBASE}/bin/pyrcc5-${PYTHON_VER}

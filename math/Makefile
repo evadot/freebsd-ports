@@ -216,8 +216,9 @@
     SUBDIR += coin-or-data-netlib
     SUBDIR += coin-or-data-sample
     SUBDIR += coin-or-data-stochastic
+    SUBDIR += coin-or-metis
+    SUBDIR += coin-or-mumps
     SUBDIR += coinmp
-    SUBDIR += coinmumps
     SUBDIR += coinutils
     SUBDIR += colpack
     SUBDIR += combblas
@@ -359,6 +360,7 @@
     SUBDIR += hpipm
     SUBDIR += hs-Agda
     SUBDIR += hs-penrose
+    SUBDIR += hsl
     SUBDIR += ideep
     SUBDIR += ignition-math
     SUBDIR += igraph
@@ -436,7 +438,6 @@
     SUBDIR += mate-calc
     SUBDIR += math77
     SUBDIR += mathgl
-    SUBDIR += mathics-django
     SUBDIR += mathicsscript
     SUBDIR += mathmod
     SUBDIR += mathomatic
@@ -779,7 +780,6 @@
     SUBDIR += ploticus
     SUBDIR += ploticus-nox11
     SUBDIR += plplot
-    SUBDIR += plplot-ada
     SUBDIR += poly2tri
     SUBDIR += polylib
     SUBDIR += polymake
@@ -843,12 +843,14 @@
     SUBDIR += py-grandalf
     SUBDIR += py-graphillion
     SUBDIR += py-gym
+    SUBDIR += py-gym-notices
     SUBDIR += py-hdbscan
     SUBDIR += py-hdmedians
     SUBDIR += py-heyoka
     SUBDIR += py-iminuit
     SUBDIR += py-intspan
     SUBDIR += py-iohexperimenter
+    SUBDIR += py-ipyopt
     SUBDIR += py-jax
     SUBDIR += py-keras
     SUBDIR += py-keras-applications
@@ -868,12 +870,14 @@
     SUBDIR += py-mpmath
     SUBDIR += py-munkres
     SUBDIR += py-munkres10
+    SUBDIR += py-mutatormath
     SUBDIR += py-ndindex
     SUBDIR += py-networkx
     SUBDIR += py-nevergrad
     SUBDIR += py-numexpr
     SUBDIR += py-numpoly
     SUBDIR += py-numpy
+    SUBDIR += py-numpy-groupies
     SUBDIR += py-numpy-stl
     SUBDIR += py-openTSNE
     SUBDIR += py-opt-einsum
@@ -899,7 +903,6 @@
     SUBDIR += py-pygsl
     SUBDIR += py-pygslodeiv2
     SUBDIR += py-pyhull
-    SUBDIR += py-pyipopt
     SUBDIR += py-pymc3
     SUBDIR += py-pynauty
     SUBDIR += py-pyneqsys
@@ -954,10 +957,11 @@
     SUBDIR += py-yt
     SUBDIR += py-z3-solver
     SUBDIR += pynac
-    SUBDIR += qalculate
+    SUBDIR += qalculate-gtk
+    SUBDIR += qalculate-qt
     SUBDIR += qd
     SUBDIR += qhull
-    SUBDIR += qhull8
+    SUBDIR += qhull7
     SUBDIR += qposases
     SUBDIR += qrupdate
     SUBDIR += qtiplot-doc
@@ -992,6 +996,7 @@
     SUBDIR += rumur
     SUBDIR += saga
     SUBDIR += sage
+    SUBDIR += savage
     SUBDIR += sc
     SUBDIR += sc-im
     SUBDIR += scalapack
@@ -1082,6 +1087,7 @@
     SUBDIR += wxmaxima
     SUBDIR += xblas
     SUBDIR += xfce4-calculator-plugin
+    SUBDIR += xgap
     SUBDIR += xgraph
     SUBDIR += xlapack
     SUBDIR += xldlas

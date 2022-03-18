@@ -1,6 +1,6 @@
 PORTNAME=	cgl
 DISTVERSIONPREFIX=	releases/
-DISTVERSION=	0.60.4
+DISTVERSION=	0.60.5
 CATEGORIES=	math
 PKGNAMEPREFIX=	coin-or-
 
@@ -15,6 +15,7 @@ LIB_DEPENDS=	libcoinasl.so:math/asl \
 		libcoinmetis.so:math/ipopt \
 		libCoinUtils.so:math/coinutils \
 		libClp.so:math/clp \
+		libcoinmumps.so:math/coin-or-mumps \
 		libopenblas.so:math/openblas \
 		libOsi.so:math/osi
 

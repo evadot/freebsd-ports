@@ -197,6 +197,7 @@
     SUBDIR += dobutsu
     SUBDIR += dodgindiamond2
     SUBDIR += domination
+    SUBDIR += domino-chain
     SUBDIR += dontspace
     SUBDIR += doom
     SUBDIR += doom-data
@@ -258,6 +259,7 @@
     SUBDIR += fightorperish
     SUBDIR += fillets-ng
     SUBDIR += filters
+    SUBDIR += fishfight
     SUBDIR += fishsupper
     SUBDIR += five-or-more
     SUBDIR += fkiss
@@ -277,6 +279,7 @@
     SUBDIR += fortunate
     SUBDIR += fotaq
     SUBDIR += four-in-a-row
+    SUBDIR += freebee
     SUBDIR += freeblocks
     SUBDIR += freecell-solver
     SUBDIR += freeciv
@@ -486,6 +489,7 @@
     SUBDIR += libmt_client
     SUBDIR += libretro
     SUBDIR += libretro-2048
+    SUBDIR += libretro-a5200
     SUBDIR += libretro-beetle_bsnes
     SUBDIR += libretro-beetle_gba
     SUBDIR += libretro-beetle_lynx
@@ -775,7 +779,6 @@
     SUBDIR += prboom-plus
     SUBDIR += primateplunge
     SUBDIR += puckman
-    SUBDIR += pushover
     SUBDIR += pvpgn
     SUBDIR += py-2048-py
     SUBDIR += py-cbeams
@@ -1029,6 +1032,7 @@
     SUBDIR += wesnoth
     SUBDIR += whichwayisup
     SUBDIR += widelands
+    SUBDIR += wipeclean
     SUBDIR += wizznic
     SUBDIR += wmpuzzle
     SUBDIR += wmqstat

@@ -2,6 +2,7 @@
 
 PORTNAME=	darktable
 PORTVERSION=	3.8.1
+PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	https://github.com/darktable-org/${PORTNAME}/releases/download/release-${PORTVERSION:C/\.rc/rc/}/
 PKGNAMESUFFIX=	38
@@ -72,7 +73,6 @@ OPTIONS_DEFINE=		DOCS GEO GPHOTO GMIC GRAPHMAGICK AVIF LIBSECRET LTO \
 OPTIONS_DEFAULT=	AVIF GEO GPHOTO HEIF LUA OPENEXR OPENJPEG PRINT WEBP
 OPTIONS_SUB=		yes
 
-AVIF_DESC=		Support encoding and decoding .avif files
 GEO_DESC=		Support geotagging
 GMIC_DESC=		Support G'Mic-compressed LUT in lut3d
 LIBSECRET_DESC=		Support libsecret as password backend

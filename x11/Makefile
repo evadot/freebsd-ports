@@ -17,6 +17,7 @@
     SUBDIR += arandr
     SUBDIR += arcan-trayicon
     SUBDIR += aterm
+    SUBDIR += autorandr
     SUBDIR += babl
     SUBDIR += bbappconf
     SUBDIR += bbdock
@@ -380,8 +381,10 @@
     SUBDIR += virtualgl
     SUBDIR += wallutils
     SUBDIR += wapanel
+    SUBDIR += way-displays
     SUBDIR += waybar
     SUBDIR += wayland-logout
+    SUBDIR += wayout
     SUBDIR += wbar
     SUBDIR += wcm
     SUBDIR += wdisplays
@@ -390,6 +393,7 @@
     SUBDIR += wezterm
     SUBDIR += wf-shell
     SUBDIR += wl-clipboard
+    SUBDIR += wl-mirror
     SUBDIR += wlogout
     SUBDIR += wlr-randr
     SUBDIR += wlrctl

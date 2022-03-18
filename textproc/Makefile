@@ -34,7 +34,6 @@
     SUBDIR += R-cran-xtable
     SUBDIR += R-cran-yaml
     SUBDIR += UCD
-    SUBDIR += adabrowse
     SUBDIR += add-css-links
     SUBDIR += addts
     SUBDIR += af-aspell
@@ -255,7 +254,6 @@
     SUBDIR += gtkspell
     SUBDIR += gtkspell3
     SUBDIR += gu-aspell
-    SUBDIR += gutenmark
     SUBDIR += gv-aspell
     SUBDIR += halibut
     SUBDIR += heirloom-doctools
@@ -326,6 +324,7 @@
     SUBDIR += jdictionary-int-eng
     SUBDIR += jid
     SUBDIR += jing
+    SUBDIR += jless
     SUBDIR += jo
     SUBDIR += jq
     SUBDIR += jql
@@ -410,6 +409,7 @@
     SUBDIR += libxdiff
     SUBDIR += libxml++26
     SUBDIR += libxml2
+    SUBDIR += libxmlb
     SUBDIR += libxmlbird
     SUBDIR += libxode
     SUBDIR += libxslt
@@ -1288,6 +1288,7 @@
     SUBDIR += py-dbfread
     SUBDIR += py-diff-match-patch
     SUBDIR += py-docrepr
+    SUBDIR += py-docstring-parser
     SUBDIR += py-docutils
     SUBDIR += py-docx2txt
     SUBDIR += py-dominate
@@ -1362,9 +1363,14 @@
     SUBDIR += py-misaka
     SUBDIR += py-mistune
     SUBDIR += py-mkdocs
+    SUBDIR += py-mkdocs-autorefs
     SUBDIR += py-mkdocs-material
     SUBDIR += py-mkdocs-material-extensions
+    SUBDIR += py-mkdocs-mermaid2-plugin
     SUBDIR += py-mkdocs-nature
+    SUBDIR += py-mkdocs-redirects
+    SUBDIR += py-mkdocs-simple-hooks
+    SUBDIR += py-mkdocstrings
     SUBDIR += py-mwparserfromhell
     SUBDIR += py-myst-parser
     SUBDIR += py-nbsphinx
@@ -1436,6 +1442,7 @@
     SUBDIR += py-python-slugify
     SUBDIR += py-python-xmp-toolkit
     SUBDIR += py-pytidylib
+    SUBDIR += py-pytkdocs
     SUBDIR += py-pytoml
     SUBDIR += py-pyx12
     SUBDIR += py-qrcode
@@ -1552,7 +1559,6 @@
     SUBDIR += rapidxml
     SUBDIR += raptor
     SUBDIR += raptor2
-    SUBDIR += rarian
     SUBDIR += rasqal
     SUBDIR += re-flex
     SUBDIR += re_graph
@@ -1746,6 +1752,7 @@
     SUBDIR += rubygem-ronn
     SUBDIR += rubygem-rouge
     SUBDIR += rubygem-rouge312
+    SUBDIR += rubygem-rouge327
     SUBDIR += rubygem-rttool
     SUBDIR += rubygem-ruby-augeas
     SUBDIR += rubygem-ruby-xslt
@@ -1883,7 +1890,6 @@
     SUBDIR += te-aspell
     SUBDIR += te-hunspell
     SUBDIR += teckit
-    SUBDIR += templates_parser
     SUBDIR += tet-aspell
     SUBDIR += texi2db
     SUBDIR += texi2html
@@ -1953,7 +1959,6 @@
     SUBDIR += wikiman
     SUBDIR += word2x
     SUBDIR += wordnet
-    SUBDIR += words
     SUBDIR += write-good
     SUBDIR += wv
     SUBDIR += wv2
@@ -1977,7 +1982,6 @@
     SUBDIR += xml-format
     SUBDIR += xml-lite.el
     SUBDIR += xml2rfc
-    SUBDIR += xmlada
     SUBDIR += xmlcatmgr
     SUBDIR += xmlcharent
     SUBDIR += xmlenc

@@ -5,6 +5,117 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20220313:
+  AFFECTS: users of net/unison
+  AUTHOR: madpilot@FreeBSD.org
+
+  unison has been updated to version 2.52. The new version introduces
+  a new wire protocol and on disk archive format. This new version
+  is compatible with 2.51 clients for communication, so it's now
+  possible to upgrade one side and then the other.
+
+  The archive files are automatically converted to the new version,
+  but once they are converted the y are incompatible with the
+  previous version.
+
+  In case you need version 2.51, the previous version of the port
+  is preserved in net/unison251.
+
+20220311:
+  AFFECTS: users of multimedia/get_iplayer
+  AUTHOR: jamie@catflap.org
+
+  get_iplayer has a number of changes to quality settings that may
+  break existing configurations. Please see the release notes for
+  further information:
+
+  https://github.com/get-iplayer/get_iplayer/wiki/release320to329#release329
+
+20220311:
+  AFFECTS: users of emulators/virtualbox-ose
+  AUTHOR: grembo@FreeBSD.org
+
+  In order to comply to hier(7), VirtualBox's configuration of non-default
+  IP ranges to be used in host-only mode moved from /etc/vbox/networks.conf
+  to ${LOCALBASE}/etc/vbox/networks.conf.
+
+20220311:
+  AFFECTS: users of net/nats-server
+  AUTHOR: olgeni@FreeBSD.org
+
+  A dedicated 'nats' user was added, replacing 'nobody' in the startup script.
+  You should check your configuration and assign updated ownership to your data
+  files.
+
+20220227:
+  AFFECTS: users of graphics/bmeps
+  AUTHOR: takefu@airport.fm
+
+  The binary and man page have been renamed from bmpp{.1.gz} to bitmap2pp{.1.gz}
+
+20220225:
+  AFFECTS: users of x11-toolkits/py-wxPython40
+  AUTHOR: lbartoletti@FreeBSD.org
+
+  x11-toolkits/py-wxPython40 has been removed to be replaced by the 4.1
+  version.
+  However the new wxPython ports is now named x11-toolkits/py-wxPython4.
+
+  Depending on the tools you use, you may have to remove the port
+  before ports upgrade.
+
+20220224:
+  AFFECTS: users of net-im/openfire
+  AUTHOR: nikita@druba.su
+
+  The port version have been updated from 4.6.x to 4.7.x.
+  It is recommended to do database and configs backup before updating.
+
+20220219:
+  AFFECTS: users of sysutils/intel-pcm-devel
+  AUTHOR: egypcio@FreeBSD.org
+
+  sysutils/intel-pcm-devel became quite obsolte once sysutils/intel-pcm is
+  now pretty much following a constant and stable update cycle, so users of
+  the -devel version are encouraged to switch to it.
+
+  If you still have sysutils/intel-pcm-devel installed, please delete it from
+  your system and install sysutils/intel-pcm instead:
+
+  # pkg delete sysutils/intel-pcm-devel
+  # pkg install sysutils/intel-pcm
+
+20220219:
+  AFFECTS: users of math/qhull*
+  AUTHOR: stephen@FreeBSD.org
+
+  Because of entries in MOVED, portupgrade can get confused updating qhull.
+  It is recommended that you delete qhull and ports depending upon it, and
+  then reinstalling all the dependent ports.
+
+20220218:
+  AFFECTS: users of TeX*
+  AUTHOR: bofh@FreeBSD.org
+
+  TeX system has been updated to 2021 from 2015. Normal pkg upgrade or
+  portmaster -a should handle all the upgrade properly. In case not please
+  create a ticket or send a mail to tex@FreeBSD.org
+
+  print/tex-aleph has been removed as per upstream. This package should be
+  removed manually. Additionally users have reported to delete 
+  texlive-texmf prior to starting update, or pkg-static will indicate
+  there is a conflict during the upgrade of texlive-base :
+
+  # pkg remove tex-aleph texlive-texmf
+
+20220218:
+  AFFECTS: users of net-mgmt/librenms
+  AUTHOR: dvl@FreeBSD.org
+
+  The storage directory has moved from WWWDIR to /var/db/librenms/storage
+  to comply with man 7 hier. When upgrading, you may need to manually create
+  this symlink.
+
 20220212:
   AFFECTS: users of lang/php8[01][-extensions]?
   AUTHOR: bofh@FreeBSD.org
@@ -16,6 +127,23 @@ you update your ports collection, before attempting any port upgrades.
   been removed. There is no side effect of this for ports which have
   USE_PHP=openssl. In case for php74 as the default php74-openssl will
   be installed otherwise it will be used from php installation.
+
+  If you are using pkg, you have to remove php8[01]-openssl manually after
+  the upgrade :
+
+  # pkg info \*php8\* > ~/installed-php-ports-list
+
+  # pkg upgrade -y
+  # pkg delete -f php8[01]-openssl
+  # service -R
+
+  While rebuilding from ports users old php.conf is not overwritten. So 
+  have to manually remove the ports. For portmaster users:
+  # sh
+  # REINSTALL="$(pkg info -o "*php80*" | grep -v openssl | awk '{printf "%s ", $2}')"
+  # pkg delete -f "*php80*"
+  # portmaster $REINSTALL
+  # portmaster -a
 
 20220207:
   AFFECTS: users of security/amavisd-new
