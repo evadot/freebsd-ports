@@ -109,8 +109,6 @@ GO_ENV+=	CGO_ENABLED=${CGO_ENABLED} \
 		GOARM=${GOARM}
 
 .if ${go_ARGS:Mmodules}
-GO_BUILDFLAGS+=	-mod=vendor
-GO_TESTFLAGS+=	-mod=vendor
 GO_GOPATH=	${DISTDIR}/go/${PKGORIGIN:S,/,_,g}
 GO_WRKSRC=	${WRKSRC}
 GO_ENV+=	GOPATH="${GO_GOPATH}" \
@@ -168,10 +166,7 @@ post-fetch:
 post-extract:
 	@${MKDIR} ${GO_WRKSRC:H}
 	@${LN} -sf ${WRKSRC} ${GO_WRKSRC}
-.  elif ${go_ARGS:Mmodules} && defined(GO_MODULE)
-post-extract:
-	@(cd ${GO_WRKSRC}; ${SETENV} ${GO_ENV} GOPROXY=off ${GO_CMD} mod vendor)
-.  endif 
+.  endif
 .endif
 
 .if !target(do-build) && empty(go_ARGS:Mno_targets)

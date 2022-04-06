@@ -1,3 +1,5 @@
-TIMESTAMP = 1647122497
-SHA256 (syncthing-source-v1.19.1.tar.gz) = ffc5ec2f232314122a216884f63a48eea7c8739f9779e249be1f4776d7a55127
-SIZE (syncthing-source-v1.19.1.tar.gz) = 13216635
+TIMESTAMP = 1649227889
+SHA256 (go/net_syncthing/syncthing-v1.19.2/v1.19.2.mod) = 0c7e983332becec6f5e820a8a3f91fd1863350976fc9626848851b01c4a8f6b0
+SIZE (go/net_syncthing/syncthing-v1.19.2/v1.19.2.mod) = 2528
+SHA256 (go/net_syncthing/syncthing-v1.19.2/v1.19.2.zip) = bda604d746dbf327497f2713dc8eca4850346ca51fb6b25fb121a947ce0a19d3
+SIZE (go/net_syncthing/syncthing-v1.19.2/v1.19.2.zip) = 5539613

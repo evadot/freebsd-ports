@@ -1,23 +1,22 @@
 PORTNAME=	syncthing
-PORTVERSION=	1.19.1
+PORTVERSION=	1.19.2
 DISTVERSIONPREFIX=	v
 PORTREVISION=	1
 CATEGORIES=	net
-MASTER_SITES=	https://github.com/syncthing/syncthing/releases/download/v${PORTVERSION}/
-DISTNAME=	${PORTNAME}-source-${DISTVERSIONPREFIX}${PORTVERSION}
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	swills@FreeBSD.org
 COMMENT=	Encrypted file sync tool
 
 LICENSE=	MPL20
-LICENSE_FILE=	${WRKSRC}/${PORTNAME}/LICENSE
+LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		cpe go
+USES=		cpe go:modules
 
 USE_RC_SUBR=	syncthing syncthing-discosrv syncthing-relaysrv syncthing-relaypoolsrv
 
 BINS=		syncthing stdiscosrv strelaysrv strelaypoolsrv
+
+GO_MODULE=	github.com/syncthing/syncthing
 
 .for x in ${BINS}
 PLIST_FILES+=	bin/${x}
@@ -33,24 +32,22 @@ MAKE_ENV+=	BUILD_USER=ports BUILD_HOST=freebsd
 
 OPTIONS_DEFINE=	DOCS
 
-NO_WRKSUBDIR=	yes
-
 do-build:
-	@( cd ${WRKSRC}/${PORTNAME} ; \
-		${SETENV} ${MAKE_ENV} CGO_ENABLED=0 GOFLAGS="-mod=vendor" go run build.go -version v${PORTVERSION} -no-upgrade build ; \
-		${SETENV} ${MAKE_ENV} CGO_ENABLED=0 GOFLAGS="-mod=vendor" go run build.go -version v${PORTVERSION} -no-upgrade build stdiscosrv ; \
-		${SETENV} ${MAKE_ENV} CGO_ENABLED=0 GOFLAGS="-mod=vendor" go run build.go -version v${PORTVERSION} -no-upgrade build strelaysrv ; \
-		${SETENV} ${MAKE_ENV} CGO_ENABLED=0 GOFLAGS="-mod=vendor" go run build.go -version v${PORTVERSION} -no-upgrade build strelaypoolsrv ; \
+	@( cd ${WRKSRC} ; \
+		${SETENV} ${MAKE_ENV} ${GO_ENV} CGO_ENABLED=0 go run build.go -version v${PORTVERSION} -no-upgrade build ; \
+		${SETENV} ${MAKE_ENV} ${GO_ENV} CGO_ENABLED=0 go run build.go -version v${PORTVERSION} -no-upgrade build stdiscosrv ; \
+		${SETENV} ${MAKE_ENV} ${GO_ENV} CGO_ENABLED=0 go run build.go -version v${PORTVERSION} -no-upgrade build strelaysrv ; \
+		${SETENV} ${MAKE_ENV} ${GO_ENV} CGO_ENABLED=0 go run build.go -version v${PORTVERSION} -no-upgrade build strelaypoolsrv ; \
 		)
 
 do-install:
 .for x in ${BINS}
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME}/${x} \
+	${INSTALL_PROGRAM} ${WRKSRC}/${x} \
 		${STAGEDIR}${PREFIX}/bin/
 .endfor
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for x in AUTHORS LICENSE README.md
-	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}/${x} \
+	${INSTALL_DATA} ${WRKSRC}/${x} \
 		${STAGEDIR}${DOCSDIR}
 .endfor
 
