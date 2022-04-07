@@ -1,13 +1,8 @@
 PORTNAME=	intel-graphics-compiler
 DISTVERSIONPREFIX=	igc-
-DISTVERSION=	1.0.10409
+DISTVERSION=	1.0.10840
 CATEGORIES=	devel
 PKGNAMESUFFIX=	-${FLAVOR}
-
-PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
-PATCHFILES+=	aa7df33aebe0.patch:-p1 # https://github.com/intel/intel-graphics-compiler/pull/210
-PATCHFILES+=	35c947c2631e.patch:-p1 # https://github.com/intel/intel-graphics-compiler/issues/142
-PATCHFILES+=	eda4042be98c.patch:-p1 # aarch64
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Intel Graphics Compiler for OpenCL
@@ -18,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.md
 ONLY_FOR_ARCHS=	aarch64 amd64 i386
 ONLY_FOR_ARCHS_REASON=	only Intel GPUs on x86 are supported
 
-BUILD_DEPENDS=	vc-intrinsics-${FLAVOR}>=s20210730:devel/vc-intrinsics@${FLAVOR}
+BUILD_DEPENDS=	vc-intrinsics-${FLAVOR}>=0.1.0_1:devel/vc-intrinsics@${FLAVOR}
 LIB_DEPENDS=	libLLVM-${FLAVOR:S/llvm//}.so:devel/${FLAVOR} \
 		libopencl-clang.so.${FLAVOR:S/llvm//}:devel/opencl-clang@${FLAVOR} \
 		libLLVMSPIRVLib.so.${FLAVOR:S/llvm//}:devel/spirv-llvm-translator@${FLAVOR}

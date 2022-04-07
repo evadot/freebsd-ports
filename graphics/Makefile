@@ -69,7 +69,6 @@
     SUBDIR += avir
     SUBDIR += azpainter
     SUBDIR += azpainterb
-    SUBDIR += barbecue
     SUBDIR += barcode
     SUBDIR += batik
     SUBDIR += birdfont
@@ -119,7 +118,6 @@
     SUBDIR += curtail
     SUBDIR += cuttlefish
     SUBDIR += darktable
-    SUBDIR += darktable38
     SUBDIR += dataplot
     SUBDIR += dbow2
     SUBDIR += dc20pack
@@ -127,13 +125,6 @@
     SUBDIR += dcp2icc
     SUBDIR += dcraw
     SUBDIR += dcraw-m
-    SUBDIR += deegree-csw
-    SUBDIR += deegree-igeoportal
-    SUBDIR += deegree-wcs
-    SUBDIR += deegree-wfs
-    SUBDIR += deegree-wms
-    SUBDIR += deegree-wps
-    SUBDIR += deegree-wpvs
     SUBDIR += delaboratory
     SUBDIR += derelict-gl3
     SUBDIR += devil
@@ -177,6 +168,8 @@
     SUBDIR += ephoto
     SUBDIR += epix
     SUBDIR += eps2png
+    SUBDIR += epsonscan2
+    SUBDIR += epsonscan2-non-free-plugin
     SUBDIR += epstool
     SUBDIR += eterm-bg
     SUBDIR += evince
@@ -540,6 +533,7 @@
     SUBDIR += linux-c7-tiff
     SUBDIR += linux-c7-wayland
     SUBDIR += lua-gd
+    SUBDIR += lux
     SUBDIR += luminance-qt5
     SUBDIR += lximage-qt
     SUBDIR += magnum
@@ -833,6 +827,7 @@
     SUBDIR += py-PyOpenGL-accelerate
     SUBDIR += py-actdiag
     SUBDIR += py-altair
+    SUBDIR += py-asciitree
     SUBDIR += py-beziers
     SUBDIR += py-blockdiag
     SUBDIR += py-blockdiagcontrib-cisco
@@ -1076,7 +1071,6 @@
     SUBDIR += swappy
     SUBDIR += swfmill
     SUBDIR += swftools
-    SUBDIR += sxiv
     SUBDIR += synaesthesia
     SUBDIR += synfig
     SUBDIR += synfigstudio

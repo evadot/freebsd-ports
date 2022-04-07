@@ -43,7 +43,7 @@ RUN_DEPENDS=	bind-tools>0:dns/bind-tools
 
 USES=		autoreconf compiler:c11 cpe libedit libtool pkgconfig ssl tar:xz
 # ISC releases things like 9.8.0-P1, which our versioning doesn't like
-ISCVERSION=	9.18.0
+ISCVERSION=	9.18.1
 
 CPE_VENDOR=	isc
 CPE_VERSION=	${ISCVERSION:C/-.*//}
@@ -112,7 +112,7 @@ TCP_FASTOPEN_DESC=	RFC 7413 support
 DOCS_ALL_TARGET=	all html
 DOCS_BUILD_DEPENDS=	sphinx-build:textproc/py-sphinx \
 			${PYTHON_PKGNAMEPREFIX}sphinx_rtd_theme>0:textproc/py-sphinx_rtd_theme@${PY_FLAVOR}
-DOCS_USES=	python:env
+DOCS_USES=	gmake python:env
 
 DNSTAP_CONFIGURE_ENABLE=	dnstap
 DNSTAP_LIB_DEPENDS=		libfstrm.so:devel/fstrm \
@@ -154,6 +154,7 @@ LMDB_CONFIGURE_WITH=	lmdb=${LOCALBASE}
 LMDB_LIB_DEPENDS=	liblmdb.so:databases/lmdb
 
 MANPAGES_BUILD_DEPENDS=	sphinx-build:textproc/py-sphinx
+MANPAGES_USES=	gmake
 
 OVERRIDECACHE_EXTRA_PATCHES=	${FILESDIR}/extrapatch-bind-min-override-ttl
 
