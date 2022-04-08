@@ -1,5 +1,5 @@
---- lib/beacon/multicast.go.orig	2021-07-06 12:51:32 UTC
-+++ lib/beacon/multicast.go
+--- syncthing/lib/beacon/multicast.go.orig	2021-07-06 12:51:32 UTC
++++ syncthing/lib/beacon/multicast.go
 @@ -126,6 +126,9 @@ func readMulticasts(ctx context.Context, outbox chan<-
  	pconn := ipv6.NewPacketConn(conn)
  	joined := 0
