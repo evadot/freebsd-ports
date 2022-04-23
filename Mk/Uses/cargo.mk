@@ -140,7 +140,7 @@ CARGO_ENV+=	RUST_BACKTRACE=1
 # Adjust -C target-cpu if -march/-mcpu is set by bsd.cpu.mk
 .if ${ARCH} == amd64 || ${ARCH} == i386
 RUSTFLAGS+=	${CFLAGS:M-march=*:S/-march=/-C target-cpu=/}
-.elif ${ARCH:Mpowerpc64*}
+.elif ${ARCH:Mpowerpc*}
 RUSTFLAGS+=	${CFLAGS:M-mcpu=*:S/-mcpu=/-C target-cpu=/:S/power/pwr/}
 .else
 RUSTFLAGS+=	${CFLAGS:M-mcpu=*:S/-mcpu=/-C target-cpu=/}
@@ -354,6 +354,15 @@ do-test:
 # Helper targets for port maintainers
 #
 
+# cargo-audit generates a vulnerability report using
+# security/cargo-audit based on the crates in Cargo.lock.
+cargo-audit: configure
+	@if ! type cargo-audit > /dev/null 2>&1; then \
+		${ECHO_MSG} "===> Please install \"security/cargo-audit\""; exit 1; \
+	fi
+	@${ECHO_MSG} "===> Checking for vulnerable crates"
+	@${CARGO} audit --file ${CARGO_CARGOLOCK}
+
 # cargo-crates will output the crates list from Cargo.lock.  If there
 # is no Cargo.lock for some reason, try and generate it first.
 cargo-crates: cargo-crates-generate-lockfile
@@ -382,13 +391,15 @@ cargo-crates-licenses: configure
 # cargo-crates-merge will in-place update CARGO_CRATES in the port
 # based on the crates list from Cargo.lock.  If there is no Cargo.lock
 # for some reason, try and generate it first.
-cargo-crates-merge: cargo-crates-generate-lockfile
+cargo-crates-merge:
 	@if ! type portedit > /dev/null 2>&1; then \
 		${ECHO_MSG} "===> Please install \"ports-mgmt/portfmt\""; exit 1; \
 	fi
+	@${MAKE} clean cargo-crates-generate-lockfile
 	@f="${MASTERDIR}/Makefile"; [ -r "${MASTERDIR}/Makefile.crates" ] && f="${MASTERDIR}/Makefile.crates"; \
 		${_CARGO_AWK} ${SCRIPTSDIR}/cargo-crates.awk ${CARGO_CARGOLOCK} | \
 			portedit merge -i $$f; \
-		${ECHO_MSG} "CARGO_CRATES in $$f was updated"
+		${MAKE} clean makesum; \
+		${ECHO_MSG} "${DISTINFO_FILE} and CARGO_CRATES in $$f were updated";
 
 .endif

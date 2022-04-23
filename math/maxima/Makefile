@@ -1,8 +1,7 @@
 # Created by: Scott Flatman <sf@dsinw.com>
 
 PORTNAME=	maxima
-PORTVERSION=	5.45.1
-PORTREVISION=	1
+PORTVERSION=	5.46.0
 CATEGORIES=	math lisp tk
 MASTER_SITES=	SF/maxima/Maxima-source/${PORTVERSION}-source
 
@@ -14,8 +13,6 @@ LICENSE_COMB=				multi
 LICENSE_NAME_MAXIMAEXTRACLAUSE=		Maxima extra clause
 LICENSE_FILE_MAXIMAEXTRACLAUSE=		${FILESDIR}/license-extra-clause.txt
 LICENSE_PERMS_MAXIMAEXTRACLAUSE=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
-
-BROKEN_FreeBSD_13_powerpc64=	fails to build: unhandled lisp initialization error
 
 RUN_DEPENDS=	gnuplot:math/gnuplot \
 		rlwrap:devel/rlwrap
@@ -73,8 +70,7 @@ SAGE_BUILD_DEPENDS=	${LOCALBASE}/lib/libatomic_ops.a:devel/libatomic_ops
 SAGE_EXTRA_PATCHES=	${PATCHDIR}/extra-patch-share_linearalgebra_matrixexp.lisp \
 			${PATCHDIR}/extra-patch-src_grind.lisp \
 			${PATCHDIR}/extra-patch-src_hayat.lisp \
-			${PATCHDIR}/extra-patch-src_init-cl.lisp \
-			${PATCHDIR}/extra-patch-src_maxima.system
+			${PATCHDIR}/extra-patch-src_init-cl.lisp
 SAGE_IMPLIES=		ECL
 
 SBCL_DESC=		Build with Steel Bank Common Lisp
@@ -96,7 +92,7 @@ XMAXIMA_EXTRA_PATCHES_OFF=	${PATCHDIR}/extra-patch-interfaces_Makefile.am
 
 post-patch:
 	${GREP} -Fe '.core' -l -r ${WRKSRC} | ${XARGS} ${REINPLACE_CMD} 's;\.core;_core;g'
-	${FIND} -X ${WRKSRC}/interfaces/xmaxima -name 'Makefile.in' | ${XARGS} ${REINPLACE_CMD} "s;tclsh;${TCLSH};g"
+	${REINPLACE_CMD} "s;tclsh;${TCLSH};g" ${WRKSRC}/interfaces/xmaxima/Makefile.in
 	${REINPLACE_CMD} "s;/usr;${LOCALBASE};g" ${WRKSRC}/src/intl.lisp
 
 post-patch-XMAXIMA-on:
