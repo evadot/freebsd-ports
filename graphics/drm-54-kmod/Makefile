@@ -11,8 +11,6 @@ LICENSE_COMB=	multi
 ONLY_FOR_ARCHS=	aarch64 amd64 i386 powerpc64 powerpc64le
 ONLY_FOR_ARCHS_REASON=	the new KMS components are only supported on amd64, i386, aarch64, and powerpc64
 
-RUN_DEPENDS=	gpu-firmware-kmod>=g20200914:graphics/gpu-firmware-kmod
-
 CONFLICTS_INSTALL=	drm-devel-kmod drm-current-kmod drm-54-kmod
 
 USES=		kmod uidfix compiler:c++11-lang
