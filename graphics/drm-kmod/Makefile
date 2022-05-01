@@ -1,8 +1,7 @@
 # Created by: Johannes Dieterich <jmd@FreeBSD.org>
 
 PORTNAME=	drm-kmod
-PORTVERSION=	g20190710
-PORTREVISION=	1
+PORTVERSION=	20220501
 CATEGORIES=	graphics
 
 MAINTAINER=	x11@FreeBSD.org
