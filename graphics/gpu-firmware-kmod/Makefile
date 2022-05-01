@@ -8,9 +8,6 @@ CATEGORIES=	graphics
 MAINTAINER=	x11@FreeBSD.org
 COMMENT=	Firmware modules for the drm-kmod drivers
 
-ONLY_FOR_ARCHS=		aarch64 amd64 i386 powerpc64 powerpc64le
-ONLY_FOR_ARCHS_REASON=	AMD/Intel and Radeon GPUs are only available on aarch64, x86 and powerpc64
-
 USES=		metaport
 
 RUN_DEPENDS=	gpu-firmware-amd-kmod-banks>0:graphics/gpu-firmware-amd-kmod@banks \
