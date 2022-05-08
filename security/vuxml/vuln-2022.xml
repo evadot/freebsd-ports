@@ -1,3 +1,146 @@
+  <vuln vid="b9837fa1-cd72-11ec-98f1-6805ca0b3d42">
+    <topic>rsyslog8 -- heap buffer overflow on receiving TCP syslog</topic>
+    <affects>
+      <package>
+	<name>rsyslog</name>
+	<range><lt>8.2204.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Rainer Gerhards reports:</p>
+	<blockquote cite="https://github.com/rsyslog/rsyslog/security/advisories/GHSA-ggw7-xr6h-mmr8">
+	  <p>Modules for TCP syslog reception have a heap buffer
+	  overflow when octet-counted framing is used. The attacker
+	  can corrupt heap values, leading to data integrity issues
+	  and availability impact. Remote code execution is unlikely
+	  to happen but not impossible..</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-24903</cvename>
+      <url>https://github.com/rsyslog/rsyslog/security/advisories/GHSA-ggw7-xr6h-mmr8</url>
+    </references>
+    <dates>
+      <discovery>2022-05-05</discovery>
+      <entry>2022-05-06</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="647ac600-cc70-11ec-9cfc-10c37b4ac2ea">
+    <topic>gogs -- XSS in issue attachments</topic>
+    <affects>
+      <package>
+	<name>gogs</name>
+	<range><lt>0.12.7</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The gogs project reports:</p>
+	<blockquote cite="https://github.com/gogs/gogs/issues/6919">
+	  <p>Repository issues page allows HTML attachments with arbitrary
+	    JS code.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-1464</cvename>
+      <url>https://github.com/gogs/gogs/issues/6919</url>
+      <url>https://huntr.dev/bounties/34a12146-3a5d-4efc-a0f8-7a3ae04b198d/</url>
+    </references>
+    <dates>
+      <discovery>2022-04-12</discovery>
+      <entry>2022-05-05</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="95ee401d-cc6a-11ec-9cfc-10c37b4ac2ea">
+    <topic>gitea -- Escape git fetch remote</topic>
+    <affects>
+      <package>
+	<name>gitea</name>
+	<range><lt>1.16.7</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Gitea team reports:</p>
+	<blockquote cite="https://github.com/go-gitea/gitea/pull/19487">
+	  <p>Escape git fetch remote in
+	    services/migrations/gitea_uploader.go</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://github.com/go-gitea/gitea/pull/19487</url>
+    </references>
+    <dates>
+      <discovery>2022-04-25</discovery>
+      <entry>2022-05-05</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="fceb2b08-cb76-11ec-a06f-d4c9ef517024">
+    <topic>OpenSSL -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>openssl</name>
+	<range><lt>1.1.1o,1</lt></range>
+      </package>
+      <package>
+	<name>openssl-devel</name>
+	<range><lt>3.0.3</lt></range>
+      </package>
+      <package>
+	<name>openssl-quictls</name>
+	<range><lt>3.0.3</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The OpenSSL project reports:</p>
+	<blockquote cite="https://www.openssl.org/news/secadv/20220503.txt">
+	  <ul>
+	    <li>The c_rehash script allows command injection (CVE-2022-1292)
+	      (Moderate) <br/>The c_rehash script does not properly sanitise shell
+	      metacharacters to prevent command injection.  This script is distributed
+	      by some operating systems in a manner where it is automatically
+	      executed. On such operating systems, an attacker could execute arbitrary
+	      commands with the privileges of the script.</li>
+	    <li>OCSP_basic_verify may incorrectly verify the response signing
+	      certificate (CVE-2022-1343) (Moderate)<br/>The function
+	      `OCSP_basic_verify` verifies the signer certificate on an OCSP response.
+	      In the case where the (non-default) flag OCSP_NOCHECKS is used then the
+	      response will be positive (meaning a successful verification) even in
+	      the case where the response signing certificate fails to verify.</li>
+	    <li>Incorrect MAC key used in the RC4-MD5 ciphersuite (CVE-2022-1434)
+	      (Low)<br/>The OpenSSL 3.0 implementation of the RC4-MD5 ciphersuite
+	      incorrectly uses the AAD data as the MAC key. This makes the MAC key
+	      trivially predictable.</li>
+	    <li>Resource leakage when decoding certificates and keys (CVE-2022-1473)
+	      (Low)<br/>The OPENSSL_LH_flush() function, which empties a hash table,
+	      containsa bug that breaks reuse of the memory occuppied by the removed
+	      hash table entries.</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-1292</cvename>
+      <cvename>CVE-2022-1343</cvename>
+      <cvename>CVE-2022-1434</cvename>
+      <cvename>CVE-2022-1473</cvename>
+      <url>https://www.openssl.org/news/secadv/20220503.txt</url>
+    </references>
+    <dates>
+      <discovery>2022-05-03</discovery>
+      <entry>2022-05-04</entry>
+      <modified>2022-05-05</modified>
+    </dates>
+  </vuln>
+
   <vuln vid="a8118db0-cac2-11ec-9288-0800270512f4">
     <topic>rainloop -- cross-site-scripting (XSS) vulnerability</topic>
     <affects>
