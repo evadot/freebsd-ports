@@ -1,22 +1,19 @@
 # this port is for future amdgpu kernel support testing.
 
 PORTNAME=	xf86-video-amdgpu
-PORTVERSION=	19.1.0
-PORTREVISION=	2
+PORTVERSION=	22.0.0
 CATEGORIES=	x11-drivers
 
 MAINTAINER=	x11@FreeBSD.org
 COMMENT=	X.Org amdgpu display driver
-
-PATCH_SITES=	https://gitlab.freedesktop.org/xorg/driver/${PORTNAME}/-/commit/
-PATCHFILES+=	edcbe5f52ddfceee3d66d69bbcebbceac06b6d0d.patch:-p1
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libdrm_amdgpu.so:graphics/libdrm
 
-USES=		gl xorg-cat:driver
+USES=		gl xorg-cat:driver tar:xz
+EXTRACT_SUFX=	.tar.xz
 USE_GL=		gbm
 # No amdgpu kernel driver on non-x86 and PC98.
 ONLY_FOR_ARCHS=	aarch64 i386 amd64 powerpc64le
