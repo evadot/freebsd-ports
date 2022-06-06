@@ -761,6 +761,7 @@
     SUBDIR += ftnchek
     SUBDIR += fuel
     SUBDIR += functionalplus
+    SUBDIR += fungw
     SUBDIR += fuzzylite
     SUBDIR += fxdiv
     SUBDIR += g-wrap
@@ -1241,6 +1242,7 @@
     SUBDIR += libffcall
     SUBDIR += libffi
     SUBDIR += libffi321
+    SUBDIR += libffi33
     SUBDIR += libfirm
     SUBDIR += libfixposix
     SUBDIR += libflatarray
@@ -5086,6 +5088,7 @@
     SUBDIR += py-pypugjs
     SUBDIR += py-pyqtree
     SUBDIR += py-pyquery
+    SUBDIR += py-pyquil
     SUBDIR += py-pyral
     SUBDIR += py-pyrepl
     SUBDIR += py-pyrfc3339
@@ -5178,6 +5181,7 @@
     SUBDIR += py-python-magic
     SUBDIR += py-python-mimeparse
     SUBDIR += py-python-pcre
+    SUBDIR += py-python-rapidjson
     SUBDIR += py-python-socketio
     SUBDIR += py-python-statsd
     SUBDIR += py-python-subunit
@@ -5239,6 +5243,7 @@
     SUBDIR += py-resolver
     SUBDIR += py-resource
     SUBDIR += py-responses
+    SUBDIR += py-retry2
     SUBDIR += py-retrying
     SUBDIR += py-retype
     SUBDIR += py-rfc3339
@@ -5250,6 +5255,7 @@
     SUBDIR += py-robotremoteserver
     SUBDIR += py-rope
     SUBDIR += py-rose
+    SUBDIR += py-rpcq
     SUBDIR += py-rply
     SUBDIR += py-rq
     SUBDIR += py-rq-scheduler
@@ -5865,6 +5871,7 @@
     SUBDIR += rubygem-aws-sdk-elastictranscoder
     SUBDIR += rubygem-aws-sdk-emr
     SUBDIR += rubygem-aws-sdk-emrcontainers
+    SUBDIR += rubygem-aws-sdk-emrserverless
     SUBDIR += rubygem-aws-sdk-eventbridge
     SUBDIR += rubygem-aws-sdk-finspace
     SUBDIR += rubygem-aws-sdk-finspacedata
@@ -6226,6 +6233,7 @@
     SUBDIR += rubygem-blockenspiel
     SUBDIR += rubygem-bones
     SUBDIR += rubygem-bootsnap
+    SUBDIR += rubygem-bootsnap111
     SUBDIR += rubygem-bootstrap_form
     SUBDIR += rubygem-bson
     SUBDIR += rubygem-buftok
@@ -6298,6 +6306,7 @@
     SUBDIR += rubygem-cucumber-core
     SUBDIR += rubygem-cucumber-cucumber-expressions
     SUBDIR += rubygem-cucumber-messages
+    SUBDIR += rubygem-cucumber-messages18
     SUBDIR += rubygem-cucumber-rails
     SUBDIR += rubygem-cucumber-tag-expressions
     SUBDIR += rubygem-cucumber-wire
@@ -6380,6 +6389,7 @@
     SUBDIR += rubygem-faker
     SUBDIR += rubygem-faraday-cookie_jar
     SUBDIR += rubygem-faraday-excon
+    SUBDIR += rubygem-faraday-excon1
     SUBDIR += rubygem-faraday_middleware-aws-sigv4
     SUBDIR += rubygem-faraday_middleware-aws-sigv403
     SUBDIR += rubygem-faraday_middleware-multi_json
@@ -7251,6 +7261,7 @@
     SUBDIR += trellis
     SUBDIR += trio
     SUBDIR += truc
+    SUBDIR += tup
     SUBDIR += ua_parser-core
     SUBDIR += uclcmd
     SUBDIR += ucommon
