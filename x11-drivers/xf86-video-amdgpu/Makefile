@@ -4,6 +4,9 @@ PORTNAME=	xf86-video-amdgpu
 PORTVERSION=	22.0.0
 CATEGORIES=	x11-drivers
 
+PATCH_SITES=	https://gitlab.freedesktop.org/xorg/driver/${PORTNAME}/-/commit/
+PATCHFILES+=	77b13493.patch:-p1 # https://gitlab.freedesktop.org/xorg/driver/xf86-video-amdgpu/-/merge_requests/77
+
 MAINTAINER=	x11@FreeBSD.org
 COMMENT=	X.Org amdgpu display driver
 
