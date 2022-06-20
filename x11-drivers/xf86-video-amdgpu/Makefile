@@ -13,14 +13,15 @@ COMMENT=	X.Org amdgpu display driver
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+# No amdgpu kernel driver on non-x86 and PC98.
+ONLY_FOR_ARCHS=	aarch64 amd64 i386 powerpc64le
+ONLY_FOR_ARCHS_REASON=	KMS is required and currently only available on x86/arm64/powerpc64le
+
 LIB_DEPENDS=	libdrm_amdgpu.so:graphics/libdrm
 
-USES=		gl xorg-cat:driver tar:xz
 EXTRACT_SUFX=	.tar.xz
+USES=		gl xorg-cat:driver tar:xz
 USE_GL=		gbm
-# No amdgpu kernel driver on non-x86 and PC98.
-ONLY_FOR_ARCHS=	aarch64 i386 amd64 powerpc64le
-ONLY_FOR_ARCHS_REASON=	KMS is required and currently only available on x86/arm64/powerpc64le
 
 CONFIGURE_ARGS+=--disable-udev
 

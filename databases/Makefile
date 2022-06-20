@@ -642,6 +642,18 @@
     SUBDIR += php81-pdo_sqlite
     SUBDIR += php81-pgsql
     SUBDIR += php81-sqlite3
+    SUBDIR += php82-dba
+    SUBDIR += php82-mysqli
+    SUBDIR += php82-odbc
+    SUBDIR += php82-pdo
+    SUBDIR += php82-pdo_dblib
+    SUBDIR += php82-pdo_firebird
+    SUBDIR += php82-pdo_mysql
+    SUBDIR += php82-pdo_odbc
+    SUBDIR += php82-pdo_pgsql
+    SUBDIR += php82-pdo_sqlite
+    SUBDIR += php82-pgsql
+    SUBDIR += php82-sqlite3
     SUBDIR += phpliteadmin
     SUBDIR += phpminiadmin
     SUBDIR += phpmyadmin
@@ -748,6 +760,7 @@
     SUBDIR += py-alembic
     SUBDIR += py-alembic14
     SUBDIR += py-alembic16
+    SUBDIR += py-apache-arrow
     SUBDIR += py-apsw
     SUBDIR += py-asyncmy
     SUBDIR += py-asyncpg
@@ -792,6 +805,7 @@
     SUBDIR += py-pglite
     SUBDIR += py-pgmigrate
     SUBDIR += py-pgspecial
+    SUBDIR += py-pgspecial1
     SUBDIR += py-pgxnclient
     SUBDIR += py-pickledb
     SUBDIR += py-pickleshare

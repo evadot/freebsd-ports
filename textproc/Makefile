@@ -109,6 +109,7 @@
     SUBDIR += confget
     SUBDIR += consul-template
     SUBDIR += cpp-peglib
+    SUBDIR += cpptoml
     SUBDIR += crex
     SUBDIR += crunch
     SUBDIR += cs-aspell
@@ -1247,6 +1248,15 @@
     SUBDIR += php81-xmlreader
     SUBDIR += php81-xmlwriter
     SUBDIR += php81-xsl
+    SUBDIR += php82-ctype
+    SUBDIR += php82-dom
+    SUBDIR += php82-enchant
+    SUBDIR += php82-pspell
+    SUBDIR += php82-simplexml
+    SUBDIR += php82-xml
+    SUBDIR += php82-xmlreader
+    SUBDIR += php82-xmlwriter
+    SUBDIR += php82-xsl
     SUBDIR += pict
     SUBDIR += po4a
     SUBDIR += pod2mdoc
@@ -1367,6 +1377,7 @@
     SUBDIR += py-mathics-pygments
     SUBDIR += py-mdit-py-plugins
     SUBDIR += py-mdurl
+    SUBDIR += py-mike
     SUBDIR += py-misaka
     SUBDIR += py-mistune
     SUBDIR += py-mistune0
@@ -1480,6 +1491,7 @@
     SUBDIR += py-sphinx-autoapi
     SUBDIR += py-sphinx-autobuild
     SUBDIR += py-sphinx-autodoc-typehints
+    SUBDIR += py-sphinx-basic-ng
     SUBDIR += py-sphinx-book-theme
     SUBDIR += py-sphinx-copybutton
     SUBDIR += py-sphinx-design
@@ -1516,6 +1528,7 @@
     SUBDIR += py-sphinxext-opengraph
     SUBDIR += py-spylls
     SUBDIR += py-stemming
+    SUBDIR += py-tableschema-to-template
     SUBDIR += py-tabletext
     SUBDIR += py-tablib
     SUBDIR += py-terminaltables
@@ -1622,6 +1635,7 @@
     SUBDIR += rubygem-asciidoctor-kroki
     SUBDIR += rubygem-asciidoctor-pdf
     SUBDIR += rubygem-asciidoctor-plantuml
+    SUBDIR += rubygem-asciidoctor-plantuml00
     SUBDIR += rubygem-autoprefixer-rails
     SUBDIR += rubygem-autoprefixer-rails-node16
     SUBDIR += rubygem-autoprefixer-rails1025

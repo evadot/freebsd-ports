@@ -25,6 +25,7 @@
     SUBDIR += gitterdone
     SUBDIR += gloox
     SUBDIR += gomuks
+    SUBDIR += gotktrix
     SUBDIR += gotosocial
     SUBDIR += icmpchat
     SUBDIR += icqlib
@@ -34,6 +35,7 @@
     SUBDIR += jicofo
     SUBDIR += jitsi-meet-full
     SUBDIR += jitsi-prosody-plugins
+    SUBDIR += jitsi-srtp-native
     SUBDIR += jitsi-videobridge
     SUBDIR += kaccounts-integration
     SUBDIR += kaccounts-providers

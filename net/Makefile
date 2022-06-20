@@ -246,6 +246,7 @@
     SUBDIR += hlmaster
     SUBDIR += honeyd
     SUBDIR += hostapd
+    SUBDIR += hostapd29
     SUBDIR += hostapd-devel
     SUBDIR += hping3
     SUBDIR += hsflowd
@@ -361,7 +362,6 @@
     SUBDIR += libfabric
     SUBDIR += libfb
     SUBDIR += libfixbuf
-    SUBDIR += libgnetwork
     SUBDIR += libgravatar
     SUBDIR += libgrss
     SUBDIR += libgweather
@@ -493,6 +493,7 @@
     SUBDIR += ndpi
     SUBDIR += ndproxy
     SUBDIR += neatvnc
+    SUBDIR += nemesis
     SUBDIR += nepenthes
     SUBDIR += net6
     SUBDIR += netatalk3
@@ -975,7 +976,6 @@
     SUBDIR += pecl-xmlrpc
     SUBDIR += pecl-zmq
     SUBDIR += pen
-    SUBDIR += pfinger
     SUBDIR += php74-ldap
     SUBDIR += php74-soap
     SUBDIR += php74-sockets
@@ -986,6 +986,9 @@
     SUBDIR += php81-ldap
     SUBDIR += php81-soap
     SUBDIR += php81-sockets
+    SUBDIR += php82-ldap
+    SUBDIR += php82-soap
+    SUBDIR += php82-sockets
     SUBDIR += phpldapadmin
     SUBDIR += pichi
     SUBDIR += pimcommon
