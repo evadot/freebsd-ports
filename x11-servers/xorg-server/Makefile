@@ -1,7 +1,7 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
 
-PORTNAME?=	xorg
-PORTVERSION?=	21.1.3
+PORTNAME?=	xorg-server
+PORTVERSION?=	1.20.14
 PORTREVISION?=	0
 PORTEPOCH?=	1
 CATEGORIES=	x11-servers
@@ -13,88 +13,31 @@ COMMENT?=	X.Org X server and related programs
 
 LICENSE=	MIT
 
-FLAVORS=	xorg Xnest Xephyr Xvfb
-FLAVOR?=	${FLAVORS:[1]}
-
-EXTRA_PATCHES=	${FILESDIR}/0001-xkb-fix-XkbSetMap-when-changing-a-keysym-without-cha.patch:-p1 \
-		${FILESDIR}/0003-dix_Correctly_save_replayed_event_into_GrabInfoRec.patch:-p1   \
-		${FILESDIR}/0002-xephyr_Dont_check_for_SeatId_anymore.patch:-p1                 \
-		${FILESDIR}/0004-present_Check_for_NULL_to_prevent_crash.patch:-p1
-
-USES=		compiler:c11 cpe gl meson pkgconfig ssl tar:xz xorg
-USE_GL+=	gl
-
-.if ${FLAVOR} == Xephyr
-PORTNAME=	xephyr
-.elif  ${FLAVOR} == xorg
-PKGNAMESUFFIX=	-server
-.elif ${FLAVOR} == Xnest
-PORTEPOCH=	2
-PKGNAMESUFFIX= -nestserver
-.elif ${FLAVOR} == Xvfb
-PKGNAMESUFFIX=	-vfbserver
-.endif
-
-.if ${FLAVOR} != xorg
-PLIST=
-PKGMESSAGE=
-PLIST_FILES=	bin/${FLAVOR} \
-		man/man1/${FLAVOR}.1.gz
-PLIST_DIRS=	/var/db/xkb
-.endif
-
-DESCR=	${.CURDIR}/pkg-descr-${FLAVOR}
-
-BUILD_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/dri.pc:graphics/mesa-dri
 RUN_DEPENDS+=	xkeyboard-config>=2.5:x11/xkeyboard-config \
 		xkbcomp:x11/xkbcomp
 
-MESON_ARGS+=	-Dxwin=false \
-		-Dxquartz=false \
-		-Ddtrace=false \
-		-Dhal=false \
-		-Dsystemd_logind=false \
-		-Dxselinux=false \
-		-Dfallback_input_driver=libinput \
-		-Ddocs=false \
-		-Dudev_kms=false \
-		-Dxcsecurity=true \
-		-Dsha1=libmd \
-		-Dxkb_dir=${LOCALBASE}/share/X11/xkb \
-		-Dxkb_output_dir=/var/db/xkb \
-		-D${FLAVOR:tl}=true
-
-.for f in ${FLAVORS:N${FLAVOR}}
-MESON_ARGS+=	-D${f:tl}=false
-.endfor
-
-.if ${FLAVOR} == xorg
-LIB_DEPENDS+=		libudev.so:devel/libudev-devd \
-			libxcvt.so:x11/libxcvt
-MESON_ARGS+=	-Dudev=true
+SLAVE_PORT?=	no
 
 OPTIONS_SUB=	yes
 OPTIONS_DEFINE+=	SUID
+OPTIONS_RADIO=	CONF
+OPTIONS_RADIO_CONF=	DEVD UDEV
+OPTIONS_DEFAULT=	SUID UDEV
+OPTIONS_DEFAULT+=	${OPTIONS_DEFAULT_${OPSYS}_${OSREL:R}}
 
 SUID_DESC=	Install setuid wrapper to allow startx as non-root
+CONF_DESC=	Backend to use for input device configuration
+DEVD_DESC=	Use devd for autoconfiguration of input devices
+UDEV_DESC=	Use udev via libudev-devd for autoconfiguration of input devices
 
-SUID_MESON_TRUE=	suid_wrapper
-.else
-MESON_ARGS+=	-Dudev=false
-.endif
+DEVD_CONFIGURE_ENABLE=	config-devd
+SUID_CONFIGURE_ENABLE=	suid-wrapper
+SUID_CONFIGURE_ON=	--libexecdir=${PREFIX}/bin	# set SUID_WRAPPER_DIR
+UDEV_CONFIGURE_ENABLE=	config-udev
+UDEV_CONFIGURE_ON=	--disable-config-udev-kms
+UDEV_LIB_DEPENDS=	libudev.so:devel/libudev-devd
 
-.if ${FLAVOR} == xorg || ${FLAVOR} == Xephyr
-MESON_ARGS+=	-Ddrm=true
-LIB_DEPENDS+=	libdrm.so:graphics/libdrm \
-		libepoxy.so:graphics/libepoxy
-.endif
-
-.if ${FLAVOR} == Xephyr
-LIB_DEPENDS+=	libxcb-render-util.so:x11/xcb-util-renderutil \
-		libxcb-image.so:x11/xcb-util-image \
-		libxcb-icccm.so:x11/xcb-util-wm \
-		libxcb-keysyms.so:x11/xcb-util-keysyms
-.endif
+.include <bsd.port.options.mk>
 
 FONTPATH_ROOT?=	${LOCALBASE}/share/fonts
 FONTPATHD?=	${PREFIX}/etc/X11/fontpath.d
@@ -106,17 +49,39 @@ DEFAULT_FONTPATH_LIST= \
 	${FONTPATH_ROOT}/100dpi/ \
 	${FONTPATH_ROOT}/75dpi/ \
 	catalogue:${FONTPATHD}
-MESON_ARGS+=	-Ddefault_font_path=${DEFAULT_FONTPATH_LIST:ts,}
 PLIST_SUB+=	FONTPATHD="${FONTPATHD:S,^${PREFIX}/,,}"
 
+USES=		compiler:c11 cpe gl gmake perl5 ssl tar:xz xorg xorg-cat:xserver
+USE_PERL5=	build
 USE_GL+=	gl
 USE_XORG+=	pixman xau xdmcp xfont2 xkbfile xorgproto xshmfence xtrans
+CONFIGURE_ARGS+=--without-doxygen --without-xmlto --without-fop \
+		--with-default-font-path="${DEFAULT_FONTPATH_LIST:ts,}" \
+		--without-dtrace --disable-config-hal	\
+		--disable-install-setuid --disable-unit-tests \
+		--with-fallback-input-driver=libinput
+INSTALL_TARGET=	install-strip
 CPE_VENDOR=	x.org
 CPE_PRODUCT=	xorg-server
 
-.if ${FLAVOR} == xorg
+.if ${SLAVE_PORT} == "no" || ${PORTNAME} == "xephyr" || ${PORTNAME} == "xwayland"
+LIB_DEPENDS+=	libdrm.so:graphics/libdrm \
+		libepoxy.so:graphics/libepoxy
+.else
+BUILD_DEPENDS+=	libepoxy>0:graphics/libepoxy	# only for configure
+.endif
+
+.if ${SLAVE_PORT} == "no"
 USE_GL+=	gbm
 USE_XORG+=	pciaccess
+CONFIGURE_ARGS+=--disable-dmx --disable-xephyr --disable-xnest --disable-xvfb \
+		--disable-xwayland --enable-xcsecurity
+SUB_FILES=	pkg-install pkg-deinstall
+.else
+CONFIGURE_ARGS+=	--disable-xorg
+OPTIONS_EXCLUDE=	DEVD UDEV SUID
+# Set PLIST for slave ports so they only need to set PLIST_FILES
+PLIST=		${.CURDIR}/pkg-plist
 .endif
 
 .include <bsd.port.pre.mk>
@@ -138,7 +103,11 @@ PLIST_SUB+=	SPARC64=""
 PLIST_SUB+=	SPARC64="@comment "
 .endif
 
-.if ${FLAVOR} == xorg
+post-patch:
+	@${REINPLACE_CMD} 's/test.*-traditional.*;/true;/' \
+		${WRKSRC}/configure
+
+.if ${SLAVE_PORT} == "no"
 post-install:
 # Avoid conflict with nvidia-driver, move libglx.so into .xorg directory
 	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/xorg/modules/extensions/.xorg
@@ -149,18 +118,6 @@ post-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/share/X11/xorg.conf.d
 	@${INSTALL_DATA} ${FILESDIR}/20-evdev-kbd.conf \
 		${STAGEDIR}${PREFIX}/share/X11/xorg.conf.d
-	${MKDIR} -p ${STAGEDIR}/var/db/xkb
-.else
-post-install:
-	${RM} -r ${STAGEDIR}${PREFIX}/lib/xorg/protocol.txt
-	${RMDIR} ${STAGEDIR}${PREFIX}/lib/xorg
-	${RM} ${STAGEDIR}${PREFIX}/man/man1/Xserver.1
-	${MKDIR} -p ${STAGEDIR}/var/db/xkb
-.endif
-
-post-install-SUID-on:
-	${RM} ${STAGEDIR}${PREFIX}/bin/X
-	${RLN} ${STAGEDIR}${PREFIX}/libexec/Xorg.wrap ${STAGEDIR}${PREFIX}/bin/X
-	${MV} -f ${STAGEDIR}${PREFIX}/libexec/Xorg ${STAGEDIR}${PREFIX}/bin/Xorg
+.endif # ! SLAVE_PORT
 
 .include <bsd.port.post.mk>

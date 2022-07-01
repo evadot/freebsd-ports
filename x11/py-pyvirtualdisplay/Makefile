@@ -31,10 +31,10 @@ XVFB_DESC=		Install Xvfb backend
 XEPHYR_DESC=		Install Xephyr backend
 XVNC_DESC=		Install Xvnc backend
 
-XVFB_RUN_DEPENDS=	Xvfb:x11-servers/xorg-server@Xvfb
-XEPHYR_RUN_DEPENDS=	Xephyr>=0:x11-servers/xorg-server@Xvfb
+XVFB_RUN_DEPENDS=	xorg-vfbserver>0:x11-servers/xorg-vfbserver
+XEPHYR_RUN_DEPENDS=	xephyr>=0:x11-servers/xephyr
 XVNC_RUN_DEPENDS=	tightvnc>=0:net/tightvnc
 
 NO_ARCH=	yes
 
-hanninclude <bsd.port.mk>
+.include <bsd.port.mk>
