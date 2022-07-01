@@ -34,7 +34,7 @@ RUN_DEPENDS+=	vncviewer:net/tightvnc
 .endif
 
 .if ${PORT_OPTIONS:MXNEST}
-RUN_DEPENDS+=	Xnest:x11-servers/xorg-server@Xnest
+RUN_DEPENDS+=	Xnest:x11-servers/xorg-nestserver
 .endif
 
 .include <bsd.port.pre.mk>
