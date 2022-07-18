@@ -63,7 +63,7 @@
     SUBDIR += cs
     SUBDIR += cstream
     SUBDIR += ctm
-    SUBDIR += cxxmatrix
+    SUBDIR += cuttlefish
     SUBDIR += dahdi
     SUBDIR += dahdi-kmod
     SUBDIR += dahdi-kmod26
@@ -84,12 +84,8 @@
     SUBDIR += e2fsprogs-libuuid
     SUBDIR += edfbrowser
     SUBDIR += edflib
-    SUBDIR += elixir-mime
-    SUBDIR += elixir-uuid
     SUBDIR += elki
     SUBDIR += elscreen
-    SUBDIR += erlang-mimerl
-    SUBDIR += erlang-mimetypes
     SUBDIR += estic
     SUBDIR += exercism
     SUBDIR += explosions
@@ -259,7 +255,6 @@
     SUBDIR += najitool
     SUBDIR += ncnn
     SUBDIR += netron
-    SUBDIR += ngraph
     SUBDIR += nms
     SUBDIR += nn-insight
     SUBDIR += nnn
@@ -384,6 +379,7 @@
     SUBDIR += py-dictdiffer
     SUBDIR += py-eemeter
     SUBDIR += py-emoji
+    SUBDIR += py-ezc3d
     SUBDIR += py-fast-histogram
     SUBDIR += py-fleep
     SUBDIR += py-fuzzy

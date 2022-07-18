@@ -142,12 +142,11 @@
     SUBDIR += enscribe
     SUBDIR += epos-devel
     SUBDIR += eq10q-lv2
-    SUBDIR += espeak
+    SUBDIR += espeak-ng
     SUBDIR += espressivo-lv2
     SUBDIR += etcd
     SUBDIR += eteroj-lv2
     SUBDIR += etktab
-    SUBDIR += exaile
     SUBDIR += exhale
     SUBDIR += ezstream
     SUBDIR += faac
@@ -200,7 +199,6 @@
     SUBDIR += fogpad-lv2
     SUBDIR += fomp-lv2
     SUBDIR += foo-yc20
-    SUBDIR += forked-daapd
     SUBDIR += fossmixer
     SUBDIR += fpc-a52
     SUBDIR += fpc-mad
@@ -222,19 +220,6 @@
     SUBDIR += gervill
     SUBDIR += giada
     SUBDIR += glurp
-    SUBDIR += gmpc
-    SUBDIR += gmpc-alarm
-    SUBDIR += gmpc-albumview
-    SUBDIR += gmpc-discogs
-    SUBDIR += gmpc-extraplaylist
-    SUBDIR += gmpc-lastfm
-    SUBDIR += gmpc-libnotify
-    SUBDIR += gmpc-lyrics
-    SUBDIR += gmpc-lyricsplugin
-    SUBDIR += gmpc-magnatune
-    SUBDIR += gmpc-mdcover
-    SUBDIR += gmpc-mserver
-    SUBDIR += gmpc-shout
     SUBDIR += gmsynth-lv2
     SUBDIR += gmtp
     SUBDIR += gmusicbrowser
@@ -610,6 +595,7 @@
     SUBDIR += pavucontrol-qt
     SUBDIR += pavumeter
     SUBDIR += pc-mixer
+    SUBDIR += pcaudiolib
     SUBDIR += pd
     SUBDIR += pear-Text_Spell_Audio
     SUBDIR += penguinsap
@@ -823,7 +809,6 @@
     SUBDIR += tse3
     SUBDIR += tta
     SUBDIR += tuneradio
-    SUBDIR += tuxguitar
     SUBDIR += twolame
     SUBDIR += uade
     SUBDIR += umix
@@ -881,6 +866,7 @@
     SUBDIR += xmradio
     SUBDIR += xoscope
     SUBDIR += xsynth-dssi
+    SUBDIR += xuidesigner
     SUBDIR += xwave
     SUBDIR += yell
     SUBDIR += ympd

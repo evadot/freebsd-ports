@@ -2,6 +2,7 @@
 
 PORTNAME=	babl
 PORTVERSION=	0.1.92
+PORTREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	GIMP
 
@@ -20,7 +21,8 @@ USE_LDCONFIG=	yes
 USE_GNOME=	introspection:build
 
 OPTIONS_DEFINE=	SIMD
-OPTIONS_DEFAULT=SIMD
+OPTIONS_DEFAULT_amd64=SIMD
+OPTIONS_EXCLUDE_i386=SIMD
 
 SIMD_MESON_OFF=	-Denable-mmx=false -Denable-sse=false \
 		-Denable-sse2=false -Denable-sse4_1=false \
@@ -33,11 +35,11 @@ PLIST_SUB+=	BABL_SHLIB=${BABL_SHLIB} BABL_VER=${BABL_VER}
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "amd64"
-PLIST_SUB+=	AMD64="" AARCH64="@comment "
-.elif ${ARCH} == "aarch64"
-PLIST_SUB+=	AMD64="@comment " AARCH64=""
+PLIST_SUB+=	AMD64="" ARM="@comment "
+.elif ${ARCH} == "armv6" || ${ARCH} == "armv7"
+PLIST_SUB+=	AMD64="@comment " ARM=""
 .else
-PLIST_SUB+=	AMD64="@comment " AARCH64="@comment "
+PLIST_SUB+=	AMD64="@comment " ARM="@comment "
 .endif
 
 .include <bsd.port.post.mk>
