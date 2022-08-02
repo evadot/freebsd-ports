@@ -1770,8 +1770,7 @@
     SUBDIR += rubygem-rmmseg-cpp
     SUBDIR += rubygem-ronn
     SUBDIR += rubygem-rouge
-    SUBDIR += rubygem-rouge312
-    SUBDIR += rubygem-rouge327
+    SUBDIR += rubygem-rouge329
     SUBDIR += rubygem-rttool
     SUBDIR += rubygem-ruby-augeas
     SUBDIR += rubygem-ruby-xslt
@@ -1964,6 +1963,7 @@
     SUBDIR += urlview
     SUBDIR += utf8proc
     SUBDIR += uz-aspell
+    SUBDIR += vale
     SUBDIR += vbindiff
     SUBDIR += ve-hunspell
     SUBDIR += vgrep

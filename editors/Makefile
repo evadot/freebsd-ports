@@ -5,6 +5,7 @@
     SUBDIR += abiword-docs
     SUBDIR += aee
     SUBDIR += aewan
+    SUBDIR += amp
     SUBDIR += apel
     SUBDIR += asedit
     SUBDIR += beav
@@ -16,7 +17,6 @@
     SUBDIR += calligra
     SUBDIR += calligraplan
     SUBDIR += chexedit
-    SUBDIR += codelite
     SUBDIR += cooledit
     SUBDIR += cpeditor
     SUBDIR += cream
@@ -269,6 +269,7 @@
     SUBDIR += vscode
     SUBDIR += web-mode
     SUBDIR += with-editor
+    SUBDIR += with-editor-devel
     SUBDIR += wordgrinder
     SUBDIR += wxhexeditor
     SUBDIR += xcoral

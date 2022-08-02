@@ -1,5 +1,5 @@
 PORTNAME=	xwayland
-PORTVERSION=	22.1.2
+PORTVERSION=	22.1.3
 PORTEPOCH=	1
 CATEGORIES=	x11-servers
 MASTER_SITES=	XORG/individual/xserver
@@ -28,8 +28,8 @@ RUN_DEPENDS=	xkbcomp:x11/xkbcomp \
 #CONFLICTS_INSTALL=	${PORTNAME}-devel
 
 USES=		compiler:c11 gl meson pkgconfig xorg tar:xz
-USE_GL+=	egl gbm gl
-USE_XORG=	pixman xau xdmcp xfont2 xkbfile xshmfence xtrans
+USE_GL=		egl gbm gl
+USE_XORG=	pixman xau xfont2 xkbfile xshmfence xtrans
 
 MESON_ARGS=	-Dxvfb=false \
 		-Dxdmcp=false \
@@ -39,7 +39,7 @@ MESON_ARGS=	-Dxvfb=false \
 		-Dsha1=libmd \
 		-Dipv6=true \
 		-Dxkb_dir=${LOCALBASE}/share/X11/xkb \
-		-Dxkb_output_dir=/var/db/xkb \
+		-Dxkb_output_dir=/var/lib/xkb \
 		-Ddefault_font_path="${DEFAULT_FONTPATH_LIST:ts,}"
 
 # Keep in sync with xorg-server

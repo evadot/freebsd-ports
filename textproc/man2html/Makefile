@@ -1,7 +1,5 @@
-# Created by: Dima Sivachenko <demon@gpad.ac.ru>
-
 PORTNAME=	man2html
-DISTVERSION=	3.1.20220712
+DISTVERSION=	3.1.20220714
 CATEGORIES=	textproc
 MASTER_SITES=	https://invisible-island.net/archives/man2html/
 DISTNAME=	man2html-${DISTVERSION:E}

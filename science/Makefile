@@ -110,6 +110,7 @@
     SUBDIR += harminv
     SUBDIR += hdf
     SUBDIR += hdf5
+    SUBDIR += hdf5-110
     SUBDIR += hdf5-18
     SUBDIR += healpix
     SUBDIR += helfem
@@ -167,6 +168,7 @@
     SUBDIR += mcxtrace-comps
     SUBDIR += mdynamix
     SUBDIR += medit
+    SUBDIR += meep
     SUBDIR += metaphysicl
     SUBDIR += minc2
     SUBDIR += mmdb2

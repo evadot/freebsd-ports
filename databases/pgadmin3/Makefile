@@ -1,5 +1,3 @@
-# Created by: Max Khon
-
 PORTNAME=	pgadmin3
 PORTVERSION=	1.22.2
 PORTREVISION=	8
@@ -33,7 +31,7 @@ PORTDATA=	*
 
 .include <bsd.port.pre.mk>
 
-.if ${PGSQL_VER}>=13
+.if ${PGSQL_VER}>13
 EXTRA_PATCHES+=	${FILESDIR}/extrapatch-pg13
 .endif
 
