@@ -844,6 +844,7 @@
     SUBDIR += py-certbot-dns-luadns
     SUBDIR += py-certbot-dns-nsone
     SUBDIR += py-certbot-dns-ovh
+    SUBDIR += py-certbot-dns-powerdns
     SUBDIR += py-certbot-dns-rfc2136
     SUBDIR += py-certbot-dns-route53
     SUBDIR += py-certbot-dns-sakuracloud
@@ -927,6 +928,7 @@
     SUBDIR += py-pyclamd
     SUBDIR += py-pycrypto
     SUBDIR += py-pycryptodome
+    SUBDIR += py-pycryptodome-test-vectors
     SUBDIR += py-pycryptodomex
     SUBDIR += py-pyelliptic
     SUBDIR += py-pyhanko-certvalidator
