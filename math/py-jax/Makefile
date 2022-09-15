@@ -1,11 +1,12 @@
 PORTNAME=	jax
-PORTVERSION=	0.3.16
+PORTVERSION=	0.3.17
 CATEGORIES=	math python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Differentiate, compile, and transform Numpy code
+WWW=		https://github.com/google/jax
 
 LICENSE=	APACHE20
 

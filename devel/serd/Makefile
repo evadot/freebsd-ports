@@ -5,6 +5,7 @@ MASTER_SITES=	http://download.drobilla.net/
 
 MAINTAINER=	meka@tilda.center
 COMMENT=	C library for RDF syntax
+WWW=		https://drobilla.net/software/serd.html
 
 LICENSE=	ISCL
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -16,9 +17,5 @@ USE_LDCONFIG=	yes
 PLIST_SUB=	VERSION=${PORTVERSION}
 
 BINARY_ALIAS=	python3=${PYTHON_CMD}
-
-post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/serdi
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/*.so
 
 .include <bsd.port.mk>

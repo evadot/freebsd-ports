@@ -1,10 +1,11 @@
 PORTNAME=	1password-client2
-DISTVERSION=	2.7.0
+DISTVERSION=	2.7.1
 CATEGORIES=	security
 MASTER_SITES=	https://cache.agilebits.com/dist/1P/op2/pkg/v${DISTVERSION}/
 
 MAINTAINER=	ler@FreeBSD.org
 COMMENT=	1Password CLI client
+WWW=		https://developer.1password.com/docs/cli/upgrade
 
 ONLY_FOR_ARCHS=	aarch64 amd64 armv6 armv7 i386
 

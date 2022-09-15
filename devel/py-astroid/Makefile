@@ -1,11 +1,12 @@
 PORTNAME=	astroid
-PORTVERSION=	2.12.5
+PORTVERSION=	2.12.9
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Abstract syntax tree for Python with inference support
+WWW=		https://github.com/PyCQA/astroid
 
 LICENSE=	LGPL21+
 LICENSE_FILE=	${WRKSRC}/LICENSE

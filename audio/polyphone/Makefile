@@ -4,6 +4,7 @@ CATEGORIES=	audio
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Graphical user interface for editing soundfont (sf2 and sfz) files
+WWW=		https://www.polyphone-soundfonts.com/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/../LICENSE.txt
@@ -22,7 +23,7 @@ DOS2UNIX_FILES=	polyphone.pro \
 		editor/graphics/graphiquefourier.cpp \
 		editor/tree/treeitemdelegate.cpp
 USE_GL=		gl
-USE_QT=		core concurrent gui network printsupport svg widgets buildtools_build linguisttools_build qmake_build
+USE_QT=		core concurrent gui network printsupport svg widgets buildtools:build linguisttools:build qmake:build
 USE_GNOME=	glib20
 USE_CXXSTD=	c++11
 

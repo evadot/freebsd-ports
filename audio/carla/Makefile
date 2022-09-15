@@ -8,6 +8,7 @@ PATCHFILES=	5aba957f3cf0fb4dcef4d2add679603e6c048fb4.diff:-p1
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Audio plugin host for Jack and PulseAudio
+WWW=		https://kx.studio/Applications:Carla
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/doc/GPL.txt
@@ -21,7 +22,7 @@ USES=		compiler:c++11-lib desktop-file-utils gl gmake gnome localbase \
 		tar:bz2 xorg
 USE_PYQT=	pyqt5 sip
 USE_GNOME=	gtk20 gtk30
-USE_QT=		core gui widgets buildtools_build
+USE_QT=		core gui widgets buildtools:build
 USE_GL=		gl
 USE_XORG=	x11
 USE_SDL=	sdl2

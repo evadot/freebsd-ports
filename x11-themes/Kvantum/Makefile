@@ -6,6 +6,7 @@ PKGNAMESUFFIX=	-qt5
 
 MAINTAINER=	rigoletto@FreeBSD.org
 COMMENT=	SVG-based theme engine for Qt, KDE and LXQt
+WWW=		https://github.com/tsujan/Kvantum
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -19,7 +20,7 @@ USE_GL=		gl
 USE_LDCONFIG=	yes
 USE_KDE=	windowsystem
 USE_QT=		core gui svg widgets x11extras \
-		buildtools_build linguisttools_build
+		buildtools:build linguisttools:build
 USE_XORG=	x11 xext
 
 WRKSRC_SUBDIR=	${PORTNAME}

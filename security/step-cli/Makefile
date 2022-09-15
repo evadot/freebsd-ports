@@ -1,10 +1,12 @@
 PORTNAME=	step-cli
 DISTVERSIONPREFIX=v
 DISTVERSION=	0.22.0
+PORTREVISION=	1
 CATEGORIES=	security
 
 MAINTAINER=	mw@wipp.bayern
 COMMENT=	Smallstep step-ca command line client
+WWW=		https://smallstep.com/cli/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

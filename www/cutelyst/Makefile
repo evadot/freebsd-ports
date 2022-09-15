@@ -5,6 +5,7 @@ CATEGORIES=	www
 
 MAINTAINER=	adridg@FreeBSD.org
 COMMENT=	C++/Qt web framework
+WWW=		https://cutelyst.org
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -12,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 USES=		cmake compiler:c++11-lang localbase qt:5
 USE_GITHUB=	yes
 USE_LDCONFIG=	yes
-USE_QT=		qmake_build buildtools_build linguisttools_build \
+USE_QT=		qmake:build buildtools:build linguisttools:build \
 		core network sql
 
 # There are more views available and various plugins,

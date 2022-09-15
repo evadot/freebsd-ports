@@ -21,6 +21,7 @@
     SUBDIR += chaiscript
     SUBDIR += chez-scheme
     SUBDIR += chibi-scheme
+    SUBDIR += chicken
     SUBDIR += chicken5
     SUBDIR += cim
     SUBDIR += cjs
@@ -336,6 +337,7 @@
     SUBDIR += smlnj
     SUBDIR += snobol4
     SUBDIR += solidity
+    SUBDIR += spidermonkey102
     SUBDIR += spidermonkey17
     SUBDIR += spidermonkey78
     SUBDIR += spidermonkey91

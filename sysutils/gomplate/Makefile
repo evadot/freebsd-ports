@@ -1,10 +1,11 @@
 PORTNAME=	gomplate
 DISTVERSIONPREFIX=	v
-DISTVERSION=	3.11.2
+DISTVERSION=	3.11.3
 CATEGORIES=	sysutils
 
 MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	Command-line tool for rendering templates before executing binaries
+WWW=		https://github.com/hairyhenderson/gomplate
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -12,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 USES=		go:modules
 
 GO_MODULE=	github.com/hairyhenderson/gomplate/v3
-GH_TAG_COMMIT=	c8ed3cd
+GH_TAG_COMMIT=	ee4de43
 GO_TARGET=	./cmd/gomplate
 GO_BUILDFLAGS=	-ldflags "\
 		-w -s \

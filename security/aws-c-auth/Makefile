@@ -1,10 +1,12 @@
 PORTNAME=	aws-c-auth
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.6.16
+PORTREVISION=	1
 CATEGORIES=	security
 
 MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	C99 library implementation of AWS client-side authentication
+WWW=		https://github.com/awslabs/aws-c-auth
 
 LICENSE=	APACHE20
 
@@ -14,7 +16,7 @@ LIB_DEPENDS=	libaws-c-cal.so:security/aws-c-cal \
 		libaws-c-http.so:devel/aws-c-http \
 		libaws-c-io.so:devel/aws-c-io \
 		libaws-c-sdkutils.so:devel/aws-c-sdkutils \
-		libs2n.so:security/s2n
+		libs2n.so:security/s2n-tls
 
 USES=		cmake compiler:c11 ssl
 

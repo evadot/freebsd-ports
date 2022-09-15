@@ -1,10 +1,11 @@
 PORTNAME=	rubocop
-PORTVERSION=	1.35.1
+PORTVERSION=	1.36.0
 CATEGORIES=	devel ruby
 MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Ruby code style checking tool
+WWW=		https://rubocop.org/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

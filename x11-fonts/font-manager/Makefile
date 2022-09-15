@@ -5,11 +5,12 @@ CATEGORIES=	x11-fonts gnome
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Font management application for the GNOME desktop
+WWW=		https://fontmanager.github.io/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-BUILD_DEPENDS=	cmake:devel/cmake \
+BUILD_DEPENDS=	cmake:devel/cmake-core \
 		itstool:textproc/itstool \
 		yelp-build:textproc/yelp-tools
 LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \

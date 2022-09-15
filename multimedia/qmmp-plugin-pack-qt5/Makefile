@@ -7,6 +7,7 @@ PKGNAMESUFFIX=	-qt5
 
 MAINTAINER=	fluffy@FreeBSD.org
 COMMENT=	Additional plug-ins for QMMP (Qt5)
+WWW=		https://qmmp.ylsoftware.com/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -19,7 +20,7 @@ PORTSCOUT=	limit:^1\..*
 
 USES=		cmake pkgconfig qt:5 tar:bzip2
 USE_QT=		core gui widgets \
-		buildtools_build linguisttools_build qmake_build
+		buildtools:build linguisttools:build qmake:build
 USE_LDCONFIG=	yes
 
 OPTIONS_SUB=	yes

@@ -7,6 +7,7 @@ PKGNAMESUFFIX?=	22
 
 MAINTAINER=	acm@FreeBSD.org
 COMMENT=	DJ mixing application (previous version)
+WWW=		https://mixxx.org/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -39,8 +40,8 @@ USE_GL=		gl glu
 USE_GITHUB=	yes
 GH_ACCOUNT=	mixxxdj
 USE_QT=		buildtools concurrent core dbus gui network opengl script scripttools \
-		sql sql-sqlite3 svg testlib xml xmlpatterns linguisttools_build \
-		qmake_build widgets
+		sql sql-sqlite3 svg testlib xml xmlpatterns linguisttools:build \
+		qmake:build widgets
 
 CONFLICTS=	mixxx
 

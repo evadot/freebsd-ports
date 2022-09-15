@@ -1,10 +1,12 @@
 PORTNAME=	aws-crt-cpp
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.18.3
+DISTVERSION=	0.18.5
+PORTREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	C++ wrapper around the aws-c libraries
+WWW=		https://github.com/awslabs/aws-crt-cpp
 
 LICENSE=	APACHE20
 
@@ -19,7 +21,7 @@ LIB_DEPENDS=	libaws-c-auth.so:security/aws-c-auth \
 		libaws-c-s3.so:devel/aws-c-s3 \
 		libaws-c-sdkutils.so:devel/aws-c-sdkutils \
 		libaws-checksums.so:devel/aws-checksums \
-		libs2n.so:security/s2n
+		libs2n.so:security/s2n-tls
 
 USES=		cmake compiler:c11 ssl
 

@@ -15,6 +15,7 @@
     SUBDIR += afsp
     SUBDIR += aften
     SUBDIR += alac
+    SUBDIR += alacenc
     SUBDIR += alienwah
     SUBDIR += alo-lv2
     SUBDIR += alsa-lib
@@ -330,8 +331,7 @@
     SUBDIR += julius
     SUBDIR += kapitonov-plugins-pack-lv2
     SUBDIR += kexis
-    SUBDIR += kid3-kf5
-    SUBDIR += kid3-qt5
+    SUBDIR += kid3
     SUBDIR += klystrack
     SUBDIR += kmix
     SUBDIR += komposter
@@ -602,7 +602,6 @@
     SUBDIR += pd
     SUBDIR += pear-Text_Spell_Audio
     SUBDIR += penguinsap
-    SUBDIR += phaserotate-lv2
     SUBDIR += pianobar
     SUBDIR += pianobooster
     SUBDIR += pianod2
@@ -734,6 +733,8 @@
     SUBDIR += somafm-cli
     SUBDIR += sonata
     SUBDIR += sonic-visualiser
+    SUBDIR += sonivox
+    SUBDIR += sonivox-eas
     SUBDIR += sorcer-lv2
     SUBDIR += sound-juicer
     SUBDIR += soundgrab

@@ -8,6 +8,7 @@ PKGNAMESUFFIX=	-qt5
 
 MAINTAINER=	fluffy@FreeBSD.org
 COMMENT=	Qt5-based multimedia player
+WWW=		https://qmmp.ylsoftware.com/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -17,7 +18,7 @@ PORTSCOUT=	limit:^1\..*
 
 USES=		cmake gnome pathfix pkgconfig tar:bzip2
 USE_QT=		core gui network widgets xml \
-		buildtools_build linguisttools_build qmake_build
+		buildtools:build linguisttools:build qmake:build
 USE_LDCONFIG=	yes
 
 CMAKE_OFF=	USE_MMS

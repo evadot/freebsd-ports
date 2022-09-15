@@ -5,6 +5,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Qt fluidsynth front-end application
+WWW=		https://qsynth.sourceforge.io/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -13,8 +14,8 @@ LIB_DEPENDS=	libfluidsynth.so:audio/fluidsynth
 
 USES=		cmake compiler:c++11-lang pkgconfig qt:5
 USE_CXXSTD=	c++11
-USE_QT=		core gui network widgets x11extras buildtools_build \
-		linguisttools_build qmake_build
+USE_QT=		core gui network widgets x11extras buildtools:build \
+		linguisttools:build qmake:build
 
 # cf. PR 224488
 LDFLAGS+=	-Wl,--as-needed

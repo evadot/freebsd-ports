@@ -5,6 +5,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	DWave: Python DSL for constructing QUBOs from mathematical expressions
+WWW=		https://pyqubo.readthedocs.io/en/latest/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -22,7 +23,7 @@ BUILD_DEPENDS=	${PY_DEPENDS} \
 		${PYTHON_PKGNAMEPREFIX}wheel>=0.36.2:devel/py-wheel@${PY_FLAVOR} \
 		boost-libs>0:devel/boost-libs \
 		cimod>0:math/cimod \
-		cmake:devel/cmake \
+		cmake:devel/cmake-core \
 		ninja:devel/ninja \
 		pybind11>0:devel/pybind11 \
 		robin-hood-hashing>0:devel/robin-hood-hashing

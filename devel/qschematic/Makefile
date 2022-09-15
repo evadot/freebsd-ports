@@ -4,6 +4,7 @@ CATEGORIES=	devel
 
 MAINTAINER=	jbo@insane.engineer
 COMMENT=	Qt/C++ library providing widgets for drawing diagrams
+WWW=		https://github.com/simulton/qschematic
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/license.txt
@@ -11,7 +12,7 @@ LICENSE_FILE=	${WRKSRC}/license.txt
 LIB_DEPENDS=	libgpds.so:devel/gpds
 
 USES=		cmake compiler:c++17-lang qt:5
-USE_QT=		buildtools_build core gui qmake_build widgets
+USE_QT=		buildtools:build core gui qmake:build widgets
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	simulton

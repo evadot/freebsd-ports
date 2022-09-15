@@ -41,6 +41,7 @@
     SUBDIR += baculum-api
     SUBDIR += baculum-common
     SUBDIR += baculum-web
+    SUBDIR += badwolf
     SUBDIR += baikal
     SUBDIR += bareos-webui
     SUBDIR += bareos18-webui
@@ -324,7 +325,6 @@
     SUBDIR += mattermost-server
     SUBDIR += mattermost-webapp
     SUBDIR += mediawiki135
-    SUBDIR += mediawiki136
     SUBDIR += mediawiki137
     SUBDIR += mediawiki138
     SUBDIR += mergelog
@@ -406,7 +406,6 @@
     SUBDIR += mongoose
     SUBDIR += mongrel2
     SUBDIR += monolith
-    SUBDIR += moodle310
     SUBDIR += moodle311
     SUBDIR += moodle39
     SUBDIR += moodle40
@@ -1402,6 +1401,7 @@
     SUBDIR += pserv
     SUBDIR += publicfile
     SUBDIR += punbb
+    SUBDIR += py-Pituophis
     SUBDIR += py-Tenjin
     SUBDIR += py-WebError
     SUBDIR += py-WebFlash
@@ -1420,7 +1420,6 @@
     SUBDIR += py-azure-storage
     SUBDIR += py-beaker
     SUBDIR += py-beautifulsoup
-    SUBDIR += py-beautifulsoup449
     SUBDIR += py-betamax
     SUBDIR += py-biscuits
     SUBDIR += py-bjoern
@@ -1721,6 +1720,8 @@
     SUBDIR += py-requests-cache93
     SUBDIR += py-requests-file
     SUBDIR += py-requests-futures
+    SUBDIR += py-requests-futures0
+    SUBDIR += py-requests-gssapi
     SUBDIR += py-requests-mock
     SUBDIR += py-requests-oauthlib
     SUBDIR += py-requests-toolbelt
@@ -1779,6 +1780,7 @@
     SUBDIR += py-websocket-client
     SUBDIR += py-webunit
     SUBDIR += py-werkzeug
+    SUBDIR += py-werkzeug21
     SUBDIR += py-wfuzz
     SUBDIR += py-whitenoise
     SUBDIR += py-wikipedia
@@ -2040,6 +2042,7 @@
     SUBDIR += rubygem-protocol-http1
     SUBDIR += rubygem-protocol-http2
     SUBDIR += rubygem-protocol-rack
+    SUBDIR += rubygem-protocol-rack01
     SUBDIR += rubygem-protocol-websocket
     SUBDIR += rubygem-puma
     SUBDIR += rubygem-puma_worker_killer

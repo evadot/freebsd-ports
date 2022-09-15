@@ -4,6 +4,7 @@ CATEGORIES=	editors
 
 MAINTAINER=	danilo@FreeBSD.org
 COMMENT=	Simple and powerful Qt-based text editor
+WWW=		http://semiletov.org/tea/
 
 LICENSE=	GPLv3
 
@@ -15,7 +16,7 @@ OPTIONS_GROUP_SPELL=	ASPELL HUNSPELL
 OPTIONS_DEFAULT=	ASPELL HUNSPELL
 SPELL_DESC=		Spell checker backend
 
-USE_QT=		buildtools_build core declarative gui network widgets printsupport
+USE_QT=		buildtools:build core declarative gui network widgets printsupport
 USE_GL=		gl
 USE_LOCALE=	en_US.UTF-8
 

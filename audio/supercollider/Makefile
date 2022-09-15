@@ -7,6 +7,7 @@ DISTNAME=	SuperCollider-${PORTVERSION}-Source
 
 MAINTAINER=	ports@nicandneal.net
 COMMENT=	Programming language for real time audio synthesis
+WWW=		https://supercollider.github.io
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -19,8 +20,8 @@ LIB_DEPENDS=	libboost_system.so:devel/boost-libs \
 
 USES=		cmake compiler:c++11-lang iconv localbase pkgconfig \
 		qt:5 readline shared-mime-info tar:bzip2 xorg
-USE_QT=		buildtools_build concurrent core declarative gui linguisttools location \
-		network opengl printsupport qmake_build sensors \
+USE_QT=		buildtools:build concurrent core declarative gui linguisttools location \
+		network opengl printsupport qmake:build sensors \
 		sql widgets websockets webchannel svg
 USE_XORG=	x11
 USE_LDCONFIG=	yes

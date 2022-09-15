@@ -1,11 +1,12 @@
 PORTNAME=	oletools
-PORTVERSION=	0.54.2
+PORTVERSION=	0.60.1
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	python@FreeBSD.org
 COMMENT=	Tools to analyze security characteristics of MS OLE2 files
+WWW=		https://pypi.org/project/oletools/
 
 LICENSE=	BSD2CLAUSE MIT
 LICENSE_COMB=	multi

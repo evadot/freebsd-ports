@@ -223,6 +223,7 @@
     SUBDIR += clblas
     SUBDIR += clblast
     SUBDIR += clfft
+    SUBDIR += clingcon
     SUBDIR += clingo
     SUBDIR += cliquer
     SUBDIR += cln
@@ -466,6 +467,7 @@
     SUBDIR += math77
     SUBDIR += mathgl
     SUBDIR += mathicsscript
+    SUBDIR += mathlibtools
     SUBDIR += mathmod
     SUBDIR += mathomatic
     SUBDIR += matio
@@ -847,6 +849,8 @@
     SUBDIR += py-brial
     SUBDIR += py-chaospy
     SUBDIR += py-claripy
+    SUBDIR += py-clingcon
+    SUBDIR += py-clingo
     SUBDIR += py-cma
     SUBDIR += py-cmaes
     SUBDIR += py-cmyt

@@ -1,11 +1,12 @@
 PORTNAME=	nbclient
-PORTVERSION=	0.6.7
+PORTVERSION=	0.6.8
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Client library for executing notebooks
+WWW=		https://github.com/jupyter/nbclient
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

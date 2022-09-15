@@ -5,6 +5,7 @@ CATEGORIES=	editors
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Reimplementation of Notepad++
+WWW=		https://github.com/dail8859/NotepadNext
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -12,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 LIB_DEPENDS=	libuchardet.so:textproc/uchardet
 
 USES=		desktop-file-utils gl qmake qt:5 xorg
-USE_QT=		core gui network printsupport widgets buildtools_build linguisttools_build
+USE_QT=		core gui network printsupport widgets buildtools:build linguisttools:build
 USE_GL=		gl
 USE_XORG=	xcb
 

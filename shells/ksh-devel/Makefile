@@ -15,14 +15,15 @@ PKGNAMESUFFIX=	-devel
 
 MAINTAINER=	cy@FreeBSD.org
 COMMENT=	Development branch of AT&T KornShell 93
+WWW=		http://www.kornshell.com/
 
 LICENSE=	EPL
 
 BROKEN_aarch64=		Fails to link: missing sbrk
 BROKEN_riscv64=		Fails to link: missing sbrk
 
-HASH=		53669678
-AST_COMMIT_DATE=	2022.08.26
+HASH=		95260eec
+AST_COMMIT_DATE=	2022.09.03
 
 USES=		compiler:c11
 

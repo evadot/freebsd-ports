@@ -6,11 +6,12 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Scalable, Portable and Distributed Gradient Boosting (GBDT, GBRT, GBM)
+WWW=		https://xgboost.ai/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/../LICENSE
 
-BUILD_DEPENDS=	cmake:devel/cmake
+BUILD_DEPENDS=	cmake:devel/cmake-core
 LIB_DEPENDS=	libdmlc.so:devel/dmlc-core \
 		libxgboost.so:misc/xgboost
 RUN_DEPENDS=	${PYNUMPY} \

@@ -1,5 +1,5 @@
 PORTNAME=	gpsprune
-PORTVERSION=	22
+PORTVERSION=	22.1
 CATEGORIES=	astro java
 MASTER_SITES=	https://activityworkshop.net/software/${PORTNAME}/
 DISTNAME=	${PORTNAME}_${PORTVERSION}.jar
@@ -8,6 +8,7 @@ EXTRACT_ONLY=	# empty
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Application for viewing, editing, and converting GPS coordinate data
+WWW=		https://activityworkshop.net/software/gpsprune/
 
 LICENSE=	GPLv2
 

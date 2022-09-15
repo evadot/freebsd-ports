@@ -1,10 +1,12 @@
 PORTNAME=	minify
 PORTVERSION=	2.12.1
+PORTREVISION=	1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	textproc www
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Go minifiers for web formats
+WWW=		https://github.com/tdewolff/minify
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

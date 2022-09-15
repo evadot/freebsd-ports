@@ -1,10 +1,12 @@
 PORTNAME=	golangci-lint
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.49.0
+PORTREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	lcook@FreeBSD.org
 COMMENT=	Linters Runner for Go
+WWW=		https://github.com/golangci/golangci-lint
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE

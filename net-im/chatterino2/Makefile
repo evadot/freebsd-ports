@@ -6,6 +6,7 @@ CATEGORIES=	net-im
 
 MAINTAINER=	swills@FreeBSD.org
 COMMENT=	Twitch chat client
+WWW=		https://chatterino.com/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -17,7 +18,7 @@ LIB_DEPENDS=	libboost_system.so:devel/boost-libs \
 
 USES=		compiler:c++17-lang gl pkgconfig qmake qt:5 ssl
 USE_QT=		concurrent core gui multimedia network svg widgets \
-		buildtools_build qmake_build
+		buildtools:build qmake:build
 USE_GL=		gl
 
 PLIST_FILES=	bin/chatterino \

@@ -1,11 +1,13 @@
 PORTNAME=	krita
 DISTVERSION=	5.1.0
+PORTREVISION=	2
 CATEGORIES=	graphics kde
 MASTER_SITES=	KDE/stable/${PORTNAME}/${DISTVERSION}
 DIST_SUBDIR=	KDE/${PORTNAME}
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Sketching and painting program
+WWW=		https://krita.org
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -21,6 +23,7 @@ LIB_DEPENDS=	libImath.so:math/Imath \
 		libgif.so:graphics/giflib \
 		libgsl.so:math/gsl \
 		libheif.so:graphics/libheif \
+		libjxl.so:graphics/libjxl \
 		liblcms2.so:graphics/lcms2 \
 		libmypaint.so:graphics/libmypaint \
 		libpng.so:graphics/png \
@@ -40,8 +43,8 @@ USES=		cmake:noninja gmake compiler:c++11-lib desktop-file-utils \
 USE_KDE=	archive completion config coreaddons crash guiaddons i18n \
 		itemmodels itemviews kio service widgetsaddons windowsystem
 USE_QT=		concurrent core dbus declarative gui multimedia network printsupport \
-		sql svg testlib widgets x11extras xml sql-sqlite3_run \
-		buildtools_build qmake_build
+		sql svg testlib widgets x11extras xml sql-sqlite3:run \
+		buildtools:build qmake:build
 USE_XORG=	ice sm xcb xext xi
 
 CMAKE_ARGS=	-DCMAKE_DISABLE_FIND_PACKAGE_PyQt5:BOOL=true

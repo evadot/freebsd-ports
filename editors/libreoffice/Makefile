@@ -1,4 +1,4 @@
-PORTREVISION=	0
+PORTREVISION=	1
 
 .include "${.CURDIR}/Makefile.common"
 
@@ -10,7 +10,11 @@ DISTFILES=	${PORTNAME}-${DISTVERSION}${EXTRACT_SUFX} \
 DIST_SUBDIR=	libreoffice
 EXTRACT_ONLY:=	${DISTFILES}
 
+PATCH_SITES=	https://raw.githubusercontent.com/archlinux/svntogit-packages/packages/libreoffice-fresh/trunk/
+PATCHFILES=	libreoffice-poppler-22.09.0.patch:-p1
+
 COMMENT=	Full integrated office productivity suite
+WWW=		https://www.libreoffice.org/
 
 BUILD_DEPENDS=	p5-Archive-Zip>=0:archivers/p5-Archive-Zip \
 		zip:archivers/zip \
@@ -228,7 +232,7 @@ MARIADB_CONFIGURE_ENABLE=	mariadb-sdbc
 MARIADB_USES=	mysql:client
 
 QT5_CONFIGURE_ENABLE=	qt5
-QT5_USE=	qt=buildtools_build,core,gui,network,qmake_build,widgets,x11extras
+QT5_USE=	qt=buildtools:build,core,gui,network,qmake:build,widgets,x11extras
 QT5_USES=	qt:5
 
 SDK_BUILD_DEPENDS=	doxygen:devel/doxygen
@@ -344,7 +348,8 @@ LLD_UNSAFE=	yes
 .endif
 
 .if ${CHOSEN_COMPILER_TYPE} == clang
-CXXFLAGS_WARN=	-Woverloaded-virtual -Wno-unused-parameter -Wno-unused-local-typedefs
+CXXFLAGS_WARN=	-Woverloaded-virtual -Wno-c++11-narrowing \
+		-Wno-unused-parameter -Wno-unused-local-typedefs
 .else
 CXXFLAGS_WARN=	-Wshadow -Woverloaded-virtual
 .endif

@@ -1,6 +1,5 @@
 PORTNAME=	git
-DISTVERSION=	2.37.2
-PORTREVISION=	1
+DISTVERSION=	2.37.3
 CATEGORIES=	devel
 MASTER_SITES=	KERNEL_ORG/software/scm/git
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
@@ -22,6 +21,7 @@ PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	garga@FreeBSD.org
 COMMENT?=	Distributed source code management tool ${COMMENT_${FLAVOR}}
+WWW=		https://git-scm.com/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

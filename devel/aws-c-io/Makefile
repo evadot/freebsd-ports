@@ -1,16 +1,18 @@
 PORTNAME=	aws-c-io
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.13.2
+DISTVERSION=	0.13.4
+PORTREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	Event driven framework for implementing application protocols
+WWW=		https://github.com/awslabs/aws-c-io
 
 LICENSE=	APACHE20
 
 LIB_DEPENDS=	libaws-c-cal.so:security/aws-c-cal \
 		libaws-c-common.so:devel/aws-c-common \
-		libs2n.so:security/s2n
+		libs2n.so:security/s2n-tls
 
 USES=		cmake compiler:c11 ssl
 

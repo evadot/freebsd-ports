@@ -6,12 +6,13 @@ MASTER_SITES=	https://secure.nic.cz/files/knot-resolver/ \
 
 MAINTAINER=	freebsd@dns.company
 COMMENT=	Caching full resolver implementation
+WWW=		https://www.knot-resolver.cz/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	bash:shells/bash \
-		cmake:devel/cmake \
+		cmake:devel/cmake-core \
 		flake8:devel/py-flake8@${PY_FLAVOR} \
 		lua51-cqueues>=20200726_1:devel/lua-cqueues@lua51 \
 		luacheck:devel/lua-luacheck

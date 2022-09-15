@@ -6,6 +6,7 @@ MASTER_SITES=	SF/qtpfsgui/luminance/${DISTVERSION}
 
 MAINTAINER=	h2+fbsdports@fsfe.org
 COMMENT=	Complete open source solution for HDR photography
+WWW=		http://qtpfsgui.sourceforge.net/
 
 LICENSE=	GPLv2
 
@@ -26,7 +27,7 @@ CFLAGS+=	-I${LOCALBASE}/include/Imath
 USES=		cmake desktop-file-utils eigen:3 jpeg pkgconfig qt:5 tar:bzip2
 USE_QT=		concurrent core declarative gui location network \
 		printsupport sql svg widgets xml \
-		buildtools_build linguisttools_build qmake_build
+		buildtools:build linguisttools:build qmake:build
 
 OPTIONS_DEFINE=		CFITSIO DOCS HELPBROWSER
 OPTIONS_DEFAULT=	CFITSIO HELPBROWSER

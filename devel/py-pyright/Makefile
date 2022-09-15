@@ -1,11 +1,12 @@
 PORTNAME=	pyright
-PORTVERSION=	1.1.269
+PORTVERSION=	1.1.270
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Command line wrapper for pyright
+WWW=		https://github.com/RobertCraigie/pyright-python
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -141,9 +141,7 @@
     SUBDIR += drawing
     SUBDIR += drawpile
     SUBDIR += drm-510-kmod
-    SUBDIR += drm-54-kmod
     SUBDIR += drm-fbsd12.0-kmod
-    SUBDIR += drm-fbsd13-kmod
     SUBDIR += drm-kmod
     SUBDIR += drm_info
     SUBDIR += dspdfviewer
@@ -354,6 +352,7 @@
     SUBDIR += icoutils
     SUBDIR += ida
     SUBDIR += iec16022
+    SUBDIR += igt-gpu-tools
     SUBDIR += iiview
     SUBDIR += ikona
     SUBDIR += imageindex
@@ -885,6 +884,7 @@
     SUBDIR += py-opencolorio
     SUBDIR += py-openimageio
     SUBDIR += py-openshadinglanguage
+    SUBDIR += py-optimize-images
     SUBDIR += py-osmnet
     SUBDIR += py-pandana
     SUBDIR += py-photocollage

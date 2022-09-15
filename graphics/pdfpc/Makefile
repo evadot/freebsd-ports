@@ -2,10 +2,11 @@ PORTNAME=	pdfpc
 DISTVERSION=	4.5.0
 CATEGORIES=	graphics
 DISTVERSIONPREFIX=	v
-PORTREVISION=	18
+PORTREVISION=	19
 
 MAINTAINER=	bapt@FreeBSD.org
 COMMENT=	Keynote-like multi-monitor presentation viewer
+WWW=		https://pdfpc.github.io/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

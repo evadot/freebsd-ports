@@ -4,6 +4,7 @@ CATEGORIES=	graphics kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Image viewer and browser for KDE
+WWW=		http://gwenview.sourceforge.net
 
 BUILD_DEPENDS=	${LOCALBASE}/share/xsl/docbook/html/docbook.xsl:textproc/docbook-xsl \
 		docbook-xml>0:textproc/docbook-xml
@@ -22,10 +23,10 @@ USE_KDE=	activities auth baloo bookmarks codecs completion config \
 		kdelibs4support kimageformats kio libkdcraw libkipi \
 		notifications parts service solid sonnet textwidgets \
 		widgetsaddons windowsystem xmlgui \
-		ecm_build
+		ecm:build
 USE_QT=		concurrent core dbus gui network opengl phonon4 printsupport \
 		svg widgets x11extras xml \
-		buildtools_build qmake_build
+		buildtools:build qmake:build
 USE_XORG=	x11
 
 OPTIONS_DEFINE=	DOCS

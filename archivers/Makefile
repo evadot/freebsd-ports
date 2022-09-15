@@ -173,11 +173,11 @@
     SUBDIR += pixz
     SUBDIR += plzip
     SUBDIR += ppmd
-    SUBDIR += ppmd-7z
     SUBDIR += ppunpack
     SUBDIR += pxz
     SUBDIR += py-acefile
     SUBDIR += py-borgbackup
+    SUBDIR += py-borgbackup11
     SUBDIR += py-brotli
     SUBDIR += py-brotlicffi
     SUBDIR += py-brotlipy

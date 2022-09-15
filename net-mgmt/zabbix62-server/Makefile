@@ -7,6 +7,7 @@ DISTNAME=	zabbix-${DISTVERSION}
 
 MAINTAINER=	otis@FreeBSD.org
 COMMENT=	Enterprise-class open source distributed monitoring (${PKGNAMESUFFIX:S/^-//})
+WWW=		https://www.zabbix.com/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -60,6 +61,8 @@ CONFIGURE_ARGS+=	--enable-${ZABBIX_BUILD} \
 LIB_DEPENDS+=	libnetsnmp.so:net-mgmt/net-snmp
 
 CPPFLAGS+=	-I${LOCALBASE}/include
+
+PORTSCOUT=	limit:^6\.2\.
 
 SUB_FILES=	pkg-message
 

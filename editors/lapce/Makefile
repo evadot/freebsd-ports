@@ -1,9 +1,11 @@
 PORTNAME=	lapce
-PORTVERSION=	g20220826 # remove openssl-src-* from CARGO-CRATES each update
+DISTVERSIONPREFIX=	v
+DISTVERSION=	0.2.0 # remove openssl-src-* from CARGO-CRATES each update
 CATEGORIES=	editors
 
 MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	Lightning-fast and Powerful Code Editor
+WWW=		https://lapce.dev/
 
 LICENSE=	APACHE20
 
@@ -18,7 +20,6 @@ LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 
 USES=		cargo gmake gnome localbase:ldflags perl5 pkgconfig ssl
 USE_GITHUB=	yes
-GH_TAGNAME=	5abf778
 USE_GNOME=	atk gdkpixbuf2 gtk30 pango
 
 PLIST_FILES=	bin/lapce \

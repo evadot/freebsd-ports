@@ -6,6 +6,7 @@ DISTNAME=	ecFlow-${DISTVERSION}-Source
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Workflow package that enables users to run a large number of programs
+WWW=		https://confluence.ecmwf.int/display/ECFLOW/ecflow+home
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -17,7 +18,7 @@ LIB_DEPENDS=	libboost_program_options.so:devel/boost-libs
 RUN_DEPENDS=	${PY_DEPENDS}
 
 USES=		cmake compiler:c++17-lang localbase perl5 pkgconfig python:3.6+ qt:5 shebangfix ssl
-USE_QT=		charts core gui network svg widgets buildtools_build qmake_build
+USE_QT=		charts core gui network svg widgets buildtools:build qmake:build
 
 SHEBANG_GLOB=	*.sh *.in *.py
 

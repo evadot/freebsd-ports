@@ -1,10 +1,11 @@
 PORTNAME=	fava
-PORTVERSION=	1.22
+PORTVERSION=	1.22.3
 CATEGORIES=	finance
 MASTER_SITES=	CHEESESHOP
 
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Web interface for Beancount
+WWW=		https://beancount.github.io/fava/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

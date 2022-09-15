@@ -1,11 +1,12 @@
 PORTNAME=	azure-core
-PORTVERSION=	1.25.0
+PORTVERSION=	1.25.1
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Microsoft Azure Core Library for Python
+WWW=		https://github.com/Azure/azure-sdk-for-python/tree/master/sdk/core/azure-core
 
 LICENSE=	MIT
 

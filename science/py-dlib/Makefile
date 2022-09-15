@@ -7,11 +7,12 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	arrowd@FreeBSD.org
 COMMENT=	Machine learning framework written in C++ (python bindings)
+WWW=		http://dlib.net
 
 LICENSE=	BSL
 LICENSE_FILE=	${WRKSRC}/dlib/LICENSE.txt
 
-BUILD_DEPENDS=		cmake:devel/cmake
+BUILD_DEPENDS=		cmake:devel/cmake-core
 LIB_DEPENDS=		${PY_BOOST} \
 			libpng.so:graphics/png
 

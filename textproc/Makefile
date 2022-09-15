@@ -256,6 +256,7 @@
     SUBDIR += halibut
     SUBDIR += heirloom-doctools
     SUBDIR += hevea
+    SUBDIR += hexcode
     SUBDIR += hhm
     SUBDIR += hi-aspell
     SUBDIR += highlight
@@ -407,6 +408,7 @@
     SUBDIR += libxdiff
     SUBDIR += libxml++
     SUBDIR += libxml++26
+    SUBDIR += libxml++30
     SUBDIR += libxml2
     SUBDIR += libxmlb
     SUBDIR += libxmlbird
@@ -416,6 +418,7 @@
     SUBDIR += link-grammar
     SUBDIR += linux-c7-aspell
     SUBDIR += linux-c7-expat
+    SUBDIR += linux-c7-expat-devel
     SUBDIR += linux-c7-libcroco
     SUBDIR += linux-c7-libxml2
     SUBDIR += linux-c7-libxslt

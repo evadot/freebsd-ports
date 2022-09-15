@@ -9,6 +9,7 @@ PKGNAMESUFFIX=	-devel
 
 MAINTAINER=	cy@FreeBSD.org
 COMMENT=	Network UPS Tools
+WWW=		https://www.networkupstools.org/
 
 LICENSE=	GPLv2+ GPLv3+ ART10 GPLv1+
 LICENSE_COMB=	multi
@@ -18,8 +19,8 @@ CONFLICTS=	nut-[0-9]*
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	networkupstools
-GH_TAGNAME=	ef842b40c
-NUT_COMMIT_DATE=	2022.08.31
+GH_TAGNAME=	34c8ce640
+NUT_COMMIT_DATE=	2022.09.09
 
 MAKE_JOBS_UNSAFE=	yes
 USE_GCC=	yes

@@ -5,6 +5,7 @@ CATEGORIES=	deskutils
 
 MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	Qt5 based clipboard manager
+WWW=		https://github.com/hluk/CopyQ
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -32,8 +33,8 @@ USE_KDE=	notifications
 USE_LDCONFIG=	yes
 
 USE_QT=		core declarative gui network script svg wayland widgets \
-		x11extras buildtools_build linguisttools_build qmake_build \
-		imageformats_run
+		x11extras buildtools:build linguisttools:build qmake:build \
+		imageformats:run
 USE_XORG=	x11 xau xcb xdmcp xtst
 
 LDFLAGS+=	-Wl,--as-needed

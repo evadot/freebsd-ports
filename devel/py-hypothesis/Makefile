@@ -1,11 +1,12 @@
 PORTNAME=	hypothesis
-PORTVERSION=	6.54.4
+PORTVERSION=	6.54.5
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Library for property based testing
+WWW=		https://hypothesis.works/
 
 LICENSE=	MPL20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

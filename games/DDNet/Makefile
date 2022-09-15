@@ -1,10 +1,11 @@
 PORTNAME=	DDNet
-PORTVERSION=	16.3.1
+PORTVERSION=	16.3.2
 CATEGORIES=	games
 MASTER_SITES=	https://ddnet.tw/downloads/
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	DDraceNetwork, a cooperative racing mod of Teeworlds
+WWW=		https://ddnet.tw/
 
 LICENSE=	ZLIB
 LICENSE_FILE=	${WRKSRC}/license.txt

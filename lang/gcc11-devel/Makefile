@@ -1,5 +1,5 @@
 PORTNAME=	gcc
-PORTVERSION=	11.3.1.s20220826
+PORTVERSION=	11.3.1.s20220909
 CATEGORIES=	lang
 MASTER_SITES=	GCC/snapshots/${DIST_VERSION}
 PKGNAMESUFFIX=	${SUFFIX}-devel
@@ -7,6 +7,7 @@ DISTNAME=	gcc-${DIST_VERSION}
 
 MAINTAINER=	salvadore@FreeBSD.org
 COMMENT=	GNU Compiler Collection 11
+WWW=		https://gcc.gnu.org
 
 LICENSE=	GPLv3 GPLv3RLE
 LICENSE_COMB=	multi
@@ -58,7 +59,7 @@ GRAPHITE_DESC=		Support for Graphite loop optimizations
 OPTIONS_DEFINE_amd64+=		MULTILIB
 OPTIONS_DEFAULT_amd64+=	MULTILIB
 OPTIONS_DEFINE_powerpc64+=	MULTILIB
-OPTIONS_DEFAULT_powerpc64+=	MULTILIB
+#OPTIONS_DEFAULT_powerpc64+=	MULTILIB # https://gcc.gnu.org/bugzilla/show_bug.cgi?id=105010
 MULTILIB_DESC=		Build support for 32-bit and 64-bit targets
 MULTILIB_CONFIGURE_ENABLE=	multilib
 .else

@@ -5,6 +5,7 @@ CATEGORIES=	devel kde
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Git gui client for KDE
+WWW=		https://github.com/HamedMasafi/GitKlient
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -18,7 +19,7 @@ USE_KDE=	auth bookmarks codecs completion config configwidgets \
 		jobwidgets kio parts service solid sonnet syntaxhighlighting \
 		texteditor textwidgets widgetsaddons windowsystem xmlgui
 USE_QT=		concurrent core dbus gui network testlib widgets xml \
-		buildtools_build qmake_build
+		buildtools:build qmake:build
 USE_XORG=	x11
 
 .include <bsd.port.mk>

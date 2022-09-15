@@ -1,10 +1,11 @@
 PORTNAME=	telegraf
 DISTVERSIONPREFIX=v
-DISTVERSION=	1.23.4
+DISTVERSION=	1.24.0
 CATEGORIES=	net-mgmt
 
 MAINTAINER=	girgen@FreeBSD.org
 COMMENT=	Time-series data collection
+WWW=		https://influxdata.com/time-series-platform/telegraf/
 
 LICENSE=	MIT
 

@@ -1,10 +1,11 @@
 PORTNAME=	bookworm
 DISTVERSION=	1.1.2
-PORTREVISION=	10
+PORTREVISION=	11
 CATEGORIES=	deskutils
 
 MAINTAINER=	miguel@gocobachi.dev
 COMMENT=	Simple, focused ebook reader
+WWW=		https://babluboy.github.io/bookworm/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING

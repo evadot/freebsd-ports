@@ -18,6 +18,7 @@ PATCHFILES+=	d657ea69c94c.patch:-p1 # https://github.com/yuzu-emu/yuzu/pull/8240
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Nintendo Switch emulator/debugger
+WWW=		https://yuzu-emu.org/
 
 LICENSE=	APACHE20 BSD3CLAUSE GPLv3+ ISCL MIT UNLICENSE
 LICENSE_COMB=	multi
@@ -78,7 +79,7 @@ JACK_BUILD_DEPENDS=	jackit>0:audio/jack
 JACK_CMAKE_BOOL=	USE_JACK
 
 NLS_DESC=		UI translations (implies QT5)
-NLS_USE=		QT=linguisttools_build
+NLS_USE=		QT=linguisttools:build
 NLS_CMAKE_BOOL=		ENABLE_QT_TRANSLATION
 NLS_IMPLIES=		QT5
 
@@ -86,7 +87,7 @@ PULSEAUDIO_BUILD_DEPENDS=pulseaudio>0:audio/pulseaudio
 PULSEAUDIO_CMAKE_BOOL=	USE_PULSE
 
 QT5_USES=		desktop-file-utils qt:5 shared-mime-info
-QT5_USE=		QT=qmake_build,buildtools_build,concurrent_build,core,gui,widgets
+QT5_USE=		QT=qmake:build,buildtools:build,concurrent:build,core,gui,widgets
 QT5_CMAKE_BOOL=		ENABLE_QT
 QT5_PLIST_FILES=	bin/${PORTNAME} \
 			share/applications/org.yuzu_emu.yuzu.desktop \

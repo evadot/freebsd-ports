@@ -4,6 +4,7 @@ CATEGORIES=	net-im kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Voice/Video Call UI for Telepathy
+WWW=		https://community.kde.org/KTp
 
 LICENSE=	GPLv2+ LGPL21+
 LICENSE_COMB=	multi
@@ -24,9 +25,9 @@ USE_GNOME=	glib20
 USE_KDE=	auth codecs config configwidgets coreaddons iconthemes \
 		i18n kcmutils kdeclarative notifications package service \
 		wallet widgetsaddons xmlgui \
-		ecm_build
+		ecm:build
 USE_QT=		core dbus declarative gui network widgets xml \
-		buildtools_build qmake_build
+		buildtools:build qmake:build
 USE_LDCONFIG=	yes
 
 OPTIONS_DEFINE=	DOCS

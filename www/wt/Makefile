@@ -4,6 +4,7 @@ CATEGORIES=	www
 
 MAINTAINER=	info@babaei.net
 COMMENT=	Widget-centric C++ library for developing web applications
+WWW=		https://www.webtoolkit.eu/wt
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -114,7 +115,7 @@ POSTGRES_CMAKE_ON=	-DPOSTGRES_PREFIX:STRING=${LOCALBASE} \
 
 QT5_CMAKE_BOOL=		ENABLE_QT5
 QT5_USES=		qt:5
-QT5_USE=                qt=buildtools_build,core
+QT5_USE=                qt=buildtools:build,core
 
 RESOURCES_CMAKE_BOOL=	INSTALL_RESOURCES
 

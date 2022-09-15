@@ -1,10 +1,12 @@
 PORTNAME=	gh
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.14.7
+PORTREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	lcook@FreeBSD.org
 COMMENT=	GitHub's official command line tool
+WWW=		https://cli.github.com
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

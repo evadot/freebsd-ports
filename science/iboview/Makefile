@@ -7,6 +7,7 @@ DISTNAME=	ibo-view.20150427
 
 MAINTAINER=	jmd@FreeBSD.org
 COMMENT=	Program for analyzing molecular electronic structure
+WWW=		http://www.iboview.org/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -18,7 +19,7 @@ ONLY_FOR_ARCHS=	amd64
 
 USES=		blaslapack:openblas fortran gl qmake:outsource qt:5 tar:bz2
 USE_GL=		gl glu
-USE_QT=		buildtools_build core gui widgets opengl script svg
+USE_QT=		buildtools:build core gui widgets opengl script svg
 
 PLIST_FILES=	bin/iboview
 

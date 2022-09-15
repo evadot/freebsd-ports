@@ -1,3 +1,246 @@
+  <vuln vid="b59847e0-346d-11ed-8fe9-3065ec8fd3ec">
+    <topic>chromium -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>chromium</name>
+	<range><lt>105.0.5195.125</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Chrome Releases reports:</p>
+	<blockquote cite="https://chromereleases.googleblog.com/2022/09/stable-channel-update-for-desktop_14.html">
+	  <p>This release includes 11 security fixes, including:</p>
+	  <ul>
+	    <li>[1358381] High CVE-2022-3195: Out of bounds write in Storage. Reported by Ziling Chen and Nan Wang (@eternalsakura13) of 360 Vulnerability Research Institute on 2022-08-31</li>
+	    <li>[1358090] High CVE-2022-3196: Use after free in PDF. Reported by triplepwns on 2022-08-30</li>
+	    <li>[1358075] High CVE-2022-3197: Use after free in PDF. Reported by triplepwns on 2022-08-30</li>
+	    <li>[1355682] High CVE-2022-3198: Use after free in PDF. Reported by MerdroidSG on 2022-08-23</li>
+	    <li>[1355237] High CVE-2022-3199: Use after free in Frames. Reported by Anonymous on 2022-08-22</li>
+	    <li>[1355103] High CVE-2022-3200: Heap buffer overflow in Internals. Reported by Richard Lorenz, SAP on 2022-08-22</li>
+	    <li>[1343104] High CVE-2022-3201: Insufficient validation of untrusted input in DevTools. Reported by NDevTK on 2022-07-09</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-3195</cvename>
+      <cvename>CVE-2022-3196</cvename>
+      <cvename>CVE-2022-3197</cvename>
+      <cvename>CVE-2022-3198</cvename>
+      <cvename>CVE-2022-3199</cvename>
+      <cvename>CVE-2022-3200</cvename>
+      <cvename>CVE-2022-3201</cvename>
+      <url>https://chromereleases.googleblog.com/2022/09/stable-channel-update-for-desktop_14.html</url>
+    </references>
+    <dates>
+      <discovery>2022-09-14</discovery>
+      <entry>2022-09-14</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="4ebaa983-3299-11ed-95f8-901b0e9408dc">
+    <topic>dendrite -- Signature checks not applied to some retrieved missing events</topic>
+    <affects>
+      <package>
+	<name>dendrite</name>
+	<range><lt>0.9.8</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Dendrite team reports:</p>
+	<blockquote cite="https://github.com/matrix-org/dendrite/security/advisories/GHSA-pfw4-xjgm-267c">
+	  <p>Events retrieved from a remote homeserver using /get_missing_events did
+	  not have their signatures verified correctly. This could potentially allow
+	  a remote homeserver to provide invalid/modified events to Dendrite via this
+	  endpoint.</p>
+	  <p>Note that this does not apply to events retrieved through other endpoints
+	  (e.g. /event, /state) as they have been correctly verified.</p>
+	  <p>Homeservers that have federation disabled are not vulnerable.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://github.com/matrix-org/dendrite/security/advisories/GHSA-pfw4-xjgm-267c</url>
+    </references>
+    <dates>
+      <discovery>2022-09-12</discovery>
+      <entry>2022-09-12</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="f75722ce-31b0-11ed-8b56-0800277bb8a8">
+    <topic>gitea -- multiple issues</topic>
+    <affects>
+      <package>
+	<name>gitea</name>
+	<range><lt>1.17.2</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Gitea team reports:</p>
+	<blockquote cite="https://github.com/go-gitea/gitea/pull/20869">
+	  <p>Double check CloneURL is acceptable</p>
+	</blockquote>
+	<blockquote cite="https://github.com/go-gitea/gitea/pull/21011">
+	  <p>Add more checks in migration code</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://blog.gitea.io/2022/09/gitea-1.17.2-is-released/</url>
+    </references>
+    <dates>
+      <discovery>2022-08-19</discovery>
+      <entry>2022-09-11</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="80e057e7-2f0a-11ed-978f-fcaa147e860e">
+    <topic>Python -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>python37</name>
+	<range><lt>3.7.14</lt></range>
+      </package>
+      <package>
+	<name>python38</name>
+	<range><lt>3.8.14</lt></range>
+      </package>
+      <package>
+	<name>python39</name>
+	<range><lt>3.9.14</lt></range>
+      </package>
+      <package>
+	<name>python310</name>
+	<range><lt>3.10.7</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Python reports:</p>
+	<blockquote cite="https://docs.python.org/release/3.7.14/whatsnew/changelog.html#changelog">
+	  <p>gh-95778: Converting between int and str in bases other than 2 (binary), 4, 8 (octal),
+	    16 (hexadecimal), or 32 such as base 10 (decimal) now raises a ValueError if the number
+	    of digits in string form is above a limit to avoid potential denial of service attacks
+	    due to the algorithmic complexity.</p>
+	  <p>gh-87389: http.server: Fix an open redirection vulnerability in the HTTP server when
+	    an URI path starts with //. Vulnerability discovered, and initial fix proposed, by
+	    Hamza Avvan.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2020-10735</cvename>
+      <url>https://docs.python.org/release/3.7.14/whatsnew/changelog.html#changelog</url>
+    </references>
+    <dates>
+      <discovery>2020-03-20</discovery>
+      <entry>2022-09-08</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="6fea7103-2ea4-11ed-b403-3dae8ac60d3e">
+    <topic>go -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>go118</name>
+	<range><lt>1.18.6</lt></range>
+      </package>
+      <package>
+	<name>go119</name>
+	<range><lt>1.19.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Go project reports:</p>
+	<blockquote cite="https://go.dev/issue/54658">
+	  <p>net/http: handle server errors after sending GOAWAY</p>
+	  <p>A closing HTTP/2 server connection could hang forever
+	    waiting for a clean shutdown that was preempted by a
+	    subsequent fatal error. This failure mode could be
+	    exploited to cause a denial of service.</p>
+	</blockquote>
+	<blockquote cite="https://go.dev/issue/54385">
+	  <p>net/url: JoinPath does not strip relative path components
+	    in all circumstances</p>
+	  <p>JoinPath and URL.JoinPath would not remove ../ path
+	    components appended to a relative path.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-27664</cvename>
+      <cvename>CVE-2022-32190</cvename>
+      <url>https://groups.google.com/g/golang-announce/c/x49AQzIVX-s/m/0tgO0pjiBQAJ</url>
+    </references>
+    <dates>
+      <discovery>2022-09-06</discovery>
+      <entry>2022-09-07</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="f38d25ac-2b7a-11ed-a1ef-3065ec8fd3ec">
+    <topic>chromium -- insufficient data validation in Mojo</topic>
+    <affects>
+      <package>
+	<name>chromium</name>
+	<range><lt>105.0.5195.102</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Chrome Releases reports:</p>
+	<blockquote cite="https://chromereleases.googleblog.com/2022/09/stable-channel-update-for-desktop.html">
+	  <p>This release contains 1 security fix:</p>
+	  <ul>
+	    <li>[1358134] High CVE-2022-3075: Insufficient data validation in Mojo. Reported by Anonymous on 2022-08-30</li>
+	  </ul>
+	  <p>Google is aware that an exploit of CVE-2022-3075 exists in the wild.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-3075</cvename>
+      <url>https://chromereleases.googleblog.com/2022/09/stable-channel-update-for-desktop.html</url>
+    </references>
+    <dates>
+      <discovery>2022-09-02</discovery>
+      <entry>2022-09-03</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="5418b360-29cc-11ed-a6d4-6805ca2fa271">
+    <topic>powerdns-recursor -- denial of service</topic>
+    <affects>
+      <package>
+	<name>powerdns-recursor</name>
+	<range><lt>4.7.2</lt></range>
+	<range><lt>4.6.3</lt></range>
+	<range><lt>4.5.10</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>PowerDNS Team reports:</p>
+	<blockquote cite="https://www.powerdns.com/news.html#20220823">
+	  <p>PowerDNS Security Advisory 2022-02: incomplete exception handling related to protobuf message generation.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-37428</cvename>
+      <url>https://doc.powerdns.com/recursor/security-advisories/powerdns-advisory-2022-02.html</url>
+    </references>
+    <dates>
+      <discovery>2022-08-23</discovery>
+      <entry>2022-09-01</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="827b95ff-290e-11ed-a2e7-6c3be5272acd">
     <topic>Grafana -- Unauthorized file disclosure</topic>
     <affects>
@@ -68,8 +311,8 @@
       </body>
     </description>
     <references>
-      <cvename>2022-36059</cvename>
-      <cvename>2022-36060</cvename>
+      <cvename>CVE-2022-36059</cvename>
+      <cvename>CVE-2022-36060</cvename>
       <url>https://matrix.org/blog/2022/08/31/security-releases-matrix-js-sdk-19-4-0-and-matrix-react-sdk-3-53-0</url>
     </references>
     <dates>

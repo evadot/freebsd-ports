@@ -8,6 +8,7 @@ DISTNAME=	${PORTNAME}_${MAJOR_VER}+${SNAPSHOT_VER}.orig
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Qt5 implementation of the DBusMenu protocol
+WWW=		https://launchpad.net/libdbusmenu-qt
 
 LICENSE=	LGPL20
 
@@ -19,7 +20,7 @@ qt6_PKGNAMESUFFIX=	6
 USES=		compiler:c++11-lib cmake qt:${FLAVOR:S/qt//}
 USE_LDCONFIG=	yes
 _USE_QT5=	core dbus gui widgets \
-		buildtools_build qmake_build
+		buildtools:build qmake:build
 _USE_QT6=	base
 USE_QT=		${_USE_QT${FLAVOR:S/qt//}}
 CMAKE_ON=	USE_QT${FLAVOR:S/qt//}

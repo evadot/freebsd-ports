@@ -8,6 +8,7 @@ PKGNAMESUFFIX=	-qt6
 
 MAINTAINER=	fluffy@FreeBSD.org
 COMMENT=	Qt6-based multimedia player
+WWW=		https://qmmp.ylsoftware.com/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -17,7 +18,7 @@ PORTSCOUT=	limit:^1\..*
 
 USES=		cmake gl gnome pathfix pkgconfig qt:6 tar:bzip2
 USE_GL=		gl opengl
-USE_QT=		base_build declarative_build tools_build
+USE_QT=		base:build declarative:build tools:build
 USE_LDCONFIG=	yes
 
 CMAKE_OFF=	USE_MMS

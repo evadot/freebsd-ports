@@ -7,6 +7,7 @@ CATEGORIES=	deskutils
 
 MAINTAINER=	adridg@FreeBSD.org
 COMMENT=	Time tracker
+WWW=		https://github.com/KDAB/Charm
 
 # The top-level license file is GPLv2, but all the sources say
 # (at your option) GPLv2+ .
@@ -25,7 +26,7 @@ GH_PROJECT=	Charm
 USE_QT=		core dbus gui \
 		network printsupport script sql sql-sqlite3 \
 		widgets xml \
-		buildtools_build qmake_build testlib_build
+		buildtools:build qmake:build testlib:build
 USE_XORG=	ice x11 xcb xext xscrnsaver
 
 .include <bsd.port.mk>

@@ -7,6 +7,7 @@ DIST_SUBDIR=	KDE/Qt/qtcreator
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	C++ and QML IDE for Qt development
+WWW=		https://qt-project.org/wiki/Category:Tools::QtCreator
 
 LICENSE=	QtGPL
 LICENSE_GROUPS_QtGPL=	GPL
@@ -79,10 +80,10 @@ DOCS_DESC=		Install the Qt5 api documentation
 EXAMPLES_DESC=		Install the Qt5 example projects
 QTWEBENGINE_DESC=	Add dependency on qt5-webengine
 
-DOCS_USE=		QT=doc_run
+DOCS_USE=		QT=doc:run
 DOCS_CMAKE_BOOL=	WITH_DOCS
 
-EXAMPLES_USE=		QT=examples_run
+EXAMPLES_USE=		QT=examples:run
 
 QTWEBENGINE_USE=	qt=webengine
 QTWEBENGINE_CMAKE_BOOL_OFF=	CMAKE_DISABLE_FIND_PACKAGE_Qt5WebEngine

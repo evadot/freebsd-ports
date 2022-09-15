@@ -1,10 +1,12 @@
 PORTNAME=	micro
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.0.11
+PORTREVISION=	1
 CATEGORIES=	editors
 
 MAINTAINER=	lcook@FreeBSD.org
 COMMENT=	Modern and intuitive terminal-based text editor
+WWW=		https://micro-editor.github.io/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

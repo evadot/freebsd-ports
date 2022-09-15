@@ -1,11 +1,12 @@
 PORTNAME=	tracker-miners
 PORTVERSION=	2.3.5
-PORTREVISION=	28
+PORTREVISION=	29
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Miners for tracker2
+WWW=		https://wiki.gnome.org/Projects/Tracker
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING.LGPL

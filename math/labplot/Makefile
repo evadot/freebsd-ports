@@ -1,10 +1,12 @@
 PORTNAME=	labplot
 DISTVERSION=	2.9.0
+PORTREVISION=	1
 CATEGORIES=	math kde
 MASTER_SITES=	KDE/stable/${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Data plotting and function analysis tool by KDE
+WWW=		https://labplot.kde.org/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/LICENSES/GPL-2.0-or-later.txt
@@ -22,10 +24,10 @@ USE_KDE=	archive attica auth bookmarks codecs completion config configwidgets \
 		jobwidgets kio newstuff notifications parts \
 		service solid sonnet syntaxhighlighting textwidgets unitconversion \
 		widgetsaddons windowsystem xmlgui \
-		doctools_build ecm_build
+		doctools:build ecm:build
 USE_QT=		concurrent core dbus gui network printsupport serialport \
 		sql svg widgets xml \
-		buildtools_build qmake_build testlib_build
+		buildtools:build qmake:build testlib:build
 USE_XORG=	x11
 
 CMAKE_OFF=	ENABLE_LIBCERF

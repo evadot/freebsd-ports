@@ -6,6 +6,7 @@ CATEGORIES=	sysutils
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Mouse and keyboard sharing utility
+WWW=		https://symless.com/synergy
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -16,7 +17,7 @@ LIB_DEPENDS=	libcurl.so:ftp/curl \
 
 USES=		cmake compiler:c++14-lang cpe gnome localbase:ldflags qt:5 ssl xorg
 CPE_VENDOR=	synergy-foss
-USE_QT=		core dbus network widgets buildtools_build linguisttools_build qmake_build
+USE_QT=		core dbus network widgets buildtools:build linguisttools:build qmake:build
 USE_GNOME=	gdkpixbuf2 glib20
 USE_XORG=	ice xtst x11 sm xext xinerama xrandr xi
 

@@ -1,10 +1,12 @@
 PORTNAME=	aws-c-mqtt
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.7.12
+PORTREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	C99 implementation of the MQTT 3.1.1 specification
+WWW=		https://github.com/awslabs/aws-c-mqtt
 
 LICENSE=	APACHE20
 
@@ -13,7 +15,7 @@ LIB_DEPENDS=	libaws-c-cal.so:security/aws-c-cal \
 		libaws-c-compression.so:devel/aws-c-compression \
 		libaws-c-http.so:devel/aws-c-http \
 		libaws-c-io.so:devel/aws-c-io \
-		libs2n.so:security/s2n
+		libs2n.so:security/s2n-tls
 
 USES=		cmake compiler:c11 ssl
 

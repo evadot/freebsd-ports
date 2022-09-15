@@ -7,6 +7,7 @@ PKGNAMESUFFIX=	-gui-${FLAVOR}
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Qt-based GUI for CMake
+WWW=		https://www.cmake.org
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/Copyright.txt
@@ -26,7 +27,7 @@ qt6_CONFLICTS_INSTALL=	cmake-gui-qt5
 
 USES=		cmake:run,insource compiler:c++11-lang desktop-file-utils libarchive \
 		shared-mime-info qt:${FLAVOR:S/qt//}
-_USE_QT5=	core gui widgets buildtools_build qmake_build
+_USE_QT5=	core gui widgets buildtools:build qmake:build
 _USE_QT6=	base
 USE_QT=		${_USE_QT${FLAVOR:S/qt//}}
 CMAKE_ARGS=	-DCMAKE_DATA_DIR:STRING="/${DATADIR_REL}" \
@@ -44,7 +45,7 @@ CXXFLAGS+=	-D__BSD_VISIBLE
 
 INSTALL_WRKSRC=	${WRKSRC}/Source/QtDialog
 
-DISTINFO_FILE=	${.CURDIR}/../cmake/distinfo
+DISTINFO_FILE=	${.CURDIR}/../cmake-core/distinfo
 
 post-patch:
 	@(${FIND} ${WRKSRC}/Modules -name "*.cmake" -print0; \

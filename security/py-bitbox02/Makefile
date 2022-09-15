@@ -6,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Python API for communicating with the BitBox02 device
+WWW=		https://pypi.org/project/bitbox02/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -19,5 +20,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}base58>=2.0.0:security/py-base58@${PY_FLAVOR
 
 USES=		python:3.6+
 USE_PYTHON=	autoplist distutils
+
+NO_ARCH=	yes
 
 .include <bsd.port.mk>

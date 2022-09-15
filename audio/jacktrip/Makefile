@@ -5,6 +5,7 @@ CATEGORIES=	audio
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Multi-machine audio network performance over the Internet
+WWW=		https://github.com/jacktrip/jacktrip
 
 LICENSE=	MIT
 
@@ -13,7 +14,7 @@ LIB_DEPENDS=	libjack.so:audio/jack \
 		librtaudio.so:audio/rtaudio
 
 USES=		meson compiler:c++17-lang gl pkgconfig qt:5
-USE_QT=		core gui network networkauth quickcontrols2 svg websockets widgets buildtools_build
+USE_QT=		core gui network networkauth quickcontrols2 svg websockets widgets buildtools:build
 USE_GL=		gl
 
 USE_GITHUB=	yes

@@ -5,6 +5,7 @@ MASTER_SITES=	CRAN/src/base/R-${PORTVERSION:C|\..*||}
 
 MAINTAINER=	jrm@FreeBSD.org
 COMMENT=	Language for statistical computing and graphics
+WWW=		https://www.R-project.org/
 
 LICENSE=	GPLv2
 
@@ -15,7 +16,7 @@ LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libpcre2-8.so:devel/pcre2
 # R packages may require GNU make or cmake to build
 RUN_DEPENDS=	gmake:devel/gmake \
-		cmake:devel/cmake
+		cmake:devel/cmake-core
 
 # possible TODO
 # - Use --with-recommended-packages=no by default

@@ -3,8 +3,9 @@ DISTVERSIONPREFIX=	v
 DISTVERSION=	0.5
 CATEGORIES=	sysutils
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	0mp@FreeBSD.org
 COMMENT=	Unix command line queue utility
+WWW=		https://github.com/leahneukirchen/nq
 
 LICENSE=	CC0-1.0
 LICENSE_FILE=	${WRKSRC}/COPYING
