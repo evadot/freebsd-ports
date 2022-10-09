@@ -1,5 +1,89 @@
+  <vuln vid="e4133d8b-ab33-451a-bc68-3719de73d54a">
+    <topic>routinator -- potential DOS attack</topic>
+    <affects>
+      <package>
+	<name>routinator</name>
+	<range><ge>0.9.0</ge><lt>0.11.3</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>
+	 Due to a mistake in error handling, data in RRDP snapshot and delta files
+	 that isn’t correctly base 64 encoded is treated as a fatal error and causes
+	 Routinator to exit.
+
+	 Worst case impact of this vulnerability is denial of service for the RPKI
+	 data that Routinator provides to routers. This may stop your network from
+	 validating route origins based on RPKI data. This vulnerability does not
+	 allow an attacker to manipulate RPKI data. We are not aware of exploitation
+	 of this vulnerability at this point in time.
+
+	 Starting with release 0.11.3, Routinator handles encoding errors by rejecting
+	 the snapshot or delta file and continuing with validation. In case of an
+	 invalid delta file, it will try using the snapshot instead. If a snapshot file
+	 is invalid, the update of the repository will fail and an update through rsync
+	 is attempted.
+	 </p>
+	<blockquote cite="https://www.cvedetails.com/cve/CVE-2022-3029/">
+	  <p>.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-3029</cvename>
+      <url>https://nlnetlabs.nl/downloads/routinator/CVE-2022-3029.txt</url>
+    </references>
+    <dates>
+      <discovery>2022-10-06</discovery>
+      <entry>2022-10-07</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="f4f15051-4574-11ed-81a1-080027881239">
+    <topic>Django -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>py37-django32</name>
+	<name>py38-django32</name>
+	<name>py39-django32</name>
+	<name>py310-django32</name>
+	<range><lt>3.2.16</lt></range>
+      </package>
+      <package>
+	<name>py38-django40</name>
+	<name>py39-django40</name>
+	<name>py310-django40</name>
+	<range><lt>4.0.8</lt></range>
+      </package>
+      <package>
+	<name>py38-django41</name>
+	<name>py39-django41</name>
+	<name>py310-django41</name>
+	<range><lt>4.1.2</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Django reports:</p>
+	<blockquote cite="https://www.djangoproject.com/weblog/2022/oct/04/security-releases/">
+	  <p>CVE-2022-41323: Potential denial-of-service vulnerability in
+	    internationalized URLs.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-41323</cvename>
+      <url>https://www.djangoproject.com/weblog/2022/oct/04/security-releases/</url>
+    </references>
+    <dates>
+      <discovery>2022-09-23</discovery>
+      <entry>2022-10-06</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="c2a89e8f-44e9-11ed-9215-00e081b7aa2d">
-    <topic>jenkins -- multiple vulnerabilities</topic>
+    <topic>jenkins -- XSS vulnerability</topic>
     <affects>
       <package>
 	<name>jenkins</name>
@@ -12,7 +96,13 @@
 	<blockquote cite="https://www.jenkins.io/security/advisory/2022-09-21/">
 	  <h1>Description</h1>
 	  <h5>(High) SECURITY-2886 / CVE-2022-41224</h5>
-	  <p>XSS vulnerability</p>
+	  <p>Jenkins 2.367 through 2.369 (both inclusive) does not escape
+	    tooltips of the l:helpIcon UI component used for some help icons on
+	    the Jenkins web UI.</p>
+	  <p>This results in a stored cross-site scripting (XSS) vulnerability
+	    exploitable by attackers able to control tooltips for this
+	    component.</p>
+	  <p>Jenkins 2.370 escapes tooltips of the l:helpIcon UI component.</p>
 	</blockquote>
       </body>
     </description>
@@ -23,6 +113,7 @@
     <dates>
       <discovery>2022-09-21</discovery>
       <entry>2022-10-05</entry>
+      <modified>2022-10-07</modified>
     </dates>
   </vuln>
 
