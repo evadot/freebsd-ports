@@ -9,6 +9,7 @@ libexec/libinput/libinput-analyze-per-slot-delta
 libexec/libinput/libinput-analyze-recording
 libexec/libinput/libinput-analyze-touch-down-state
 libexec/libinput/libinput-debug-events
+%%DEBUG_GUI%%libexec/libinput/libinput-debug-gui
 libexec/libinput/libinput-debug-tablet
 libexec/libinput/libinput-list-devices
 libexec/libinput/libinput-measure
@@ -26,6 +27,7 @@ man/man1/libinput-analyze-recording.1.gz
 man/man1/libinput-analyze-touch-down-state.1.gz
 man/man1/libinput-analyze.1.gz
 man/man1/libinput-debug-events.1.gz
+%%DEBUG_GUI%%man/man1/libinput-debug-gui.1.gz
 man/man1/libinput-debug-tablet.1.gz
 man/man1/libinput-list-devices.1.gz
 man/man1/libinput-measure-fuzz.1.gz
