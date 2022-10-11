@@ -1,7 +1,6 @@
 PORTNAME=	libinput
 DISTVERSION=	1.21.0
 CATEGORIES=	x11 wayland
-MASTER_SITES=	https://gitlab.freedesktop.org/libinput/libinput/-/archive/${DISTVERSION}/
 
 MAINTAINER=	x11@FreeBSD.org
 COMMENT=	Generic input library
@@ -19,6 +18,10 @@ LIB_DEPENDS=	libevdev.so:devel/libevdev \
 
 USES=		cpe localbase meson pkgconfig python:run shebangfix tar:bz2
 USE_LDCONFIG=	yes
+
+USE_GITLAB=	yes
+GL_SITE=	https://gitlab.freedesktop.org
+GL_COMMIT=	${DISTVERSION}
 
 CPE_VENDOR=	freedesktop
 
