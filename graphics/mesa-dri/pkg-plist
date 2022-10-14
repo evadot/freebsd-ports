@@ -3,6 +3,7 @@
 @comment include/EGL/eglextchromium.h
 @comment include/EGL/eglmesaext.h
 @comment include/EGL/eglplatform.h
+include/GL/internal/dri_interface.h
 @comment include/GL/gl.h
 @comment include/GL/glcorearb.h
 @comment include/GL/glext.h
