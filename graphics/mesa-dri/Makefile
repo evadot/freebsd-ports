@@ -42,6 +42,7 @@ GALLIUM_DRIVERS+=	PANFROST
  || ${ARCH:Mpowerpc*} || ${ARCH} == riscv64
 GALLIUM_DRIVERS+=	R300 R600 RADEONSI
 VULKAN_DRIVERS+=	AMD
+BUILD_DEPENDS+=		glslangValidator:graphics/glslang
 . if ${PORT_OPTIONS:MPLATFORM_X11}
 USE_XORG+=		xv xvmc
 MESON_ARGS+=		-Dgallium-xvmc=enabled
