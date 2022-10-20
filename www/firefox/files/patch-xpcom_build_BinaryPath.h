@@ -1,34 +1,10 @@
---- xpcom/build/BinaryPath.h.orig	2022-10-10 16:00:29 UTC
-+++ xpcom/build/BinaryPath.h
-@@ -188,6 +188,9 @@ class BinaryPath {
+--- xpcom/build/BinaryPath.h.orig	2022-06-16 09:17:36.809392000 +0200
++++ xpcom/build/BinaryPath.h	2022-06-16 09:21:26.220161000 +0200
+@@ -188,6 +188,7 @@
      mib[2] = KERN_PROC_PATHNAME;
      mib[3] = -1;
  #  endif
-+#ifdef __FreeBSD__
-+    return GetFromArgv0("%%PREFIX%%lib/firefox/firefox", aResult);
-+#endif
++    return GetFromArgv0("%%PREFIX%%/lib/firefox/firefox", aResult);
  
      size_t len = MAXPATHLEN;
      if (sysctl(mib, 4, aResult, &len, nullptr, 0) < 0) {
-@@ -218,6 +221,11 @@ class BinaryPath {
-     return GetFromArgv0(argv[0], aResult);
-   }
- 
-+#else
-+#  error Oops, you need platform-specific code here
-+#endif
-+
-+#if defined(__FreeBSD__) || defined(__OpenBSD__)
-   static nsresult GetFromArgv0(const char* aArgv0, char aResult[MAXPATHLEN]) {
-     struct stat fileStat;
-     // 1) use realpath() on argv[0], which works unless we're loaded from the
-@@ -256,9 +264,6 @@ class BinaryPath {
-     }
-     return NS_ERROR_FAILURE;
-   }
--
--#else
--#  error Oops, you need platform-specific code here
- #endif
- 
-  public:
