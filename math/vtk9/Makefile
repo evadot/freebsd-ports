@@ -1,6 +1,6 @@
 PORTNAME=	vtk
 DISTVERSION=	9.1.0
-PORTREVISION=	4
+PORTREVISION=	7
 CATEGORIES=	math graphics
 MASTER_SITES=	https://vtk.org/files/release/${VTK_SHORT_VER}/
 PKGNAMESUFFIX=	9
@@ -27,7 +27,7 @@ USE_XORG=	ice x11 xt xext sm xcursor xfixes xrender
 CMAKE_ON=	BUILD_SHARED_LIBS \
 		VTK_INSTALL_NO_DOCUMENTATION \
 		Module_vtkTestingCore Module_vtkTestingRendering
-.for m in expat freetype hdf5 jpeg netcdf png tiff zlib
+.for m in expat freetype hdf5 jpeg netcdf png tiff zlib # mpi4py should be here, but this fails, see https://gitlab.kitware.com/vtk/vtk/-/issues/18693
 CMAKE_ON+=	VTK_MODULE_USE_EXTERNAL_VTK_${m}
 .endfor
 CMAKE_ARGS=	-DVTK_INSTALL_LIBRARY_DIR=lib/vtk-${VTK_SHORT_VER} \
@@ -35,6 +35,9 @@ CMAKE_ARGS=	-DVTK_INSTALL_LIBRARY_DIR=lib/vtk-${VTK_SHORT_VER} \
 		-DVTK_INSTALL_QT_DIR=/${QT_LIBDIR_REL}/plugins/designer \
 		-DSTAGEDIR=${STAGEDIR}
 		# all build options are documented here: https://gitlab.kitware.com/vtk/vtk/blob/master/Documentation/dev/build.md
+
+# disable finding Qt6
+CMAKE_ON+=	CMAKE_DISABLE_FIND_PACKAGE_Qt6
 
 VTK_SHORT_VER=	${PORTVERSION:R}
 
@@ -110,11 +113,19 @@ USES+=		gl
 USE_GL=		gl glu
 .endif
 
+.if ${PORT_OPTIONS:MPYTHON} && ${PORT_OPTIONS:MMPI}
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}mpi4py>0:net/py-mpi4py@${PY_FLAVOR}
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}mpi4py>0:net/py-mpi4py@${PY_FLAVOR}
+.endif
+
 CONFLICTS=	vtk6 vtk8
 
-do-install-PYTHON-on: # cmake doesn't install pip's .egg-info: https://gitlab.kitware.com/vtk/vtk/-/issues/18087
+do-install-PYTHON-on:
+	# cmake doesn't install pip's .egg-info: https://gitlab.kitware.com/vtk/vtk/-/issues/18087
 	@${MKDIR} ${STAGEDIR}${PYTHON_SITELIBDIR}/vtk-${DISTVERSION}-py${PYTHON_VER}.egg-info
 	@${INSTALL_DATA} ${WRKDIR}/PKG-INFO ${STAGEDIR}${PYTHON_SITELIBDIR}/vtk-${DISTVERSION}-py${PYTHON_VER}.egg-info
+	# workaround for: VTK installs mpi4py which makes it to conflict with the standalone mpi4py package, see https://gitlab.kitware.com/vtk/vtk/-/issues/18691
+	@${RM} -r ${STAGEDIR}${PYTHON_SITELIBDIR}/mpi4py
 
 post-install: # autoplist: thousands of files, complex dependencies on options
 	@cd ${STAGEDIR}${PREFIX} && \

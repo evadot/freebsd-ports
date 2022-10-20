@@ -514,6 +514,7 @@
     SUBDIR += ngraph
     SUBDIR += nlopt
     SUBDIR += ntl
+    SUBDIR += ntpoly
     SUBDIR += numdiff
     SUBDIR += obake
     SUBDIR += ocaml-num
@@ -585,6 +586,7 @@
     SUBDIR += octave-forge-outliers
     SUBDIR += octave-forge-parallel
     SUBDIR += octave-forge-plot
+    SUBDIR += octave-forge-ponchon-savarit
     SUBDIR += octave-forge-quaternion
     SUBDIR += octave-forge-queueing
     SUBDIR += octave-forge-secs1d
@@ -968,6 +970,7 @@
     SUBDIR += py-qdldl
     SUBDIR += py-quadprog
     SUBDIR += py-random2
+    SUBDIR += py-reals
     SUBDIR += py-rectangle-packer
     SUBDIR += py-roman
     SUBDIR += py-rpy2

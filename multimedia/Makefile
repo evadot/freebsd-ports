@@ -31,6 +31,7 @@
     SUBDIR += cheese
     SUBDIR += chilitags
     SUBDIR += cineencoder
+    SUBDIR += clapper
     SUBDIR += clutter-gst
     SUBDIR += clutter-gst3
     SUBDIR += cmrt
@@ -61,6 +62,7 @@
     SUBDIR += ffmpeg
     SUBDIR += ffmpegthumbnailer
     SUBDIR += ffms2
+    SUBDIR += ffnvcodec-headers
     SUBDIR += filebot
     SUBDIR += flvmeta
     SUBDIR += flvstreamer
@@ -120,7 +122,6 @@
     SUBDIR += gstreamer1-plugins-x265
     SUBDIR += gstreamer1-qt
     SUBDIR += gstreamer1-rtsp-server
-    SUBDIR += gstreamer1-transcoder
     SUBDIR += gstreamer1-vaapi
     SUBDIR += gstreamer1-validate
     SUBDIR += gstreamermm
