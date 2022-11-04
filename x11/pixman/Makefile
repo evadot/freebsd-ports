@@ -28,7 +28,7 @@ BUILD_DEPENDS+=	${LOCALBASE}/bin/as:devel/binutils
 CONFIGURE_ENV+=	CCASFLAGS="${CFLAGS} -B${LOCALBASE}/bin -no-integrated-as"
 LLD_UNSAFE=	yes
 .elif ${ARCH} == "aarch64"
-CONFIGURE_ARGS+=	--disable-arm-arm64-neon
+CONFIGURE_ARGS+=	--disable-arm-a64-neon
 .elif ${ARCH} == "powerpc"
 CONFIGURE_ARGS+=	--disable-vmx
 .endif
