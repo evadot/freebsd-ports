@@ -1,6 +1,6 @@
 PORTNAME=	sendmail
-PORTVERSION=	8.17.1.20
-PORTREVISION=	1
+PORTVERSION=	8.17.1.22
+PORTREVISION=	0
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.sendmail.org/pub/sendmail/snapshots/
 PKGNAMESUFFIX?=	-devel${PKGNAMESUFFIX2}
@@ -14,6 +14,10 @@ LICENSE=	Sendmail
 LICENSE_NAME=	Sendmail License
 LICENSE_FILE=	${WRKSRC}/LICENSE
 LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
+
+BROKEN_SSL=	libressl libressl-devel
+BROKEN_SSL_REASON_libressl=	fails to compile: unknown struct dh_st
+BROKEN_SSL_REASON_libressl-devel=	${BROKEN_SSL_REASON_libressl}
 
 CONFLICTS?=	courier-0.* postfix-1.* postfix-2.* smail-3.* zmailer-2.* opensmtpd
 

@@ -117,6 +117,7 @@
     SUBDIR += curator
     SUBDIR += curtail
     SUBDIR += cuttlefish
+    SUBDIR += cxxplot
     SUBDIR += darktable
     SUBDIR += dataplot
     SUBDIR += dbow2
@@ -131,6 +132,7 @@
     SUBDIR += dia
     SUBDIR += diff-pdf
     SUBDIR += diffpdf
+    SUBDIR += dify
     SUBDIR += digikam
     SUBDIR += dilay
     SUBDIR += diplib
@@ -291,6 +293,7 @@
     SUBDIR += goocanvasmm2
     SUBDIR += goom
     SUBDIR += gource
+    SUBDIR += goxel
     SUBDIR += gpaint
     SUBDIR += gphoto2
     SUBDIR += gpicview
@@ -625,6 +628,7 @@
     SUBDIR += ospray
     SUBDIR += ospray-studio
     SUBDIR += ossim
+    SUBDIR += oxipng
     SUBDIR += oyranos
     SUBDIR += p5-Acme-Steganography-Image-Png
     SUBDIR += p5-Algorithm-Line-Bresenham
@@ -1046,6 +1050,7 @@
     SUBDIR += sane-epkowa
     SUBDIR += scale2x
     SUBDIR += scantailor
+    SUBDIR += sciplot
     SUBDIR += scr2png
     SUBDIR += scrot
     SUBDIR += scwm-icons

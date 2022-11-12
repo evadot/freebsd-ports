@@ -1,13 +1,13 @@
 PORTNAME=	octave-forge-matgeom
 PORTVERSION=	1.2.3
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	math
 MASTER_SITES=	SF/octave/Octave%20Forge%20Packages/Individual%20Package%20Releases
 DISTNAME=	${OCTAVE_PKGNAME}-${DISTVERSIONFULL}
 
 MAINTAINER=	stephen@FreeBSD.org
 COMMENT=	Octave-forge package ${OCTAVE_PKGNAME}
-WWW=		http://octave.sourceforge.net/
+WWW=		https://packages.octave.org/
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKDIR}/${OCTSRC}/COPYING
@@ -22,6 +22,8 @@ WRKSRC=		${WRKDIR}/${OCTSRC}/src
 
 do-build:
 	@${DO_NADA}
+
+NO_ARCH=	yes
 
 post-build:
 	cd ${WRKDIR} && ${TAR} cfz ${OCTAVE_DISTNAME}.tar.gz ${OCTSRC}

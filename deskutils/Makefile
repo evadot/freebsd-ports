@@ -183,6 +183,7 @@
     SUBDIR += nextcloudclient
     SUBDIR += note
     SUBDIR += notekit
+    SUBDIR += notes
     SUBDIR += noti
     SUBDIR += notification-daemon
     SUBDIR += notify-osd
@@ -239,6 +240,7 @@
     SUBDIR += solanum
     SUBDIR += sowon
     SUBDIR += spice-gtk
+    SUBDIR += subsurface
     SUBDIR += synapse
     SUBDIR += syncthingtray
     SUBDIR += sysctlview
