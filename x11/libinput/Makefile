@@ -1,5 +1,5 @@
 PORTNAME=	libinput
-DISTVERSION=	1.21.0
+DISTVERSION=	1.22.0
 CATEGORIES=	x11 wayland
 
 MAINTAINER=	x11@FreeBSD.org
@@ -48,8 +48,9 @@ OPTIONS_SUB=	yes
 DEBUG_GUI_DESC=	Build the GUI event viewer
 LIBWACOM_DESC=	Libwacom support
 
-DEBUG_GUI_USES=		gnome
-DEBUG_GUI_USE=		GNOME=gtk30,glib20,cairo
+DEBUG_GUI_USES=		gnome xorg
+DEBUG_GUI_USE=		GNOME=gtk30,glib20,cairo xorg=x11
+DEBUG_GUI_LIB_DEPENDS=	libwayland-client.so:graphics/wayland
 DEBUG_GUI_MESON_TRUE=	debug-gui
 LIBWACOM_LIB_DEPENDS=	libwacom.so:x11/libwacom
 LIBWACOM_MESON_TRUE=	libwacom
