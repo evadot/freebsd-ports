@@ -1,4 +1,5 @@
 etc/libmap.d/mesa.conf
+include/EGL/eglext_angle.h
 include/EGL/eglmesaext.h
 @comment include/GL/internal/dri_interface.h
 include/gbm.h

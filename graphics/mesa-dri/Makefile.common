@@ -90,9 +90,7 @@ BINARY_ALIAS+=	python3=${PYTHON_VERSION}
 
 LLVM_DEFAULT=	13
 BUILD_DEPENDS+=	llvm-config${LLVM_DEFAULT}:devel/llvm${LLVM_DEFAULT}
-.if ${COMPONENT} != libs
 RUN_DEPENDS+=	llvm-config${LLVM_DEFAULT}:devel/llvm${LLVM_DEFAULT}
-.endif
 
 MESON_ARGS+=	--native-file="${WRKSRC}/llvm.ini"
 LDFLAGS+=	-Wl,-rpath=${LOCALBASE}/llvm${LLVM_DEFAULT}/lib
