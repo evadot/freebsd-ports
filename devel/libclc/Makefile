@@ -21,6 +21,6 @@ USES=		cmake compiler:c++11-lib python:3.6+,build tar:xz
 USE_LDCONFIG=	yes
 
 BINARY_ALIAS=	python=${PYTHON_CMD}
-CMAKE_ARGS+=	-DLLVM_CONFIG=${LOCALBASE}/bin/llvm-config13
+CMAKE_ARGS+=	-DLLVM_CONFIG=${LOCALBASE}/bin/llvm-config15
 
 .include <bsd.port.mk>
