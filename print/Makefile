@@ -147,6 +147,7 @@
     SUBDIR += pdfchain
     SUBDIR += pdflib
     SUBDIR += pdflib-perl
+    SUBDIR += pdfmixtool
     SUBDIR += pdfstitch
     SUBDIR += pdftk
     SUBDIR += pear-File_PDF
@@ -205,6 +206,7 @@
     SUBDIR += rubygem-afm
     SUBDIR += rubygem-color
     SUBDIR += rubygem-color-tools
+    SUBDIR += rubygem-color_diff
     SUBDIR += rubygem-pdf-core
     SUBDIR += rubygem-pdf-reader
     SUBDIR += rubygem-pdf-writer

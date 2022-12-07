@@ -97,6 +97,7 @@
     SUBDIR += ntk
     SUBDIR += nuklear
     SUBDIR += ocaml-lablgtk2
+    SUBDIR += ocaml-lablgtk3
     SUBDIR += ocaml-labltk
     SUBDIR += open-motif
     SUBDIR += open-motif-devel
@@ -236,6 +237,7 @@
     SUBDIR += xbae
     SUBDIR += xforms
     SUBDIR += xmhtml
+    SUBDIR += xwallpaper
     SUBDIR += ztoolkit
 
 .include <bsd.port.subdir.mk>

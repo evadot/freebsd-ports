@@ -88,6 +88,7 @@
     SUBDIR += bacula11-docs
     SUBDIR += bacula11-server
     SUBDIR += bacula13-client
+    SUBDIR += bacula13-client-static
     SUBDIR += bacula13-docs
     SUBDIR += bacula13-server
     SUBDIR += bacula9-client
@@ -120,6 +121,7 @@
     SUBDIR += beadm-devel
     SUBDIR += beats6
     SUBDIR += beats7
+    SUBDIR += beats8
     SUBDIR += bfs
     SUBDIR += bhyve+
     SUBDIR += bhyve-firmware
@@ -147,6 +149,7 @@
     SUBDIR += bstack
     SUBDIR += btop
     SUBDIR += btsixad
+    SUBDIR += buildah
     SUBDIR += bulk_extractor
     SUBDIR += bupstash
     SUBDIR += burp
@@ -211,6 +214,7 @@
     SUBDIR += conky
     SUBDIR += conky-awesome
     SUBDIR += conman
+    SUBDIR += conmon
     SUBDIR += consolehm
     SUBDIR += consolekit2
     SUBDIR += consul
@@ -219,6 +223,7 @@
     SUBDIR += consul_exporter
     SUBDIR += container-diff
     SUBDIR += containerd
+    SUBDIR += containers-common
     SUBDIR += contractor
     SUBDIR += copytape
     SUBDIR += coreos-ct
@@ -335,6 +340,7 @@
     SUBDIR += eclat
     SUBDIR += edid-decode
     SUBDIR += edk2
+    SUBDIR += egress-monitor
     SUBDIR += eject
     SUBDIR += eksctl
     SUBDIR += endian
@@ -458,7 +464,6 @@
     SUBDIR += g15daemon
     SUBDIR += gaffitter
     SUBDIR += ganglia-monitor-core
-    SUBDIR += ganglia-webfrontend
     SUBDIR += gapcmon
     SUBDIR += garcon
     SUBDIR += gather
@@ -509,6 +514,7 @@
     SUBDIR += gstopd
     SUBDIR += gstreamer1-plugins-cdio
     SUBDIR += gtk-imonc
+    SUBDIR += hammer2
     SUBDIR += handlr
     SUBDIR += hardlink
     SUBDIR += hare
@@ -538,6 +544,7 @@
     SUBDIR += hs-cputype
     SUBDIR += hstr
     SUBDIR += htop
+    SUBDIR += httm
     SUBDIR += httplog
     SUBDIR += hw-probe
     SUBDIR += hwstat
@@ -566,8 +573,8 @@
     SUBDIR += ipfs-go
     SUBDIR += ipfs-go-fs-repo-migrations
     SUBDIR += ipget
-    SUBDIR += ipmitool
     SUBDIR += ipmi_exporter
+    SUBDIR += ipmitool
     SUBDIR += ipsc
     SUBDIR += isc-cron
     SUBDIR += isomaster
@@ -830,6 +837,7 @@
     SUBDIR += oak
     SUBDIR += obliterate
     SUBDIR += oc
+    SUBDIR += ocijail
     SUBDIR += odo
     SUBDIR += ods2
     SUBDIR += ohmu
@@ -1012,6 +1020,8 @@
     SUBDIR += plconfig
     SUBDIR += pmt
     SUBDIR += pnscan
+    SUBDIR += podman
+    SUBDIR += podman-suite
     SUBDIR += polkit
     SUBDIR += polkit-gnome
     SUBDIR += polkit-qt
@@ -1128,6 +1138,7 @@
     SUBDIR += pydf
     SUBDIR += qchroot
     SUBDIR += qdirstat
+    SUBDIR += qflipper
     SUBDIR += qjail
     SUBDIR += qjail54
     SUBDIR += qlogtools
@@ -1322,6 +1333,7 @@
     SUBDIR += signon-plugin-oauth2
     SUBDIR += signon-qt5
     SUBDIR += signon-ui
+    SUBDIR += skopeo
     SUBDIR += slack
     SUBDIR += sleuthkit
     SUBDIR += slst

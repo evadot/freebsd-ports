@@ -47,6 +47,7 @@
     SUBDIR += airsaned
     SUBDIR += akira
     SUBDIR += alembic
+    SUBDIR += alizams
     SUBDIR += aloadimage
     SUBDIR += alpng
     SUBDIR += ampasACES-container
@@ -155,6 +156,7 @@
     SUBDIR += edje_viewer
     SUBDIR += egl-wayland
     SUBDIR += eglexternalplatform
+    SUBDIR += elastix
     SUBDIR += electricsheep
     SUBDIR += elementary-photos
     SUBDIR += embree
@@ -244,7 +246,6 @@
     SUBDIR += geos
     SUBDIR += geoserver
     SUBDIR += gexiv2
-    SUBDIR += giblib
     SUBDIR += giflib
     SUBDIR += gifmerge
     SUBDIR += gifsicle
@@ -586,6 +587,7 @@
     SUBDIR += nsxiv
     SUBDIR += nurbs++
     SUBDIR += nvidia-texture-tools
+    SUBDIR += ocaml-cairo
     SUBDIR += ocaml-images
     SUBDIR += ocaml-lablgl
     SUBDIR += ocrad
@@ -618,6 +620,7 @@
     SUBDIR += openorienteering-mapper
     SUBDIR += openrm
     SUBDIR += openshadinglanguage
+    SUBDIR += openslide
     SUBDIR += opensubdiv
     SUBDIR += openvkl
     SUBDIR += optar
@@ -889,6 +892,7 @@
     SUBDIR += py-opencolorio
     SUBDIR += py-openimageio
     SUBDIR += py-openshadinglanguage
+    SUBDIR += py-openslide-python
     SUBDIR += py-optimize-images
     SUBDIR += py-osmnet
     SUBDIR += py-pandana
@@ -910,6 +914,7 @@
     SUBDIR += py-pygeoapi
     SUBDIR += py-pygeos
     SUBDIR += py-pyglet
+    SUBDIR += py-pyglet1
     SUBDIR += py-pygraph
     SUBDIR += py-pygraphviz
     SUBDIR += py-pyinsane2
@@ -988,6 +993,7 @@
     SUBDIR += rawtherapee
     SUBDIR += rayshade
     SUBDIR += reactphysics3d
+    SUBDIR += realesrgan-ncnn-vulkan
     SUBDIR += reallyslick
     SUBDIR += realsr-ncnn-vulkan
     SUBDIR += recastnavigation
@@ -1000,6 +1006,7 @@
     SUBDIR += ristretto
     SUBDIR += rlottie
     SUBDIR += ruby-gd
+    SUBDIR += rubygem-blurhash
     SUBDIR += rubygem-cairo
     SUBDIR += rubygem-captcha
     SUBDIR += rubygem-chunky_png
@@ -1050,7 +1057,6 @@
     SUBDIR += sane-epkowa
     SUBDIR += scale2x
     SUBDIR += scantailor
-    SUBDIR += sciplot
     SUBDIR += scr2png
     SUBDIR += scrot
     SUBDIR += scwm-icons
@@ -1075,6 +1081,7 @@
     SUBDIR += silgraphite
     SUBDIR += simage
     SUBDIR += simple-scan
+    SUBDIR += simpleitk
     SUBDIR += simpleviewer
     SUBDIR += skanlite
     SUBDIR += skanpage
