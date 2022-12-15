@@ -1,5 +1,6 @@
 PORTNAME=	iridium
 PORTVERSION=	2022.12.108.1
+PORTREVISION=	1
 CATEGORIES=	www wayland
 MASTER_SITES=	https://downloads.iridiumbrowser.de/source/
 PKGNAMESUFFIX=	-browser
@@ -196,6 +197,10 @@ SNDIO_VARS_OFF=		GN_ARGS+=use_sndio=false
 
 .include <bsd.port.options.mk>
 .include <bsd.port.pre.mk>
+
+.if ${OSREL} == "12.3"
+IGNORE=			does not compile, libc++ too old
+.endif
 
 .if ${PORT_OPTIONS:MHEIMDAL_BASE} && !exists(/usr/lib/libkrb5.so)
 IGNORE=		you have selected HEIMDAL_BASE but do not have Heimdal installed in base

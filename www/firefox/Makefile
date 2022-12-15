@@ -1,10 +1,11 @@
 PORTNAME=	firefox
 DISTVERSION=	108.0
+PORTREVISION=	1
 # DISTVERSIONSUFFIX=	b9
 PORTEPOCH=	2
 CATEGORIES=	www wayland
 MASTER_SITES=	MOZILLA/${PORTNAME}/releases/${DISTVERSION}${DISTVERSIONSUFFIX}/source \
-		MOZILLA/${PORTNAME}/candidates/${DISTVERSION}${DISTVERSIONSUFFIX}-candidates/build1/source
+		MOZILLA/${PORTNAME}/candidates/${DISTVERSION}${DISTVERSIONSUFFIX}-candidates/build2/source
 DISTFILES=	${DISTNAME}.source${EXTRACT_SUFX}
 
 MAINTAINER=	gecko@FreeBSD.org
@@ -65,6 +66,10 @@ post-patch:
 		${FIREFOX_DESKTOP}
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
 		${WRKSRC}/browser/app/nsBrowserApp.cpp
+.if ${ARCH} == powerpc64
+	@${CP} ${PATCHDIR}/RustTabs.jsm ${WRKSRC}/toolkit/components/uniffi-bindgen-gecko-js/components/generated/RustTabs.jsm
+	@${CP} ${PATCHDIR}/UniFFIGeneratedScaffolding.cpp ${WRKSRC}/toolkit/components/uniffi-js/UniFFIGeneratedScaffolding.cpp
+.endif
 
 post-install:
 	${INSTALL_DATA} ${FIREFOX_DESKTOP} ${STAGEDIR}${PREFIX}/share/applications/
