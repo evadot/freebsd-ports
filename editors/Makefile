@@ -199,7 +199,6 @@
     SUBDIR += linux-wps-office
     SUBDIR += lite
     SUBDIR += lite-xl
-    SUBDIR += madedit
     SUBDIR += marker
     SUBDIR += mg
     SUBDIR += micro
@@ -239,6 +238,7 @@
     SUBDIR += py-vim-bridge
     SUBDIR += quilter
     SUBDIR += rehex
+    SUBDIR += retext
     SUBDIR += rubygem-neovim
     SUBDIR += scite
     SUBDIR += se

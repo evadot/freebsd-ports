@@ -568,7 +568,6 @@
     SUBDIR += openmpi
     SUBDIR += openmpi3
     SUBDIR += openntpd
-    SUBDIR += opennx
     SUBDIR += openpgm
     SUBDIR += openradius
     SUBDIR += openrsync
@@ -983,10 +982,6 @@
     SUBDIR += pecl-smbclient
     SUBDIR += pecl-xmlrpc
     SUBDIR += pen
-    SUBDIR += php74-ldap
-    SUBDIR += php74-soap
-    SUBDIR += php74-sockets
-    SUBDIR += php74-xmlrpc
     SUBDIR += php80-ldap
     SUBDIR += php80-soap
     SUBDIR += php80-sockets
@@ -1396,7 +1391,6 @@
     SUBDIR += s5cmd
     SUBDIR += sacc
     SUBDIR += sakisafecli
-    SUBDIR += samba412
     SUBDIR += samba413
     SUBDIR += samba416
     SUBDIR += samplicator

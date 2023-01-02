@@ -39,6 +39,7 @@
     SUBDIR += cinnamon-session
     SUBDIR += cl-clx
     SUBDIR += cl-clx-sbcl
+    SUBDIR += cliphist
     SUBDIR += clipman
     SUBDIR += compton-conf
     SUBDIR += conlecterm
@@ -95,6 +96,7 @@
     SUBDIR += gnustep-app
     SUBDIR += grabc
     SUBDIR += grim
+    SUBDIR += grimshot
     SUBDIR += gromit
     SUBDIR += gromit-mpx
     SUBDIR += gskrab

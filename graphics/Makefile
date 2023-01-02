@@ -108,7 +108,6 @@
     SUBDIR += colmap
     SUBDIR += colord
     SUBDIR += colord-gtk
-    SUBDIR += comical
     SUBDIR += compupic
     SUBDIR += converseen
     SUBDIR += corrupter
@@ -599,7 +598,6 @@
     SUBDIR += opencollada
     SUBDIR += opencolorio
     SUBDIR += opencolorio-tools
-    SUBDIR += opencoloriov1
     SUBDIR += opencsg
     SUBDIR += opencv
     SUBDIR += opendx
@@ -610,7 +608,6 @@
     SUBDIR += opengv
     SUBDIR += openicc-config
     SUBDIR += openimageio
-    SUBDIR += openimageio-ociov1
     SUBDIR += openjpeg
     SUBDIR += openjpeg15
     SUBDIR += openjph
@@ -618,6 +615,7 @@
     SUBDIR += openmvs
     SUBDIR += opennurbs
     SUBDIR += openorienteering-mapper
+    SUBDIR += openpgl
     SUBDIR += openrm
     SUBDIR += openshadinglanguage
     SUBDIR += openslide
@@ -775,8 +773,6 @@
     SUBDIR += phototonic
     SUBDIR += php-facedetect
     SUBDIR += php-geos
-    SUBDIR += php74-exif
-    SUBDIR += php74-gd
     SUBDIR += php80-exif
     SUBDIR += php80-gd
     SUBDIR += php81-exif

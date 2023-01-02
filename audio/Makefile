@@ -30,7 +30,7 @@
     SUBDIR += ample
     SUBDIR += amsynth
     SUBDIR += aqualung
-    SUBDIR += ardour6
+    SUBDIR += ardour
     SUBDIR += ario
     SUBDIR += arss
     SUBDIR += artyfx-lv2
@@ -481,6 +481,7 @@
     SUBDIR += mixxx
     SUBDIR += mixxx22
     SUBDIR += mkcue
+    SUBDIR += mmtc
     SUBDIR += moc
     SUBDIR += modplug-tools
     SUBDIR += moodbar
@@ -534,6 +535,7 @@
     SUBDIR += ncmpcpp
     SUBDIR += ncpamixer
     SUBDIR += ncspot
+    SUBDIR += netease-music-tui
     SUBDIR += noise-repellent-lv2
     SUBDIR += noise-suppression-for-voice-lv2
     SUBDIR += normalize
@@ -646,6 +648,7 @@
     SUBDIR += py-fmoo-audiotools
     SUBDIR += py-gtts
     SUBDIR += py-hsaudiotag3k
+    SUBDIR += py-librosa
     SUBDIR += py-mpd
     SUBDIR += py-music21
     SUBDIR += py-musicbrainzngs
@@ -663,10 +666,12 @@
     SUBDIR += py-pyradio
     SUBDIR += py-pysndfile
     SUBDIR += py-python-mpd2
+    SUBDIR += py-resampy
     SUBDIR += py-soundcloud
     SUBDIR += py-sounddevice
     SUBDIR += py-soundscrape
     SUBDIR += py-speechrecognition
+    SUBDIR += py-spotipy
     SUBDIR += py-tagpy
     SUBDIR += py-wavio
     SUBDIR += py-webrtcvad
@@ -742,6 +747,7 @@
     SUBDIR += solfege
     SUBDIR += somafm-cli
     SUBDIR += sonata
+    SUBDIR += songrec
     SUBDIR += sonic-visualiser
     SUBDIR += sonivox
     SUBDIR += sonivox-eas
@@ -825,6 +831,7 @@
     SUBDIR += traverso
     SUBDIR += tse3
     SUBDIR += tta
+    SUBDIR += tuner
     SUBDIR += tuneradio
     SUBDIR += twolame
     SUBDIR += uade
