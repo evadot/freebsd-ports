@@ -139,6 +139,9 @@ ARCHFLAGS=ARCH=${UBOOT_ARCH}
 .elif ${UBOOT_ARCH} == aarch64
 CROSS_COMPILE=aarch64-none-elf-
 ARCHFLAGS=ARCH=arm
+.if ${FAMILY} == allwinner64
+MAKE_ENV+=	SCP=/dev/null
+.endif
 .elif ${UBOOT_ARCH} == riscv64
 CROSS_COMPILE=riscv64-none-elf-
 ARCHFLAGS=ARCH=riscv
