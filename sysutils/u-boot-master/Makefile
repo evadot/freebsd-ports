@@ -22,8 +22,10 @@ BUILD_DEPENDS+=	gsed:textproc/gsed \
 		mkimage:sysutils/u-boot-tools \
 		${PYTHON_PKGNAMEPREFIX}setuptools-pkg>=0:devel/py-setuptools-pkg@${PY_FLAVOR}
 BUILD_DEPENDS+=	${COMPILER}:devel/${COMPILER}
-LIB_DEPENDS=	libuuid.so:misc/e2fsprogs-libuuid \
-		libgnutls.so:security/gnutls
+
+# For mkeficapsule
+BUILD_DEPENDS=	e2fsprogs-libuuid>=0:misc/e2fsprogs-libuuid \
+		gnutls>=0:security/gnutls
 
 USES=		bison gmake python:3.7+,build pkgconfig shebangfix tar:bz2
 BINARY_ALIAS=	bison=${LOCALBASE}/bin/bison dtc=${LOCALBASE}/bin/dtc sed=gsed python3=${PYTHON_CMD}
