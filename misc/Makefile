@@ -8,8 +8,10 @@
     SUBDIR += amanda-client
     SUBDIR += amanda-perl-wrapper
     SUBDIR += amanda-server
+    SUBDIR += amazon-qldb-shell
     SUBDIR += ansiweather
     SUBDIR += apparix
+    SUBDIR += arrow-datafusion
     SUBDIR += artikulate
     SUBDIR += asbutton
     SUBDIR += asr-manpages
@@ -23,6 +25,7 @@
     SUBDIR += bibletime
     SUBDIR += biblical-curse
     SUBDIR += binclock
+    SUBDIR += binocle
     SUBDIR += biosfont-demos
     SUBDIR += birthday
     SUBDIR += bogosort
@@ -80,6 +83,7 @@
     SUBDIR += dijo
     SUBDIR += dive
     SUBDIR += dnetc
+    SUBDIR += dotenv-linter
     SUBDIR += dtach
     SUBDIR += dvorak7min
     SUBDIR += dynomite
@@ -95,6 +99,7 @@
     SUBDIR += explosions
     SUBDIR += ezc3d
     SUBDIR += far2l
+    SUBDIR += fastscapelib
     SUBDIR += felis
     SUBDIR += figlet
     SUBDIR += figlet-fonts
@@ -190,6 +195,7 @@
     SUBDIR += jargon
     SUBDIR += jbidwatcher
     SUBDIR += jojodiff
+    SUBDIR += json-tui
     SUBDIR += kbdscan
     SUBDIR += kcd
     SUBDIR += kde-thumbnailer-chm
@@ -231,10 +237,12 @@
     SUBDIR += libutf
     SUBDIR += libxdf
     SUBDIR += lifelines
+    SUBDIR += lightgbm
     SUBDIR += lingoteach
     SUBDIR += locale-en_DK
     SUBDIR += localedata
     SUBDIR += logsurfer
+    SUBDIR += lscolors
     SUBDIR += lv
     SUBDIR += lxde-common
     SUBDIR += lxi-tools
@@ -369,6 +377,7 @@
     SUBDIR += pinfo
     SUBDIR += pipe
     SUBDIR += posixtestsuite
+    SUBDIR += pqrs
     SUBDIR += proxyper
     SUBDIR += pspresent
     SUBDIR += ptsort
@@ -392,6 +401,7 @@
     SUBDIR += py-emoji
     SUBDIR += py-ezc3d
     SUBDIR += py-fast-histogram
+    SUBDIR += py-fastscapelib
     SUBDIR += py-fleep
     SUBDIR += py-fuzzy
     SUBDIR += py-gluoncv
@@ -399,11 +409,14 @@
     SUBDIR += py-halo
     SUBDIR += py-histoprint
     SUBDIR += py-huepy
+    SUBDIR += py-ipyfastscape
     SUBDIR += py-kartograph
+    SUBDIR += py-lightgbm
     SUBDIR += py-log_symbols
     SUBDIR += py-mffpy
     SUBDIR += py-molequeue
     SUBDIR += py-mxnet
+    SUBDIR += py-numcodecs
     SUBDIR += py-onnx
     SUBDIR += py-onnx-tf
     SUBDIR += py-openpaperwork-core
@@ -431,6 +444,7 @@
     SUBDIR += py-qiskit-machine-learning
     SUBDIR += py-scikit-fusion
     SUBDIR += py-serverfiles
+    SUBDIR += py-shap2
     SUBDIR += py-soapy_power
     SUBDIR += py-spdx
     SUBDIR += py-spdx-lookup
@@ -464,6 +478,7 @@
     SUBDIR += ringtonetools
     SUBDIR += rname
     SUBDIR += rpl
+    SUBDIR += rsclock
     SUBDIR += rtfm
     SUBDIR += rubygem-dotenv
     SUBDIR += rubygem-dotenv-rails-rails4
@@ -490,6 +505,7 @@
     SUBDIR += shc
     SUBDIR += shuffle
     SUBDIR += shuffle-db
+    SUBDIR += silicon
     SUBDIR += since
     SUBDIR += skyutils
     SUBDIR += slides
@@ -501,6 +517,7 @@
     SUBDIR += solarized
     SUBDIR += sshbuddy
     SUBDIR += sssnips
+    SUBDIR += star-history
     SUBDIR += susv2
     SUBDIR += susv3
     SUBDIR += susv4
@@ -582,6 +599,7 @@
     SUBDIR += xtail
     SUBDIR += xtar
     SUBDIR += ytree
+    SUBDIR += zine
     SUBDIR += zoneinfo
 
 .include <bsd.port.subdir.mk>

@@ -1,5 +1,6 @@
 PORTNAME=	yuzu
-PORTVERSION=	s20221230
+PORTVERSION=	s20230110
+PORTREVISION=	1
 CATEGORIES=	emulators wayland
 .if make(makesum)
 MASTER_SITES=	https://api.yuzu-emu.org/gamedb/?dummy=/:gamedb
@@ -53,11 +54,11 @@ qt6_OPTIONS_EXCLUDE=	QT5
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	yuzu-emu
-GH_TAGNAME=	88f5d38b9
+GH_TAGNAME=	0e8f98a44
 GH_TUPLE=	yuzu-emu:mbedtls:v2.16.9-115-g8c88150ca:mbedtls/externals/mbedtls \
-		yuzu-emu:sirit:d7ad93a:sirit/externals/sirit \
+		yuzu-emu:sirit:ab75463:sirit/externals/sirit \
 		KhronosGroup:SPIRV-Headers:1.5.4.raytracing.fixed-201-gc214f6f:SPIRV_Headers/externals/sirit/externals/SPIRV-Headers \
-		MerryMage:dynarmic:6.4.0:dynarmic/externals/dynarmic \
+		MerryMage:dynarmic:6.4.3:dynarmic/externals/dynarmic \
 		arun11299:cpp-jwt:v1.4-14-ge12ef06:cpp_jwt/externals/cpp-jwt \
 		arsenm:sanitizers-cmake:aab6948:sanitizers_cmake/externals/cubeb/cmake/sanitizers-cmake \
 		benhoyt:inih:r52:inih/externals/inih/inih \
@@ -114,12 +115,6 @@ QT6_USES=		qt:6
 QT6_USE=		QT=base
 QT6_CMAKE_BOOL=		ENABLE_QT6
 QT6_IMPLIES=		GUI
-.if !exists(${.CURDIR:H:H}/www/qt6-webengine)
-qt6_OPTIONS_EXCLUDE+=	WEBENGINE
-QT6_PREVENTS=		WEBENGINE
-QT6_PREVENTS_MSG=	www/qt6-webengine is missing
-QT6_VARS+=		WEBENGINE_USE= # Silence "unknown USE_QT component"
-.endif
 
 SNDIO_BUILD_DEPENDS=	sndio>0:audio/sndio
 SNDIO_CMAKE_BOOL=	USE_SNDIO
@@ -129,7 +124,7 @@ VAAPI_LIB_DEPENDS=	libva.so:multimedia/libva
 VULKAN_DESC=		Vulkan renderer
 VULKAN_RUN_DEPENDS=	${LOCALBASE}/lib/libvulkan.so:graphics/vulkan-loader
 
-WEBENGINE_DESC=		Web applet support (implies ${NLS_IMPLIES})
+WEBENGINE_DESC=		Web applet support (implies ${WEBENGINE_IMPLIES})
 WEBENGINE_USE=		QT=webengine
 WEBENGINE_CMAKE_BOOL=	YUZU_USE_QT_WEB_ENGINE
 WEBENGINE_IMPLIES=	GUI

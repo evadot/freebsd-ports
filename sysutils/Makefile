@@ -62,6 +62,7 @@
     SUBDIR += asmctl
     SUBDIR += asmem
     SUBDIR += asusoled
+    SUBDIR += async
     SUBDIR += atf-fvp
     SUBDIR += atf-master
     SUBDIR += atf-rk3328
@@ -258,6 +259,7 @@
     SUBDIR += dc3dd
     SUBDIR += dcfldd
     SUBDIR += dd_rescue
+    SUBDIR += ddh
     SUBDIR += ddpt
     SUBDIR += ddrescue
     SUBDIR += debhelper
@@ -470,6 +472,7 @@
     SUBDIR += gdisk
     SUBDIR += gdmap
     SUBDIR += gdu
+    SUBDIR += genimage
     SUBDIR += genisoimage
     SUBDIR += geomWatch
     SUBDIR += getdelta
@@ -965,6 +968,7 @@
     SUBDIR += pc-networkmanager
     SUBDIR += pcapfix
     SUBDIR += pciutils
+    SUBDIR += pcns
     SUBDIR += pcpustat
     SUBDIR += pdixtract
     SUBDIR += pdsh
@@ -1024,6 +1028,7 @@
     SUBDIR += polkit-qt
     SUBDIR += pot
     SUBDIR += potnet
+    SUBDIR += poweralertd
     SUBDIR += powerdxx
     SUBDIR += powerman
     SUBDIR += powermon
@@ -1031,6 +1036,7 @@
     SUBDIR += pprotectd
     SUBDIR += prips
     SUBDIR += procenv
+    SUBDIR += process-viewer
     SUBDIR += procmap
     SUBDIR += progsreiserfs
     SUBDIR += pslist
@@ -1383,6 +1389,7 @@
     SUBDIR += syslogger
     SUBDIR += sysrc
     SUBDIR += sysvbanner
+    SUBDIR += szyszka
     SUBDIR += tai64nfrac
     SUBDIR += tarsnap
     SUBDIR += tarsnap-gui
@@ -1394,6 +1401,7 @@
     SUBDIR += tdir
     SUBDIR += tealdeer
     SUBDIR += tenshi
+    SUBDIR += tere
     SUBDIR += terraform
     SUBDIR += terraform-docs
     SUBDIR += terraform-provider-gridscale
@@ -1421,6 +1429,7 @@
     SUBDIR += topless
     SUBDIR += torque
     SUBDIR += toshctl
+    SUBDIR += touchegg
     SUBDIR += toybox
     SUBDIR += tracker
     SUBDIR += tracker-miners

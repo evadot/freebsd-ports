@@ -1,5 +1,5 @@
 PORTNAME=	telegram-desktop
-DISTVERSION=	4.5.0
+DISTVERSION=	4.5.3
 CATEGORIES=	net-im
 MASTER_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/releases/download/v${DISTVERSION}/
 DISTNAME=	tdesktop-${DISTVERSION}-full
@@ -77,11 +77,11 @@ CMAKE_ON=	DESKTOP_APP_USE_PACKAGED DESKTOP_APP_DISABLE_CRASH_REPORTS \
 		DESKTOP_APP_DISABLE_WAYLAND_INTEGRATION
 CMAKE_OFF=	DESKTOP_APP_USE_PACKAGED_FONTS
 
+# Since cmake 3.25.0, BSDs are no longer recognised as Linux (in this port).
+CMAKE_ARGS+=	-DLINUX=true
+
 # libdispatch components
 LDFLAGS+=	-lBlocksRuntime
-
-# see Bugzilla #245452 for details
-NO_CCACHE=	yes
 
 # Telegram uses OpenAL for its audio, but libtgvoip (for voice calls) can use PulseAudio or ALSA.
 # It dynamically loads PulseAudio, and if this fails, it loads ALSA.
