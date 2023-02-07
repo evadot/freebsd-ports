@@ -1,6 +1,5 @@
 PORTNAME=	yuzu
-PORTVERSION=	s20230110
-PORTREVISION=	1
+PORTVERSION=	s20230206
 CATEGORIES=	emulators wayland
 .if make(makesum)
 MASTER_SITES=	https://api.yuzu-emu.org/gamedb/?dummy=/:gamedb
@@ -43,7 +42,7 @@ LIB_DEPENDS=	liblz4.so:archivers/liblz4 \
 		libfmt.so:devel/libfmt \
 		libavcodec.so:multimedia/ffmpeg \
 		libenet.so:net/enet
-TEST_DEPENDS=	catch>0:devel/catch
+TEST_DEPENDS=	catch2>0:devel/catch2
 
 FLAVORS=	qt5 qt6
 qt5_CONFLICTS_INSTALL=	${PORTNAME}-qt6
@@ -54,11 +53,11 @@ qt6_OPTIONS_EXCLUDE=	QT5
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	yuzu-emu
-GH_TAGNAME=	0e8f98a44
+GH_TAGNAME=	72f78a48e
 GH_TUPLE=	yuzu-emu:mbedtls:v2.16.9-115-g8c88150ca:mbedtls/externals/mbedtls \
 		yuzu-emu:sirit:ab75463:sirit/externals/sirit \
 		KhronosGroup:SPIRV-Headers:1.5.4.raytracing.fixed-201-gc214f6f:SPIRV_Headers/externals/sirit/externals/SPIRV-Headers \
-		MerryMage:dynarmic:6.4.3:dynarmic/externals/dynarmic \
+		MerryMage:dynarmic:6.4.4:dynarmic/externals/dynarmic \
 		arun11299:cpp-jwt:v1.4-14-ge12ef06:cpp_jwt/externals/cpp-jwt \
 		arsenm:sanitizers-cmake:aab6948:sanitizers_cmake/externals/cubeb/cmake/sanitizers-cmake \
 		benhoyt:inih:r52:inih/externals/inih/inih \
@@ -72,7 +71,6 @@ CMAKE_ON+=	BUNDLE_SPEEX # only used by cubeb tests
 CMAKE_OFF=	YUZU_CHECK_SUBMODULES YUZU_USE_EXTERNAL_SDL2 YUZU_USE_EXTERNAL_VULKAN_HEADERS
 CMAKE_OFF+=	${CMAKE_TESTING_ON}
 CMAKE_TESTING_ON=	YUZU_TESTS
-CXXFLAGS+=	-D_LIBCPP_HAS_NO_INCOMPLETE_RANGES # common/polyfill_ranges.h
 LDFLAGS+=	-Wl,--as-needed # Qt5Network
 ELF_FEATURES=	${PLIST_FILES:Mbin/*:S/^/+wxneeded:/}
 PLIST_FILES=	bin/${PORTNAME}-cmd \
@@ -146,17 +144,26 @@ post-patch-VAAPI-off:
 	@${REINPLACE_CMD} -i .nova '/pkg_check.*libva/d' \
 		${WRKSRC}/CMakeLists.txt
 
-# libc++ >= 14 defines std::ranges outside -D_LIBCPP_HAS_NO_INCOMPLETE_RANGES
-.if exists(/usr/include/c++/v1/__memory/concepts.h)
+# XXX Drop after FreeBSD 13.2 EOL around 2024-05-01 (don't forget distinfo)
+.if !exists(/usr/include/c++/v1/__ranges/as_rvalue_view.h) || make(makesum) || make(fetch)
+. if !exists(/usr/include/c++/v1/__memory/concepts.h)
+USES+=		llvm:min=14,build
+CC=		clang${LLVM_VERSION}
+CXX=		clang++${LLVM_VERSION}
+CPP=		clang-cpp${LLVM_VERSION}
+CONFIGURE_ENV+=	CC="${CC}" CXX="${CXX}" CPP="${CPP}"
+. endif
+
 # XXX Move into separate port and standardize via USES
-GH_TUPLE+=	llvm:llvm-project:llvmorg-13.0.1:libcxx
+GH_TUPLE+=	llvm:llvm-project:llvmorg-16.0.0-rc1:libcxx
 CXXFLAGS+=	-nostdinc++ -isystem${WRKDIR}/libcxx_prefix/include/c++/v1
-# Don't link against old libc++ to avoid ABI mismatch in Qt
+# Don't link against new libc++ to avoid ABI mismatch in Qt
 #LDFLAGS+=	-nostdlib++ -L${WRKDIR}/libcxx_prefix/lib -l:libc++.a -lcxxrt
 
 pre-configure:	bundled-libcxx
 bundled-libcxx:
 	@${SETENV} ${CONFIGURE_ENV} ${CMAKE_BIN} ${CMAKE_ARGS:M*Ninja*} \
+		-DLIBCXX_INCLUDE_BENCHMARKS:BOOL=OFF \
 		-DCMAKE_INSTALL_PREFIX:PATH=${WRKDIR}/libcxx_prefix \
 		-B ${WRKDIR}/libcxx_build -S ${WRKSRC_libcxx}/libcxx
 	@${DO_MAKE_BUILD:NDESTDIR*} install -C ${WRKDIR}/libcxx_build

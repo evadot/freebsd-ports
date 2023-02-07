@@ -121,7 +121,6 @@
     SUBDIR += cuttlefish
     SUBDIR += cxxplot
     SUBDIR += darktable
-    SUBDIR += darktable42
     SUBDIR += dataplot
     SUBDIR += dbow2
     SUBDIR += dc20pack
@@ -236,6 +235,7 @@
     SUBDIR += gcolor3
     SUBDIR += gd
     SUBDIR += gdal
+    SUBDIR += gdal-grass
     SUBDIR += gdchart
     SUBDIR += gdk-pixbuf2
     SUBDIR += gdk-pixbuf2-xlib
@@ -833,6 +833,7 @@
     SUBDIR += proj-data
     SUBDIR += pstoedit
     SUBDIR += ptex
+    SUBDIR += py-ManimPango
     SUBDIR += py-OWSLib
     SUBDIR += py-PyOpenGL
     SUBDIR += py-PyOpenGL-accelerate
@@ -864,6 +865,7 @@
     SUBDIR += py-geopandas
     SUBDIR += py-giddy
     SUBDIR += py-gizeh
+    SUBDIR += py-glcontext
     SUBDIR += py-glfw
     SUBDIR += py-glooey
     SUBDIR += py-gphoto2
@@ -885,6 +887,8 @@
     SUBDIR += py-mcomix
     SUBDIR += py-mgwr
     SUBDIR += py-ming
+    SUBDIR += py-moderngl
+    SUBDIR += py-moderngl-window
     SUBDIR += py-momepy
     SUBDIR += py-mpl-interactions
     SUBDIR += py-mpl-scatter-density

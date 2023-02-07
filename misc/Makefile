@@ -383,6 +383,7 @@
     SUBDIR += ptsort
     SUBDIR += pubs
     SUBDIR += py-PyUserInput
+    SUBDIR += py-PyWavefront
     SUBDIR += py-QSpectrumAnalyzer
     SUBDIR += py-SimpleSoapy
     SUBDIR += py-SoapySDR
@@ -398,6 +399,7 @@
     SUBDIR += py-detecta
     SUBDIR += py-dictdiffer
     SUBDIR += py-eemeter
+    SUBDIR += py-einops
     SUBDIR += py-emoji
     SUBDIR += py-ezc3d
     SUBDIR += py-fast-histogram
@@ -430,6 +432,7 @@
     SUBDIR += py-palettable
     SUBDIR += py-papermill
     SUBDIR += py-pexpect
+    SUBDIR += py-placekey
     SUBDIR += py-powerline-status
     SUBDIR += py-progressbar
     SUBDIR += py-progressbar2

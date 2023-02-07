@@ -1,5 +1,5 @@
 PORTNAME=	passenger
-PORTVERSION=	6.0.15
+PORTVERSION=	6.0.16
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 
@@ -30,7 +30,7 @@ OPTIONS_EXCLUDE=DOCS
 SYMLINK_DESC=	Create passenger symlink
 
 .if ${FLAVOR} == apache
-USES+=		apache:2.2+
+USES+=		apache
 .endif
 
 RAKE_BIN=	${LOCALBASE}/bin/rake

@@ -1,6 +1,7 @@
 PORTNAME=	lms
 DISTVERSIONPREFIX=	v
-DISTVERSION=	3.35.0
+DISTVERSION=	3.35.1
+PORTREVISION=	1
 CATEGORIES=	multimedia
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -32,12 +33,11 @@ PLIST_SUB=	USER="${USER}" GROUP="${GROUP}"
 
 OPTIONS_RADIO=			IMAGE_LIB
 OPTIONS_RADIO_IMAGE_LIB=	STB MAGICK
-OPTIONS_DEFAULT=		MAGICK
+OPTIONS_DEFAULT=		STB # STB is prefered by the upstream
 
 STB_DESC=			Use STB as image library (uses less memory)
 STB_BUILD_DEPENDS=		${LOCALBASE}/include/stb/stb_image.h:devel/stb
 STB_CMAKE_BOOL=			FREEBSD_USE_STB
-STB_BROKEN=			bug#268487 (crash when transcoding is activated for subsonic API when using STB as image library)
 
 MAGICK_DESC=			Use GraphicsMagick++ as image library
 MAGICK_LIB_DEPENDS=		libGraphicsMagick.so:graphics/GraphicsMagick

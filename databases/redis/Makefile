@@ -1,5 +1,5 @@
 PORTNAME=	redis
-DISTVERSION=	7.0.7
+DISTVERSION=	7.0.8
 CATEGORIES=	databases
 MASTER_SITES=	https://download.redis.io/releases/
 
@@ -15,7 +15,8 @@ CPE_VENDOR=	redislabs
 
 MAKE_ENV=	OPTIMIZATION= \
 		V=yo
-CONFLICTS_INSTALL=	redis-devel redis6 # etc/rc.d/redis
+
+CONFLICTS_INSTALL=	redis-devel redis6 redis62 # etc/rc.d/redis
 
 OPTIONS_DEFINE=		JEMALLOC TESTS TLS TRIB
 OPTIONS_RADIO=		EXTLUA

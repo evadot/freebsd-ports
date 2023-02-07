@@ -419,8 +419,9 @@
     SUBDIR += openvpn-auth-radius
     SUBDIR += openvpn-auth-script
     SUBDIR += openvpn-devel
-    SUBDIR += opie
+    SUBDIR += openvpn25
     SUBDIR += ophcrack
+    SUBDIR += opie
     SUBDIR += ossec-hids
     SUBDIR += ossec-hids-agent
     SUBDIR += ossec-hids-agent-config
@@ -934,6 +935,7 @@
     SUBDIR += py-pass-git-helper
     SUBDIR += py-passlib
     SUBDIR += py-pbkdf2
+    SUBDIR += py-pem
     SUBDIR += py-pgpdump
     SUBDIR += py-pgpy
     SUBDIR += py-plaso

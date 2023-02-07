@@ -1,9 +1,11 @@
 PORTNAME=	rpcs3
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.0.26-14568 # git rev-list --count HEAD
-PORTREVISION=	1
-DISTVERSIONSUFFIX=	-g1852b370d7
+DISTVERSION=	0.0.26-14614 # git rev-list --count HEAD
+DISTVERSIONSUFFIX=	-g7c4734c24d
 CATEGORIES=	emulators wayland
+
+PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
+PATCHFILES+=	3df5f4f16158.patch:-p1 # https://github.com/RPCS3/rpcs3/pull/13302
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	PS3 emulator/debugger
@@ -52,7 +54,7 @@ ELF_FEATURES=	+noaslr,wxneeded:bin/${PORTNAME}
 
 .if ${FLAVOR:U} == qt6 || make(makesum) || make(fetch)
 PATCH_SITES+=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/:qt6
-PATCHFILES+=	25b09e565729.patch:-p1:qt6 # https://github.com/RPCS3/rpcs3/pull/12471
+PATCHFILES+=	cb5204344a80.patch:-p1:qt6 # https://github.com/RPCS3/rpcs3/pull/12471
 PKGNAMESUFFIX=	-${FLAVOR}
 USES:=		${USES:S/qt:5/qt:6/}
 USE_QT=		base multimedia svg
