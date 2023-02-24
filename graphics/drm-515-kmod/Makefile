@@ -23,7 +23,7 @@ GH_TAGNAME=	drm_v5.15.25
 
 .include <bsd.port.options.mk>
 
-.if ${OPSYS} == FreeBSD && (${OSVERSION} < 1400081 || ${OSVERSION} < 1302503)
+.if ${OPSYS} == FreeBSD && (${OSVERSION} < 1400081 || ${OSVERSION} < 1302502)
 IGNORE=		not supported on older than 13.2 and 14.0, no kernel support
 .endif
 .if ${OPSYS} != FreeBSD
