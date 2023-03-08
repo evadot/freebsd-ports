@@ -1,6 +1,5 @@
 PORTNAME=	hyprpaper
-PORTVERSION=	s20230115
-PORTREVISION=	1
+PORTVERSION=	s20230218
 CATEGORIES=	x11 wayland
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -10,6 +9,9 @@ WWW=		https://github.com/hyprwm/hyprpaper
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+NOT_FOR_ARCHS=	mips mips64 powerpc powerpc64 powerpcspe sparc64
+NOT_FOR_ARCHS_REASON=	only little-endian is supported
+
 BUILD_DEPENDS=	gmake:devel/gmake \
 		wayland-protocols>0:graphics/wayland-protocols
 LIB_DEPENDS=	libwayland-client.so:graphics/wayland
@@ -18,7 +20,7 @@ USES=		compiler:c++11-lib cmake gnome jpeg localbase:ldflags pkgconfig
 USE_GNOME=	cairo
 USE_GITHUB=	yes
 GH_ACCOUNT=	hyprwm
-GH_TAGNAME=	f77a664
+GH_TAGNAME=	2bc88dc
 PLIST_FILES=	bin/${PORTNAME}
 
 post-patch:
@@ -46,7 +48,7 @@ do-install:
 	${INSTALL_PROGRAM} ${INSTALL_WRKSRC}/${PORTNAME} \
 		${STAGEDIR}${PREFIX}/bin
 
-# XXX Drop after FreeBSD 12.3 EOL around 2023-03-01 (don't forget distinfo)
+# XXX Drop after FreeBSD 12.3 EOL around 2023-03-31 (don't forget distinfo)
 .if ${CXX} == c++ && exists(/usr/lib/libc++.so)
 .if !exists(/usr/include/c++/v1/concepts) || make(makesum) || make(fetch)
 USES+=		llvm:min=12,build

@@ -1,3 +1,949 @@
+  <vuln vid="6678211c-bd47-11ed-beb0-1c1b0d9ea7e6">
+    <topic>Apache OpenOffice -- master password vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>apache-openoffice</name>
+	<range><lt>4.1.13</lt></range>
+      </package>
+      <package>
+	<name>apache-openoffice-devel</name>
+	<range><lt>4.2.1678061694i,4</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Apache Openoffice project reports:</p>
+	<blockquote cite="https://cve.mitre.org/cgi-bin/cvename.cgi?name=2022-37400">
+	  <p>Apache OpenOffice supports the storage of passwords for web connections in the user's configuration database. The stored passwords are encrypted with a single master key provided by the user. A flaw in OpenOffice existed where the required initialization vector for encryption was always the same which weakens the security of the encryption making them vulnerable if an attacker has access to the user's configuration data. This issue affects: Apache OpenOffice versions prior to 4.1.13. Reference: CVE-2022-26306 - LibreOffice</p>
+	</blockquote>
+	<blockquote cite="https://cve.mitre.org/cgi-bin/cvename.cgi?name=2022-37401">
+	  <p>Apache OpenOffice supports the storage of passwords for web connections in the user's configuration database. The stored passwords are encrypted with a single master key provided by the user. A flaw in OpenOffice existed where master key was poorly encoded resulting in weakening its entropy from 128 to 43 bits making the stored passwords vulnerable to a brute force attack if an attacker has access to the users stored config. This issue affects: Apache OpenOffice versions prior to 4.1.13. Reference: CVE-2022-26307 - LibreOffice</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-37400</cvename>
+      <cvename>CVE-2022-37401</cvename>
+      <url>https://cwiki.apache.org/confluence/display/OOOUSERS/AOO+4.1.13+Release+Notes</url>
+    </references>
+    <dates>
+      <discovery>2022-02-25</discovery>
+      <entry>2023-03-08</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="f0798a6a-bbdb-11ed-ba99-080027f5fec9">
+    <topic>rack -- possible DoS vulnerability in multipart MIME parsing</topic>
+    <affects>
+      <package>
+	<name>rubygem-rack</name>
+	<range><lt>3.0.4.2,3</lt></range>
+      </package>
+      <package>
+	<name>rubygem-rack22</name>
+	<range><lt>2.2.6.6,3</lt></range>
+      </package>
+      <package>
+	<name>rubygem-rack16</name>
+	<range><lt>1.6.14</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Aaron Patterson reports:</p>
+	<blockquote cite="https://discuss.rubyonrails.org/t/cve-2023-27530-possible-dos-vulnerability-in-multipart-mime-parsing/82388">
+	  <p>
+	    The Multipart MIME parsing code in Rack limits the number
+	    of file parts, but does not limit the total number of
+	    parts that can be uploaded. Carefully crafted requests can
+	    abuse this and cause multipart parsing to take longer than
+	    expected.
+	  </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-27530</cvename>
+      <url>https://discuss.rubyonrails.org/t/cve-2023-27530-possible-dos-vulnerability-in-multipart-mime-parsing/82388</url>
+    </references>
+    <dates>
+      <discovery>2023-03-03</discovery>
+      <entry>2023-03-06</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="be233fc6-bae7-11ed-a4fb-080027f5fec9">
+    <topic>curl -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>curl</name>
+	<range><lt>7.88.0</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Harry Sintonen and Patrick Monnerat report:</p>
+	<blockquote cite="https://curl.se/docs/security.html">
+	  <dl>
+	    <dt>CVE-2023-23914</dt>
+	    <dd>
+	      A cleartext transmission of sensitive information
+	      vulnerability exists in curl &lt; v7.88.0 that could
+	      cause HSTS functionality fail when multiple URLs are
+	      requested serially. Using its HSTS support, curl can be
+	      instructed to use HTTPS instead of using an insecure
+	      clear-text HTTP step even when HTTP is provided in the
+	      URL. This HSTS mechanism would however surprisingly be
+	      ignored by subsequent transfers when done on the same
+	      command line because the state would not be properly
+	      carried on.
+	    </dd>
+	    <dt>CVE-2023-23915</dt>
+	    <dd>
+	      A cleartext transmission of sensitive information
+	      vulnerability exists in curl &lt; v7.88.0 that could
+	      cause HSTS functionality to behave incorrectly when
+	      multiple URLs are requested in parallel. Using its HSTS
+	      support, curl can be instructed to use HTTPS instead of
+	      using an insecure clear-text HTTP step even when HTTP is
+	      provided in the URL. This HSTS mechanism would however
+	      surprisingly fail when multiple transfers are done in
+	      parallel as the HSTS cache file gets overwritten by the
+	      most recently completed transfer. A later HTTP-only
+	      transfer to the earlier host name would then *not* get
+	      upgraded properly to HSTS.
+	    </dd>
+	    <dt>CVE-2023-23916</dt>
+	    <dd>
+	      An allocation of resources without limits or throttling
+	      vulnerability exists in curl &lt; v7.88.0 based on the
+	      &quot;chained&quot; HTTP compression algorithms, meaning
+	      that a server response can be compressed multiple times
+	      and potentially with different algorithms. The number of
+	      acceptable &quot;links&quot; in this &quot;decompression
+	      chain&quot; was capped, but the cap was implemented on a
+	      per-header basis allowing a malicious server to insert a
+	      virtually unlimited number of compression steps simply
+	      by using many headers. The use of such a decompression
+	      chain could result in a &quot;malloc bomb&quot;, making
+	      curl end up spending enormous amounts of allocated heap
+	      memory, or trying to and returning out of memory errors.
+	    </dd>
+	  </dl>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-23914</cvename>
+      <cvename>CVE-2023-23915</cvename>
+      <cvename>CVE-2023-23916</cvename>
+      <url>https://curl.se/docs/security.html</url>
+    </references>
+    <dates>
+      <discovery>2023-02-15</discovery>
+      <entry>2023-03-05</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="3f9b6943-ba58-11ed-bbbd-00e0670f2660">
+    <topic>strongSwan -- certificate verification vulnerability</topic>
+    <affects>
+      <package>
+	<name>strongswan</name>
+	<range><ge>5.9.8</ge><lt>5.9.9_2</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>strongSwan reports:</p>
+	<blockquote cite="https://www.strongswan.org/blog/2023/03/02/strongswan-vulnerability-(cve-2023-26463).html">
+	  <p>A vulnerability related to certificate verification in TLS-based EAP methods
+	     was discovered in strongSwan that results in a denial of service
+	     but possibly even remote code execution. Versions 5.9.8 and 5.9.9
+	     may be affected. </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-26463</cvename>
+      <url>https://www.strongswan.org/blog/2023/03/02/strongswan-vulnerability-(cve-2023-26463).html</url>
+    </references>
+    <dates>
+      <discovery>2023-03-02</discovery>
+      <entry>2023-03-04</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="f7c5b3a9-b9fb-11ed-99c6-001b217b3468">
+    <topic>Gitlab -- Multiple Vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>gitlab-ce</name>
+	<range><ge>15.9.0</ge><lt>15.9.2</lt></range>
+	<range><ge>15.8.0</ge><lt>15.8.4</lt></range>
+	<range><ge>9.0.0</ge><lt>15.7.8</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Gitlab reports:</p>
+	<blockquote cite="https://about.gitlab.com/releases/2023/03/02/security-release-gitlab-15-9-2-released/">
+	  <p>Stored XSS via Kroki diagram</p>
+	  <p>Prometheus integration Google IAP details are not hidden, may leak account details from instance/group/project settings</p>
+	  <p>Improper validation of SSO and SCIM tokens while managing groups</p>
+	  <p>Maintainer can leak Datadog API key by changing Datadog site</p>
+	  <p>Clipboard based XSS in the title field of work items</p>
+	  <p>Improper user right checks for personal snippets</p>
+	  <p>Release Description visible in public projects despite release set as project members only</p>
+	  <p>Group integration settings sensitive information exposed to project maintainers</p>
+	  <p>Improve pagination limits for commits</p>
+	  <p>Gitlab Open Redirect Vulnerability</p>
+	  <p>Maintainer may become an Owner of a project</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-0050</cvename>
+      <cvename>CVE-2022-4289</cvename>
+      <cvename>CVE-2022-4331</cvename>
+      <cvename>CVE-2023-0483</cvename>
+      <cvename>CVE-2022-4007</cvename>
+      <cvename>CVE-2022-3758</cvename>
+      <cvename>CVE-2023-0223</cvename>
+      <cvename>CVE-2022-4462</cvename>
+      <cvename>CVE-2023-1072</cvename>
+      <cvename>CVE-2022-3381</cvename>
+      <cvename>CVE-2023-1084</cvename>
+      <url>https://about.gitlab.com/releases/2023/03/02/security-release-gitlab-15-9-2-released/</url>
+    </references>
+    <dates>
+      <discovery>2023-03-02</discovery>
+      <entry>2023-03-03</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="6dccc186-b824-11ed-b695-6c3be5272acd">
+    <topic>Grafana -- Stored XSS in text panel plugin</topic>
+    <affects>
+      <package>
+	<name>grafana</name>
+	<range><ge>9.2.0</ge><lt>9.2.10</lt></range>
+	<range><ge>9.3.0</ge><lt>9.3.4</lt></range>
+      </package>
+      <package>
+	<name>grafana9</name>
+	<range><ge>9.2.0</ge><lt>9.2.10</lt></range>
+	<range><ge>9.3.0</ge><lt>9.3.4</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Grafana Labs reports:</p>
+	<blockquote cite="https://grafana.com/blog/2023/02/28/grafana-security-release-new-versions-with-security-fixes-for-cve-2023-0594-cve-2023-0507-and-cve-2023-22462/">
+	  <p>During an internal audit of Grafana on January 1, a member of the security
+	  team found a stored XSS vulnerability affecting the core text plugin.</p>
+	  <p>The stored XSS vulnerability requires several user interactions in order
+	  to be fully exploited. The vulnerability was possible due to React’s render
+	  cycle that will pass through the unsanitized HTML code, but in the next cycle,
+	  the HTML is cleaned up and saved in Grafana’s database.</p>
+	  <p>The CVSS score for this vulnerability is 6.4 Medium
+	  (CVSS:6.4/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:N).</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-22462</cvename>
+      <url>https://github.com/grafana/grafana/security/advisories/GHSA-7rqg-hjwc-6mjf</url>
+    </references>
+    <dates>
+      <discovery>2023-01-01</discovery>
+      <entry>2023-03-01</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="e7841611-b808-11ed-b695-6c3be5272acd">
+    <topic>Grafana -- Stored XSS in TraceView panel</topic>
+    <affects>
+      <package>
+	<name>grafana</name>
+	<range><lt>8.5.21</lt></range>
+	<range><ge>9.0.0</ge><lt>9.2.13</lt></range>
+	<range><ge>9.3.0</ge><lt>9.3.8</lt></range>
+      </package>
+      <package>
+	<name>grafana8</name>
+	<range><lt>8.5.21</lt></range>
+      </package>
+      <package>
+	<name>grafana9</name>
+	<range><ge>9.0.0</ge><lt>9.2.13</lt></range>
+	<range><ge>9.3.0</ge><lt>9.3.8</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Grafana Labs reports:</p>
+	<blockquote cite="https://grafana.com/blog/2023/02/28/grafana-security-release-new-versions-with-security-fixes-for-cve-2023-0594-cve-2023-0507-and-cve-2023-22462/">
+	  <p>During an internal audit of Grafana on January 30, a member
+	  of the engineering team found a stored XSS vulnerability affecting
+	  the <code>TraceView</code> panel.</p>
+	  <p>The stored XSS vulnerability was possible because the value of a span’s
+	  attributes/resources were not properly sanitized, and this will be rendered
+	  when the span’s attributes/resources are expanded.</p>
+	  <p>The CVSS score for this vulnerability is 7.3 High
+	  (CVSS:7.3/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N).</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-0594</cvename>
+      <url>https://grafana.com/blog/2023/02/28/grafana-security-release-new-versions-with-security-fixes-for-cve-2023-0594-cve-2023-0507-and-cve-2023-22462/</url>
+    </references>
+    <dates>
+      <discovery>2023-01-30</discovery>
+      <entry>2023-03-01</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="e2a8e2bd-b808-11ed-b695-6c3be5272acd">
+    <topic>Grafana -- Stored XSS in geomap panel plugin via attribution</topic>
+    <affects>
+      <package>
+	<name>grafana</name>
+	<range><lt>8.5.21</lt></range>
+	<range><ge>9.0.0</ge><lt>9.2.13</lt></range>
+	<range><ge>9.3.0</ge><lt>9.3.8</lt></range>
+      </package>
+      <package>
+	<name>grafana8</name>
+	<range><lt>8.5.21</lt></range>
+      </package>
+      <package>
+	<name>grafana9</name>
+	<range><ge>9.0.0</ge><lt>9.2.13</lt></range>
+	<range><ge>9.3.0</ge><lt>9.3.8</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Grafana Labs reports:</p>
+	<blockquote cite="https://grafana.com/blog/2023/02/28/grafana-security-release-new-versions-with-security-fixes-for-cve-2023-0594-cve-2023-0507-and-cve-2023-22462/">
+	  <p>During an internal audit of Grafana on January 25, a member of the security
+	  team found a stored XSS vulnerability affecting the core geomap plugin.</p>
+	  <p>The stored XSS vulnerability was possible because map attributions weren’t
+	  properly sanitized, allowing arbitrary JavaScript to be executed in the context
+	  of the currently authorized user of the Grafana instance.</p>
+	  <p>The CVSS score for this vulnerability is 7.3 High
+	  (CVSS:7.3/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N).</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-0507</cvename>
+      <url>https://grafana.com/blog/2023/02/28/grafana-security-release-new-versions-with-security-fixes-for-cve-2023-0594-cve-2023-0507-and-cve-2023-22462/</url>
+    </references>
+    <dates>
+      <discovery>2023-01-25</discovery>
+      <entry>2023-03-01</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="b17bce48-b7c6-11ed-b304-080027f5fec9">
+    <topic>redis -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>redis</name>
+	<range><lt>7.0.9</lt></range>
+      </package>
+      <package>
+	<name>redis-devel</name>
+	<range><lt>7.0.9.20230228</lt></range>
+      </package>
+      <package>
+	<name>redis62</name>
+	<range><lt>6.2.11</lt></range>
+      </package>
+      <package>
+	<name>redis6</name>
+	<range><lt>6.0.18</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Redis core team	reports:</p>
+	<blockquote cite="https://groups.google.com/g/redis-db/c/3hQ1oTO4hMI">
+	  <dl>
+	    <dt>CVE-2023-25155</dt>
+	    <dd>
+	      Specially crafted SRANDMEMBER, ZRANDMEMBER, and
+	      HRANDFIELD commands can trigger an integer overflow,
+	      resulting in a runtime assertion and termination of the
+	      Redis server process.
+	    </dd>
+	    <dt>CVE-2022-36021</dt>
+	    <dd>
+	      String matching commands (like SCAN or KEYS) with a
+	      specially crafted pattern to trigger a denial-of-service
+	      attack on Redis, causing it to hang and consume 100% CPU
+	      time.
+	    </dd>
+	  </dl>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-25155</cvename>
+      <cvename>CVE-2022-36021</cvename>
+      <url>https://groups.google.com/g/redis-db/c/3hQ1oTO4hMI</url>
+    </references>
+    <dates>
+      <discovery>2023-02-28</discovery>
+      <entry>2023-03-01</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="a75929bd-b6a4-11ed-bad6-080027f5fec9">
+    <topic>emacs -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>emacs</name>
+	<name>emacs-canna</name>
+	<name>emacs-nox</name>
+	<range><lt>28.2_3,3</lt></range>
+      </package>
+      <package>
+	<name>emacs-devel</name>
+	<name>emacs-devel-nox</name>
+	<range><lt>30.0.50.20230101,3</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Xi Lu reports:</p>
+	<blockquote cite="https://www.debian.org/security/2023/dsa-5360">
+	  <dl>
+	    <dt>CVE-2022-48337</dt>
+	    <dd>
+	      GNU Emacs through 28.2 allows attackers to execute
+	      commands via shell metacharacters in the name of a
+	      source-code file, because lib-src/etags.c uses the
+	      system C library function in its implementation of the
+	      etags program. For example, a victim may use the
+	      &quot;etags -u *&quot; command (suggested in the etags
+	      documentation) in a situation where the current working
+	      directory has contents that depend on untrusted input.
+	    </dd>
+	    <dt>CVE-2022-48338</dt>
+	    <dd>
+	      An issue was discovered in GNU Emacs through 28.2. In
+	      ruby-mode.el, the ruby-find-library-file function has a
+	      local command injection vulnerability. The
+	      ruby-find-library-file function is an interactive
+	      function, and bound to C-c C-f. Inside the function, the
+	      external command gem is called through
+	      shell-command-to-string, but the feature-name parameters
+	      are not escaped. Thus, malicious Ruby source files may
+	      cause commands to be executed.
+	    </dd>
+	    <dt>CVE-2022-48339</dt>
+	    <dd>
+	      An issue was discovered in GNU Emacs through
+	      28.2. htmlfontify.el has a command injection
+	      vulnerability. In the hfy-istext-command function, the
+	      parameter file and parameter srcdir come from external
+	      input, and parameters are not escaped. If a file name or
+	      directory name contains shell metacharacters, code may
+	      be executed.
+	    </dd>
+	  </dl>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-48337</cvename>
+      <cvename>CVE-2022-48338</cvename>
+      <cvename>CVE-2022-48339</cvename>
+      <url>https://www.debian.org/security/2023/dsa-5360</url>
+    </references>
+    <dates>
+      <discovery>2022-12-06</discovery>
+      <entry>2023-02-27</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="dd271de6-b444-11ed-9268-b42e991fc52e">
+    <topic>freerdp -- clients using the `/video` command line switch might read uninitialized data</topic>
+    <affects>
+      <package>
+	<name>freerdp</name>
+	<range><lt>2.8.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>MITRE reports:</p>
+      <blockquote cite="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-39283">
+	<p>
+	  All FreeRDP based clients when using the `/video`
+	  command line switch might read uninitialized data, decode
+	  it as audio/video and display the result. FreeRDP based
+	  server implementations are not affected.
+	</p>
+      </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-39283</cvename>
+      <url>https://github.com/FreeRDP/FreeRDP/security/advisories/GHSA-6cf9-3328-qrvh</url>
+    </references>
+    <dates>
+      <discovery>2022-10-13</discovery>
+      <entry>2023-02-24</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="c682923d-b444-11ed-9268-b42e991fc52e">
+    <topic>freerdp -- clients using `/parallel` command line switch might read uninitialized data</topic>
+    <affects>
+      <package>
+	<name>freerdp</name>
+	<range><lt>2.8.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>MITRE reports:</p>
+      <blockquote cite="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-39282">
+	<p>
+	  FreeRDP based clients on unix systems using
+	  `/parallel` command line switch might read uninitialized
+	  data and send it to the server the client is currently
+	  connected to. FreeRDP based server implementations are not
+	  affected.
+	</p>
+      </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-39282</cvename>
+      <url>https://github.com/FreeRDP/FreeRDP/security/advisories/GHSA-c45q-wcpg-mxjq</url>
+    </references>
+    <dates>
+      <discovery>2022-10-13</discovery>
+      <entry>2023-02-24</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="4d6b5ea9-bc64-4e77-a7ee-d62ba68a80dd">
+    <topic>chromium -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+       <name>chromium</name>
+       <range><lt>110.0.5481.177</lt></range>
+      </package>
+      <package>
+       <name>ungoogled-chromium</name>
+       <range><lt>110.0.5481.177</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>Chrome Releases reports:</p>
+       <blockquote cite="https://chromereleases.googleblog.com/2023/02/stable-channel-desktop-update_22.html">
+	 <p>This update includes 10 security fixes:</p>
+	 <ul>
+	   <li>[1415366] Critical CVE-2023-0941: Use after free in Prompts. Reported by Anonymous on 2023-02-13</li>
+	   <li>[1414738] High CVE-2023-0927: Use after free in Web Payments API. Reported by Rong Jian of VRI on 2023-02-10</li>
+	   <li>[1309035] High CVE-2023-0928: Use after free in SwiftShader. Reported by Anonymous on 2022-03-22</li>
+	   <li>[1399742] High CVE-2023-0929: Use after free in Vulkan. Reported by Cassidy Kim(@cassidy6564) on 2022-12-09</li>
+	   <li>[1410766] High CVE-2023-0930: Heap buffer overflow in Video. Reported by Cassidy Kim(@cassidy6564) on 2023-01-27</li>
+	   <li>[1407701] High CVE-2023-0931: Use after free in Video. Reported by Cassidy Kim(@cassidy6564) on 2023-01-17</li>
+	   <li>[1413005] High CVE-2023-0932: Use after free in WebRTC. Reported by Omri Bushari (Talon Cyber Security) on 2023-02-05</li>
+	   <li>[1404864] Medium CVE-2023-0933: Integer overflow in PDF. Reported by Zhiyi Zhang from Codesafe Team of Legendsec at QI-ANXIN</li>
+	 </ul>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-0941</cvename>
+      <cvename>CVE-2023-0927</cvename>
+      <cvename>CVE-2023-0928</cvename>
+      <cvename>CVE-2023-0929</cvename>
+      <cvename>CVE-2023-0930</cvename>
+      <cvename>CVE-2023-0931</cvename>
+      <cvename>CVE-2023-0932</cvename>
+      <cvename>CVE-2023-0933</cvename>
+      <url>https://chromereleases.googleblog.com/2023/02/stable-channel-desktop-update_22.html</url>
+    </references>
+    <dates>
+      <discovery>2023-02-22</discovery>
+      <entry>2023-02-22</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="7a425536-74f7-4ce4-9768-0079a9d44d11">
+    <topic>zeek -- potential DoS vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>zeek</name>
+	<range><lt>5.0.7</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Tim Wojtulewicz of Corelight reports:</p>
+	<blockquote cite="https://github.com/zeek/zeek/releases/tag/v5.0.6">
+	  <p> Receiving DNS responses from async DNS requests (via
+	  the lookup_addr, etc BIF methods) with the TTL set to
+	  zero could cause the DNS manager to eventually stop being
+	  able to make new requests. </p>
+	  <p> Specially-crafted FTP packets with excessively long
+	  usernames, passwords, or other fields could cause log
+	  writes to use large amounts of disk space. </p>
+	  <p> The find_all and find_all_ordered BIF methods could
+	  take extremely large amounts of time to process incoming
+	  data depending on the size of the input. </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://github.com/zeek/zeek/releases/tag/v5.0.7</url>
+    </references>
+    <dates>
+      <discovery>2023-02-21</discovery>
+      <entry>2023-02-21</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="421c0af9-b206-11ed-9fe5-f4a47516fb57">
+    <topic>libde256 -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>libde265</name>
+	<range><lt>1.0.11</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Libde265 developer reports:</p>
+	<blockquote cite="https://github.com/strukturag/libde265/releases/tag/v1.0.10">
+	  <p>This release fixes the known CVEs below. Many of them are actually caused by the same underlying issues that manifest in different ways.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2020-21594</cvename>
+      <cvename>CVE-2020-21595</cvename>
+      <cvename>CVE-2020-21596</cvename>
+      <cvename>CVE-2020-21597</cvename>
+      <cvename>CVE-2020-21598</cvename>
+      <cvename>CVE-2020-21599</cvename>
+      <cvename>CVE-2020-21600</cvename>
+      <cvename>CVE-2020-21601</cvename>
+      <cvename>CVE-2020-21602</cvename>
+      <cvename>CVE-2020-21603</cvename>
+      <cvename>CVE-2020-21604</cvename>
+      <cvename>CVE-2020-21605</cvename>
+      <cvename>CVE-2020-21606</cvename>
+      <cvename>CVE-2022-1253</cvename>
+      <cvename>CVE-2022-43236</cvename>
+      <cvename>CVE-2022-43237</cvename>
+      <cvename>CVE-2022-43238</cvename>
+      <cvename>CVE-2022-43239</cvename>
+      <cvename>CVE-2022-43240</cvename>
+      <cvename>CVE-2022-43241</cvename>
+      <cvename>CVE-2022-43242</cvename>
+      <cvename>CVE-2022-43243</cvename>
+      <cvename>CVE-2022-43244</cvename>
+      <cvename>CVE-2022-43245</cvename>
+      <cvename>CVE-2022-43248</cvename>
+      <cvename>CVE-2022-43249</cvename>
+      <cvename>CVE-2022-43250</cvename>
+      <cvename>CVE-2022-43252</cvename>
+      <cvename>CVE-2022-43253</cvename>
+      <cvename>CVE-2022-47655</cvename>
+      <url>https://github.com/strukturag/libde265/releases/tag/v1.0.10</url>
+    </references>
+    <dates>
+      <discovery>2023-01-27</discovery>
+      <entry>2023-02-21</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="21f12de8-b1db-11ed-b0f4-002590f2a714">
+    <topic>git -- "git apply" overwriting paths outside the working tree</topic>
+    <affects>
+      <package>
+	<name>git</name>
+	<range><lt>2.39.2</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>git team reports:</p>
+	<blockquote cite="https://github.com/git/git/security/advisories/GHSA-r87m-v37r-cwfh">
+	  <p>By feeding a crafted input to "git apply", a path outside the
+	    working tree can be overwritten as the user who is running "git
+	    apply".</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-23946</cvename>
+      <url>https://github.blog/2023-02-14-git-security-vulnerabilities-announced-3/#cve-2023-23946</url>
+    </references>
+    <dates>
+      <discovery>2023-02-14</discovery>
+      <entry>2023-02-21</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="9548d6ed-b1da-11ed-b0f4-002590f2a714">
+    <topic>git -- Local clone-based data exfiltration with non-local transports</topic>
+    <affects>
+      <package>
+	<name>git</name>
+	<range><lt>2.39.2</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>git team reports:</p>
+	<blockquote cite="https://github.com/git/git/security/advisories/GHSA-gw92-x3fm-3g3q">
+	  <p>Using a specially-crafted repository, Git can be tricked into using
+	    its local clone optimization even when using a non-local transport.
+	    Though Git will abort local clones whose source $GIT_DIR/objects
+	    directory contains symbolic links (c.f., CVE-2022-39253), the objects
+	    directory itself may still be a symbolic link.</p>
+
+	  <p>These two may be combined to include arbitrary files based on known
+	    paths on the victim's filesystem within the malicious repository's
+	    working copy, allowing for data exfiltration in a similar manner as
+	    CVE-2022-39253.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-22490</cvename>
+      <url>https://github.blog/2023-02-14-git-security-vulnerabilities-announced-3/#cve-2023-22490</url>
+    </references>
+    <dates>
+      <discovery>2023-02-14</discovery>
+      <entry>2023-02-21</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="8fafbef4-b1d9-11ed-b0f4-002590f2a714">
+    <topic>git -- gitattributes parsing integer overflow</topic>
+    <affects>
+      <package>
+	<name>git</name>
+	<range><lt>2.39.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>git team reports:</p>
+	<blockquote cite="https://github.com/git/git/security/advisories/GHSA-c738-c5qq-xg89">
+	  <p>gitattributes are used to define unique attributes corresponding
+	    to paths in your repository. These attributes are defined by
+	    .gitattributes file(s) within your repository.</p>
+
+	  <p>The parser used to read these files has multiple integer
+	    overflows, which can occur when parsing either a large number
+	    of patterns, a large number of attributes, or attributes with
+	    overly-long names.</p>
+
+	  <p>These overflows may be triggered via a malicious
+	    .gitattributes file. However, Git automatically splits lines at
+	    2KB when reading .gitattributes from a file, but not when parsing
+	    it from the index. Successfully exploiting this vulnerability
+	    depends on the location of the .gitattributes file in question.</p>
+
+	  <p>This integer overflow can result in arbitrary heap reads
+	    and writes, which may result in remote code execution.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-23521</cvename>
+      <url>https://github.blog/2023-01-17-git-security-vulnerabilities-announced-2/#cve-2022-23521</url>
+    </references>
+    <dates>
+      <discovery>2023-01-17</discovery>
+      <entry>2023-02-21</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="2fcca7e4-b1d7-11ed-b0f4-002590f2a714">
+    <topic>git -- Heap overflow in `git archive`, `git log --format` leading to RCE</topic>
+    <affects>
+      <package>
+	<name>git</name>
+	<range><lt>2.39.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The git team reports:</p>
+	<blockquote cite="https://github.com/git/git/security/advisories/GHSA-475x-2q3q-hvwq">
+	  <p>git log has the ability to display commits using an arbitrary
+	    format with its --format specifiers. This functionality is also
+	    exposed to git archive via the export-subst gitattribute.</p>
+	  <p>When processing the padding operators (e.g., %&#x3c;(, %&#x3c;|(,
+	    %>(, %>>(, or %>&#x3c;( ), an integer overflow can occur in
+	    pretty.c::format_and_pad_commit() where a size_t is improperly
+	    stored as an int, and then added as an offset to a subsequent
+	    memcpy() call.</p>
+	  <p>This overflow can be triggered directly by a user running a
+	    command which invokes the commit formatting machinery (e.g., git
+	    log --format=...). It may also be triggered indirectly through
+	    git archive via the export-subst mechanism, which expands format
+	    specifiers inside of files within the repository during a git
+	    archive.</p>
+	  <p>This integer overflow can result in arbitrary heap writes, which
+	    may result in remote code execution.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-41903</cvename>
+      <url>https://github.blog/2023-01-17-git-security-vulnerabilities-announced-2/#cve-2022-41903</url>
+    </references>
+    <dates>
+      <discovery>2023-01-17</discovery>
+      <entry>2023-02-21</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="5048ed45-b0f1-11ed-ab04-9106b1b896dd">
+    <topic>gitea -- password hash quality</topic>
+    <affects>
+      <package>
+	<name>gitea</name>
+	<range><lt>1.18.4</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Gitea team reports:</p>
+	<blockquote cite="https://github.com/go-gitea/gitea/pull/22942">
+	  <p>This PR refactors and improves the password hashing code within
+	    gitea and makes it possible for server administrators to set the
+	    password hashing parameters.</p>
+	  <p>In addition it takes the opportunity to adjust the settings for
+	    pbkdf2 in order to make the hashing a little stronger.</p>
+	</blockquote>
+	<blockquote cite="https://github.com/go-gitea/gitea/pull/22823">
+	  <p>Add command to bulk set must-change-password</p>
+	  <p>As part of administration sometimes it is appropriate to
+	    forcibly tell users to update their passwords.</p>
+	  <p>This PR creates a new command gitea admin user
+	    must-change-password which will set the MustChangePassword flag on
+	    the provided users.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://blog.gitea.io/2023/02/gitea-1.18.4-is-released/</url>
+      <url>https://github.com/go-gitea/gitea/releases/tag/v1.18.4</url>
+    </references>
+    <dates>
+      <discovery>2022-02-14</discovery>
+      <entry>2023-02-20</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="428922c9-b07e-11ed-8700-5404a68ad561">
+    <topic>traefik -- Use of vulnerable Go module x/net/http2</topic>
+    <affects>
+      <package>
+	<name>traefik</name>
+	<range><lt>2.9.8</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Go project reports:</p>
+	<blockquote cite="https://pkg.go.dev/vuln/GO-2023-1495">
+	  <p>A request smuggling attack is possible when using
+       MaxBytesHandler. When using MaxBytesHandler, the body of
+       an HTTP request is not fully consumed. When the server
+       attempts to read HTTP2 frames from the connection, it
+       will instead be reading the body of the HTTP request,
+       which could be attacker-manipulated to represent
+       arbitrary HTTP2 requests.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-41721</cvename>
+      <url>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-41721</url>
+    </references>
+    <dates>
+      <discovery>2022-10-22</discovery>
+      <entry>2023-02-19</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="27c822a0-addc-11ed-a9ee-dca632b19f10">
+    <topic>Rundeck3 -- Log4J RCE vulnerability</topic>
+    <affects>
+      <package>
+	<name>rundeck3</name>
+	<range><lt>3.4.10</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Rundeck project reports:</p>
+	<blockquote cite="https://docs.rundeck.com/docs/history/3_4_x/version-3.4.10.html">
+	  <p>This release updates both Community and Enterprise with the latest Log4J
+	    to address CVE-2021-44832 by updating it to 2.17.1.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-44832</cvename>
+      <url>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44832</url>
+    </references>
+    <dates>
+      <discovery>2021-12-11</discovery>
+      <entry>2023-02-16</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="8e20430d-a72b-11ed-a04f-40b034455553">
+    <topic>MinIO -- unprivileged users can create service accounts for admin users</topic>
+    <affects>
+      <package>
+	<name>minio</name>
+	<range><lt>2022.04.12.06.55.35</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body>
+	<p>MinIO reports:</p>
+	<blockquote cite="https://github.com/minio/minio/security/advisories/GHSA-2j69-jjmg-534q">
+	  <p>
+	      A security issue was found where an unprivileged user is
+	      able to create service accounts for root or other admin
+	      users and then is able to assume their access policies
+	      via the generated credentials.
+	  </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-24842</cvename>
+      <url>https://github.com/minio/minio/security/advisories/GHSA-2j69-jjmg-534q</url>
+    </references>
+    <dates>
+      <discovery>2022-04-11</discovery>
+      <entry>2023-02-13</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="fd792048-ad91-11ed-a879-080027f5fec9">
     <topic>clamav -- Multiple vulnerabilities</topic>
     <affects>

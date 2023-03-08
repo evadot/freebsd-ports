@@ -1,5 +1,6 @@
 PORTNAME=	veloren
-PORTVERSION=	s20230215
+PORTVERSION=	s20230301
+PORTREVISION=	1
 CATEGORIES=	games wayland
 .if !make(makesum)
 MASTER_SITES=	LOCAL/jbeich
@@ -26,11 +27,12 @@ RUN_DEPENDS=	${LOCALBASE}/lib/alsa-lib/libasound_module_pcm_oss.so:audio/alsa-pl
 USES=		cargo xorg
 USE_XORG=	xcb
 USE_GITLAB=	yes
-GL_COMMIT=	d4274402c1d5dbb7f9c38a48438b3aa4876efe17
+GL_COMMIT=	2fb20782e5ea2c524f92455054d86da34b1463ec
 CARGO_ENV=	VELOREN_USERDATA_STRATEGY=system SHADERC_LIB_DIR="${LOCALBASE}/lib"
 PLIST_FILES=	bin/${PORTNAME}-server-cli \
 		bin/${PORTNAME}-voxygen \
 		share/applications/net.veloren.veloren.desktop \
+		share/metainfo/net.veloren.veloren.metainfo.xml \
 		share/pixmaps/net.veloren.veloren.png
 PORTDATA=	*
 
@@ -64,5 +66,8 @@ post-install:
 		${STAGEDIR}${PREFIX}/share/applications
 	${RLN} ${STAGEDIR}${DATADIR}/assets/voxygen/*.png \
 		${STAGEDIR}${PREFIX}/share/pixmaps
+	${MKDIR} ${STAGEDIR}${PREFIX}/share/metainfo
+	${RLN} ${STAGEDIR}${DATADIR}/assets/voxygen/*.metainfo.xml \
+		${STAGEDIR}${PREFIX}/share/metainfo
 
 .include <bsd.port.mk>

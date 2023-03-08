@@ -4,7 +4,8 @@
 # Support of GTK+ is checked at compile time and themes directories too.
 
 PORTNAME=	xfce4-notifyd
-PORTVERSION=	0.8.0
+PORTVERSION=	0.8.2
+PORTREVISION=	1
 CATEGORIES=	deskutils xfce
 MASTER_SITES=	XFCE/apps
 DIST_SUBDIR=	xfce4
@@ -15,6 +16,7 @@ WWW=		https://gitlab.xfce.org/apps/xfce4-notifyd
 
 LICENSE=	GPLv3
 
+BUILD_DEPENDS=	xdt-csource:devel/xfce4-dev-tools
 LIB_DEPENDS=	libharfbuzz.so:print/harfbuzz \
 		libnotify.so:devel/libnotify
 

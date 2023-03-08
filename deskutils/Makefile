@@ -19,6 +19,8 @@
     SUBDIR += bijiben
     SUBDIR += birdtray
     SUBDIR += bookworm
+    SUBDIR += budgie-desktop-view
+    SUBDIR += budgie-trash-applet
     SUBDIR += cairo-dock
     SUBDIR += cairo-dock-plugins
     SUBDIR += caja-extensions
@@ -158,6 +160,9 @@
     SUBDIR += libcprime
     SUBDIR += libkdepim
     SUBDIR += libportal
+    SUBDIR += libportal-gtk3
+    SUBDIR += libportal-gtk4
+    SUBDIR += libportal-qt5
     SUBDIR += ljclive
     SUBDIR += lumina-archiver
     SUBDIR += lumina-calculator
@@ -243,6 +248,7 @@
     SUBDIR += sliderule
     SUBDIR += solanum
     SUBDIR += sowon
+    SUBDIR += spacefm
     SUBDIR += spice-gtk
     SUBDIR += subsurface
     SUBDIR += synapse

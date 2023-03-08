@@ -204,7 +204,6 @@
     SUBDIR += mysql-connector-c++
     SUBDIR += mysql-connector-java
     SUBDIR += mysql-connector-java51
-    SUBDIR += mysql-connector-odbc
     SUBDIR += mysql-connector-odbc-80
     SUBDIR += mysql-q4m
     SUBDIR += mysql-udf
@@ -667,14 +666,6 @@
     SUBDIR += postgresql-semver
     SUBDIR += postgresql-tds_fdw
     SUBDIR += postgresql-zhparser
-    SUBDIR += postgresql10-client
-    SUBDIR += postgresql10-contrib
-    SUBDIR += postgresql10-docs
-    SUBDIR += postgresql10-pgtcl
-    SUBDIR += postgresql10-plperl
-    SUBDIR += postgresql10-plpython
-    SUBDIR += postgresql10-pltcl
-    SUBDIR += postgresql10-server
     SUBDIR += postgresql11-client
     SUBDIR += postgresql11-contrib
     SUBDIR += postgresql11-docs

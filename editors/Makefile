@@ -194,6 +194,7 @@
     SUBDIR += libreoffice-xh
     SUBDIR += libreoffice-zu
     SUBDIR += linux-bcompare
+    SUBDIR += linux-r7-office
     SUBDIR += linux-sublime
     SUBDIR += linux-sublime-text4
     SUBDIR += linux-sublime3
@@ -242,6 +243,7 @@
     SUBDIR += rehex
     SUBDIR += retext
     SUBDIR += rubygem-neovim
+    SUBDIR += sam
     SUBDIR += scite
     SUBDIR += se
     SUBDIR += semi

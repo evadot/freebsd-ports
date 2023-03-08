@@ -1,5 +1,6 @@
 PORTNAME=	kwin
 DISTVERSION=	${KDE_PLASMA_VERSION}
+PORTREVISION=	2
 CATEGORIES=	x11-wm kde kde-plasma
 
 MAINTAINER=	kde@FreeBSD.org
@@ -26,8 +27,10 @@ LIB_DEPENDS=	libXcursor.so:x11/libXcursor \
 		libxcvt.so:x11/libxcvt
 BUILD_DEPENDS=	${LOCALBASE}/include/linux/input.h:devel/evdev-proto \
 		xwayland-devel>0:x11-servers/xwayland-devel \
-		wayland-protocols>0:graphics/wayland-protocols
-RUN_DEPENDS=	xwayland-devel>0:x11-servers/xwayland-devel
+		wayland-protocols>0:graphics/wayland-protocols \
+		hwdata>0:misc/hwdata
+RUN_DEPENDS=	xwayland-devel>0:x11-servers/xwayland-devel \
+		hwdata>0:misc/hwdata
 
 CONFLICTS_INSTALL=	kwinft # bin/kwin_wayland
 
@@ -52,5 +55,12 @@ USE_XORG=	ice sm x11 xcb xext xi
 SHEBANG_FILES=	kconf_update/*.py \
 		kconf_update/*.pl \
 		src/effects/strip-effect-metadata.py
+
+# A (hopefully) temporary workaround for
+# https://gitlab.freedesktop.org/gstreamer/gstreamer/-/issues/2026
+post-patch:
+	${REINPLACE_CMD} -E \
+		's|https://files.kde.org/plasma/kwin/effect-videos/([a-z_]+)\.ogv|https://arrowd.name/kwin-effect-videos/\1\.webm|' \
+		${WRKSRC}/src/effects/*/metadata.json
 
 .include <bsd.port.mk>

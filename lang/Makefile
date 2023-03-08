@@ -90,7 +90,6 @@
     SUBDIR += gauche
     SUBDIR += gawk
     SUBDIR += gcc
-    SUBDIR += gcc-ecj45
     SUBDIR += gcc10
     SUBDIR += gcc11
     SUBDIR += gcc11-devel
@@ -104,6 +103,7 @@
     SUBDIR += gforth
     SUBDIR += ghc
     SUBDIR += ghc810
+    SUBDIR += gir-to-d
     SUBDIR += gjs
     SUBDIR += gleam
     SUBDIR += gnat12
@@ -135,6 +135,7 @@
     SUBDIR += hermes
     SUBDIR += hla
     SUBDIR += hs-brainfuck
+    SUBDIR += hs-futhark
     SUBDIR += hs-unlambda
     SUBDIR += huc
     SUBDIR += icc

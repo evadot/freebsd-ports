@@ -95,6 +95,7 @@
     SUBDIR += cg3
     SUBDIR += cgrep
     SUBDIR += chkascii
+    SUBDIR += choose
     SUBDIR += chpp
     SUBDIR += cl-meta
     SUBDIR += cl-meta-sbcl
@@ -103,6 +104,7 @@
     SUBDIR += clucene
     SUBDIR += cmark
     SUBDIR += coccigrep
+    SUBDIR += code-minimap
     SUBDIR += code2html
     SUBDIR += codesearch
     SUBDIR += codespell
@@ -503,6 +505,7 @@
     SUBDIR += nuspell
     SUBDIR += nux
     SUBDIR += ny-aspell
+    SUBDIR += obsidian
     SUBDIR += ocaml-csv
     SUBDIR += ocaml-expat
     SUBDIR += ocaml-text
@@ -1411,6 +1414,7 @@
     SUBDIR += py-numpydoc
     SUBDIR += py-ocrmypdf
     SUBDIR += py-openpyxl
+    SUBDIR += py-opensearch-py
     SUBDIR += py-openstackdocstheme
     SUBDIR += py-openstep-plist
     SUBDIR += py-orange3-text

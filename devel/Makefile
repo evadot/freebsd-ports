@@ -170,6 +170,7 @@
     SUBDIR += apitrace
     SUBDIR += app-builder
     SUBDIR += appstream
+    SUBDIR += appstream-compose
     SUBDIR += appstream-glib
     SUBDIR += appstream-qt
     SUBDIR += apr1
@@ -270,6 +271,7 @@
     SUBDIR += bcunit
     SUBDIR += bear
     SUBDIR += benchmark
+    SUBDIR += bencodetools
     SUBDIR += bennugd-core
     SUBDIR += bennugd-modules
     SUBDIR += bfg
@@ -306,6 +308,7 @@
     SUBDIR += bugzilla44
     SUBDIR += bugzilla50
     SUBDIR += build
+    SUBDIR += build2
     SUBDIR += buildkite-agent
     SUBDIR += buildstream
     SUBDIR += bullet
@@ -846,6 +849,7 @@
     SUBDIR += glade
     SUBDIR += glademm
     SUBDIR += glib20
+    SUBDIR += glibd
     SUBDIR += glibmm
     SUBDIR += glibmm26
     SUBDIR += glitter
@@ -879,6 +883,8 @@
     SUBDIR += godot-tools
     SUBDIR += godot2
     SUBDIR += godot2-tools
+    SUBDIR += godot35
+    SUBDIR += godot35-tools
     SUBDIR += goffice
     SUBDIR += gogs
     SUBDIR += golangci-lint
@@ -1151,6 +1157,7 @@
     SUBDIR += libburn
     SUBDIR += libcbor
     SUBDIR += libccid
+    SUBDIR += libcdada
     SUBDIR += libcdb
     SUBDIR += libcds
     SUBDIR += libcfu
@@ -1226,6 +1233,7 @@
     SUBDIR += libfreefare
     SUBDIR += libfsapfs
     SUBDIR += libfsext
+    SUBDIR += libfsfat
     SUBDIR += libfshfs
     SUBDIR += libfsntfs
     SUBDIR += libfsxfs
@@ -1326,6 +1334,7 @@
     SUBDIR += libpeak
     SUBDIR += libpeas
     SUBDIR += libpff
+    SUBDIR += libphdi
     SUBDIR += libphk
     SUBDIR += libphonenumber
     SUBDIR += libplist
@@ -1413,6 +1422,7 @@
     SUBDIR += libvanessa_socket
     SUBDIR += libvc
     SUBDIR += libversion
+    SUBDIR += libvex
     SUBDIR += libvhdi
     SUBDIR += libvirt
     SUBDIR += libvirt-dbus
@@ -4513,6 +4523,8 @@
     SUBDIR += py-distributed
     SUBDIR += py-dj40-django-rq
     SUBDIR += py-dj40-graphene-django
+    SUBDIR += py-dj41-django-rq
+    SUBDIR += py-dj41-graphene-django
     SUBDIR += py-django-rq
     SUBDIR += py-dockerpty
     SUBDIR += py-docopt
@@ -4582,6 +4594,7 @@
     SUBDIR += py-flake8-bugbear
     SUBDIR += py-flake8-builtins
     SUBDIR += py-flake8-docstrings
+    SUBDIR += py-flake8-future-annotations
     SUBDIR += py-flake8-import-order
     SUBDIR += py-flake8-polyfill
     SUBDIR += py-flake8-print
@@ -4731,6 +4744,7 @@
     SUBDIR += py-itemadapter
     SUBDIR += py-itemloaders
     SUBDIR += py-iteration-utilities
+    SUBDIR += py-itertree
     SUBDIR += py-itypes
     SUBDIR += py-janus
     SUBDIR += py-jaraco
@@ -4804,6 +4818,7 @@
     SUBDIR += py-lazr.uri
     SUBDIR += py-lazy
     SUBDIR += py-lazy-object-proxy
+    SUBDIR += py-lazy_loader
     SUBDIR += py-libcst
     SUBDIR += py-libcst03
     SUBDIR += py-libioc
@@ -5099,6 +5114,7 @@
     SUBDIR += py-purl
     SUBDIR += py-py
     SUBDIR += py-py-ubjson
+    SUBDIR += py-pyTooling
     SUBDIR += py-py_interface
     SUBDIR += py-pyasn1
     SUBDIR += py-pyasn1-modules
@@ -5469,6 +5485,7 @@
     SUBDIR += py-telepath
     SUBDIR += py-tempora
     SUBDIR += py-tenacity
+    SUBDIR += py-tendo
     SUBDIR += py-termcolor
     SUBDIR += py-termcolor-whl
     SUBDIR += py-termstyle
@@ -6685,14 +6702,22 @@
     SUBDIR += rubygem-glib2
     SUBDIR += rubygem-gobject-introspection
     SUBDIR += rubygem-google-api-client
+    SUBDIR += rubygem-google-apis-cloudbilling_v1
+    SUBDIR += rubygem-google-apis-cloudresourcemanager_v1
     SUBDIR += rubygem-google-apis-compute_v1
+    SUBDIR += rubygem-google-apis-compute_v1_057
+    SUBDIR += rubygem-google-apis-container_v1
+    SUBDIR += rubygem-google-apis-container_v1beta1
     SUBDIR += rubygem-google-apis-core
     SUBDIR += rubygem-google-apis-discovery_v1
     SUBDIR += rubygem-google-apis-generator
+    SUBDIR += rubygem-google-apis-iam_v1
     SUBDIR += rubygem-google-apis-iamcredentials_v1
     SUBDIR += rubygem-google-apis-monitoring_v3
     SUBDIR += rubygem-google-apis-pubsub_v1
+    SUBDIR += rubygem-google-apis-serviceusage_v1
     SUBDIR += rubygem-google-apis-sqladmin_v1beta4
+    SUBDIR += rubygem-google-apis-sqladmin_v1beta4_041
     SUBDIR += rubygem-google-apis-storage_v1
     SUBDIR += rubygem-google-gax
     SUBDIR += rubygem-google-iam-v1
@@ -7600,7 +7625,6 @@
     SUBDIR += yajl
     SUBDIR += yajl-tcl
     SUBDIR += yaml-cpp
-    SUBDIR += yaml-cpp03
     SUBDIR += yaml2argdata
     SUBDIR += yasm
     SUBDIR += yder
@@ -7620,6 +7644,7 @@
     SUBDIR += zpu-binutils
     SUBDIR += zpu-gcc
     SUBDIR += zthread
+    SUBDIR += zycore-c
     SUBDIR += zydis
     SUBDIR += zziplib
 

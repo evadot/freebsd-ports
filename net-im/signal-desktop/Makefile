@@ -1,13 +1,14 @@
 PORTNAME=	signal-desktop
 DISTVERSIONPREFIX=	v
-DISTVERSION=	6.5.1
+DISTVERSION=	6.7.0
+PORTREVISION=	1
 CATEGORIES=	net-im
 MASTER_SITES=	LOCAL/mikael/signal-desktop/:npm \
 		LOCAL/mikael/signal-desktop/:sqlite \
 		https://nodejs.org/download/release/v${NODE_VERSION}/:node \
 		https://electronjs.org/headers/v${ELECTRON_GYP_VERSION}/:electron_gyp \
 		https://build-artifacts.signal.org/desktop/:sqlcipher
-DISTFILES=	signal-desktop-${DISTVERSION}-yarn-cache.tar.gz:prefetch \
+DISTFILES=	signal-desktop-${DISTVERSION}-yarn-cache.tar.gz \
 		signal-desktop-6.4.1-npm-cache.tar.gz:npm \
 		node-v${NODE_VERSION}-headers.tar.gz:node \
 		node-v${ELECTRON_GYP_VERSION}-headers.tar.gz:electron_gyp \
@@ -34,7 +35,7 @@ BUILD_DEPENDS=	${LOCALBASE}/lib/libringrtc.so:multimedia/ringrtc \
 		vips>0:graphics/vips \
 		yarn:www/yarn-node16
 LIB_DEPENDS=	libasound.so:audio/alsa-lib \
-		libatk-bridge-2.0.so:accessibility/at-spi2-atk \
+		libatk-bridge-2.0.so:accessibility/at-spi2-core \
 		libatspi.so:accessibility/at-spi2-core \
 		libcups.so:print/cups \
 		libdbus-1.so:devel/dbus \
@@ -85,15 +86,14 @@ _BUILD_DATE=	$$(date +'%s')
 
 ELECTRON_VER_MAJOR=	22
 # keep NODE_VERSION in sync with www/node16 DISTVERSION
-NODE_VERSION=		16.19.0
+NODE_VERSION=		16.19.1
 # bump ELECTRON_GYP_VERSION when ELECTRON_VER_MAJOR is changed
-ELECTRON_GYP_VERSION=	22.0.0
+ELECTRON_GYP_VERSION=	22.2.0
 
 # ll work/.cache/yarn/v6 | egrep "@signalapp|esbuild-freebsd"
-NPM_SIGNAL_DIR=		npm-@signalapp-libsignal-client-0.21.1-381d6162ae0e7719dc625780c1d6c3f9f558c33d-integrity
-NPM_RINGRTC_DIR=	npm-@signalapp-ringrtc-2.23.0-982fb6268eab2eb35a61624149b5f9ce9af28907-integrity
+NPM_SIGNAL_DIR=		npm-@signalapp-libsignal-client-0.22.0-d57441612df46f90df68fc5d9ad45b857b9d2c44-integrity
+NPM_RINGRTC_DIR=	npm-@signalapp-ringrtc-2.24.0-634160d24b2e13967a634e0f3236b2b4b5854091-integrity
 NPM_SQLITE3_DIR=	npm-@signalapp-better-sqlite3-8.4.3-7ffa8d03d2a12543247936bfb7b9f74cdbc6fe9b-integrity
-NPM_PLAYWRITE_DIR=	npm-playwright-core-1.17.1-a16e0f89284a0ed8ae6d77e1c905c84b8a2ba022-integrity
 NPM_ESBUILD_VERS=	0.17.2
 SQLCIPHER=		sqlcipher-4.5.3-fts--3.0.7--0.2.1-b633825cf7e0fdd39a6cdf128f2bd76552a88d325f2b9cd07bb87a457cefb986
 
@@ -165,9 +165,6 @@ do-build:
 	${CP} ${DISTDIR}/${SQLCIPHER}.tar.gz \
 		${WRKDIR}/.cache/yarn/v6/${NPM_SQLITE3_DIR}/node_modules/@signalapp/better-sqlite3/deps/sqlcipher.tar.gz
 
-	# patch-package can't patch playwright-core, patch the yarn cache instead
-	${CP} ${FILESDIR}/playwrigth-registry.js \
-	 	${WRKDIR}/.cache/yarn/v6/${NPM_PLAYWRITE_DIR}/node_modules/playwright-core/lib/utils/registry.js
 	${CP} ${FILESDIR}/fetch-prebuild.js \
 		${WRKDIR}/.cache/yarn/v6/${NPM_RINGRTC_DIR}/node_modules/@signalapp/ringrtc/scripts/fetch-prebuild.js
 	${CP} ${FILESDIR}/download.js \

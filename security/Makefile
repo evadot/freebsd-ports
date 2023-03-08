@@ -408,6 +408,7 @@
     SUBDIR += openssh-askpass
     SUBDIR += openssh-portable
     SUBDIR += openssl
+    SUBDIR += openssl-agent
     SUBDIR += openssl-devel
     SUBDIR += openssl-quictls
     SUBDIR += openssl-unsafe
@@ -714,6 +715,7 @@
     SUBDIR += pam-modules
     SUBDIR += pam-mysql
     SUBDIR += pam-pgsql
+    SUBDIR += pam_fprint
     SUBDIR += pam_google_authenticator
     SUBDIR += pam_helper
     SUBDIR += pam_jail
@@ -730,6 +732,7 @@
     SUBDIR += pam_script
     SUBDIR += pam_search_list
     SUBDIR += pam_ssh_agent_auth
+    SUBDIR += pam_u2f
     SUBDIR += pam_yubico
     SUBDIR += pamtester
     SUBDIR += paperkey
@@ -1228,6 +1231,7 @@
     SUBDIR += srm
     SUBDIR += ssb
     SUBDIR += ssdeep
+    SUBDIR += ssh-import-id
     SUBDIR += ssh-multiadd
     SUBDIR += ssh-tools
     SUBDIR += ssh-vault
