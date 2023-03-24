@@ -339,6 +339,7 @@
     SUBDIR += ccache-memcached
     SUBDIR += ccache-memcached-static
     SUBDIR += ccache-static
+    SUBDIR += ccache4
     SUBDIR += cccc
     SUBDIR += ccdoc
     SUBDIR += ccls
@@ -385,6 +386,7 @@
     SUBDIR += clazy
     SUBDIR += cld2
     SUBDIR += clewn
+    SUBDIR += cli
     SUBDIR += cli11
     SUBDIR += clig
     SUBDIR += cligen
@@ -697,9 +699,7 @@
     SUBDIR += fpc-tplylib
     SUBDIR += fpc-zlib
     SUBDIR += fpp
-    SUBDIR += frama-c
     SUBDIR += freebsd-gcc12
-    SUBDIR += freebsd-gcc6
     SUBDIR += freebsd-gcc9
     SUBDIR += freebsd-git-devtools
     SUBDIR += freebsd-sysroot
@@ -1269,7 +1269,6 @@
     SUBDIR += libheinz
     SUBDIR += libhoard
     SUBDIR += libhtp
-    SUBDIR += libhyve-remote
     SUBDIR += libibuddy
     SUBDIR += libical
     SUBDIR += libindicator
@@ -1341,7 +1340,6 @@
     SUBDIR += libpo6
     SUBDIR += libpololu-avr
     SUBDIR += libpru
-    SUBDIR += libpthread-stubs
     SUBDIR += libqb
     SUBDIR += libqcow
     SUBDIR += libqsbr
@@ -1442,7 +1440,6 @@
     SUBDIR += libxtend
     SUBDIR += libzim
     SUBDIR += libzookeeper
-    SUBDIR += libzrtpcpp
     SUBDIR += libzvbi
     SUBDIR += lightning
     SUBDIR += linenoise-ng
@@ -1566,6 +1563,7 @@
     SUBDIR += mercurial
     SUBDIR += mergify
     SUBDIR += meson
+    SUBDIR += meson-python
     SUBDIR += microsoft-gsl
     SUBDIR += mill
     SUBDIR += mimalloc
@@ -3010,7 +3008,6 @@
     SUBDIR += p5-Multiplex-CMD
     SUBDIR += p5-NEXT
     SUBDIR += p5-Net-DBus
-    SUBDIR += p5-Net-ZooKeeper
     SUBDIR += p5-No-Worries
     SUBDIR += p5-Number-Bytes-Human
     SUBDIR += p5-Number-Tolerant
@@ -4178,6 +4175,7 @@
     SUBDIR += py-aiorpcX
     SUBDIR += py-aiortc
     SUBDIR += py-aiosignal
+    SUBDIR += py-airtable-python-wrapper
     SUBDIR += py-amalgamate
     SUBDIR += py-aniso8601
     SUBDIR += py-aniso86016
@@ -4351,6 +4349,7 @@
     SUBDIR += py-blinker
     SUBDIR += py-blist
     SUBDIR += py-bluelet
+    SUBDIR += py-boltons
     SUBDIR += py-boolean.py
     SUBDIR += py-boto
     SUBDIR += py-botocore
@@ -4412,6 +4411,7 @@
     SUBDIR += py-click-default-group
     SUBDIR += py-click-default-group-wheel
     SUBDIR += py-click-log
+    SUBDIR += py-click-option-group
     SUBDIR += py-click-plugins
     SUBDIR += py-click-threading
     SUBDIR += py-click7
@@ -4566,6 +4566,7 @@
     SUBDIR += py-extremes
     SUBDIR += py-fabric
     SUBDIR += py-fabric3
+    SUBDIR += py-face
     SUBDIR += py-factory-boy
     SUBDIR += py-fam
     SUBDIR += py-fastbencode
@@ -4654,6 +4655,7 @@
     SUBDIR += py-giturlparse
     SUBDIR += py-glance-store
     SUBDIR += py-glob2
+    SUBDIR += py-glom
     SUBDIR += py-gobject3
     SUBDIR += py-google-cloud-iam
     SUBDIR += py-google-crc32c
@@ -4686,6 +4688,10 @@
     SUBDIR += py-hash_ring
     SUBDIR += py-hatch
     SUBDIR += py-hatch-fancy-pypi-readme
+    SUBDIR += py-hatch-jupyter-builder
+    SUBDIR += py-hatch-nodejs-version
+    SUBDIR += py-hatch-requirements-txt
+    SUBDIR += py-hatch-semver
     SUBDIR += py-hatch-vcs
     SUBDIR += py-hatchling
     SUBDIR += py-heapdict
@@ -4739,6 +4745,7 @@
     SUBDIR += py-ipywidgets
     SUBDIR += py-iso8601
     SUBDIR += py-isodate
+    SUBDIR += py-isoduration
     SUBDIR += py-isort
     SUBDIR += py-itanium_demangler
     SUBDIR += py-itemadapter
@@ -4792,10 +4799,14 @@
     SUBDIR += py-jsonsir
     SUBDIR += py-jupyter-client
     SUBDIR += py-jupyter-core
+    SUBDIR += py-jupyter-events
     SUBDIR += py-jupyter-packaging
     SUBDIR += py-jupyter-server
+    SUBDIR += py-jupyter-server-fileid
     SUBDIR += py-jupyter-server-mathjax
+    SUBDIR += py-jupyter-server-ydoc
     SUBDIR += py-jupyter-telemetry
+    SUBDIR += py-jupyter-ydoc
     SUBDIR += py-jupyter_console
     SUBDIR += py-jupyterlab
     SUBDIR += py-jupyterlab-server
@@ -5368,6 +5379,7 @@
     SUBDIR += py-retype
     SUBDIR += py-rfc3339
     SUBDIR += py-rfc3339-validator
+    SUBDIR += py-rfc3986-validator
     SUBDIR += py-robotframework
     SUBDIR += py-robotframework-databaselibrary
     SUBDIR += py-robotframework-pabot
@@ -5550,6 +5562,7 @@
     SUBDIR += py-types-psutil
     SUBDIR += py-types-psycopg2
     SUBDIR += py-types-requests
+    SUBDIR += py-types-setuptools
     SUBDIR += py-types-toml
     SUBDIR += py-types-typed-ast
     SUBDIR += py-types-urllib3
@@ -5662,6 +5675,7 @@
     SUBDIR += py-xstatic-term.js
     SUBDIR += py-xstatic-tv4
     SUBDIR += py-xxhash
+    SUBDIR += py-y-py
     SUBDIR += py-yacs
     SUBDIR += py-yaml
     SUBDIR += py-yamllint
@@ -5673,6 +5687,7 @@
     SUBDIR += py-yaspin
     SUBDIR += py-yattag
     SUBDIR += py-yg.lockfile
+    SUBDIR += py-ypy-websocket
     SUBDIR += py-yunomi
     SUBDIR += py-z3c.autoinclude
     SUBDIR += py-z3c.batching
@@ -5729,7 +5744,6 @@
     SUBDIR += pycount
     SUBDIR += pydbus-common
     SUBDIR += pydeps
-    SUBDIR += pydio-packr
     SUBDIR += pyenv
     SUBDIR += pygobject3-common
     SUBDIR += pylint
@@ -5831,7 +5845,6 @@
     SUBDIR += rhtvision
     SUBDIR += rinutils
     SUBDIR += riscv32-unknown-elf-gcc
-    SUBDIR += riscv64-gcc
     SUBDIR += riscv64-none-elf-gcc
     SUBDIR += rkcommon
     SUBDIR += rlog
@@ -5983,6 +5996,7 @@
     SUBDIR += rubygem-aws-sdk-cloudsearch
     SUBDIR += rubygem-aws-sdk-cloudsearchdomain
     SUBDIR += rubygem-aws-sdk-cloudtrail
+    SUBDIR += rubygem-aws-sdk-cloudtraildata
     SUBDIR += rubygem-aws-sdk-cloudwatch
     SUBDIR += rubygem-aws-sdk-cloudwatchevents
     SUBDIR += rubygem-aws-sdk-cloudwatchevidently
@@ -6258,6 +6272,7 @@
     SUBDIR += rubygem-aws-sdk-textract
     SUBDIR += rubygem-aws-sdk-timestreamquery
     SUBDIR += rubygem-aws-sdk-timestreamwrite
+    SUBDIR += rubygem-aws-sdk-tnb
     SUBDIR += rubygem-aws-sdk-transcribeservice
     SUBDIR += rubygem-aws-sdk-transcribestreamingservice
     SUBDIR += rubygem-aws-sdk-transfer
@@ -6704,22 +6719,30 @@
     SUBDIR += rubygem-google-api-client
     SUBDIR += rubygem-google-apis-cloudbilling_v1
     SUBDIR += rubygem-google-apis-cloudresourcemanager_v1
+    SUBDIR += rubygem-google-apis-cloudresourcemanager_v2
+    SUBDIR += rubygem-google-apis-cloudresourcemanager_v3
     SUBDIR += rubygem-google-apis-compute_v1
     SUBDIR += rubygem-google-apis-compute_v1_057
     SUBDIR += rubygem-google-apis-container_v1
     SUBDIR += rubygem-google-apis-container_v1beta1
     SUBDIR += rubygem-google-apis-core
     SUBDIR += rubygem-google-apis-discovery_v1
+    SUBDIR += rubygem-google-apis-drive_v3
     SUBDIR += rubygem-google-apis-generator
     SUBDIR += rubygem-google-apis-iam_v1
+    SUBDIR += rubygem-google-apis-iam_v2
+    SUBDIR += rubygem-google-apis-iam_v2beta
     SUBDIR += rubygem-google-apis-iamcredentials_v1
     SUBDIR += rubygem-google-apis-monitoring_v3
     SUBDIR += rubygem-google-apis-pubsub_v1
     SUBDIR += rubygem-google-apis-serviceusage_v1
+    SUBDIR += rubygem-google-apis-sheets_v4
     SUBDIR += rubygem-google-apis-sqladmin_v1beta4
     SUBDIR += rubygem-google-apis-sqladmin_v1beta4_041
     SUBDIR += rubygem-google-apis-storage_v1
     SUBDIR += rubygem-google-gax
+    SUBDIR += rubygem-google-iam-credentials
+    SUBDIR += rubygem-google-iam-credentials-v1
     SUBDIR += rubygem-google-iam-v1
     SUBDIR += rubygem-google-protobuf
     SUBDIR += rubygem-googleapis-common-protos
@@ -7036,6 +7059,7 @@
     SUBDIR += rubygem-redis-activesupport-rails61
     SUBDIR += rubygem-redis-store
     SUBDIR += rubygem-redlock
+    SUBDIR += rubygem-redlock1
     SUBDIR += rubygem-redmine_plugin_support
     SUBDIR += rubygem-reentrant_flock
     SUBDIR += rubygem-ref

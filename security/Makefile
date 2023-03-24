@@ -292,6 +292,7 @@
     SUBDIR += libnitrokey
     SUBDIR += libntlm
     SUBDIR += libomemo
+    SUBDIR += libomemo-c
     SUBDIR += liboqs
     SUBDIR += libotr
     SUBDIR += libotr3
@@ -321,6 +322,7 @@
     SUBDIR += libzrtpcppcore
     SUBDIR += lime
     SUBDIR += linux-bitwarden-cli
+    SUBDIR += linux-c7-ca-certificates
     SUBDIR += linux-c7-cyrus-sasl2
     SUBDIR += linux-c7-gnutls
     SUBDIR += linux-c7-libgcrypt
@@ -409,9 +411,10 @@
     SUBDIR += openssh-portable
     SUBDIR += openssl
     SUBDIR += openssl-agent
-    SUBDIR += openssl-devel
     SUBDIR += openssl-quictls
     SUBDIR += openssl-unsafe
+    SUBDIR += openssl30
+    SUBDIR += openssl31
     SUBDIR += openssl_tpm_engine
     SUBDIR += openvas
     SUBDIR += openvpn
@@ -729,6 +732,7 @@
     SUBDIR += pam_pkcs11
     SUBDIR += pam_pwdfile
     SUBDIR += pam_require
+    SUBDIR += pam_rssh
     SUBDIR += pam_script
     SUBDIR += pam_search_list
     SUBDIR += pam_ssh_agent_auth
@@ -1131,6 +1135,7 @@
     SUBDIR += rubygem-pundit61
     SUBDIR += rubygem-pyu-ruby-sasl
     SUBDIR += rubygem-rack-oauth2
+    SUBDIR += rubygem-rack-oauth21
     SUBDIR += rubygem-razorback-scriptNugget
     SUBDIR += rubygem-rbnacl
     SUBDIR += rubygem-rbnacl-libsodium

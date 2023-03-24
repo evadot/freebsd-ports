@@ -1,6 +1,7 @@
 PORTNAME=	mpv
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.35.1
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	multimedia audio
 
@@ -27,7 +28,8 @@ SHEBANG_FILES=	*.py TOOLS/*.py
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	mpv-player
-MESON_ARGS=	-Dshaderc=disabled \
+MESON_ARGS=	--auto-features=auto \
+		-Dshaderc=disabled \
 		-Dlibmpv=true
 
 OPTIONS_DEFINE=		ARCHIVE DOCS LCMS2 MANPAGES MUJS RUBBERBAND TEST UCHARDET EXAMPLES ZIMG

@@ -1,5 +1,5 @@
 PORTNAME=	llvm
-DISTVERSION=	16.0.0rc3
+DISTVERSION=	16.0.0
 PORTREVISION=	1
 CATEGORIES=	devel lang
 MASTER_SITES=	https://github.com/llvm/llvm-project/releases/download/llvmorg-${DISTVERSION:S/rc/-rc/}/ \
@@ -132,8 +132,7 @@ CLANG_SUB_LIST=		XCC=clang${LLVM_SUFFIX} \
 CLANG_USE=		GNOME=libxml2
 COMPILER_RT_DESC=	Sanitizer libraries
 COMPILER_RT_CMAKE_ON=	-DCOMPILER_RT_INSTALL_PATH=${LLVM_PREFIX}/lib/clang/${LLVM_RELEASE}
-COMPILER_RT_PLIST_FILES=${_COMPILER_RT_LIBS} \
-			${COMPILER_RT_IGNORELISTS:S|^|${_CRTILDIR}/|}
+COMPILER_RT_PLIST_FILES=${_COMPILER_RT_LIBS}
 DOCS_BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sphinx-markdown-tables>=0:textproc/py-sphinx-markdown-tables@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}recommonmark>=0.0.20180530:textproc/py-recommonmark@${PY_FLAVOR}
 DOCS_CONFLICTS_BUILD=	cmark
@@ -225,10 +224,6 @@ FLANG_PATTERN=	${FLANG_COMMANDS:S/^/bin./:tW:C/  */|/g}|flang|libFIR|libFortran|
 MLIR_PATTERN=	${MLIR_COMMANDS:S/^/bin./:tW:C/  */|/g}|mlir|libMLIR|obj.MLIRCAP
 
 .include <bsd.port.options.mk>
-
-.if defined(PPC_ABI) && ${PPC_ABI} == ELFv2
-EXTRA_PATCHES=	${FILESDIR}/extra-patch-clang_lib_Driver_ToolChains_Clang.cpp
-.endif
 
 # keep in sync with /usr/src/lib/clang/clang.build.mk
 # ----------- start of sync block ------------------
@@ -406,6 +401,9 @@ COMPILER_RT_ARCHS=	riscv64
 
 _CRTBASEDIR=	${LLVM_DIR}/lib/clang/${LLVM_MAJOR}
 _CRTILDIR=	${_CRTBASEDIR}/share
+.if ${ARCH} != powerpc
+COMPILER_RT_PLIST_FILES+=	${COMPILER_RT_IGNORELISTS:S|^|${_CRTILDIR}/|}
+.endif
 _CRTLIBDIR=	${_CRTBASEDIR}/lib
 
 .include "Makefile.RUNTIMES"
