@@ -1,5 +1,5 @@
 PORTNAME=	libpciaccess
-PORTVERSION=	0.16
+PORTVERSION=	0.17
 CATEGORIES=	devel
 
 MAINTAINER=	x11@FreeBSD.org
@@ -14,6 +14,7 @@ RUN_DEPENDS=	${LOCALBASE}/share/pciids/pci.ids:misc/pciids
 
 CONFIGURE_ARGS=	--with-pciids-path=${LOCALBASE}/share/pciids
 
+EXTRACT_SUFX=	.tar.xz
 USES=		xorg-cat:lib
 INSTALL_TARGET=	install-strip
 
