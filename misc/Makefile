@@ -82,6 +82,7 @@
     SUBDIR += digitemp
     SUBDIR += dijo
     SUBDIR += dive
+    SUBDIR += dlib-models
     SUBDIR += dnetc
     SUBDIR += dotenv-linter
     SUBDIR += dtach
@@ -412,6 +413,7 @@
     SUBDIR += py-halo
     SUBDIR += py-histoprint
     SUBDIR += py-huepy
+    SUBDIR += py-icoextract
     SUBDIR += py-ipyfastscape
     SUBDIR += py-kartograph
     SUBDIR += py-lightgbm
@@ -450,6 +452,7 @@
     SUBDIR += py-scikit-fusion
     SUBDIR += py-serverfiles
     SUBDIR += py-shap2
+    SUBDIR += py-shell-gpt
     SUBDIR += py-soapy_power
     SUBDIR += py-spdx
     SUBDIR += py-spdx-lookup

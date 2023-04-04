@@ -963,6 +963,7 @@
     SUBDIR += py-willow
     SUBDIR += py-yaswfp
     SUBDIR += py-zbar-py
+    SUBDIR += pywal
     SUBDIR += qcomicbook
     SUBDIR += qcustomplot-qt5
     SUBDIR += qgis
@@ -990,6 +991,7 @@
     SUBDIR += quesoglc
     SUBDIR += quickqanava
     SUBDIR += qvge
+    SUBDIR += qview
     SUBDIR += radius-engine
     SUBDIR += rapid-photo-downloader
     SUBDIR += raster3d

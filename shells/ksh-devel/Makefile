@@ -10,7 +10,6 @@
 
 PORTNAME=	ksh
 PORTVERSION=	${AST_COMMIT_DATE}
-PORTREVISION=	1
 CATEGORIES=	shells
 PKGNAMESUFFIX=	-devel
 
@@ -20,12 +19,10 @@ WWW=		http://www.kornshell.com/
 
 LICENSE=	EPL
 
-BROKEN_aarch64=		Fails to link: missing sbrk
-BROKEN_riscv64=		Fails to link: missing sbrk
 BROKEN_FreeBSD_12=	exit code 139 making lib/libcmd
 
-HASH=		72d895d8
-AST_COMMIT_DATE=	2023.03.17
+HASH=		ceae1e44
+AST_COMMIT_DATE=	2023.03.30
 
 USES=		compiler:c11
 

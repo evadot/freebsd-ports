@@ -514,6 +514,7 @@
     SUBDIR += dasm
     SUBDIR += datadraw
     SUBDIR += date
+    SUBDIR += datovka
     SUBDIR += dbus
     SUBDIR += dbus-c++
     SUBDIR += dbus-glib
@@ -947,9 +948,6 @@
     SUBDIR += highlighterkit
     SUBDIR += highway
     SUBDIR += hoel
-    SUBDIR += horde-content
-    SUBDIR += horde-timeobjects
-    SUBDIR += horde-whups
     SUBDIR += hotspot
     SUBDIR += hp48cc
     SUBDIR += hp48xgcc
@@ -1180,6 +1178,7 @@
     SUBDIR += libdaemon
     SUBDIR += libdap
     SUBDIR += libdatadog
+    SUBDIR += libdatovka
     SUBDIR += libdatrie
     SUBDIR += libdbusmenu
     SUBDIR += libdbusmenu-qt
@@ -4085,8 +4084,6 @@
     SUBDIR += php82-sysvshm
     SUBDIR += php82-tokenizer
     SUBDIR += phpunit10
-    SUBDIR += phpunit6
-    SUBDIR += phpunit7
     SUBDIR += phpunit8
     SUBDIR += phpunit9
     SUBDIR += physfs
@@ -4133,6 +4130,7 @@
     SUBDIR += pth-hard
     SUBDIR += pthreadpool
     SUBDIR += pthsem
+    SUBDIR += ptl
     SUBDIR += ptlib
     SUBDIR += ptmalloc
     SUBDIR += ptmalloc2
@@ -4650,6 +4648,7 @@
     SUBDIR += py-git-up
     SUBDIR += py-git-url-parse
     SUBDIR += py-gitdb
+    SUBDIR += py-gitlab-webhook-handler
     SUBDIR += py-gitless
     SUBDIR += py-gitpython
     SUBDIR += py-giturlparse
@@ -4663,6 +4662,7 @@
     SUBDIR += py-google-pasta
     SUBDIR += py-google-re2
     SUBDIR += py-googleapis-common-protos
+    SUBDIR += py-gpep517
     SUBDIR += py-gpxpy
     SUBDIR += py-grab
     SUBDIR += py-graphene
@@ -4800,6 +4800,7 @@
     SUBDIR += py-jupyter-client
     SUBDIR += py-jupyter-core
     SUBDIR += py-jupyter-events
+    SUBDIR += py-jupyter-kernel-test
     SUBDIR += py-jupyter-packaging
     SUBDIR += py-jupyter-server
     SUBDIR += py-jupyter-server-fileid
@@ -4912,6 +4913,7 @@
     SUBDIR += py-multi_key_dict
     SUBDIR += py-multipledispatch
     SUBDIR += py-multiprocess
+    SUBDIR += py-multiset
     SUBDIR += py-multitasking
     SUBDIR += py-munch
     SUBDIR += py-murmurhash
@@ -5422,11 +5424,13 @@
     SUBDIR += py-session-info
     SUBDIR += py-setproctitle
     SUBDIR += py-setuptools
+    SUBDIR += py-setuptools-declarative-requirements
     SUBDIR += py-setuptools-git
     SUBDIR += py-setuptools-pkg
     SUBDIR += py-setuptools-rust
     SUBDIR += py-setuptools44
     SUBDIR += py-setuptools58
+    SUBDIR += py-setuptools_git_ls_files
     SUBDIR += py-setuptools_hg
     SUBDIR += py-setuptools_scm
     SUBDIR += py-setuptools_scm_git_archive
@@ -5532,6 +5536,7 @@
     SUBDIR += py-transaction
     SUBDIR += py-transitions
     SUBDIR += py-tree-format
+    SUBDIR += py-treelib
     SUBDIR += py-trimesh
     SUBDIR += py-trove-classifiers
     SUBDIR += py-ttictoc
@@ -7627,6 +7632,7 @@
     SUBDIR += xelfviewer
     SUBDIR += xeus
     SUBDIR += xeus-cling
+    SUBDIR += xeus-zmq
     SUBDIR += xfce4-dev-tools
     SUBDIR += xmake
     SUBDIR += xmltooling

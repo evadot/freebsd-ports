@@ -1,3 +1,550 @@
+  <vuln vid="466ba8bd-d033-11ed-addf-080027eda32c">
+    <topic>mediawiki -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>mediawiki135</name>
+	<range><lt>1.35.10</lt></range>
+      </package>
+    <package>
+	<name>mediawiki138</name>
+	<range><lt>1.38.6</lt></range>
+      </package>
+      <package>
+	<name>mediawiki139</name>
+	<range><lt>1.39.3</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Mediawikwi reports:</p>
+	<blockquote cite="https://lists.wikimedia.org/hyperkitty/list/mediawiki-announce@lists.wikimedia.org/message/6UQBHI5FWLATD7QO7DI4YS54U7XSSLAN/">
+	  <p>(T285159, CVE-2023-PENDING) SECURITY: X-Forwarded-For header allows
+	    brute-forcing autoblocked IP addresses.</p>
+	  <p>(T326946, CVE-2020-36649) SECURITY: Bundled PapaParse copy in
+	    VisualEditor has known ReDos.</p>
+	  <p>(T330086, CVE-2023-PENDING) SECURITY: OATHAuth allows replay attacks when
+	    MediaWiki is configured without ObjectCache; Insecure Default Configuration.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-PENDING</cvename>
+      <cvename>CVE-2020-36649</cvename>
+      <cvename>CVE-2023-PENDING</cvename>
+      <url>https://lists.wikimedia.org/hyperkitty/list/mediawiki-announce@lists.wikimedia.org/message/6UQBHI5FWLATD7QO7DI4YS54U7XSSLAN/</url>
+    </references>
+    <dates>
+      <discovery>2020-04-02</discovery>
+      <entry>2023-04-01</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="54006796-cf7b-11ed-a5d5-001b217b3468">
+    <topic>Gitlab -- Multiple Vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>gitlab-ce</name>
+	<range><ge>15.10.0</ge><lt>15.10.1</lt></range>
+	<range><ge>15.9.0</ge><lt>15.9.4</lt></range>
+	<range><ge>8.1</ge><lt>15.8.5</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Gitlab reports:</p>
+	<blockquote cite="https://about.gitlab.com/releases/2023/03/30/security-release-gitlab-15-10-1-released/">
+	  <p>Cross-site scripting in "Maximum page reached" page</p>
+	  <p>Private project guests can read new changes using a fork</p>
+	  <p>Mirror repository error reveals password in Settings UI</p>
+	  <p>DOS and high resource consumption of Prometheus server through abuse of Prometheus integration proxy endpoint</p>
+	  <p>Unauthenticated users can view Environment names from public projects limited to project members only</p>
+	  <p>Copying information to the clipboard could lead to the execution of unexpected commands</p>
+	  <p>Maintainer can leak masked webhook secrets by adding a new parameter to the webhook URL</p>
+	  <p>Arbitrary HTML injection possible when :soft_email_confirmation feature flag is enabled in the latest release</p>
+	  <p>Framing of arbitrary content (leading to open redirects) on any page allowing user controlled markdown</p>
+	  <p>MR for security reports are available to everyone</p>
+	  <p>API timeout when searching for group issues</p>
+	  <p>Unauthorised user can add child epics linked to victim's epic in an unrelated group</p>
+	  <p>GitLab search allows to leak internal notes</p>
+	  <p>Ambiguous branch name exploitation in GitLab</p>
+	  <p>Improper permissions checks for moving an issue</p>
+	  <p>Private project branches names can be leaked through a fork</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-3513</cvename>
+      <cvename>CVE-2023-0485</cvename>
+      <cvename>CVE-2023-1098</cvename>
+      <cvename>CVE-2023-1733</cvename>
+      <cvename>CVE-2023-0319</cvename>
+      <cvename>CVE-2023-1708</cvename>
+      <cvename>CVE-2023-0838</cvename>
+      <cvename>CVE-2023-0523</cvename>
+      <cvename>CVE-2023-0155</cvename>
+      <cvename>CVE-2023-1167</cvename>
+      <cvename>CVE-2023-1417</cvename>
+      <cvename>CVE-2023-1710</cvename>
+      <cvename>CVE-2023-0450</cvename>
+      <cvename>CVE-2023-1071</cvename>
+      <cvename>CVE-2022-3375</cvename>
+      <url>https://about.gitlab.com/releases/2023/03/30/security-release-gitlab-15-10-1-released/</url>
+    </references>
+    <dates>
+      <discovery>2023-03-30</discovery>
+      <entry>2023-03-31</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="6bd2773c-cf1a-11ed-bd44-080027f5fec9">
+    <topic>rubygem-time -- ReDoS vulnerability</topic>
+    <affects>
+      <package>
+	<name>ruby</name>
+	<range><ge>2.7.0,1</ge><lt>2.7.8,1</lt></range>
+	<range><ge>3.0.0,1</ge><lt>3.0.6,1</lt></range>
+	<range><ge>3.1.0,1</ge><lt>3.1.4,1</lt></range>
+	<range><ge>3.2.0.p1,1</ge><lt>3.2.2,1</lt></range>
+      </package>
+      <package>
+	<name>ruby27</name>
+	<range><ge>2.7.0,1</ge><lt>2.7.8,1</lt></range>
+      </package>
+      <package>
+	<name>ruby30</name>
+	<range><ge>3.0.0,1</ge><lt>3.0.6,1</lt></range>
+      </package>
+      <package>
+	<name>ruby31</name>
+	<range><ge>3.1.0,1</ge><lt>3.1.4,1</lt></range>
+      </package>
+      <package>
+	<name>ruby32</name>
+	<range><ge>3.2.0.p1,1</ge><lt>3.2.2,1</lt></range>
+      </package>
+      <package>
+	<name>rubygem-time</name>
+	<range><lt>0.2.2</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>ooooooo_q reports:</p>
+	<blockquote cite="https://www.ruby-lang.org/en/news/2023/03/30/redos-in-time-cve-2023-28756/">
+	  <p>
+	    The Time parser mishandles invalid strings that have
+	    specific characters. It causes an increase in execution
+	    time for parsing strings to Time objects.
+	  </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-28756</cvename>
+      <url>https://www.ruby-lang.org/en/news/2023/03/30/redos-in-time-cve-2023-28756/</url>
+    </references>
+    <dates>
+      <discovery>2023-03-30</discovery>
+      <entry>2023-03-30</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="9b60bba1-cf18-11ed-bd44-080027f5fec9">
+    <topic>rubygem-uri -- ReDoS vulnerability</topic>
+    <affects>
+      <package>
+	<name>ruby</name>
+	<range><ge>2.7.0,1</ge><lt>2.7.8,1</lt></range>
+	<range><ge>3.0.0,1</ge><lt>3.0.6,1</lt></range>
+	<range><ge>3.1.0,1</ge><lt>3.1.4,1</lt></range>
+	<range><ge>3.2.0.p1,1</ge><lt>3.2.2,1</lt></range>
+      </package>
+      <package>
+	<name>ruby27</name>
+	<range><ge>2.7.0,1</ge><lt>2.7.8,1</lt></range>
+      </package>
+      <package>
+	<name>ruby30</name>
+	<range><ge>3.0.0,1</ge><lt>3.0.6,1</lt></range>
+      </package>
+      <package>
+	<name>ruby31</name>
+	<range><ge>3.1.0,1</ge><lt>3.1.4,1</lt></range>
+      </package>
+      <package>
+	<name>ruby32</name>
+	<range><ge>3.2.0.p1,1</ge><lt>3.2.2,1</lt></range>
+      </package>
+      <package>
+	<name>rubygem-uri</name>
+	<range><lt>0.12.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Dominic Couture reports:</p>
+	<blockquote cite="https://www.ruby-lang.org/en/news/2023/03/28/redos-in-uri-cve-2023-28755/">
+	  <p>
+	    A ReDoS issue was discovered in the URI component. The URI
+	    parser mishandles invalid URLs that have specific
+	    characters. It causes an increase in execution time for
+	    parsing strings to URI objects.
+	  </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-28755</cvename>
+      <url>https://www.ruby-lang.org/en/news/2023/03/28/redos-in-uri-cve-2023-28755/</url>
+    </references>
+    <dates>
+      <discovery>2023-03-28</discovery>
+      <entry>2023-03-30</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="dc33795f-ced7-11ed-b1fe-6805ca2fa271">
+    <topic>powerdns-recursor -- denial of service</topic>
+    <affects>
+      <package>
+	<name>powerdns-recursor</name>
+	<range><lt>4.8.4</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>PowerDNS Team reports:</p>
+	<blockquote cite="https://blog.powerdns.com/2023/03/29/security-advisory-2023-02-for-powerdns-recursor-up-to-and-including-4-6-5-4-7-4-and-4-8-3/">
+	  <p>PowerDNS Security Advisory 2023-02: Deterred spoofing attempts
+	    can lead to authoritative servers being marked unavailable</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-26437</cvename>
+      <url>https://doc.powerdns.com/recursor/security-advisories/powerdns-advisory-2023-02.html</url>
+    </references>
+    <dates>
+      <discovery>2023-03-29</discovery>
+      <entry>2023-03-30</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="96d84238-b500-490b-b6aa-2b77090a0410">
+    <topic>xorg-server -- Overlay Window Use-After-Free</topic>
+    <affects>
+      <package>
+	<name>xorg-server</name>
+	<name>xephyr</name>
+	<name>xorg-vfbserver</name>
+	<range><lt>21.1.8,1</lt></range>
+      </package>
+      <package>
+	<name>xorg-nestserver</name>
+	<range><lt>21.1.8,2</lt></range>
+      </package>
+      <package>
+	<name>xwayland</name>
+	<range><ge>23.0.0,1</ge><lt>23.1.1,1</lt></range>
+	<range><lt>22.1.9,1</lt></range>
+      </package>
+      <package>
+	<name>xwayland-devel</name>
+	<range><lt>21.0.99.1.439</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The X.Org project reports:</p>
+	<blockquote cite="https://lists.x.org/archives/xorg-announce/2023-March/003374.html">
+	  <ul>
+	    <li>ZDI-CAN-19866/CVE-2023-1393: X.Org Server Overlay Window Use-After-Free
+	    Local Privilege Escalation Vulnerability
+
+	    <p>If a client explicitly destroys the compositor overlay window (aka COW),
+	    the Xserver would leave a dangling pointer to that window in the CompScreen
+	    structure, which will trigger a use-after-free later.</p></li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://lists.x.org/archives/xorg-announce/2023-March/003374.html</url>
+      <cvename>CVE-2023-1393</cvename>
+    </references>
+    <dates>
+      <discovery>2023-03-29</discovery>
+      <entry>2023-03-29</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="425b9538-ce5f-11ed-ade3-d4c9ef517024">
+    <topic>OpenSSL -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>openssl</name>
+	<range><lt>1.1.1t,1_2</lt></range>
+      </package>
+      <package>
+	<name>openssl30</name>
+	<range><lt>3.0.8_2</lt></range>
+      </package>
+      <package>
+	<name>openssl31</name>
+	<range><lt>3.1.0_2</lt></range>
+      </package>
+      <package>
+	<name>openssl-quic</name>
+	<range><lt>3.0.8_2</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The OpenSSL project reports:</p>
+	<blockquote cite="https://www.openssl.org/news/secadv/20230328.txt">
+	  <p>Severity: low</p>
+	  <p>Applications that use a non-default option when verifying certificates may be
+	    vulnerable to an attack from a malicious CA to circumvent certain checks.</p>
+	  <p>The function X509_VERIFY_PARAM_add0_policy() is documented to
+	    implicitly enable the certificate policy check when doing certificate
+	    verification. However the implementation of the function does not
+	    enable the check which allows certificates with invalid or incorrect
+	    policies to pass the certificate verification.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-0465</cvename>
+      <cvename>CVE-2023-0466</cvename>
+      <url>https://www.openssl.org/news/secadv/20230328.txt</url>
+    </references>
+    <dates>
+      <discovery>2023-03-28</discovery>
+      <entry>2023-03-29</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="955eb3cc-ce0b-11ed-825f-6c3be5272acd">
+    <topic>Grafana -- Stored XSS in Graphite FunctionDescription tooltip</topic>
+    <affects>
+      <package>
+	<name>grafana</name>
+	<range><lt>8.5.22</lt></range>
+	<range><ge>9.0.0</ge><lt>9.2.15</lt></range>
+	<range><ge>9.3.0</ge><lt>9.3.11</lt></range>
+	<range><ge>9.4.0</ge><lt>9.4.7</lt></range>
+      </package>
+      <package>
+	<name>grafana8</name>
+	<range><lt>8.5.22</lt></range>
+      </package>
+      <package>
+	<name>grafana9</name>
+	<range><lt>9.2.15</lt></range>
+	<range><ge>9.3.0</ge><lt>9.3.11</lt></range>
+	<range><ge>9.4.0</ge><lt>9.4.7</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Grafana Labs reports:</p>
+	<blockquote cite="https://grafana.com/blog/2023/03/22/grafana-security-release-new-versions-with-security-fixes-for-cve-2023-1410/">
+	  <p>When a user adds a Graphite data source, they can then use the data source
+	  in a dashboard. This capability contains a feature to use Functions. Once
+	  a function is selected, a small tooltip appears when hovering over the name
+	  of the function. This tooltip allows you to delete the selected Function
+	  from your query or show the Function Description. However, no sanitization
+	  is done when adding this description to the DOM.</p>
+	  <p>Since it is not uncommon to connect to public data sources, an attacker
+	  could host a Graphite instance with modified Function Descriptions containing
+	  XSS payloads. When the victim uses it in a query and accidentally hovers
+	  over the Function Description, an attacker-controlled XSS payload
+	  will be executed.</p>
+	  <p>The severity of this vulnerability is of CVSSv3.1 5.7 Medium
+	  (CVSS: AV:N/AC:H/PR:H/UI:R/S:U/C:H/I:H/A:N (5.7)).</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-1410</cvename>
+      <url>https://grafana.com/security/security-advisories/cve-2023-1410/</url>
+    </references>
+    <dates>
+      <discovery>2023-03-14</discovery>
+      <entry>2023-03-29</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="5b0ae405-cdc7-11ed-bb39-901b0e9408dc">
+    <topic>Matrix clients -- Prototype pollution in matrix-js-sdk</topic>
+    <affects>
+      <package>
+	<name>element-web</name>
+	<range><lt>1.11.26</lt></range>
+      </package>
+      <package>
+	<name>cinny</name>
+	<range><le>2.2.4</le></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Matrix developers report:</p>
+	<blockquote cite="https://matrix.org/blog/2023/03/28/security-releases-matrix-js-sdk-24-0-0-and-matrix-react-sdk-3-69-0">
+	  <p>Today we are issuing security releases of matrix-js-sdk and matrix-react-sdk
+	  to patch a pair of High severity vulnerabilities (CVE-2023-28427 /
+	  GHSA-mwq8-fjpf-c2gr for matrix-js-sdk and CVE-2023-28103 / GHSA-6g43-88cp-w5gv
+	  for matrix-react-sdk).</p>
+	  <p>The issues involve prototype pollution via events containing special strings
+	  in key locations, which can temporarily disrupt normal functioning of matrix-js-sdk
+	  and matrix-react-sdk, potentially impacting the consumer's ability to process data
+	  safely.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-28103</cvename>
+      <cvename>CVE-2023-28427</cvename>
+      <url>https://matrix.org/blog/2023/03/28/security-releases-matrix-js-sdk-24-0-0-and-matrix-react-sdk-3-69-0</url>
+    </references>
+    <dates>
+      <discovery>2023-03-28</discovery>
+      <entry>2023-03-29</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="6bacd9fd-ca56-11ed-bc52-589cfc0f81b0">
+    <topic>phpmyfaq -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>phpmyfaq</name>
+	<range><lt>3.1.12</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>phpmyfaq developers report:</p>
+	<blockquote cite="https://www.phpmyfaq.de/security/advisory-2023-03-20">
+	  <p>XSS</p>
+	  <p>weak passwords</p>
+	  <p>privilege escalation</p>
+	  <p>Captcha bypass</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://huntr.dev/bounties/e8109aed-d364-4c0c-9545-4de0347b10e1/</url>
+      <url>https://huntr.dev/bounties/39715aaf-e798-4c60-97c4-45f4f2cd5c61/</url>
+      <url>https://huntr.dev/bounties/01d6ae23-3a8f-42a8-99f4-10246187d71b/</url>
+      <url>https://huntr.dev/bounties/dda73cb6-9344-4822-97a1-2e31efb6a73e/</url>
+      <url>https://huntr.dev/bounties/529f2361-eb2e-476f-b7ef-4e561a712e28/</url>
+      <url>https://huntr.dev/bounties/1dc7f818-c8ea-4f80-b000-31b48a426334/</url>
+      <url>https://huntr.dev/bounties/e495b443-b328-42f5-aed5-d68b929b4cb9/</url>
+      <url>https://huntr.dev/bounties/ece5f051-674e-4919-b998-594714910f9e/</url>
+      <url>https://huntr.dev/bounties/93f981a3-231d-460d-a239-bb960e8c2fdc/</url>
+      <url>https://huntr.dev/bounties/e4a58835-96b5-412c-a17e-3ceed30231e1/</url>
+      <url>https://huntr.dev/bounties/b7d244b7-5ac3-4964-81ee-8dbb5bb5e33a/</url>
+      <url>https://huntr.dev/bounties/24c0a65f-0751-4ff8-af63-4b325ac8879f/</url>
+      <url>https://huntr.dev/bounties/3c2374cc-7082-44b7-a6a6-ccff7a650a3a/</url>
+      <url>https://huntr.dev/bounties/0854328e-eb00-41a3-9573-8da8f00e369c/</url>
+      <url>https://huntr.dev/bounties/2f1e417d-cf64-4cfb-954b-3a9cb2f38191/</url>
+      <url>https://huntr.dev/bounties/584a200a-6ff8-4d53-a3c0-e7893edff60c/</url>
+      <url>https://huntr.dev/bounties/bce84c02-abb2-474f-a67b-1468c9dcabb8/</url>
+      <url>https://huntr.dev/bounties/882ffa07-5397-4dbb-886f-4626859d711a/</url>
+      <url>https://huntr.dev/bounties/8ab09a1c-cfd5-4ce0-aae3-d33c93318957/</url>
+      <url>https://huntr.dev/bounties/2d0ac48a-490d-4548-8d98-7447042dd1b5/</url>
+    </references>
+    <dates>
+      <discovery>2023-03-20</discovery>
+      <entry>2023-03-24</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="1ba034fb-ca38-11ed-b242-d4c9ef517024">
+    <topic>OpenSSL -- Excessive Resource Usage Verifying X.509 Policy Constraints</topic>
+    <affects>
+      <package>
+	<name>openssl</name>
+	<range><lt>1.1.1t,1_1</lt></range>
+      </package>
+      <package>
+	<name>openssl30</name>
+	<range><lt>3.0.8_1</lt></range>
+      </package>
+      <package>
+	<name>openssl31</name>
+	<range><lt>3.1.0_1</lt></range>
+      </package>
+      <package>
+	<name>openssl-quic</name>
+	<range><lt>3.0.8_1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The OpenSSL project reports:</p>
+	<blockquote cite="https://www.openssl.org/news/secadv/20230322.txt">
+	  <p>Severity: Low</p>
+	  <p>A security vulnerability has been identified in all supported versions
+	    of OpenSSL related to the verification of X.509 certificate chains
+	    that include policy constraints.  Attackers may be able to exploit this
+	    vulnerability by creating a malicious certificate chain that triggers
+	    exponential use of computational resources, leading to a denial-of-service
+	    (DoS) attack on affected systems.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-0464</cvename>
+      <url>https://www.openssl.org/news/secadv/20230322.txt</url>
+    </references>
+    <dates>
+      <discovery>2023-03-23</discovery>
+      <entry>2023-03-24</entry>
+      <modified>2023-03-24</modified>
+    </dates>
+  </vuln>
+
+  <vuln vid="2fdb053c-ca25-11ed-9d7e-080027f5fec9">
+    <topic>rack -- possible denial of service vulnerability in header parsing</topic>
+    <affects>
+      <package>
+	<name>rubygem-rack</name>
+	<range><lt>3.0.6.1,3</lt></range>
+      </package>
+      <package>
+	<name>rubygem-rack22</name>
+	<range><lt>2.2.6.6,3</lt></range>
+      </package>
+      <package>
+	<name>rubygem-rack16</name>
+	<range><lt>1.6.14</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>ooooooo_q reports:</p>
+	<blockquote cite="https://discuss.rubyonrails.org/t/cve-2023-27539-possible-denial-of-service-vulnerability-in-racks-header-parsing/82466">
+	  <p>
+	    Carefully crafted input can cause header parsing in Rack
+	    to take an unexpected amount of time, possibly resulting
+	    in a denial of service attack vector. Any applications
+	    that parse headers using Rack (virtually all Rails
+	    applications) are impacted.
+	  </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-27539</cvename>
+      <url>https://discuss.rubyonrails.org/t/cve-2023-27539-possible-denial-of-service-vulnerability-in-racks-header-parsing/82466</url>
+    </references>
+    <dates>
+      <discovery>2023-03-13</discovery>
+      <entry>2023-03-24</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="dec6b8e9-c9fe-11ed-bb39-901b0e9408dc">
     <topic>dino -- Insufficient message sender validation in Dino</topic>
     <affects>
@@ -649,7 +1196,7 @@
       </package>
       <package>
 	<name>rubygem-rack22</name>
-	<range><lt>2.2.6.6,3</lt></range>
+	<range><lt>2.2.6.3,3</lt></range>
       </package>
       <package>
 	<name>rubygem-rack16</name>

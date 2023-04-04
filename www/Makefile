@@ -25,7 +25,6 @@
     SUBDIR += amphetadesk
     SUBDIR += analog
     SUBDIR += anyremote2html
-    SUBDIR += anyterm
     SUBDIR += apache-mode.el
     SUBDIR += apache24
     SUBDIR += apt-cacher-ng
@@ -222,11 +221,6 @@
     SUBDIR += hedgedoc
     SUBDIR += hiawatha
     SUBDIR += hiawatha-monitor
-    SUBDIR += horde-ansel
-    SUBDIR += horde-base
-    SUBDIR += horde-passwd
-    SUBDIR += horde-trean
-    SUBDIR += horde-wicked
     SUBDIR += hotcrp
     SUBDIR += hs-DAV
     SUBDIR += hs-hjsmin
@@ -1425,6 +1419,7 @@
     SUBDIR += py-aioh2
     SUBDIR += py-aiohttp
     SUBDIR += py-aiohttp-middlewares
+    SUBDIR += py-aiohttp-oauthlib
     SUBDIR += py-aiohttp-session
     SUBDIR += py-aiohttp-wsgi
     SUBDIR += py-aiohttp_cors
@@ -1596,6 +1591,7 @@
     SUBDIR += py-django32
     SUBDIR += py-django40
     SUBDIR += py-django41
+    SUBDIR += py-django42
     SUBDIR += py-django_compressor
     SUBDIR += py-djangocms-admin-style
     SUBDIR += py-djangoql

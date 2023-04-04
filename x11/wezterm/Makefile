@@ -1,5 +1,6 @@
 PORTNAME=	wezterm
-DISTVERSION=	20230320-124340-559cb7b0
+DISTVERSION=	20230326-111934-3666303c
+PORTREVISION=	1
 CATEGORIES=	x11 wayland
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -9,7 +10,8 @@ WWW=		https://wezfurlong.org/wezterm/
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
 
-LIB_DEPENDS=	libwayland-egl.so:graphics/wayland \
+LIB_DEPENDS=	libzstd.so:archivers/zstd \
+		libwayland-egl.so:graphics/wayland \
 		libssh2.so:security/libssh2 \
 		libfontconfig.so:x11-fonts/fontconfig \
 		libxkbcommon-x11.so:x11/libxkbcommon \
@@ -24,9 +26,9 @@ GH_ACCOUNT=	wez
 GH_TUPLE=	harfbuzz:harfbuzz:6.0.0:harfbuzz/deps/harfbuzz/harfbuzz \
 		glennrp:libpng:v1.6.36-805-g8439534da:libpng/deps/freetype/libpng \
 		madler:zlib:v1.2.11:zlib/deps/freetype/zlib \
-		fcitx:xcb-imdkit:1.0.3:xcb_imdkit/../xcb-imdkit-rs-c6859ab2b8a233ca5dda5e8e4f1634d34ce9c85c/deps/xcb-imdkit \
+		fcitx:xcb-imdkit:1.0.3:xcb_imdkit/../${WRKSRC_crate_xcb-imdkit:T}/deps/xcb-imdkit \
 		freetype:freetype:VER-2-10-2-605-g3f83daeec:freetype/deps/freetype/freetype2
-GL_TUPLE=	wez1:libssh-mirror:56e1b0a43a7601d3b2989299262a09db5d81eea0:libssh/../libssh-rs-c48876e7027d3c21747a283be631177aad533eff/libssh-rs-sys/vendored
+GL_TUPLE=	wez1:libssh-mirror:56e1b0a43a7601d3b2989299262a09db5d81eea0:libssh/../${WRKSRC_crate_libssh-rs:T}/libssh-rs-sys/vendored
 PLIST_FILES=	bin/strip-ansi-escapes \
 		bin/${PORTNAME} \
 		bin/${PORTNAME}-gui \
