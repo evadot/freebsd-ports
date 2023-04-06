@@ -22,15 +22,15 @@ BUILD_DEPENDS+=	dtc>=1.4.1:sysutils/dtc \
 		bash:shells/bash
 
 # Both platform and non-osi repository don't have release, use latest known to work tag
-PLATFORM_TAG=	bb3d2f10
-NONOSI_TAG=	41876073
+PLATFORM_TAG=	38855c56
+NONOSI_TAG=	6996a45d
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	tianocore
 GH_TAGNAME=	edk2-stable202302
 GH_TUPLE=	tianocore:edk2-platforms:${PLATFORM_TAG}:platforms \
 		tianocore:edk2-non-osi:${NONOSI_TAG}:nonosi \
-		openssl:openssl:OpenSSL_1_1_1t:openssl/CryptoPkg/Library/OpensslLib/openssl \
+		openssl:openssl:OpenSSL_1_1_1j:openssl/CryptoPkg/Library/OpensslLib/openssl \
 		ucb-bar:berkeley-softfloat-3:master:softfloat/ArmPkg/Library/ArmSoftFloatLib/berkeley-softfloat-3 \
 		kkos:oniguruma:v6.9.4_mark1:oniguruma/MdeModulePkg/Universal/RegularExpressionDxe/oniguruma \
 		google:brotli:v1.0.9-35-gf4153a0:brotli/MdeModulePkg/Library/BrotliCustomDecompressLib/brotli \
