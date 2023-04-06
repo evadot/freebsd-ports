@@ -1,6 +1,11 @@
 PORTNAME=	edk2
-PORTVERSION=	g202302
+PORTVERSION=	g202202
+PORTREVISION=	2
 CATEGORIES=	sysutils
+
+PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
+PATCHFILES=	22130dcd98b4d4b76ac8d922adb4a2dbc86fa52c.patch:-p1 \
+		85021f8cf22d1bd4114803c6c610dea5ef0059f1.patch:-p1
 
 MAINTAINER=	uboot@FreeBSD.org
 COMMENT=	EDK2 Firmware for ${FLAVOR}
@@ -27,7 +32,7 @@ NONOSI_TAG=	6996a45d
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	tianocore
-GH_TAGNAME=	edk2-stable202302
+GH_TAGNAME=	edk2-stable202202
 GH_TUPLE=	tianocore:edk2-platforms:${PLATFORM_TAG}:platforms \
 		tianocore:edk2-non-osi:${NONOSI_TAG}:nonosi \
 		openssl:openssl:OpenSSL_1_1_1j:openssl/CryptoPkg/Library/OpensslLib/openssl \
