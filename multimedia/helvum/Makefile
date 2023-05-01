@@ -1,6 +1,6 @@
 PORTNAME=	helvum
 DISTVERSION=	0.4.0
-PORTREVISION=	2
+PORTREVISION=	4
 CATEGORIES=	multimedia
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -24,8 +24,8 @@ PLIST_FILES=	bin/${PORTNAME}
 
 post-patch:
 	@${REINPLACE_CMD} -e 's,"llvm-config,"${LLVM_CONFIG},' \
-		${WRKSRC}/cargo-crates/clang-sys-*/build/common.rs \
-		${WRKSRC}/cargo-crates/clang-sys-*/src/support.rs
+		${WRKSRC_crate_clang-sys}/build/common.rs \
+		${WRKSRC_crate_clang-sys}/src/support.rs
 # Make each cargo subcommand very verbose
 	@${REINPLACE_CMD} -e "/cargo_options =/s/ '--/&verbose', &verbose', &/" \
 		${WRKSRC}/src/meson.build

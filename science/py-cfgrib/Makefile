@@ -1,5 +1,6 @@
 PORTNAME=	cfgrib
 PORTVERSION=	0.9.10.3
+PORTREVISION=	1
 CATEGORIES=	science python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -7,7 +8,6 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Map GRIB files to the NetCDF Common Data Model following the CF Convention using ecCodes
 WWW=		https://github.com/ecmwf/cfgrib
-WWW=		https://pypi.org/project/cfgrib/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

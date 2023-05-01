@@ -1,10 +1,10 @@
 PORTNAME=	radare-cutter
 PORTVERSION=	0.1.1
-PORTREVISION=	1
+PORTREVISION=	2
 PORTEPOCH=	1
 CATEGORIES=	x11
 
-MAINTAINER=	swills@FreeBSD.org
+MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	GUI for radare2 reverse engineering framework
 WWW=		https://github.com/radareorg/cutter
 

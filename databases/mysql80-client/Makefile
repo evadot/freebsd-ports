@@ -1,5 +1,5 @@
 PORTNAME=	mysql
-PORTREVISION=	0
+PORTREVISION=	2
 PKGNAMESUFFIX=	80-client
 
 COMMENT=	Multithreaded SQL database (client)

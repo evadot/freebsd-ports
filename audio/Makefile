@@ -476,7 +476,7 @@
     SUBDIR += moodbar
     SUBDIR += moony-lv2
     SUBDIR += mous
-    SUBDIR += mousai-devel
+    SUBDIR += mousai
     SUBDIR += mp-player
     SUBDIR += mp3-archive-tools
     SUBDIR += mp3_check
@@ -594,6 +594,7 @@
     SUBDIR += pc-mixer
     SUBDIR += pcaudiolib
     SUBDIR += pd
+    SUBDIR += pd-cyclone
     SUBDIR += pear-Text_Spell_Audio
     SUBDIR += penguinsap
     SUBDIR += pianobar
@@ -831,6 +832,7 @@
     SUBDIR += vamp-plugin-sdk
     SUBDIR += vban
     SUBDIR += vgmplay
+    SUBDIR += vgmtools
     SUBDIR += vimpc
     SUBDIR += virtual_oss
     SUBDIR += virtual_oss_ctl
@@ -866,6 +868,7 @@
     SUBDIR += xanalyser
     SUBDIR += xcd
     SUBDIR += xcdplayer
+    SUBDIR += xfce4-mixer
     SUBDIR += xfce4-mpc-plugin
     SUBDIR += xfce4-pulseaudio-plugin
     SUBDIR += xfmpc

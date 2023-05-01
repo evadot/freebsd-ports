@@ -1,7 +1,7 @@
 PORTNAME=	jumpy
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.6.1
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	games wayland
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -30,7 +30,7 @@ post-patch:
 # Search assets under PREFIX instead of current directory
 	@${REINPLACE_CMD} 's,assets",../${DATADIR_REL}/&,' \
 		${WRKSRC}/src/main.rs \
-		${WRKSRC}/cargo-crates/bevy_asset-*/src/lib.rs
+		${WRKSRC_crate_bevy_asset}/src/lib.rs
 
 post-install:
 	(cd ${WRKSRC} && ${COPYTREE_SHARE} "assets" ${STAGEDIR}${DATADIR})

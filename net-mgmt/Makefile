@@ -69,8 +69,8 @@
     SUBDIR += etherape
     SUBDIR += ettercap
     SUBDIR += fastnetmon
-    SUBDIR += fetchconfig
     SUBDIR += fence-agents
+    SUBDIR += fetchconfig
     SUBDIR += flow-tools
     SUBDIR += flowd
     SUBDIR += flowviewer
@@ -130,6 +130,7 @@
     SUBDIR += libsmi
     SUBDIR += lldpd
     SUBDIR += mac-telnet
+    SUBDIR += makenl
     SUBDIR += mbrowse
     SUBDIR += mdata-client
     SUBDIR += metronome

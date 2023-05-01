@@ -56,6 +56,7 @@
     SUBDIR += apache-xmlbeans
     SUBDIR += apertium
     SUBDIR += apertium-eng
+    SUBDIR += arianna
     SUBDIR += asciidoc
     SUBDIR += asm-xml
     SUBDIR += asm2html
@@ -193,6 +194,7 @@
     SUBDIR += es-mythes
     SUBDIR += estraier
     SUBDIR += et-aspell
+    SUBDIR += evtx
     SUBDIR += exempi
     SUBDIR += expat2
     SUBDIR += extract_url
@@ -242,6 +244,7 @@
     SUBDIR += gmetadom
     SUBDIR += gnugrep
     SUBDIR += go-md2man
+    SUBDIR += go-transifex-client
     SUBDIR += go-yq
     SUBDIR += gojq
     SUBDIR += goldendict
@@ -444,7 +447,6 @@
     SUBDIR += lt-aspell
     SUBDIR += lt-hyphen
     SUBDIR += lttoolbox
-    SUBDIR += ltxml
     SUBDIR += lua-icu-utils
     SUBDIR += lua-lyaml
     SUBDIR += luaexpat
@@ -1278,6 +1280,7 @@
     SUBDIR += py-QDarkStyle
     SUBDIR += py-RTFDE
     SUBDIR += py-Tempita
+    SUBDIR += py-accessible-pygments
     SUBDIR += py-acora
     SUBDIR += py-aeidon
     SUBDIR += py-agate
@@ -1317,7 +1320,10 @@
     SUBDIR += py-docstring-parser
     SUBDIR += py-docstring-to-markdown
     SUBDIR += py-docutils
+    SUBDIR += py-docx-generator
     SUBDIR += py-docx2txt
+    SUBDIR += py-docxcompose
+    SUBDIR += py-docxtpl
     SUBDIR += py-dominate
     SUBDIR += py-dparse
     SUBDIR += py-duecredit
@@ -1334,6 +1340,7 @@
     SUBDIR += py-enchant
     SUBDIR += py-enrich
     SUBDIR += py-et_xmlfile
+    SUBDIR += py-evtx2splunk
     SUBDIR += py-extract-msg
     SUBDIR += py-fastavro
     SUBDIR += py-feedparser
@@ -1394,6 +1401,7 @@
     SUBDIR += py-mdurl
     SUBDIR += py-mike
     SUBDIR += py-misaka
+    SUBDIR += py-mistletoe
     SUBDIR += py-mistune
     SUBDIR += py-mistune0
     SUBDIR += py-mkdocs
@@ -1550,6 +1558,7 @@
     SUBDIR += py-sphinxcontrib-websupport
     SUBDIR += py-sphinxemoji
     SUBDIR += py-sphinxext-opengraph
+    SUBDIR += py-splunk-hec
     SUBDIR += py-spylls
     SUBDIR += py-stemming
     SUBDIR += py-tableschema-to-template
@@ -1672,6 +1681,7 @@
     SUBDIR += rubygem-babel-source
     SUBDIR += rubygem-babel-transpiler
     SUBDIR += rubygem-babosa
+    SUBDIR += rubygem-bourbon
     SUBDIR += rubygem-case_transform
     SUBDIR += rubygem-case_transform61
     SUBDIR += rubygem-character_set
@@ -1719,9 +1729,9 @@
     SUBDIR += rubygem-gepub
     SUBDIR += rubygem-github-linguist
     SUBDIR += rubygem-github-markup
-    SUBDIR += rubygem-github-markup17
     SUBDIR += rubygem-gitlab-grit
     SUBDIR += rubygem-gitlab-markup
+    SUBDIR += rubygem-google-cloud-profiler-v2
     SUBDIR += rubygem-google-cloud-translate
     SUBDIR += rubygem-google-cloud-translate-v2
     SUBDIR += rubygem-google-cloud-translate-v3
@@ -1762,7 +1772,7 @@
     SUBDIR += rubygem-liquid4
     SUBDIR += rubygem-loggability
     SUBDIR += rubygem-loofah
-    SUBDIR += rubygem-loofah218
+    SUBDIR += rubygem-loofah219
     SUBDIR += rubygem-ltsv
     SUBDIR += rubygem-markaby
     SUBDIR += rubygem-mdl
@@ -1809,7 +1819,7 @@
     SUBDIR += rubygem-rmmseg-cpp
     SUBDIR += rubygem-ronn
     SUBDIR += rubygem-rouge
-    SUBDIR += rubygem-rouge329
+    SUBDIR += rubygem-rouge3
     SUBDIR += rubygem-rttool
     SUBDIR += rubygem-ruby-augeas
     SUBDIR += rubygem-ruby-xslt
@@ -1984,6 +1994,7 @@
     SUBDIR += txt2html
     SUBDIR += txt2man
     SUBDIR += txt2tags
+    SUBDIR += typst
     SUBDIR += uchardet
     SUBDIR += ucto
     SUBDIR += uctodata

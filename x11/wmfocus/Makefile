@@ -1,7 +1,7 @@
 PORTNAME=	wmfocus
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.2.0
-PORTREVISION=	16
+PORTREVISION=	17
 CATEGORIES=	x11
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
@@ -29,6 +29,6 @@ PLIST_FILES=	bin/${PORTNAME}
 post-patch:
 # lang/python3 cannot be used as a dependency
 	@${REINPLACE_CMD} -e 's/"python3"/"${PYTHON_CMD:T}"/' \
-		${WRKSRC}/cargo-crates/xcb-*/build.rs
+		${WRKSRC_crate_xcb}/build.rs
 
 .include <bsd.port.mk>
