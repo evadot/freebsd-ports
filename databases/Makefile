@@ -194,6 +194,7 @@
     SUBDIR += mongodb44
     SUBDIR += mongodb50
     SUBDIR += mongodb60
+    SUBDIR += mongodb70
     SUBDIR += movine
     SUBDIR += mroonga
     SUBDIR += mtop
@@ -655,6 +656,7 @@
     SUBDIR += postgresql-odbc
     SUBDIR += postgresql-ogr_fdw
     SUBDIR += postgresql-orafce
+    SUBDIR += postgresql-pgaudit
     SUBDIR += postgresql-plproxy
     SUBDIR += postgresql-plv8js
     SUBDIR += postgresql-prefix
