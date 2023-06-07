@@ -33,6 +33,7 @@
     SUBDIR += cegobridge
     SUBDIR += clickhouse
     SUBDIR += closql
+    SUBDIR += closql-devel
     SUBDIR += cockroach
     SUBDIR += couchdb3
     SUBDIR += courier-authlib-mysql
@@ -57,7 +58,9 @@
     SUBDIR += diesel
     SUBDIR += duckdb
     SUBDIR += ejdb
+    SUBDIR += emacs-sqlite3-api
     SUBDIR += emacsql
+    SUBDIR += emacsql-devel
     SUBDIR += erlfdb
     SUBDIR += evolution-data-server
     SUBDIR += fastdb
@@ -99,6 +102,8 @@
     SUBDIR += hashtypes
     SUBDIR += hiredis
     SUBDIR += hsqldb
+    SUBDIR += immudb
+    SUBDIR += imposm3
     SUBDIR += influxdb
     SUBDIR += influxdb2-cli
     SUBDIR += innotop
@@ -173,8 +178,6 @@
     SUBDIR += mariadb-connector-odbc
     SUBDIR += mariadb1011-client
     SUBDIR += mariadb1011-server
-    SUBDIR += mariadb103-client
-    SUBDIR += mariadb103-server
     SUBDIR += mariadb104-client
     SUBDIR += mariadb104-server
     SUBDIR += mariadb105-client
@@ -717,10 +720,8 @@
     SUBDIR += proftpd-mod_sql_tds
     SUBDIR += prometheus-postgresql-adapter
     SUBDIR += pspg
-    SUBDIR += puppetdb-terminus6
     SUBDIR += puppetdb-terminus7
     SUBDIR += puppetdb-terminus8
-    SUBDIR += puppetdb6
     SUBDIR += puppetdb7
     SUBDIR += puppetdb8
     SUBDIR += puredb
@@ -855,6 +856,7 @@
     SUBDIR += qt5-sqldrivers-sqlite2
     SUBDIR += qt5-sqldrivers-sqlite3
     SUBDIR += qt5-sqldrivers-tds
+    SUBDIR += qt6-base_sqldriver
     SUBDIR += quake
     SUBDIR += recutils
     SUBDIR += redis
@@ -963,11 +965,10 @@
     SUBDIR += rubygem-memcache-client
     SUBDIR += rubygem-mysql
     SUBDIR += rubygem-mysql2
+    SUBDIR += rubygem-neighbor
     SUBDIR += rubygem-openid-redis-store
     SUBDIR += rubygem-paranoia
     SUBDIR += rubygem-pg
-    SUBDIR += rubygem-pg13
-    SUBDIR += rubygem-pg14
     SUBDIR += rubygem-pg_array_parser
     SUBDIR += rubygem-pg_query
     SUBDIR += rubygem-pghero
@@ -994,7 +995,6 @@
     SUBDIR += rubygem-redis-cluster-client
     SUBDIR += rubygem-redis-clustering
     SUBDIR += rubygem-redis-namespace
-    SUBDIR += rubygem-redis-namespace18
     SUBDIR += rubygem-redis-namespace19
     SUBDIR += rubygem-redis4
     SUBDIR += rubygem-scenic61

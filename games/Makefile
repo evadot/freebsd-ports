@@ -129,6 +129,7 @@
     SUBDIR += bsp
     SUBDIR += bstone
     SUBDIR += bubble-chains
+    SUBDIR += bucklespring
     SUBDIR += bugsquish
     SUBDIR += bugsx
     SUBDIR += bumprace
@@ -926,7 +927,6 @@
     SUBDIR += solarus-quest-editor
     SUBDIR += solver
     SUBDIR += spacejunk
-    SUBDIR += spacezero
     SUBDIR += speak
     SUBDIR += species
     SUBDIR += spellcast

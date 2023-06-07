@@ -315,6 +315,7 @@
     SUBDIR += facile
     SUBDIR += faiss
     SUBDIR += fann
+    SUBDIR += fast_float
     SUBDIR += fastops
     SUBDIR += fcl
     SUBDIR += fcl05
@@ -875,6 +876,7 @@
     SUBDIR += py-affine
     SUBDIR += py-algopy
     SUBDIR += py-altgraph
+    SUBDIR += py-ambit
     SUBDIR += py-amply
     SUBDIR += py-animatplot
     SUBDIR += py-animatplot-ng
@@ -935,6 +937,7 @@
     SUBDIR += py-hdbscan
     SUBDIR += py-hdmedians
     SUBDIR += py-heyoka
+    SUBDIR += py-igraph
     SUBDIR += py-iminuit
     SUBDIR += py-intspan
     SUBDIR += py-iohexperimenter
@@ -1019,7 +1022,6 @@
     SUBDIR += py-pysym
     SUBDIR += py-pytanque
     SUBDIR += py-python-fcl
-    SUBDIR += py-python-igraph
     SUBDIR += py-python-louvain
     SUBDIR += py-python-picard
     SUBDIR += py-pytorchvideo

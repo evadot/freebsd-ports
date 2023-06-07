@@ -1,6 +1,7 @@
 PORTNAME=	surelog
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.58
+DISTVERSION=	1.61
+PORTREVISION=	1
 CATEGORIES=	cad
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -17,7 +18,6 @@ BROKEN_i386=	compilation fails: conversion function cannot be redeclared, see ht
 BUILD_DEPENDS=	utf8cpp>0:devel/utf8cpp \
 		${PYTHON_PKGNAMEPREFIX}orderedmultidict>0:devel/py-orderedmultidict@${PY_FLAVOR}
 LIB_DEPENDS=	libcapnp.so:devel/capnproto \
-		libtcmalloc.so:devel/google-perftools \
 		libuhdm.so:cad/uhdm
 
 USES=		cmake:testing compiler:c++17-lang localbase:ldflags tcl:86,build
@@ -30,9 +30,9 @@ JAVA_RUN=	no
 USE_GITHUB=	yes
 GH_ACCOUNT=	chipsalliance
 GH_PROJECT=	Surelog
-GH_TUPLE=	alainmarcel:antlr4:2406774:antlr4/third_party/antlr4 \
-		google:googletest:dea0484:googletest/third_party/googletest \
-		google:flatbuffers:6eae49a:flatbuffers/third_party/flatbuffers
+GH_TUPLE=	alainmarcel:antlr4:cae2b22:antlr4/third_party/antlr4 \
+		google:googletest:cb455a7:googletest/third_party/googletest \
+		google:flatbuffers:ae67536:flatbuffers/third_party/flatbuffers
 
 CMAKE_ON=	BUILD_SHARED_LIBS SURELOG_USE_HOST_UHDM
 CMAKE_OFF=	SURELOG_BUILD_TESTS
@@ -45,13 +45,20 @@ CONFLICTS_INSTALL=	capnproto capnproto080
 
 BINARY_ALIAS=	python3=${PYTHON_CMD} tclsh=${TCLSH}
 
-OPTIONS_DEFINE=	PYTHON
-OPTIONS_SUB=	yes
+CONFLICTS_BUILD=	openjdk8 openjdk11 openjdk18 openjdk19
+
+OPTIONS_DEFINE=		PYTHON TCMALLOC
+OPTIONS_DEFAULT=	PYTHON TCMALLOC # should be the same TCMALLOC default as in cad/yosys, cad/uhdm because surelog's lib is used in the yosys plugin cad/yosys-systemverilog
+OPTIONS_SUB=		yes
 
 PYTHON_USES=		python
 PYTHON_USES_OFF=	python:build
+PYTHON_BUILD_DEPENDS=	swig:devel/swig
 PYTHON_CMAKE_BOOL=	SURELOG_WITH_PYTHON
 PYTHON_CMAKE_ON=	-DFREEBSD_PYTHON_DISTVERSION=${PYTHON_DISTVERSION}
+
+TCMALLOC_CMAKE_BOOL=	SURELOG_WITH_TCMALLOC
+TCMALLOC_LIB_DEPENDS=	libtcmalloc.so:devel/google-perftools
 
 PORTSCOUT=	limit:^.*[0-9]\.[0-9] # prevent tags like 'show'
 
