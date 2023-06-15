@@ -1104,7 +1104,6 @@
     SUBDIR += kf5-threadweaver
     SUBDIR += kio-extras
     SUBDIR += kirigami-gallery
-    SUBDIR += kiwix-lib
     SUBDIR += klib
     SUBDIR += kms-cmake-utils
     SUBDIR += kodi-platform
@@ -1290,6 +1289,7 @@
     SUBDIR += libixp
     SUBDIR += libjitterentropy
     SUBDIR += libk8055
+    SUBDIR += libkiwix
     SUBDIR += libklel
     SUBDIR += liblangtag
     SUBDIR += liblas
@@ -4099,6 +4099,16 @@
     SUBDIR += php82-sysvsem
     SUBDIR += php82-sysvshm
     SUBDIR += php82-tokenizer
+    SUBDIR += php83-ffi
+    SUBDIR += php83-gettext
+    SUBDIR += php83-intl
+    SUBDIR += php83-pcntl
+    SUBDIR += php83-readline
+    SUBDIR += php83-shmop
+    SUBDIR += php83-sysvmsg
+    SUBDIR += php83-sysvsem
+    SUBDIR += php83-sysvshm
+    SUBDIR += php83-tokenizer
     SUBDIR += phpunit10
     SUBDIR += phpunit8
     SUBDIR += phpunit9
@@ -4793,6 +4803,7 @@
     SUBDIR += py-janus
     SUBDIR += py-jaraco
     SUBDIR += py-jaraco.classes
+    SUBDIR += py-jaraco.collections
     SUBDIR += py-jaraco.context
     SUBDIR += py-jaraco.env
     SUBDIR += py-jaraco.functools
@@ -4903,6 +4914,7 @@
     SUBDIR += py-loguru
     SUBDIR += py-logutils
     SUBDIR += py-logzero
+    SUBDIR += py-looseversion
     SUBDIR += py-louie
     SUBDIR += py-lru-dict
     SUBDIR += py-lsprotocol
@@ -5325,6 +5337,7 @@
     SUBDIR += py-pytest-relaxed
     SUBDIR += py-pytest-rerunfailures
     SUBDIR += py-pytest-runner
+    SUBDIR += py-pytest-services
     SUBDIR += py-pytest-shutil
     SUBDIR += py-pytest-subtests
     SUBDIR += py-pytest-sugar
@@ -7589,6 +7602,7 @@
     SUBDIR += tcl-signal
     SUBDIR += tcl-trf
     SUBDIR += tclap
+    SUBDIR += tclap12
     SUBDIR += tclbsd
     SUBDIR += tclcheck
     SUBDIR += tcllauncher
