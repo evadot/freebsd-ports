@@ -11,7 +11,6 @@ WWW=		https://www.envoyproxy.io/
 
 LICENSE=	APACHE20
 
-BROKEN_i386=	makes a lot of 64-bit assumptions (patches welcome)
 BROKEN_SSL=	base openssl libressl libressl-devel
 BROKEN_SSL_REASON=	requires BoringSSL
 
@@ -25,11 +24,13 @@ LIB_DEPENDS=	libabsl_base.so:devel/abseil \
 		libbrotlidec.so:archivers/brotli \
 		libcares.so:dns/c-ares \
 		libcircllhist.so:devel/libcircllhist \
+		libcurl.so:ftp/curl \
 		libevent.so:devel/libevent-devel \
 		libfmt.so:devel/libfmt \
 		libgpr.so:devel/grpc \
 		libicuuc.so:devel/icu \
 		libnghttp2.so:www/libnghttp2 \
+		libopentracing.so:devel/libopentracing \
 		libprotobuf.so:devel/protobuf \
 		libre2.so:devel/re2 \
 		libxxhash.so:devel/xxhash \
@@ -73,6 +74,8 @@ post-patch:
 		${WRKSRC}/source/common/network/address_impl.cc
 	@${REINPLACE_CMD} -e 's,O_SYMLINK,O_NOFOLLOW,' \
 		${WRKSRC}/source/common/filesystem/kqueue/watcher_impl.cc
+	@${REINPLACE_CMD} -e '/opentracing::v/s,v2,v3,' \
+		${WRKSRC}/source/extensions/tracers/common/ot/opentracing_driver_impl.cc
 	@${REINPLACE_CMD} -e '23s,^,#include "absl/status/status.h",' \
 		${WRKDIR}/cel-cpp-11f9d66/eval/public/ast_traverse.cc
 	@${REINPLACE_CMD} -e '/^#include "eval\/testutil\/test_message/d' \

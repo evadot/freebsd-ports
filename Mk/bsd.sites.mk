@@ -109,7 +109,6 @@ MASTER_SITE_CRAN+= \
 	http://camoruco.ing.uc.edu.ve/cran/%SUBDIR%/ \
 	https://mirror.las.iastate.edu/CRAN/%SUBDIR%/ \
 	https://cran.ma.imperial.ac.uk/%SUBDIR%/ \
-	https://cran.gis-lab.info/%SUBDIR%/ \
 	https://cran.ism.ac.jp/%SUBDIR%/
 .endif
 
@@ -195,7 +194,7 @@ MASTER_SITE_FESTIVAL_OGI+= \
 #
 .if !defined(IGNORE_MASTER_SITE_FREEBSD_ORG)
 MASTER_SITE_FREEBSD_ORG+= \
-	https://download.FreeBSD.org/pub/FreeBSD/%SUBDIR%/ \
+	https://download.FreeBSD.org/%SUBDIR%/ \
 	ftp://ftp.FreeBSD.org/pub/FreeBSD/%SUBDIR%/ \
 	ftp://ftp.se.FreeBSD.org/pub/FreeBSD/%SUBDIR%/ \
 	ftp://ftp.jp.FreeBSD.org/pub/FreeBSD/%SUBDIR%/ \
@@ -572,7 +571,6 @@ MASTER_SITE_GNU+= \
 	https://www.nic.funet.fi/pub/gnu/gnu/%SUBDIR%/ \
 	http://mirror.navercorp.com/gnu/%SUBDIR%/ \
 	http://ftp.halifax.rwth-aachen.de/gnu/%SUBDIR%/ \
-	http://download.xs4all.nl/gnu/%SUBDIR%/ \
 	http://ftp.kddilabs.jp/GNU/gnu/%SUBDIR%/ \
 	ftp://mirrors.rit.edu/gnu/%SUBDIR%/ \
 	ftp://ftp.fu-berlin.de/unix/gnu/%SUBDIR%/ \
@@ -658,8 +656,6 @@ MASTER_SITE_ISC+= \
 	ftp://ftp.funet.fi/pub/mirrors/ftp.isc.org/isc/%SUBDIR%/
 .endif
 
-# List:		http://download.kde.org/extra/mirrors.html
-# Updated:	2012-10-26
 .if !defined(IGNORE_MASTER_SITE_KDE)
 MASTER_SITE_KDE+= \
 	https://download.kde.org/%SUBDIR%/
@@ -697,7 +693,6 @@ MASTER_SITE_MOZILLA+= \
 
 .if !defined(IGNORE_MASTER_SITE_MOZILLA_ADDONS)
 MASTER_SITE_MOZILLA_ADDONS+= \
-	https://addons.cdn.mozilla.net/user-media/%SUBDIR%/ \
 	http://kyoto-mz-dl.sinet.ad.jp/pub/mozilla.org/%SUBDIR%/
 .endif
 
@@ -742,11 +737,11 @@ MASTER_SITE_NVIDIA+= \
 .if !defined(IGNORE_MASTER_SITE_OPENBSD)
 MASTER_SITE_OPENBSD+= \
 	https://cdn.openbsd.org/pub/OpenBSD/%SUBDIR%/ \
+	https://cloudflare.cdn.openbsd.org/pub/OpenBSD/%SUBDIR%/ \
 	https://ftp.OpenBSD.org/pub/OpenBSD/%SUBDIR%/ \
 	https://ftp.eu.openbsd.org/pub/OpenBSD/%SUBDIR%/ \
-	https://ftp3.usa.openbsd.org/pub/OpenBSD/%SUBDIR%/ \
+	https://ftp.usa.openbsd.org/pub/OpenBSD/%SUBDIR%/ \
 	https://mirror.leaseweb.com/pub/OpenBSD/%SUBDIR%/ \
-	https://openbsd.hk/pub/OpenBSD/%SUBDIR%/ \
 	https://mirror.aarnet.edu.au/pub/OpenBSD/%SUBDIR%/
 .endif
 
@@ -1062,7 +1057,6 @@ MASTER_SITE_XORG+= \
 MASTER_SITE_KERNEL_ORG+= \
 	https://cdn.kernel.org/pub/%SUBDIR%/ \
 	https://www.kernel.org/pub/%SUBDIR%/ \
-	https://download.xs4all.nl/ftp.kernel.org/pub/%SUBDIR%/ \
 	https://mirrors.mit.edu/kernel/%SUBDIR%/ \
 	http://ftp.nara.wide.ad.jp/pub/kernel.org/%SUBDIR%/ \
 	http://ftp.yandex.ru/pub/%SUBDIR%/ \

@@ -602,6 +602,7 @@
     SUBDIR += electron22
     SUBDIR += electron23
     SUBDIR += electron24
+    SUBDIR += electron25
     SUBDIR += elf
     SUBDIR += elf-dissector
     SUBDIR += elfcat
@@ -4219,6 +4220,7 @@
     SUBDIR += py-apptools
     SUBDIR += py-apscheduler
     SUBDIR += py-archinfo
+    SUBDIR += py-archspec
     SUBDIR += py-argcomplete
     SUBDIR += py-argh
     SUBDIR += py-argparse
@@ -4229,6 +4231,7 @@
     SUBDIR += py-asgi-lifespan
     SUBDIR += py-asn1
     SUBDIR += py-asn1crypto
+    SUBDIR += py-aspectlib
     SUBDIR += py-aspy.yaml
     SUBDIR += py-ast-decompiler
     SUBDIR += py-asteval
@@ -4478,6 +4481,7 @@
     SUBDIR += py-confusable_homoglyphs
     SUBDIR += py-confuse
     SUBDIR += py-connection_pool
+    SUBDIR += py-cons
     SUBDIR += py-constantly
     SUBDIR += py-construct
     SUBDIR += py-construct-classes
@@ -4553,6 +4557,7 @@
     SUBDIR += py-devtools
     SUBDIR += py-dexml2
     SUBDIR += py-diazo
+    SUBDIR += py-diff-cover
     SUBDIR += py-dill
     SUBDIR += py-dirspec
     SUBDIR += py-diskcache
@@ -4592,6 +4597,7 @@
     SUBDIR += py-epdb
     SUBDIR += py-epsilon
     SUBDIR += py-etils
+    SUBDIR += py-etuples
     SUBDIR += py-evdev
     SUBDIR += py-eventlib
     SUBDIR += py-ewah-bool-utils
@@ -4945,6 +4951,7 @@
     SUBDIR += py-microversion-parse
     SUBDIR += py-milc
     SUBDIR += py-mime
+    SUBDIR += py-miniKanren
     SUBDIR += py-minidump
     SUBDIR += py-minimongo
     SUBDIR += py-minio
@@ -5339,6 +5346,7 @@
     SUBDIR += py-pytest-runner
     SUBDIR += py-pytest-services
     SUBDIR += py-pytest-shutil
+    SUBDIR += py-pytest-subprocess
     SUBDIR += py-pytest-subtests
     SUBDIR += py-pytest-sugar
     SUBDIR += py-pytest-timeout
@@ -5604,6 +5612,7 @@
     SUBDIR += py-thrift
     SUBDIR += py-thriftpy2
     SUBDIR += py-tiamat
+    SUBDIR += py-time-machine
     SUBDIR += py-timelib
     SUBDIR += py-timeout-decorator
     SUBDIR += py-tinyarray
@@ -5653,7 +5662,9 @@
     SUBDIR += py-types-protobuf
     SUBDIR += py-types-psutil
     SUBDIR += py-types-psycopg2
+    SUBDIR += py-types-python-dateutil
     SUBDIR += py-types-requests
+    SUBDIR += py-types-retry
     SUBDIR += py-types-setuptools
     SUBDIR += py-types-toml
     SUBDIR += py-types-typed-ast
@@ -5847,6 +5858,8 @@
     SUBDIR += pyotherside-qt5
     SUBDIR += pyside2
     SUBDIR += pyside2-tools
+    SUBDIR += pyside6
+    SUBDIR += pyside6-tools
     SUBDIR += pystring
     SUBDIR += pysvn
     SUBDIR += pythontidy
@@ -7501,6 +7514,7 @@
     SUBDIR += shflags
     SUBDIR += shfmt
     SUBDIR += shiboken2
+    SUBDIR += shiboken6
     SUBDIR += shmap
     SUBDIR += shroud
     SUBDIR += shtk

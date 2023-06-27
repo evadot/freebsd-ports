@@ -323,6 +323,7 @@
     SUBDIR += lychee
     SUBDIR += lynx
     SUBDIR += lynx-current
+    SUBDIR += lzr
     SUBDIR += madsonic
     SUBDIR += man2web
     SUBDIR += mathjax
@@ -1086,6 +1087,7 @@
     SUBDIR += p5-Plack-Middleware-FixMissingBodyInRedirect
     SUBDIR += p5-Plack-Middleware-ForceEnv
     SUBDIR += p5-Plack-Middleware-Header
+    SUBDIR += p5-Plack-Middleware-Headers
     SUBDIR += p5-Plack-Middleware-IEnosniff
     SUBDIR += p5-Plack-Middleware-InteractiveDebugger
     SUBDIR += p5-Plack-Middleware-JSConcat
@@ -2068,6 +2070,7 @@
     SUBDIR += rubygem-nanoc-deploying
     SUBDIR += rubygem-nested_form
     SUBDIR += rubygem-net-http
+    SUBDIR += rubygem-net-http011
     SUBDIR += rubygem-net-http-digest_auth
     SUBDIR += rubygem-net-http-persistent
     SUBDIR += rubygem-net-http-persistent2
@@ -2455,6 +2458,7 @@
     SUBDIR += zend-framework
     SUBDIR += zenphoto
     SUBDIR += zerowait-httpd
+    SUBDIR += zgrab2
     SUBDIR += zola
 
 .include <bsd.port.subdir.mk>

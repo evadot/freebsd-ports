@@ -775,7 +775,6 @@
     SUBDIR += pipewalker
     SUBDIR += pmars
     SUBDIR += pmars-sdl
-    SUBDIR += poker-eval
     SUBDIR += pokerth
     SUBDIR += polyglot
     SUBDIR += pongix
@@ -996,7 +995,6 @@
     SUBDIR += tty-solitaire
     SUBDIR += tux-aqfh
     SUBDIR += tuxkart
-    SUBDIR += tuxmath
     SUBDIR += tuxpaint
     SUBDIR += tuxpaint-config
     SUBDIR += tuxpaint-fonts

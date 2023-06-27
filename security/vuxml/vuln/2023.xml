@@ -1,3 +1,375 @@
+  <vuln vid="ad05a737-14bd-11ee-8290-a8a1599412c6">
+    <topic>chromium -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+       <name>chromium</name>
+       <range><lt>114.0.5735.198</lt></range>
+      </package>
+      <package>
+       <name>ungoogled-chromium</name>
+       <range><lt>114.0.5735.198</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>Chrome Releases reports:</p>
+       <blockquote cite="https://chromereleases.googleblog.com/2023/06/stable-channel-update-for-desktop_26.html">
+	 <p>This update includes 4 security fixes:</p>
+	 <ul>
+	    <li>[1452137] High CVE-2023-3420: Type Confusion in V8. Reported by Man Yue Mo of GitHub Security Lab on 2023-06-07</li>
+	    <li>[1447568] High CVE-2023-3421: Use after free in Media. Reported by Piotr Bania of Cisco Talos on 2023-05-22</li>
+	    <li>[1450397] High CVE-2023-3422: Use after free in Guest View. Reported by asnine on 2023-06-01</li>
+	 </ul>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-3420</cvename>
+      <cvename>CVE-2023-3421</cvename>
+      <cvename>CVE-2023-3422</cvename>
+      <url>https://chromereleases.googleblog.com/2023/06/stable-channel-update-for-desktop_26.html</url>
+    </references>
+    <dates>
+      <discovery>2023-06-26</discovery>
+      <entry>2023-06-27</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="fdbe9aec-118b-11ee-908a-6c3be5272acd">
+    <topic>Grafana -- Account takeover / authentication bypass</topic>
+    <affects>
+      <package>
+	<name>grafana</name>
+	<range><ge>6.7.0</ge><lt>8.5.27</lt></range>
+	<range><ge>9.0.0</ge><lt>9.2.20</lt></range>
+	<range><ge>9.3.0</ge><lt>9.3.16</lt></range>
+	<range><ge>9.4.0</ge><lt>9.4.13</lt></range>
+	<range><ge>9.5.0</ge><lt>9.5.5</lt></range>
+	<range><ge>10.0.0</ge><lt>10.0.1</lt></range>
+      </package>
+      <package>
+	<name>grafana8</name>
+	<range><lt>8.5.27</lt></range>
+      </package>
+      <package>
+	<name>grafana9</name>
+	<range><lt>9.2.20</lt></range>
+	<range><ge>9.3.0</ge><lt>9.3.16</lt></range>
+	<range><ge>9.4.0</ge><lt>9.4.13</lt></range>
+	<range><ge>9.5.0</ge><lt>9.5.5</lt></range>
+      </package>
+      <package>
+	<name>grafana10</name>
+	<range><lt>10.0.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Grafana Labs reports:</p>
+	<blockquote cite="https://grafana.com/blog/2023/06/22/grafana-security-release-for-cve-2023-3128/">
+	  <p>Grafana validates Azure Active Directory accounts based on the email claim.
+	  On Azure AD, the profile email field is not unique across Azure AD tenants.
+	  This can enable a Grafana account takeover and authentication bypass when
+	  Azure AD OAuth is configured with a multi-tenant Azure AD OAuth application.
+	  </p>
+	  <p>The CVSS score for this vulnerability is 9.4 Critical.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-3128</cvename>
+      <url>https://grafana.com/security/security-advisories/cve-2023-3128</url>
+    </references>
+    <dates>
+      <discovery>2023-06-22</discovery>
+      <entry>2023-06-23</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="a03b2d9e-b3f2-428c-8f66-21092ed2ba94">
+    <topic>electron{23,24} -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>electron23</name>
+	<range><lt>23.3.8</lt></range>
+      </package>
+      <package>
+	<name>electron24</name>
+	<range><lt>24.6.0</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Electron developers report:</p>
+	<blockquote cite="https://github.com/electron/electron/releases/tag/v23.3.8">
+	  <p>This update fixes the following vulnerabilities:</p>
+	  <ul>
+	    <li>Security: backported fix for CVE-2023-3215.</li>
+	    <li>Security: backported fix for CVE-2023-3216.</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-3215</cvename>
+      <url>https://github.com/advisories/GHSA-5rw6-vf4w-p4j3</url>
+      <cvename>CVE-2023-3216</cvename>
+      <url>https://github.com/advisories/GHSA-f35r-mcw4-gg3w</url>
+    </references>
+    <dates>
+      <discovery>2023-06-22</discovery>
+      <entry>2023-06-22</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="770d88cc-f6dc-4385-bdfe-497f8080c3fb">
+    <topic>electron22 -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>electron22</name>
+	<range><lt>22.3.14</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Electron developers report:</p>
+	<blockquote cite="https://github.com/electron/electron/releases/tag/v22.3.14">
+	  <p>This update fixes the following vulnerabilities:</p>
+	  <ul>
+	    <li>Security: backported fix for CVE-2023-3215.</li>
+	    <li>Security: backported fix for CVE-2023-3216.</li>
+	    <li>Security: backported fix for CVE-2023-0698.</li>
+	    <li>Security: backported fix for CVE-2023-0932.</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-3215</cvename>
+      <url>https://github.com/advisories/GHSA-5rw6-vf4w-p4j3</url>
+      <cvename>CVE-2023-3216</cvename>
+      <url>https://github.com/advisories/GHSA-f35r-mcw4-gg3w</url>
+      <cvename>CVE-2023-0698</cvename>
+      <url>https://github.com/advisories/GHSA-q6xx-4pmr-m3m4</url>
+      <cvename>CVE-2023-0932</cvename>
+      <url>https://github.com/advisories/GHSA-hh2g-39pc-2575</url>
+    </references>
+    <dates>
+      <discovery>2023-06-22</discovery>
+      <entry>2023-06-22</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="734b8f46-773d-4fef-bed3-61114fe8e4c5">
+    <topic>libX11 -- Sub-object overflows</topic>
+    <affects>
+      <package>
+	<name>libX11</name>
+	<range><lt>1.8.6,1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The X.Org project reports:</p>
+	<blockquote cite="https://lists.x.org/archives/xorg-announce/2023-June/003406.html">
+	  <ul>
+	    <li>Buffer overflows in InitExt.c in libX11 prior to 1.8.6 [CVE-2023-3138]
+
+	    <p>The functions in src/InitExt.c in libX11 prior to 1.8.6 do not check
+	    that the values provided for the Request, Event, or Error IDs are
+	    within the bounds of the arrays that those functions write to, using
+	    those IDs as array indexes.  Instead they trusted that they were called
+	    with values provided by an Xserver that was adhering to the bounds
+	    specified in the X11 protocol, as all X servers provided by X.Org do.</p>
+
+	    <p>As the protocol only specifies a single byte for these values, an
+	    out-of-bounds value provided by a malicious server (or a malicious
+	    proxy-in-the-middle) can only overwrite other portions of the Display
+	    structure and not write outside the bounds of the Display structure
+	    itself.  Testing has found it is possible to at least cause the client
+	    to crash with this memory corruption.</p></li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://lists.x.org/archives/xorg-announce/2023-June/003406.html</url>
+      <cvename>CVE-2023-3138</cvename>
+    </references>
+    <dates>
+      <discovery>2023-06-15</discovery>
+      <entry>2023-06-16</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="aae2ab45-2d21-4cd5-a53b-07ec933400ac">
+    <topic>electron24 -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>electron24</name>
+	<range><lt>24.5.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Electron developers report:</p>
+	<blockquote cite="https://github.com/electron/electron/releases/tag/v24.5.1">
+	  <p>This update fixes the following vulnerabilities:</p>
+	  <ul>
+	    <li>Security: backported fix for CVE-2023-3079.</li>
+	    <li>Security: backported fix for CVE-2023-2933.</li>
+	    <li>Security: backported fix for CVE-2023-2932.</li>
+	    <li>Security: backported fix for CVE-2023-2931.</li>
+	    <li>Security: backported fix for CVE-2023-2936.</li>
+	    <li>Security: backported fix for CVE-2023-2935.</li>
+	    <li>Security: backported fix for CVE-2023-2934.</li>
+	    <li>Security: backported fix for CVE-2023-2930.</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-3079</cvename>
+      <url>https://github.com/advisories/GHSA-8mwf-hvfp-6xfg</url>
+      <cvename>CVE-2023-2933</cvename>
+      <url>https://github.com/advisories/GHSA-qrc7-3p69-2jpf</url>
+      <cvename>CVE-2023-2932</cvename>
+      <url>https://github.com/advisories/GHSA-7g49-wq8x-r6rh</url>
+      <cvename>CVE-2023-2931</cvename>
+      <url>https://github.com/advisories/GHSA-w3xh-m877-x3c2</url>
+      <cvename>CVE-2023-2936</cvename>
+      <url>https://github.com/advisories/GHSA-x723-3x32-qg44</url>
+      <cvename>CVE-2023-2935</cvename>
+      <url>https://github.com/advisories/GHSA-5ccq-3h49-vjp2</url>
+      <cvename>CVE-2023-2934</cvename>
+      <url>https://github.com/advisories/GHSA-mqff-qm67-cr66</url>
+      <cvename>CVE-2023-2930</cvename>
+      <url>https://github.com/advisories/GHSA-44xq-533g-gj79</url>
+    </references>
+    <dates>
+      <discovery>2023-06-14</discovery>
+      <entry>2023-06-16</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="3bf6795c-d44c-4033-9b37-ed2e30f34fca">
+    <topic>electron23 -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>electron23</name>
+	<range><lt>23.3.7</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Electron developers report:</p>
+	<blockquote cite="https://github.com/electron/electron/releases/tag/v23.3.7">
+	  <p>This update fixes the following vulnerabilities:</p>
+	  <ul>
+	    <li>Security: backported fix for CVE-2023-2724.</li>
+	    <li>Security: backported fix for CVE-2023-2725.</li>
+	    <li>Security: backported fix for CVE-2023-2721.</li>
+	    <li>Security: backported fix for CVE-2023-3079.</li>
+	    <li>Security: backported fix for CVE-2023-2933.</li>
+	    <li>Security: backported fix for CVE-2023-2932.</li>
+	    <li>Security: backported fix for CVE-2023-2931.</li>
+	    <li>Security: backported fix for CVE-2023-2936.</li>
+	    <li>Security: backported fix for CVE-2023-2935.</li>
+	    <li>Security: backported fix for CVE-2023-2934.</li>
+	    <li>Security: backported fix for CVE-2023-2930.</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-2724</cvename>
+      <url>https://github.com/advisories/GHSA-j5rv-3m5p-q6rc</url>
+      <cvename>CVE-2023-2725</cvename>
+      <url>https://github.com/advisories/GHSA-c4fp-wmv9-q4cr</url>
+      <cvename>CVE-2023-2721</cvename>
+      <url>https://github.com/advisories/GHSA-5cww-gpqh-ggqj</url>
+      <cvename>CVE-2023-3079</cvename>
+      <url>https://github.com/advisories/GHSA-8mwf-hvfp-6xfg</url>
+      <cvename>CVE-2023-2933</cvename>
+      <url>https://github.com/advisories/GHSA-qrc7-3p69-2jpf</url>
+      <cvename>CVE-2023-2932</cvename>
+      <url>https://github.com/advisories/GHSA-7g49-wq8x-r6rh</url>
+      <cvename>CVE-2023-2931</cvename>
+      <url>https://github.com/advisories/GHSA-w3xh-m877-x3c2</url>
+      <cvename>CVE-2023-2936</cvename>
+      <url>https://github.com/advisories/GHSA-x723-3x32-qg44</url>
+      <cvename>CVE-2023-2935</cvename>
+      <url>https://github.com/advisories/GHSA-5ccq-3h49-vjp2</url>
+      <cvename>CVE-2023-2934</cvename>
+      <url>https://github.com/advisories/GHSA-mqff-qm67-cr66</url>
+      <cvename>CVE-2023-2930</cvename>
+      <url>https://github.com/advisories/GHSA-44xq-533g-gj79</url>
+    </references>
+    <dates>
+      <discovery>2023-06-14</discovery>
+      <entry>2023-06-16</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="3c3d3dcb-bef7-4d20-9580-b4216b5ff6a2">
+    <topic>electron22 -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>electron22</name>
+	<range><lt>22.3.13</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Electron developers report:</p>
+	<blockquote cite="https://github.com/electron/electron/releases/tag/v22.3.13">
+	  <p>This update fixes the following vulnerabilities:</p>
+	  <ul>
+	    <li>Security: backported fix for CVE-2023-2724.</li>
+	    <li>Security: backported fix for CVE-2023-2723.</li>
+	    <li>Security: backported fix for CVE-2023-2725.</li>
+	    <li>Security: backported fix for CVE-2023-2721.</li>
+	    <li>Security: backported fix for CVE-2023-3079.</li>
+	    <li>Security: backported fix for CVE-2023-2933.</li>
+	    <li>Security: backported fix for CVE-2023-2932.</li>
+	    <li>Security: backported fix for CVE-2023-2931.</li>
+	    <li>Security: backported fix for CVE-2023-2936.</li>
+	    <li>Security: backported fix for CVE-2023-2935.</li>
+	    <li>Security: backported fix for CVE-2023-2930.</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-2724</cvename>
+      <url>https://github.com/advisories/GHSA-j5rv-3m5p-q6rc</url>
+      <cvename>CVE-2023-2723</cvename>
+      <url>https://github.com/advisories/GHSA-7797-6fvm-v8xw</url>
+      <cvename>CVE-2023-2725</cvename>
+      <url>https://github.com/advisories/GHSA-c4fp-wmv9-q4cr</url>
+      <cvename>CVE-2023-2721</cvename>
+      <url>https://github.com/advisories/GHSA-5cww-gpqh-ggqj</url>
+      <cvename>CVE-2023-3079</cvename>
+      <url>https://github.com/advisories/GHSA-8mwf-hvfp-6xfg</url>
+      <cvename>CVE-2023-2933</cvename>
+      <url>https://github.com/advisories/GHSA-qrc7-3p69-2jpf</url>
+      <cvename>CVE-2023-2932</cvename>
+      <url>https://github.com/advisories/GHSA-7g49-wq8x-r6rh</url>
+      <cvename>CVE-2023-2931</cvename>
+      <url>https://github.com/advisories/GHSA-w3xh-m877-x3c2</url>
+      <cvename>CVE-2023-2936</cvename>
+      <url>https://github.com/advisories/GHSA-x723-3x32-qg44</url>
+      <cvename>CVE-2023-2935</cvename>
+      <url>https://github.com/advisories/GHSA-5ccq-3h49-vjp2</url>
+      <cvename>CVE-2023-2930</cvename>
+      <url>https://github.com/advisories/GHSA-44xq-533g-gj79</url>
+    </references>
+    <dates>
+      <discovery>2023-06-14</discovery>
+      <entry>2023-06-16</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="b4db7d78-bb62-4f4c-9326-6e9fc2ddd400">
     <topic>jenkins -- CSRF protection bypass vulnerability</topic>
     <affects>
@@ -2549,7 +2921,9 @@
     <affects>
       <package>
     <name>py39-setuptools</name>
-    <range><lt>65.5.1</lt></range>
+    <range><lt>44.1.1_1</lt></range>
+    <range><ge>57.0.0</ge><lt>58.5.3_3</lt></range>
+    <range><ge>62.1.0</ge><lt>63.1.0_1</lt></range>
       </package>
     </affects>
     <description>
@@ -2558,7 +2932,7 @@
     <blockquote cite="https://osv.dev/vulnerability/GHSA-r9hx-vwmv-q579">
       <p>Python Packaging Authority (PyPA)'s setuptools is a library designed to facilitate packaging Python projects.</p>
       <p>Setuptools version 65.5.0 and earlier could allow remote attackers to cause a denial of service by fetching malicious HTML from a PyPI package or custom PackageIndex page due to a vulnerable Regular Expression in `package_index`.</p>
-      <p>This has been patched in version 65.5.1.</p>
+      <p>This has been patched in version 65.5.1. The patch backported to the revision 63.1.0_1.</p>
     </blockquote>
       </body>
     </description>
@@ -2577,7 +2951,9 @@
     <affects>
       <package>
     <name>py27-setuptools44</name>
-    <range><lt>65.5.1</lt></range>
+    <range><lt>44.1.1_1</lt></range>
+    <range><ge>57.0.0</ge><lt>58.5.3_3</lt></range>
+    <range><ge>62.1.0</ge><lt>63.1.0_1</lt></range>
       </package>
     </affects>
     <description>
@@ -2586,7 +2962,7 @@
     <blockquote cite="https://osv.dev/vulnerability/GHSA-r9hx-vwmv-q579">
       <p>Python Packaging Authority (PyPA)'s setuptools is a library designed to facilitate packaging Python projects.</p>
       <p>Setuptools version 65.5.0 and earlier could allow remote attackers to cause a denial of service by fetching malicious HTML from a PyPI package or custom PackageIndex page due to a vulnerable Regular Expression in `package_index`.</p>
-      <p>This has been patched in version 65.5.1.</p>
+      <p>This has been patched in version 65.5.1. The patch backported to the revision 44.1.1_1.</p>
     </blockquote>
       </body>
     </description>
@@ -2605,7 +2981,9 @@
     <affects>
       <package>
     <name>py39-setuptools58</name>
-    <range><lt>65.5.1</lt></range>
+    <range><lt>44.1.1_1</lt></range>
+    <range><ge>57.0.0</ge><lt>58.5.3_3</lt></range>
+    <range><ge>62.1.0</ge><lt>63.1.0_1</lt></range>
       </package>
     </affects>
     <description>
@@ -2614,7 +2992,7 @@
     <blockquote cite="https://osv.dev/vulnerability/GHSA-r9hx-vwmv-q579">
       <p>Python Packaging Authority (PyPA)'s setuptools is a library designed to facilitate packaging Python projects.</p>
       <p>Setuptools version 65.5.0 and earlier could allow remote attackers to cause a denial of service by fetching malicious HTML from a PyPI package or custom PackageIndex page due to a vulnerable Regular Expression in `package_index`.</p>
-      <p>This has been patched in version 65.5.1.</p>
+      <p>This has been patched in version 65.5.1. The patch backported to the revision 58.5.3_3.</p>
     </blockquote>
       </body>
     </description>

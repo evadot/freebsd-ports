@@ -52,7 +52,7 @@
     SUBDIR += apache-commons-digester
     SUBDIR += apache-poi
     SUBDIR += apache-solr
-    SUBDIR += apache-solr9
+    SUBDIR += apache-solr8
     SUBDIR += apache-xmlbeans
     SUBDIR += apertium
     SUBDIR += apertium-eng
@@ -1601,6 +1601,7 @@
     SUBDIR += py-typogrify
     SUBDIR += py-ucl
     SUBDIR += py-ufal.udpipe
+    SUBDIR += py-unicodeitplus
     SUBDIR += py-untangle
     SUBDIR += py-wcmatch
     SUBDIR += py-whatthepatch
