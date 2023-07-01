@@ -1,6 +1,6 @@
 PORTNAME=	c-lightning
 # To build from an arbitrary git commit comment PORTVERSION and PORTREVISION (if present)
-PORTVERSION=	23.05.1
+PORTVERSION=	23.05.2
 DISTVERSIONPREFIX=	v
 # and uncomment the following two lines (use for example -git-HEAD or -git-f8d8348c)
 #PORTVERSION=	0
@@ -27,7 +27,7 @@ USES=		autoreconf:build \
 		gettext \
 		gmake \
 		libtool \
-		python:3.5+,build \
+		python:build \
 		shebangfix
 CPE_VENDOR=	elementsproject
 BINARY_ALIAS=	python=${PYTHON_CMD} python3=${PYTHON_CMD}

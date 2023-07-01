@@ -1,7 +1,7 @@
 PORTNAME=	rpcs3
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.0.28-15245 # git rev-list --count HEAD
-DISTVERSIONSUFFIX=	-g8e3d0af08e
+DISTVERSION=	0.0.28-15270 # git rev-list --count HEAD
+DISTVERSIONSUFFIX=	-g931a2c516f
 CATEGORIES=	emulators wayland
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -39,7 +39,7 @@ GH_TUPLE=	RPCS3:hidapi:hidapi-0.14.0-2-g8b43a97:hidapi/3rdparty/hidapi/hidapi \
 		wolfSSL:wolfssl:v5.6.0-stable:wolfssl/3rdparty/wolfssl/wolfssl
 
 USES=		cmake elfctl gl iconv:wchar_t llvm:min=16,lib localbase:ldflags \
-		openal:soft pkgconfig python:3.4+,build qt:5 xorg
+		openal:soft pkgconfig python:build qt:5 xorg
 USE_GL=		gl glew
 USE_QT=		qmake:build buildtools:build core concurrent dbus gui multimedia svg widgets
 USE_XORG=	x11
@@ -47,7 +47,7 @@ CMAKE_ON=	CMAKE_SKIP_RPATH ${CURL FFMPEG FLATBUFFERS LIBPNG PUGIXML XXHASH:L:S/^
 CMAKE_ON+=	BUNDLE_SPEEX # only used by cubeb tests
 CMAKE_OFF=	USE_NATIVE_INSTRUCTIONS USE_PRECOMPILED_HEADERS
 LDFLAGS+=	-Wl,--as-needed # GLU
-ELF_FEATURES=	+noaslr,wxneeded:bin/${PORTNAME}
+ELF_FEATURES=	+wxneeded:bin/${PORTNAME}
 
 .if ${FLAVOR:U} == qt6 || make(makesum) || make(fetch)
 PATCH_SITES+=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/:qt6

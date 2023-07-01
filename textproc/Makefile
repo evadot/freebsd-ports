@@ -1416,6 +1416,7 @@
     SUBDIR += py-mistletoe
     SUBDIR += py-mistune
     SUBDIR += py-mistune0
+    SUBDIR += py-mistune2
     SUBDIR += py-mkdocs
     SUBDIR += py-mkdocs-autorefs
     SUBDIR += py-mkdocs-material
@@ -1593,7 +1594,6 @@
     SUBDIR += py-toronado
     SUBDIR += py-towncrier
     SUBDIR += py-trans
-    SUBDIR += py-transifex-client
     SUBDIR += py-translationstring
     SUBDIR += py-transpopy
     SUBDIR += py-ttp
@@ -1739,7 +1739,6 @@
     SUBDIR += rubygem-extended-markdown-filter
     SUBDIR += rubygem-ezamar
     SUBDIR += rubygem-fast_xs
-    SUBDIR += rubygem-ferret
     SUBDIR += rubygem-fog-xml
     SUBDIR += rubygem-gemoji
     SUBDIR += rubygem-gemoji3

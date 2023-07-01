@@ -1,3 +1,170 @@
+  <vuln vid="95dad123-180e-11ee-86ba-080027eda32c">
+    <topic>mediawiki -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>mediawiki135</name>
+	<range><lt>1.35.11</lt></range>
+      </package>
+      <package>
+	<name>mediawiki138</name>
+	<range><lt>1.38.7</lt></range>
+      </package>
+      <package>
+	<name>mediawiki139</name>
+	<range><lt>1.39.4</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Mediawiki reports:</p>
+	<blockquote cite="https://lists.wikimedia.org/hyperkitty/list/mediawiki-announce@lists.wikimedia.org/message/HVT3U3XYY35PSCIQPHMY4VQNF3Q6MHUO/">
+	  <p>(T335203, CVE-2023-29197) Upgrade guzzlehttp/psr7 to >= 1.9.1/2.4.5.</p>
+	  <p>(T335612, CVE-2023-36674) Manualthumb bypasses badFile lookup.</p>
+	  <p>(T332889, CVE-2023-36675) XSS in BlockLogFormatter due to unsafe message
+	    use.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-29197</cvename>
+      <cvename>CVE-2023-36674</cvename>
+      <cvename>CVE-2023-36675</cvename>
+      <url>https://lists.wikimedia.org/hyperkitty/list/mediawiki-announce@lists.wikimedia.org/message/HVT3U3XYY35PSCIQPHMY4VQNF3Q6MHUO/</url>
+    </references>
+    <dates>
+      <discovery>2023-04-21</discovery>
+      <entry>2023-07-01</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="3117e6cd-1772-11ee-9cd6-001b217b3468">
+    <topic>Gitlab -- Vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>gitlab-ce</name>
+	<range><ge>16.1.0</ge><lt>16.1.1</lt></range>
+	<range><ge>16.0.0</ge><lt>16.0.6</lt></range>
+	<range><ge>15.11.0</ge><lt>15.11.10</lt></range>
+	<range><ge>7.14.0</ge><lt>15.10.8</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Gitlab reports:</p>
+	<blockquote cite="https://about.gitlab.com/releases/2023/06/29/security-release-gitlab-16-1-1-released/">
+	  <p>ReDoS via EpicReferenceFilter in any Markdown fields</p>
+	  <p>New commits to private projects visible in forks created while project was public</p>
+	  <p>New commits to private projects visible in forks created while project was public</p>
+	  <p>Maintainer can leak masked webhook secrets by manipulating URL masking</p>
+	  <p>Information disclosure of project import errors</p>
+	  <p>Sensitive information disclosure via value stream analytics controller</p>
+	  <p>Bypassing Code Owners branch protection rule in GitLab</p>
+	  <p>HTML injection in email address</p>
+	  <p>Webhook token leaked in Sidekiq logs if log format is 'default'</p>
+	  <p>Private email address of service desk issue creator disclosed via issues API</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-3424</cvename>
+      <cvename>CVE-2023-2190</cvename>
+      <cvename>CVE-2023-3444</cvename>
+      <cvename>CVE-2023-2620</cvename>
+      <cvename>CVE-2023-3362</cvename>
+      <cvename>CVE-2023-3102</cvename>
+      <cvename>CVE-2023-2576</cvename>
+      <cvename>CVE-2023-2200</cvename>
+      <cvename>CVE-2023-3363</cvename>
+      <cvename>CVE-2023-1936</cvename>
+      <url>https://about.gitlab.com/releases/2023/06/29/security-release-gitlab-16-1-1-released/</url>
+    </references>
+    <dates>
+      <discovery>2023-06-29</discovery>
+      <entry>2023-06-30</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="d821956f-1753-11ee-ad66-1c61b4739ac9">
+    <topic>SoftEtherVPN -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>softether</name>
+	<range><lt>4.42.9798</lt></range>
+      </package>
+      <package>
+	<name>softether-devel</name>
+	<range><lt>4.42.9798</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Daiyuu Nobori reports:</p>
+	<blockquote cite="https://www.softether.org/9-about/News/904-SEVPN202301">
+	  <p>The SoftEther VPN project received a high level code review and technical assistance from Cisco Systems, Inc. of the United States from April to June 2023 to fix several vulnerabilities in the SoftEther VPN code.</p>
+	  <p>The risk of exploitation of any of the fixed vulnerabilities is low under normal usage and environment, and actual attacks are very difficult. However, SoftEther VPN is now an open source VPN software used by 7.4 million unique users worldwide, and is used daily by many users to defend against the risk of blocking attacks by national censorship firewalls and attempts to eavesdrop on communications. Therefore, as long as the slightest attack possibility exists, there is great value in preventing vulnerabilities as much as possible in anticipation of the most sophisticated cyber attackers in the world, such as malicious ISPs and man-in-the-middle attackers on national Internet communication channels. These fixes are important and useful patches for users who use SoftEther VPN and the Internet for secure communications to prevent advanced attacks that can theoretically be triggered by malicious ISPs and man-in-the-middle attackers on national Internet communication pathways.</p>
+	  <p>The fixed vulnerabilities are CVE-2023-27395, CVE-2023-22325, CVE-2023-32275, CVE-2023-27516, CVE-2023-32634, and CVE-2023-31192. All of these were discovered in an outstanding code review of SoftEther VPN by Cisco Systems, Inc.</p>
+	  <ol>
+	    <li>CVE-2023-27395: Heap overflow in SoftEther VPN DDNS client functionality at risk of crashing and theoretically arbitrary code execution caused by a malicious man-in-the-middle attacker such like ISP-level or on national Internet communication channels</li>
+	    <li>CVE-2023-22325: Integer overflow in the SoftEther VPN DDNS client functionality could result in crashing caused by a malicious man-in-the-middle attacker such like ISP-level or on national Internet communication channels</li>
+	    <li>CVE-2023-32275: Vulnerability that allows the administrator himself of a 32-bit version of VPN Client or VPN Server to see the 32-bit value heap address of each of trusted CA's certificates in the VPN process</li>
+	    <li>CVE-2023-27516: If the user forget to set the administrator password of SoftEther VPN Client and enable remote administration with blank password, the administrator password of VPN Client can be changed remotely or VPN client can be used remotely by anonymouse third person</li>
+	    <li>CVE-2023-32634: If an attacker succeeds in launching a TCP relay program on the same port as the VPN Client on a local computer running the SoftEther VPN Client before the VPN Client process is launched, the TCP relay program can conduct a man-in-the-middle attack on communication between the administrator and the VPN Client process</li>
+	    <li>CVE-2023-31192: When SoftEther VPN Client connects to an untrusted VPN Server, an invalid redirection response for the clustering (load balancing) feature causes 20 bytes of uninitialized stack space to be read</li>
+	  </ol>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-27395</cvename>
+      <cvename>CVE-2023-22325</cvename>
+      <cvename>CVE-2023-32275</cvename>
+      <cvename>CVE-2023-27516</cvename>
+      <cvename>CVE-2023-32634</cvename>
+      <cvename>CVE-2023-31192</cvename>
+      <url>https://www.softether.org/9-about/News/904-SEVPN202301</url>
+    </references>
+    <dates>
+      <discovery>2023-06-30</discovery>
+      <entry>2023-06-30</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="06428d91-152e-11ee-8b14-dbdd62da85fb">
+    <topic>OpenEXR -- heap buffer overflow in internal_huf_decompress</topic>
+    <affects>
+      <package>
+	<name>openexr</name>
+	<range><lt>3.1.9</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>oss-fuzz reports:</p>
+	<blockquote cite="https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=59382">
+	  <p>heap buffer overflow in internal_huf_decompress.</p>
+	</blockquote>
+	<p>Cary Phillips reports:</p>
+	<blockquote cite="https://github.com/AcademySoftwareFoundation/openexr/releases/tag/v3.1.9">
+	  <p>v3.1.9 - Patch release that addresses [...] also OSS-fuzz 59382 Heap-buffer-overflow in internal_huf_decompress</p>
+	</blockquote>
+	<p>Kimball Thurston reports:</p>
+	<blockquote cite="https://github.com/AcademySoftwareFoundation/openexr/pull/1439">
+	  <p>Fix scenario where malformed dwa file could read past end of buffer - fixes OSS-Fuzz 59382</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=59382</url>
+      <url>https://github.com/AcademySoftwareFoundation/openexr/releases/tag/v3.1.9</url>
+      <url>https://github.com/AcademySoftwareFoundation/openexr/commit/e431f7e189d0785bb84a5bfb83391e9e58590c49</url>
+      <url>https://github.com/AcademySoftwareFoundation/openexr/pull/1439</url>
+    </references>
+    <dates>
+      <discovery>2023-05-28</discovery>
+      <entry>2023-06-27</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="ad05a737-14bd-11ee-8290-a8a1599412c6">
     <topic>chromium -- multiple vulnerabilities</topic>
     <affects>
