@@ -1,6 +1,6 @@
 PORTNAME=	alacritty
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.12.1
+DISTVERSION=	0.12.2
 PORTREVISION=	1
 CATEGORIES=	x11 wayland
 
@@ -82,7 +82,7 @@ CARGO_CRATES=	adler-1.0.2 \
 		gethostname-0.2.3 \
 		getrandom-0.2.7 \
 		gl_generator-0.14.0 \
-		glutin-0.30.8 \
+		glutin-0.30.9 \
 		glutin_egl_sys-0.5.0 \
 		glutin_glx_sys-0.4.0 \
 		glutin_wgl_sys-0.4.0 \

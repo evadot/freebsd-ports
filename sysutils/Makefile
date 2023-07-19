@@ -183,11 +183,9 @@
     SUBDIR += cfengine-devel
     SUBDIR += cfengine-masterfiles
     SUBDIR += cfengine-masterfiles-devel
-    SUBDIR += cfengine-masterfiles318
     SUBDIR += cfengine-masterfiles320
     SUBDIR += cfengine-masterfiles321
     SUBDIR += cfengine-masterfiles322
-    SUBDIR += cfengine318
     SUBDIR += cfengine320
     SUBDIR += cfengine321
     SUBDIR += cfengine322
@@ -280,6 +278,7 @@
     SUBDIR += devcpu-data-amd
     SUBDIR += devcpu-data-intel
     SUBDIR += devctl-jail-kmod
+    SUBDIR += devd-mount
     SUBDIR += devedeng
     SUBDIR += devstat
     SUBDIR += dfc
@@ -377,6 +376,7 @@
     SUBDIR += faketty
     SUBDIR += fand
     SUBDIR += fanout
+    SUBDIR += fastfetch
     SUBDIR += fatback
     SUBDIR += fcode-utils
     SUBDIR += fconfig
@@ -487,6 +487,7 @@
     SUBDIR += getdelta
     SUBDIR += geteltorito
     SUBDIR += getssl
+    SUBDIR += gh-md-toc
     SUBDIR += gigolo
     SUBDIR += gitwatch
     SUBDIR += gkfreq
@@ -1298,6 +1299,7 @@
     SUBDIR += runwhen
     SUBDIR += rush
     SUBDIR += rust-coreutils
+    SUBDIR += rust-findutils
     SUBDIR += rw
     SUBDIR += s-tui
     SUBDIR += s6
