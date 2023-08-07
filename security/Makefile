@@ -53,6 +53,7 @@
     SUBDIR += belier
     SUBDIR += bfbtester
     SUBDIR += binwalk
+    SUBDIR += bitwarden-cli
     SUBDIR += boringssl
     SUBDIR += botan2
     SUBDIR += bruteblock
@@ -885,6 +886,7 @@
     SUBDIR += py-coincurve
     SUBDIR += py-cpe
     SUBDIR += py-cryptography
+    SUBDIR += py-cryptography-legacy
     SUBDIR += py-cryptography-vectors
     SUBDIR += py-ctypescrypto
     SUBDIR += py-cybox

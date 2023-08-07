@@ -28,6 +28,7 @@
     SUBDIR += bolt-lmm
     SUBDIR += bowtie
     SUBDIR += bowtie2
+    SUBDIR += btllib
     SUBDIR += bwa
     SUBDIR += canu
     SUBDIR += cd-hit
@@ -170,6 +171,7 @@
     SUBDIR += py-goatools
     SUBDIR += py-gtfparse
     SUBDIR += py-hits
+    SUBDIR += py-htseq
     SUBDIR += py-libnuml
     SUBDIR += py-libsedml
     SUBDIR += py-loompy
@@ -203,6 +205,7 @@
     SUBDIR += rubygem-bio-executables
     SUBDIR += rubygem-bio-old-biofetch-emulator
     SUBDIR += rubygem-bio-shell
+    SUBDIR += salmon
     SUBDIR += sam2pairwise
     SUBDIR += samtools
     SUBDIR += scrm
@@ -214,6 +217,7 @@
     SUBDIR += seqio
     SUBDIR += seqkit
     SUBDIR += seqtk
+    SUBDIR += seqwish
     SUBDIR += sigviewer
     SUBDIR += sim4
     SUBDIR += slclust

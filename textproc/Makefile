@@ -1387,6 +1387,7 @@
     SUBDIR += py-jc
     SUBDIR += py-jinja2-cli
     SUBDIR += py-jq
+    SUBDIR += py-json2html
     SUBDIR += py-jsonslicer
     SUBDIR += py-jsx-lexer
     SUBDIR += py-jtextfsm
@@ -1549,6 +1550,7 @@
     SUBDIR += py-sphinx-issues
     SUBDIR += py-sphinx-markdown-tables
     SUBDIR += py-sphinx-me
+    SUBDIR += py-sphinx-sitemap
     SUBDIR += py-sphinx-tabs
     SUBDIR += py-sphinx-theme-builder
     SUBDIR += py-sphinx_press_theme
@@ -2038,6 +2040,7 @@
     SUBDIR += urlview
     SUBDIR += utf8proc
     SUBDIR += uz-aspell
+    SUBDIR += vacuum
     SUBDIR += vale
     SUBDIR += vbindiff
     SUBDIR += ve-hunspell
