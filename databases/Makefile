@@ -82,6 +82,7 @@
     SUBDIR += freetds
     SUBDIR += freetds-devel
     SUBDIR += frontbase-jdbc
+    SUBDIR += futuresql
     SUBDIR += galera
     SUBDIR += galera26
     SUBDIR += gdbm
@@ -580,6 +581,7 @@
     SUBDIR += pgpool-II-41
     SUBDIR += pgpool-II-42
     SUBDIR += pgpool-II-43
+    SUBDIR += pgpool-II-44
     SUBDIR += pgreplay
     SUBDIR += pgroonga
     SUBDIR += pgrouting
@@ -815,6 +817,7 @@
     SUBDIR += py-redis
     SUBDIR += py-redis2
     SUBDIR += py-redis3
+    SUBDIR += py-redis4
     SUBDIR += py-rrdtool
     SUBDIR += py-sispy
     SUBDIR += py-south
@@ -862,6 +865,7 @@
     SUBDIR += redis-devel
     SUBDIR += redis6
     SUBDIR += redis62
+    SUBDIR += redis70
     SUBDIR += redis_exporter
     SUBDIR += redisdesktopmanager
     SUBDIR += redisjson

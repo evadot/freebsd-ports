@@ -1,9 +1,9 @@
 PORTNAME=	wine
-DISTVERSION=	7.22
-PORTREVISION=	2
+DISTVERSION=	8.11
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	emulators
-MASTER_SITES=	https://dl.winehq.org/wine/source/7.x/
+MASTER_SITES=	https://dl.winehq.org/wine/source/8.x/
 PKGNAMESUFFIX=	-devel
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
@@ -16,6 +16,7 @@ LICENSE_COMB=	dual
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 ONLY_FOR_ARCHS=	amd64 i386
+BROKEN_i386=	fails to build: https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=271201\#c6
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/flex:textproc/flex llvm${_LLVM_VERSION}>=0:devel/llvm${_LLVM_VERSION}
 
@@ -45,14 +46,15 @@ CONFIGURE_ARGS+=--verbose \
 		--without-netapi \
 		--without-opencl \
 		--without-osmesa \
-		--with-pcap \
+		--without-pcap \
 		--with-pthread \
 		--without-pulse \
 		--without-sane \
 		--with-sdl \
 		--without-udev \
 		--without-unwind \
-		--without-usb
+		--without-usb \
+		--without-wayland
 CONFIGURE_ENV=	CPPBIN="${CPP}" FLEX="${LOCALBASE}/bin/flex"
 WINELIBDIR=	${PREFIX}/lib
 .if !defined(USE_LDCONFIG32)
@@ -81,6 +83,7 @@ MONO_DESC=	Bundle Mono MSI package for Wine
 
 ALSA_CONFIGURE_ON=	--with-alsa --without-oss
 ALSA_LIB_DEPENDS=	libasound.so:audio/alsa-lib
+ALSA_RUN_DEPENDS=	alsa-plugins>0:audio/alsa-plugins
 
 CUPS_CONFIGURE_WITH=	cups
 CUPS_LIB_DEPENDS=	libcups.so:print/cups

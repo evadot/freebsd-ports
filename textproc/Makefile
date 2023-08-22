@@ -1192,6 +1192,7 @@
     SUBDIR += p5-ack
     SUBDIR += p5-dTemplate
     SUBDIR += p5-docx2txt
+    SUBDIR += p5-excel2csv
     SUBDIR += p5-libsoldout
     SUBDIR += p5-libxml
     SUBDIR += p5-pod2pdf
@@ -1378,6 +1379,7 @@
     SUBDIR += py-humanfriendly
     SUBDIR += py-hunspell
     SUBDIR += py-ini2toml
+    SUBDIR += py-interegular
     SUBDIR += py-isbnlib
     SUBDIR += py-isbntools
     SUBDIR += py-iso-639
@@ -1591,6 +1593,7 @@
     SUBDIR += py-texttable
     SUBDIR += py-textual
     SUBDIR += py-three-merge
+    SUBDIR += py-tiktoken
     SUBDIR += py-tinycss
     SUBDIR += py-tinycss2
     SUBDIR += py-toml
@@ -1898,6 +1901,7 @@
     SUBDIR += rubygem-ya2yaml
     SUBDIR += rubygem-yard
     SUBDIR += rubygem-yard-chef
+    SUBDIR += rubygem-yarp
     SUBDIR += rubygem-zmq
     SUBDIR += rw-aspell
     SUBDIR += rxp

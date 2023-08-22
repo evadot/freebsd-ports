@@ -13,6 +13,7 @@
     SUBDIR += R-cran-digest
     SUBDIR += R-cran-gitcreds
     SUBDIR += R-cran-openssl
+    SUBDIR += R-cran-sodium
     SUBDIR += acme.sh
     SUBDIR += acmed
     SUBDIR += acmetool
@@ -56,6 +57,7 @@
     SUBDIR += bitwarden-cli
     SUBDIR += boringssl
     SUBDIR += botan2
+    SUBDIR += botan3
     SUBDIR += bruteblock
     SUBDIR += bsdsfv
     SUBDIR += bsmtrace
@@ -169,6 +171,7 @@
     SUBDIR += fwlogwatch
     SUBDIR += gcr
     SUBDIR += gef
+    SUBDIR += git-credential-azure
     SUBDIR += git-credential-gopass
     SUBDIR += git-credential-oauth
     SUBDIR += git-crypt
@@ -1015,6 +1018,7 @@
     SUBDIR += py-scrypt
     SUBDIR += py-secure
     SUBDIR += py-securesystemslib
+    SUBDIR += py-service-identity
     SUBDIR += py-service_identity
     SUBDIR += py-signedjson
     SUBDIR += py-social-auth-core
@@ -1033,6 +1037,7 @@
     SUBDIR += py-tlslite-ng
     SUBDIR += py-trezor
     SUBDIR += py-trustme
+    SUBDIR += py-truststore
     SUBDIR += py-tuf
     SUBDIR += py-txtorcon
     SUBDIR += py-uhashring
@@ -1145,7 +1150,6 @@
     SUBDIR += rubygem-openssl-ccm
     SUBDIR += rubygem-openssl-cmac
     SUBDIR += rubygem-openssl-signature_algorithm
-    SUBDIR += rubygem-openssl2
     SUBDIR += rubygem-openvas-omp
     SUBDIR += rubygem-origami
     SUBDIR += rubygem-pbkdf2-ruby
@@ -1279,6 +1283,7 @@
     SUBDIR += stoken
     SUBDIR += strongswan
     SUBDIR += stunnel
+    SUBDIR += su-exec
     SUBDIR += subversion-gnome-keyring
     SUBDIR += sudo
     SUBDIR += sudoscript

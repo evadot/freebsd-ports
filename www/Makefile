@@ -27,7 +27,17 @@
     SUBDIR += amphetadesk
     SUBDIR += analog
     SUBDIR += angie
+    SUBDIR += angie-module-auth-jwt
+    SUBDIR += angie-module-brotli
+    SUBDIR += angie-module-cache-purge
     SUBDIR += angie-module-geoip2
+    SUBDIR += angie-module-image-filter
+    SUBDIR += angie-module-jwt
+    SUBDIR += angie-module-keyval
+    SUBDIR += angie-module-njs
+    SUBDIR += angie-module-perl
+    SUBDIR += angie-module-redis2
+    SUBDIR += angie-module-xslt
     SUBDIR += anyremote2html
     SUBDIR += apache-mode.el
     SUBDIR += apache24
@@ -47,7 +57,6 @@
     SUBDIR += badwolf
     SUBDIR += baikal
     SUBDIR += bareos-webui
-    SUBDIR += bareos18-webui
     SUBDIR += bareos19-webui
     SUBDIR += bareos20-webui
     SUBDIR += bareos21-webui
@@ -1317,6 +1326,7 @@
     SUBDIR += p5-pQuery
     SUBDIR += p5-webservice-validator-css-w3c
     SUBDIR += p5-webservice-validator-html-w3c
+    SUBDIR += pacparser
     SUBDIR += payara
     SUBDIR += pear-HTML_AJAX
     SUBDIR += pear-HTML_TagCloud
@@ -1847,6 +1857,7 @@
     SUBDIR += qt6-webchannel
     SUBDIR += qt6-webengine
     SUBDIR += qt6-websockets
+    SUBDIR += qt6-webview
     SUBDIR += quark
     SUBDIR += qutebrowser
     SUBDIR += radicale
@@ -2245,6 +2256,7 @@
     SUBDIR += sfeed
     SUBDIR += sfnt2woff
     SUBDIR += shellinabox
+    SUBDIR += shiori
     SUBDIR += silicon
     SUBDIR += simple-web-server
     SUBDIR += sitecopy
@@ -2388,6 +2400,7 @@
     SUBDIR += vdradmin-am
     SUBDIR += vertx
     SUBDIR += vger
+    SUBDIR += vigil
     SUBDIR += vimb
     SUBDIR += visitors
     SUBDIR += volta

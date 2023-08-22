@@ -1040,6 +1040,7 @@
     SUBDIR += py-amqplib
     SUBDIR += py-anonfile
     SUBDIR += py-avahi
+    SUBDIR += py-blobfile
     SUBDIR += py-bonsai
     SUBDIR += py-cepa
     SUBDIR += py-cjdns
@@ -1348,6 +1349,7 @@
     SUBDIR += rubygem-octokit
     SUBDIR += rubygem-octokit4
     SUBDIR += rubygem-octokit5
+    SUBDIR += rubygem-octokit6
     SUBDIR += rubygem-octopress-deploy
     SUBDIR += rubygem-omniauth-auth0
     SUBDIR += rubygem-omniauth-authentiq
