@@ -40,6 +40,9 @@ CARGO_FEATURES=	mysql postgresql sqlite #vendored_openssl
 
 INSTALL_TARGET=	install-strip
 
+SUB_LIST=	WWWGRP=${WWWGRP} \
+		WWWOWN=${WWWOWN}
+
 #post-patch:
 #	${REINPLACE_CMD} 's/^rust-version = "1.60"/rust-version = "1.59"/' \
 #		${WRKSRC}/Cargo.toml
