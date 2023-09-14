@@ -1,13 +1,13 @@
 PORTNAME=	mesa-dri
 PORTVERSION=	${MESAVERSION}
-PORTREVISION=	3
 CATEGORIES=	graphics
 
 COMMENT=	OpenGL hardware acceleration drivers for DRI2+
 WWW=		https://www.mesa3d.org/
 
-LIB_DEPENDS+=	libLLVM-${LLVM_DEFAULT}.so:devel/llvm${LLVM_DEFAULT} \
-		libglapi.so:graphics/mesa-libs
+LIB_DEPENDS+=	libglapi.so:graphics/mesa-libs
+
+USES+=		llvm:lib,noexport
 
 OPTIONS_GROUP=			PLATFORM
 OPTIONS_GROUP_PLATFORM=		PLATFORM_X11 PLATFORM_WAYLAND
@@ -73,14 +73,17 @@ MESON_ARGS+=	-Dgallium-drivers="${GALLIUM_DRIVERS:ts,:tl}" \
 		-Dplatforms="${MESA_PLATFORMS:ts,:tl}"
 
 # Disable some options
-MESON_ARGS+=	-Dgallium-xa=disabled \
+MESON_ARGS+=	-Dandroid-libbacktrace=disabled \
+		-Dgallium-xa=disabled \
 		-Dgallium-vdpau=disabled \
 		-Dgallium-va=disabled \
 		-Dgles1=disabled \
 		-Dgles2=disabled \
 		-Dglx=disabled \
+		-Dlmsensors=disabled \
 		-Dmicrosoft-clc=disabled \
-		-Dosmesa=false
+		-Dosmesa=false \
+		-Dvalgrind=disabled
 
 .for _gd in ${ALL_GALLIUM_DRIVERS}
 . if defined(GALLIUM_DRIVERS) && ${GALLIUM_DRIVERS:M${_gd}}
