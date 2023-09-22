@@ -12,7 +12,7 @@
 MESAVERSION=	${MESABASEVERSION}${MESASUBVERSION:C/^(.)/.\1/}
 MESADISTVERSION=${MESABASEVERSION}${MESASUBVERSION:C/^(.)/-\1/}
 
-MESABASEVERSION=	23.1.7
+MESABASEVERSION=	22.3.7
 # if there is a subversion, don't include the '-' between 7.11-rc2.
 MESASUBVERSION=
 
@@ -47,7 +47,7 @@ LIB_DEPENDS+=	libunwind.so:devel/libunwind
 LIB_DEPENDS+=	libelf.so:devel/libelf
 .endif
 
-USES+=		compiler:c++11-lib bison llvm:noexport meson pathfix pkgconfig \
+USES+=		compiler:c++11-lib bison meson pathfix pkgconfig \
 		python:build shebangfix tar:xz
 
 .if ${/usr/bin/ld:L:tA} != /usr/bin/ld.lld
@@ -82,7 +82,9 @@ PKGDEINSTALL=	${.CURDIR}/pkg-deinstall
 
 BINARY_ALIAS+=	python3=${PYTHON_VERSION}
 
-CONFIGURE_ENV+=	LLVM_CONFIG=llvm-config${LLVM_VERSION}
+LLVM_DEFAULT=	15
+BUILD_DEPENDS+=	llvm-config${LLVM_DEFAULT}:devel/llvm${LLVM_DEFAULT}
+CONFIGURE_ENV+=	LLVM_CONFIG=llvm-config${LLVM_DEFAULT}
 
-LDFLAGS+=	-Wl,-rpath=${LOCALBASE}/llvm${LLVM_VERSION}/lib
+LDFLAGS+=	-Wl,-rpath=${LOCALBASE}/llvm${LLVM_DEFAULT}/lib
 MESON_ARGS+=	-Dllvm=enabled
