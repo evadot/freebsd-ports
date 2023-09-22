@@ -332,6 +332,7 @@
     SUBDIR += caliper
     SUBDIR += capnproto
     SUBDIR += capnproto080
+    SUBDIR += capslock
     SUBDIR += capstone
     SUBDIR += capstone3
     SUBDIR += capstone4
@@ -1292,6 +1293,7 @@
     SUBDIR += libisofs
     SUBDIR += libixp
     SUBDIR += libjitterentropy
+    SUBDIR += libjodycode
     SUBDIR += libk8055
     SUBDIR += libkiwix
     SUBDIR += libklel
@@ -1454,6 +1456,7 @@
     SUBDIR += libxo
     SUBDIR += libxs
     SUBDIR += libxtend
+    SUBDIR += libzakalwe
     SUBDIR += libzim
     SUBDIR += libzookeeper
     SUBDIR += libzvbi
@@ -1571,10 +1574,11 @@
     SUBDIR += marl
     SUBDIR += massif-visualizer
     SUBDIR += mate-common
+    SUBDIR += matreshka
     SUBDIR += maven
     SUBDIR += maven-wrapper
-    SUBDIR += maven39
     SUBDIR += maven363
+    SUBDIR += maven39
     SUBDIR += mcpp
     SUBDIR += mdb
     SUBDIR += mdds
@@ -1659,6 +1663,7 @@
     SUBDIR += obby
     SUBDIR += objconv
     SUBDIR += objecthash
+    SUBDIR += objfw
     SUBDIR += ocaml-annexlib
     SUBDIR += ocaml-calendar
     SUBDIR += ocaml-camljava
@@ -1717,6 +1722,7 @@
     SUBDIR += opengrok
     SUBDIR += openocd
     SUBDIR += opentelemetry-cpp
+    SUBDIR += opentelemetry-proto
     SUBDIR += openwince-include
     SUBDIR += orc
     SUBDIR += orcania
@@ -4419,6 +4425,7 @@
     SUBDIR += py-buildbot-worker
     SUBDIR += py-buildbot-www
     SUBDIR += py-bullet3
+    SUBDIR += py-bump2version
     SUBDIR += py-bytecode
     SUBDIR += py-cabby
     SUBDIR += py-cached-property
@@ -4573,6 +4580,7 @@
     SUBDIR += py-debtcollector
     SUBDIR += py-debugpy
     SUBDIR += py-debugtools
+    SUBDIR += py-decopatch
     SUBDIR += py-decorator
     SUBDIR += py-decoratortools
     SUBDIR += py-deepdiff
@@ -4594,6 +4602,8 @@
     SUBDIR += py-distributed
     SUBDIR += py-dj41-django-rq
     SUBDIR += py-dj41-graphene-django
+    SUBDIR += py-dj42-django-rq
+    SUBDIR += py-dj42-graphene-django
     SUBDIR += py-django-rq
     SUBDIR += py-dockerpty
     SUBDIR += py-docopt
@@ -4660,6 +4670,7 @@
     SUBDIR += py-find-libpython
     SUBDIR += py-findlibs
     SUBDIR += py-findpython
+    SUBDIR += py-fire
     SUBDIR += py-first
     SUBDIR += py-fixtures
     SUBDIR += py-flake8
@@ -5220,6 +5231,7 @@
     SUBDIR += py-prompt-toolkit2
     SUBDIR += py-property-cached
     SUBDIR += py-proselint
+    SUBDIR += py-prospector
     SUBDIR += py-proto-plus
     SUBDIR += py-protobuf
     SUBDIR += py-protobuf-compiler
@@ -5291,6 +5303,7 @@
     SUBDIR += py-pylev
     SUBDIR += py-pylibsrtp
     SUBDIR += py-pylint-django
+    SUBDIR += py-pylint-flask
     SUBDIR += py-pylint-plugin-utils
     SUBDIR += py-pylint-venv
     SUBDIR += py-pylru
@@ -5322,6 +5335,7 @@
     SUBDIR += py-pyrfc3339
     SUBDIR += py-pyright
     SUBDIR += py-pyro
+    SUBDIR += py-pyroma
     SUBDIR += py-pyrsistent
     SUBDIR += py-pyscaffold
     SUBDIR += py-pysdl2
@@ -5340,6 +5354,7 @@
     SUBDIR += py-pytest-cache
     SUBDIR += py-pytest-canonical-data
     SUBDIR += py-pytest-capturelog
+    SUBDIR += py-pytest-cases
     SUBDIR += py-pytest-checkdocs
     SUBDIR += py-pytest-console-scripts
     SUBDIR += py-pytest-cov
@@ -5554,6 +5569,7 @@
     SUBDIR += py-serializable
     SUBDIR += py-serpent
     SUBDIR += py-session-info
+    SUBDIR += py-setoptconf
     SUBDIR += py-setproctitle
     SUBDIR += py-setuptools
     SUBDIR += py-setuptools-declarative-requirements
@@ -5613,6 +5629,7 @@
     SUBDIR += py-streamparse
     SUBDIR += py-strenum
     SUBDIR += py-strict-rfc3339
+    SUBDIR += py-strictyaml
     SUBDIR += py-stringbrewer
     SUBDIR += py-stringcase
     SUBDIR += py-structlog
@@ -6674,7 +6691,6 @@
     SUBDIR += rubygem-cucumber-messages
     SUBDIR += rubygem-cucumber-rails
     SUBDIR += rubygem-cucumber-tag-expressions
-    SUBDIR += rubygem-cucumber-tag-expressions4
     SUBDIR += rubygem-cucumber-wire
     SUBDIR += rubygem-curses
     SUBDIR += rubygem-cyoi
@@ -7284,6 +7300,7 @@
     SUBDIR += rubygem-semi_semantic
     SUBDIR += rubygem-semver2
     SUBDIR += rubygem-semver_dialects
+    SUBDIR += rubygem-semver_dialects12
     SUBDIR += rubygem-semverse
     SUBDIR += rubygem-sentry-rails
     SUBDIR += rubygem-sentry-raven
@@ -7377,6 +7394,7 @@
     SUBDIR += rubygem-sugar-high
     SUBDIR += rubygem-sumbur
     SUBDIR += rubygem-sundawg_country_codes
+    SUBDIR += rubygem-sus
     SUBDIR += rubygem-svn2git
     SUBDIR += rubygem-swagger-blocks
     SUBDIR += rubygem-sync

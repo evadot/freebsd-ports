@@ -1,6 +1,5 @@
 PORTNAME=	gitlab-ce
-PORTVERSION=	16.3.2
-PORTREVISION=	1
+PORTVERSION=	16.3.4
 DISTVERSIONPREFIX=	v
 CATEGORIES=	www devel
 
@@ -20,7 +19,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 # mail/rubygem-net-pop is required as ruby 3.1 removed it
 MY_DEPENDS=	git>=2.41.0:devel/git \
 	gitaly>=${PORTVERSION}:devel/gitaly \
-	gitlab-elasticsearch-indexer>=4.3.8:textproc/gitlab-elasticsearch-indexer \
+	gitlab-elasticsearch-indexer>=4.3.10:textproc/gitlab-elasticsearch-indexer \
 	gitlab-agent>=16.3.0:net/gitlab-agent \
 	gitlab-metrics-exporter>0:devel/gitlab-metrics-exporter \
 	gitlab-pages>=${PORTVERSION}:www/gitlab-pages \
@@ -151,7 +150,7 @@ MY_DEPENDS=	git>=2.41.0:devel/git \
 	rubygem-rack-timeout>=0.6.3<0.7:www/rubygem-rack-timeout \
 	rubygem-puma>=6.3<7:www/rubygem-puma \
 	rubygem-sd_notify>=0.1.1<0.2:devel/rubygem-sd_notify \
-	rubygem-state_machines-activerecord>=0.8.0<0.9.0:databases/rubygem-state_machines-activerecord \
+	rubygem-state_machines-activerecord08>=0.8.0<0.9.0:databases/rubygem-state_machines-activerecord08 \
 	rubygem-acts-as-taggable-on>=9.0<10:www/rubygem-acts-as-taggable-on \
 	rubygem-sidekiq6>=6.5.7<6.6:devel/rubygem-sidekiq6 \
 	rubygem-sidekiq-cron18>=1.8.0<1.9:devel/rubygem-sidekiq-cron18 \
@@ -161,7 +160,7 @@ MY_DEPENDS=	git>=2.41.0:devel/git \
 	rubygem-rainbow>=3.1.1<4.0:devel/rubygem-rainbow \
 	rubygem-ruby-progressbar>=1.11<2:devel/rubygem-ruby-progressbar \
 	rubygem-re2>=1.7.0<1.8.0:devel/rubygem-re2 \
-	rubygem-semver_dialects>=1.2.1<1.3:devel/rubygem-semver_dialects \
+	rubygem-semver_dialects12>=1.2.1<1.3:devel/rubygem-semver_dialects12 \
 	rubygem-version_sorter>=2.3<3:textproc/rubygem-version_sorter \
 	rubygem-js_regex>=3.8<4.0:textproc/rubygem-js_regex \
 	rubygem-device_detector>=0:devel/rubygem-device_detector \

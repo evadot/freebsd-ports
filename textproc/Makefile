@@ -466,6 +466,7 @@
     SUBDIR += markdownfmt
     SUBDIR += markdownpart
     SUBDIR += mathml-xsd
+    SUBDIR += md2roff
     SUBDIR += md4c
     SUBDIR += mdbook
     SUBDIR += mdbook-linkcheck
@@ -1467,6 +1468,7 @@
     SUBDIR += py-parsimonious
     SUBDIR += py-parso
     SUBDIR += py-patiencediff
+    SUBDIR += py-pdf2docx
     SUBDIR += py-pdfminer.six
     SUBDIR += py-pdfminer3k
     SUBDIR += py-pdfrw

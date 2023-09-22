@@ -1,6 +1,5 @@
 PORTNAME=	wine
-DISTVERSION=	8.11
-PORTREVISION=	2
+DISTVERSION=	8.14
 PORTEPOCH=	1
 CATEGORIES=	emulators
 MASTER_SITES=	https://dl.winehq.org/wine/source/8.x/
@@ -115,7 +114,7 @@ X11_LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 .include <bsd.port.pre.mk>
 
 .if (${LLVM_DEFAULT} == 10 || ${LLVM_DEFAULT} == 11)
-_LLVM_VERSION=	12
+_LLVM_VERSION=	15
 .else
 _LLVM_VERSION=	${LLVM_DEFAULT}
 .endif

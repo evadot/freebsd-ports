@@ -5,6 +5,105 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20230919:
+  AFFECTS: users of net-p2p/transmission
+  AUTHOR:  mondo.debater_0q@icloud.com
+
+  The 4.0 port haphazardly consolidated prior slave ports into flavors of a single port.
+  The flavors have now been revised to better match releases prior to 4.0.
+  The -full flavor included in the 4.0 port has been replaced with -default, which
+  restores the compile-time options of prior release's metaport. Other flavors allow
+  for more piecemeal installs. The prior -web slave port can be installed through the
+  -default flavor or the -daemon flavor.
+
+  See Bug 273841 for more details.
+
+20230915:
+  AFFECTS: users of print/ghostscript10
+  AUTHOR: michael.osipov@siemens.com
+
+  The port flavors have been replaced with a default port option of X11.
+  The flavors approach creates conflicting dependencies with other ports which
+  cannot be solved this time with the ports framework.
+
+  See PRs 270989 and 272541 for details.
+
+20230910:
+  AFFECTS: users of dns/powerdns
+  AUTHOR: tremere@cainites.net
+
+  In Authoritative Server 4.8, the LMDB backend gains a new Lightning
+  Stream-compatible schema, which requires a data migration (this is
+  automatic, and there is no migration back to the old schema). LMDB
+  backend users should pay extra attention to the Upgrade Notes
+  (https://doc.powerdns.com/authoritative/upgrading.html).
+
+20230910:
+  AFFECTS: users of net-mgmt/netbox
+  AUTHOR: kai@FreeBSD.org
+
+  1. Please make sure that the PostgreSQL server for the NetBox instance is
+     running version 12 or higher.  This is because Django 4.2 requires
+     PostgreSQL 12 as a minimum.
+
+  2. Please also check the pkg-message and the changelogs for further info.
+
+20230908:
+  AFFECTS: users of databases/postgresql* and other software using PostgreSQL to run
+  AUTHOR: kbowling@FreeBSD.org
+
+  The default version of PostgreSQL has been switched from 13 to 15.
+  The upgrade procedure can use up twice the space the databases
+  currently needs. If you have a big amount of stored data take a
+  closer look at the manpage of pg_upgrade for avoidance and/or
+  speedup of the upgrade.
+
+  The upgrade instructions consider a basic usage and do not match
+  complex scenarios like replication, sharding, or similar.
+
+  Upgrade instructions:
+
+  First stop your PostgreSQL, create PostgreSQL-binaries and backup your data.
+  If you have another Version of PostgreSQL installed, for example 13, your
+  files are named according to this.
+
+  # service postgresql stop
+  # pkg create postgresql13-server postgresql13-contrib
+  # mkdir /tmp/pg-upgrade
+  # tar xf postgresql13-server-13.12.pkg -C /tmp/pg-upgrade
+  # tar xf postgresql13-contrib-13.12.pkg -C /tmp/pg-upgrade
+  # pkg delete -f databases/postgresql13-server databases/postgresql13-contrib databases/postgresql13-client
+
+  Now update PostgreSQL:
+
+    pkg user:
+    # pkg install databases/postgresql15-server databases/postgresql15-contrib
+    # pkg upgrade
+
+    Portmaster users:
+    # portmaster databases/postgresql15-server databases/postgresql15-contrib
+    # portmaster -a
+
+    Portupgrade users:
+    # portinstall databases/postgresql15-server databases/postgresql15-contrib
+    # portupgrade -a
+
+  After installing the new PostgreSQL version you need to convert
+  all your databases to new version:
+
+  # su -l postgres -c "/usr/local/bin/initdb --encoding=utf-8 --lc-collate=C -D /var/db/postgres/data15 -U postgres"
+  # su -l postgres -c "pg_upgrade -b /tmp/pg-upgrade/usr/local/bin/ -d /var/db/postgres/data13/ -B /usr/local/bin/ -D /var/db/postgres/data15/ -U postgres "
+
+  Now the migration is finished. You can start PostgreSQL again with:
+
+  # service postgresql start
+
+  ATTENTION:
+  1) The default user changed from "pgsql" to "postgres" in 11. The migration steps above now assume
+     the "postgres" database user and FreeBSD user.
+  2) See the updating entry 20190829 if you are updating from a release prior to 11.
+  3) If you use non-default initdb options, you have to adjust the initdb-command accordingly
+
 20230906:
   AUTHOR: jrm@FreeBSD.org
   AFFECTS: users of sysutils/devcpu-data*

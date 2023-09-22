@@ -19,7 +19,7 @@
 
 PORTNAME=	webengine
 DISTVERSION=	${QT5_VERSION}
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	www
 PKGNAMEPREFIX=	qt5-
 
@@ -44,7 +44,6 @@ LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg \
 		libopus.so:audio/opus \
 		libpci.so:devel/libpci \
 		libpng.so:graphics/png \
-		libre2.so:devel/re2 \
 		libsnappy.so:archivers/snappy \
 		libvpx.so:multimedia/libvpx \
 		libwebp.so:graphics/webp
