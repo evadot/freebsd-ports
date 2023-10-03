@@ -334,7 +334,6 @@
     SUBDIR += capnproto080
     SUBDIR += capslock
     SUBDIR += capstone
-    SUBDIR += capstone3
     SUBDIR += capstone4
     SUBDIR += cargo-bloat
     SUBDIR += cargo-c
@@ -555,7 +554,6 @@
     SUBDIR += dia2code
     SUBDIR += dia2code+
     SUBDIR += ding-libs
-    SUBDIR += directfb
     SUBDIR += dispy
     SUBDIR += distcc
     SUBDIR += distel
@@ -603,7 +601,6 @@
     SUBDIR += egypt
     SUBDIR += eiffelstudio
     SUBDIR += electron22
-    SUBDIR += electron23
     SUBDIR += electron24
     SUBDIR += electron25
     SUBDIR += elf
@@ -1407,7 +1404,6 @@
     SUBDIR += libsysinfo
     SUBDIR += libtai
     SUBDIR += libtap
-    SUBDIR += libtar
     SUBDIR += libtecla
     SUBDIR += libtermkey
     SUBDIR += libtextstyle
@@ -1465,6 +1461,7 @@
     SUBDIR += linenoise-ng
     SUBDIR += linux-c7-dbus-libs
     SUBDIR += linux-c7-devtools
+    SUBDIR += linux-c7-devtoolset
     SUBDIR += linux-c7-elfutils-libelf
     SUBDIR += linux-c7-elfutils-libs
     SUBDIR += linux-c7-icu
@@ -4033,7 +4030,6 @@
     SUBDIR += pear-channel-ezc
     SUBDIR += pear-channel-geshi
     SUBDIR += pear-channel-horde
-    SUBDIR += pear-channel-htmlpurifier.org
     SUBDIR += pear-channel-openpear
     SUBDIR += pear-channel-pdepend
     SUBDIR += pear-channel-phing
@@ -4048,7 +4044,6 @@
     SUBDIR += pear-ezc_Base
     SUBDIR += pear-ezc_ConsoleTools
     SUBDIR += pear-geshi
-    SUBDIR += pear-htmlpurifier
     SUBDIR += pear-pdepend-staticReflection
     SUBDIR += pear-phing
     SUBDIR += pecl-APCu
@@ -4087,7 +4082,6 @@
     SUBDIR += phasar
     SUBDIR += php-Psr_Log
     SUBDIR += php-composer
-    SUBDIR += php-composer2
     SUBDIR += php-geshi
     SUBDIR += php-ice37
     SUBDIR += php-libawl
@@ -4154,7 +4148,6 @@
     SUBDIR += please
     SUBDIR += pmccabe
     SUBDIR += pmd
-    SUBDIR += pmdk
     SUBDIR += poco
     SUBDIR += popt
     SUBDIR += poser
@@ -4215,6 +4208,7 @@
     SUBDIR += py-addict
     SUBDIR += py-aenum
     SUBDIR += py-aioapns
+    SUBDIR += py-aiobotocore
     SUBDIR += py-aiocontextvars
     SUBDIR += py-aiofiles
     SUBDIR += py-aiohttp-apispec
@@ -4260,6 +4254,7 @@
     SUBDIR += py-asn1crypto
     SUBDIR += py-aspectlib
     SUBDIR += py-aspy.yaml
+    SUBDIR += py-assertpy
     SUBDIR += py-ast-decompiler
     SUBDIR += py-asteval
     SUBDIR += py-astor
@@ -4727,6 +4722,7 @@
     SUBDIR += py-game_sdl2
     SUBDIR += py-gapic-generator
     SUBDIR += py-gast
+    SUBDIR += py-gcsfs
     SUBDIR += py-gelidum
     SUBDIR += py-genson
     SUBDIR += py-genty
@@ -5249,6 +5245,7 @@
     SUBDIR += py-py3nvml
     SUBDIR += py-pyTooling
     SUBDIR += py-py_interface
+    SUBDIR += py-pyaml-env
     SUBDIR += py-pyasn1
     SUBDIR += py-pyasn1-modules
     SUBDIR += py-pybind11
@@ -5270,6 +5267,8 @@
     SUBDIR += py-pydantic
     SUBDIR += py-pydantic-core
     SUBDIR += py-pydantic-extra-types
+    SUBDIR += py-pydantic-vault
+    SUBDIR += py-pydantic-yaml
     SUBDIR += py-pydantic2
     SUBDIR += py-pydash
     SUBDIR += py-pydecor
@@ -5549,6 +5548,7 @@
     SUBDIR += py-rush
     SUBDIR += py-rx
     SUBDIR += py-rx1
+    SUBDIR += py-s3fs
     SUBDIR += py-saneyaml
     SUBDIR += py-sarge
     SUBDIR += py-sarif-om
@@ -5857,6 +5857,7 @@
     SUBDIR += py-ypy-websocket
     SUBDIR += py-yunomi
     SUBDIR += py-zarr
+    SUBDIR += py-zc.lockfile
     SUBDIR += py-zclockfile
     SUBDIR += py-zconfig
     SUBDIR += py-zfp
@@ -5876,6 +5877,7 @@
     SUBDIR += pycanberra
     SUBDIR += pycharm-ce
     SUBDIR += pycharm-pro
+    SUBDIR += pycomposefile
     SUBDIR += pycos
     SUBDIR += pycount
     SUBDIR += pydbus-common
@@ -5884,6 +5886,7 @@
     SUBDIR += pyenv
     SUBDIR += pygobject3-common
     SUBDIR += pylint
+    SUBDIR += pymsteams
     SUBDIR += pyobfuscate
     SUBDIR += pyotherside-qt5
     SUBDIR += pyside2
@@ -6119,6 +6122,8 @@
     SUBDIR += rubygem-aws-sdk-backupgateway
     SUBDIR += rubygem-aws-sdk-backupstorage
     SUBDIR += rubygem-aws-sdk-batch
+    SUBDIR += rubygem-aws-sdk-bedrock
+    SUBDIR += rubygem-aws-sdk-bedrockruntime
     SUBDIR += rubygem-aws-sdk-billingconductor
     SUBDIR += rubygem-aws-sdk-braket
     SUBDIR += rubygem-aws-sdk-budgets
@@ -6738,6 +6743,7 @@
     SUBDIR += rubygem-docile
     SUBDIR += rubygem-docopt
     SUBDIR += rubygem-drb
+    SUBDIR += rubygem-dry-cli
     SUBDIR += rubygem-dry-configurable
     SUBDIR += rubygem-dry-container
     SUBDIR += rubygem-dry-core
@@ -6805,6 +6811,7 @@
     SUBDIR += rubygem-flipper-active_support_cache_store-rails70
     SUBDIR += rubygem-flipper-ui
     SUBDIR += rubygem-flipper025
+    SUBDIR += rubygem-flipper026
     SUBDIR += rubygem-fluent-logger
     SUBDIR += rubygem-fog
     SUBDIR += rubygem-fog-core
@@ -7069,7 +7076,6 @@
     SUBDIR += rubygem-murmurhash3
     SUBDIR += rubygem-mustache
     SUBDIR += rubygem-mustache-sinatra
-    SUBDIR += rubygem-mustache0
     SUBDIR += rubygem-mustermann
     SUBDIR += rubygem-mustermann-grape
     SUBDIR += rubygem-mutex_m
@@ -7487,6 +7493,8 @@
     SUBDIR += rubygem-view_component-rails61
     SUBDIR += rubygem-view_component-rails70
     SUBDIR += rubygem-virtus
+    SUBDIR += rubygem-vite_rails-rails70
+    SUBDIR += rubygem-vite_ruby
     SUBDIR += rubygem-warbler
     SUBDIR += rubygem-warden
     SUBDIR += rubygem-warning
