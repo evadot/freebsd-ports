@@ -319,6 +319,7 @@
     SUBDIR += rexx-regutil
     SUBDIR += rexx-wrapper
     SUBDIR += rhino
+    SUBDIR += rizin
     SUBDIR += ruby30
     SUBDIR += ruby31
     SUBDIR += ruby32
@@ -329,6 +330,7 @@
     SUBDIR += rust
     SUBDIR += rust-bootstrap
     SUBDIR += rust-nightly
+    SUBDIR += s7
     SUBDIR += sagittarius-scheme
     SUBDIR += sather-specification
     SUBDIR += sather-tutorial

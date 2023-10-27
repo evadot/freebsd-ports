@@ -1359,6 +1359,7 @@
     SUBDIR += py-evtx2splunk
     SUBDIR += py-extract-msg
     SUBDIR += py-fastavro
+    SUBDIR += py-faust-cchardet
     SUBDIR += py-feedparser
     SUBDIR += py-fingerprints
     SUBDIR += py-fluent.syntax
@@ -1558,11 +1559,15 @@
     SUBDIR += py-sphinx-copybutton
     SUBDIR += py-sphinx-design
     SUBDIR += py-sphinx-examples
+    SUBDIR += py-sphinx-gallery
     SUBDIR += py-sphinx-inline-tabs
     SUBDIR += py-sphinx-intl
     SUBDIR += py-sphinx-issues
     SUBDIR += py-sphinx-markdown-tables
+    SUBDIR += py-sphinx-material
     SUBDIR += py-sphinx-me
+    SUBDIR += py-sphinx-multiversion
+    SUBDIR += py-sphinx-multiversion-zrepl
     SUBDIR += py-sphinx-sitemap
     SUBDIR += py-sphinx-tabs
     SUBDIR += py-sphinx-theme-builder
@@ -1734,6 +1739,7 @@
     SUBDIR += rubygem-cucumber-gherkin
     SUBDIR += rubygem-cucumber-gherkin26
     SUBDIR += rubygem-cucumber-html-formatter
+    SUBDIR += rubygem-dartsass
     SUBDIR += rubygem-diff-lcs
     SUBDIR += rubygem-diff_match_patch
     SUBDIR += rubygem-diffy
@@ -1826,6 +1832,7 @@
     SUBDIR += rubygem-parslet1
     SUBDIR += rubygem-phone
     SUBDIR += rubygem-pretty-xml
+    SUBDIR += rubygem-prism
     SUBDIR += rubygem-psych
     SUBDIR += rubygem-psych3
     SUBDIR += rubygem-puppet-strings

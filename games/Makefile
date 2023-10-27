@@ -628,7 +628,6 @@
     SUBDIR += minetest
     SUBDIR += minetest_game
     SUBDIR += minetestmapper
-    SUBDIR += minilens
     SUBDIR += mirrormagic
     SUBDIR += miscom
     SUBDIR += mkhexgrid
@@ -637,6 +636,7 @@
     SUBDIR += moon-buggy
     SUBDIR += moonlander
     SUBDIR += moonlight-embedded
+    SUBDIR += moonlight-qt
     SUBDIR += moria
     SUBDIR += motogt
     SUBDIR += mrboom
@@ -953,7 +953,6 @@
     SUBDIR += taisei
     SUBDIR += tali
     SUBDIR += tanglet
-    SUBDIR += tanks-of-freedom
     SUBDIR += tbclock
     SUBDIR += tecnoballz
     SUBDIR += teeworlds
@@ -966,6 +965,7 @@
     SUBDIR += textmaze
     SUBDIR += thegrind
     SUBDIR += tileworld
+    SUBDIR += tinycols
     SUBDIR += tkmoo
     SUBDIR += tmatrix
     SUBDIR += tomatoes

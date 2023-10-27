@@ -5,6 +5,94 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20231027:
+  AFFECTS: users of print/ghostscript9*
+  AUTHOR: michaelo@FreeBSD.org
+
+  The default ghostscript version has been updated from 9 to 10.
+
+  If you compile your own ports you may keep 9 as the default version by
+  adding the following lines to your /etc/make.conf file:
+
+  #
+  # Keep ghostscript 9 as default version
+  #
+  DEFAULT_VERSIONS+=ghostscript=9
+
+  If you wish to update to the new default version, you need to first stop any
+  software that uses ghostscript. Then, you will need to follow these steps,
+  depending upon how you manage your system.
+
+  Please note that print/ghostcript9* will be removed in the future since it is
+  not supported by upstream anymore.
+
+20231026:
+  AFFECTS: users of lang/chicken
+  AUTHOR: gahr@FreeBSD.org
+
+  The chicken binaries csc and csi, together with their manual pages, have been
+  renamed to chicken-csc and chicken-csi, to avoid conflicts with lang/mono.
+  This is in line with what several Linux distros do. See PR 274736.
+
+20231023:
+  AFFECTS: users of mail/mailman3
+  AUTHOR: einar@isnic.is
+
+  logging.http section has now been split into two parts, logging.http is for
+  the Mailman internal code and logging.gunicorn is for Gunicorn specifically
+  since they have different logging formats. This should fix suprious errors
+  with KeyError: t that was often confusing for users.
+
+  Python 3.9 is now the minimum supported version of Python.
+
+20231017:
+  AFFECTS: users of lang/perl5*
+  AUTHOR: delphij@FreeBSD.org
+
+  The default Perl version has been switched to Perl 5.36.  If you are using
+  binary packages to upgrade your system, you do not have anything to do, pkg
+  upgrade will do the right thing.  For the other people, follow the
+  instructions in entry 20181213, it should still be the same.
+
+20231011:
+  AFFECTS: users of www/caddy
+  AUTHOR:  adamw@FreeBSD.org
+
+  The default admin endpoint has changed from localhost:2019 to
+  /var/run/caddy/caddy.sock. Using a Unix socket is more secure,
+  allowing it to be secured by filesystem permissions rather than
+  requiring a firewall.
+
+  If you only control caddy from the rc(8) script (service caddy ...),
+  you don't need to do anything. If you access the API yourself, you
+  will want to update your scripts to use the new socket.
+
+  To use the old endpoint, add the following to /etc/rc.conf:
+
+    caddy_admin="localhost:2019"
+
+20231009:
+  AFFECTS: users of net/ntpd-rs
+  AUTHOR: mikael@freebsd.org
+
+  In 1.0.0 the configuration has been completely reworked, please check the
+  documentation for details. Configuration will not automatically migrate.
+
+20231004:
+  AFFECTS: www/gitlab-ce
+  AUTHOR:  mfechner@FreeBSD.org
+
+  Before you upgrade to version 16.4.x or higher, make sure you did the
+  upgrade to 16.3.x!
+
+  The database migration for 16.4.1 can fail due to unexpected name of a foreign key.
+  So it is recommended to have a database backup available in case the solution
+  described in the update manual does not work for you.
+
+  The upgrade manual can be found as usual here:
+  https://gitlab.fechner.net/mfechner/Gitlab-docu/-/blob/master/update/16.3-16.4-freebsd.md
+
+
 20230930:
   AFFECTS: users of Transmission (net-p2p/transmission@*)
   AUTHOR:  mondo.debater_0q@icloud.com
@@ -5175,7 +5263,7 @@ leave you without networking.
 	  Then you will need to rebuild everything that uses libperl.so, you
 	  can do so with:
 
-	portmaster -f `pkg shlib -qR libperl.so.5.26`
+	portmaster `pkg shlib -qR libperl.so.5.26`
 
 	  If, for some reason, this command fails at one point, it is safe to
 	  run it again, it will not rebuild what it already rebuilt, as the

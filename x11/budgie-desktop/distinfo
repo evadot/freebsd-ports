@@ -1,5 +1,3 @@
-TIMESTAMP = 1693665825
-SHA256 (budgie/budgie-desktop-v10.8.tar.xz) = b8406a60a74390421278486b242369017806716e87ea911424091e63febd2619
-SIZE (budgie/budgie-desktop-v10.8.tar.xz) = 3009908
-SHA256 (budgie/980b72e1651b53fd9f11e2c87dd4ea029896c858.patch) = fb197da25d9db6df601e7275e7ba52509d23b39ea7b1d30da82ec1e5bd7142fb
-SIZE (budgie/980b72e1651b53fd9f11e2c87dd4ea029896c858.patch) = 1502
+TIMESTAMP = 1697701076
+SHA256 (budgie/budgie-desktop-v10.8.2.tar.xz) = a8f88a253a787bb51f122923456103b1dfd4b880c3c6be6cb08e6c70624f9673
+SIZE (budgie/budgie-desktop-v10.8.2.tar.xz) = 3185304

@@ -319,6 +319,7 @@
     SUBDIR += jconvolver
     SUBDIR += jid3lib
     SUBDIR += jmatconvol
+    SUBDIR += jnoisemeter
     SUBDIR += juk
     SUBDIR += juke
     SUBDIR += julius
@@ -598,8 +599,10 @@
     SUBDIR += pianod2
     SUBDIR += picard
     SUBDIR += picard-plugins
+    SUBDIR += pipewire-module-xrdp
     SUBDIR += pithos
     SUBDIR += plasma5-kpipewire
+    SUBDIR += plasma5-oxygen-sounds
     SUBDIR += plasma5-plasma-pa
     SUBDIR += play
     SUBDIR += playgsf
@@ -628,6 +631,7 @@
     SUBDIR += py-apetag
     SUBDIR += py-aubio
     SUBDIR += py-audioread
+    SUBDIR += py-auditok
     SUBDIR += py-discid
     SUBDIR += py-discogs-client
     SUBDIR += py-essentia
@@ -684,7 +688,6 @@
     SUBDIR += rawrec
     SUBDIR += re
     SUBDIR += rebot3
-    SUBDIR += rem
     SUBDIR += resid
     SUBDIR += rexima
     SUBDIR += rezound

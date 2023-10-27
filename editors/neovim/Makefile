@@ -1,6 +1,6 @@
 PORTNAME=	neovim
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.9.2
+DISTVERSION=	0.9.4
 CATEGORIES=	editors
 
 MAINTAINER=	adamw@FreeBSD.org
@@ -13,7 +13,7 @@ BUILD_DEPENDS=	gperf:devel/gperf \
 		${LUA_MODLIBDIR}/bit.so:devel/lua-bitop@${LUA_FLAVOR} \
 		${LUA_MODLIBDIR}/lpeg.so:devel/lua-lpeg@${LUA_FLAVOR}
 LIB_DEPENDS=	libluv.so:devel/luv \
-		libmsgpackc.so:devel/msgpack-c \
+		libmsgpack-c.so:devel/msgpack-c \
 		libtermkey.so:devel/libtermkey \
 		libtree-sitter.so:devel/tree-sitter \
 		libunibilium.so:devel/unibilium \

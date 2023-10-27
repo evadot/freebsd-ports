@@ -1,5 +1,5 @@
-TIMESTAMP = 1693643697
-SHA256 (go/devel_gitlab-shell/gitlab-shell-v14.26.0/go.mod) = 8ef118a7179202ed0a6f2fd52e53c29fef23b668421f086e19b7f965c884c317
-SIZE (go/devel_gitlab-shell/gitlab-shell-v14.26.0/go.mod) = 4705
-SHA256 (go/devel_gitlab-shell/gitlab-shell-v14.26.0/gitlab-shell-v14.26.0.tar.bz2) = a2e75107010f8ef90d6695c11a2cf2a726de6ecfbf4c69262a36f33f96028da1
-SIZE (go/devel_gitlab-shell/gitlab-shell-v14.26.0/gitlab-shell-v14.26.0.tar.bz2) = 132666
+TIMESTAMP = 1698070113
+SHA256 (go/devel_gitlab-shell/gitlab-shell-v14.29.0/go.mod) = b9545469fc1ff91969adbb05cc7cc19976d63f8ae097f857bcdabd824c804412
+SIZE (go/devel_gitlab-shell/gitlab-shell-v14.29.0/go.mod) = 4839
+SHA256 (go/devel_gitlab-shell/gitlab-shell-v14.29.0/gitlab-shell-v14.29.0.tar.bz2) = ee3edbc89fa0d8314afad7fc3e208390f4aca02ab96487118b42f2fca2d63326
+SIZE (go/devel_gitlab-shell/gitlab-shell-v14.29.0/gitlab-shell-v14.29.0.tar.bz2) = 140791
