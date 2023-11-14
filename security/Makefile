@@ -159,8 +159,6 @@
     SUBDIR += fizz
     SUBDIR += fl0p
     SUBDIR += flawfinder
-    SUBDIR += fpc-gnutls
-    SUBDIR += fpc-openssl
     SUBDIR += fprint_demo
     SUBDIR += fprintd
     SUBDIR += fragroute
@@ -425,6 +423,7 @@
     SUBDIR += openssl-unsafe
     SUBDIR += openssl111
     SUBDIR += openssl31
+    SUBDIR += openssl31-quictls
     SUBDIR += openssl32
     SUBDIR += openvas
     SUBDIR += openvpn
@@ -945,6 +944,7 @@
     SUBDIR += py-keyrings.alt
     SUBDIR += py-krb5
     SUBDIR += py-libnacl
+    SUBDIR += py-liboqs-python
     SUBDIR += py-m2crypto
     SUBDIR += py-maec
     SUBDIR += py-merkletools

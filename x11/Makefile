@@ -79,7 +79,6 @@
     SUBDIR += flruler
     SUBDIR += fnott
     SUBDIR += foot
-    SUBDIR += fpc-x11
     SUBDIR += fstobdf
     SUBDIR += fuzzel
     SUBDIR += gdm
@@ -617,6 +616,7 @@
     SUBDIR += xvmcinfo
     SUBDIR += xvt
     SUBDIR += xwatchwin
+    SUBDIR += xwaylandvideobridge
     SUBDIR += xwd
     SUBDIR += xwininfo
     SUBDIR += xwinwrap

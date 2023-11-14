@@ -134,6 +134,7 @@
     SUBDIR += ddgr
     SUBDIR += deno
     SUBDIR += devd
+    SUBDIR += dezoomify-rs
     SUBDIR += dfileserver
     SUBDIR += dillo2
     SUBDIR += dojo
@@ -184,12 +185,6 @@
     SUBDIR += foreign-cdm
     SUBDIR += formication
     SUBDIR += foswiki
-    SUBDIR += fpc-fastcgi
-    SUBDIR += fpc-googleapi
-    SUBDIR += fpc-httpd22
-    SUBDIR += fpc-httpd24
-    SUBDIR += fpc-libmicrohttpd
-    SUBDIR += fpc-webidl
     SUBDIR += free-sa-devel
     SUBDIR += fswiki
     SUBDIR += fusionpbx
@@ -242,9 +237,9 @@
     SUBDIR += h2o
     SUBDIR += h2o-devel
     SUBDIR += habari
-    SUBDIR += hedgedoc
     SUBDIR += hiawatha
     SUBDIR += hiawatha-monitor
+    SUBDIR += homer-web
     SUBDIR += hotcrp
     SUBDIR += hs-DAV
     SUBDIR += hs-gitit
@@ -349,6 +344,7 @@
     SUBDIR += lzr
     SUBDIR += madsonic
     SUBDIR += man2web
+    SUBDIR += manpageblog
     SUBDIR += mathjax
     SUBDIR += mathjax3
     SUBDIR += mathopd
@@ -480,6 +476,7 @@
     SUBDIR += node16
     SUBDIR += node18
     SUBDIR += node20
+    SUBDIR += node21
     SUBDIR += nostromo
     SUBDIR += novnc
     SUBDIR += novnc-websockify
@@ -489,8 +486,10 @@
     SUBDIR += npm-node16
     SUBDIR += npm-node18
     SUBDIR += npm-node20
+    SUBDIR += npm-node21
     SUBDIR += oauth2-proxy
     SUBDIR += obhttpd
+    SUBDIR += offpunk
     SUBDIR += oneshot
     SUBDIR += onionbalance
     SUBDIR += onionshare
@@ -1924,6 +1923,7 @@
     SUBDIR += rubygem-actioncable60
     SUBDIR += rubygem-actioncable61
     SUBDIR += rubygem-actioncable70
+    SUBDIR += rubygem-actioncable71
     SUBDIR += rubygem-actionpack4
     SUBDIR += rubygem-actionpack5
     SUBDIR += rubygem-actionpack50
@@ -1931,6 +1931,7 @@
     SUBDIR += rubygem-actionpack60
     SUBDIR += rubygem-actionpack61
     SUBDIR += rubygem-actionpack70
+    SUBDIR += rubygem-actionpack71
     SUBDIR += rubygem-activeresource
     SUBDIR += rubygem-activeresource4
     SUBDIR += rubygem-acts-as-taggable-on
@@ -1955,6 +1956,7 @@
     SUBDIR += rubygem-browser
     SUBDIR += rubygem-cal-heatmap-rails
     SUBDIR += rubygem-carrierwave
+    SUBDIR += rubygem-carrierwave1
     SUBDIR += rubygem-cgi
     SUBDIR += rubygem-cgi_multipart_eof_fix
     SUBDIR += rubygem-chosen-rails
@@ -1963,6 +1965,7 @@
     SUBDIR += rubygem-cookiejar
     SUBDIR += rubygem-crass
     SUBDIR += rubygem-cssbundling-rails
+    SUBDIR += rubygem-cssbundling-rails-rails70
     SUBDIR += rubygem-cuba
     SUBDIR += rubygem-d3_rails
     SUBDIR += rubygem-davclient
@@ -2054,6 +2057,7 @@
     SUBDIR += rubygem-httpi
     SUBDIR += rubygem-hurley
     SUBDIR += rubygem-importmap-rails
+    SUBDIR += rubygem-importmap-rails-rails70
     SUBDIR += rubygem-innate
     SUBDIR += rubygem-jekyll
     SUBDIR += rubygem-jekyll-sanity
@@ -2070,6 +2074,7 @@
     SUBDIR += rubygem-jquery-ui-rails-rails4
     SUBDIR += rubygem-jruby-rack
     SUBDIR += rubygem-jsbundling-rails
+    SUBDIR += rubygem-jsbundling-rails-rails70
     SUBDIR += rubygem-jsobfu
     SUBDIR += rubygem-json-jwt
     SUBDIR += rubygem-json-jwt115
@@ -2141,6 +2146,7 @@
     SUBDIR += rubygem-patron
     SUBDIR += rubygem-platform-api
     SUBDIR += rubygem-propshaft
+    SUBDIR += rubygem-propshaft-rails70
     SUBDIR += rubygem-protocol-hpack
     SUBDIR += rubygem-protocol-http
     SUBDIR += rubygem-protocol-http1
@@ -2182,6 +2188,7 @@
     SUBDIR += rubygem-rails60
     SUBDIR += rubygem-rails61
     SUBDIR += rubygem-rails70
+    SUBDIR += rubygem-rails71
     SUBDIR += rubygem-rails_12factor
     SUBDIR += rubygem-rails_autolink
     SUBDIR += rubygem-rails_serve_static_assets
@@ -2193,6 +2200,7 @@
     SUBDIR += rubygem-railties60
     SUBDIR += rubygem-railties61
     SUBDIR += rubygem-railties70
+    SUBDIR += rubygem-railties71
     SUBDIR += rubygem-raindrops
     SUBDIR += rubygem-ramaze
     SUBDIR += rubygem-raphael-rails
@@ -2250,8 +2258,10 @@
     SUBDIR += rubygem-smashing
     SUBDIR += rubygem-socksify
     SUBDIR += rubygem-stimulus-rails
+    SUBDIR += rubygem-stimulus-rails-rails70
     SUBDIR += rubygem-swd
     SUBDIR += rubygem-tailwindcss-rails
+    SUBDIR += rubygem-tailwindcss-rails-rails70
     SUBDIR += rubygem-task_list
     SUBDIR += rubygem-thin
     SUBDIR += rubygem-tinyatom
@@ -2260,6 +2270,7 @@
     SUBDIR += rubygem-totoridipjp
     SUBDIR += rubygem-tumblr_client
     SUBDIR += rubygem-turbo-rails
+    SUBDIR += rubygem-turbo-rails-rails70
     SUBDIR += rubygem-turbolinks
     SUBDIR += rubygem-turbolinks-source
     SUBDIR += rubygem-typhoeus
@@ -2298,7 +2309,6 @@
     SUBDIR += serf
     SUBDIR += servlet-api
     SUBDIR += sfeed
-    SUBDIR += sfnt2woff
     SUBDIR += shellinabox
     SUBDIR += shiori
     SUBDIR += silicon
@@ -2445,6 +2455,7 @@
     SUBDIR += vdradmin-am
     SUBDIR += vertx
     SUBDIR += vger
+    SUBDIR += vieb
     SUBDIR += vigil
     SUBDIR += vimb
     SUBDIR += visitors
@@ -2503,6 +2514,7 @@
     SUBDIR += yarn-node16
     SUBDIR += yarn-node18
     SUBDIR += yarn-node20
+    SUBDIR += yarn-node21
     SUBDIR += yarr
     SUBDIR += yaws
     SUBDIR += you-get
