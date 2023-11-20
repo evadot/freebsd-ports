@@ -77,9 +77,10 @@ MESON_ARGS+=	-Dandroid-libbacktrace=disabled \
 		-Dgallium-xa=disabled \
 		-Dgallium-vdpau=disabled \
 		-Dgallium-va=disabled \
-		-Dgles1=disabled \
-		-Dgles2=disabled \
+		-Dgles1=enabled \
+		-Dgles2=enabled \
 		-Dglx=disabled \
+		-Degl=enabled \
 		-Dlmsensors=disabled \
 		-Dmicrosoft-clc=disabled \
 		-Dosmesa=false \
