@@ -84,8 +84,7 @@ MESON_ARGS+=	-Dandroid-libbacktrace=disabled \
 		-Dlmsensors=disabled \
 		-Dmicrosoft-clc=disabled \
 		-Dosmesa=false \
-		-Dvalgrind=disabled \
-		-Dvideo-codecs=vc1dec,h264dec,h264enc,h265dec,h265enc
+		-Dvalgrind=disabled
 
 .for _gd in ${ALL_GALLIUM_DRIVERS}
 . if defined(GALLIUM_DRIVERS) && ${GALLIUM_DRIVERS:M${_gd}}
