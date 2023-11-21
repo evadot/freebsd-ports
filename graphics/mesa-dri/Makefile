@@ -33,7 +33,7 @@ ZSTD_MESON_ENABLED=	zstd
 
 ALL_GALLIUM_DRIVERS=	CROCUS I915 IRIS PANFROST R300 R600 RADEONSI SVGA \
 			SWRAST ZINK
-ALL_VULKAN_DRIVERS=	INTEL AMD SWRAST
+ALL_VULKAN_DRIVERS=	INTEL INTEL_HASVK AMD SWRAST
 
 GALLIUM_DRIVERS+=	SWRAST \
 			ZINK
@@ -51,7 +51,7 @@ BUILD_DEPENDS+=		glslangValidator:graphics/glslang
 .endif
 .if ${ARCH} == amd64 || ${ARCH} == i386
 GALLIUM_DRIVERS+=	CROCUS I915 IRIS SVGA
-VULKAN_DRIVERS+=	INTEL
+VULKAN_DRIVERS+=	INTEL INTEL_HASVK
 .endif
 
 LDFLAGS_i386=		-Wl,-znotext
@@ -84,7 +84,8 @@ MESON_ARGS+=	-Dandroid-libbacktrace=disabled \
 		-Dlmsensors=disabled \
 		-Dmicrosoft-clc=disabled \
 		-Dosmesa=false \
-		-Dvalgrind=disabled
+		-Dvalgrind=disabled \
+		-Dvideo-codecs=vc1dec,h264dec,h264enc,h265dec,h265enc
 
 .for _gd in ${ALL_GALLIUM_DRIVERS}
 . if defined(GALLIUM_DRIVERS) && ${GALLIUM_DRIVERS:M${_gd}}
