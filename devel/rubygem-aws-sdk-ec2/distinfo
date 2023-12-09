@@ -1,3 +1,3 @@
-TIMESTAMP = 1699985603
-SHA256 (rubygem/aws-sdk-ec2-1.420.0.gem) = 62331b53a427696102ec7fbc1d3065aa8536c38c507a62a23247972f4012fad2
-SIZE (rubygem/aws-sdk-ec2-1.420.0.gem) = 1034752
+TIMESTAMP = 1701363980
+SHA256 (rubygem/aws-sdk-ec2-1.427.0.gem) = 2dbe5b203ee879379233fafb1f63686695a5c68a3d97556fd3b425713969de96
+SIZE (rubygem/aws-sdk-ec2-1.427.0.gem) = 1050624

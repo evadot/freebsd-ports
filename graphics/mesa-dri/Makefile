@@ -72,7 +72,7 @@ MESON_ARGS+=	-Dgallium-drivers="${GALLIUM_DRIVERS:ts,:tl}" \
 		-Dvulkan-drivers="${VULKAN_DRIVERS:ts,:tl}" \
 		-Dplatforms="${MESA_PLATFORMS:ts,:tl}"
 
-# Vulkan Video extensions
+# Vulkan Video extensions (keep in sync with mesa-gallium-va)
 MESON_ARGS+=	-Dvideo-codecs="vc1dec,h264dec,h264enc,h265dec,h265enc"
 
 # Disable some options
