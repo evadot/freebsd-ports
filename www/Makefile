@@ -332,6 +332,7 @@
     SUBDIR += lua-resty-core
     SUBDIR += lua-resty-http
     SUBDIR += lua-resty-lrucache
+    SUBDIR += lua-resty-session
     SUBDIR += luakit
     SUBDIR += luakit-devel
     SUBDIR += lux
@@ -2209,6 +2210,7 @@
     SUBDIR += rubygem-rdf-normalize
     SUBDIR += rubygem-redcloth
     SUBDIR += rubygem-redis-rack
+    SUBDIR += rubygem-redis-rack2
     SUBDIR += rubygem-redis-rails
     SUBDIR += rubygem-redis-rails-rails5
     SUBDIR += rubygem-redis-rails-rails50
@@ -2358,7 +2360,6 @@
     SUBDIR += thttpd
     SUBDIR += thumbnail_index
     SUBDIR += thundercache
-    SUBDIR += thundersnarf
     SUBDIR += tidy
     SUBDIR += tidy-devel
     SUBDIR += tidy-html5
