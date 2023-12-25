@@ -1,5 +1,6 @@
 PORTNAME=	mpich
 PORTVERSION=	4.1.2
+PORTREVISION=	1
 CATEGORIES=	net parallel
 MASTER_SITES=	https://www.mpich.org/static/downloads/${DISTVERSION}/
 
@@ -76,6 +77,12 @@ CONFIGURE_ARGS=	--enable-fast=""	\
 		BASH_SHELL=${LOCALBASE}/bin/bash
 
 .include <bsd.port.options.mk>
+
+.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1500005
+# linker error when compiling with llvm 17.0.6 on CURRENT
+USES+=			llvm:max=16
+CHOSEN_COMPILER_TYPE=	clang
+.endif
 
 .for pm in ${OPTIONS_GROUP_PM}
 . if ${PORT_OPTIONS:M${pm}}

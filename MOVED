@@ -6245,7 +6245,6 @@ www/py-dj31-django-mptt||2021-12-31|Has expired: Extended support of Django 3.1 
 net/py-flask-xml-rpc||2021-12-31|Has expired: No longer maintained upstream
 audio/libaacplus||2021-12-31|Has expired: Abandoned upstream, no new release since 2011
 security/obfsclient||2021-12-31|Has expired: https://github.com/Yawning/obfsclient/issues/37
-www/grafana||2021-12-31|Has expired: No longer maintained upstream, use www/grafana8
 www/py-dj31-django-auth-ldap||2021-12-31|Has expired: Extended support of Django 3.1 ends December 2021, upgrade to the Django 3.2+ version of this port. See https://www.djangoproject.com/download/
 www/py-dj31-django-filter||2021-12-31|Has expired: Extended support of Django 3.1 ends December 2021, upgrade to the Django 3.2+ version of this port. See https://www.djangoproject.com/download/
 www/py-dj31-drf-yasg||2021-12-31|Has expired: Extended support of Django 3.1 ends December 2021, upgrade to the Django 3.2+ version of this port. See https://www.djangoproject.com/download/
@@ -8177,3 +8176,11 @@ net/py-anonfile||2023-12-07|Has expired: anonfile.com has shut down
 www/thundersnarf||2023-12-12|Has expired: Depends on deprecated php80
 textproc/stardict-quick||2023-12-12|Has expired: unfetchable
 devel/rubygem-view_component-rails61|devel/rubygem-view_component-rails70|2023-12-14|Obsolete, use devel/rubygem-view_component-rails70 instead
+devel/rubygem-cucumber-messages23|devel/rubygem-cucumber-messages|2023-12-14|Remove obsoleted port. Use devel/rubygem-cucumber-messages instead
+devel/py-astroid253|devel/py-astroid|2023-12-14|Remove obsoleted port. Use devel/py-astroid instead
+mail/imap-uw|mail/panda-imap|2023-12-16|Has expired: Last upstream release was in 2007 so use the fork mail/panda-imap
+mail/mailsync||2023-12-16|Has expired: Depends on outdated mail/cclient
+mail/cclient|mail/panda-cclient|2023-12-16|Has expired: Last upstream release was in 2007 so use the fork mail/panda-cclient
+www/yanopaste||2023-12-18|Has expired: Last upstream release was in 2011
+www/py-yt-dlp-devel|www/py-yt-dlp|2023-12-22|Remove the -devel suffix
+math/octave-forge-statistics-bootstrap|math/octave-forge-statistics-resampling|2023-12-24|Name change upstream

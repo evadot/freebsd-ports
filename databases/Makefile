@@ -9,6 +9,7 @@
     SUBDIR += R-cran-sqldf
     SUBDIR += WWWdb
     SUBDIR += adminer
+    SUBDIR += adminerevo
     SUBDIR += adodb5
     SUBDIR += akonadi
     SUBDIR += apache-commons-dbutils
@@ -198,6 +199,8 @@
     SUBDIR += mysql57-server
     SUBDIR += mysql80-client
     SUBDIR += mysql80-server
+    SUBDIR += mysql81-client
+    SUBDIR += mysql81-server
     SUBDIR += mysqlbackup
     SUBDIR += mysqldump-secure
     SUBDIR += mysqlreport
@@ -874,6 +877,7 @@
     SUBDIR += replibyte
     SUBDIR += retcl
     SUBDIR += rocksdb
+    SUBDIR += rqlite
     SUBDIR += rrdman
     SUBDIR += rrdmerge
     SUBDIR += rrdtool
