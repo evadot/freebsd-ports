@@ -1,6 +1,6 @@
 PORTNAME=	xdg-desktop-portal-hyprland
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.2.5
+DISTVERSION=	1.2.6
 CATEGORIES=	x11 wayland
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -9,8 +9,6 @@ WWW=		https://github.com/hyprwm/xdg-desktop-portal-hyprland
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
-
-BROKEN_FreeBSD_12=	libc++ too old
 
 BUILD_DEPENDS=	wayland-protocols>=1.31:graphics/wayland-protocols
 LIB_DEPENDS=	libsdbus-c++.so:devel/sdbus-cpp \

@@ -146,7 +146,6 @@
     SUBDIR += drawpile
     SUBDIR += drm-510-kmod
     SUBDIR += drm-515-kmod
-    SUBDIR += drm-fbsd12.0-kmod
     SUBDIR += drm-kmod
     SUBDIR += drm_info
     SUBDIR += dspdfviewer
@@ -190,7 +189,6 @@
     SUBDIR += farbfeld
     SUBDIR += feh
     SUBDIR += fig2sxd
-    SUBDIR += figurine
     SUBDIR += filament
     SUBDIR += filmulator
     SUBDIR += flam3
@@ -461,7 +459,6 @@
     SUBDIR += libfpx
     SUBDIR += libfreehand
     SUBDIR += libgeotiff
-    SUBDIR += libgfx
     SUBDIR += libgltext
     SUBDIR += libgltf
     SUBDIR += libglvnd
@@ -781,8 +778,6 @@
     SUBDIR += phototonic
     SUBDIR += php-facedetect
     SUBDIR += php-geos
-    SUBDIR += php80-exif
-    SUBDIR += php80-gd
     SUBDIR += php81-exif
     SUBDIR += php81-gd
     SUBDIR += php82-exif
@@ -843,6 +838,7 @@
     SUBDIR += py-PyOpenGL
     SUBDIR += py-PyOpenGL-accelerate
     SUBDIR += py-actdiag
+    SUBDIR += py-albumentations
     SUBDIR += py-altair
     SUBDIR += py-asciitree
     SUBDIR += py-beziers
@@ -954,6 +950,7 @@
     SUBDIR += py-qpageview
     SUBDIR += py-qrencode
     SUBDIR += py-qt6-3d
+    SUBDIR += py-qudida
     SUBDIR += py-railroad-diagrams
     SUBDIR += py-rasterio
     SUBDIR += py-rasterstats
@@ -1076,12 +1073,12 @@
     SUBDIR += s10sh
     SUBDIR += s2
     SUBDIR += s2tc
-    SUBDIR += sage
     SUBDIR += sam2p
     SUBDIR += sampleicc
     SUBDIR += sane-airscan
     SUBDIR += sane-backends
     SUBDIR += sane-epkowa
+    SUBDIR += satty
     SUBDIR += scale2x
     SUBDIR += scantailor
     SUBDIR += scr2png
@@ -1177,6 +1174,7 @@
     SUBDIR += vulkan-headers
     SUBDIR += vulkan-loader
     SUBDIR += vulkan-tools
+    SUBDIR += vulkan-utility-libraries
     SUBDIR += vulkan-validation-layers
     SUBDIR += vv
     SUBDIR += waffle
@@ -1199,7 +1197,6 @@
     SUBDIR += xd3d
     SUBDIR += xdgagrab
     SUBDIR += xfig
-    SUBDIR += xfpovray
     SUBDIR += xfractint
     SUBDIR += xglurbules
     SUBDIR += xgrasp
