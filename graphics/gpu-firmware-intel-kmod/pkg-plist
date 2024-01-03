@@ -36,6 +36,7 @@
 %%TIGERLAKE%%/%%KMODDIR%%/i915_tgl_guc_62_0_0_bin.ko
 %%TIGERLAKE%%/%%KMODDIR%%/i915_tgl_guc_70_1_1_bin.ko
 %%TIGERLAKE%%/%%KMODDIR%%/i915_tgl_guc_70_bin.ko
+%%TIGERLAKE%%/%%KMODDIR%%/i915_tgl_huc_bin.ko
 %%TIGERLAKE%%/%%KMODDIR%%/i915_tgl_huc_7_5_0_bin.ko
 %%TIGERLAKE%%/%%KMODDIR%%/i915_tgl_huc_7_9_3_bin.ko
 %%ROCKETLAKE%%/%%KMODDIR%%/i915_rkl_dmc_ver2_02_bin.ko
@@ -46,6 +47,7 @@
 %%DG1%%/%%KMODDIR%%/i915_dg1_huc_bin.ko
 %%DG2%%/%%KMODDIR%%/i915_dg2_dmc_ver2_07_bin.ko
 %%DG2%%/%%KMODDIR%%/i915_dg2_guc_70_bin.ko
+%%ALDERLAKE%%/%%KMODDIR%%/i915_adlp_dmc_bin.ko
 %%ALDERLAKE%%/%%KMODDIR%%/i915_adlp_dmc_ver2_10_bin.ko
 %%ALDERLAKE%%/%%KMODDIR%%/i915_adlp_dmc_ver2_16_bin.ko
 %%ALDERLAKE%%/%%KMODDIR%%/i915_adlp_guc_62_0_3_bin.ko

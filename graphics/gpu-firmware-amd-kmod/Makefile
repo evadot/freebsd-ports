@@ -62,7 +62,7 @@ USES=		kmod uidfix
 USE_GITHUB=	yes
 GH_ACCOUNT=	freebsd
 GH_PROJECT=	drm-kmod-firmware
-GH_TAGNAME=	20230625_3
+GH_TAGNAME=	20230625_4
 
 MAKE_ENV=	KMODS="amdgpukmsfw"
 MAKE_ENV+=	AMDGPUKMODS="${FLAVOR}"
