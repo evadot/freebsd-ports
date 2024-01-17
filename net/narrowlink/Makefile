@@ -1,5 +1,6 @@
 PORTNAME=	narrowlink
 DISTVERSION=	0.2.2
+PORTREVISION=	1
 CATEGORIES=	net
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -8,6 +9,8 @@ WWW=		https://narrowlink.com
 
 LICENSE=	MPL20
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
+
+BROKEN_powerpc64le=	build breaks due to panic in the ring crate: alled `Option::unwrap()` on a `None` value, see https://github.com/briansmith/ring/issues/1904
 
 USES=		cargo
 USE_RC_SUBR=	narrowlink-agent narrowlink-gateway

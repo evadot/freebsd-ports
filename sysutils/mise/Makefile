@@ -1,11 +1,11 @@
 PORTNAME=	mise
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2024.1.4
+DISTVERSION=	2024.1.20
 CATEGORIES=	sysutils
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Runtime Executor (asdf rust clone)
-WWW=		https://github.com/jdxcode/mise
+WWW=		https://github.com/jdx/mise
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -363,6 +363,14 @@ OPENSSLINC=	/usr/include
 OPENSSLLIB=	/usr/lib
 
 PLIST_FILES=	bin/${PORTNAME}
+
+# Fix build on armv7, i386 and powerpc
+# sys-info-0.9.1 crate issue: https://github.com/FillZpp/sys-info-rs/issues/80
+post-patch:
+	@${REINPLACE_CMD} \
+	-e '/get_cpu/s|unsigned long|uint64_t|' \
+	-e '/get_proc_total/s|unsigned long|uint64_t|' \
+	${WRKSRC}/cargo-crates/sys-info-0.9.1/c/*.[ch]
 
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}

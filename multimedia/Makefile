@@ -238,6 +238,7 @@
     SUBDIR += mpv
     SUBDIR += mpv-mpris
     SUBDIR += mpvpaper
+    SUBDIR += mpvqt
     SUBDIR += msdl
     SUBDIR += msopenh264
     SUBDIR += mswebrtc
@@ -311,6 +312,7 @@
     SUBDIR += py-pretty_midi
     SUBDIR += py-pymediainfo
     SUBDIR += py-pysubs2
+    SUBDIR += py-python-mpv
     SUBDIR += py-soco
     SUBDIR += py-srt
     SUBDIR += py-subliminal

@@ -392,6 +392,7 @@
     SUBDIR += kdegraphics-svgpart
     SUBDIR += kdegraphics-thumbnailers
     SUBDIR += kdiagram
+    SUBDIR += kdiagram-qt6
     SUBDIR += kf5-kimageformats
     SUBDIR += kf5-kplotting
     SUBDIR += kf5-kquickcharts
@@ -554,6 +555,7 @@
     SUBDIR += matplotlib-cpp
     SUBDIR += matplotplusplus
     SUBDIR += meh
+    SUBDIR += menyoki
     SUBDIR += mesa-demos
     SUBDIR += mesa-devel
     SUBDIR += mesa-dri
