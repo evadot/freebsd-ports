@@ -13,7 +13,7 @@ LICENSE=	MIT
 
 SUBPACKAGES?=	amdgpu radeon tools
 
-BUILD_DEPENDS=	rst2man:textproc/py-docutils@${PY_FLAVOR}
+BUILD_DEPENDS=	rst2man:textproc/py-docutils
 LIB_DEPENDS=	libpciaccess.so:devel/libpciaccess
 
 SELF_DEPENDS.amdgpu=	main
