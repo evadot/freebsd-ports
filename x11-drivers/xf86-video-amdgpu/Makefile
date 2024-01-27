@@ -19,7 +19,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 ONLY_FOR_ARCHS=	aarch64 amd64 i386 powerpc64le
 ONLY_FOR_ARCHS_REASON=	KMS is required and currently only available on x86/arm64/powerpc64le
 
-LIB_DEPENDS=	libdrm_amdgpu.so:graphics/libdrm
+LIB_DEPENDS=	libdrm_amdgpu.so:graphics/libdrm~amdgpu
 
 EXTRACT_SUFX=	.tar.xz
 USES=		gl xorg-cat:driver tar:xz

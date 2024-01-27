@@ -24,7 +24,7 @@ ONLY_FOR_ARCHS=		aarch64 amd64 i386 powerpc64 powerpc64le
 ONLY_FOR_ARCHS_REASON=	KMS is required and currently only available on x86/arm64/powerpc64
 
 LIB_DEPENDS=	libpciaccess.so:devel/libpciaccess \
-		libdrm_radeon.so:graphics/libdrm
+		libdrm_radeon.so:graphics/libdrm~radeon
 
 USES=		gl xorg xorg-cat:driver
 USE_GL=		gl

@@ -40,7 +40,7 @@ X11_BUILD_DEPENDS=	${LOCALBASE}/include/xcb/dri3.h:x11/libxcb
 X11_LIB_DEPENDS=	libva-x11.so:multimedia/libva
 X11_CMAKE_BOOL=		ENABLE_X11 ENABLE_X11_DRI3
 
-WAYLAND_LIB_DEPENDS=	libdrm_intel.so:graphics/libdrm \
+WAYLAND_LIB_DEPENDS=	libdrm_intel.so:graphics/libdrm~intel \
 			libwayland-client.so:graphics/wayland
 WAYLAND_CMAKE_BOOL=	ENABLE_WAYLAND
 

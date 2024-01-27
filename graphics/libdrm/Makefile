@@ -11,22 +11,23 @@ WWW=		https://dri.freedesktop.org/
 
 LICENSE=	MIT
 
+SUBPACKAGES?=	amdgpu radeon tools
+
 BUILD_DEPENDS=	rst2man:textproc/py-docutils@${PY_FLAVOR}
 LIB_DEPENDS=	libpciaccess.so:devel/libpciaccess
+
+SELF_DEPENDS.amdgpu=	main
+SELF_DEPENDS.radeon=	main
+SELF_DEPENDS.intel=	main
+SELF_DEPENDS.vmwgfx=	main
+SELF_DEPENDS.tools=	main
 
 USES=		gnome meson pkgconfig tar:xz
 USE_LDCONFIG=	yes
 MESON_ARGS=	-Dvalgrind=disabled
 
-OPTIONS_DEFINE=	TESTS
-OPTIONS_SUB=	yes
-
-TESTS_DESC=	Build and install test programs
-
-TESTS_MESON_TRUE=	install-test-programs
-
 # avoid circular dependency in case cairo supports OpenGL (cairo->mesa-libs->libdrm->cairo)
-CONFIGURE_ARGS+=	-Dcairo-tests=disabled
+MESON_ARGS+=	-Dcairo-tests=disabled
 
 # Disable some targets known to not work on FreeBSD
 MESON_ARGS+=	-Domap=disabled \
@@ -37,54 +38,19 @@ MESON_ARGS+=	-Domap=disabled \
 		-Detnaviv=disabled \
 		-Dnouveau=disabled
 
-MESON_ARGS+=	-Dman-pages=enabled
+MESON_ARGS+=	-Dman-pages=enabled \
+		-Dinstall-test-programs=true
 
 .include <bsd.port.options.mk>
 
 .if ${ARCH} == amd64 || ${ARCH} == i386
 MESON_ARGS+=	-Dvmwgfx=enabled \
 		-Dintel=enabled
+SUBPACKAGES+=	intel \
+		vmwgfx
 .else
 MESON_ARGS+=	-Dvmwgfx=disabled \
 		-Dintel=disabled
-.endif
-
-.if ${ARCH} == amd64 || ${ARCH} == i386
-PLIST_SUB+=	AMD_DRIVERS=""
-PLIST_SUB+=	ARM_DRIVERS="@comment "
-PLIST_SUB+=	INTEL_DRIVER=""
-PLIST_SUB+=	RADEON_DRIVERS=""
-PLIST_SUB+=	VMWGFX_DRIVERS=""
-.elif ${ARCH:Mpowerpc*}
-PLIST_SUB+=	AMD_DRIVERS=""
-PLIST_SUB+=	ARM_DRIVERS="@comment "
-PLIST_SUB+=	INTEL_DRIVER="@comment "
-PLIST_SUB+=	RADEON_DRIVERS=""
-PLIST_SUB+=	VMWGFX_DRIVERS="@comment "
-.elif ${ARCH} == aarch64
-PLIST_SUB+=	AMD_DRIVERS=""
-PLIST_SUB+=	ARM_DRIVERS=""
-PLIST_SUB+=	INTEL_DRIVER="@comment "
-PLIST_SUB+=	RADEON_DRIVERS=""
-PLIST_SUB+=	VMWGFX_DRIVERS="@comment "
-.elif ${ARCH:Marm*}
-PLIST_SUB+=	AMD_DRIVERS=""
-PLIST_SUB+=	ARM_DRIVERS=""
-PLIST_SUB+=	INTEL_DRIVER="@comment "
-PLIST_SUB+=	RADEON_DRIVERS=""
-PLIST_SUB+=	VMWGFX_DRIVERS="@comment "
-.elif ${ARCH} == riscv64
-PLIST_SUB+=	AMD_DRIVERS=""
-PLIST_SUB+=	ARM_DRIVERS="@comment "
-PLIST_SUB+=	INTEL_DRIVER="@comment "
-PLIST_SUB+=	RADEON_DRIVERS=""
-PLIST_SUB+=	VMWGFX_DRIVERS="@comment "
-.else
-PLIST_SUB+=	AMD_DRIVERS="@comment "
-PLIST_SUB+=	ARM_DRIVERS="@comment "
-PLIST_SUB+=	INTEL_DRIVER="@comment "
-PLIST_SUB+=	RADEON_DRIVERS="@comment "
-PLIST_SUB+=	VMWGFX_DRIVERS="@comment "
 .endif
 
 .include <bsd.port.mk>

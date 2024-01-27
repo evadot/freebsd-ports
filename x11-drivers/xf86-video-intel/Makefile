@@ -14,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 ONLY_FOR_ARCHS=	amd64 i386
 ONLY_FOR_ARCHS_REASON=	only Intel integrated GPUs on x86 are supported
 
-LIB_DEPENDS=	libdrm_intel.so:graphics/libdrm
+LIB_DEPENDS=	libdrm_intel.so:graphics/libdrm~intel
 
 USES=		cpe localbase xorg xorg-cat:driver
 CPE_VENDOR=	x
