@@ -499,6 +499,7 @@
     SUBDIR += mps
     SUBDIR += mpz
     SUBDIR += mumble
+    SUBDIR += mumble-server
     SUBDIR += murmur
     SUBDIR += murmur-cli
     SUBDIR += muse-sequencer
@@ -762,9 +763,6 @@
     SUBDIR += speex
     SUBDIR += speexdsp
     SUBDIR += spek
-    SUBDIR += sphinx
-    SUBDIR += sphinx3
-    SUBDIR += sphinxbase
     SUBDIR += spiralloops
     SUBDIR += spiralsynth
     SUBDIR += spiralsynthmodular

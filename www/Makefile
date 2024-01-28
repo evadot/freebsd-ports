@@ -72,6 +72,7 @@
     SUBDIR += bareos-webui
     SUBDIR += bareos20-webui
     SUBDIR += bareos21-webui
+    SUBDIR += bareos22-webui
     SUBDIR += beehive
     SUBDIR += bkmrkconv
     SUBDIR += bluefish
@@ -1548,6 +1549,7 @@
     SUBDIR += py-django-hierarkey
     SUBDIR += py-django-hijack
     SUBDIR += py-django-htmlmin
+    SUBDIR += py-django-htmx
     SUBDIR += py-django-i18nfield
     SUBDIR += py-django-jquery-js
     SUBDIR += py-django-js-asset
@@ -1688,6 +1690,7 @@
     SUBDIR += py-google-cloud-resource-manager
     SUBDIR += py-google-cloud-speech
     SUBDIR += py-google-cloud-storage
+    SUBDIR += py-google-cloud-testutils
     SUBDIR += py-google-cloud-translate
     SUBDIR += py-google-cloud-vision
     SUBDIR += py-google-resumable-media
@@ -1737,6 +1740,7 @@
     SUBDIR += py-multidict
     SUBDIR += py-mwoauth
     SUBDIR += py-nevow
+    SUBDIR += py-nh3
     SUBDIR += py-notebook
     SUBDIR += py-onetimepass
     SUBDIR += py-openbrokerapi
@@ -2362,6 +2366,7 @@
     SUBDIR += tor-browser
     SUBDIR += trac
     SUBDIR += trac-accountmanager
+    SUBDIR += trac-markdownmacro
     SUBDIR += trac-spamfilter
     SUBDIR += trac-tocmacro
     SUBDIR += trafficserver

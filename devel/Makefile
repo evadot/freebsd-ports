@@ -182,8 +182,9 @@
     SUBDIR += apitrace
     SUBDIR += app-builder
     SUBDIR += appstream
+    SUBDIR += appstream-compose
     SUBDIR += appstream-glib
-    SUBDIR += appstream-qt5
+    SUBDIR += appstream-qt
     SUBDIR += apr1
     SUBDIR += arachne-pnr
     SUBDIR += arcanist
@@ -1034,6 +1035,7 @@
     SUBDIR += juce
     SUBDIR += juce706
     SUBDIR += judy
+    SUBDIR += jujutsu
     SUBDIR += jwasm
     SUBDIR += kBuild
     SUBDIR += kapptemplate
@@ -1158,7 +1160,6 @@
     SUBDIR += libast
     SUBDIR += libastylej
     SUBDIR += libastylej-arduino
-    SUBDIR += libasyncplusplus
     SUBDIR += libatomic_ops
     SUBDIR += libaura
     SUBDIR += libavl
@@ -1428,6 +1429,7 @@
     SUBDIR += libubox
     SUBDIR += libudev-devd
     SUBDIR += libuinputplus
+    SUBDIR += libuiohook
     SUBDIR += libukcprog
     SUBDIR += libunicode
     SUBDIR += libuninum
@@ -1657,6 +1659,7 @@
     SUBDIR += nss_wrapper
     SUBDIR += nsync
     SUBDIR += nuitka
+    SUBDIR += ob-rust
     SUBDIR += obby
     SUBDIR += objconv
     SUBDIR += objecthash
@@ -2460,6 +2463,7 @@
     SUBDIR += p5-FFI-CheckLib
     SUBDIR += p5-FFI-Platypus
     SUBDIR += p5-FFI-Platypus-Declare
+    SUBDIR += p5-FFI-Platypus-Lang-Rust
     SUBDIR += p5-FFI-Platypus-Type-Enum
     SUBDIR += p5-FFI-Platypus-Type-PtrObject
     SUBDIR += p5-FSA-Rules
@@ -5307,6 +5311,7 @@
     SUBDIR += py-pyinotify
     SUBDIR += py-pyinquirer
     SUBDIR += py-pyinstaller
+    SUBDIR += py-pyinstaller-hooks-contrib
     SUBDIR += py-pyintelowl
     SUBDIR += py-pyjq
     SUBDIR += py-pyjsparser
@@ -5375,6 +5380,7 @@
     SUBDIR += py-pytest-cpp
     SUBDIR += py-pytest-datadir
     SUBDIR += py-pytest-django
+    SUBDIR += py-pytest-drop-dup-tests
     SUBDIR += py-pytest-enabler
     SUBDIR += py-pytest-env
     SUBDIR += py-pytest-factoryboy
@@ -5485,6 +5491,7 @@
     SUBDIR += py-q
     SUBDIR += py-qasync
     SUBDIR += py-qcs-api-client
+    SUBDIR += py-qcs-sdk-python
     SUBDIR += py-qstylizer
     SUBDIR += py-qt5
     SUBDIR += py-qt5-pyqt
@@ -5656,6 +5663,7 @@
     SUBDIR += py-sure
     SUBDIR += py-swagger-spec-validator
     SUBDIR += py-synr
+    SUBDIR += py-syrupy
     SUBDIR += py-sysctl
     SUBDIR += py-sysv_ipc
     SUBDIR += py-tables
@@ -7602,6 +7610,8 @@
     SUBDIR += rust-analyzer
     SUBDIR += rust-bindgen-cli
     SUBDIR += rust-cbindgen
+    SUBDIR += rust-mode
+    SUBDIR += rust-script
     SUBDIR += rustc-demangle
     SUBDIR += rvi
     SUBDIR += rvm

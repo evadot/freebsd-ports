@@ -210,7 +210,6 @@
     SUBDIR += gorss
     SUBDIR += gost
     SUBDIR += gotthard
-    SUBDIR += gq
     SUBDIR += graphpath
     SUBDIR += grilo
     SUBDIR += grilo-plugins
@@ -1430,6 +1429,7 @@
     SUBDIR += rude
     SUBDIR += rustdesk-server
     SUBDIR += ryu
+    SUBDIR += s3m
     SUBDIR += s5cmd
     SUBDIR += sacc
     SUBDIR += sakisafecli

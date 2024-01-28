@@ -584,6 +584,7 @@
     SUBDIR += nanosvg
     SUBDIR += netpbm
     SUBDIR += nip2
+    SUBDIR += noaa-apt
     SUBDIR += nomacs
     SUBDIR += nplot
     SUBDIR += npretty
@@ -1114,6 +1115,7 @@
     SUBDIR += skanlite
     SUBDIR += skanpage
     SUBDIR += spectacle
+    SUBDIR += spectacle-devel
     SUBDIR += spirv-tools
     SUBDIR += springgraph
     SUBDIR += squish

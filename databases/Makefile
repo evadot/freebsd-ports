@@ -101,7 +101,6 @@
     SUBDIR += ip4r
     SUBDIR += ipa_sdb
     SUBDIR += iplike
-    SUBDIR += isql-viewer
     SUBDIR += jdb
     SUBDIR += jdbc-oracle11g
     SUBDIR += jetbrains-datagrip
@@ -831,7 +830,6 @@
     SUBDIR += qdrant
     SUBDIR += qof
     SUBDIR += qt5-sql
-    SUBDIR += qt5-sqldrivers-ibase
     SUBDIR += qt5-sqldrivers-mysql
     SUBDIR += qt5-sqldrivers-odbc
     SUBDIR += qt5-sqldrivers-pgsql
@@ -1032,6 +1030,7 @@
     SUBDIR += sqlx-cli
     SUBDIR += sqsh
     SUBDIR += squirrel-sql
+    SUBDIR += surrealdb
     SUBDIR += symphytum
     SUBDIR += tarantool
     SUBDIR += tarantool-c

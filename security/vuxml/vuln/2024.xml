@@ -1,3 +1,241 @@
+  <vuln vid="b5e22ec5-bc4b-11ee-b0b5-b42e991fc52e">
+    <topic>rclone -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>rclone</name>
+	<range><lt>1.65.1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Multiple vulnerabilities in ssh and golang</p>
+	<blockquote cite="https://github.com/go-resty/resty/commit/577fed8730d79f583eb48dfc81674164e1fc471e">
+	  <ul>
+	    <li>
+	      CVE-2023-45286: HTTP request body disclosure in go-resty
+	      disclosure across requests.
+	    </li>
+	    <li>
+	      CVE-2023-48795: The SSH transport protocol with certain
+	      OpenSSH extensions, found in OpenSSH before 9.6 and
+	      other products, allows remote attackers to bypass
+	      integrity checks.
+	    </li>
+	  </ul>
+  </blockquote>
+  </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-45286</cvename>
+      <cvename>CVE-2023-48795</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2023-45286</url>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2023-48795</url>
+    </references>
+    <dates>
+      <discovery>2023-11-28</discovery>
+      <entry>2024-01-26</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="61fe903b-bc2e-11ee-b06e-001b217b3468">
+    <topic>Gitlab -- vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>gitlab-ce</name>
+	<range><ge>16.8.0</ge><lt>16.8.1</lt></range>
+	<range><ge>16.7.0</ge><lt>16.7.4</lt></range>
+	<range><ge>16.6.0</ge><lt>16.6.6</lt></range>
+	<range><ge>12.7.0</ge><lt>16.5.8</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Gitlab reports:</p>
+	<blockquote cite="https://about.gitlab.com/releases/2024/01/25/critical-security-release-gitlab-16-8-1-released/">
+	  <p>Arbitrary file write while creating workspace</p>
+	  <p>ReDoS in Cargo.toml blob viewer</p>
+	  <p>Arbitrary API PUT requests via HTML injection in user's name</p>
+	  <p>Disclosure of the public email in Tags RSS Feed</p>
+	  <p>Non-Member can update MR Assignees of owned MRs</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-0402</cvename>
+      <cvename>CVE-2023-6159</cvename>
+      <cvename>CVE-2023-5933</cvename>
+      <cvename>CVE-2023-5612</cvename>
+      <cvename>CVE-2024-0456</cvename>
+      <url>https://about.gitlab.com/releases/2024/01/25/critical-security-release-gitlab-16-8-1-released/</url>
+    </references>
+    <dates>
+      <discovery>2024-01-25</discovery>
+      <entry>2024-01-26</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="8b03d274-56ca-489e-821a-cf32f07643f0">
+    <topic>jenkins -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>jenkins</name>
+	<range><lt>2.422</lt></range>
+      </package>
+      <package>
+	<name>jenkins-lts</name>
+	<range><lt>2.426.3</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Jenkins Security Advisory:</p>
+	<blockquote cite="https://www.jenkins.io/security/advisory/2024-01-24/">
+	  <h1>Description</h1>
+	  <h5>(Critical) SECURITY-3314 / CVE-2024-23897</h5>
+	  <p>Arbitrary file read vulnerability through the CLI can lead to RCE</p>
+	  <h1>Description</h1>
+	  <h5>(High) SECURITY-3315 / CVE-2024-23898</h5>
+	  <p>Cross-site WebSocket hijacking vulnerability in the CLI</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-23897</cvename>
+      <cvename>CVE-2024-23898</cvename>
+      <url>https://www.jenkins.io/security/advisory/2024-01-24/</url>
+    </references>
+    <dates>
+      <discovery>2024-01-24</discovery>
+      <entry>2024-01-24</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="9532a361-b84d-11ee-b0d7-84a93843eb75">
+    <topic>TinyMCE -- mXSS in multiple plugins</topic>
+    <affects>
+      <package>
+	<name>tinymce</name>
+	<range><lt>6.7.3</lt></range>
+      </package>
+      <package>
+	<name>roundcube</name>
+	<range><lt>1.6.6,1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>TinyMCE reports:</p>
+	<blockquote cite="https://github.com/tinymce/tinymce/security/advisories/GHSA-v626-r774-j7f8">
+	  <p>Special characters in unescaped text nodes can trigger mXSS
+	    when using TinyMCE undo/redo, getContentAPI, resetContentAPI,
+	    and Autosave plugin</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2023-48219</cvename>
+      <url>https://github.com/tinymce/tinymce/security/advisories/GHSA-v626-r774-j7f8</url>
+      <url>https://github.com/roundcube/roundcubemail/releases/tag/1.6.6</url>
+    </references>
+    <dates>
+      <discovery>2023-11-15</discovery>
+      <entry>2024-01-23</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="fedf7e71-61bd-49ec-aaf0-6da14bdbb319">
+    <topic>zeek -- potential DoS vulnerability</topic>
+    <affects>
+      <package>
+	<name>zeek</name>
+	<range><lt>6.0.3</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Tim Wojtulewicz of Corelight reports:</p>
+	<blockquote cite="https://github.com/zeek/zeek/releases/tag/v6.0.3">
+	  <p>A specially-crafted series of packets containing nested
+	  MIME entities can cause Zeek to spend large amounts of
+	  time parsing the entities. </p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://github.com/zeek/zeek/releases/tag/v6.0.3</url>
+    </references>
+    <dates>
+      <discovery>2024-01-22</discovery>
+      <entry>2024-01-22</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="2264566a-a890-46eb-a895-7881dd220bd0">
+    <topic>electron26 -- Out of bounds memory access in V8</topic>
+    <affects>
+      <package>
+	<name>electron26</name>
+	<range><lt>26.6.7</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Electron developers report:</p>
+	<blockquote cite="https://github.com/electron/electron/releases/tag/v26.6.7">
+	  <p>This update fixes the following vulnerability:</p>
+	  <ul>
+	    <li>Security: backported fix for CVE-2024-0519.</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-0519</cvename>
+      <url>https://github.com/advisories/GHSA-vg6w-jr5m-86c8</url>
+    </references>
+    <dates>
+      <discovery>2024-01-18</discovery>
+      <entry>2024-01-19</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="a8326b61-eda0-4c03-9a5b-49ebd8f41c1a">
+    <topic>electron{26,27} -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>electron26</name>
+	<range><lt>26.6.6</lt></range>
+      </package>
+      <package>
+	<name>electron27</name>
+	<range><lt>27.2.4</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Electron developers report:</p>
+	<blockquote cite="https://github.com/electron/electron/releases/tag/v27.2.3">
+	  <p>This update fixes the following vulnerabilities:</p>
+	  <ul>
+	    <li>Security: backported fix for CVE-2024-0518.</li>
+	    <li>Security: backported fix for CVE-2024-0517.</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-0518</cvename>
+      <url>https://github.com/advisories/GHSA-4pvg-f3m8-ff3j</url>
+      <cvename>CVE-2024-0517</cvename>
+      <url>https://github.com/advisories/GHSA-v39r-662x-j524</url>
+    </references>
+    <dates>
+      <discovery>2024-01-17</discovery>
+      <entry>2024-01-17</entry>
+      <modified>2024-01-18</modified>
+    </dates>
+  </vuln>
+
   <vuln vid="1bc07be0-b514-11ee-86bb-a8a1599412c6">
     <topic>chromium -- multiple security fixes</topic>
     <affects>

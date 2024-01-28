@@ -3,7 +3,6 @@
     SUBDIR += Bento4
     SUBDIR += ab-av1
     SUBDIR += ab25
-    SUBDIR += acidrip
     SUBDIR += aegisub
     SUBDIR += alass
     SUBDIR += aom
@@ -190,7 +189,6 @@
     SUBDIR += libuvc
     SUBDIR += libv4l
     SUBDIR += libva
-    SUBDIR += libva-glx
     SUBDIR += libva-intel-driver
     SUBDIR += libva-intel-hybrid-driver
     SUBDIR += libva-intel-media-driver
