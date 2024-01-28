@@ -48,6 +48,7 @@ LIB_DEPENDS+=	libdrm_radeon.so:graphics/libdrm~radeon
 .if ${ARCH} == amd64 || ${ARCH} == i386
 LIB_DEPENDS+=  libdrm_intel.so:graphics/libdrm~intel
 .endif
+.endif
 
 USES+=		compiler:c++11-lib bison meson pathfix pkgconfig \
 		python:build shebangfix tar:xz
