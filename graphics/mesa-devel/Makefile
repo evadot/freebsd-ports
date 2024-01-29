@@ -24,6 +24,9 @@ ONLY_FOR_ARCHS_REASON=	Limited scope: no old drivers and no software rendering. 
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}mako>0:textproc/py-mako@${PY_FLAVOR}
 LIB_DEPENDS=	libdrm.so:graphics/libdrm \
+		libdrm_amdgpu.so:graphics/libdrm~amdgpu \
+		libdrm_intel.so:graphics/libdrm~intel \
+		libdrm_radeon.so:graphics/libdrm~radeon \
 		libOpenGL.so:graphics/libglvnd \
 		libexpat.so:textproc/expat2
 
