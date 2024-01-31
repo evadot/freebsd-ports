@@ -1,7 +1,7 @@
 PORTNAME=	wlmaker
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.1-441
-DISTVERSIONSUFFIX=	-gf183a22
+DISTVERSION=	0.1-444
+DISTVERSIONSUFFIX=	-ga388205
 CATEGORIES=	x11-wm wayland
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -43,5 +43,8 @@ post-patch:
 		 -e 's/google-chrome/chrome/' \
 		${WRKSRC}/src/dock.c \
 		${WRKSRC}/src/${PORTNAME}.c
+# https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=276743
+	@${GREP} -Flr _POSIX_C_SOURCE ${WRKSRC} | ${XARGS} ${REINPLACE_CMD} \
+		'/_POSIX_C_SOURCE/d'
 
 .include <bsd.port.mk>
