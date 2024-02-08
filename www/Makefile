@@ -138,6 +138,7 @@
     SUBDIR += devd
     SUBDIR += dezoomify-rs
     SUBDIR += dillo2
+    SUBDIR += dmarcts-report-viewer
     SUBDIR += dojo
     SUBDIR += dokuwiki
     SUBDIR += dolibarr
@@ -317,7 +318,6 @@
     SUBDIR += libwww
     SUBDIR += lightsquid
     SUBDIR += lighttpd
-    SUBDIR += lighttpd-mod_h264_streaming
     SUBDIR += limesurvey
     SUBDIR += linklint
     SUBDIR += links

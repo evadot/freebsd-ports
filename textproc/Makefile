@@ -21,6 +21,7 @@
     SUBDIR += R-cran-readr
     SUBDIR += R-cran-readxl
     SUBDIR += R-cran-rematch
+    SUBDIR += R-cran-reprex
     SUBDIR += R-cran-rex
     SUBDIR += R-cran-rio
     SUBDIR += R-cran-rmarkdown
@@ -1355,6 +1356,7 @@
     SUBDIR += py-empy
     SUBDIR += py-enchant
     SUBDIR += py-enrich
+    SUBDIR += py-epy-reader
     SUBDIR += py-et_xmlfile
     SUBDIR += py-evtx2splunk
     SUBDIR += py-extract-msg
