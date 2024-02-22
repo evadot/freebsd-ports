@@ -200,7 +200,7 @@
     SUBDIR += flphoto
     SUBDIR += fly
     SUBDIR += fortytwo
-    SUBDIR += fotoxx
+    SUBDIR += fotocx
     SUBDIR += founts
     SUBDIR += fracplanet
     SUBDIR += fractgen
@@ -594,6 +594,7 @@
     SUBDIR += nurbs++
     SUBDIR += nvidia-drm-510-kmod
     SUBDIR += nvidia-drm-515-kmod
+    SUBDIR += nvidia-drm-61-kmod
     SUBDIR += nvidia-drm-kmod
     SUBDIR += nvidia-texture-tools
     SUBDIR += ocaml-cairo
@@ -802,6 +803,7 @@
     SUBDIR += pixelize
     SUBDIR += pixen
     SUBDIR += pixie
+    SUBDIR += plantuml
     SUBDIR += plasma-kmod
     SUBDIR += plotutils
     SUBDIR += png
@@ -915,6 +917,7 @@
     SUBDIR += py-optimize-images
     SUBDIR += py-osmnet
     SUBDIR += py-pandana
+    SUBDIR += py-pdf2image
     SUBDIR += py-photocollage
     SUBDIR += py-piexif
     SUBDIR += py-pillow
@@ -953,6 +956,7 @@
     SUBDIR += py-pyvips
     SUBDIR += py-pyvista
     SUBDIR += py-pyx
+    SUBDIR += py-pyzbar
     SUBDIR += py-qpageview
     SUBDIR += py-qrencode
     SUBDIR += py-qt6-3d
@@ -987,7 +991,7 @@
     SUBDIR += py-zbar-py
     SUBDIR += pywal
     SUBDIR += qcomicbook
-    SUBDIR += qcustomplot-qt5
+    SUBDIR += qcustomplot
     SUBDIR += qgis
     SUBDIR += qgis-ltr
     SUBDIR += qiv
@@ -1020,7 +1024,6 @@
     SUBDIR += raster3d
     SUBDIR += rawstudio
     SUBDIR += rawtherapee
-    SUBDIR += rayshade
     SUBDIR += reactphysics3d
     SUBDIR += realesrgan-ncnn-vulkan
     SUBDIR += reallyslick
@@ -1160,7 +1163,6 @@
     SUBDIR += unpaper
     SUBDIR += upscaler
     SUBDIR += urho3d
-    SUBDIR += urt
     SUBDIR += vapoursynth-fmtconv
     SUBDIR += vapoursynth-waifu2x-ncnn-vulkan
     SUBDIR += vapoursynth-waifu2x-w2xc

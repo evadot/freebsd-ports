@@ -651,6 +651,7 @@
     SUBDIR += octave-forge-struct
     SUBDIR += octave-forge-symband
     SUBDIR += octave-forge-symbolic
+    SUBDIR += octave-forge-tablicious
     SUBDIR += octave-forge-tcl-octave
     SUBDIR += octave-forge-tsa
     SUBDIR += octave-forge-velas
@@ -906,6 +907,7 @@
     SUBDIR += py-benford_py
     SUBDIR += py-bitmath
     SUBDIR += py-bitvector
+    SUBDIR += py-blis
     SUBDIR += py-bottleneck
     SUBDIR += py-brial
     SUBDIR += py-chaospy
@@ -1033,6 +1035,7 @@
     SUBDIR += py-pynndescent
     SUBDIR += py-pyodeint
     SUBDIR += py-pyodesys
+    SUBDIR += py-pyprobables
     SUBDIR += py-pyreadr
     SUBDIR += py-pyrr
     SUBDIR += py-pysmt

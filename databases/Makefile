@@ -89,6 +89,7 @@
     SUBDIR += gqlplus
     SUBDIR += grass7
     SUBDIR += grass8
+    SUBDIR += greptimedb
     SUBDIR += hashtypes
     SUBDIR += hiredis
     SUBDIR += hsqldb
@@ -809,6 +810,7 @@
     SUBDIR += py-sqlalchemy13
     SUBDIR += py-sqlalchemy14
     SUBDIR += py-sqlalchemy20
+    SUBDIR += py-sqlcipher3
     SUBDIR += py-sqlglot
     SUBDIR += py-sqlite-fts4
     SUBDIR += py-sqlite-utils

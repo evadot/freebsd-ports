@@ -63,7 +63,7 @@ GCC_DEFAULT?=		12
 GHOSTSCRIPT_DEFAULT?=	10
 # Possible values: mesa-libs, mesa-devel
 GL_DEFAULT?=		mesa-libs
-# Possible values: 1.19, 1.20, 1.21, 1.22-devel
+# Possible values: 1.19, 1.20, 1.21, 1.22, 1.23-devel
 GO_DEFAULT?=		1.20
 # Possible values: 1.8, 2.2, 3.0
 GUILE_DEFAULT?=		2.2
@@ -142,7 +142,7 @@ PYTHON2_DEFAULT?=	2.7
 RUBY_DEFAULT?=		3.1
 # Possible values: rust, rust-nightly
 RUST_DEFAULT?=		rust
-# Possible values: 4.13, 4.16
+# Possible values: 4.13, 4.16, 4.19
 SAMBA_DEFAULT?=		4.16
 # Possible values: base, openssl, openssl111, openssl31, openssl32, libressl, libressl-devel
 .  if !defined(SSL_DEFAULT)

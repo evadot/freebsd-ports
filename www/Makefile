@@ -144,6 +144,7 @@
     SUBDIR += dolibarr
     SUBDIR += dolibarr16
     SUBDIR += dolibarr17
+    SUBDIR += dolibarr18
     SUBDIR += domoticz
     SUBDIR += dooble
     SUBDIR += dot-http
@@ -1489,13 +1490,22 @@
     SUBDIR += py-cssutils
     SUBDIR += py-daphne
     SUBDIR += py-dj-database-url
+    SUBDIR += py-dj42-channels
+    SUBDIR += py-dj42-channels-redis
+    SUBDIR += py-dj42-django-allauth
+    SUBDIR += py-dj42-django-auditlog
     SUBDIR += py-dj42-django-auth-ldap
+    SUBDIR += py-dj42-django-celery-results
+    SUBDIR += py-dj42-django-compression-middleware
     SUBDIR += py-dj42-django-cors-headers
     SUBDIR += py-dj42-django-debug-toolbar
+    SUBDIR += py-dj42-django-extensions
     SUBDIR += py-dj42-django-filter
     SUBDIR += py-dj42-django-graphiql-debug-toolbar
+    SUBDIR += py-dj42-django-guardian
     SUBDIR += py-dj42-django-js-asset
     SUBDIR += py-dj42-django-mptt
+    SUBDIR += py-dj42-django-multiselectfield
     SUBDIR += py-dj42-django-prometheus
     SUBDIR += py-dj42-django-redis
     SUBDIR += py-dj42-django-rich
@@ -1503,8 +1513,10 @@
     SUBDIR += py-dj42-django-taggit
     SUBDIR += py-dj42-django-timezone-field
     SUBDIR += py-dj42-djangorestframework
+    SUBDIR += py-dj42-djangorestframework-guardian
     SUBDIR += py-dj42-drf-spectacular
     SUBDIR += py-dj42-drf-spectacular-sidecar
+    SUBDIR += py-dj42-drf-writable-nested
     SUBDIR += py-django-admin-rangefilter
     SUBDIR += py-django-advanced-filters
     SUBDIR += py-django-allauth
@@ -1666,6 +1678,7 @@
     SUBDIR += py-flask-sockets
     SUBDIR += py-flask-uploads
     SUBDIR += py-flask-wtf
+    SUBDIR += py-flower
     SUBDIR += py-flup6
     SUBDIR += py-folium
     SUBDIR += py-forcediphttpsadapter
@@ -1709,6 +1722,7 @@
     SUBDIR += py-html3
     SUBDIR += py-html5-parser
     SUBDIR += py-html5lib
+    SUBDIR += py-htmldate
     SUBDIR += py-httmock
     SUBDIR += py-http-parser
     SUBDIR += py-httpbin
@@ -1735,6 +1749,7 @@
     SUBDIR += py-lektor
     SUBDIR += py-lesscpy
     SUBDIR += py-libsass
+    SUBDIR += py-limits
     SUBDIR += py-livereload
     SUBDIR += py-mechanicalsoup
     SUBDIR += py-mechanize
@@ -1970,6 +1985,7 @@
     SUBDIR += rubygem-eventmachine_httpserver
     SUBDIR += rubygem-faraday
     SUBDIR += rubygem-faraday-em_http
+    SUBDIR += rubygem-faraday-em_http1
     SUBDIR += rubygem-faraday-em_synchrony
     SUBDIR += rubygem-faraday-follow_redirects
     SUBDIR += rubygem-faraday-http-cache
@@ -2497,6 +2513,7 @@
     SUBDIR += xist
     SUBDIR += xoops
     SUBDIR += xsp
+    SUBDIR += xurls
     SUBDIR += yabb
     SUBDIR += yarn
     SUBDIR += yarn-node16

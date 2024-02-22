@@ -604,7 +604,6 @@
     SUBDIR += plasma6-ocean-sound-theme
     SUBDIR += plasma6-oxygen-sounds
     SUBDIR += plasma6-plasma-pa
-    SUBDIR += play
     SUBDIR += playgsf
     SUBDIR += playmidi
     SUBDIR += playumidi
@@ -792,7 +791,6 @@
     SUBDIR += synthpod-lv2
     SUBDIR += synthv1-lv2
     SUBDIR += taglib
-    SUBDIR += taglib-extras
     SUBDIR += taglookup
     SUBDIR += tagutil
     SUBDIR += tamgamp-lv2
