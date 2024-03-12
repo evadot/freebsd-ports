@@ -433,7 +433,6 @@
     SUBDIR += codeblocks
     SUBDIR += codequery
     SUBDIR += codesearch-py
-    SUBDIR += codeville
     SUBDIR += codeworker
     SUBDIR += collada-dom
     SUBDIR += color
@@ -1017,6 +1016,7 @@
     SUBDIR += jetbrains-phpstorm
     SUBDIR += jetbrains-pty4j
     SUBDIR += jetbrains-restarter
+    SUBDIR += jetbrains-rustrover
     SUBDIR += jetbrains-sqlite
     SUBDIR += jetbrains-webstorm
     SUBDIR += jgoodies-looks
@@ -1672,8 +1672,12 @@
     SUBDIR += objecthash
     SUBDIR += objfw
     SUBDIR += ocaml-annexlib
+    SUBDIR += ocaml-astring
+    SUBDIR += ocaml-base
+    SUBDIR += ocaml-bos
     SUBDIR += ocaml-calendar
     SUBDIR += ocaml-camljava
+    SUBDIR += ocaml-camlp-streams
     SUBDIR += ocaml-camlp4
     SUBDIR += ocaml-camlp5
     SUBDIR += ocaml-camomile
@@ -1682,27 +1686,36 @@
     SUBDIR += ocaml-classes
     SUBDIR += ocaml-cmdliner
     SUBDIR += ocaml-cppo
+    SUBDIR += ocaml-csexp
     SUBDIR += ocaml-dune
     SUBDIR += ocaml-extlib
     SUBDIR += ocaml-findlib
+    SUBDIR += ocaml-fmt
+    SUBDIR += ocaml-fpath
     SUBDIR += ocaml-ipaddr
     SUBDIR += ocaml-lacaml
+    SUBDIR += ocaml-logs
     SUBDIR += ocaml-lwt
     SUBDIR += ocaml-magic
+    SUBDIR += ocaml-mtime
     SUBDIR += ocaml-ocamlbuild
     SUBDIR += ocaml-opam
     SUBDIR += ocaml-ounit
     SUBDIR += ocaml-parmap
     SUBDIR += ocaml-pcre
+    SUBDIR += ocaml-pcre2
     SUBDIR += ocaml-pomap
     SUBDIR += ocaml-ppx-tools
     SUBDIR += ocaml-re
     SUBDIR += ocaml-react
     SUBDIR += ocaml-res
     SUBDIR += ocaml-result
+    SUBDIR += ocaml-rresult
     SUBDIR += ocaml-sdl
     SUBDIR += ocaml-sem
+    SUBDIR += ocaml-seq
     SUBDIR += ocaml-sexplib0
+    SUBDIR += ocaml-stdio
     SUBDIR += ocaml-topkg
     SUBDIR += ocaml-type_conv
     SUBDIR += ocaml-uchar
@@ -2636,6 +2649,7 @@
     SUBDIR += p5-Hash-NoRef
     SUBDIR += p5-Hash-Objectify
     SUBDIR += p5-Hash-Ordered
+    SUBDIR += p5-Hash-SharedMem
     SUBDIR += p5-Hash-Slice
     SUBDIR += p5-Hash-Union
     SUBDIR += p5-Hash-Util-FieldHash-Compat
@@ -2783,6 +2797,7 @@
     SUBDIR += p5-Locale-XGettext
     SUBDIR += p5-Locale-gettext
     SUBDIR += p5-Locale-libintl
+    SUBDIR += p5-Lock-File
     SUBDIR += p5-LockFile-Simple
     SUBDIR += p5-Log-Accounting-SVK
     SUBDIR += p5-Log-Accounting-SVN
@@ -3890,7 +3905,6 @@
     SUBDIR += pcg-cpp
     SUBDIR += pcl
     SUBDIR += pcre
-    SUBDIR += pcre++
     SUBDIR += pcre2
     SUBDIR += pcsc-cyberjack
     SUBDIR += pcsc-lite
@@ -4188,7 +4202,6 @@
     SUBDIR += pthsem
     SUBDIR += ptl
     SUBDIR += ptlib
-    SUBDIR += ptypes
     SUBDIR += publib
     SUBDIR += purescript-language-server
     SUBDIR += pushmi
@@ -4433,6 +4446,7 @@
     SUBDIR += py-buildbot-console-view
     SUBDIR += py-buildbot-grid-view
     SUBDIR += py-buildbot-pkg
+    SUBDIR += py-buildbot-react-console-view
     SUBDIR += py-buildbot-waterfall-view
     SUBDIR += py-buildbot-worker
     SUBDIR += py-buildbot-www
@@ -4604,6 +4618,7 @@
     SUBDIR += py-deepmerge
     SUBDIR += py-defusedxml
     SUBDIR += py-demjson
+    SUBDIR += py-dep-logic
     SUBDIR += py-deprecat
     SUBDIR += py-deprecated
     SUBDIR += py-deprecation
@@ -5087,6 +5102,7 @@
     SUBDIR += py-num2words
     SUBDIR += py-numba
     SUBDIR += py-objgraph
+    SUBDIR += py-objprint
     SUBDIR += py-objsize
     SUBDIR += py-oci
     SUBDIR += py-odfpy
@@ -5428,6 +5444,7 @@
     SUBDIR += py-pytest-isort
     SUBDIR += py-pytest-jupyter
     SUBDIR += py-pytest-lazy-fixture
+    SUBDIR += py-pytest-lazy-fixtures
     SUBDIR += py-pytest-localserver
     SUBDIR += py-pytest-markdown
     SUBDIR += py-pytest-metadata
@@ -5633,11 +5650,11 @@
     SUBDIR += py-setuptools-git-versioning
     SUBDIR += py-setuptools-pkg
     SUBDIR += py-setuptools-rust
+    SUBDIR += py-setuptools-scm
     SUBDIR += py-setuptools44
     SUBDIR += py-setuptools58
     SUBDIR += py-setuptools_git_ls_files
     SUBDIR += py-setuptools_hg
-    SUBDIR += py-setuptools_scm
     SUBDIR += py-setuptools_scm7
     SUBDIR += py-setuptools_scm_git_archive
     SUBDIR += py-sexpdata
@@ -5802,6 +5819,7 @@
     SUBDIR += py-unearth
     SUBDIR += py-unicodecsv
     SUBDIR += py-unicodedata2
+    SUBDIR += py-unidiff
     SUBDIR += py-unipath
     SUBDIR += py-unittest2
     SUBDIR += py-unittest2pytest
@@ -6201,6 +6219,7 @@
     SUBDIR += rubygem-aws-sdk-billingconductor
     SUBDIR += rubygem-aws-sdk-braket
     SUBDIR += rubygem-aws-sdk-budgets
+    SUBDIR += rubygem-aws-sdk-chatbot
     SUBDIR += rubygem-aws-sdk-chime
     SUBDIR += rubygem-aws-sdk-chimesdkidentity
     SUBDIR += rubygem-aws-sdk-chimesdkmediapipelines
@@ -7345,6 +7364,7 @@
     SUBDIR += rubygem-reline
     SUBDIR += rubygem-request_store
     SUBDIR += rubygem-request_store14
+    SUBDIR += rubygem-request_store15
     SUBDIR += rubygem-require_all
     SUBDIR += rubygem-resque
     SUBDIR += rubygem-resque-scheduler
@@ -7374,6 +7394,7 @@
     SUBDIR += rubygem-rubocop-capybara
     SUBDIR += rubygem-rubocop-factory_bot
     SUBDIR += rubygem-rubocop-performance
+    SUBDIR += rubygem-rubocop-rails
     SUBDIR += rubygem-rubocop-rake
     SUBDIR += rubygem-rubocop-rspec
     SUBDIR += rubygem-ruby-atmos-pure

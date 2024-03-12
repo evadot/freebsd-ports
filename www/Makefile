@@ -49,6 +49,7 @@
     SUBDIR += angie-module-rtmp
     SUBDIR += angie-module-set-misc
     SUBDIR += angie-module-subs
+    SUBDIR += angie-module-testcookie
     SUBDIR += angie-module-upload
     SUBDIR += angie-module-vod
     SUBDIR += angie-module-xslt
@@ -96,7 +97,6 @@
     SUBDIR += cgi-lib
     SUBDIR += cgi-lib.pl
     SUBDIR += cgicc
-    SUBDIR += cgichk
     SUBDIR += cgiwrap
     SUBDIR += checkbot
     SUBDIR += chems
@@ -186,9 +186,11 @@
     SUBDIR += flexget
     SUBDIR += flickcurl
     SUBDIR += foreign-cdm
+    SUBDIR += forgejo
     SUBDIR += formication
     SUBDIR += foswiki
     SUBDIR += free-sa-devel
+    SUBDIR += freenginx
     SUBDIR += fswiki
     SUBDIR += fusionpbx
     SUBDIR += g-cows
@@ -328,6 +330,7 @@
     SUBDIR += litmus
     SUBDIR += ljdeps
     SUBDIR += llhttp
+    SUBDIR += loco
     SUBDIR += logswan
     SUBDIR += logtools
     SUBDIR += ls-qpack
@@ -468,7 +471,6 @@
     SUBDIR += nginx-prometheus-exporter
     SUBDIR += nginx-ultimate-bad-bot-blocker
     SUBDIR += nginx-vts-exporter
-    SUBDIR += nibbleblog
     SUBDIR += nift
     SUBDIR += node
     SUBDIR += node16
@@ -976,6 +978,7 @@
     SUBDIR += p5-HTTP-Throwable
     SUBDIR += p5-HTTP-Tiny
     SUBDIR += p5-HTTP-Tiny-Multipart
+    SUBDIR += p5-HTTP-Tiny-Paranoid
     SUBDIR += p5-HTTP-Tiny-SPDY
     SUBDIR += p5-HTTP-Tiny-UA
     SUBDIR += p5-HTTP-Tiny-UNIX
@@ -1413,7 +1416,6 @@
     SUBDIR += php83-opcache
     SUBDIR += php83-session
     SUBDIR += php83-tidy
-    SUBDIR += phpbb
     SUBDIR += phpbb3
     SUBDIR += phpfpmtop
     SUBDIR += phpgroupware
@@ -1498,20 +1500,26 @@
     SUBDIR += py-dj42-django-celery-results
     SUBDIR += py-dj42-django-compression-middleware
     SUBDIR += py-dj42-django-cors-headers
+    SUBDIR += py-dj42-django-crispy-forms
     SUBDIR += py-dj42-django-debug-toolbar
     SUBDIR += py-dj42-django-extensions
     SUBDIR += py-dj42-django-filter
     SUBDIR += py-dj42-django-graphiql-debug-toolbar
     SUBDIR += py-dj42-django-guardian
     SUBDIR += py-dj42-django-js-asset
+    SUBDIR += py-dj42-django-modelcluster
     SUBDIR += py-dj42-django-mptt
     SUBDIR += py-dj42-django-multiselectfield
+    SUBDIR += py-dj42-django-otp
+    SUBDIR += py-dj42-django-permissionedforms
     SUBDIR += py-dj42-django-prometheus
     SUBDIR += py-dj42-django-redis
     SUBDIR += py-dj42-django-rich
     SUBDIR += py-dj42-django-tables2
     SUBDIR += py-dj42-django-taggit
     SUBDIR += py-dj42-django-timezone-field
+    SUBDIR += py-dj42-django-treebeard
+    SUBDIR += py-dj42-djangoql
     SUBDIR += py-dj42-djangorestframework
     SUBDIR += py-dj42-djangorestframework-guardian
     SUBDIR += py-dj42-drf-spectacular
@@ -1746,6 +1754,7 @@
     SUBDIR += py-jonpy
     SUBDIR += py-jsonfield
     SUBDIR += py-kiss-headers
+    SUBDIR += py-laces
     SUBDIR += py-lektor
     SUBDIR += py-lesscpy
     SUBDIR += py-libsass
@@ -1872,6 +1881,7 @@
     SUBDIR += py-webtest
     SUBDIR += py-webunit
     SUBDIR += py-werkzeug
+    SUBDIR += py-werkzeug2
     SUBDIR += py-wfuzz
     SUBDIR += py-whitenoise
     SUBDIR += py-wikipedia
@@ -1968,6 +1978,7 @@
     SUBDIR += rubygem-crass
     SUBDIR += rubygem-cssbundling-rails
     SUBDIR += rubygem-cssbundling-rails-rails70
+    SUBDIR += rubygem-cssbundling-rails13-rails70
     SUBDIR += rubygem-cuba
     SUBDIR += rubygem-d3_rails
     SUBDIR += rubygem-davclient
@@ -2171,6 +2182,7 @@
     SUBDIR += rubygem-rack-protection
     SUBDIR += rubygem-rack-protection1
     SUBDIR += rubygem-rack-protection2
+    SUBDIR += rubygem-rack-protection3
     SUBDIR += rubygem-rack-proxy
     SUBDIR += rubygem-rack-session
     SUBDIR += rubygem-rack-ssl

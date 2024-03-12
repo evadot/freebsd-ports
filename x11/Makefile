@@ -122,6 +122,9 @@
     SUBDIR += hs-xmobar
     SUBDIR += hsetroot
     SUBDIR += hybrid-bar
+    SUBDIR += hyprcursor
+    SUBDIR += hypridle
+    SUBDIR += hyprlock
     SUBDIR += hyprpaper
     SUBDIR += hyprpicker
     SUBDIR += i3bar-river
@@ -245,6 +248,7 @@
     SUBDIR += lxpanel
     SUBDIR += lxqt-about
     SUBDIR += lxqt-globalkeys
+    SUBDIR += lxqt-menu-data
     SUBDIR += lxqt-runner
     SUBDIR += lxrandr
     SUBDIR += ly
@@ -525,6 +529,7 @@
     SUBDIR += xcoloredit
     SUBDIR += xcolors
     SUBDIR += xconsole
+    SUBDIR += xcur2png
     SUBDIR += xcursorgen
     SUBDIR += xcut
     SUBDIR += xdg-desktop-portal-gnome

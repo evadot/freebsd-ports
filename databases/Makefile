@@ -564,6 +564,7 @@
     SUBDIR += pgpool-II-42
     SUBDIR += pgpool-II-43
     SUBDIR += pgpool-II-44
+    SUBDIR += pgpool-II-45
     SUBDIR += pgreplay
     SUBDIR += pgroonga
     SUBDIR += pgrouting
@@ -736,6 +737,7 @@
     SUBDIR += py-fdb
     SUBDIR += py-firebirdsql
     SUBDIR += py-flask-sqlalchemy
+    SUBDIR += py-flask-sqlalchemy30
     SUBDIR += py-gdbm
     SUBDIR += py-geoalchemy2
     SUBDIR += py-hiredis
@@ -1066,7 +1068,7 @@
     SUBDIR += xls2txt
     SUBDIR += xrootd
     SUBDIR += xtrabackup
-    SUBDIR += xtrabackup8
+    SUBDIR += xtrabackup80
     SUBDIR += zodb
 
 .include <bsd.port.subdir.mk>

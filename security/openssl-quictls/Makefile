@@ -1,7 +1,10 @@
 PORTNAME=	openssl
-PORTVERSION=	3.0.13
+DISTVERSIONPREFIX=	${PORTNAME}-
+DISTVERSION=	3.0.13
+PORTREVISION=	1
+DISTVERSIONSUFFIX=	-quic1
 CATEGORIES=	security devel
-PKGNAMESUFFIX=	-quictls
+PKGNAMESUFFIX=	-${GH_ACCOUNT}
 
 MAINTAINER=	brnrd@FreeBSD.org
 COMMENT=	QUIC capable fork of OpenSSL
@@ -23,8 +26,7 @@ CONFIGURE_ARGS=	--openssldir=${OPENSSLDIR} \
 USES=		cpe perl5
 USE_PERL5=	build
 USE_GITHUB=	yes
-GH_ACCOUNT=	${PKGNAMESUFFIX:S/-//}
-GH_TAGNAME=	${PORTNAME}-${PORTVERSION}-quic1
+GH_ACCOUNT=	quictls
 
 TEST_TARGET=	test
 
@@ -147,8 +149,7 @@ PLIST_SUB+=	OPENSSLDIR=${OPENSSLDIR:S=^${PREFIX}/==}
 .include "version.mk"
 
 post-patch:
-	${REINPLACE_CMD} -Ee 's|^MANDIR=.*$$|MANDIR=$$(INSTALLTOP)/man|' \
-		-e 's|^(build\|install)_docs: .*|\1_docs: \1_man_docs|' \
+	${REINPLACE_CMD} -Ee 's|^(build\|install)_docs: .*|\1_docs: \1_man_docs|' \
 		${WRKSRC}/Configurations/unix-Makefile.tmpl
 	${REINPLACE_CMD} 's|SHLIB_VERSION=81.3|SHLIB_VERSION=${OPENSSL_SHLIBVER}|' \
 		${WRKSRC}/VERSION.dat
@@ -174,7 +175,7 @@ post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/openssl
 
 post-install-MAN3-on:
-	( cd ${STAGEDIR}/${PREFIX} ; find man/man3 -not -type d ; \
-		find man/man7 -not -type d ) | sed 's/$$/.gz/' >> ${TMPPLIST}
+	( cd ${STAGEDIR}/${PREFIX} ; find share/man/man3 -not -type d ; \
+		find share/man/man7 -not -type d ) | sed 's/$$/.gz/' >> ${TMPPLIST}
 
 .include <bsd.port.post.mk>

@@ -1,13 +1,13 @@
 PORTNAME=	hyprlang
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.4.0
+DISTVERSION=	0.5.0
 CATEGORIES=	devel
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Library to parse hypr config files
 WWW=		https://hyprland.org/hyprlang
 
-LICENSE=	GPLv3+
+LICENSE=	LGPL3
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USES=		cmake:testing compiler:c++11-lib
@@ -16,7 +16,7 @@ USE_LDCONFIG=	yes
 GH_ACCOUNT=	hyprwm
 PLIST_FILES=	include/${PORTNAME}.hpp \
 		lib/lib${PORTNAME}.so \
-		lib/lib${PORTNAME}.so.1 \
+		lib/lib${PORTNAME}.so.2 \
 		lib/lib${PORTNAME}.so.${PORTVERSION} \
 		libdata/pkgconfig/${PORTNAME}.pc
 
@@ -25,13 +25,12 @@ PLIST_FILES=	include/${PORTNAME}.hpp \
 CXXFLAGS+=	-fexperimental-library
 .endif
 
-# XXX Drop after FreeBSD 13.2 EOL around 2024-05-01 (don't forget distinfo)
+# XXX Drop after FreeBSD 13.2 EOL around 2024-07-01 (don't forget distinfo)
 .if ${CXX} == c++ && exists(/usr/lib/libc++.so)
 .if !exists(/usr/include/c++/v1/expected) || make(makesum) || make(fetch)
 USES+=		llvm:min=16,build,export
 PATH:=		${LLVM_PREFIX}/bin:${PATH} # XXX _CMAKE_TOOLCHAIN_SUFFIX vs. devel/llvm*
 CONFIGURE_ENV+=	CC="${CC}" CXX="${CXX}" CPP="${CPP}"
-CMAKE_BIN=	${LOCALBASE}/bin/cmake
 
 # XXX Move into separate port and standardize via USES
 GH_TUPLE+=	llvm:llvm-project:llvmorg-16.0.1:libcxx

@@ -10,4 +10,6 @@ RUN_DEPENDS+=	repl:mail/nmh
 USES=		tar:xz xorg xorg-cat:app
 USE_XORG=	x11 xaw xmu xt xbitmaps
 
+GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
+
 .include <bsd.port.mk>

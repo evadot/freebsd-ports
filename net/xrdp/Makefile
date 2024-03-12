@@ -1,7 +1,6 @@
 PORTNAME=	xrdp
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.9.24
-PORTREVISION=	1
+DISTVERSION=	0.9.25
 PORTEPOCH=	1
 CATEGORIES=	net
 DIST_SUBDIR?=	${PORTNAME}
@@ -16,8 +15,7 @@ LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/nasm:devel/nasm
-RUN_DEPENDS=	${LOCALBASE}/lib/pulseaudio/modules/module-xrdp-sink.so:audio/pulseaudio-module-xrdp \
-		${LOCALBASE}/lib/xorg/modules/libxorgxrdp.so:x11-drivers/xorgxrdp \
+RUN_DEPENDS=	${LOCALBASE}/lib/xorg/modules/libxorgxrdp.so:x11-drivers/xorgxrdp \
 		xterm:x11/xterm
 LIB_DEPENDS=	libImlib2.so:graphics/imlib2
 
