@@ -165,7 +165,6 @@
     SUBDIR += ammonite
     SUBDIR += amqp-cpp
     SUBDIR += android-tools
-    SUBDIR += anjuta
     SUBDIR += antlr
     SUBDIR += antlr3
     SUBDIR += antlr4
@@ -828,6 +827,7 @@
     SUBDIR += gitqlient
     SUBDIR += gittrac
     SUBDIR += gitty
+    SUBDIR += gitu
     SUBDIR += gitui
     SUBDIR += glab
     SUBDIR += glade
@@ -7650,6 +7650,7 @@
     SUBDIR += rubygem-will_paginate
     SUBDIR += rubygem-windows_error
     SUBDIR += rubygem-wisper
+    SUBDIR += rubygem-with_advisory_lock
     SUBDIR += rubygem-with_env
     SUBDIR += rubygem-wmi-lite
     SUBDIR += rubygem-xdg
