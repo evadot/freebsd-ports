@@ -1,6 +1,5 @@
 PORTNAME=	gpu-firmware-kmod
-PORTVERSION=	20230210
-PORTREVISION=	1
+PORTVERSION=	20240401
 PORTEPOCH=	1
 CATEGORIES=	graphics
 
@@ -110,7 +109,39 @@ RUN_DEPENDS+=	gpu-firmware-amd-kmod-aldebaran>0:graphics/gpu-firmware-amd-kmod@a
 		gpu-firmware-amd-kmod-vega20>0:graphics/gpu-firmware-amd-kmod@vega20 \
 		gpu-firmware-amd-kmod-vegam>0:graphics/gpu-firmware-amd-kmod@vegam \
 		gpu-firmware-amd-kmod-verde>0:graphics/gpu-firmware-amd-kmod@verde \
-		gpu-firmware-amd-kmod-yellow-carp>0:graphics/gpu-firmware-amd-kmod@yellow_carp
+		gpu-firmware-amd-kmod-yellow-carp>0:graphics/gpu-firmware-amd-kmod@yellow_carp \
+		gpu-firmware-amd-kmod-dcn-3-1-4>0:graphics/gpu-firmware-amd-kmod@dcn_3_1_4 \
+		gpu-firmware-amd-kmod-dcn-3-1-5>0:graphics/gpu-firmware-amd-kmod@dcn_3_1_5 \
+		gpu-firmware-amd-kmod-dcn-3-1-6>0:graphics/gpu-firmware-amd-kmod@dcn_3_1_6 \
+		gpu-firmware-amd-kmod-dcn-3-2-0>0:graphics/gpu-firmware-amd-kmod@dcn_3_2_0 \
+		gpu-firmware-amd-kmod-dcn-3-2-1>0:graphics/gpu-firmware-amd-kmod@dcn_3_2_1 \
+		gpu-firmware-amd-kmod-gc_10_3_6>0:graphics/gpu-firmware-amd-kmod@gc_10_3_6 \
+		gpu-firmware-amd-kmod-gc_10_3_7>0:graphics/gpu-firmware-amd-kmod@gc_10_3_7 \
+		gpu-firmware-amd-kmod-gc_11_0_0>0:graphics/gpu-firmware-amd-kmod@gc_11_0_0 \
+		gpu-firmware-amd-kmod-gc_11_0_1>0:graphics/gpu-firmware-amd-kmod@gc_11_0_1 \
+		gpu-firmware-amd-kmod-gc_11_0_2>0:graphics/gpu-firmware-amd-kmod@gc_11_0_2 \
+		gpu-firmware-amd-kmod-gc_11_0_3>0:graphics/gpu-firmware-amd-kmod@gc_11_0_3 \
+		gpu-firmware-amd-kmod-gc_11_0_4>0:graphics/gpu-firmware-amd-kmod@gc_11_0_4 \
+		gpu-firmware-amd-kmod-psp_13_0_0>0:graphics/gpu-firmware-amd-kmod@psp_13_0_0 \
+		gpu-firmware-amd-kmod-psp_13_0_4>0:graphics/gpu-firmware-amd-kmod@psp_13_0_4 \
+		gpu-firmware-amd-kmod-psp_13_0_5>0:graphics/gpu-firmware-amd-kmod@psp_13_0_5 \
+		gpu-firmware-amd-kmod-psp_13_0_7>0:graphics/gpu-firmware-amd-kmod@psp_13_0_7 \
+		gpu-firmware-amd-kmod-psp_13_0_8>0:graphics/gpu-firmware-amd-kmod@psp_13_0_8 \
+		gpu-firmware-amd-kmod-psp_13_0_10>0:graphics/gpu-firmware-amd-kmod@psp_13_0_10 \
+		gpu-firmware-amd-kmod-psp_13_0_11>0:graphics/gpu-firmware-amd-kmod@psp_13_0_11 \
+		gpu-firmware-amd-kmod-sdma_5_2_6>0:graphics/gpu-firmware-amd-kmod@sdma_5_2_6 \
+		gpu-firmware-amd-kmod-sdma_5_2_7>0:graphics/gpu-firmware-amd-kmod@sdma_5_2_7 \
+		gpu-firmware-amd-kmod-sdma_6_0_0>0:graphics/gpu-firmware-amd-kmod@sdma_6_0_0 \
+		gpu-firmware-amd-kmod-sdma_6_0_1>0:graphics/gpu-firmware-amd-kmod@sdma_6_0_1 \
+		gpu-firmware-amd-kmod-sdma_6_0_2>0:graphics/gpu-firmware-amd-kmod@sdma_6_0_2 \
+		gpu-firmware-amd-kmod-sdma_6_0_3>0:graphics/gpu-firmware-amd-kmod@sdma_6_0_3 \
+		gpu-firmware-amd-kmod-smu_13_0_0>0:graphics/gpu-firmware-amd-kmod@smu_13_0_0 \
+		gpu-firmware-amd-kmod-smu_13_0_7>0:graphics/gpu-firmware-amd-kmod@smu_13_0_7 \
+		gpu-firmware-amd-kmod-smu_13_0_10>0:graphics/gpu-firmware-amd-kmod@smu_13_0_10 \
+		gpu-firmware-amd-kmod-vcn_3_1_2>0:graphics/gpu-firmware-amd-kmod@vcn_3_1_2 \
+		gpu-firmware-amd-kmod-vcn_4_0_0>0:graphics/gpu-firmware-amd-kmod@vcn_4_0_0 \
+		gpu-firmware-amd-kmod-vcn_4_0_2>0:graphics/gpu-firmware-amd-kmod@vcn_4_0_2 \
+		gpu-firmware-amd-kmod-vcn_4_0_4>0:graphics/gpu-firmware-amd-kmod@vcn_4_0_4
 .endif
 
 .include <bsd.port.post.mk>
