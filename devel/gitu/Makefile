@@ -1,6 +1,6 @@
 PORTNAME=	gitu
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.6.2
+DISTVERSION=	0.12.1
 CATEGORIES=	devel
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -38,17 +38,18 @@ CARGO_CRATES=	ahash-0.8.11 \
 		castaway-0.2.2 \
 		cc-1.0.90 \
 		cfg-if-1.0.0 \
-		chrono-0.4.35 \
+		chrono-0.4.37 \
 		ciborium-0.2.2 \
 		ciborium-io-0.2.2 \
 		ciborium-ll-0.2.2 \
-		clap-4.5.2 \
+		clap-4.5.4 \
 		clap_builder-4.5.2 \
-		clap_derive-4.5.0 \
+		clap_derive-4.5.4 \
 		clap_lex-0.7.0 \
 		colorchoice-1.0.0 \
 		compact_str-0.7.1 \
 		console-0.15.8 \
+		convert_case-0.4.0 \
 		core-foundation-sys-0.8.6 \
 		criterion-0.5.1 \
 		criterion-plot-0.5.0 \
@@ -58,26 +59,30 @@ CARGO_CRATES=	ahash-0.8.11 \
 		crossterm-0.27.0 \
 		crossterm_winapi-0.9.1 \
 		crunchy-0.2.2 \
+		derive_more-0.99.17 \
 		diff-0.1.13 \
 		directories-5.0.1 \
 		dirs-sys-0.4.1 \
 		either-1.10.0 \
 		encode_unicode-0.3.6 \
 		equivalent-1.0.1 \
-		figment-0.10.14 \
+		figment-0.10.15 \
 		form_urlencoded-1.2.1 \
 		getrandom-0.2.12 \
-		git2-0.18.2 \
+		git-version-0.3.9 \
+		git-version-macro-0.3.9 \
+		git2-0.18.3 \
 		half-2.4.0 \
 		hashbrown-0.14.3 \
 		heck-0.4.1 \
+		heck-0.5.0 \
 		hermit-abi-0.3.9 \
 		iana-time-zone-0.1.60 \
 		iana-time-zone-haiku-0.1.2 \
 		idna-0.5.0 \
 		indexmap-2.2.5 \
 		indoc-2.0.4 \
-		insta-1.36.1 \
+		insta-1.38.0 \
 		is-terminal-0.4.12 \
 		itertools-0.10.5 \
 		itertools-0.12.1 \
@@ -120,10 +125,12 @@ CARGO_CRATES=	ahash-0.8.11 \
 		regex-automata-0.1.10 \
 		regex-automata-0.4.6 \
 		regex-syntax-0.8.2 \
+		rustc_version-0.4.0 \
 		rustversion-1.0.14 \
 		ryu-1.0.17 \
 		same-file-1.0.6 \
 		scopeguard-1.2.0 \
+		semver-1.0.22 \
 		serde-1.0.197 \
 		serde_derive-1.0.197 \
 		serde_json-1.0.114 \
@@ -131,27 +138,27 @@ CARGO_CRATES=	ahash-0.8.11 \
 		signal-hook-0.3.17 \
 		signal-hook-mio-0.2.3 \
 		signal-hook-registry-1.4.1 \
-		similar-2.4.0 \
+		similar-2.5.0 \
 		simple-logging-2.0.2 \
 		smallvec-1.13.1 \
 		stability-0.1.1 \
 		static_assertions-1.1.0 \
 		strsim-0.11.0 \
-		strum-0.26.1 \
+		strum-0.26.2 \
 		strum_macros-0.26.1 \
 		syn-1.0.109 \
 		syn-2.0.52 \
-		temp-dir-0.1.12 \
+		temp-dir-0.1.13 \
 		thiserror-1.0.57 \
 		thiserror-impl-1.0.57 \
 		thread-id-3.3.0 \
 		tinytemplate-1.2.1 \
 		tinyvec-1.6.0 \
 		tinyvec_macros-0.1.1 \
-		toml-0.8.10 \
+		toml-0.8.12 \
 		toml_datetime-0.6.5 \
-		toml_edit-0.22.6 \
-		tui-prompts-0.3.5 \
+		toml_edit-0.22.9 \
+		tui-prompts-0.3.8 \
 		uncased-0.9.10 \
 		unicode-bidi-0.3.15 \
 		unicode-ident-1.0.12 \
@@ -194,7 +201,6 @@ CARGO_CRATES=	ahash-0.8.11 \
 		windows_x86_64_msvc-0.48.5 \
 		windows_x86_64_msvc-0.52.4 \
 		winnow-0.6.5 \
-		yaml-rust-0.4.5 \
 		yansi-0.5.1 \
 		zerocopy-0.7.32 \
 		zerocopy-derive-0.7.32

@@ -15,7 +15,6 @@
     SUBDIR += cingb
     SUBDIR += citra
     SUBDIR += citra-qt5
-    SUBDIR += cpmemu
     SUBDIR += cpmtools
     SUBDIR += cpmtools2
     SUBDIR += darcnes
@@ -32,6 +31,7 @@
     SUBDIR += emu64
     SUBDIR += emulationstation
     SUBDIR += fceux
+    SUBDIR += flexemu
     SUBDIR += fmsx
     SUBDIR += frodo
     SUBDIR += fs-uae

@@ -1,6 +1,7 @@
 PORTNAME=	aichat
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.14.0
+PORTREVISION=	1
 CATEGORIES=	misc
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -11,6 +12,8 @@ LICENSE=	APACHE20 MIT
 LICENSE_COMB=	dual
 LICENSE_FILE_APACHE20=	${WRKSRC}/LICENSE-APACHE
 LICENSE_FILE_MIT=	${WRKSRC}/LICENSE-MIT
+
+BROKEN_i386=	compilation fails: evaluation of constant value failed, see https://github.com/briansmith/ring/issues/2006
 
 LIB_DEPENDS=	libonig.so:devel/oniguruma
 
