@@ -1,6 +1,6 @@
 PORTNAME=	xwayland
 PORTVERSION=	23.2.5
-PORTREVISION=	1
+PORTREVISION=	2
 PORTEPOCH=	1
 CATEGORIES=	x11-servers
 MASTER_SITES=	XORG/individual/xserver
@@ -31,16 +31,11 @@ RUN_DEPENDS=	xkbcomp:x11/xkbcomp \
 
 USES=		compiler:c11 gl meson pkgconfig xorg tar:xz
 USE_GL=		egl gbm gl
-USE_XORG=	pixman xau xfont2 xkbfile xshmfence xtrans
+USE_XORG=	pixman xau xdmcp xfont2 xkbfile xshmfence xtrans
 
 MESON_ARGS=	-Dxvfb=false \
-		-Dxdmcp=false \
 		-Dxcsecurity=false \
 		-Ddri3=true \
-		-Dglamor=true \
-		-Dsha1=libmd \
-		-Dipv6=true \
-		-Dxkb_dir=${LOCALBASE}/share/X11/xkb \
 		-Dxkb_output_dir=/var/lib/xkb \
 		-Ddefault_font_path="${DEFAULT_FONTPATH_LIST:ts,}"
 
@@ -56,7 +51,15 @@ DEFAULT_FONTPATH_LIST= \
 	${FONTPATH_ROOT}/75dpi/ \
 	catalogue:${FONTPATHD}
 
-OPTIONS_DEFINE=	NVIDIA
+OPTIONS_DEFINE=	CSD EI NVIDIA
+
+CSD_DESC=		Client-side decorations via libdecor
+CSD_LIB_DEPENDS=	libdecor-0.so:x11-toolkits/libdecor
+CSD_MESON_TRUE=		libdecor
+
+EI_DESC=		Emulated input via libei
+EI_LIB_DEPENDS=		libei.so:x11/libei
+EI_MESON_OFF=		-Dxwayland_ei=false
 
 NVIDIA_DESC=		EGLStream support for glamor on Xwayland
 NVIDIA_BUILD_DEPENDS=	egl-wayland>0:graphics/egl-wayland
