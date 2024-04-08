@@ -30,7 +30,7 @@ RUN_DEPENDS=	xkbcomp:x11/xkbcomp \
 #CONFLICTS_INSTALL=	${PORTNAME}-devel
 
 USES=		compiler:c11 gl meson pkgconfig xorg tar:xz
-USE_GL=		egl gbm gl
+USE_GL=		gbm gl
 USE_XORG=	pixman xau xdmcp xfont2 xkbfile xshmfence xtrans
 
 MESON_ARGS=	-Dxvfb=false \
