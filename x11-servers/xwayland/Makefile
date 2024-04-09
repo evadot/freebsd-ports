@@ -34,7 +34,7 @@ USE_GL=		gbm gl
 USE_XORG=	pixman xau xdmcp xfont2 xkbfile xshmfence xtrans
 
 MESON_ARGS=	-Dxvfb=false \
-		-Dxcsecurity=false \
+		-Dxcsecurity=true \
 		-Ddri3=true \
 		-Dxkb_output_dir=/var/lib/xkb \
 		-Ddefault_font_path="${DEFAULT_FONTPATH_LIST:ts,}"
