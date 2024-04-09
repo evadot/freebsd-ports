@@ -51,7 +51,8 @@ DEFAULT_FONTPATH_LIST= \
 	${FONTPATH_ROOT}/75dpi/ \
 	catalogue:${FONTPATHD}
 
-OPTIONS_DEFINE=	CSD EI NVIDIA
+OPTIONS_DEFINE=		CSD EI NVIDIA
+OPTIONS_DEFAULT=	CSD EI
 
 CSD_DESC=		Client-side decorations via libdecor
 CSD_LIB_DEPENDS=	libdecor-0.so:x11-toolkits/libdecor
