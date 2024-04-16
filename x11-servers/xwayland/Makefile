@@ -1,6 +1,5 @@
 PORTNAME=	xwayland
-PORTVERSION=	23.2.5
-PORTREVISION=	2
+PORTVERSION=	23.2.6
 PORTEPOCH=	1
 CATEGORIES=	x11-servers
 MASTER_SITES=	XORG/individual/xserver
@@ -11,7 +10,7 @@ PATCHFILES+=	707c37b7ab9e.patch:-p1 # https://gitlab.freedesktop.org/xorg/xserve
 PATCHFILES+=	3b0d1a3a2296.patch:-p1 # https://gitlab.freedesktop.org/xorg/xserver/-/merge_requests/432
 
 MAINTAINER=	x11@FreeBSD.org
-COMMENT=	X11 server as Wayland Client
+COMMENT=	X11 server as Wayland client
 WWW=		https://wayland.freedesktop.org/xserver.html
 
 LICENSE=	MIT
@@ -19,7 +18,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	evdev-proto>0:devel/evdev-proto \
 		${LOCALBASE}/include/GL/internal/dri_interface.h:graphics/mesa-dri \
-		wayland-protocols>=1.18:graphics/wayland-protocols
+		wayland-protocols>=1.30:graphics/wayland-protocols
 LIB_DEPENDS=	libdrm.so:graphics/libdrm \
 		libepoxy.so:graphics/libepoxy \
 		libwayland-client.so:graphics/wayland \
