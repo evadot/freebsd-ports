@@ -11,6 +11,8 @@ LICENSE_FILE=	${WRKSRC}/docs/license.rst
 
 USES=		llvm:noexport
 
+BUILD_DEPENDS=	libglvnd>=0:graphics/libglvnd
+
 OPTIONS_GROUP=			PLATFORM
 OPTIONS_GROUP_PLATFORM=		PLATFORM_X11 PLATFORM_WAYLAND
 PLATFORM_X11_DESC=		Enable X11 support for GBM/EGL
