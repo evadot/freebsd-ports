@@ -12,6 +12,7 @@ LICENSE_FILE=	${WRKSRC}/docs/license.rst
 ONLY_FOR_ARCHS=		aarch64 amd64 i386 powerpc64 powerpc64le
 ONLY_FOR_ARCHS_REASON=	used only by AMD/Radeon hardware
 
+BUILD_DEPENDS=	libva>=0:multimedia/libva
 LIB_DEPENDS=	libzstd.so:archivers/zstd
 
 USES=		llvm:lib,noexport
