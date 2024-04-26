@@ -1,7 +1,8 @@
 PORTNAME=	mesa-demos
 PORTVERSION=	8.5.0
 CATEGORIES=	graphics
-MASTER_SITES=	ftp://ftp.freedesktop.org/pub/mesa/demos/ #${PORTVERSION}/
+MASTER_SITES=	https://mesa.freedesktop.org/archive/demos/${PORTVERSION}/ \
+		ftp://ftp.freedesktop.org/pub/mesa/demos/ #${PORTVERSION}/
 
 MAINTAINER=	x11@FreeBSD.org
 COMMENT=	OpenGL demos distributed with Mesa
