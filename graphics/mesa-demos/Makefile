@@ -1,8 +1,8 @@
 PORTNAME=	mesa-demos
-PORTVERSION=	8.5.0
+PORTVERSION=	8.4.0
+PORTREVISION=	4
 CATEGORIES=	graphics
-MASTER_SITES=	https://mesa.freedesktop.org/archive/demos/${PORTVERSION}/ \
-		ftp://ftp.freedesktop.org/pub/mesa/demos/ #${PORTVERSION}/
+MASTER_SITES=	ftp://ftp.freedesktop.org/pub/mesa/demos/ #${PORTVERSION}/
 
 MAINTAINER=	x11@FreeBSD.org
 COMMENT=	OpenGL demos distributed with Mesa
@@ -12,15 +12,13 @@ LICENSE=	MIT
 
 CONFLICTS_INSTALL=	glx-utils
 
-USES=		gl localbase meson pkgconfig tar:bzip2 xorg
-USE_GL=		egl gl glesv2 glu glut
+USES=		gmake gl localbase pkgconfig tar:bzip2 xorg
+GNU_CONFIGURE=	yes
+USE_GL=		egl gl glesv2 glew glu glut
 USE_XORG=	xorgproto x11 xdamage xext xfixes xi xxf86vm
 
-MESON_ARGS+=	-Dwith-glut=${LOCALBASE} \
-		-Dgles1=disabled \
-		-Dosmesa=disabled \
-		-Dwayland=disabled \
-		-Dwith-system-data-files=true
+CONFIGURE_ARGS+=--disable-gles1 --disable-osmesa --disable-vg --disable-wayland \
+		--with-system-data-files
 
 .include <bsd.port.options.mk>
 
