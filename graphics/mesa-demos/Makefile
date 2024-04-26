@@ -20,6 +20,7 @@ MESON_ARGS+=	-Dwith-glut=${LOCALBASE} \
 		-Dgles1=disabled \
 		-Dosmesa=disabled \
 		-Dwayland=disabled \
+		-Dlibdrm=disabled \
 		-Dwith-system-data-files=true
 
 .include <bsd.port.options.mk>
