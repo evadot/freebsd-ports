@@ -10,12 +10,10 @@ WWW=		https://www.mesa3d.org/
 
 LICENSE=	MIT
 
-LIB_DEPENDS=	libdrm.so:graphics/libdrm
-
 CONFLICTS_INSTALL=	glx-utils
 
 USES=		gl localbase meson pkgconfig tar:bzip2 xorg
-USE_GL=		egl gbm gl glesv2 glew glu glut
+USE_GL=		egl gl glesv2 glu glut
 USE_XORG=	xorgproto x11 xdamage xext xfixes xi xxf86vm
 
 MESON_ARGS+=	-Dwith-glut=${LOCALBASE} \
