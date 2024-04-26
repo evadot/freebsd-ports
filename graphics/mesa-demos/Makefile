@@ -1,6 +1,6 @@
 PORTNAME=	mesa-demos
 PORTVERSION=	8.4.0
-PORTREVISION=	4
+PORTREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.freedesktop.org/pub/mesa/demos/ #${PORTVERSION}/
 
