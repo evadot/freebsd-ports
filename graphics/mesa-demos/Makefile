@@ -28,4 +28,7 @@ CONFIGURE_ARGS+=--disable-gles1 --disable-osmesa --disable-vg --disable-wayland 
 CFLAGS+=	-Wno-error=incompatible-function-pointer-types
 .endif
 
+post-stage:
+	${MV} ${STAGEDIR}/${PREFIX}/bin/bitmap ${STAGEDIR}/${PREFIX}/bin/bitmap_demo
+
 .include <bsd.port.mk>
