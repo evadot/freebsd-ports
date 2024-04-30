@@ -30,6 +30,7 @@ CFLAGS+=	-Wno-error=incompatible-function-pointer-types
 .endif
 
 post-stage:
+	# bitmap program conflicts with x11/bitmap
 	${MV} ${STAGEDIR}/${PREFIX}/bin/bitmap ${STAGEDIR}/${PREFIX}/bin/bitmap_demo
 
 .include <bsd.port.mk>

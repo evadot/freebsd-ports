@@ -39,6 +39,7 @@
     SUBDIR += and
     SUBDIR += android-file-transfer
     SUBDIR += android-file-transfer-qt5
+    SUBDIR += android-ota-payload-extractor
     SUBDIR += angrysearch
     SUBDIR += ansible
     SUBDIR += ansible-iocage
@@ -217,6 +218,7 @@
     SUBDIR += clockspeed
     SUBDIR += clone
     SUBDIR += clonehdd
+    SUBDIR += cloud-nuke
     SUBDIR += cloudabi-utils
     SUBDIR += clsync
     SUBDIR += cluster-glue
@@ -298,6 +300,7 @@
     SUBDIR += devstat
     SUBDIR += dfc
     SUBDIR += di
+    SUBDIR += diffoci
     SUBDIR += digdag
     SUBDIR += dim
     SUBDIR += dirdiff
@@ -1031,6 +1034,7 @@
     SUBDIR += plasma5-polkit-kde-agent-1
     SUBDIR += plasma5-powerdevil
     SUBDIR += plasma5-systemsettings
+    SUBDIR += plasma6-discover
     SUBDIR += plasma6-drkonqi
     SUBDIR += plasma6-kde-cli-tools
     SUBDIR += plasma6-kinfocenter
@@ -1676,6 +1680,7 @@
     SUBDIR += zbackup
     SUBDIR += zeitgeist
     SUBDIR += zellij
+    SUBDIR += zelta
     SUBDIR += zeroer
     SUBDIR += zetaback
     SUBDIR += zetaback-devel

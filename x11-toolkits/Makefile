@@ -24,6 +24,7 @@
     SUBDIR += gstreamer1-plugins-gtk
     SUBDIR += gstreamer1-plugins-pango
     SUBDIR += gtk-layer-shell
+    SUBDIR += gtk-session-lock
     SUBDIR += gtk-sharp-beans
     SUBDIR += gtk-sharp20
     SUBDIR += gtk-sharp30
@@ -117,7 +118,6 @@
     SUBDIR += p5-Alien-wxWidgets
     SUBDIR += p5-Gtk2
     SUBDIR += p5-Gtk2-Chmod
-    SUBDIR += p5-Gtk2-Ex-Dialogs
     SUBDIR += p5-Gtk2-Ex-FormFactory
     SUBDIR += p5-Gtk2-Ex-PodViewer
     SUBDIR += p5-Gtk2-Ex-Simple-List
@@ -218,6 +218,7 @@
     SUBDIR += rubygem-uh
     SUBDIR += rubygem-vte3
     SUBDIR += rubygem-vte4
+    SUBDIR += scenefx
     SUBDIR += scintilla
     SUBDIR += sdl_pango
     SUBDIR += shared-desktop-ontologies

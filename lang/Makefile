@@ -93,6 +93,7 @@
     SUBDIR += gcc13
     SUBDIR += gcc13-devel
     SUBDIR += gcc14-devel
+    SUBDIR += gcc15-devel
     SUBDIR += gcc48
     SUBDIR += gcc6-aux
     SUBDIR += gcc9
@@ -118,7 +119,6 @@
     SUBDIR += gnustep-base
     SUBDIR += go
     SUBDIR += go-devel
-    SUBDIR += go119
     SUBDIR += go120
     SUBDIR += go121
     SUBDIR += go122

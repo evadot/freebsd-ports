@@ -1,7 +1,11 @@
 PORTNAME=	hyprland
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.39.1
+PORTREVISION=	1
 CATEGORIES=	x11-wm wayland
+
+PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
+PATCHFILES+=	1016faea53fd.patch:-p1 # https://github.com/hyprwm/Hyprland/pull/5653
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Dynamic tiling Wayland compositor that doesn't sacrifice on its looks #'
@@ -10,8 +14,7 @@ WWW=		https://hyprland.org/
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	cmake:devel/cmake-core \
-		evdev-proto>0:devel/evdev-proto \
+BUILD_DEPENDS=	evdev-proto>0:devel/evdev-proto \
 		wayland-protocols>=1.25:graphics/wayland-protocols
 LIB_DEPENDS=	libhyprlang.so:devel/hyprlang \
 		libtomlplusplus.so:devel/tomlplusplus \
@@ -22,7 +25,7 @@ LIB_DEPENDS=	libhyprlang.so:devel/hyprlang \
 		libinput.so:x11/libinput \
 		libxkbcommon.so:x11/libxkbcommon
 
-USES=		compiler:c++11-lib gl gnome meson pkgconfig xorg
+USES=		cmake:indirect compiler:c++11-lib gl gnome meson pkgconfig xorg
 USE_GITHUB=	yes
 USE_GL=		egl opengl
 USE_GNOME=	cairo pango
@@ -99,7 +102,6 @@ update-hash:
 USES+=		llvm:min=16,build,export
 PATH:=		${LLVM_PREFIX}/bin:${PATH} # XXX _CMAKE_TOOLCHAIN_SUFFIX vs. devel/llvm*
 CONFIGURE_ENV+=	CC="${CC}" CXX="${CXX}" CPP="${CPP}"
-CMAKE_BIN=	${LOCALBASE}/bin/cmake
 
 # XXX Move into separate port and standardize via USES
 GH_TUPLE+=	llvm:llvm-project:llvmorg-16.0.1:libcxx
