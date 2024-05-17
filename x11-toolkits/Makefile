@@ -97,6 +97,9 @@
     SUBDIR += linux-c7-pango
     SUBDIR += linux-c7-qt-x11
     SUBDIR += linux-c7-tk85
+    SUBDIR += linux-rl9-gtk2
+    SUBDIR += linux-rl9-gtk3
+    SUBDIR += linux-rl9-pango
     SUBDIR += movingmotif
     SUBDIR += mowitz
     SUBDIR += mygui
@@ -140,7 +143,6 @@
     SUBDIR += p5-Tk-Date
     SUBDIR += p5-Tk-DynaTabFrame
     SUBDIR += p5-Tk-Enscript
-    SUBDIR += p5-Tk-FileDialog
     SUBDIR += p5-Tk-FontDialog
     SUBDIR += p5-Tk-GBARR
     SUBDIR += p5-Tk-Getopt

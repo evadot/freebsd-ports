@@ -58,6 +58,7 @@
     SUBDIR += apache-xmlbeans
     SUBDIR += apertium
     SUBDIR += apertium-eng
+    SUBDIR += aq
     SUBDIR += arianna
     SUBDIR += asciidoc
     SUBDIR += asm-xml
@@ -344,6 +345,7 @@
     SUBDIR += jo
     SUBDIR += jq
     SUBDIR += jql
+    SUBDIR += jqp
     SUBDIR += jrefentry
     SUBDIR += jshon
     SUBDIR += json-yaml
@@ -440,6 +442,9 @@
     SUBDIR += linux-c7-libcroco
     SUBDIR += linux-c7-libxml2
     SUBDIR += linux-c7-libxslt
+    SUBDIR += linux-rl9-expat
+    SUBDIR += linux-rl9-libxml2
+    SUBDIR += linux-rl9-libxslt
     SUBDIR += linuxdoc
     SUBDIR += linuxdoc-tools
     SUBDIR += localize
@@ -1434,6 +1439,7 @@
     SUBDIR += py-mistune2
     SUBDIR += py-mkdocs
     SUBDIR += py-mkdocs-autorefs
+    SUBDIR += py-mkdocs-get-deps
     SUBDIR += py-mkdocs-git-revision-date-localized-plugin
     SUBDIR += py-mkdocs-material
     SUBDIR += py-mkdocs-material-extensions
@@ -1508,6 +1514,7 @@
     SUBDIR += py-pypa-docs-theme
     SUBDIR += py-pypandoc
     SUBDIR += py-pyphen
+    SUBDIR += py-pyrss2gen
     SUBDIR += py-pyscss
     SUBDIR += py-pysrt
     SUBDIR += py-pystache
@@ -1546,7 +1553,6 @@
     SUBDIR += py-rich-rst
     SUBDIR += py-rich12
     SUBDIR += py-rnc2rng
-    SUBDIR += py-rss2gen
     SUBDIR += py-rst2ansi
     SUBDIR += py-rst2html5
     SUBDIR += py-scour

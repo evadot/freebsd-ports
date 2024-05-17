@@ -370,7 +370,6 @@
     SUBDIR += ccls
     SUBDIR += ccrtp
     SUBDIR += cctz
-    SUBDIR += cdash
     SUBDIR += cdecl
     SUBDIR += cdialog
     SUBDIR += cdk
@@ -450,12 +449,12 @@
     SUBDIR += concurrencpp
     SUBDIR += concurrencykit
     SUBDIR += concurrentqueue
-    SUBDIR += configkit
     SUBDIR += cons
     SUBDIR += cons-test
     SUBDIR += containers
     SUBDIR += convco
     SUBDIR += corrade
+    SUBDIR += corrosion
     SUBDIR += courier-unicode
     SUBDIR += coursier
     SUBDIR += covtool
@@ -1366,7 +1365,6 @@
     SUBDIR += libpeas
     SUBDIR += libpff
     SUBDIR += libphdi
-    SUBDIR += libphk
     SUBDIR += libphonenumber
     SUBDIR += libplist
     SUBDIR += libpo6
@@ -1504,6 +1502,25 @@
     SUBDIR += linux-c7-systemd-libs
     SUBDIR += linux-c7-zlib-devel
     SUBDIR += linux-ltp
+    SUBDIR += linux-rl9-dbus-libs
+    SUBDIR += linux-rl9-devtools
+    SUBDIR += linux-rl9-elfutils-libelf
+    SUBDIR += linux-rl9-elfutils-libs
+    SUBDIR += linux-rl9-icu
+    SUBDIR += linux-rl9-libevent
+    SUBDIR += linux-rl9-libgfortran
+    SUBDIR += linux-rl9-libpciaccess
+    SUBDIR += linux-rl9-libsigc++20
+    SUBDIR += linux-rl9-libsigsegv
+    SUBDIR += linux-rl9-libsoup
+    SUBDIR += linux-rl9-libthai
+    SUBDIR += linux-rl9-libunistring
+    SUBDIR += linux-rl9-llvm
+    SUBDIR += linux-rl9-nspr
+    SUBDIR += linux-rl9-ocl-icd
+    SUBDIR += linux-rl9-orc
+    SUBDIR += linux-rl9-strace
+    SUBDIR += linux-rl9-systemd-libs
     SUBDIR += linux-sublime-merge
     SUBDIR += linux_libusb
     SUBDIR += listserialc
@@ -5299,6 +5316,7 @@
     SUBDIR += py-prettyprinter
     SUBDIR += py-prettytable
     SUBDIR += py-prettytable0
+    SUBDIR += py-printree
     SUBDIR += py-process-tests
     SUBDIR += py-proglog
     SUBDIR += py-progress
@@ -5825,6 +5843,7 @@
     SUBDIR += py-types-Werkzeug
     SUBDIR += py-types-click
     SUBDIR += py-types-cryptography
+    SUBDIR += py-types-decorator
     SUBDIR += py-types-docutils
     SUBDIR += py-types-futures
     SUBDIR += py-types-jsonschema
@@ -6155,6 +6174,7 @@
     SUBDIR += rubygem-actionview61
     SUBDIR += rubygem-actionview70
     SUBDIR += rubygem-actionview71
+    SUBDIR += rubygem-active_hash
     SUBDIR += rubygem-active_scaffold
     SUBDIR += rubygem-activejob4
     SUBDIR += rubygem-activejob5
@@ -6812,6 +6832,7 @@
     SUBDIR += rubygem-coffee-script
     SUBDIR += rubygem-coffee-script-source
     SUBDIR += rubygem-colorize
+    SUBDIR += rubygem-colorizer
     SUBDIR += rubygem-columnize
     SUBDIR += rubygem-commander
     SUBDIR += rubygem-concurrent-ruby
@@ -6879,11 +6900,13 @@
     SUBDIR += rubygem-descendants_tracker
     SUBDIR += rubygem-device_detector
     SUBDIR += rubygem-devise
+    SUBDIR += rubygem-devise-pwned_password
     SUBDIR += rubygem-devise-rails5
     SUBDIR += rubygem-devise-rails52
     SUBDIR += rubygem-devise-rails60
     SUBDIR += rubygem-devise-rails61
     SUBDIR += rubygem-devise-rails70
+    SUBDIR += rubygem-devise-rails71
     SUBDIR += rubygem-did_you_mean
     SUBDIR += rubygem-dig_rb
     SUBDIR += rubygem-directory_watcher
@@ -6951,6 +6974,7 @@
     SUBDIR += rubygem-fiber-annotation
     SUBDIR += rubygem-fiber-local
     SUBDIR += rubygem-fiddle
+    SUBDIR += rubygem-figaro
     SUBDIR += rubygem-file-tail
     SUBDIR += rubygem-filesize
     SUBDIR += rubygem-fileutils
@@ -7251,6 +7275,7 @@
     SUBDIR += rubygem-newrelic-grape
     SUBDIR += rubygem-newrelic_rpm
     SUBDIR += rubygem-nice-ffi
+    SUBDIR += rubygem-nice_partials
     SUBDIR += rubygem-nio4r
     SUBDIR += rubygem-nori
     SUBDIR += rubygem-notiffany
@@ -7285,10 +7310,9 @@
     SUBDIR += rubygem-os
     SUBDIR += rubygem-ostruct
     SUBDIR += rubygem-p4ruby
+    SUBDIR += rubygem-pagy
     SUBDIR += rubygem-paint
     SUBDIR += rubygem-pairing_heap
-    SUBDIR += rubygem-paperclip-rails5
-    SUBDIR += rubygem-paperclip-rails50
     SUBDIR += rubygem-parser
     SUBDIR += rubygem-pastel
     SUBDIR += rubygem-patch_finder
@@ -7308,6 +7332,7 @@
     SUBDIR += rubygem-peek-rails70
     SUBDIR += rubygem-peek-rblineprof-rails52
     SUBDIR += rubygem-peek-redis-rails52
+    SUBDIR += rubygem-phonelib
     SUBDIR += rubygem-pkg-config
     SUBDIR += rubygem-platform
     SUBDIR += rubygem-pleaserun
@@ -7453,7 +7478,6 @@
     SUBDIR += rubygem-ruby-statistics
     SUBDIR += rubygem-ruby2_keywords
     SUBDIR += rubygem-ruby2ruby
-    SUBDIR += rubygem-ruby_dep
     SUBDIR += rubygem-ruby_memcheck
     SUBDIR += rubygem-ruby_parser
     SUBDIR += rubygem-rubygems-mirror
@@ -7595,6 +7619,7 @@
     SUBDIR += rubygem-thor
     SUBDIR += rubygem-thor0
     SUBDIR += rubygem-thor12
+    SUBDIR += rubygem-thread-local
     SUBDIR += rubygem-thread_safe
     SUBDIR += rubygem-thrift
     SUBDIR += rubygem-thwait
@@ -7652,6 +7677,8 @@
     SUBDIR += rubygem-un
     SUBDIR += rubygem-unicode
     SUBDIR += rubygem-unicode-display_width
+    SUBDIR += rubygem-unicode-emoji
+    SUBDIR += rubygem-unicode-version
     SUBDIR += rubygem-unicode_utils
     SUBDIR += rubygem-unleash
     SUBDIR += rubygem-useragent
@@ -7850,6 +7877,7 @@
     SUBDIR += systemc
     SUBDIR += t1lib
     SUBDIR += ta-lib
+    SUBDIR += tabby
     SUBDIR += tablist
     SUBDIR += tabulate
     SUBDIR += tagref
@@ -7907,7 +7935,6 @@
     SUBDIR += tkcvs
     SUBDIR += tkp4
     SUBDIR += tl-expected
-    SUBDIR += tla
     SUBDIR += tllist
     SUBDIR += tlsh
     SUBDIR += tlx

@@ -324,6 +324,8 @@
     SUBDIR += links
     SUBDIR += links1
     SUBDIR += linux-c7-qtwebkit
+    SUBDIR += linux-chrome
+    SUBDIR += linux-rl9-libnghttp2
     SUBDIR += linux-widevine-cdm
     SUBDIR += litmus
     SUBDIR += ljdeps
@@ -473,6 +475,7 @@
     SUBDIR += node18
     SUBDIR += node20
     SUBDIR += node21
+    SUBDIR += node22
     SUBDIR += nostromo
     SUBDIR += novnc
     SUBDIR += novnc-websockify
@@ -491,6 +494,7 @@
     SUBDIR += onionshare-cli
     SUBDIR += onlyoffice-documentserver
     SUBDIR += opencart
+    SUBDIR += openemr
     SUBDIR += openresty
     SUBDIR += orangehrm
     SUBDIR += osrm-backend
@@ -1472,6 +1476,7 @@
     SUBDIR += py-cachelib
     SUBDIR += py-caldav
     SUBDIR += py-channels
+    SUBDIR += py-channels-redis
     SUBDIR += py-cheroot
     SUBDIR += py-cherrypy
     SUBDIR += py-cinemagoer
@@ -1486,12 +1491,8 @@
     SUBDIR += py-daphne
     SUBDIR += py-dj-database-url
     SUBDIR += py-dj42-channels
-    SUBDIR += py-dj42-channels-redis
     SUBDIR += py-dj42-django-allauth
-    SUBDIR += py-dj42-django-auditlog
     SUBDIR += py-dj42-django-auth-ldap
-    SUBDIR += py-dj42-django-celery-results
-    SUBDIR += py-dj42-django-compression-middleware
     SUBDIR += py-dj42-django-cors-headers
     SUBDIR += py-dj42-django-crispy-forms
     SUBDIR += py-dj42-django-debug-toolbar
@@ -1502,7 +1503,6 @@
     SUBDIR += py-dj42-django-js-asset
     SUBDIR += py-dj42-django-modelcluster
     SUBDIR += py-dj42-django-mptt
-    SUBDIR += py-dj42-django-multiselectfield
     SUBDIR += py-dj42-django-otp
     SUBDIR += py-dj42-django-permissionedforms
     SUBDIR += py-dj42-django-prometheus
@@ -1514,16 +1514,15 @@
     SUBDIR += py-dj42-django-treebeard
     SUBDIR += py-dj42-djangoql
     SUBDIR += py-dj42-djangorestframework
-    SUBDIR += py-dj42-djangorestframework-guardian
     SUBDIR += py-dj42-drf-spectacular
     SUBDIR += py-dj42-drf-spectacular-sidecar
-    SUBDIR += py-dj42-drf-writable-nested
     SUBDIR += py-django-admin-rangefilter
     SUBDIR += py-django-advanced-filters
     SUBDIR += py-django-allauth
     SUBDIR += py-django-annoying
     SUBDIR += py-django-appconf
     SUBDIR += py-django-assets
+    SUBDIR += py-django-auditlog
     SUBDIR += py-django-auth-ldap
     SUBDIR += py-django-autocomplete-light
     SUBDIR += py-django-bakery
@@ -1534,10 +1533,12 @@
     SUBDIR += py-django-bootstrap4
     SUBDIR += py-django-braces
     SUBDIR += py-django-cacheops
+    SUBDIR += py-django-celery-results
     SUBDIR += py-django-choices-field
     SUBDIR += py-django-ckeditor-5
     SUBDIR += py-django-classy-tags
     SUBDIR += py-django-cms
+    SUBDIR += py-django-compression-middleware
     SUBDIR += py-django-configurations
     SUBDIR += py-django-constance
     SUBDIR += py-django-contact-form
@@ -1550,7 +1551,6 @@
     SUBDIR += py-django-csp
     SUBDIR += py-django-debreach
     SUBDIR += py-django-debug-toolbar
-    SUBDIR += py-django-dpaste
     SUBDIR += py-django-extensions
     SUBDIR += py-django-filer
     SUBDIR += py-django-filter
@@ -1578,6 +1578,7 @@
     SUBDIR += py-django-model-utils
     SUBDIR += py-django-modelcluster
     SUBDIR += py-django-mptt
+    SUBDIR += py-django-multiselectfield
     SUBDIR += py-django-netfields
     SUBDIR += py-django-object-actions
     SUBDIR += py-django-otp
@@ -1632,11 +1633,13 @@
     SUBDIR += py-djangorestframework
     SUBDIR += py-djangorestframework-csv
     SUBDIR += py-djangorestframework-filters
+    SUBDIR += py-djangorestframework-guardian
     SUBDIR += py-djangorestframework-xml
     SUBDIR += py-djangosaml2
     SUBDIR += py-draftjs-exporter
     SUBDIR += py-drf-spectacular
     SUBDIR += py-drf-spectacular-sidecar
+    SUBDIR += py-drf-writable-nested
     SUBDIR += py-drf-yasg
     SUBDIR += py-dropbox
     SUBDIR += py-dtflickr
@@ -1963,6 +1966,15 @@
     SUBDIR += rubygem-bluecloth
     SUBDIR += rubygem-bootstrap-sass
     SUBDIR += rubygem-browser
+    SUBDIR += rubygem-bullet_train
+    SUBDIR += rubygem-bullet_train-fields
+    SUBDIR += rubygem-bullet_train-has_uuid
+    SUBDIR += rubygem-bullet_train-roles
+    SUBDIR += rubygem-bullet_train-routes
+    SUBDIR += rubygem-bullet_train-scope_validator
+    SUBDIR += rubygem-bullet_train-super_load_and_authorize_resource
+    SUBDIR += rubygem-bullet_train-themes
+    SUBDIR += rubygem-cable_ready
     SUBDIR += rubygem-cal-heatmap-rails
     SUBDIR += rubygem-carrierwave
     SUBDIR += rubygem-carrierwave1
@@ -1971,6 +1983,7 @@
     SUBDIR += rubygem-chosen-rails
     SUBDIR += rubygem-chromedriver-helper
     SUBDIR += rubygem-circuitbox
+    SUBDIR += rubygem-cloudinary
     SUBDIR += rubygem-cookiejar
     SUBDIR += rubygem-crass
     SUBDIR += rubygem-cssbundling-rails
@@ -2155,6 +2168,7 @@
     SUBDIR += rubygem-passenger
     SUBDIR += rubygem-patron
     SUBDIR += rubygem-platform-api
+    SUBDIR += rubygem-possessive
     SUBDIR += rubygem-propshaft
     SUBDIR += rubygem-propshaft-rails70
     SUBDIR += rubygem-protocol-hpack
@@ -2234,6 +2248,7 @@
     SUBDIR += rubygem-responders-rails60
     SUBDIR += rubygem-responders-rails61
     SUBDIR += rubygem-responders-rails70
+    SUBDIR += rubygem-responders-rails71
     SUBDIR += rubygem-rest-client
     SUBDIR += rubygem-rfacebook
     SUBDIR += rubygem-rfeedfinder
@@ -2256,6 +2271,7 @@
     SUBDIR += rubygem-select2-rails
     SUBDIR += rubygem-selenium-webdriver
     SUBDIR += rubygem-semantic-ui-sass
+    SUBDIR += rubygem-showcase-rails
     SUBDIR += rubygem-simple-rss
     SUBDIR += rubygem-sinatra
     SUBDIR += rubygem-sinatra-contrib
@@ -2438,6 +2454,7 @@
     SUBDIR += twms
     SUBDIR += typo3-11
     SUBDIR += typo3-12
+    SUBDIR += typo3-13
     SUBDIR += uchiwa
     SUBDIR += ufdbguard
     SUBDIR += ulfius

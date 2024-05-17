@@ -22,6 +22,7 @@
     SUBDIR += bb
     SUBDIR += bbjd
     SUBDIR += bdelta
+    SUBDIR += bedrust
     SUBDIR += bestfit
     SUBDIR += bible-kjv
     SUBDIR += biblesync
@@ -109,7 +110,6 @@
     SUBDIR += figlet
     SUBDIR += figlet-fonts
     SUBDIR += findutils
-    SUBDIR += firestring
     SUBDIR += flag
     SUBDIR += flashlight
     SUBDIR += fortune-mod-bible
@@ -198,6 +198,7 @@
     SUBDIR += iso-codes
     SUBDIR += jargon
     SUBDIR += jbidwatcher
+    SUBDIR += jirust
     SUBDIR += jojodiff
     SUBDIR += json-tui
     SUBDIR += kbdscan

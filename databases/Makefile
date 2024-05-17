@@ -154,6 +154,8 @@
     SUBDIR += linux-c7-unixODBC
     SUBDIR += linux-oracle-instantclient-basic
     SUBDIR += linux-oracle-instantclient-sdk
+    SUBDIR += linux-rl9-libtracker-sparql
+    SUBDIR += linux-rl9-sqlite3
     SUBDIR += liquibase
     SUBDIR += litestream
     SUBDIR += lmdb
@@ -574,7 +576,6 @@
     SUBDIR += pgroonga
     SUBDIR += pgrouting
     SUBDIR += pgsanity
-    SUBDIR += pgsphere
     SUBDIR += pgtcl
     SUBDIR += pgtop
     SUBDIR += pguri
@@ -964,6 +965,7 @@
     SUBDIR += rubygem-mario-redis-lock
     SUBDIR += rubygem-memcache
     SUBDIR += rubygem-memcache-client
+    SUBDIR += rubygem-microscope
     SUBDIR += rubygem-mysql
     SUBDIR += rubygem-mysql2
     SUBDIR += rubygem-neighbor

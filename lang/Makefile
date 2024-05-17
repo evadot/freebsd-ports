@@ -94,7 +94,6 @@
     SUBDIR += gcc13-devel
     SUBDIR += gcc14-devel
     SUBDIR += gcc15-devel
-    SUBDIR += gcc48
     SUBDIR += gcc6-aux
     SUBDIR += gcc9
     SUBDIR += gforth
@@ -179,6 +178,7 @@
     SUBDIR += linux-dotnet11-runtime
     SUBDIR += linux-dotnet11-sdk
     SUBDIR += linux-j
+    SUBDIR += linux-rl9-python3
     SUBDIR += lua51
     SUBDIR += lua52
     SUBDIR += lua53
@@ -367,7 +367,7 @@
     SUBDIR += tcl-wrapper
     SUBDIR += tcl86
     SUBDIR += tcl87
-    SUBDIR += tcl9
+    SUBDIR += tcl90
     SUBDIR += tclX
     SUBDIR += tolua
     SUBDIR += tolua++
