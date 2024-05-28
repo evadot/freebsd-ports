@@ -175,6 +175,7 @@
     SUBDIR += faup
     SUBDIR += fcgi
     SUBDIR += fcgiwrap
+    SUBDIR += feroxbuster
     SUBDIR += ffproxy
     SUBDIR += ffsend
     SUBDIR += fgallery
@@ -485,6 +486,7 @@
     SUBDIR += npm-node18
     SUBDIR += npm-node20
     SUBDIR += npm-node21
+    SUBDIR += npm-node22
     SUBDIR += oauth2-proxy
     SUBDIR += obhttpd
     SUBDIR += offpunk
@@ -1844,6 +1846,7 @@
     SUBDIR += py-sseclient
     SUBDIR += py-starlette
     SUBDIR += py-strawberry-graphql-django
+    SUBDIR += py-streamlit
     SUBDIR += py-swapper
     SUBDIR += py-textile
     SUBDIR += py-ticketutil
@@ -1966,6 +1969,7 @@
     SUBDIR += rubygem-bluecloth
     SUBDIR += rubygem-bootstrap-sass
     SUBDIR += rubygem-browser
+    SUBDIR += rubygem-browser5
     SUBDIR += rubygem-bullet_train
     SUBDIR += rubygem-bullet_train-fields
     SUBDIR += rubygem-bullet_train-has_uuid
@@ -2076,6 +2080,7 @@
     SUBDIR += rubygem-http_router
     SUBDIR += rubygem-httparty
     SUBDIR += rubygem-httparty020
+    SUBDIR += rubygem-httparty021
     SUBDIR += rubygem-httpclient
     SUBDIR += rubygem-httpi
     SUBDIR += rubygem-hurley
@@ -2545,6 +2550,7 @@
     SUBDIR += yarn-node18
     SUBDIR += yarn-node20
     SUBDIR += yarn-node21
+    SUBDIR += yarn-node22
     SUBDIR += yarr
     SUBDIR += yaws
     SUBDIR += you-get
