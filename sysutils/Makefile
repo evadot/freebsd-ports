@@ -1210,6 +1210,7 @@
     SUBDIR += retail
     SUBDIR += rex
     SUBDIR += rhc
+    SUBDIR += rkbin
     SUBDIR += rinse
     SUBDIR += rmlint
     SUBDIR += rocinante
