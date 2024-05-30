@@ -1511,6 +1511,7 @@
     SUBDIR += u-boot-nanopi-neo2
     SUBDIR += u-boot-nanopi-r2s
     SUBDIR += u-boot-nanopi-r4s
+    SUBDIR += u-boot-nanopi-r5s
     SUBDIR += u-boot-olimex-a20-som-evb
     SUBDIR += u-boot-olinuxino-lime
     SUBDIR += u-boot-olinuxino-lime2
