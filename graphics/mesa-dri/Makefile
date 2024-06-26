@@ -18,7 +18,7 @@ WAYLAND_BUILD_DEPENDS=		wayland-protocols>=1.8:graphics/wayland-protocols
 WAYLAND_LIB_DEPENDS=		libwayland-client.so:graphics/wayland
 
 OPTIONS_DEFINE=		ZSTD
-OPTIONS_DEFAULT=	WAYLAND X11 WAYLAND ZSTD
+OPTIONS_DEFAULT=	WAYLAND X11 ZSTD
 OPTIONS_SUB=		yes
 
 ZSTD_DESC=		Use ZSTD for shader cache
