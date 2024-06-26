@@ -14,7 +14,6 @@ OPTIONS_GROUP=			PLATFORM
 OPTIONS_GROUP_PLATFORM=		X11 WAYLAND
 X11_DESC=			Enable X11 support for GBM/EGL
 WAYLAND_DESC=			Enable Wayland support for GBM/EGL and Vulkan
-WAYLAND_IMPLIES=		WAYLAND
 WAYLAND_BUILD_DEPENDS=		wayland-protocols>=1.8:graphics/wayland-protocols
 WAYLAND_LIB_DEPENDS=		libwayland-client.so:graphics/wayland
 
