@@ -29,7 +29,7 @@ include/GL/internal/dri_interface.h
 %%r300%%lib/dri/r300_dri.so
 %%r600%%lib/dri/r600_dri.so
 %%radeonsi%%lib/dri/radeonsi_dri.so
-%%svga%%lib/dri/vmwgfx_dri.so
+%%vmwgfx%%lib/dri/vmwgfx_dri.so
 %%swrast%%lib/dri/kms_swrast_dri.so
 %%swrast%%lib/dri/swrast_dri.so
 %%zink%%lib/dri/zink_dri.so

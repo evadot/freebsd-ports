@@ -25,7 +25,7 @@ WAYLAND_DESC=		Enable Wayland support for GBM/EGL and Vulkan
 WAYLAND_BUILD_DEPENDS=	wayland-protocols>=1.8:graphics/wayland-protocols
 WAYLAND_LIB_DEPENDS=	libwayland-client.so:graphics/wayland
 
-OPTIONS_GROUP_GALLIUM=	crocus i915 iris panfrost r300 r600 radeonsi svga swrast zink
+OPTIONS_GROUP_GALLIUM=	crocus i915 iris panfrost r300 r600 radeonsi swrast vmwgfx zink
 GALLIUM_DESC=		Unified OpenGL drivers
 crocus_DESC=		Intel GPU Gen4 (Broadwater) to Gen7 (Haswell)
 i915_DESC=		Intel GPU Gen3 (Grantsdale to Pineview)
@@ -34,8 +34,8 @@ panfrost_DESC=		ARM Midgard and Bifrost
 r300_DESC=		AMD/ATI R300, R400 and R500
 r600_DESC=		AMD/ATI R600, R700, Evergreen, Northern Islands
 radeonsi_DESC=		AMD/ATI Southern Islands and newer
-svga_DESC=		VMWare Virtual GPU
 swrast_DESC=		Software Rasterizer
+vmwgfx_DESC=		VMWare Virtual GPU
 zink_DESC=		OpenGL on top of Khronos’ Vulkan API
 
 OPTIONS_EXCLUDE+=	${ARCH:Marmv7:C/.+/crocus i915 iris panfrost r300 r600 radeonsi svga zink/}
@@ -44,7 +44,7 @@ OPTIONS_EXCLUDE+=	${ARCH:Namd64:Ni386:Nx86_64:C/.+/crocus i915 iris svga/}
 MESON_ARGS+=		-Dgallium-drivers=${GALLIUM_DRIVERS:ts,}
 . for _gd in ${OPTIONS_GROUP_GALLIUM}
 OPTIONS_DEFAULT+=	${_gd}
-${_gd}_VARS+=		GALLIUM_DRIVERS+=${_gd}
+${_gd}_VARS+=		GALLIUM_DRIVERS+=${_gd:S/vmwgfx/svga/}
 . endfor
 
 OPTIONS_GROUP_VULKAN=	anv radv swrast_vk
