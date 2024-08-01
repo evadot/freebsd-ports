@@ -295,6 +295,7 @@
     SUBDIR += php81-snmp
     SUBDIR += php82-snmp
     SUBDIR += php83-snmp
+    SUBDIR += php84-snmp
     SUBDIR += phpfpm_exporter
     SUBDIR += phpipam
     SUBDIR += ping_exporter
@@ -307,6 +308,7 @@
     SUBDIR += prometheus1
     SUBDIR += prometheus2
     SUBDIR += promscale
+    SUBDIR += promxy
     SUBDIR += pushgateway
     SUBDIR += py-adal
     SUBDIR += py-aggregate6
@@ -345,6 +347,7 @@
     SUBDIR += rancid3
     SUBDIR += rate
     SUBDIR += rcpd
+    SUBDIR += realmd
     SUBDIR += remarp
     SUBDIR += resource-agents
     SUBDIR += riemann
@@ -396,6 +399,7 @@
     SUBDIR += triton-guesttools
     SUBDIR += unbound_exporter
     SUBDIR += unifi8
+    SUBDIR += victoria-logs
     SUBDIR += victoria-metrics
     SUBDIR += virt-viewer
     SUBDIR += vmutils
@@ -420,5 +424,10 @@
     SUBDIR += zabbix64-java
     SUBDIR += zabbix64-proxy
     SUBDIR += zabbix64-server
+    SUBDIR += zabbix7-agent
+    SUBDIR += zabbix7-frontend
+    SUBDIR += zabbix7-java
+    SUBDIR += zabbix7-proxy
+    SUBDIR += zabbix7-server
 
 .include <bsd.port.subdir.mk>

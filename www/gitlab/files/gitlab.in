@@ -46,6 +46,7 @@ stop_precmd=${name}_init
 : ${gitlab_mail_room_enable:="NO"}
 : ${gitlab_allow_conflicts:="NO"}
 : ${gitlab_wait:="120"}
+: ${gitlab_svcj_options:="net_basic"}
 
 load_rc_config $name
 
@@ -93,7 +94,7 @@ gitlab_pages_dir=$(cd $app_root/../gitlab-pages 2> /dev/null && pwd)
 gitlab_pages_pid_path="$pid_path/gitlab-pages.pid"
 gitlab_pages_options="-pages-domain example.com -pages-root $app_root/shared/pages -listen-proxy 127.0.0.1:8090"
 gitlab_pages_log="$app_root/log/gitlab-pages.log"
-shell_path="/bin/bash"
+shell_path="/usr/local/bin/bash"
 gitaly_enabled=true
 gitaly_dir="%%PREFIX%%/share/gitaly"
 gitaly_pid_path="$pid_path/gitaly.pid"

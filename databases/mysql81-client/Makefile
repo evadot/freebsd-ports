@@ -1,10 +1,13 @@
 PORTNAME=	mysql
-PORTREVISION=	0
+PORTREVISION=	1
 PKGNAMESUFFIX=	81-client
 
 COMMENT=	Multithreaded SQL database (client)
 
 LICENSE+=	LGPL21
+
+DEPRECATED=	MySQL 8.1 is not supported by the vendor and has unfixed vulnerabilies
+EXPIRATION_DATE=2024-09-01
 
 MASTERDIR=	${.CURDIR}/../mysql81-server
 

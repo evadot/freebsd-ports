@@ -166,6 +166,7 @@
     SUBDIR += libvdwxc
     SUBDIR += libxc
     SUBDIR += liggghts
+    SUBDIR += linearelasticity
     SUBDIR += linux-zotero
     SUBDIR += luscus
     SUBDIR += m-aneos
@@ -186,6 +187,7 @@
     SUBDIR += metaphysicl
     SUBDIR += minc2
     SUBDIR += mmdb2
+    SUBDIR += mmg
     SUBDIR += mmtf-cpp
     SUBDIR += mol2ps
     SUBDIR += molgif
@@ -326,6 +328,7 @@
     SUBDIR += py-dwave-neal
     SUBDIR += py-dwave-networkx
     SUBDIR += py-dwave-ocean-sdk
+    SUBDIR += py-dwave-optimization
     SUBDIR += py-dwave-preprocessing
     SUBDIR += py-dwave-samplers
     SUBDIR += py-dwave-system
@@ -368,6 +371,8 @@
     SUBDIR += py-moltemplate
     SUBDIR += py-mp-api
     SUBDIR += py-mpcontribs-client
+    SUBDIR += py-mplhep
+    SUBDIR += py-mplhep-data
     SUBDIR += py-mrchem
     SUBDIR += py-ncrystal
     SUBDIR += py-netCDF4

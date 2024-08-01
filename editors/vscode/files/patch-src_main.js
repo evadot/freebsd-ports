@@ -1,4 +1,4 @@
---- src/main.js.orig	2024-01-31 22:36:21 UTC
+--- src/main.js.orig	2024-07-09 12:51:23 UTC
 +++ src/main.js
 @@ -140,7 +140,7 @@ if (locale) {
  // Pseudo Language Language Pack is being used.
@@ -9,8 +9,8 @@
  	const electronLocale = (!locale || locale === 'qps-ploc') ? 'en' : locale;
  	app.commandLine.appendSwitch('lang', electronLocale);
  }
-@@ -205,7 +205,7 @@ function configureCommandlineSwitchesSync(cliArgs) {
- 		'force-color-profile'
+@@ -211,7 +211,7 @@ function configureCommandlineSwitchesSync(cliArgs) {
+ 		'proxy-bypass-list'
  	];
  
 -	if (process.platform === 'linux') {

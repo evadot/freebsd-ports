@@ -1,5 +1,5 @@
 PORTNAME=	git
-DISTVERSION=	2.45.1
+DISTVERSION=	2.46.0
 CATEGORIES=	devel
 MASTER_SITES=	KERNEL_ORG/software/scm/git
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
@@ -240,7 +240,8 @@ post-build:
 
 .if ${SUBPORT} == core
 post-build-CONTRIB-on:
-	${SETENV} ${MAKE_ENV} ${MAKE_CMD} -C ${WRKSRC}/contrib/diff-highlight
+	${SETENVI} ${WRK_ENV} ${MAKE_ENV} ${MAKE_CMD} \
+		-C ${WRKSRC}/contrib/diff-highlight
 	${RM} ${WRKSRC}/contrib/diff-highlight/shebang.perl
 
 post-install:
@@ -272,7 +273,7 @@ post-install-HTMLDOCS-on:
 	${LN} -s git.html ${STAGEDIR}${DOCSDIR}/index.html
 
 post-install-SUBTREE-on:
-	cd ${WRKSRC}/contrib/subtree && ${SETENV} ${MAKE_ENV} \
+	cd ${WRKSRC}/contrib/subtree && ${SETENVI} ${WRK_ENV} ${MAKE_ENV} \
 		${MAKE_CMD} ${MAKE_FLAGS} Makefile USE_ASCIIDOCTOR=1 \
 		${MAKE_ARGS} install install-doc
 

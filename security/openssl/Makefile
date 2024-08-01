@@ -1,6 +1,5 @@
 PORTNAME=	openssl
-PORTVERSION=	3.0.13
-PORTREVISION=	4
+PORTVERSION=	3.0.14
 PORTEPOCH=	1
 CATEGORIES=	security devel
 MASTER_SITES=	https://www.openssl.org/source/ \
@@ -131,7 +130,7 @@ ZLIB_CONFIGURE_ON=	zlib-dynamic
 
 SHLIBS=			lib/engines-${OPENSSL_SHLIBVER}/loader_attic.so
 
-PORTSCOUT=		limit:^3\.0\.
+PORTSCOUT=		limit:^${PORTVERSION:R:S/./\./g}\.
 
 .include <bsd.port.options.mk>
 

@@ -585,8 +585,10 @@ share/applications/code-oss.desktop
 %%DATADIR%%/resources/app/extensions/node_modules/typescript/lib/lib.es2023.collection.d.ts
 %%DATADIR%%/resources/app/extensions/node_modules/typescript/lib/lib.es2023.d.ts
 %%DATADIR%%/resources/app/extensions/node_modules/typescript/lib/lib.es2023.full.d.ts
+%%DATADIR%%/resources/app/extensions/node_modules/typescript/lib/lib.es2023.intl.d.ts
 %%DATADIR%%/resources/app/extensions/node_modules/typescript/lib/lib.es5.d.ts
 %%DATADIR%%/resources/app/extensions/node_modules/typescript/lib/lib.es6.d.ts
+%%DATADIR%%/resources/app/extensions/node_modules/typescript/lib/lib.esnext.array.d.ts
 %%DATADIR%%/resources/app/extensions/node_modules/typescript/lib/lib.esnext.collection.d.ts
 %%DATADIR%%/resources/app/extensions/node_modules/typescript/lib/lib.esnext.d.ts
 %%DATADIR%%/resources/app/extensions/node_modules/typescript/lib/lib.esnext.decorators.d.ts
@@ -595,6 +597,8 @@ share/applications/code-oss.desktop
 %%DATADIR%%/resources/app/extensions/node_modules/typescript/lib/lib.esnext.intl.d.ts
 %%DATADIR%%/resources/app/extensions/node_modules/typescript/lib/lib.esnext.object.d.ts
 %%DATADIR%%/resources/app/extensions/node_modules/typescript/lib/lib.esnext.promise.d.ts
+%%DATADIR%%/resources/app/extensions/node_modules/typescript/lib/lib.esnext.regexp.d.ts
+%%DATADIR%%/resources/app/extensions/node_modules/typescript/lib/lib.esnext.string.d.ts
 %%DATADIR%%/resources/app/extensions/node_modules/typescript/lib/lib.scripthost.d.ts
 %%DATADIR%%/resources/app/extensions/node_modules/typescript/lib/lib.webworker.asynciterable.d.ts
 %%DATADIR%%/resources/app/extensions/node_modules/typescript/lib/lib.webworker.d.ts
@@ -824,6 +828,7 @@ share/applications/code-oss.desktop
 %%DATADIR%%/resources/app/extensions/yaml/syntaxes/yaml.tmLanguage.json
 %%DATADIR%%/resources/app/node_modules.asar
 %%DATADIR%%/resources/app/node_modules.asar.unpacked/@parcel/watcher/build/Release/watcher.node
+%%DATADIR%%/resources/app/node_modules.asar.unpacked/@vscode/deviceid/build/Release/windows.node
 %%DATADIR%%/resources/app/node_modules.asar.unpacked/@vscode/policy-watcher/build/Release/vscode-policy-watcher.node
 %%DATADIR%%/resources/app/node_modules.asar.unpacked/@vscode/ripgrep/bin/rg
 %%DATADIR%%/resources/app/node_modules.asar.unpacked/@vscode/spdlog/build/Release/spdlog.node
@@ -861,11 +866,6 @@ share/applications/code-oss.desktop
 %%DATADIR%%/resources/app/out/vs/base/worker/workerMain.js
 %%DATADIR%%/resources/app/out/vs/code/electron-main/main.js
 %%DATADIR%%/resources/app/out/vs/code/electron-main/main.nls.js
-%%DATADIR%%/resources/app/out/vs/code/electron-sandbox/issue/issueReporter.html
-%%DATADIR%%/resources/app/out/vs/code/electron-sandbox/issue/issueReporter.js
-%%DATADIR%%/resources/app/out/vs/code/electron-sandbox/issue/issueReporterMain.css
-%%DATADIR%%/resources/app/out/vs/code/electron-sandbox/issue/issueReporterMain.js
-%%DATADIR%%/resources/app/out/vs/code/electron-sandbox/issue/issueReporterMain.nls.js
 %%DATADIR%%/resources/app/out/vs/code/electron-sandbox/processExplorer/processExplorer.html
 %%DATADIR%%/resources/app/out/vs/code/electron-sandbox/processExplorer/processExplorer.js
 %%DATADIR%%/resources/app/out/vs/code/electron-sandbox/processExplorer/processExplorerMain.css
@@ -897,6 +897,7 @@ share/applications/code-oss.desktop
 %%DATADIR%%/resources/app/out/vs/platform/accessibilitySignal/browser/media/progress.mp3
 %%DATADIR%%/resources/app/out/vs/platform/accessibilitySignal/browser/media/quickFixes.mp3
 %%DATADIR%%/resources/app/out/vs/platform/accessibilitySignal/browser/media/save.mp3
+%%DATADIR%%/resources/app/out/vs/platform/accessibilitySignal/browser/media/success.mp3
 %%DATADIR%%/resources/app/out/vs/platform/accessibilitySignal/browser/media/taskCompleted.mp3
 %%DATADIR%%/resources/app/out/vs/platform/accessibilitySignal/browser/media/taskFailed.mp3
 %%DATADIR%%/resources/app/out/vs/platform/accessibilitySignal/browser/media/terminalBell.mp3
@@ -906,6 +907,7 @@ share/applications/code-oss.desktop
 %%DATADIR%%/resources/app/out/vs/platform/files/node/watcher/watcherMain.js
 %%DATADIR%%/resources/app/out/vs/platform/files/node/watcher/watcherMain.nls.js
 %%DATADIR%%/resources/app/out/vs/platform/profiling/electron-sandbox/profileAnalysisWorker.js
+%%DATADIR%%/resources/app/out/vs/platform/profiling/electron-sandbox/profileAnalysisWorker.nls.js
 %%DATADIR%%/resources/app/out/vs/platform/terminal/node/ptyHostMain.js
 %%DATADIR%%/resources/app/out/vs/platform/terminal/node/ptyHostMain.nls.js
 %%DATADIR%%/resources/app/out/vs/workbench/api/node/extensionHostProcess.js
@@ -928,6 +930,11 @@ share/applications/code-oss.desktop
 %%DATADIR%%/resources/app/out/vs/workbench/contrib/extensions/browser/media/theme-icon.png
 %%DATADIR%%/resources/app/out/vs/workbench/contrib/externalTerminal/node/TerminalHelper.scpt
 %%DATADIR%%/resources/app/out/vs/workbench/contrib/externalTerminal/node/iTermHelper.scpt
+%%DATADIR%%/resources/app/out/vs/workbench/contrib/issue/electron-sandbox/issueReporter.html
+%%DATADIR%%/resources/app/out/vs/workbench/contrib/issue/electron-sandbox/issueReporter.js
+%%DATADIR%%/resources/app/out/vs/workbench/contrib/issue/electron-sandbox/issueReporterMain.css
+%%DATADIR%%/resources/app/out/vs/workbench/contrib/issue/electron-sandbox/issueReporterMain.js
+%%DATADIR%%/resources/app/out/vs/workbench/contrib/issue/electron-sandbox/issueReporterMain.nls.js
 %%DATADIR%%/resources/app/out/vs/workbench/contrib/notebook/common/services/notebookSimpleWorker.js
 %%DATADIR%%/resources/app/out/vs/workbench/contrib/notebook/common/services/notebookSimpleWorker.nls.js
 %%DATADIR%%/resources/app/out/vs/workbench/contrib/output/common/outputLinkComputer.js

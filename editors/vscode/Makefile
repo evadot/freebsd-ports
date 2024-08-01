@@ -1,6 +1,6 @@
 PORTNAME=	vscode
-DISTVERSION=	1.89.1
-PORTREVISION=	1
+DISTVERSION=	1.91.1
+PORTREVISION=	2
 CATEGORIES=	editors
 MASTER_SITES=	https://github.com/tagattie/FreeBSD-VSCode/releases/download/${DISTVERSION}/:yarn_cache
 DISTFILES=	yarn-offline-cache-${DISTVERSION}${EXTRACT_SUFX}:yarn_cache \
@@ -19,11 +19,10 @@ ONLY_FOR_ARCHS=	amd64
 BUILD_DEPENDS=	zip:archivers/zip \
 		electron${ELECTRON_VER_MAJOR}:devel/electron${ELECTRON_VER_MAJOR} \
 		rg:textproc/ripgrep \
-		npm-node${NODE_VER_MAJOR}>0:www/npm-node${NODE_VER_MAJOR} \
-		yarn-node${NODE_VER_MAJOR}>0:www/yarn-node${NODE_VER_MAJOR}
+		npm${NODEJS_SUFFIX}>0:www/npm${NODEJS_SUFFIX} \
+		yarn${NODEJS_SUFFIX}>0:www/yarn${NODEJS_SUFFIX}
 LIB_DEPENDS=	libatk-bridge-2.0.so:accessibility/at-spi2-core \
 		libatspi.so:accessibility/at-spi2-core \
-		libsnappy.so:archivers/snappy \
 		libFLAC.so:audio/flac \
 		libopus.so:audio/opus \
 		libsndio.so:audio/sndio \
@@ -63,12 +62,13 @@ TEST_DEPENDS=	electron${ELECTRON_VER_MAJOR}:devel/electron${ELECTRON_VER_MAJOR} 
 		bash:shells/bash
 
 USES=		desktop-file-utils gl gmake gnome iconv:wchar_t jpeg \
-		localbase:ldflags pkgconfig python:build shebangfix xorg
+		localbase:ldflags nodejs:20,build pkgconfig python:build \
+		shebangfix xorg
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	microsoft
 
-SOURCE_COMMIT_HASH=	dc96b837cf6bb4af9cd736aa3af08cf8279f7685
+SOURCE_COMMIT_HASH=	f1e16e1e6214d7c44d078b1f0607b2388f29d729
 
 BINARY_ALIAS=	python=${PYTHON_CMD}
 
@@ -78,10 +78,6 @@ USE_GL=		gbm gl glesv2
 USE_GNOME=	atk cairo pango gdkpixbuf2 gtk30 libxml2 libxslt
 
 USE_LDCONFIG=	${DATADIR}
-
-# Keep NODE_VER in sync with www/node18 DISTVERSION
-NODE_VER=	18.20.2
-NODE_VER_MAJOR=	${NODE_VER:C/\..*$//}
 
 SHEBANG_REGEX=	./(extensions|resources|scripts|src)/.*\.sh$$
 PATHFIX_FILES=	src/vs/workbench/contrib/debug/node/terminals.ts
@@ -103,8 +99,10 @@ OPTIONS_DEFINE=	REH
 OPTIONS_DEFAULT=# none
 REH_DESC=	Build remote extension host
 
-ELECTRON_DIR=	${.CURDIR}/../../devel/electron28
-.include	"${ELECTRON_DIR}/Makefile.version"
+NODEJS_DIR=	${.CURDIR:H:H}/www/node20
+.include "${NODEJS_DIR}/Makefile.version"
+ELECTRON_DIR=	${.CURDIR:H:H}/devel/electron29
+.include "${ELECTRON_DIR}/Makefile.version"
 
 ELECTRON_DOWNLOAD_URL=	https://github.com/electron/electron/releases/download/v${ELECTRON_VER}
 ELECTRON_DOWNLOAD_URL_HASH!=	/sbin/sha256 -q -s ${ELECTRON_DOWNLOAD_URL}
@@ -127,7 +125,7 @@ post-patch:
 	${REINPLACE_CMD} -E 's|^(target ").*(")$$|\1${ELECTRON_VER}\2|' \
 		${WRKSRC}/.yarnrc
 	# force use of node version matching port one
-	${REINPLACE_CMD} -E 's|^(target ").*(")$$|\1${NODE_VER}\2|' \
+	${REINPLACE_CMD} -E 's|^(target ").*(")$$|\1${NODEJS_PORTVERSION}\2|' \
 		${WRKSRC}/remote/.yarnrc
 	# setup yarnrc for using local node headers
 	${ECHO_CMD} 'nodedir "${LOCALBASE}/share/electron${ELECTRON_VER_MAJOR}/node_headers"' >> \
@@ -232,8 +230,8 @@ do-build:
 
 do-build-REH-on:
 	# setup download cache for node
-	${MKDIR} ${WRKSRC}/.build/node/v${NODE_VER}/linux-x64
-	${CP} ${LOCALBASE}/bin/node ${WRKSRC}/.build/node/v${NODE_VER}/linux-x64
+	${MKDIR} ${WRKSRC}/.build/node/v${NODEJS_PORTVERSION}/linux-x64
+	${CP} ${LOCALBASE}/bin/node ${WRKSRC}/.build/node/v${NODEJS_PORTVERSION}/linux-x64
 	# build vscode remote extension host
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} yarn gulp vscode-reh-linux-x64-min
 	${MKDIR} ${WRKDIR}/vscode-reh/bin/${SOURCE_COMMIT_HASH}

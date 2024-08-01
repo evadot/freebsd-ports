@@ -35,6 +35,7 @@
     SUBDIR += closql
     SUBDIR += closql-devel
     SUBDIR += cockroach
+    SUBDIR += compass
     SUBDIR += couchdb3
     SUBDIR += courier-authlib-mysql
     SUBDIR += courier-authlib-pgsql
@@ -78,7 +79,6 @@
     SUBDIR += freetds-devel
     SUBDIR += frontbase-jdbc
     SUBDIR += futuresql
-    SUBDIR += galera
     SUBDIR += galera26
     SUBDIR += gdbm
     SUBDIR += geoserver-mysql-plugin
@@ -124,6 +124,7 @@
     SUBDIR += ldb21
     SUBDIR += ldb22
     SUBDIR += ldb25
+    SUBDIR += ldb28
     SUBDIR += leo_center
     SUBDIR += leofs
     SUBDIR += leveldb
@@ -181,6 +182,8 @@
     SUBDIR += mariadb105-server
     SUBDIR += mariadb106-client
     SUBDIR += mariadb106-server
+    SUBDIR += mariadb114-client
+    SUBDIR += mariadb114-server
     SUBDIR += mdbtools
     SUBDIR += mdbx
     SUBDIR += mdcached
@@ -191,6 +194,7 @@
     SUBDIR += mongodb50
     SUBDIR += mongodb60
     SUBDIR += mongodb70
+    SUBDIR += mongodb80
     SUBDIR += movine
     SUBDIR += mroonga
     SUBDIR += mtop
@@ -479,6 +483,7 @@
     SUBDIR += p5-SQL-Maker
     SUBDIR += p5-SQL-NamedPlaceholder
     SUBDIR += p5-SQL-ReservedWords
+    SUBDIR += p5-SQL-SplitStatement
     SUBDIR += p5-SQL-Statement
     SUBDIR += p5-SQL-Translator
     SUBDIR += p5-SQLite-Work
@@ -623,6 +628,18 @@
     SUBDIR += php83-pdo_sqlite
     SUBDIR += php83-pgsql
     SUBDIR += php83-sqlite3
+    SUBDIR += php84-dba
+    SUBDIR += php84-mysqli
+    SUBDIR += php84-odbc
+    SUBDIR += php84-pdo
+    SUBDIR += php84-pdo_dblib
+    SUBDIR += php84-pdo_firebird
+    SUBDIR += php84-pdo_mysql
+    SUBDIR += php84-pdo_odbc
+    SUBDIR += php84-pdo_pgsql
+    SUBDIR += php84-pdo_sqlite
+    SUBDIR += php84-pgsql
+    SUBDIR += php84-sqlite3
     SUBDIR += phpliteadmin
     SUBDIR += phpminiadmin
     SUBDIR += phpmyadmin
@@ -705,8 +722,8 @@
     SUBDIR += proftpd-mod_sql_postgres
     SUBDIR += proftpd-mod_sql_sqlite
     SUBDIR += proftpd-mod_sql_tds
-    SUBDIR += prometheus-postgresql-adapter
     SUBDIR += prometheus-postgres-exporter
+    SUBDIR += prometheus-postgresql-adapter
     SUBDIR += proxysql
     SUBDIR += pspg
     SUBDIR += puppetdb-terminus7
@@ -727,7 +744,6 @@
     SUBDIR += py-aioredis
     SUBDIR += py-aiosqlite
     SUBDIR += py-alembic
-    SUBDIR += py-alembic14
     SUBDIR += py-apache-arrow
     SUBDIR += py-apsw
     SUBDIR += py-asyncmy
@@ -820,9 +836,6 @@
     SUBDIR += py-sqlalchemy-migrate
     SUBDIR += py-sqlalchemy-utils
     SUBDIR += py-sqlalchemy10
-    SUBDIR += py-sqlalchemy11
-    SUBDIR += py-sqlalchemy12
-    SUBDIR += py-sqlalchemy13
     SUBDIR += py-sqlalchemy14
     SUBDIR += py-sqlalchemy20
     SUBDIR += py-sqlcipher3
@@ -843,7 +856,9 @@
     SUBDIR += py-varstack
     SUBDIR += py-whisper
     SUBDIR += py-xapian
+    SUBDIR += py-xrootd
     SUBDIR += py-zodbpickle
+    SUBDIR += pythoncego
     SUBDIR += qdbm
     SUBDIR += qdbm-plus
     SUBDIR += qdrant
@@ -950,7 +965,6 @@
     SUBDIR += rubygem-fabrication
     SUBDIR += rubygem-familia
     SUBDIR += rubygem-flipper-active_record
-    SUBDIR += rubygem-flipper-active_record-rails61
     SUBDIR += rubygem-flipper-active_record-rails70
     SUBDIR += rubygem-gdbm
     SUBDIR += rubygem-globalid
@@ -1006,17 +1020,16 @@
     SUBDIR += rubygem-redis-client
     SUBDIR += rubygem-redis-cluster-client
     SUBDIR += rubygem-redis-clustering
-    SUBDIR += rubygem-redis-clustering50
     SUBDIR += rubygem-redis-namespace
     SUBDIR += rubygem-redis-namespace110
     SUBDIR += rubygem-redis4
-    SUBDIR += rubygem-redis50
     SUBDIR += rubygem-ruby-mysql
     SUBDIR += rubygem-scenic61
     SUBDIR += rubygem-sdbm
     SUBDIR += rubygem-seed-fu
     SUBDIR += rubygem-sqlite3
     SUBDIR += rubygem-sqlite3-ruby
+    SUBDIR += rubygem-sqlite31
     SUBDIR += rubygem-state_machines-activemodel
     SUBDIR += rubygem-state_machines-activerecord
     SUBDIR += rubygem-state_machines-activerecord08
@@ -1071,7 +1084,6 @@
     SUBDIR += tokyocabinet
     SUBDIR += tokyotyrant
     SUBDIR += trilogy
-    SUBDIR += tsearch_extras
     SUBDIR += tuning-primer
     SUBDIR += twemproxy
     SUBDIR += unixODBC

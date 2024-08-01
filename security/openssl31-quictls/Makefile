@@ -1,7 +1,7 @@
 PORTNAME=	openssl
 DISTVERSIONPREFIX=	${PORTNAME}-
 DISTVERSION=	3.1.5
-PORTREVISION=	4
+PORTREVISION=	5
 DISTVERSIONSUFFIX=	-quic1
 CATEGORIES=	security devel
 PKGNAMESUFFIX=	31-quictls
@@ -139,7 +139,7 @@ ZLIB_CONFIGURE_ON=	zlib-dynamic
 
 SHLIBS=			lib/engines-${OPENSSL_SHLIBVER}/loader_attic.so
 
-PORTSCOUT=		limit=^3\.1\.
+PORTSCOUT=		limit:^${DISTVERSION:R:S/./\./g}\.
 
 .include <bsd.port.options.mk>
 
