@@ -21,7 +21,7 @@ LIB_DEPENDS=	libdrm.so:graphics/libdrm \
 RUN_DEPENDS=	xkbcomp:x11/xkbcomp \
 		xkeyboard-config>0:x11/xkeyboard-config
 
-#CONFLICTS_INSTALL=	${PORTNAME}-devel
+CONFLICTS_INSTALL=	${PORTNAME}-devel
 
 USES=		compiler:c11 gl meson pkgconfig xorg tar:xz
 USE_GL=		gbm gl
