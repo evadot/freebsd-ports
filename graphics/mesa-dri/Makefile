@@ -1,12 +1,17 @@
 PORTNAME=	mesa-dri
 PORTVERSION=	${MESAVERSION}
-PORTREVISION=	2
 CATEGORIES=	graphics
 
 COMMENT=	OpenGL hardware acceleration drivers for DRI2+
 WWW=		https://www.mesa3d.org/
 
-LIB_DEPENDS+=	libglapi.so:graphics/mesa-libs
+BUILD_DEPENDS+=	libclc>0:devel/libclc \
+		spirv-tools>0:graphics/spirv-tools \
+
+LIB_DEPENDS+=	libglapi.so:graphics/mesa-libs \
+		libLLVMSPIRVLib.so.${LLVM_VERSION}:devel/spirv-llvm-translator@${LLVM_PORT:T}
+
+CONFIGURE_ENV+=	PKG_CONFIG_PATH="${LLVM_PREFIX}/libdata/pkgconfig"
 
 USES+=		llvm:lib,noexport
 
