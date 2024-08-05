@@ -96,6 +96,7 @@ MESON_ARGS+=	-Dandroid-libbacktrace=disabled \
 		-Dgallium-va=disabled \
 		-Dgles1=enabled \
 		-Dgles2=enabled \
+		-Dglvnd=disabled \
 		-Dglx=disabled \
 		-Degl=enabled \
 		-Dlmsensors=disabled \
