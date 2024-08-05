@@ -7,7 +7,7 @@ WWW=		https://www.mesa3d.org/
 
 BUILD_DEPENDS+=	libclc>0:devel/libclc \
 		spirv-tools>0:graphics/spirv-tools \
-		libLLVMSPIRVLib.so.${LLVM_VERSION}:devel/spirv-llvm-translator@${LLVM_PORT:T} \
+		spirv-llvm-translator-${LLVM_PORT:T}>0:devel/spirv-llvm-translator@${LLVM_PORT:T} \
 		${PYTHON_PKGNAMEPREFIX}ply>0:devel/py-ply@${PY_FLAVOR}
 
 LIB_DEPENDS+=	libglapi.so:graphics/mesa-libs
