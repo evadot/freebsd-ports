@@ -11,18 +11,10 @@ LIB_DEPENDS+=	libglapi.so:graphics/mesa-libs
 
 USES+=		llvm:lib,noexport
 
-OPTIONS_DEFINE=		SPIRV ZSTD
+OPTIONS_DEFINE=		ZSTD
 OPTIONS_GROUP=		GALLIUM PLATFORM VULKAN
 OPTIONS_DEFAULT=	SPIRV WAYLAND X11 ZSTD
 OPTIONS_SUB=		yes
-
-SPIRV_DESC=		Built drivers with Spirv
-SPIRV_BUILD_DEPENDS+=	libclc>0:devel/libclc \
-			spirv-tools>0:graphics/spirv-tools \
-			spirv-llvm-translator-${LLVM_PORT:T}>0:devel/spirv-llvm-translator@${LLVM_PORT:T}
-SPIRV_LIB_DEPENDS=	libLLVMSPIRVLib.so.${LLVM_VERSION}:devel/spirv-llvm-translator@${LLVM_PORT:T}
-SPIRV_CONFIGURE_ENV=	PKG_CONFIG_PATH="${LLVM_PREFIX}/libdata/pkgconfig"
-SPIRV_MESON_OFF=	-Dgallium-opencl=disabled
 
 ZSTD_DESC=		Use ZSTD for shader cache
 ZSTD_LIB_DEPENDS=	libzstd.so:archivers/zstd
@@ -39,6 +31,12 @@ GALLIUM_DESC=		Unified OpenGL drivers
 crocus_DESC=		Intel GPU Gen4 (Broadwater) to Gen7 (Haswell)
 i915_DESC=		Intel GPU Gen3 (Grantsdale to Pineview)
 iris_DESC=		Intel GPU Gen8 (Broadwell) and newer
+iris_BUILD_DEPENDS=	libclc>0:devel/libclc \
+			spirv-tools>0:graphics/spirv-tools \
+			spirv-llvm-translator-${LLVM_PORT:T}>0:devel/spirv-llvm-translator@${LLVM_PORT:T}
+iris_RUN_DEPENDS=	spirv-tools>0:graphics/spirv-tools \
+			spirv-llvm-translator-${LLVM_PORT:T}>0:devel/spirv-llvm-translator@${LLVM_PORT:T}
+iris_CONFIGURE_ENV=	PKG_CONFIG_PATH="${LLVM_PREFIX}/libdata/pkgconfig"
 iris_IMPLIES=		SPIRV
 panfrost_DESC=		ARM Midgard and Bifrost
 r300_DESC=		AMD/ATI R300, R400 and R500
@@ -60,8 +58,13 @@ ${_gd}_VARS+=		GALLIUM_DRIVERS+=${_gd}
 OPTIONS_GROUP_VULKAN=	anv radv swrast_vk
 VULKAN_DESC=		Vulkan drivers
 anv_DESC=		Intel GPU Gen9 and newer Vulkan support
-anv_BUILD_DEPENDS=	glslangValidator:graphics/glslang
-anv_IMPLIES=		SPIRV
+anv_BUILD_DEPENDS=	glslangValidator:graphics/glslang \
+			libclc>0:devel/libclc \
+			spirv-tools>0:graphics/spirv-tools \
+			spirv-llvm-translator-${LLVM_PORT:T}>0:devel/spirv-llvm-translator@${LLVM_PORT:T}
+anv_RUN_DEPENDS=	spirv-tools>0:graphics/spirv-tools \
+			spirv-llvm-translator-${LLVM_PORT:T}>0:devel/spirv-llvm-translator@${LLVM_PORT:T}
+anv_CONFIGURE_ENV=	PKG_CONFIG_PATH="${LLVM_PREFIX}/libdata/pkgconfig"
 radv_DESC=		AMD/ATI Southern Islands and newer Vulkan support
 radv_BUILD_DEPENDS=	glslangValidator:graphics/glslang
 swrast_vk_DESC=		Software Rasterizer Vulkan support
