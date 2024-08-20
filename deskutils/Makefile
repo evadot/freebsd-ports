@@ -61,6 +61,7 @@
     SUBDIR += freebsd-update-notify
     SUBDIR += freemind
     SUBDIR += freeplane
+    SUBDIR += fyi
     SUBDIR += ganttproject
     SUBDIR += gcal
     SUBDIR += gcalcli
@@ -237,6 +238,7 @@
     SUBDIR += py-taskw
     SUBDIR += py-term-background
     SUBDIR += py-todoman
+    SUBDIR += py-trash-cli
     SUBDIR += py-vdirsyncer
     SUBDIR += py-vobject
     SUBDIR += py-vorta

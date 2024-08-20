@@ -9,6 +9,7 @@
     SUBDIR += R-cran-brew
     SUBDIR += R-cran-cellranger
     SUBDIR += R-cran-commonmark
+    SUBDIR += R-cran-downlit
     SUBDIR += R-cran-formatR
     SUBDIR += R-cran-highr
     SUBDIR += R-cran-htmlTable
@@ -423,6 +424,7 @@
     SUBDIR += libuninameslist
     SUBDIR += libvisio01
     SUBDIR += libwapcaplet
+    SUBDIR += libwbxml
     SUBDIR += libwpd010
     SUBDIR += libwps
     SUBDIR += libwps03
@@ -1252,6 +1254,7 @@
     SUBDIR += pear-YAML
     SUBDIR += pecl-pspell
     SUBDIR += pecl-xdiff2
+    SUBDIR += pecl-xlswriter
     SUBDIR += pecl-yaml
     SUBDIR += pecl-zephir_parser
     SUBDIR += peco
@@ -1651,6 +1654,7 @@
     SUBDIR += py-tomlkit
     SUBDIR += py-toronado
     SUBDIR += py-towncrier
+    SUBDIR += py-towncrier23
     SUBDIR += py-trans
     SUBDIR += py-translationstring
     SUBDIR += py-transpopy
@@ -2108,7 +2112,6 @@
     SUBDIR += vgrep
     SUBDIR += wa-aspell
     SUBDIR += wa-hunspell
-    SUBDIR += wbxml2
     SUBDIR += wdiff
     SUBDIR += webcpp
     SUBDIR += website
@@ -2135,6 +2138,7 @@
     SUBDIR += xlhtml
     SUBDIR += xlnt
     SUBDIR += xlreader
+    SUBDIR += xlsxio
     SUBDIR += xml-commons
     SUBDIR += xml-format
     SUBDIR += xml-lite.el

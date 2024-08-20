@@ -122,7 +122,6 @@
     SUBDIR += haruna
     SUBDIR += harvid
     SUBDIR += helvum
-    SUBDIR += hypnotix
     SUBDIR += intel-media-sdk
     SUBDIR += iso2mkv
     SUBDIR += jellyfin
@@ -318,11 +317,13 @@
     SUBDIR += py-pymediainfo
     SUBDIR += py-pysubs2
     SUBDIR += py-python-mpv
+    SUBDIR += py-pytube
     SUBDIR += py-soco
     SUBDIR += py-srt
     SUBDIR += py-subliminal
     SUBDIR += py-tartube
     SUBDIR += py-tvnamer
+    SUBDIR += py-ustreamer
     SUBDIR += qmmp-plugin-pack-qt5
     SUBDIR += qmmp-plugin-pack-qt6
     SUBDIR += qmmp-qt5

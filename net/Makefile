@@ -55,7 +55,6 @@
     SUBDIR += benthos
     SUBDIR += bindtest
     SUBDIR += binkd
-    SUBDIR += bird
     SUBDIR += bird2
     SUBDIR += bittwist
     SUBDIR += bmon
@@ -493,7 +492,6 @@
     SUBDIR += msend
     SUBDIR += msoak
     SUBDIR += mtr
-    SUBDIR += mtr-nox11
     SUBDIR += multicat
     SUBDIR += mvfst
     SUBDIR += nanomsg
@@ -539,7 +537,6 @@
     SUBDIR += nng
     SUBDIR += norm
     SUBDIR += nqptp
-    SUBDIR += ns3
     SUBDIR += nsq
     SUBDIR += nss-pam-ldapd
     SUBDIR += nss-pam-ldapd-sasl
@@ -1031,6 +1028,7 @@
     SUBDIR += py-DTLSSocket
     SUBDIR += py-GeoIP2
     SUBDIR += py-aiocoap
+    SUBDIR += py-aiohappyeyeballs
     SUBDIR += py-aiohttp-socks
     SUBDIR += py-amqp
     SUBDIR += py-amqplib
@@ -1501,6 +1499,7 @@
     SUBDIR += speedtest
     SUBDIR += speedtest-go
     SUBDIR += spiritvnc
+    SUBDIR += spoofdpi
     SUBDIR += spoofer
     SUBDIR += spread
     SUBDIR += spread-j
@@ -1614,6 +1613,7 @@
     SUBDIR += vncreflector
     SUBDIR += vnstat
     SUBDIR += vortex
+    SUBDIR += vpp
     SUBDIR += vtun
     SUBDIR += wackamole
     SUBDIR += wakeonlan
