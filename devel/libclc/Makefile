@@ -18,13 +18,12 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.TXT
 LICENSE_NAME=	Apache License 2.0 with LLVM Exceptions
 LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
-BUILD_DEPENDS=	llvm${FLAVOR:S/llvm//}>=0:devel/${FLAVOR} \
-		spirv-llvm-translator-${FLAVOR}>0:devel/spirv-llvm-translator@${FLAVOR} \
+BUILD_DEPENDS=	spirv-llvm-translator-${FLAVOR}>0:devel/spirv-llvm-translator@${FLAVOR} \
 		libedit>=0:devel/libedit
 
 FLAVORS=	${15 16 17 18:L:S/^/llvm/}
 
-USES=		cmake compiler:c++11-lib python:build tar:xz
+USES=		cmake compiler:c++11-lib llvm:${FLAVOR:S/llvm//},build,noexport python:build tar:xz
 USE_LDCONFIG=	yes
 
 BINARY_ALIAS=	python=${PYTHON_CMD}
