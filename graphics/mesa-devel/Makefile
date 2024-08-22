@@ -1,7 +1,7 @@
 PORTNAME=	mesa
 DISTVERSION=	24.1-branchpoint-3782
 DISTVERSIONSUFFIX=	-gc8d64860ec7
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics
 PKGNAMESUFFIX=	-devel
 
@@ -107,7 +107,7 @@ LTO_MESON_TRUE=		b_lto
 
 OPENCL_DESC=		Heterogeneous computing via OpenCL (implies LLVM)
 OPENCL_BUILD_DEPENDS=	bindgen:devel/rust-bindgen-cli \
-			libclc>0:devel/libclc \
+			libclc-${LLVM_PORT:T}>0:devel/libclc@${LLVM_PORT:T} \
 			spirv-tools>0:graphics/spirv-tools \
 			rustc:lang/${RUST_DEFAULT}
 OPENCL_LIB_DEPENDS=	libLLVMSPIRVLib.so.${OPENCL_SOVERSION}:devel/spirv-llvm-translator@${LLVM_PORT:T}
