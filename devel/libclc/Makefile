@@ -23,21 +23,19 @@ BUILD_DEPENDS=	spirv-llvm-translator-${FLAVOR}>0:devel/spirv-llvm-translator@${F
 
 FLAVORS=	${15 16 17 18:L:S/^/llvm/}
 
-USES=		cmake compiler:c++11-lib llvm:${FLAVOR:S/llvm//},build,noexport python:build tar:xz
-USE_LDCONFIG=	yes
+USES=		cmake compiler:c++11-lib llvm:${FLAVOR:S/llvm//},build python:build tar:xz
+USE_LDCONFIG=	${PREFIX}/${FLAVOR}/lib
 
 BINARY_ALIAS=	python=${PYTHON_CMD}
-CMAKE_ARGS+=	-DLLVM_CONFIG=${LOCALBASE}/bin/llvm-config${FLAVOR:S/llvm//}
+CMAKE_ARGS=	-DLLVM_DIR:PATH="${LOCALBASE}/${FLAVOR}"
+CMAKE_INSTALL_PREFIX=		${PREFIX}/${FLAVOR}
 DISTINFO_FILE=	${.CURDIR}/distinfo.${FLAVOR}
 
 .include <bsd.port.pre.mk>
 
-.for flavor in ${FLAVORS:N${FLAVOR}}
-CONFLICTS+=	libclc-${flavor}
-.endfor
-
 PLIST_SUB+=	${FLAVORS:N${FLAVOR}:@v@${v:tu}="\@comment "@}
 PLIST_SUB+=	${FLAVOR:tu}=""
+PLIST_SUB+=	LLVM_VERSION=${FLAVOR}
 
 .include <bsd.port.post.mk>
 
