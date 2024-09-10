@@ -1,7 +1,7 @@
 PORTNAME=	mesa
-DISTVERSION=	24.1-branchpoint-3782
-DISTVERSIONSUFFIX=	-gc8d64860ec7
-PORTREVISION=	2
+DISTVERSION=	24.2-branchpoint-2295
+DISTVERSIONSUFFIX=	-gfa51595c7f1
+PORTREVISION=	1
 CATEGORIES=	graphics
 PKGNAMESUFFIX=	-devel
 
@@ -23,7 +23,8 @@ ONLY_FOR_ARCHS=	aarch64 amd64 i386 powerpc64 powerpc64le
 ONLY_FOR_ARCHS_REASON=	Limited scope: no old drivers and no software rendering. \
 			See also https://mesamatrix.net/
 
-BUILD_DEPENDS=	libglvnd>=1.3.2:graphics/libglvnd \
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pyyaml>0:devel/py-pyyaml@${PY_FLAVOR} \
+		libglvnd>=1.3.2:graphics/libglvnd \
 		${PYTHON_PKGNAMEPREFIX}mako>0:textproc/py-mako@${PY_FLAVOR}
 LIB_DEPENDS=	libdrm.so:graphics/libdrm \
 		libexpat.so:textproc/expat2
@@ -35,8 +36,7 @@ USE_LDCONFIG=	yes
 GL_SITE=	https://gitlab.freedesktop.org
 BINARY_ALIAS=	python=${PYTHON_CMD}
 SHEBANG_FILES=	src/vulkan/overlay-layer/${PORTNAME}-overlay-control.py
-MESON_ARGS=	-Dgallium-omx=disabled \
-		-Dgallium-xa=disabled \
+MESON_ARGS=	-Dgallium-xa=disabled \
 		-Dandroid-libbacktrace=disabled \
 		-Dlibunwind=disabled \
 		-Dlmsensors=disabled \
@@ -44,6 +44,7 @@ MESON_ARGS=	-Dgallium-omx=disabled \
 		-Dvalgrind=disabled \
 		-Dplatforms=${PLATFORMS:O:[-1..1]:ts,} \
 		-Dvideo-codecs=all \
+		-Dunversion-libgallium=true \
 		${NULL}
 LDFLAGS+=	-Wl,--undefined-version # https://gitlab.freedesktop.org/mesa/mesa/-/issues/8003
 PLIST_SUB=	ARCH=${ARCH:S/amd/x86_/}

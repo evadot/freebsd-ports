@@ -1,6 +1,7 @@
 PORTNAME=	surrealdb
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.5.4
+PORTREVISION=	2
 CATEGORIES=	databases
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -729,8 +730,5 @@ OPENSSLINC=	/usr/include
 OPENSSLLIB=	/usr/lib
 
 PLIST_FILES=	bin/surreal
-
-post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/surreal
 
 .include <bsd.port.mk>

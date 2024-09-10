@@ -378,6 +378,7 @@
     SUBDIR += masscan
     SUBDIR += mate-pam-helper
     SUBDIR += mbedtls
+    SUBDIR += mbedtls3
     SUBDIR += mcrypt
     SUBDIR += md5deep
     SUBDIR += medusa
@@ -1088,6 +1089,7 @@
     SUBDIR += py-zope.password
     SUBDIR += py-zxcvbn
     SUBDIR += pygost
+    SUBDIR += qt-sudo
     SUBDIR += qtkeychain
     SUBDIR += quantis-kmod
     SUBDIR += racoon2
@@ -1176,6 +1178,7 @@
     SUBDIR += rubygem-omniauth-gitlab
     SUBDIR += rubygem-omniauth-jwt
     SUBDIR += rubygem-omniauth-multipassword
+    SUBDIR += rubygem-omniauth-multipassword2
     SUBDIR += rubygem-omniauth-oauth2-generic
     SUBDIR += rubygem-omniauth-rails_csrf_protection
     SUBDIR += rubygem-omniauth-saml
