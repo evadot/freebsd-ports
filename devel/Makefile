@@ -837,6 +837,7 @@
     SUBDIR += git-tui
     SUBDIR += git-workspace
     SUBDIR += gitaly
+    SUBDIR += gitea-act_runner
     SUBDIR += gitflow
     SUBDIR += gitg
     SUBDIR += github-backup-utils
@@ -1540,6 +1541,7 @@
     SUBDIR += linux-rl9-libsigsegv
     SUBDIR += linux-rl9-libsoup
     SUBDIR += linux-rl9-libthai
+    SUBDIR += linux-rl9-libtool-ltdl
     SUBDIR += linux-rl9-libunistring
     SUBDIR += linux-rl9-llvm
     SUBDIR += linux-rl9-nspr
@@ -4358,6 +4360,7 @@
     SUBDIR += py-anyio3
     SUBDIR += py-anyjson
     SUBDIR += py-anytree
+    SUBDIR += py-anywidget
     SUBDIR += py-apache_conf_parser
     SUBDIR += py-apipkg
     SUBDIR += py-apispec
@@ -5004,6 +5007,7 @@
     SUBDIR += py-itanium_demangler
     SUBDIR += py-itemadapter
     SUBDIR += py-itemloaders
+    SUBDIR += py-iterable-io
     SUBDIR += py-iteration-utilities
     SUBDIR += py-itertree
     SUBDIR += py-itypes
@@ -5066,6 +5070,7 @@
     SUBDIR += py-jupyter-kernel-test
     SUBDIR += py-jupyter-lsp
     SUBDIR += py-jupyter-packaging
+    SUBDIR += py-jupyter-rfb
     SUBDIR += py-jupyter-server
     SUBDIR += py-jupyter-server-fileid
     SUBDIR += py-jupyter-server-mathjax
@@ -5269,6 +5274,7 @@
     SUBDIR += py-ordered-set
     SUBDIR += py-ordereddict
     SUBDIR += py-orderedmultidict
+    SUBDIR += py-orderly-set
     SUBDIR += py-orjson
     SUBDIR += py-os-brick
     SUBDIR += py-os-client-config
@@ -5431,6 +5437,7 @@
     SUBDIR += py-protobuf-compiler
     SUBDIR += py-protobuf4
     SUBDIR += py-proxmoxer
+    SUBDIR += py-psygnal
     SUBDIR += py-ptable
     SUBDIR += py-ptpython
     SUBDIR += py-ptvsd
@@ -5592,6 +5599,7 @@
     SUBDIR += py-pytest-httpbin
     SUBDIR += py-pytest-httpserver
     SUBDIR += py-pytest-httpx
+    SUBDIR += py-pytest-instafail
     SUBDIR += py-pytest-isort
     SUBDIR += py-pytest-jupyter
     SUBDIR += py-pytest-lazy-fixture
@@ -6212,6 +6220,7 @@
     SUBDIR += rabs
     SUBDIR += radare2
     SUBDIR += radian
+    SUBDIR += radicle
     SUBDIR += ragel
     SUBDIR += raknet
     SUBDIR += random123
@@ -6298,6 +6307,7 @@
     SUBDIR += rubygem-actionview61
     SUBDIR += rubygem-actionview70
     SUBDIR += rubygem-actionview71
+    SUBDIR += rubygem-actionview72
     SUBDIR += rubygem-active_hash
     SUBDIR += rubygem-active_scaffold
     SUBDIR += rubygem-activejob4
@@ -6308,6 +6318,7 @@
     SUBDIR += rubygem-activejob61
     SUBDIR += rubygem-activejob70
     SUBDIR += rubygem-activejob71
+    SUBDIR += rubygem-activejob72
     SUBDIR += rubygem-activemessaging
     SUBDIR += rubygem-activerecord-deprecated_finders
     SUBDIR += rubygem-activesupport4
@@ -6318,6 +6329,7 @@
     SUBDIR += rubygem-activesupport61
     SUBDIR += rubygem-activesupport70
     SUBDIR += rubygem-activesupport71
+    SUBDIR += rubygem-activesupport72
     SUBDIR += rubygem-airborne
     SUBDIR += rubygem-akismet
     SUBDIR += rubygem-algebrick
@@ -7186,6 +7198,7 @@
     SUBDIR += rubygem-gitlab-license
     SUBDIR += rubygem-gitlab-pygments.rb
     SUBDIR += rubygem-gitlab-sdk
+    SUBDIR += rubygem-gitlab-security_report_schemas
     SUBDIR += rubygem-gitlab_chronic_duration
     SUBDIR += rubygem-gitlab_git
     SUBDIR += rubygem-gitlab_meta
@@ -7239,7 +7252,6 @@
     SUBDIR += rubygem-grape-route-helpers
     SUBDIR += rubygem-grape-swagger
     SUBDIR += rubygem-grape-swagger-entity
-    SUBDIR += rubygem-grape-swagger20
     SUBDIR += rubygem-grape1
     SUBDIR += rubygem-grape20
     SUBDIR += rubygem-grape_logging
@@ -7307,6 +7319,7 @@
     SUBDIR += rubygem-jbuilder-rails60
     SUBDIR += rubygem-jbuilder-rails61
     SUBDIR += rubygem-jbuilder-rails71
+    SUBDIR += rubygem-jbuilder-rails72
     SUBDIR += rubygem-jekyll-coffeescript
     SUBDIR += rubygem-jenkins_api_client
     SUBDIR += rubygem-jeweler
@@ -7318,7 +7331,6 @@
     SUBDIR += rubygem-json-canonicalization
     SUBDIR += rubygem-json-schema
     SUBDIR += rubygem-json1
-    SUBDIR += rubygem-json26
     SUBDIR += rubygem-json_pure
     SUBDIR += rubygem-json_pure1
     SUBDIR += rubygem-json_schema
@@ -7496,6 +7508,7 @@
     SUBDIR += rubygem-pagy6
     SUBDIR += rubygem-paint
     SUBDIR += rubygem-pairing_heap
+    SUBDIR += rubygem-paper_trail
     SUBDIR += rubygem-parser
     SUBDIR += rubygem-pastel
     SUBDIR += rubygem-patch_finder
@@ -7684,7 +7697,6 @@
     SUBDIR += rubygem-semi_semantic
     SUBDIR += rubygem-semver2
     SUBDIR += rubygem-semver_dialects
-    SUBDIR += rubygem-semver_dialects2
     SUBDIR += rubygem-semverse
     SUBDIR += rubygem-sentry-rails
     SUBDIR += rubygem-sentry-raven
@@ -7707,6 +7719,7 @@
     SUBDIR += rubygem-sidekiq-scheduler
     SUBDIR += rubygem-sidekiq-unique-jobs
     SUBDIR += rubygem-sidekiq71
+    SUBDIR += rubygem-sidekiq72
     SUBDIR += rubygem-sidetiq
     SUBDIR += rubygem-sigdump
     SUBDIR += rubygem-simple-navigation
@@ -7747,6 +7760,7 @@
     SUBDIR += rubygem-sprockets-rails-rails61
     SUBDIR += rubygem-sprockets-rails-rails70
     SUBDIR += rubygem-sprockets-rails-rails71
+    SUBDIR += rubygem-sprockets-rails-rails72
     SUBDIR += rubygem-sprockets-sass
     SUBDIR += rubygem-sprockets2
     SUBDIR += rubygem-sprockets3
@@ -7886,6 +7900,7 @@
     SUBDIR += rubygem-web-console-rails60
     SUBDIR += rubygem-web-console-rails61
     SUBDIR += rubygem-web-console-rails71
+    SUBDIR += rubygem-web-console-rails72
     SUBDIR += rubygem-web-console2
     SUBDIR += rubygem-web-console3-rails5
     SUBDIR += rubygem-web-console3-rails50
