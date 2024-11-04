@@ -5,10 +5,12 @@ share/Alpaca/alpaca/available_models.json
 share/Alpaca/alpaca/available_models_descriptions.py
 share/Alpaca/alpaca/connection_handler.py
 share/Alpaca/alpaca/custom_widgets/chat_widget.py
+share/Alpaca/alpaca/custom_widgets/dialog_widget.py
 share/Alpaca/alpaca/custom_widgets/message_widget.py
 share/Alpaca/alpaca/custom_widgets/model_widget.py
 share/Alpaca/alpaca/custom_widgets/table_widget.py
-share/Alpaca/alpaca/dialogs.py
+share/Alpaca/alpaca/custom_widgets/terminal_widget.py
+share/Alpaca/alpaca/generic_actions.py
 share/Alpaca/alpaca/internal.py
 share/Alpaca/alpaca/main.py
 share/Alpaca/alpaca/window.py
@@ -26,6 +28,7 @@ share/locale/hi/LC_MESSAGES/alpaca.mo
 share/locale/nb_NO/LC_MESSAGES/alpaca.mo
 share/locale/pt_BR/LC_MESSAGES/alpaca.mo
 share/locale/ru/LC_MESSAGES/alpaca.mo
+share/locale/te/LC_MESSAGES/alpaca.mo
 share/locale/tr/LC_MESSAGES/alpaca.mo
 share/locale/uk/LC_MESSAGES/alpaca.mo
 share/locale/zh_Hans/LC_MESSAGES/alpaca.mo

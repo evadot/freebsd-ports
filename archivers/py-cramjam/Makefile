@@ -1,6 +1,5 @@
 PORTNAME=	cramjam
-PORTVERSION=	2.8.3
-PORTREVISION=	4
+PORTVERSION=	2.9.0
 CATEGORIES=	archivers python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -14,13 +13,14 @@ LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}maturin>=0.14:devel/py-maturin@${PY_FLAVOR}
+LIB_DEPENDS=	libblosc2.so:archivers/c-blosc2 \
+		libisal.so:devel/isa-l
 
 USES=		cargo python
 USE_PYTHON=	autoplist concurrent pep517
 
 CARGO_BUILD=	no
-CARGO_CARGOLOCK=${WRKSRC}/cramjam-python/Cargo.lock
-CARGO_CARGOTOML=${WRKSRC}/cramjam-python/Cargo.toml
 CARGO_INSTALL=	no
+MAKE_ENV=	RUSTFLAGS="-L ${LOCALBASE}/lib"
 
 .include <bsd.port.mk>

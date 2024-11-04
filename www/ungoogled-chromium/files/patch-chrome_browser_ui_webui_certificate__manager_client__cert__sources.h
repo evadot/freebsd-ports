@@ -1,8 +1,8 @@
---- chrome/browser/ui/webui/certificate_manager/client_cert_sources.h.orig	2024-08-26 14:40:28 UTC
+--- chrome/browser/ui/webui/certificate_manager/client_cert_sources.h.orig	2024-10-27 06:40:35 UTC
 +++ chrome/browser/ui/webui/certificate_manager/client_cert_sources.h
-@@ -15,7 +15,7 @@ class Profile;
- std::unique_ptr<CertificateManagerPageHandler::CertSource>
- CreatePlatformClientCertSource();
+@@ -18,7 +18,7 @@ CreatePlatformClientCertSource(
+         remote_client,
+     Profile* profile);
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)

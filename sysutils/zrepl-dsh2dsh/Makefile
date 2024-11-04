@@ -1,6 +1,6 @@
 PORTNAME=	zrepl
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.7.8
+DISTVERSION=	0.8.9
 CATEGORIES=	sysutils
 PKGNAMESUFFIX=	-dsh2dsh
 
@@ -11,34 +11,48 @@ WWW=		https://github.com/dsh2dsh/${PORTNAME}
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		go:1.22,modules ncurses
-USE_RC_SUBR=	${PORTNAME}
+USES=		go:1.23,modules ncurses
 
 GO_MODULE=	github.com/dsh2dsh/${PORTNAME}
-GO_BUILDFLAGS=	-ldflags "${STRIP} -w -X github.com/dsh2dsh/${PORTNAME}/version.${PORTNAME}Version=${DISTVERSIONFULL}"
+GO_BUILDFLAGS=	-ldflags "${STRIP} -w -X github.com/dsh2dsh/${PORTNAME}/internal/version.${PORTNAME}Version=${DISTVERSIONFULL}"
 
 CONFLICTS_INSTALL=	${PORTNAME}
 
-SUB_FILES=	pkg-message 500.${PORTNAME}
+SUB_FILES=	pkg-message
 
 OPTIONS_DEFINE=	EXAMPLES
 
+post-patch:
+	@${REINPLACE_CMD} \
+		-e 's|/usr/local/etc/${PORTNAME}|${ETCDIR}|g' \
+		-e 's|/usr/local|${PREFIX}|g' \
+		${WRKSRC}/dist/freebsd/etc/periodic/daily/${PORTNAME} \
+		${WRKSRC}/dist/freebsd/etc/periodic/weekly/500.${PORTNAME} \
+		${WRKSRC}/dist/freebsd/etc/rc.d/${PORTNAME}
+
 post-install:
-	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR} \
-		${STAGEDIR}${ETCDIR} \
+	${MKDIR} ${STAGEDIR}${ETCDIR} \
+		${STAGEDIR}${EXAMPLESDIR} \
 		${STAGEDIR}${PREFIX}/etc/newsyslog.conf.d \
-		${STAGEDIR}/var/run/${PORTNAME}
-	${INSTALL_DATA} ${FILESDIR}/newsyslog.conf \
+		${STAGEDIR}${PREFIX}/etc/periodic/daily \
+		${STAGEDIR}${PREFIX}/etc/periodic/weekly
+	${INSTALL_SCRIPT} ${WRKSRC}/dist/freebsd/etc/rc.d/${PORTNAME} \
+		${STAGEDIR}${PREFIX}/etc/rc.d
+	${INSTALL_DATA} \
+		${WRKSRC}/dist/freebsd/etc/newsyslog.conf.d/${PORTNAME}.conf \
 		${STAGEDIR}${EXAMPLESDIR}/newsyslog.conf
-	${INSTALL_DATA} ${FILESDIR}/${PORTNAME}.yml \
+	${INSTALL_DATA} ${WRKSRC}/dist/freebsd/etc/${PORTNAME}/${PORTNAME}.yml \
 		${STAGEDIR}${ETCDIR}/${PORTNAME}.yml.sample
-	${MKDIR} ${STAGEDIR}${PREFIX}/etc/periodic/weekly
-	${INSTALL_SCRIPT} ${WRKDIR}/500.${PORTNAME} \
+	${INSTALL_SCRIPT} \
+		${WRKSRC}/dist/freebsd/etc/periodic/daily/${PORTNAME} \
+		${STAGEDIR}${PREFIX}/etc/periodic/daily/${PORTNAME}
+	${INSTALL_SCRIPT} \
+		${WRKSRC}/dist/freebsd/etc/periodic/weekly/500.${PORTNAME} \
 		${STAGEDIR}${PREFIX}/etc/periodic/weekly/500.${PORTNAME}
 
 post-install-EXAMPLES-on:
-	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}/hooks
-	(cd ${WRKSRC}/config/samples && \
+	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}/hooks
+	(cd ${WRKSRC}/internal/config/samples && \
 		${COPYTREE_SHARE} . ${STAGEDIR}${EXAMPLESDIR})
 	${INSTALL_DATA} \
 		${WRKSRC}/dist/grafana/grafana-prometheus-${PORTNAME}.json \

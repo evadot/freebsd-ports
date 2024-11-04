@@ -1,5 +1,5 @@
 PORTNAME=	libnjs
-DISTVERSION=	0.8.5
+DISTVERSION=	0.8.7
 CATEGORIES=	devel www
 
 MAINTAINER=	osa@FreeBSD.org
@@ -21,7 +21,7 @@ HAS_CONFIGURE=	yes
 
 post-patch:
 	@${REINPLACE_CMD} 's|%%LOCALBASE%%|${LOCALBASE}|g' \
-		${WRKSRC}/auto/make
+		${WRKSRC}/src/njs.pc.in
 
 do-build:
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_CMD} libnjs

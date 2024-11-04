@@ -1,4 +1,4 @@
---- chrome/browser/ui/tab_helpers.cc.orig	2024-08-26 12:06:38 UTC
+--- chrome/browser/ui/tab_helpers.cc.orig	2024-10-22 08:31:56 UTC
 +++ chrome/browser/ui/tab_helpers.cc
 @@ -241,7 +241,7 @@
  #endif

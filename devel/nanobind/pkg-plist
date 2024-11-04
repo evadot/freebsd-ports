@@ -1,3 +1,4 @@
+cmake/nanobind-config.cmake
 include/nanobind/eigen/dense.h
 include/nanobind/eigen/sparse.h
 include/nanobind/eval.h
@@ -33,6 +34,7 @@ include/nanobind/stl/detail/chrono.h
 include/nanobind/stl/detail/nb_array.h
 include/nanobind/stl/detail/nb_dict.h
 include/nanobind/stl/detail/nb_list.h
+include/nanobind/stl/detail/nb_optional.h
 include/nanobind/stl/detail/nb_set.h
 include/nanobind/stl/detail/traits.h
 include/nanobind/stl/filesystem.h

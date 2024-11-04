@@ -284,7 +284,6 @@
     SUBDIR += hs-lhs2tex
     SUBDIR += hs-pandoc
     SUBDIR += hs-pandoc-crossref
-    SUBDIR += hs-pandoc32
     SUBDIR += hs-yaml
     SUBDIR += hsb-aspell
     SUBDIR += htdig
@@ -401,6 +400,7 @@
     SUBDIR += libfyaml
     SUBDIR += libgepub
     SUBDIR += libixion
+    SUBDIR += libjcat
     SUBDIR += libkmfl
     SUBDIR += libkolabxml
     SUBDIR += libkomparediff2
@@ -522,6 +522,7 @@
     SUBDIR += obsidian
     SUBDIR += ocaml-csv
     SUBDIR += ocaml-expat
+    SUBDIR += ocaml-spelll
     SUBDIR += ocaml-text
     SUBDIR += ocaml-yojson
     SUBDIR += odt2txt
@@ -1380,6 +1381,7 @@
     SUBDIR += py-fasttext-predict
     SUBDIR += py-faust-cchardet
     SUBDIR += py-feedparser
+    SUBDIR += py-file-read-backwards
     SUBDIR += py-fingerprints
     SUBDIR += py-flor
     SUBDIR += py-fluent.syntax
@@ -1392,6 +1394,8 @@
     SUBDIR += py-grapheme
     SUBDIR += py-grep-ast
     SUBDIR += py-griffe
+    SUBDIR += py-grimoire-elk
+    SUBDIR += py-grimoirelab-panels
     SUBDIR += py-guess-language
     SUBDIR += py-hashids
     SUBDIR += py-hexdump
@@ -1421,6 +1425,7 @@
     SUBDIR += py-junit-xml
     SUBDIR += py-jupyter_sphinx
     SUBDIR += py-jupyterlab-pygments
+    SUBDIR += py-kidash
     SUBDIR += py-langcodes
     SUBDIR += py-langdetect
     SUBDIR += py-langid
@@ -1507,6 +1512,7 @@
     SUBDIR += py-petl
     SUBDIR += py-pikepdf
     SUBDIR += py-precis_i18n
+    SUBDIR += py-pscript
     SUBDIR += py-pss
     SUBDIR += py-pyPEG2
     SUBDIR += py-pyahocorasick
@@ -1550,6 +1556,7 @@
     SUBDIR += py-python-pptx
     SUBDIR += py-python-slugify
     SUBDIR += py-python-ulid
+    SUBDIR += py-python-ulid2
     SUBDIR += py-python-xmp-toolkit
     SUBDIR += py-pytidylib
     SUBDIR += py-pytkdocs
@@ -1607,28 +1614,35 @@
     SUBDIR += py-sphinx-me
     SUBDIR += py-sphinx-multiversion
     SUBDIR += py-sphinx-multiversion-zrepl
+    SUBDIR += py-sphinx-notfound-page
     SUBDIR += py-sphinx-sitemap
     SUBDIR += py-sphinx-tabs
     SUBDIR += py-sphinx-theme-builder
     SUBDIR += py-sphinx_press_theme
     SUBDIR += py-sphinx_rtd_theme
     SUBDIR += py-sphinx_wikipedia
+    SUBDIR += py-sphinxcontrib-actdiag
     SUBDIR += py-sphinxcontrib-adadomain
     SUBDIR += py-sphinxcontrib-applehelp
     SUBDIR += py-sphinxcontrib-autoprogram
     SUBDIR += py-sphinxcontrib-bibtex
     SUBDIR += py-sphinxcontrib-bitbucket
+    SUBDIR += py-sphinxcontrib-blockdiag
     SUBDIR += py-sphinxcontrib-devhelp
+    SUBDIR += py-sphinxcontrib-django
     SUBDIR += py-sphinxcontrib-fulltoc
     SUBDIR += py-sphinxcontrib-htmlhelp
     SUBDIR += py-sphinxcontrib-httpdomain
     SUBDIR += py-sphinxcontrib-issuetracker
+    SUBDIR += py-sphinxcontrib-jquery
     SUBDIR += py-sphinxcontrib-jsmath
     SUBDIR += py-sphinxcontrib-log-cabinet
     SUBDIR += py-sphinxcontrib-napoleon
     SUBDIR += py-sphinxcontrib-newsfeed
+    SUBDIR += py-sphinxcontrib-nwdiag
     SUBDIR += py-sphinxcontrib-programoutput
     SUBDIR += py-sphinxcontrib-qthelp
+    SUBDIR += py-sphinxcontrib-seqdiag
     SUBDIR += py-sphinxcontrib-serializinghtml
     SUBDIR += py-sphinxcontrib-svg2pdfconverter
     SUBDIR += py-sphinxcontrib-towncrier
@@ -1673,6 +1687,7 @@
     SUBDIR += py-unicodeitplus
     SUBDIR += py-untangle
     SUBDIR += py-urlscan
+    SUBDIR += py-vbuild
     SUBDIR += py-wasabi
     SUBDIR += py-wavedrom
     SUBDIR += py-wcmatch
@@ -1787,6 +1802,7 @@
     SUBDIR += rubygem-cssmin
     SUBDIR += rubygem-cucumber-gherkin
     SUBDIR += rubygem-cucumber-gherkin27
+    SUBDIR += rubygem-cucumber-gherkin29
     SUBDIR += rubygem-cucumber-html-formatter
     SUBDIR += rubygem-dartsass
     SUBDIR += rubygem-diff-lcs
@@ -1865,6 +1881,7 @@
     SUBDIR += rubygem-liquid4
     SUBDIR += rubygem-loggability
     SUBDIR += rubygem-loofah
+    SUBDIR += rubygem-loofah222
     SUBDIR += rubygem-ltsv
     SUBDIR += rubygem-markaby
     SUBDIR += rubygem-mdl
@@ -1915,6 +1932,7 @@
     SUBDIR += rubygem-ronn
     SUBDIR += rubygem-rouge
     SUBDIR += rubygem-rouge3
+    SUBDIR += rubygem-rouge43
     SUBDIR += rubygem-rttool
     SUBDIR += rubygem-ruby-augeas
     SUBDIR += rubygem-ruby-xslt
@@ -2034,7 +2052,6 @@
     SUBDIR += sr-aspell
     SUBDIR += sr-hunspell
     SUBDIR += ss-hunspell
-    SUBDIR += ssddiff
     SUBDIR += stardict-dict-fa_IR
     SUBDIR += stardict-dictd_mova
     SUBDIR += stardict-rptts

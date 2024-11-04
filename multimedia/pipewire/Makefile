@@ -1,5 +1,5 @@
 PORTNAME=	pipewire
-DISTVERSION=	1.2.1
+DISTVERSION=	1.2.6
 PORTREVISION=	1
 CATEGORIES=	multimedia
 
@@ -20,7 +20,7 @@ LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libwebrtc_audio_processing.so:audio/webrtc-audio-processing0
 
 USES=		compiler:c11 gettext-tools gnome localbase:ldflags meson \
-		ncurses pkgconfig python:build shebangfix ssl
+		ncurses pkgconfig python:build readline shebangfix ssl
 USE_GNOME=	glib20
 USE_LDCONFIG=	yes
 
@@ -53,6 +53,7 @@ LV2_DESC=		Support lv2-based audio plugins via lilv
 LV2_LIB_DEPENDS=	liblilv-0.so:audio/lilv
 LV2_MESON_ENABLED=	lv2
 
+PULSEAUDIO_DESC=		Enable PulseAudio emulation
 PULSEAUDIO_MESON_ENABLED=	libpulse
 PULSEAUDIO_LIB_DEPENDS=		libpulse.so:audio/pulseaudio
 
@@ -81,10 +82,12 @@ MESON_ARGS=	-D pw-cat=enabled \
 		-D sdl2=disabled \
 		-D selinux=disabled \
 		-D systemd=disabled \
+		-D logind=disabled \
 		-D pipewire-v4l2=disabled \
 		-D libmysofa=disabled \
 		-D libffado=disabled \
 		-D snap=disabled \
+		-D gsettings-pulse-schema=disabled \
 		-D udevrulesdir="${LOCALBASE}/lib/udev/rules.d"
 
 PORTDOCS=	*

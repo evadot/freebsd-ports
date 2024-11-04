@@ -1,6 +1,6 @@
 PORTNAME=	pokerth
 PORTVERSION=	1.1.2
-PORTREVISION=	22
+PORTREVISION=	24
 CATEGORIES=	games
 MASTER_SITES=	SF
 
@@ -14,6 +14,8 @@ WWW=		https://www.pokerth.net/
 
 LICENSE=	AGPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
+
+BROKEN=		error: no member named 'directory_string' in 'boost::filesystem::path'
 
 LIB_DEPENDS=	libboost_thread.so:devel/boost-libs \
 		libmikmod.so:audio/libmikmod \

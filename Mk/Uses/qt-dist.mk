@@ -28,7 +28,7 @@ _COMMON_DISTS=		3d base charts connectivity datavis3d declarative imageformats l
 _QT5_DISTS=		gamepad graphicaleffects quickcontrols \
 			quickcontrols2 script webglplugin \
 			x11extras xmlpatterns
-_QT6_DISTS=		5compat coap doc graphs httpserver languageserver lottie positioning \
+_QT6_DISTS=		5compat coap doc graphs grpc httpserver languageserver lottie positioning \
 			quick3dphysics quickeffectmaker shadertools
 
 _QT_DISTS=		${_COMMON_DISTS} \
@@ -125,8 +125,8 @@ _KDE_quickcontrols2=	5
 _KDE_quicktimeline=	0
 _KDE_remoteobjects=	0
 _KDE_script=		0
-_KDE_script_ORIGIN_TAG=	v5.15.17-lts
-_KDE_script_VERSION=	5.15.17
+_KDE_script_ORIGIN_TAG=	v5.15.18-lts
+_KDE_script_VERSION=	5.15.18
 _KDE_scxml=		0
 _KDE_sensors=		0
 _KDE_serialbus=		0
@@ -138,10 +138,10 @@ _KDE_translations=	0
 _KDE_virtualkeyboard=	0
 _KDE_wayland=		59
 _KDE_webchannel=	3
-_KDE_webengine=			3
+_KDE_webengine=			2
 _KDE_webengine_BRANCH=		5.15
-_KDE_webengine_ORIGIN_TAG=	v5.15.17-lts
-_KDE_webengine_VERSION=		5.15.17
+_KDE_webengine_ORIGIN_TAG=	v5.15.18-lts
+_KDE_webengine_VERSION=		5.15.18
 _KDE_webglplugin=	0
 _KDE_websockets=	2
 _KDE_webview=		0

@@ -4,6 +4,7 @@
     SUBDIR += biboumi
     SUBDIR += chatterino2
     SUBDIR += coccinella
+    SUBDIR += concord
     SUBDIR += conduit
     SUBDIR += convey
     SUBDIR += coyim
@@ -108,6 +109,7 @@
     SUBDIR += purple-plugin-pack
     SUBDIR += purple-rocketchat
     SUBDIR += purple-slack
+    SUBDIR += purple-teams
     SUBDIR += py-apprise
     SUBDIR += py-fbmq
     SUBDIR += py-matrix-synapse
@@ -139,6 +141,7 @@
     SUBDIR += signal-desktop
     SUBDIR += signald
     SUBDIR += slack-term
+    SUBDIR += snac
     SUBDIR += spectral
     SUBDIR += ssh-chat
     SUBDIR += sshout

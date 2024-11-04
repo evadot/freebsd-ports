@@ -1,4 +1,4 @@
---- v8/include/v8config.h.orig	2024-08-26 14:40:28 UTC
+--- v8/include/v8config.h.orig	2024-10-27 06:40:35 UTC
 +++ v8/include/v8config.h
 @@ -201,6 +201,8 @@ path. Add it with -I<path> to the command line
    && !defined(V8_TARGET_OS_FUCHSIA) \

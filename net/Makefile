@@ -148,7 +148,6 @@
     SUBDIR += eventviews
     SUBDIR += exabgp4
     SUBDIR += fb303
-    SUBDIR += fbzmq
     SUBDIR += fiche
     SUBDIR += file2pcap
     SUBDIR += findmtu
@@ -170,6 +169,8 @@
     SUBDIR += freeswitch
     SUBDIR += freevrrpd
     SUBDIR += frp
+    SUBDIR += frr10
+    SUBDIR += frr10-pythontools
     SUBDIR += frr8
     SUBDIR += frr8-pythontools
     SUBDIR += frr9
@@ -208,6 +209,8 @@
     SUBDIR += gopher
     SUBDIR += goreplay
     SUBDIR += gorss
+    SUBDIR += gotify-cli
+    SUBDIR += gotify-server
     SUBDIR += gotthard
     SUBDIR += graphpath
     SUBDIR += grilo
@@ -223,6 +226,7 @@
     SUBDIR += gspoof
     SUBDIR += gssdp
     SUBDIR += gssdp14
+    SUBDIR += gstreamer1-plugins-sctp
     SUBDIR += gstreamer1-plugins-srtp
     SUBDIR += gtk-vnc
     SUBDIR += guacamole-server
@@ -242,6 +246,7 @@
     SUBDIR += haproxy26
     SUBDIR += haproxy27
     SUBDIR += haproxy28
+    SUBDIR += haproxy29
     SUBDIR += hblock
     SUBDIR += hexinject
     SUBDIR += hlmaster
@@ -395,6 +400,7 @@
     SUBDIR += libnet
     SUBDIR += libnfs
     SUBDIR += libngtcp2
+    SUBDIR += libngtcp2-gnutls
     SUBDIR += libnids
     SUBDIR += libnpupnp
     SUBDIR += libnss-cache
@@ -446,6 +452,7 @@
     SUBDIR += linux-rl9-avahi-libs
     SUBDIR += linux-rl9-libproxy
     SUBDIR += linux-rl9-openldap
+    SUBDIR += linux-rl9-tcp_wrappers-libs
     SUBDIR += liveMedia
     SUBDIR += lla
     SUBDIR += lua-luasocket
@@ -1281,6 +1288,7 @@
     SUBDIR += rubygem-fog-aliyun
     SUBDIR += rubygem-fog-atmos
     SUBDIR += rubygem-fog-aws
+    SUBDIR += rubygem-fog-aws328
     SUBDIR += rubygem-fog-azure
     SUBDIR += rubygem-fog-brightbox
     SUBDIR += rubygem-fog-cloudatcost
@@ -1559,6 +1567,7 @@
     SUBDIR += tcpxtract
     SUBDIR += td-system-tools
     SUBDIR += tdetect
+    SUBDIR += teddycloud
     SUBDIR += termshark
     SUBDIR += tftpgrab
     SUBDIR += throttled
@@ -1677,6 +1686,7 @@
     SUBDIR += yconalyzer
     SUBDIR += yggdrasil
     SUBDIR += yptransitd
+    SUBDIR += zapret
     SUBDIR += zebra-server
     SUBDIR += zerotier
     SUBDIR += zillion

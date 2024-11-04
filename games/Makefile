@@ -29,8 +29,6 @@
     SUBDIR += abuse_sdl
     SUBDIR += ace-of-penguins
     SUBDIR += adom
-    SUBDIR += adonthell
-    SUBDIR += adonthell-wastesedge
     SUBDIR += aestats
     SUBDIR += affenspiel
     SUBDIR += afternoonstalker
@@ -356,6 +354,7 @@
     SUBDIR += gnushogi
     SUBDIR += gnustep-ladder
     SUBDIR += gnustep-sudoku
+    SUBDIR += gobang
     SUBDIR += gogrepo
     SUBDIR += gogui
     SUBDIR += golddig
@@ -389,6 +388,7 @@
     SUBDIR += highmoon
     SUBDIR += hinversi
     SUBDIR += hitori
+    SUBDIR += hivetui
     SUBDIR += hllib
     SUBDIR += holotz-castle
     SUBDIR += hoverboard-sdl
@@ -613,6 +613,7 @@
     SUBDIR += mangband
     SUBDIR += marblemarcher
     SUBDIR += mari0
+    SUBDIR += mastermind
     SUBDIR += masterserver
     SUBDIR += maxr
     SUBDIR += meandmyshadow

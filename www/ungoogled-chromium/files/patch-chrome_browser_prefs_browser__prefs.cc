@@ -1,6 +1,6 @@
---- chrome/browser/prefs/browser_prefs.cc.orig	2024-08-26 14:40:28 UTC
+--- chrome/browser/prefs/browser_prefs.cc.orig	2024-10-27 06:40:35 UTC
 +++ chrome/browser/prefs/browser_prefs.cc
-@@ -311,7 +311,7 @@
+@@ -310,7 +310,7 @@
  #include "components/user_notes/user_notes_prefs.h"
  #endif  // BUILDFLAG(IS_ANDROID)
  
@@ -9,7 +9,7 @@
  #include "chrome/browser/ui/webui/whats_new/whats_new_ui.h"
  #endif
  
-@@ -493,18 +493,18 @@
+@@ -488,18 +488,18 @@
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -31,7 +31,7 @@
  #include "chrome/browser/enterprise/signin/enterprise_signin_prefs.h"
  #endif
  
-@@ -539,7 +539,7 @@
+@@ -534,7 +534,7 @@
  #include "chrome/browser/sessions/session_service_log.h"
  #endif
  
@@ -40,8 +40,8 @@
  #include "ui/color/system_theme.h"
  #endif
  
-@@ -1558,7 +1558,7 @@ void RegisterLocalState(PrefRegistrySimple* registry) 
-   registry->RegisterIntegerPref(prefs::kLastWhatsNewVersion, 0);
+@@ -1674,7 +1674,7 @@ void RegisterLocalState(PrefRegistrySimple* registry) 
+   on_device_translation::RegisterLocalStatePrefs(registry);
  #endif  // BUILDFLAG(IS_ANDROID)
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
@@ -49,7 +49,7 @@
    WhatsNewUI::RegisterLocalStatePrefs(registry);
  #endif
  
-@@ -1731,7 +1731,7 @@ void RegisterLocalState(PrefRegistrySimple* registry) 
+@@ -1847,7 +1847,7 @@ void RegisterLocalState(PrefRegistrySimple* registry) 
  #endif  // BUILDFLAG(ENABLE_PDF)
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || \
@@ -58,7 +58,7 @@
    registry->RegisterBooleanPref(prefs::kChromeForTestingAllowed, true);
  #endif
  
-@@ -2087,12 +2087,12 @@ void RegisterProfilePrefs(user_prefs::PrefRegistrySync
+@@ -2203,12 +2203,12 @@ void RegisterProfilePrefs(user_prefs::PrefRegistrySync
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

@@ -314,7 +314,6 @@
     SUBDIR += gstreamer1-plugins-openexr
     SUBDIR += gstreamer1-plugins-openjpeg
     SUBDIR += gstreamer1-plugins-png
-    SUBDIR += gstreamer1-plugins-qt
     SUBDIR += gstreamer1-plugins-rsvg
     SUBDIR += gstreamer1-plugins-vulkan
     SUBDIR += gstreamer1-plugins-webp
@@ -980,6 +979,7 @@
     SUBDIR += py-pyzbar
     SUBDIR += py-qpageview
     SUBDIR += py-qrencode
+    SUBDIR += py-qt5-3d
     SUBDIR += py-qt6-3d
     SUBDIR += py-qudida
     SUBDIR += py-railroad-diagrams
@@ -1214,6 +1214,7 @@
     SUBDIR += waffle
     SUBDIR += waifu2x-converter-cpp
     SUBDIR += waifu2x-ncnn-vulkan
+    SUBDIR += wallhaven-cli
     SUBDIR += wayland
     SUBDIR += wayland-protocols
     SUBDIR += wayland-utils

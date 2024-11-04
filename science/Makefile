@@ -409,6 +409,7 @@
     SUBDIR += py-pymbd
     SUBDIR += py-pymol
     SUBDIR += py-pyosf
+    SUBDIR += py-pyphot
     SUBDIR += py-pyprecice
     SUBDIR += py-pyqubo
     SUBDIR += py-pysal
@@ -471,6 +472,7 @@
     SUBDIR += salome-kernel
     SUBDIR += scidavis
     SUBDIR += sciplot
+    SUBDIR += seacas
     SUBDIR += segyio
     SUBDIR += serac
     SUBDIR += shelxle

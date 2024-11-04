@@ -39,6 +39,7 @@
     SUBDIR += aws-c-auth
     SUBDIR += aws-c-cal
     SUBDIR += aws-iam-authenticator
+    SUBDIR += aws-lc
     SUBDIR += aws-vault
     SUBDIR += axc
     SUBDIR += barnyard2
@@ -98,7 +99,6 @@
     SUBDIR += clamsmtp
     SUBDIR += clamtk
     SUBDIR += cloak
-    SUBDIR += clusterssh
     SUBDIR += cops
     SUBDIR += courier-authlib
     SUBDIR += courier-authlib-base
@@ -160,7 +160,6 @@
     SUBDIR += fizz
     SUBDIR += flawfinder
     SUBDIR += flawz
-    SUBDIR += fprint_demo
     SUBDIR += fprintd
     SUBDIR += fragroute
     SUBDIR += fragrouter
@@ -403,7 +402,6 @@
     SUBDIR += nextcloud-end_to_end_encryption
     SUBDIR += nextcloud-passman
     SUBDIR += nextcloud-twofactor_admin
-    SUBDIR += nextcloud-twofactor_nextcloud_notification
     SUBDIR += nextcloud-twofactor_webauthn
     SUBDIR += nflib
     SUBDIR += ngrok
@@ -453,6 +451,7 @@
     SUBDIR += openssl31-quictls
     SUBDIR += openssl32
     SUBDIR += openssl33
+    SUBDIR += openssl34
     SUBDIR += openvas
     SUBDIR += openvpn
     SUBDIR += openvpn-admin
@@ -477,6 +476,7 @@
     SUBDIR += p5-Alt-Crypt-RSA-BigInt
     SUBDIR += p5-Apache-Htpasswd
     SUBDIR += p5-App-Acmeman
+    SUBDIR += p5-App-ClusterSSH
     SUBDIR += p5-App-Genpass
     SUBDIR += p5-App-TLSMe
     SUBDIR += p5-Auth-YubikeyDecrypter
@@ -746,11 +746,9 @@
     SUBDIR += p5-openxpki
     SUBDIR += p5-openxpki-i18n
     SUBDIR += p5-plog
-    SUBDIR += palisade
     SUBDIR += pam-modules
     SUBDIR += pam-mysql
     SUBDIR += pam-pgsql
-    SUBDIR += pam_fprint
     SUBDIR += pam_google_authenticator
     SUBDIR += pam_helper
     SUBDIR += pam_howdy
@@ -1000,6 +998,7 @@
     SUBDIR += py-paramiko
     SUBDIR += py-pass-audit
     SUBDIR += py-pass-git-helper
+    SUBDIR += py-passhole
     SUBDIR += py-passlib
     SUBDIR += py-pbkdf2
     SUBDIR += py-pem
@@ -1020,6 +1019,8 @@
     SUBDIR += py-pyelliptic
     SUBDIR += py-pyhanko
     SUBDIR += py-pyhanko-certvalidator
+    SUBDIR += py-pykeepass
+    SUBDIR += py-pykeepass-cache
     SUBDIR += py-pylibacl
     SUBDIR += py-pymacaroons
     SUBDIR += py-pynacl
@@ -1030,6 +1031,7 @@
     SUBDIR += py-pyscard
     SUBDIR += py-pysodium
     SUBDIR += py-pyspnego
+    SUBDIR += py-pysrp
     SUBDIR += py-python-axolotl
     SUBDIR += py-python-axolotl-curve25519
     SUBDIR += py-python-cas
@@ -1089,7 +1091,6 @@
     SUBDIR += py-yara-python-dex
     SUBDIR += py-yubikey-manager
     SUBDIR += py-zkg
-    SUBDIR += py-zope.password
     SUBDIR += py-zxcvbn
     SUBDIR += pygost
     SUBDIR += qt-sudo
@@ -1130,7 +1131,6 @@
     SUBDIR += rubygem-devise-two-factor-rails70
     SUBDIR += rubygem-devise-two-factor41-rails70
     SUBDIR += rubygem-devise_pam_authenticatable2
-    SUBDIR += rubygem-devise_pam_authenticatable2-rails61
     SUBDIR += rubygem-digest
     SUBDIR += rubygem-digest-crc
     SUBDIR += rubygem-doorkeeper
@@ -1138,8 +1138,8 @@
     SUBDIR += rubygem-doorkeeper-openid_connect
     SUBDIR += rubygem-doorkeeper-rails5
     SUBDIR += rubygem-doorkeeper-rails50
-    SUBDIR += rubygem-doorkeeper-rails61
     SUBDIR += rubygem-doorkeeper-rails70
+    SUBDIR += rubygem-doorkeeper57-rails70
     SUBDIR += rubygem-duo_api
     SUBDIR += rubygem-ed25519
     SUBDIR += rubygem-encryptor

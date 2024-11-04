@@ -1,6 +1,6 @@
 PORTNAME=	mongodb
 DISTVERSIONPREFIX=	r
-DISTVERSION=	6.0.17
+DISTVERSION=	6.0.18
 CATEGORIES=	databases net
 PKGNAMESUFFIX=	${DISTVERSION:R:S/.//}
 
@@ -51,16 +51,6 @@ USE_RC_SUBR=	mongod
 SHEBANG_FILES=	buildscripts/scons.py
 python_OLD_CMD=	@python_interpreter@
 
-EXTRACT_AFTER_ARGS=	--exclude src/third_party/icu4c-* \
-			--exclude src/third_party/pcre-* \
-			--exclude src/third_party/snappy-* \
-			--exclude src/third_party/libstemmer_c \
-			--exclude src/third_party/unwind \
-			--exclude src/third_party/yaml-cpp \
-			--exclude src/third_party/zlib-* \
-			--exclude src/third_party/zstandard \
-			--no-same-owner --no-same-permissions
-
 MAKE_ARGS=	--cxx-std=17 \
 		--disable-warnings-as-errors \
 		--libc++ \
@@ -83,6 +73,16 @@ CFLAGS+=	-DBOOST_NO_CXX98_FUNCTION_BASE
 
 CONFLICTS_INSTALL=	mongodb[0-9][0-9]
 
+EXTRACT_AFTER_ARGS=	--exclude src/third_party/icu4c-* \
+			--exclude src/third_party/pcre-* \
+			--exclude src/third_party/snappy-* \
+			--exclude src/third_party/libstemmer_c \
+			--exclude src/third_party/unwind \
+			--exclude src/third_party/yaml-cpp \
+			--exclude src/third_party/zlib-* \
+			--exclude src/third_party/zstandard \
+			--no-same-owner --no-same-permissions
+
 USERS=		mongodb
 GROUPS=		mongodb
 
@@ -97,6 +97,12 @@ NOAVX_MAKE_ARGS=	--experimental-optimization="-sandybridge"
 
 SASL_LIB_DEPENDS=	libsasl2.so:security/cyrus-sasl2
 SASL_MAKE_ARGS=		--use-sasl-client
+
+.include <bsd.port.options.mk>
+
+.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1500026 # llvm 19.1.2 import
+USES+=		llvm:max=18,build
+.endif
 
 .include <bsd.port.pre.mk>
 
@@ -125,7 +131,7 @@ post-patch:
 
 pre-configure:
 	# Verify we downloaded the proper mozjs git tag.
-	sh -c "test \"X`grep -E '^LIB_GIT_REVISION=' ${WRKSRC}/src/third_party/mozjs/get-sources.sh`\" = \"XLIB_GIT_REVISION=${MOZJS_TAG}\""
+	${SH} -c "test \"X`grep -E '^LIB_GIT_REVISION=' ${WRKSRC}/src/third_party/mozjs/get-sources.sh`\" = \"XLIB_GIT_REVISION=${MOZJS_TAG}\""
 
 do-configure:
 # Replacement of ${WRKSRC}/src/third_party/mozjs/get-sources.sh

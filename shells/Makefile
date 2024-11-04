@@ -35,8 +35,14 @@
     SUBDIR += murex
     SUBDIR += nologinmsg
     SUBDIR += nsh
+    SUBDIR += nu_plugin_formats
+    SUBDIR += nu_plugin_gstat
+    SUBDIR += nu_plugin_inc
+    SUBDIR += nu_plugin_polars
+    SUBDIR += nu_plugin_query
     SUBDIR += nushell
     SUBDIR += ohmyzsh
+    SUBDIR += oil
     SUBDIR += oksh
     SUBDIR += p5-Bash-Completion
     SUBDIR += p5-Shell-Perl
@@ -66,6 +72,7 @@
     SUBDIR += zsh-antigen
     SUBDIR += zsh-autosuggestions
     SUBDIR += zsh-completions
+    SUBDIR += zsh-fast-syntax-highlighting
     SUBDIR += zsh-navigation-tools
     SUBDIR += zsh-syntax-highlighting
 

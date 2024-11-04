@@ -134,7 +134,6 @@ DOCS_BUILD_DEPENDS= \
 	${PYTHON_PKGNAMEPREFIX}myst-parser>0:textproc/py-myst-parser@${PY_FLAVOR} \
 	${PYTHON_PKGNAMEPREFIX}recommonmark>=0.0.20180530:textproc/py-recommonmark@${PY_FLAVOR} \
 	${PYTHON_PKGNAMEPREFIX}sphinx-markdown-tables>=0:textproc/py-sphinx-markdown-tables@${PY_FLAVOR}
-DOCS_CONFLICTS_BUILD=	cmark
 DOCS_PORTDOCS=		llvm
 DOCS_CMAKE_ON= \
 	-DLLVM_ENABLE_SPHINX=ON \
@@ -428,6 +427,7 @@ post-install-CLANG-on:
 	    ${STAGEDIR}${PREFIX}/share/toolchains/llvm${LLVM_SUFFIX}.mk
 	${RMDIR} ${STAGEDIR}${LLVM_PREFIX}/include/clang/Basic/Target/MSP430/
 	${RMDIR} ${STAGEDIR}${LLVM_PREFIX}/include/clang/Basic/Target/
+	${RMDIR} ${STAGEDIR}${LLVM_PREFIX}/include/clang/CIRFrontendAction
 
 post-install-EXTRAS-on:
 	${RMDIR} ${STAGEDIR}${LLVM_PREFIX}/include/clang-tidy/misc/ConfusableTable

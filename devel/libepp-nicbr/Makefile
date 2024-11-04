@@ -1,5 +1,6 @@
 PORTNAME=	libepp-nicbr
 PORTVERSION=	1.19
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.registro.br/pub/libepp-nicbr/
 
@@ -35,7 +36,7 @@ READLINE_CONFIGURE_ENV_OFF=\
 
 .include <bsd.port.options.mk>
 
-.if ${OPSYS} == FreeBSD && ( ${OSVERSION} >= 1400091 || ( ${OSVERSION} >= 1302507 && ${OSVERSION} < 1400000 ))
+.if ${OPSYS} == FreeBSD
 CFLAGS+=	-Wno-error=unused-but-set-variable
 .endif
 

@@ -1,5 +1,7 @@
 bin/zrepl
+etc/periodic/daily/zrepl
 etc/periodic/weekly/500.zrepl
+etc/rc.d/zrepl
 @sample %%ETCDIR%%/zrepl.yml.sample
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/bandwidth_limit.yml
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/grafana-prometheus-zrepl.json
@@ -20,4 +22,3 @@ etc/periodic/weekly/500.zrepl
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/source.yml
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/source_ssh.yml
 @dir etc/newsyslog.conf.d
-@dir(root,wheel,0750) /var/run/zrepl

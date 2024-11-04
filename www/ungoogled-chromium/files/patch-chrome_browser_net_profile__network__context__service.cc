@@ -1,4 +1,4 @@
---- chrome/browser/net/profile_network_context_service.cc.orig	2024-08-26 14:40:28 UTC
+--- chrome/browser/net/profile_network_context_service.cc.orig	2024-10-27 06:40:35 UTC
 +++ chrome/browser/net/profile_network_context_service.cc
 @@ -139,7 +139,7 @@
  #include "chromeos/startup/browser_params_proxy.h"
@@ -18,7 +18,7 @@
  std::unique_ptr<net::ClientCertStore> GetWrappedCertStore(
      Profile* profile,
      std::unique_ptr<net::ClientCertStore> platform_store) {
-@@ -938,7 +938,7 @@ ProfileNetworkContextService::CreateClientCertStore() 
+@@ -985,7 +985,7 @@ ProfileNetworkContextService::CreateClientCertStore() 
    store = std::make_unique<ClientCertStoreLacros>(
        std::move(certificate_provider), cert_db_initializer, std::move(store));
  #endif  // BUILDFLAG(IS_CHROMEOS_LACROS)

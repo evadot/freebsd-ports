@@ -24,13 +24,19 @@ OPTIONS_SINGLE_AUDIO=	ALSA PULSEAUDIO
 OPTIONS_SUB=		yes
 
 ALSA_LIB_DEPENDS=	libasound.so:audio/alsa-lib
+ALSA_RUN_DEPENDS=	alsa-plugins>=0:audio/alsa-plugins
 ALSA_CMAKE_BOOL=	FEATURE_alsa
 
 FFMPEG_LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg
 FFMPEG_CMAKE_BOOL=	FEATURE_ffmpeg
 
-GSTREAMER_USES=		gnome gstreamer:1
-GSTREAMER_USE=		GL=egl GNOME=glib20 GSTREAMER=bad,gl,good,ugly
+GSTREAMER_LIB_DEPENDS=	libwayland-client.so:graphics/wayland
+# As of 2024-09-29, Mk/Uses/xorg.mk freaks out if no modules are defined
+# via USE_XORG, so FTTB, we must duplicate USES=xorg in the GSTREAMER
+# and X11 options and cannot hoist it to the main USES declaration as a
+# noop.
+GSTREAMER_USES=		gnome gstreamer:1 xorg
+GSTREAMER_USE=		GL=egl GNOME=glib20 GSTREAMER=bad,gl,good,ugly XORG=xcb
 GSTREAMER_CMAKE_BOOL=	FEATURE_gstreamer \
 			FEATURE_gstreamer_1_0 \
 			FEATURE_gstreamer_app \

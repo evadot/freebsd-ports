@@ -39,7 +39,6 @@
     SUBDIR += atunes
     SUBDIR += aubio
     SUBDIR += audacity
-    SUBDIR += audiere
     SUBDIR += audiocd-kio
     SUBDIR += audiowmark
     SUBDIR += aumix
@@ -199,7 +198,6 @@
     SUBDIR += freepats
     SUBDIR += ft2-clone
     SUBDIR += ft2play
-    SUBDIR += funktrackergold
     SUBDIR += furnace
     SUBDIR += ganv
     SUBDIR += gbsplay
@@ -347,7 +345,6 @@
     SUBDIR += libdjinterop
     SUBDIR += libdssialsacompat
     SUBDIR += libebur128
-    SUBDIR += libechonest
     SUBDIR += libfilteraudio
     SUBDIR += libfishsound
     SUBDIR += libg722
@@ -383,7 +380,6 @@
     SUBDIR += libopusenc
     SUBDIR += libremidi
     SUBDIR += libsamplerate
-    SUBDIR += libshairport
     SUBDIR += libshout
     SUBDIR += libsidplay
     SUBDIR += libsidplayfp
@@ -602,6 +598,7 @@
     SUBDIR += picard
     SUBDIR += picard-plugins
     SUBDIR += pipewire-module-xrdp
+    SUBDIR += pipewire-spa-oss
     SUBDIR += pithos
     SUBDIR += plasma5-kpipewire
     SUBDIR += plasma5-oxygen-sounds
@@ -673,7 +670,7 @@
     SUBDIR += py-soxr
     SUBDIR += py-speechrecognition
     SUBDIR += py-spotipy
-    SUBDIR += py-tagpy
+    SUBDIR += py-supysonic
     SUBDIR += py-torchaudio
     SUBDIR += py-vosk
     SUBDIR += py-wavio

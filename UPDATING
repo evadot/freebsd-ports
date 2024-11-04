@@ -5,6 +5,57 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20241019:
+  AFFECTS: users of security/libressl
+  AUTHOR: brnrd@FreeBSD.org
+
+  The port has been updated to the latest stable version 4.0 of LibreSSL.
+  The shared library versions of the libraries have been bumped.
+
+  After upgrading, manually update all packages that depend on any of the
+  libraries provided by LibreSSL (libssl, libcrypto and libtls) since the
+  versions of these libraries have changed. Normally, you can obtain the
+  list of dependent software by running the following command:
+
+  # pkg info -r libressl
+
+  Then you should rebuild all ports depending on libressl to avoid dangling
+  shared library dependencies.
+
+20241004:
+  AFFECTS: users of www/c-icap
+  AUTHOR: rodrigo@FreeBSD.org
+
+  The c-icap server version is moving from branch 5.X to 6.X.
+  An in-place upgrade may require some changes in your current
+  configuration.
+  For installation instructions please refer :
+  https://sourceforge.net/p/c-icap/wiki/configcicap
+  https://sourceforge.net/p/c-icap/wiki
+
+20240930:
+  AFFECTS: users of sysutils/nq
+  AUTHOR: 0mp@FreeBSD.org
+
+  The nq upstream renamed the fq utility to nqtail
+  and the tq utility to nqterm.
+
+20240927:
+  AFFECTS: users of databases/mongodb50
+  AUTHOR: ronald@FreeBSD.org
+
+  MongoDB version 5.0 is End of Life starting October 2024.
+  Please make sure you are running MongoDB version 6.0 or higher.
+  In-place upgrades are supported from version 5.0 to 6.0.
+  For an in-place upgrade it is important that the
+  'featureCompatibilityVersion' is set to 5.0.
+  See: https://www.mongodb.com/docs/v6.0/release-notes/6.0-upgrade-standalone/#feature-compatibility-version
+
+  TL;DR, run these commands in mongodb50 before upgrading:
+  $ mongo --port <portnr>
+  > db.adminCommand( { setFeatureCompatibilityVersion: "5.0" } )
+  > exit
+
 20240912:
   AFFECTS: security/clamav, security/clamav-lts
   AUTHOR: netchildFreeBSD.org

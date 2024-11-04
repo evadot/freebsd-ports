@@ -1,5 +1,5 @@
 PORTNAME=	nghttp2
-PORTVERSION=	1.63.0
+PORTVERSION=	1.64.0
 CATEGORIES=	www net
 MASTER_SITES=	https://github.com/nghttp2/nghttp2/releases/download/v${PORTVERSION}/
 
@@ -54,12 +54,6 @@ EXAMPLES_LIB_DEPENDS=	libevent_openssl.so:devel/libevent
 HPACK_BUILD_DEPENDS=	jansson>=2.5:devel/jansson
 HPACK_CMAKE_BOOL=	ENABLE_HPACK_TOOLS
 HPACK_LIB_DEPENDS=	libjansson.so:devel/jansson
-
-.include <bsd.port.options.mk>
-
-.if ${OSREL} == 14.0
-EXTRA_PATCHES=	${PATCHDIR}/extra-patch-compatibility-fix
-.endif
 
 post-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/nghttpx/

@@ -1,6 +1,15 @@
---- chrome/browser/ui/views/user_education/browser_user_education_service.cc.orig	2024-08-26 14:40:28 UTC
+--- chrome/browser/ui/views/user_education/browser_user_education_service.cc.orig	2024-10-27 06:40:35 UTC
 +++ chrome/browser/ui/views/user_education/browser_user_education_service.cc
-@@ -997,7 +997,7 @@ void MaybeRegisterChromeFeaturePromos(
+@@ -777,7 +777,7 @@ void MaybeRegisterChromeFeaturePromos(
+                          "defaulted to saved for the first time.")));
+   }
+ 
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
+   // kIPHSupervisedUserProfileSigninFeature
+   registry.RegisterFeature(std::move(
+       FeaturePromoSpecification::CreateForCustomAction(
+@@ -1003,7 +1003,7 @@ void MaybeRegisterChromeFeaturePromos(
                      FeaturePromoSpecification::AcceleratorInfo())
                      .SetBubbleArrow(HelpBubbleArrow::kTopLeft)));
  

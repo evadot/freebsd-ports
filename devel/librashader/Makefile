@@ -1,6 +1,6 @@
 PORTNAME=	librashader
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.4.2
+DISTVERSION=	0.4.5
 CATEGORIES=	devel
 
 MAINTAINER=	bsdcode@disroot.org
@@ -12,8 +12,7 @@ LICENSE_COMB=	multi
 LICENSE_FILE_GPLv3=	${WRKSRC}/LICENSE-GPL.md
 LICENSE_FILE_MPL20=	${WRKSRC}/LICENSE.md
 
-BUILD_DEPENDS=	patchelf:sysutils/patchelf \
-		rust-nightly>0:lang/rust-nightly
+BUILD_DEPENDS=	patchelf:sysutils/patchelf
 
 USES=		cargo
 USE_GITHUB=	yes
@@ -21,7 +20,6 @@ GH_ACCOUNT=	SnowflakePowered
 GH_TAGNAME=	${DISTNAME}
 USE_LDCONFIG=	yes
 
-CARGO_BUILDDEP=		no
 CARGO_BUILD=		no
 CARGO_INSTALL=		no
 CARGO_TEST=		no
@@ -36,7 +34,7 @@ DEBUG_VARS_OFF=	_PROFILE=release
 # grep '#define LIBRASHADER_CURRENT_ABI' ${WRKSRC}/include/librashader.h | cut -d' ' -f3
 _ABI=		1
 
-_OUT=		${CARGO_TARGET_DIR}/${CARGO_BUILD_TARGET}/${_PROFILE}
+_OUT=		${CARGO_TARGET_DIR}/${_PROFILE}
 
 post-patch:
 	${REINPLACE_CMD} 's|/usr/local|${PREFIX}|g' \
@@ -44,14 +42,14 @@ post-patch:
 
 do-build:
 	${CARGO_CARGO_RUN} run -p librashader-build-script -- --profile \
-		${_PROFILE} --target ${CARGO_BUILD_TARGET}
+		${_PROFILE} --stable
 	patchelf --set-soname librashader.so.${_ABI} ${_OUT}/librashader.so
 
 do-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/include/librashader
 	${INSTALL_DATA} ${WRKSRC}/include/librashader_ld.h \
 		${STAGEDIR}${PREFIX}/include/librashader
-	${INSTALL_DATA} ${_OUT}/librashader.h \
+	${INSTALL_DATA} ${WRKSRC}/include/librashader.h \
 		${STAGEDIR}${PREFIX}/include/librashader
 	${INSTALL_DATA} ${_OUT}/librashader.a \
 		${STAGEDIR}${PREFIX}/lib
