@@ -1,5 +1,6 @@
 PORTNAME=	mate-settings-daemon
 PORTVERSION=	1.28.0
+PORTREVISION=	2
 CATEGORIES=	sysutils mate
 MASTER_SITES=	MATE
 DIST_SUBDIR=	mate

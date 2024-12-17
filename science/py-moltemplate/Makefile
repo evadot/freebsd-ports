@@ -1,12 +1,13 @@
 PORTNAME=	moltemplate
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.20.21
+DISTVERSION=	2.22.0
 CATEGORIES=	science python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Tool to prepare simulations of molecules, complex molecular assemblies
-WWW=		https://www.moltemplate.org/
+WWW=		https://www.moltemplate.org/ \
+		https://github.com/jewettaij/moltemplate
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md

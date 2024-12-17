@@ -1,9 +1,9 @@
 PORTNAME=	domoticz
 DISTVERSION=	2024.4
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	www
 
-MAINTAINER=	kiwi@oav.net
+MAINTAINER=	kiwi@FreeBSD.org
 COMMENT=	Home Automation System
 WWW=		https://www.domoticz.com
 

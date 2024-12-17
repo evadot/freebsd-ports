@@ -1,7 +1,7 @@
 PORTNAME=	rpcs3
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.0.34 # git rev-list --count HEAD
-DISTVERSIONSUFFIX=	-17082-g17e78a9e6f
+DISTVERSION=	0.0.34-17184 # git rev-list --count HEAD
+DISTVERSIONSUFFIX=	-g692c88f0e9
 CATEGORIES=	emulators wayland
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -30,14 +30,13 @@ GH_TUPLE=	RPCS3:hidapi:hidapi-0.14.0-2-g8b43a97:hidapi/3rdparty/hidapi/hidapi \
 		asmjit:asmjit:416f735:asmjit/3rdparty/asmjit/asmjit \
 		facebook:zstd:v1.4.7-2181-g97291fc5:zstd/3rdparty/zstd/zstd \
 		jbeder:yaml-cpp:0.8.0-11-g456c68f:yamlcpp/3rdparty/yaml-cpp/yaml-cpp \
-		KhronosGroup:SPIRV-Headers:1.5.4.raytracing.fixed-323-ge867c06:spirv_headers/3rdparty/SPIRV/SPIRV-Headers \
-		KhronosGroup:SPIRV-Tools:v2023.5.rc1:spirv_tools/3rdparty/SPIRV/SPIRV-Tools \
 		KhronosGroup:glslang:13.1.1:glslang/3rdparty/glslang/glslang \
 		kcat:openal-soft:1.23.1:openal_soft/3rdparty/OpenAL/openal-soft \
 		kinetiknz:cubeb:cubeb-0.2-1425-g88585b6:cubeb/3rdparty/cubeb/cubeb \
 		miniupnp:miniupnp:miniupnpd_2_3_6:miniupnp/3rdparty/miniupnp/miniupnp \
 		nothings:stb:013ac3b:stb/3rdparty/stblib/stb \
-		wolfSSL:wolfssl:v5.7.2-stable:wolfssl/3rdparty/wolfssl/wolfssl
+		wolfSSL:wolfssl:v5.7.4-stable:wolfssl/3rdparty/wolfssl/wolfssl \
+		xioTechnologies:Fusion:v1.2.7:fusion/3rdparty/fusion/fusion
 
 USES=		cmake elfctl gl iconv:wchar_t llvm:min=16,lib localbase:ldflags \
 		openal:soft pkgconfig python:build qt:6 xorg
@@ -50,8 +49,8 @@ CMAKE_OFF=	USE_NATIVE_INSTRUCTIONS USE_PRECOMPILED_HEADERS
 LDFLAGS+=	-Wl,--as-needed # GLU
 ELF_FEATURES=	+wxneeded:bin/${PORTNAME}
 
-OPTIONS_DEFINE=	ALSA EVDEV FAUDIO PULSEAUDIO JACK SDL SNDIO VULKAN
-OPTIONS_DEFAULT=EVDEV FAUDIO PULSEAUDIO JACK SDL SNDIO VULKAN
+OPTIONS_DEFINE=	ALSA EVDEV FAUDIO OPENCV PULSEAUDIO JACK SDL SNDIO VULKAN
+OPTIONS_DEFAULT=EVDEV FAUDIO OPENCV PULSEAUDIO JACK SDL SNDIO VULKAN
 
 ALSA_BUILD_DEPENDS=	alsa-lib>0:audio/alsa-lib
 ALSA_CMAKE_BOOL=	USE_ALSA
@@ -68,6 +67,9 @@ FAUDIO_CMAKE_BOOL=	USE_FAUDIO USE_SYSTEM_FAUDIO
 
 JACK_BUILD_DEPENDS=	jackit>0:audio/jack
 JACK_CMAKE_BOOL=	USE_JACK
+
+OPENCV_LIB_DEPENDS=	libopencv_imgproc.so:graphics/opencv
+OPENCV_CMAKE_BOOL=	USE_SYSTEM_OPENCV
 
 PULSEAUDIO_BUILD_DEPENDS=pulseaudio>0:audio/pulseaudio
 PULSEAUDIO_CMAKE_BOOL=	USE_PULSE
@@ -96,22 +98,5 @@ post-patch:
 		 -e '/GIT_FULL_BRANCH/s/local_build/${GH_ACCOUNT}\/${GH_PROJECT}\/master/' \
 		-e '/GIT_VERSION/s/local_build/${GH_TAGNAME:C/[^-]*-//}/' \
 		${WRKSRC}/${PORTNAME}/git-version.cmake
-
-# https://github.com/RPCS3/rpcs3/issues/16259 (don't forget distinfo)
-.if exists(/usr/include/c++/v1/__thread/support.h)
-# XXX Move into separate port and standardize via USES
-GH_TUPLE+=	llvm:llvm-project:llvmorg-18.1.8:libcxx
-CXXFLAGS+=	-nostdinc++ -isystem${WRKDIR}/libcxx_prefix/include/c++/v1
-# Don't link against new libc++ as it's not necessary
-#LDFLAGS+=	-nostdlib++ -L${WRKDIR}/libcxx_prefix/lib -l:libc++.a -lcxxrt
-
-pre-configure:	bundled-libcxx
-bundled-libcxx:
-	@${SETENV} ${CONFIGURE_ENV} ${CMAKE_BIN} ${CMAKE_ARGS} \
-		-DLIBCXX_INCLUDE_BENCHMARKS:BOOL=OFF \
-		-DCMAKE_INSTALL_PREFIX:PATH=${WRKDIR}/libcxx_prefix \
-		-B ${WRKDIR}/libcxx_build -S ${WRKSRC_libcxx}/libcxx
-	@${DO_MAKE_BUILD:NDESTDIR*} install -C ${WRKDIR}/libcxx_build
-.endif # exists(/usr/include/c++/v1/__thread/support.h)
 
 .include <bsd.port.mk>

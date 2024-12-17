@@ -1,6 +1,6 @@
 PORTNAME=	pipewire
 DISTVERSION=	1.2.6
-PORTREVISION=	1
+PORTREVISION=	5
 CATEGORIES=	multimedia
 
 MAINTAINER=	arrowd@FreeBSD.org
@@ -17,7 +17,7 @@ LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libopus.so:audio/opus \
 		libsndfile.so:audio/libsndfile \
 		libudev.so:devel/libudev-devd \
-		libwebrtc_audio_processing.so:audio/webrtc-audio-processing0
+		libwebrtc-audio-processing-1.so:audio/webrtc-audio-processing
 
 USES=		compiler:c11 gettext-tools gnome localbase:ldflags meson \
 		ncurses pkgconfig python:build readline shebangfix ssl
@@ -30,9 +30,15 @@ GL_SITE=	https://gitlab.freedesktop.org
 SHEBANG_FILES=	doc/*.py
 PORTDOCS=	*
 
-OPTIONS_DEFINE=		AVAHI DOCS DOXYGEN GSTREAMER JACK LV2 PULSEAUDIO VULKAN X11_BELL
+OPTIONS_DEFINE=		ALSA AVAHI DOCS DOXYGEN GSTREAMER JACK LV2 PULSEAUDIO \
+			VULKAN X11_BELL
 OPTIONS_DEFAULT=	GSTREAMER JACK
 OPTIONS_SUB=		yes
+
+ALSA_MESON_ENABLED=	alsa pipewire-alsa
+ALSA_LIB_DEPENDS=	libasound.so:audio/alsa-lib
+ALSA_RUN_DEPENDS=	alsa-plugins>0:audio/alsa-plugins
+ALSA_SUB_FILES=		10-alsa-default.conf
 
 AVAHI_DESC=		Automatic service discovery for the Pulseaudio module via Avahi
 AVAHI_IMPLIES=		PULSEAUDIO
@@ -72,8 +78,7 @@ MESON_ARGS=	-D pw-cat=enabled \
 		-D v4l2=enabled \
 		-D raop=enabled \
 		-D session-managers='[]' \
-		-D alsa=disabled \
-		-D pipewire-alsa=disabled \
+		-D compress-offload=disabled \
 		-D avb=disabled \
 		-D bluez5=disabled \
 		-D man=disabled \
@@ -101,5 +106,10 @@ CONFIGURE_ENV+=	${ncurses_ARGS:Mbase:C/.+/PKG_CONFIG_PATH="${FILESDIR}"/}
 post-patch:
 	${REINPLACE_CMD} -e "s|find_installation('python3'|find_installation('python${PYTHON_VER}'|" \
 		${WRKSRC}/meson.build
+
+post-install-ALSA-on:
+	${MKDIR} ${STAGEDIR}${DATADIR}/${PORTNAME}.conf.d
+	${INSTALL_DATA} ${WRKDIR}/10-alsa-default.conf \
+		${STAGEDIR}${DATADIR}/${PORTNAME}.conf.d
 
 .include <bsd.port.mk>

@@ -1386,7 +1386,7 @@ PORTEPOCH?=		0
 _SUF2=	,${PORTEPOCH}
 .    endif
 
-PKGVERSION=	${PORTVERSION:C/[-_,]/./g}${_SUF1}${_SUF2}
+PKGVERSION=	${PORTVERSION:C/[-_,]/./g}${_OS_SUFX}${_SUF1}${_SUF2}
 PKGNAME=	${PKGNAMEPREFIX}${PORTNAME}${PKGNAMESUFFIX}-${PKGVERSION}
 DISTVERSIONFULL=	${DISTVERSIONPREFIX}${DISTVERSION:C/:(.)/\1/g}${DISTVERSIONSUFFIX}
 DISTNAME?=	${PORTNAME}-${DISTVERSIONFULL}
@@ -2583,6 +2583,7 @@ VALID_CATEGORIES+= accessibility afterstep arabic archivers astro audio \
 	benchmarks biology budgie cad chinese comms converters \
 	databases deskutils devel dns docs \
 	editors education elisp emulators enlightenment finance french ftp \
+	filesystems \
 	games geography german gnome gnustep graphics \
 	hamradio haskell hebrew hungarian irc japanese java \
 	kde ${_KDE_CATEGORIES_SUPPORTED} kld korean \

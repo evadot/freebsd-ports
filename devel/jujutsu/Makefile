@@ -1,7 +1,6 @@
 PORTNAME=	jujutsu
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.22.0
-PORTREVISION=	2
+DISTVERSION=	0.24.0
 CATEGORIES=	devel
 
 MAINTAINER=	se@FreeBSD.org
@@ -11,9 +10,8 @@ WWW=		https://github.com/martinvonz/jj/blob/main/README.md
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-LIB_DEPENDS=	libgit2.so:devel/libgit2 \
-                libssh2.so:security/libssh2 \
-                libzstd.so:archivers/zstd
+LIB_DEPENDS=	libssh2.so:security/libssh2 \
+		libzstd.so:archivers/zstd
 
 USES=		cargo localbase ssl
 USE_GITHUB=	yes

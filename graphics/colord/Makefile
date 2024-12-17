@@ -1,5 +1,6 @@
 PORTNAME=	colord
 PORTVERSION=	1.4.7
+PORTREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	https://www.freedesktop.org/software/colord/releases/
 
@@ -27,8 +28,7 @@ MAKE_JOBS_UNSAFE=	yes
 MAKE_ENV=	PYTHONDONTWRITEBYTECODE=1
 MESON_ARGS=	-Dsystemd=false -Dudev_rules=false \
 		-Ddaemon_user=colord -Dlibcolordcompat=true \
-		-Dpnp_ids=${LOCALBASE}/share/hwdata/hwdata/pnp.ids \
-		--localstatedir=/var \
+		-Dpnp_ids=${LOCALBASE}/share/hwdata/pnp.ids
 
 INSTALL_TARGET=	install-strip
 

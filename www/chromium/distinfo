@@ -1,9 +1,9 @@
-TIMESTAMP = 1730535141
-SHA256 (chromium-130.0.6723.91.tar.xz) = c2f13de70f2dcf61c930dcfe54ee118e584962afd03ecde19e3be48b3d86bec0
-SIZE (chromium-130.0.6723.91.tar.xz) = 6624503880
-SHA256 (chrome-linux-130.0.6723.91-llvm17.profdata.tar.xz) = bef743aadaa9fa977285a6357b1e26c865bdf78226b886000e18450ce7361734
-SIZE (chrome-linux-130.0.6723.91-llvm17.profdata.tar.xz) = 30484628
+TIMESTAMP = 1733925646
+SHA256 (chromium-131.0.6778.139.tar.xz) = 5d12ffc2a33027bde1b15998b28f48560647f1196ecca068ba8cde6bd68f8c9f
+SIZE (chromium-131.0.6778.139.tar.xz) = 7162957112
+SHA256 (chromium-linux-131.0.6778.139-llvm17.profdata.tar.xz) = 75cf7092d6522acf010e883184b69201a32b2249f01efeaa5203612bbf16243d
+SIZE (chromium-linux-131.0.6778.139-llvm17.profdata.tar.xz) = 30710836
 SHA256 (pulseaudio-16.1.tar.gz) = 027266c62f2a84422ac45fa721a649508f0f1628fb1fd9242315ac54ce2d7c92
 SIZE (pulseaudio-16.1.tar.gz) = 2763111
-SHA256 (chromium-130.0.6723.91-testdata.tar.xz) = 66b4b339da273c53416165112d385a171fe6af79c87174a1f7951ba31c507cef
-SIZE (chromium-130.0.6723.91-testdata.tar.xz) = 281380152
+SHA256 (chromium-131.0.6778.139-testdata.tar.xz) = df56d4b761a6112dab1076c2bfb844165d8f61b1dfbac99f8bd56f96aa8cccfd
+SIZE (chromium-131.0.6778.139-testdata.tar.xz) = 281821484

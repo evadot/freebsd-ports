@@ -1,9 +1,13 @@
 PORTNAME=	mongodb
 DISTVERSIONPREFIX=	r
-DISTVERSION=	8.0.1
+DISTVERSION=	8.0.4
 PORTREVISION=	1
 CATEGORIES=	databases net
+MASTER_SITES=	https://hg.mozilla.org/mozilla-central/raw-rev/:patches
 PKGNAMESUFFIX=	${DISTVERSION:R:S/.//}
+DISTFILES=	223087fdc29f18678f6174e9807b8780e439acf6:patches # https://bugzilla.mozilla.org/1894423
+EXTRACT_ONLY=	${GH_ACCOUNT}-${GH_PROJECT}-${DISTVERSIONPREFIX}${DISTVERSION}_GH0.tar.gz \
+		${GH_ACCOUNT}-forks-spidermonkey-${MOZJS_TAG}_GH0.tar.gz
 
 MAINTAINER=	ronald@FreeBSD.org
 COMMENT=	MongoDB Community Edition (8.0.x Branch)
@@ -93,7 +97,7 @@ GROUPS=		mongodb
 
 OPTIONS_DEFINE=		LTO NOAVX SASL
 OPTIONS_DEFINE_aarch64=	ARMV80A
-OPTIONS_DEFAULT=	SASL
+OPTIONS_DEFAULT=	NOAVX SASL
 
 # MongoDB on non-LSE ARM cpu like Raspberry Pi can work but is unsupported upstream.
 # Can give corruption on high concurrency.
@@ -106,16 +110,11 @@ ARMV80A_EXTRA_PATCHES=	${FILESDIR}/extrapatch-SConstruct
 LTO_MAKE_ARGS=	--lto=on
 
 NOAVX_MAKE_ARGS=	--experimental-optimization="-sandybridge"
-NOAVX_EXTRA_PATCHES=	${FILESDIR}/extrapatch-src_third__party_mozjs_SConscript
+NOAVX_EXTRA_PATCHES=	${FILESDIR}/extrapatch-src_third__party_mozjs_SConscript \
+			${FILESDIR}/extrapatch-src_third__party_mozjs_extract_mozglue_misc_SIMD.cpp
 
 SASL_LIB_DEPENDS=	libsasl2.so:security/cyrus-sasl2
 SASL_MAKE_ARGS=		--use-sasl-client
-
-.include <bsd.port.options.mk>
-
-.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1500026 # llvm 19.1.2 import
-USES+=		llvm:max=18,build
-.endif
 
 .include <bsd.port.pre.mk>
 
@@ -134,6 +133,9 @@ MOZJS_ARCH=	ppc64le
 .elif ${ARCH} == aarch64
 MOZJS_ARCH=	${ARCH}
 .endif
+
+post-patch:
+	${PATCH} -d ${WRKSRC}/src/third_party/mozjs/extract --quiet -p1 -V none < ${DISTDIR}/223087fdc29f18678f6174e9807b8780e439acf6
 
 pre-configure:
 # Verify we downloaded the proper mozjs git tag.

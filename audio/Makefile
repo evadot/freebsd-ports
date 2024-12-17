@@ -337,8 +337,6 @@
     SUBDIR += libcanberra-gtk2
     SUBDIR += libcanberra-gtk3
     SUBDIR += libcdaudio
-    SUBDIR += libcddb
-    SUBDIR += libcddb-doc
     SUBDIR += libconvolve
     SUBDIR += libcoverart
     SUBDIR += libdiscid
@@ -529,7 +527,6 @@
     SUBDIR += ogg2mp3
     SUBDIR += openal-soft
     SUBDIR += opencore-amr
-    SUBDIR += openspc
     SUBDIR += opus
     SUBDIR += opus-tools
     SUBDIR += opusfile
@@ -823,6 +820,7 @@
     SUBDIR += umix
     SUBDIR += umodplayer
     SUBDIR += umurmur
+    SUBDIR += unflac
     SUBDIR += vamp-plugin-sdk
     SUBDIR += vban
     SUBDIR += vgmplay

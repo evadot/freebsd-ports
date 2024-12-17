@@ -4,6 +4,9 @@ etc/xdg/autostart/lxqt-panel.desktop
 %%LXQT_INCLUDEDIR%%/ilxqtpanelplugin.h
 %%LXQT_INCLUDEDIR%%/lxqtpanelglobals.h
 %%LXQT_INCLUDEDIR%%/pluginsettings.h
+lib/lxqt-panel/backend/libwmbackend_kwin_wayland.so
+lib/lxqt-panel/backend/libwmbackend_wlroots.so
+lib/lxqt-panel/backend/libwmbackend_xcb.so
 lib/lxqt-panel/libbacklight.so
 lib/lxqt-panel/libcolorpicker.so
 %%CPULOAD%%lib/lxqt-panel/libcpuload.so
@@ -15,6 +18,7 @@ lib/lxqt-panel/libkbindicator.so
 lib/lxqt-panel/libqeyes.so
 lib/lxqt-panel/libsysstat.so
 %%SOUND%%lib/lxqt-panel/libvolume.so
+share/applications/lxqt-panel.desktop
 %%LXQT_SHAREDIR%%/lxqt-panel/backlight.desktop
 %%LXQT_SHAREDIR%%/lxqt-panel/colorpicker.desktop
 %%CPULOAD%%%%LXQT_SHAREDIR%%/lxqt-panel/cpuload.desktop
@@ -80,6 +84,10 @@ lib/lxqt-panel/libsysstat.so
 %%LXQT_TRANSLATIONS%%/lxqt-panel/colorpicker/colorpicker_ar.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/colorpicker/colorpicker_bg.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/colorpicker/colorpicker_ca.qm
+%%LXQT_TRANSLATIONS%%/lxqt-panel/colorpicker/colorpicker_da.qm
+%%LXQT_TRANSLATIONS%%/lxqt-panel/colorpicker/colorpicker_de.qm
+%%LXQT_TRANSLATIONS%%/lxqt-panel/colorpicker/colorpicker_el.qm
+%%LXQT_TRANSLATIONS%%/lxqt-panel/colorpicker/colorpicker_en_GB.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/colorpicker/colorpicker_et.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/colorpicker/colorpicker_fi.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/colorpicker/colorpicker_fr.qm
@@ -108,6 +116,7 @@ lib/lxqt-panel/libsysstat.so
 %%CPULOAD%%%%LXQT_TRANSLATIONS%%/lxqt-panel/cpuload/cpuload_da.qm
 %%CPULOAD%%%%LXQT_TRANSLATIONS%%/lxqt-panel/cpuload/cpuload_de.qm
 %%CPULOAD%%%%LXQT_TRANSLATIONS%%/lxqt-panel/cpuload/cpuload_el.qm
+%%CPULOAD%%%%LXQT_TRANSLATIONS%%/lxqt-panel/cpuload/cpuload_en_GB.qm
 %%CPULOAD%%%%LXQT_TRANSLATIONS%%/lxqt-panel/cpuload/cpuload_eo.qm
 %%CPULOAD%%%%LXQT_TRANSLATIONS%%/lxqt-panel/cpuload/cpuload_es.qm
 %%CPULOAD%%%%LXQT_TRANSLATIONS%%/lxqt-panel/cpuload/cpuload_es_VE.qm
@@ -152,6 +161,7 @@ lib/lxqt-panel/libsysstat.so
 %%LXQT_TRANSLATIONS%%/lxqt-panel/customcommand/customcommand_da.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/customcommand/customcommand_de.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/customcommand/customcommand_el.qm
+%%LXQT_TRANSLATIONS%%/lxqt-panel/customcommand/customcommand_en_GB.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/customcommand/customcommand_es.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/customcommand/customcommand_et.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/customcommand/customcommand_fi.qm
@@ -168,6 +178,7 @@ lib/lxqt-panel/libsysstat.so
 %%LXQT_TRANSLATIONS%%/lxqt-panel/customcommand/customcommand_nb_NO.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/customcommand/customcommand_nl.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/customcommand/customcommand_oc.qm
+%%LXQT_TRANSLATIONS%%/lxqt-panel/customcommand/customcommand_pa.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/customcommand/customcommand_pl.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/customcommand/customcommand_pt.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/customcommand/customcommand_pt_BR.qm
@@ -189,6 +200,7 @@ lib/lxqt-panel/libsysstat.so
 %%LXQT_TRANSLATIONS%%/lxqt-panel/desktopswitch/desktopswitch_da.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/desktopswitch/desktopswitch_de.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/desktopswitch/desktopswitch_el.qm
+%%LXQT_TRANSLATIONS%%/lxqt-panel/desktopswitch/desktopswitch_en_GB.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/desktopswitch/desktopswitch_eo.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/desktopswitch/desktopswitch_es.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/desktopswitch/desktopswitch_es_UY.qm
@@ -241,6 +253,7 @@ lib/lxqt-panel/libsysstat.so
 %%LXQT_TRANSLATIONS%%/lxqt-panel/directorymenu/directorymenu_da.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/directorymenu/directorymenu_de.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/directorymenu/directorymenu_el.qm
+%%LXQT_TRANSLATIONS%%/lxqt-panel/directorymenu/directorymenu_en_GB.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/directorymenu/directorymenu_es.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/directorymenu/directorymenu_et.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/directorymenu/directorymenu_fi.qm
@@ -279,6 +292,7 @@ lib/lxqt-panel/libsysstat.so
 %%LXQT_TRANSLATIONS%%/lxqt-panel/dom/dom_da.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/dom/dom_de.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/dom/dom_el.qm
+%%LXQT_TRANSLATIONS%%/lxqt-panel/dom/dom_en_GB.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/dom/dom_es.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/dom/dom_et.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/dom/dom_fi.qm
@@ -319,6 +333,7 @@ lib/lxqt-panel/libsysstat.so
 %%LXQT_TRANSLATIONS%%/lxqt-panel/fancymenu/fancymenu_da.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/fancymenu/fancymenu_de.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/fancymenu/fancymenu_el.qm
+%%LXQT_TRANSLATIONS%%/lxqt-panel/fancymenu/fancymenu_en_GB.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/fancymenu/fancymenu_eo.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/fancymenu/fancymenu_es.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/fancymenu/fancymenu_es_UY.qm
@@ -333,6 +348,7 @@ lib/lxqt-panel/libsysstat.so
 %%LXQT_TRANSLATIONS%%/lxqt-panel/fancymenu/fancymenu_hu.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/fancymenu/fancymenu_ia.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/fancymenu/fancymenu_id.qm
+%%LXQT_TRANSLATIONS%%/lxqt-panel/fancymenu/fancymenu_is.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/fancymenu/fancymenu_it.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/fancymenu/fancymenu_ja.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/fancymenu/fancymenu_kk.qm
@@ -370,6 +386,7 @@ lib/lxqt-panel/libsysstat.so
 %%LXQT_TRANSLATIONS%%/lxqt-panel/kbindicator/kbindicator_da.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/kbindicator/kbindicator_de.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/kbindicator/kbindicator_el.qm
+%%LXQT_TRANSLATIONS%%/lxqt-panel/kbindicator/kbindicator_en_GB.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/kbindicator/kbindicator_es.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/kbindicator/kbindicator_et.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/kbindicator/kbindicator_fi.qm
@@ -426,6 +443,7 @@ lib/lxqt-panel/libsysstat.so
 %%LXQT_TRANSLATIONS%%/lxqt-panel/lxqt-panel_hu.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/lxqt-panel_ia.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/lxqt-panel_id.qm
+%%LXQT_TRANSLATIONS%%/lxqt-panel/lxqt-panel_is.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/lxqt-panel_it.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/lxqt-panel_ja.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/lxqt-panel_ko.qm
@@ -464,6 +482,7 @@ lib/lxqt-panel/libsysstat.so
 %%LXQT_TRANSLATIONS%%/lxqt-panel/mainmenu/mainmenu_da.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/mainmenu/mainmenu_de.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/mainmenu/mainmenu_el.qm
+%%LXQT_TRANSLATIONS%%/lxqt-panel/mainmenu/mainmenu_en_GB.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/mainmenu/mainmenu_eo.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/mainmenu/mainmenu_es.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/mainmenu/mainmenu_es_UY.qm
@@ -478,6 +497,7 @@ lib/lxqt-panel/libsysstat.so
 %%LXQT_TRANSLATIONS%%/lxqt-panel/mainmenu/mainmenu_hu.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/mainmenu/mainmenu_ia.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/mainmenu/mainmenu_id.qm
+%%LXQT_TRANSLATIONS%%/lxqt-panel/mainmenu/mainmenu_is.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/mainmenu/mainmenu_it.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/mainmenu/mainmenu_ja.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/mainmenu/mainmenu_kk.qm
@@ -515,6 +535,7 @@ lib/lxqt-panel/libsysstat.so
 %%MOUNT%%%%LXQT_TRANSLATIONS%%/lxqt-panel/mount/mount_da.qm
 %%MOUNT%%%%LXQT_TRANSLATIONS%%/lxqt-panel/mount/mount_de.qm
 %%MOUNT%%%%LXQT_TRANSLATIONS%%/lxqt-panel/mount/mount_el.qm
+%%MOUNT%%%%LXQT_TRANSLATIONS%%/lxqt-panel/mount/mount_en_GB.qm
 %%MOUNT%%%%LXQT_TRANSLATIONS%%/lxqt-panel/mount/mount_eo.qm
 %%MOUNT%%%%LXQT_TRANSLATIONS%%/lxqt-panel/mount/mount_es.qm
 %%MOUNT%%%%LXQT_TRANSLATIONS%%/lxqt-panel/mount/mount_es_UY.qm
@@ -557,12 +578,18 @@ lib/lxqt-panel/libsysstat.so
 %%MOUNT%%%%LXQT_TRANSLATIONS%%/lxqt-panel/mount/mount_zh_TW.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/qeyes/qeyes_ar.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/qeyes/qeyes_bg.qm
+%%LXQT_TRANSLATIONS%%/lxqt-panel/qeyes/qeyes_ca.qm
+%%LXQT_TRANSLATIONS%%/lxqt-panel/qeyes/qeyes_da.qm
+%%LXQT_TRANSLATIONS%%/lxqt-panel/qeyes/qeyes_de.qm
+%%LXQT_TRANSLATIONS%%/lxqt-panel/qeyes/qeyes_el.qm
+%%LXQT_TRANSLATIONS%%/lxqt-panel/qeyes/qeyes_en_GB.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/qeyes/qeyes_et.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/qeyes/qeyes_fi.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/qeyes/qeyes_fr.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/qeyes/qeyes_he.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/qeyes/qeyes_it.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/qeyes/qeyes_ko.qm
+%%LXQT_TRANSLATIONS%%/lxqt-panel/qeyes/qeyes_lg.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/qeyes/qeyes_lt.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/qeyes/qeyes_nl.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/qeyes/qeyes_oc.qm
@@ -584,6 +611,7 @@ lib/lxqt-panel/libsysstat.so
 %%LXQT_TRANSLATIONS%%/lxqt-panel/quicklaunch/quicklaunch_da.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/quicklaunch/quicklaunch_de.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/quicklaunch/quicklaunch_el.qm
+%%LXQT_TRANSLATIONS%%/lxqt-panel/quicklaunch/quicklaunch_en_GB.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/quicklaunch/quicklaunch_eo.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/quicklaunch/quicklaunch_es.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/quicklaunch/quicklaunch_es_VE.qm
@@ -633,6 +661,7 @@ lib/lxqt-panel/libsysstat.so
 %%LXQT_TRANSLATIONS%%/lxqt-panel/showdesktop/showdesktop_da.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/showdesktop/showdesktop_de.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/showdesktop/showdesktop_el.qm
+%%LXQT_TRANSLATIONS%%/lxqt-panel/showdesktop/showdesktop_en_GB.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/showdesktop/showdesktop_eo.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/showdesktop/showdesktop_es.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/showdesktop/showdesktop_es_VE.qm
@@ -646,6 +675,7 @@ lib/lxqt-panel/libsysstat.so
 %%LXQT_TRANSLATIONS%%/lxqt-panel/showdesktop/showdesktop_hu.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/showdesktop/showdesktop_ia.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/showdesktop/showdesktop_id.qm
+%%LXQT_TRANSLATIONS%%/lxqt-panel/showdesktop/showdesktop_is.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/showdesktop/showdesktop_it.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/showdesktop/showdesktop_ja.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/showdesktop/showdesktop_ko.qm
@@ -682,6 +712,7 @@ lib/lxqt-panel/libsysstat.so
 %%LXQT_TRANSLATIONS%%/lxqt-panel/spacer/spacer_da.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/spacer/spacer_de.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/spacer/spacer_el.qm
+%%LXQT_TRANSLATIONS%%/lxqt-panel/spacer/spacer_en_GB.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/spacer/spacer_es.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/spacer/spacer_et.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/spacer/spacer_fi.qm
@@ -719,6 +750,8 @@ lib/lxqt-panel/libsysstat.so
 %%LXQT_TRANSLATIONS%%/lxqt-panel/statusnotifier/statusnotifier_cy.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/statusnotifier/statusnotifier_da.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/statusnotifier/statusnotifier_de.qm
+%%LXQT_TRANSLATIONS%%/lxqt-panel/statusnotifier/statusnotifier_el.qm
+%%LXQT_TRANSLATIONS%%/lxqt-panel/statusnotifier/statusnotifier_en_GB.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/statusnotifier/statusnotifier_et.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/statusnotifier/statusnotifier_fi.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/statusnotifier/statusnotifier_fr.qm
@@ -756,6 +789,7 @@ lib/lxqt-panel/libsysstat.so
 %%LXQT_TRANSLATIONS%%/lxqt-panel/sysstat/sysstat_da.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/sysstat/sysstat_de.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/sysstat/sysstat_el.qm
+%%LXQT_TRANSLATIONS%%/lxqt-panel/sysstat/sysstat_en_GB.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/sysstat/sysstat_es.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/sysstat/sysstat_et.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/sysstat/sysstat_fi.qm
@@ -794,6 +828,7 @@ lib/lxqt-panel/libsysstat.so
 %%LXQT_TRANSLATIONS%%/lxqt-panel/taskbar/taskbar_da.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/taskbar/taskbar_de.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/taskbar/taskbar_el.qm
+%%LXQT_TRANSLATIONS%%/lxqt-panel/taskbar/taskbar_en_GB.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/taskbar/taskbar_eo.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/taskbar/taskbar_es.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/taskbar/taskbar_es_VE.qm
@@ -843,6 +878,7 @@ lib/lxqt-panel/libsysstat.so
 %%SOUND%%%%LXQT_TRANSLATIONS%%/lxqt-panel/volume/volume_da.qm
 %%SOUND%%%%LXQT_TRANSLATIONS%%/lxqt-panel/volume/volume_de.qm
 %%SOUND%%%%LXQT_TRANSLATIONS%%/lxqt-panel/volume/volume_el.qm
+%%SOUND%%%%LXQT_TRANSLATIONS%%/lxqt-panel/volume/volume_en_GB.qm
 %%SOUND%%%%LXQT_TRANSLATIONS%%/lxqt-panel/volume/volume_eo.qm
 %%SOUND%%%%LXQT_TRANSLATIONS%%/lxqt-panel/volume/volume_es.qm
 %%SOUND%%%%LXQT_TRANSLATIONS%%/lxqt-panel/volume/volume_es_VE.qm
@@ -889,6 +925,7 @@ lib/lxqt-panel/libsysstat.so
 %%LXQT_TRANSLATIONS%%/lxqt-panel/worldclock/worldclock_da.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/worldclock/worldclock_de.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/worldclock/worldclock_el.qm
+%%LXQT_TRANSLATIONS%%/lxqt-panel/worldclock/worldclock_en_GB.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/worldclock/worldclock_es.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/worldclock/worldclock_et.qm
 %%LXQT_TRANSLATIONS%%/lxqt-panel/worldclock/worldclock_fi.qm

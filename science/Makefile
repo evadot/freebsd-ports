@@ -112,7 +112,6 @@
     SUBDIR += gnudatalanguage
     SUBDIR += gpaw-setups
     SUBDIR += gramps
-    SUBDIR += grib_api
     SUBDIR += gromacs
     SUBDIR += gsmc
     SUBDIR += gtamsanalyzer
@@ -438,6 +437,7 @@
     SUBDIR += py-skrebate
     SUBDIR += py-spaghetti
     SUBDIR += py-spglib
+    SUBDIR += py-symfc
     SUBDIR += py-tensorflow
     SUBDIR += py-thewalrus
     SUBDIR += py-tobler

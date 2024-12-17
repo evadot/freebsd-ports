@@ -11,21 +11,23 @@ WWW=		https://gcc.gnu.org/
 
 USES=		linux:rl9
 USE_LDCONFIG=	yes
-USE_LINUX=	libgfortran
+USE_LINUX=	libgfortran libsigsegv
 USE_LINUX_RPM=	yes
+WANT_LINUX32=	yes
 
 ONLY_FOR_ARCHS=	aarch64 amd64
 
 QA_ENV+=		USESLIBTOOL=no
 
-BUVERSION=	2.35.2-43.el9
-GCCVERSION=	11.4.1-3.el9
-GLIBCVERSION=	2.34-100.el9_4.4
-KERNELVERSION=	5.14.0-427.40.1.el9_4
+BUVERSION=	2.35.2-54.el9
+GCCVERSION=	11.5.0-2.el9
+GLIBCVERSION=	2.34-125.el9_5.1
+KERNELVERSION=	5.14.0-503.16.1.el9_5
 MPFRVERSION=	4.1.0-7.el9
 LIBMPCVERSION=	1.2.1-4.el9
 
 BIN_DISTNAMES=	binutils-${BUVERSION} \
+		binutils-gold-${BUVERSION} \
 		cpp-${GCCVERSION} \
 		gcc-${GCCVERSION} \
 		gcc-c++-${GCCVERSION} \
@@ -60,5 +62,23 @@ PLIST_SUB=	BUVERSION=${BUVERSION} \
 		KERNELVERSION=${KERNELVERSION} \
 		MPFRVERSION=${MPFRVERSION} \
 		LIBMPCVERSION=${LIBMPCVERSION}
+
+.include <bsd.port.options.mk>
+
+post-install:
+	${LN} -sf ld.bfd ${STAGEDIR}${PREFIX}/usr/bin/ld
+.if ${ARCH} == aarch64
+	${LN} -sfh ../../../../lib64/libgcc_s.so.1 \
+	${STAGEDIR}${PREFIX}/usr/lib/gcc/aarch64-redhat-linux/11/libgcc_s.so
+.elif ${ARCH} == amd64
+	${LN} -sfh ../../../../lib64/libgcc_s.so.1 \
+	${STAGEDIR}${PREFIX}/usr/lib/gcc/x86_64-redhat-linux/11/libgcc_s.so
+	${LN} -sfh ../../../../libgcc_s.so.1 \
+	${STAGEDIR}${PREFIX}/usr/lib/gcc/x86_64-redhat-linux/11/32/libgcc_s.so
+.	if defined(WANT_LINUX32)
+		${LN} -sfh ../../../libgcc_s.so.1 \
+		${STAGEDIR}${PREFIX}/usr/lib/gcc/i686-redhat-linux/11/libgcc_s.so
+.	endif
+.endif
 
 .include <bsd.port.mk>

@@ -561,6 +561,9 @@ proxydeps_suggest_uses() {
 	# Qt5
 	elif expr ${pkg} : '.*/qt5-.*' > /dev/null; then
 		warn "you need USES=qt:5 and USE_QT+=$(echo ${pkg} | sed -E 's|.*/qt5-||')"
+	# Qt6
+	elif expr ${pkg} : '.*/qt6-.*' > /dev/null; then
+		warn "you need USES=qt:6 and USE_QT+=$(echo ${pkg} | sed -E 's|.*/qt6-||')"
 	# MySQL
 	elif expr ${lib_file} : "${LOCALBASE}/lib/mysql/[^/]*$" > /dev/null; then
 		warn "you need USES+=mysql"
@@ -577,7 +580,7 @@ proxydeps_suggest_uses() {
 	elif [ ${pkg} = "databases/firebird25-client" ]; then
 		warn "you need USES+=firebird"
 	# fuse
-	elif [ ${pkg} = "sysutils/fusefs-libs" ]; then
+	elif [ ${pkg} = "filesystems/fusefs-libs" ]; then
 		warn "you need USES+=fuse"
 	# gnustep
 	elif [ ${pkg} = "lang/gnustep-base" ]; then

@@ -1,5 +1,5 @@
 PORTNAME=	intellij-ultimate
-DISTVERSION=	2024.2.3
+DISTVERSION=	2024.2.4
 CATEGORIES=	java devel
 MASTER_SITES=	https://download-cdn.jetbrains.com/idea/
 DISTNAME=	ideaIU-${DISTVERSION}
@@ -29,7 +29,7 @@ NO_BUILD=	yes
 SUB_FILES=	idea idea.desktop pkg-message
 
 BUILD_TYPE=	IU
-BUILD_VERSION=	242.23339.11
+BUILD_VERSION=	242.23726.103
 BUILD_MARKER=	${BUILD_TYPE}-${BUILD_VERSION}
 PLIST_SUB=	BUILD_MARKER=${BUILD_MARKER}
 WRKSRC=		${WRKDIR}/idea-${BUILD_MARKER}
@@ -66,6 +66,8 @@ post-patch:
 
 .if ${ARCH} == "amd64"
 JNI_ARCH=	x86-64
+.elif ${ARCH} == "powerpc64le"
+JNI_ARCH=	ppc64le
 .else
 JNI_ARCH=	${ARCH}
 .endif

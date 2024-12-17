@@ -489,6 +489,7 @@
     SUBDIR += legesmotus
     SUBDIR += lexter
     SUBDIR += lgeneral
+    SUBDIR += lgogdownloader
     SUBDIR += libgnome-games-support
     SUBDIR += libkdegames
     SUBDIR += libkmahjongg
@@ -599,6 +600,7 @@
     SUBDIR += lpairs
     SUBDIR += lskat
     SUBDIR += ltris
+    SUBDIR += luanti
     SUBDIR += lugaru
     SUBDIR += luola
     SUBDIR += lwjgl
@@ -628,7 +630,6 @@
     SUBDIR += minecraft-client
     SUBDIR += minecraft-server
     SUBDIR += minerbold
-    SUBDIR += minetest
     SUBDIR += minetest_game
     SUBDIR += minetestmapper
     SUBDIR += mirrormagic
@@ -805,6 +806,7 @@
     SUBDIR += py-pysol-cards
     SUBDIR += py-sgflib
     SUBDIR += py-sgfsummary
+    SUBDIR += py-trueskill
     SUBDIR += pysolfc
     SUBDIR += pysolfc-cardsets
     SUBDIR += pyspacewar
