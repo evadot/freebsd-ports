@@ -948,6 +948,7 @@
     SUBDIR += stratagus
     SUBDIR += stuntrally
     SUBDIR += sudsol
+    SUBDIR += sulis
     SUBDIR += supertux
     SUBDIR += supertux2
     SUBDIR += supertuxkart
@@ -1087,6 +1088,7 @@
     SUBDIR += xdino
     SUBDIR += xemeraldia
     SUBDIR += xeyesplus
+    SUBDIR += xfce4-eyes-plugin
     SUBDIR += xfireworks
     SUBDIR += xfrisk
     SUBDIR += xgalaga

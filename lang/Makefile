@@ -265,7 +265,6 @@
     SUBDIR += p5-ePerl
     SUBDIR += p5-signatures
     SUBDIR += p5-v6
-    SUBDIR += parrot
     SUBDIR += pbasic
     SUBDIR += pcc
     SUBDIR += perl5-devel
@@ -340,6 +339,7 @@
     SUBDIR += rust182
     SUBDIR += rustpython
     SUBDIR += s7
+    SUBDIR += s7-nrepl
     SUBDIR += sagittarius-scheme
     SUBDIR += sather-specification
     SUBDIR += sather-tutorial
@@ -383,7 +383,6 @@
     SUBDIR += tolua
     SUBDIR += tolua++
     SUBDIR += tuareg-mode.el
-    SUBDIR += twelf
     SUBDIR += typstfmt
     SUBDIR += typstyle
     SUBDIR += ucc
