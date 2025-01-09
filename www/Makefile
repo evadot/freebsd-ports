@@ -153,6 +153,7 @@
     SUBDIR += dpp
     SUBDIR += drill
     SUBDIR += drupal10
+    SUBDIR += drupal11
     SUBDIR += drupal7
     SUBDIR += drupal7-wysiwyg
     SUBDIR += drush
@@ -1627,6 +1628,7 @@
     SUBDIR += py-django-templatetag-sugar
     SUBDIR += py-django-timezone-field
     SUBDIR += py-django-tinymce
+    SUBDIR += py-django-tree-queries
     SUBDIR += py-django-treebeard
     SUBDIR += py-django-unfold
     SUBDIR += py-django-voting
