@@ -219,7 +219,6 @@
     SUBDIR += gogglesmm
     SUBDIR += gonic
     SUBDIR += goobox
-    SUBDIR += gqradio
     SUBDIR += gramofile
     SUBDIR += grip
     SUBDIR += gsequencer
@@ -267,7 +266,6 @@
     SUBDIR += gtultra
     SUBDIR += guidoar
     SUBDIR += guidolib
-    SUBDIR += guitarix-lv2
     SUBDIR += gula-plugins-lv2
     SUBDIR += guspat
     SUBDIR += gvolwheel
@@ -849,6 +847,7 @@
     SUBDIR += wavplay
     SUBDIR += webrtc-audio-processing
     SUBDIR += webrtc-audio-processing0
+    SUBDIR += webrtc-audio-processing2
     SUBDIR += welle.io
     SUBDIR += whysynth
     SUBDIR += wildmidi

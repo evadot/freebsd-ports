@@ -1,6 +1,6 @@
 PORTNAME=	kalzium
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	science education kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
@@ -31,6 +31,8 @@ USE_QT=		concurrent core dbus declarative gui network opengl printsupport script
 		buildtools:build qmake:build
 USE_XORG=	x11
 USE_LDCONFIG=	yes
+
+PIE_UNSAFE=	yes
 
 OPTIONS_DEFINE=	DOCS
 
