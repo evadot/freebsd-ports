@@ -39,7 +39,6 @@ ${_gd}_VARS+=		GALLIUM_DRIVERS+=${_gd}
 MESON_ARGS+=	-Dvulkan-drivers="" \
 		-Dandroid-libbacktrace=disabled \
 		-Dgallium-va=disabled \
-		-Dgallium-omx=disabled \
 		-Dgallium-xa=disabled \
 		-Dgallium-opencl=disabled \
 		-Dgallium-nine=false \
@@ -51,8 +50,7 @@ MESON_ARGS+=	-Dvulkan-drivers="" \
 		-Dmicrosoft-clc=disabled \
 		-Dosmesa=false \
 		-Dvalgrind=disabled \
-		-Dglx=disabled \
-		-Ddri3=enabled
+		-Dglx=disabled
 
 LDFLAGS_i386=	-Wl,-znotext
 

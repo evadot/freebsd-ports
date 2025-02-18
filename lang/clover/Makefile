@@ -1,6 +1,5 @@
 PORTNAME=	clover
 PORTVERSION=	${MESAVERSION}
-PORTREVISION=	1
 CATEGORIES=	lang
 
 COMMENT=	Mesa OpenCL implementation for AMD GPUs
@@ -29,7 +28,6 @@ MESON_ARGS+=	-Dplatforms="" \
 		-Dvulkan-drivers="" \
 		-Dandroid-libbacktrace=disabled \
 		-Dgallium-nine=false \
-		-Dgallium-omx=disabled \
 		-Dgallium-opencl=disabled \
 		-Dgallium-va=disabled \
 		-Dgallium-vdpau=disabled \

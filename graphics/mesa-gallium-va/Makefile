@@ -44,7 +44,6 @@ MESON_ARGS+=	-Dvideo-codecs="vc1dec,h264dec,h264enc,h265dec,h265enc,av1dec,av1en
 		-Dvulkan-drivers="" \
 		-Dandroid-libbacktrace=disabled \
 		-Dgallium-vdpau=disabled \
-		-Dgallium-omx=disabled \
 		-Dgallium-xa=disabled \
 		-Dgallium-opencl=disabled \
 		-Dgallium-nine=false \
@@ -56,8 +55,7 @@ MESON_ARGS+=	-Dvideo-codecs="vc1dec,h264dec,h264enc,h265dec,h265enc,av1dec,av1en
 		-Dmicrosoft-clc=disabled \
 		-Dosmesa=false \
 		-Dvalgrind=disabled \
-		-Dglx=disabled \
-		-Ddri3=enabled
+		-Dglx=disabled
 
 LDFLAGS_i386=	-Wl,-znotext
 
