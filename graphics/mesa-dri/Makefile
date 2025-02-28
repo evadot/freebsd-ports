@@ -7,6 +7,8 @@ WWW=		https://www.mesa3d.org/
 
 BUILD_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}ply>0:devel/py-ply@${PY_FLAVOR}
 
+LIB_DEPENDS+=	libglapi.so:graphics/mesa-libs
+
 USES+=		llvm:lib,noexport
 
 OPTIONS_DEFINE=		ZSTD
