@@ -23,6 +23,7 @@ MESON_ARGS+=	-Dgallium-drivers="swrast" \
 		-Dplatforms="" \
 		-Dandroid-libbacktrace=disabled \
 		-Dgallium-vdpau=disabled \
+		-Dgallium-omx=disabled \
 		-Dgallium-va=disabled \
 		-Dgallium-opencl=disabled \
 		-Dgallium-xa=disabled \
