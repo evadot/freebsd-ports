@@ -3,7 +3,6 @@ include/EGL/eglext_angle.h
 include/EGL/eglmesaext.h
 @comment include/GL/internal/dri_interface.h
 include/gbm.h
-@comment lib/dri/libdril_dri.so
 @comment lib/dri/radeon_dri.so
 @comment lib/dri/r300_dri.so
 lib/libEGL_mesa.so
@@ -12,7 +11,6 @@ lib/libEGL_mesa.so.0.0.0
 %%GLX%%lib/libGLX_mesa.so
 %%GLX%%lib/libGLX_mesa.so.0
 %%GLX%%lib/libGLX_mesa.so.0.0.0
-@comment lib/libgallium-24.3.4.so
 lib/libgbm.so
 lib/libgbm.so.1
 lib/libgbm.so.1.0.0

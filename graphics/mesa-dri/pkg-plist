@@ -3,10 +3,10 @@
 @comment include/EGL/eglext.h
 @comment include/EGL/eglmesaext.h
 @comment include/EGL/eglplatform.h
+include/GL/internal/dri_interface.h
 @comment include/GL/gl.h
 @comment include/GL/glcorearb.h
 @comment include/GL/glext.h
-include/GL/internal/dri_interface.h
 @comment include/GLES/egl.h
 @comment include/GLES/gl.h
 @comment include/GLES/glext.h
@@ -36,19 +36,18 @@ include/GL/internal/dri_interface.h
 @comment lib/libEGL.so
 @comment lib/libEGL.so.1
 @comment lib/libEGL.so.1.0.0
-@comment lib/libGLESv1_CM.so
-@comment lib/libGLESv1_CM.so.1
-@comment lib/libGLESv1_CM.so.1.1.0
-@comment lib/libGLESv2.so
-@comment lib/libGLESv2.so.2
-@comment lib/libGLESv2.so.2.0.0
-lib/libgallium-24.3.4.so
 @comment lib/libgbm.so
 @comment lib/libgbm.so.1
 @comment lib/libgbm.so.1.0.0
 @comment lib/libglapi.so
 @comment lib/libglapi.so.0
 @comment lib/libglapi.so.0.0.0
+@comment lib/libGLESv1_CM.so
+@comment lib/libGLESv1_CM.so.1
+@comment lib/libGLESv1_CM.so.1.1.0
+@comment lib/libGLESv2.so
+@comment lib/libGLESv2.so.2
+@comment lib/libGLESv2.so.2.0.0
 %%anv%%lib/libvulkan_intel.so
 %%radv%%lib/libvulkan_radeon.so
 %%swrast_vk%%lib/libvulkan_lvp.so

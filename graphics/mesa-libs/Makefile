@@ -1,5 +1,6 @@
 PORTNAME=	mesa-libs
 PORTVERSION=	${MESAVERSION}
+PORTREVISION=	1
 CATEGORIES=	graphics
 
 COMMENT=	OpenGL libraries that support GLX and EGL clients
@@ -34,6 +35,7 @@ USE_LDCONFIG=		yes
 
 MESON_ARGS+=	-Dandroid-libbacktrace=disabled \
 		-Dgallium-vdpau=disabled \
+		-Dgallium-omx=disabled \
 		-Dgallium-va=disabled \
 		-Dgallium-xa=disabled \
 		-Dgallium-nine=false \
