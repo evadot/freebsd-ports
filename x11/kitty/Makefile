@@ -1,7 +1,6 @@
 PORTNAME=	kitty
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.36.4
-PORTREVISION=	2
+DISTVERSION=	0.40.0
 CATEGORIES=	x11 wayland
 
 MAINTAINER=	nivit@FreeBSD.org
@@ -36,7 +35,7 @@ LIB_DEPENDS=	libcanberra.so:audio/libcanberra \
 		libxxhash.so:devel/xxhash
 
 USES=		compiler:c11 cpe desktop-file-utils gettext-runtime gl gmake \
-		go:1.22,modules magick pkgconfig python shebangfix ssl tar:xz \
+		go:1.23,modules magick pkgconfig python shebangfix ssl tar:xz \
 		terminfo xorg
 CPE_VENDOR=	kitty_project
 
@@ -96,8 +95,6 @@ post-patch:
 		${WRKSRC}/setup.py
 	${REINPLACE_CMD} -e "s:%%DATADIR%%:${DATADIR}:1" \
 		${WRKSRC}/shell-integration/fish/vendor_conf.d/kitty-shell-integration.fish
-	${REINPLACE_CMD} -e "s:^\(go \)1.23:\1${GO_VERSION}:1" \
-		${WRKSRC}/go.mod
 
 # For librsync, we need to set header and library path
 do-build:

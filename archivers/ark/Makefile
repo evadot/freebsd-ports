@@ -3,25 +3,26 @@ DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 PORTREVISION=	1
 CATEGORIES=	archivers kde kde-applications
 
+PATCH_SITES=	https://invent.kde.org/utilities/ark/-/commit/
+PATCHFILES=	21943ff05e7d660e27befd9b43d242076a4b657a.diff:-p1
+
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Archiving tool for KDE
 WWW=		https://utils.kde.org/projects/ark/
 
 LICENSE=	GPLv2+
 
-USES=		cmake compiler:c++11-lang desktop-file-utils gettext libarchive kde:5 \
-		cpe qt:5 tar:xz xorg
-USE_KDE=	archive auth bookmarks codecs completion config configwidgets \
-		coreaddons crash dbusaddons doctools i18n iconthemes \
-		itemmodels itemviews jobwidgets khtml kio parts pty service \
-		solid sonnet textwidgets widgetsaddons windowsystem xmlgui \
+USES=		cmake compiler:c++11-lang cpe desktop-file-utils gettext gl \
+		kde:6 libarchive qt:6 tar:xz xorg
+USE_KDE=	bookmarks colorscheme completion config configwidgets \
+		coreaddons crash dbusaddons doctools filemetadata i18n \
+		iconthemes itemviews jobwidgets kio parts pty service solid \
+		widgetsaddons windowsystem xmlgui \
 		ecm:build
-USE_QT=		concurrent core dbus gui network widgets xml \
-		buildtools:build qmake:build
+USE_GL=		gl opengl
+USE_QT=		base
 USE_XORG=	x11
 USE_LDCONFIG=	yes
-
-PATCH_STRIP=	-p1
 
 OPTIONS_DEFINE=	7ZIP RAR ZIP DOCS
 OPTIONS_DEFAULT=	7ZIP ZIP DOCS

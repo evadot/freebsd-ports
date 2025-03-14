@@ -1,6 +1,7 @@
 PORTNAME=	segyio
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.9.12
+DISTVERSION=	1.9.13
+PORTREVISION=	1
 CATEGORIES=	science python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -38,5 +39,7 @@ post-install:
 
 pre-test:
 	@cd ${WRKSRC} && ${PYTHON_CMD} ${PYSETUP} build_ext --inplace
+
+# tests as of 1.9.13: 208 passed, 8 warnings in 3.65s
 
 .include <bsd.port.mk>

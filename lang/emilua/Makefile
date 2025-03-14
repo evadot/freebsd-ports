@@ -1,6 +1,6 @@
 PORTNAME=	emilua
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.10.1
+DISTVERSION=	0.11.1
 CATEGORIES=	lang devel
 
 MAINTAINER=	manipuladordedados@gmail.com
@@ -11,6 +11,9 @@ LICENSE=	BSL MIT
 LICENSE_COMB=	dual
 LICENSE_FILE_BSL=	${WRKSRC}/LICENSE-BSL-1.0.txt
 LICENSE_FILE_MIT=	${WRKSRC}/LICENSE-MIT.txt
+
+ONLY_FOR_ARCHS= 	amd64 aarch64
+ONLY_FOR_ARCHS_REASON=	expression cannot be narrowed from type 'streamoff' (aka 'long long') to 'lua_Integer' (aka 'int')
 
 BUILD_DEPENDS=	asciidoctor:textproc/rubygem-asciidoctor \
 		boost-libs>0:devel/boost-libs \
@@ -27,9 +30,6 @@ LIB_DEPENDS=	libserd-0.so:devel/serd \
 
 USES=		localbase luajit:luajit-devel meson ncurses pathfix \
 		pkgconfig ssl
-USE_GITHUB=	nodefault
-GH_TUPLE=	breese:trial.protocol:79149f6:trial_protocol/subprojects/trial-protocol \
-		chriskohlhoff:asio:c586e95:asio/subprojects/asio
 USE_GITLAB=	yes
 
 CONFIGURE_ENV+=	BOOST_INCLUDEDIR="${LOCALBASE}/include" \
@@ -40,10 +40,5 @@ MESON_ARGS=	--buildtype=plain \
 		-Db_pch=false \
 		-Denable_manpages=true \
 		-Denable_tests=true \
-		-Duse_standalone_asio=true
-
-post-extract:
-	${CP} ${WRKSRC}/subprojects/packagefiles/trial.protocol/meson.build \
-		${WRKSRC}/subprojects/trial-protocol/
 
 .include <bsd.port.mk>

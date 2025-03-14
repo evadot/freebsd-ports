@@ -1,6 +1,5 @@
 PORTNAME=	miktex
-DISTVERSION=	24.4
-PORTREVISION=	1
+DISTVERSION=	25.2
 CATEGORIES=	print
 MASTER_SITES=	https://miktex.org/download/ctan/systems/win32/miktex/source/ \
 		https://ctan.org/tex-archive/systems/win32/miktex/tm/packages/:bootstrap
@@ -67,6 +66,8 @@ CMAKE_ON=	WITH_MAN_PAGES
 MAKE_JOBS_UNSAFE=	yes
 
 LDFLAGS+=	-linotify
+
+WRKSRC=		${WRKDIR}/${PORTNAME}.${DISTVERSION}
 
 OPTIONS_DEFINE=		UIQT
 OPTIONS_DEFAULT=	UIQT

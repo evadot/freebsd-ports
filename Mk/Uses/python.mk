@@ -675,7 +675,6 @@ BUILD_DEPENDS+=		${PYTHON_PKGNAMEPREFIX}setuptools44>0:devel/py-setuptools44@${P
 RUN_DEPENDS+=		${PYTHON_PKGNAMEPREFIX}setuptools44>0:devel/py-setuptools44@${PY_FLAVOR}
 .    else
 BUILD_DEPENDS+=		${PYTHON_PKGNAMEPREFIX}setuptools>=63.1.0:devel/py-setuptools@${PY_FLAVOR}
-RUN_DEPENDS+=		${PYTHON_PKGNAMEPREFIX}setuptools>=63.1.0:devel/py-setuptools@${PY_FLAVOR}
 .    endif
 .  endif
 
@@ -932,7 +931,7 @@ BUILD_DEPENDS+=	${PEP517_BUILD_DEPEND}
 BUILD_DEPENDS+=	${PEP517_INSTALL_DEPEND}
 .    endif
 
-.    if !target(do-configure)
+.    if !target(do-configure) && !defined(HAS_CONFIGURE) && !defined(GNU_CONFIGURE)
 do-configure:
 	@${DO_NADA}
 .    endif

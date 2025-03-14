@@ -1,5 +1,5 @@
 PORTNAME=	phonopy
-DISTVERSION=	2.33.3
+DISTVERSION=	2.38.0
 CATEGORIES=	science python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -16,7 +16,8 @@ BUILD_DEPENDS=	cmake:devel/cmake-core \
 		${PYTHON_PKGNAMEPREFIX}nanobind>0:devel/py-nanobind@${PY_FLAVOR} \
 		${PYNUMPY} \
 		${PYTHON_PKGNAMEPREFIX}scikit-build-core>0:devel/py-scikit-build-core@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}setuptools-scm>=0:devel/py-setuptools-scm@${PY_FLAVOR}
+		${PY_SETUPTOOLS} \
+		${PYTHON_PKGNAMEPREFIX}setuptools-scm>0:devel/py-setuptools-scm@${PY_FLAVOR}
 RUN_DEPENDS=	${PYNUMPY} \
 		${PYTHON_PKGNAMEPREFIX}h5py>=3.0:science/py-h5py@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}matplotlib>=2.2.2:math/py-matplotlib@${PY_FLAVOR} \
@@ -35,6 +36,6 @@ TEST_WRKSRC=	${WRKSRC}/test
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/phonopy/_phonopy${PYTHON_EXT_SUFFIX}.so
 
-# tests as of 2.33.3: 1 failed, 254 passed, 4 skipped, 1 error in 1033.15s (0:17:13) (failure is likely in science/py-symfc with -9999 error)
+# tests as of 2.37.0: 3 failed, 270 passed, 4 skipped, 4 warnings, 5 errors in 1448.81s (0:24:08) (failures are likely in science/py-symfc with -9999 error)
 
 .include <bsd.port.mk>

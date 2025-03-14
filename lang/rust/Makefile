@@ -1,6 +1,6 @@
 PORTNAME=	rust
-PORTVERSION?=	1.84.0
-PORTREVISION?=	0
+PORTVERSION?=	1.85.0
+PORTREVISION?=	1
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/:src \
 		https://dev-static.rust-lang.org/dist/:src \
@@ -38,7 +38,7 @@ MAKE_ENV=	DESTDIR=${STAGEDIR} \
 TEST_ENV=	${MAKE_ENV} \
 		ALLOW_NONZERO_RLIMIT_CORE=1
 
-CONFLICTS_INSTALL?=	rust-nightly rust182
+CONFLICTS_INSTALL?=	rust-nightly
 
 # rustc stashes intermediary files in TMPDIR (default /tmp) which
 # might cause issues for users that for some reason space limit
@@ -72,8 +72,8 @@ WASM_VARS=		_COMPONENTS+="rust-analysis-${_PACKAGE_VERS}-wasm32-unknown-unknown 
 			_RUST_TARGETS+=wasm32-unknown-unknown
 
 # See WRKSRC/src/stage0 for the date and version values
-BOOTSTRAPS_DATE?=		2024-11-28
-RUST_BOOTSTRAP_VERSION?=	1.83.0
+BOOTSTRAPS_DATE?=		2025-01-09
+RUST_BOOTSTRAP_VERSION?=	1.84.0
 
 CARGO_VENDOR_DIR?=		${WRKSRC}/vendor
 
@@ -171,7 +171,11 @@ do-configure:
 	@${ECHO_CMD} 'vendor=true' >> ${WRKSRC}/config.toml
 	@${ECHO_CMD} 'extended=true' >> ${WRKSRC}/config.toml
 	@${ECHO_CMD} 'python="${PYTHON_CMD}"' >> ${WRKSRC}/config.toml
+.if ${ARCH} == "armv7"
+	@${ECHO_CMD} 'docs=false' >> ${WRKSRC}/config.toml
+.else
 	@${ECHO_CMD} 'docs=${_RUST_BUILD_DOCS}' >> ${WRKSRC}/config.toml
+.endif
 	@${ECHO_CMD} 'verbose=2' >> ${WRKSRC}/config.toml
 .if defined(NIGHTLY_DATE)
 	@${ECHO_CMD} 'profiler=true' >> ${WRKSRC}/config.toml

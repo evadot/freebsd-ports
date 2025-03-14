@@ -1,5 +1,5 @@
 PORTNAME=	sdl2
-DISTVERSION=	2.30.10
+DISTVERSION=	2.32.2
 PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/libsdl-org/SDL/releases/download/release-${DISTVERSION}/ \

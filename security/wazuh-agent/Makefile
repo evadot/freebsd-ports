@@ -1,5 +1,5 @@
 PORTNAME=	wazuh
-DISTVERSION=	4.10.1
+DISTVERSION=	4.11.0
 DISTVERSIONPREFIX=	v
 CATEGORIES=	security
 MASTER_SITES=	https://packages.wazuh.com/deps/35/libraries/sources/:wazuh_sources

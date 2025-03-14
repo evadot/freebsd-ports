@@ -20,7 +20,6 @@
     SUBDIR += bootstrap-openjdk17
     SUBDIR += bootstrap-openjdk8
     SUBDIR += bouncycastle
-    SUBDIR += cos
     SUBDIR += dbvis
     SUBDIR += eclipse
     SUBDIR += eclipse-EPIC
@@ -33,7 +32,6 @@
     SUBDIR += eclipse-yaml-editor
     SUBDIR += hamcrest
     SUBDIR += icedtea-web
-    SUBDIR += infobus
     SUBDIR += intellij
     SUBDIR += intellij-fsnotifier
     SUBDIR += intellij-pty4j

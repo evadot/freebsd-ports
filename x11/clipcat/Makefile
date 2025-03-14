@@ -1,7 +1,6 @@
 PORTNAME=	clipcat
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.20.0
-PORTREVISION=	1
+DISTVERSION=	0.21.0
 CATEGORIES=	x11
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -52,7 +51,7 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		async-stream-0.3.6 \
 		async-stream-impl-0.3.6 \
 		async-task-4.7.1 \
-		async-trait-0.1.84 \
+		async-trait-0.1.86 \
 		atomic-waker-1.1.2 \
 		atty-0.2.14 \
 		autocfg-1.4.0 \
@@ -71,13 +70,14 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		block-0.1.6 \
 		block-buffer-0.10.4 \
 		block2-0.5.1 \
+		block2-0.6.0 \
 		blocking-1.6.1 \
 		built-0.7.5 \
 		bumpalo-3.16.0 \
 		bytemuck-1.21.0 \
 		byteorder-1.5.0 \
 		byteorder-lite-0.1.0 \
-		bytes-1.9.0 \
+		bytes-1.10.0 \
 		cc-1.2.7 \
 		cfg-expr-0.15.8 \
 		cfg-if-1.0.0 \
@@ -85,10 +85,10 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		cfg_aliases-0.2.1 \
 		chrono-0.4.39 \
 		clap-3.2.25 \
-		clap-4.5.23 \
-		clap_builder-4.5.23 \
-		clap_complete-4.5.40 \
-		clap_derive-4.5.18 \
+		clap-4.5.31 \
+		clap_builder-4.5.31 \
+		clap_complete-4.5.46 \
+		clap_derive-4.5.28 \
 		clap_lex-0.2.4 \
 		clap_lex-0.7.4 \
 		clipboard-win-5.4.0 \
@@ -167,7 +167,7 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		futures-core-0.3.31 \
 		futures-executor-0.3.31 \
 		futures-io-0.3.31 \
-		futures-lite-2.5.0 \
+		futures-lite-2.6.0 \
 		futures-macro-0.3.31 \
 		futures-sink-0.3.31 \
 		futures-task-0.3.31 \
@@ -226,7 +226,6 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		is_debug-1.0.2 \
 		is_terminal_polyfill-1.70.1 \
 		itertools-0.12.1 \
-		itertools-0.13.0 \
 		itoa-1.0.14 \
 		jobserver-0.1.32 \
 		jpeg-decoder-0.3.1 \
@@ -235,7 +234,7 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		kqueue-sys-1.0.4 \
 		lazy_static-1.5.0 \
 		lebe-0.5.2 \
-		libc-0.2.169 \
+		libc-0.2.170 \
 		libfuzzer-sys-0.4.8 \
 		libgit2-sys-0.17.0+1.8.1 \
 		libloading-0.8.6 \
@@ -271,7 +270,7 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		nom-7.1.3 \
 		noop_proc_macro-0.3.0 \
 		notify-6.1.1 \
-		notify-rust-4.11.3 \
+		notify-rust-4.11.5 \
 		nu-ansi-term-0.46.0 \
 		num-bigint-0.4.6 \
 		num-conv-0.1.0 \
@@ -284,16 +283,26 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		objc-foundation-0.1.1 \
 		objc-sys-0.3.5 \
 		objc2-0.5.2 \
+		objc2-0.6.0 \
 		objc2-app-kit-0.2.2 \
+		objc2-app-kit-0.3.0 \
+		objc2-cloud-kit-0.3.0 \
 		objc2-core-data-0.2.2 \
+		objc2-core-data-0.3.0 \
+		objc2-core-foundation-0.3.0 \
+		objc2-core-graphics-0.3.0 \
 		objc2-core-image-0.2.2 \
-		objc2-encode-4.0.3 \
+		objc2-core-image-0.3.0 \
+		objc2-encode-4.1.0 \
 		objc2-foundation-0.2.2 \
+		objc2-foundation-0.3.0 \
+		objc2-io-surface-0.3.0 \
 		objc2-metal-0.2.2 \
 		objc2-quartz-core-0.2.2 \
+		objc2-quartz-core-0.3.0 \
 		objc_id-0.1.1 \
 		object-0.36.7 \
-		once_cell-1.20.2 \
+		once_cell-1.20.3 \
 		option-ext-0.2.0 \
 		ordered-multimap-0.3.1 \
 		ordered-stream-0.2.0 \
@@ -322,10 +331,10 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		profiling-1.0.16 \
 		profiling-procmacros-1.0.16 \
 		prometheus-0.13.4 \
-		prost-0.13.4 \
-		prost-build-0.13.4 \
-		prost-derive-0.13.4 \
-		prost-types-0.13.4 \
+		prost-0.13.5 \
+		prost-build-0.13.5 \
+		prost-derive-0.13.5 \
+		prost-types-0.13.5 \
 		protobuf-2.28.0 \
 		qoi-0.4.1 \
 		quick-error-2.0.1 \
@@ -354,17 +363,16 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		same-file-1.0.6 \
 		scoped-tls-1.0.1 \
 		scopeguard-1.2.0 \
-		semver-1.0.24 \
-		serde-1.0.217 \
-		serde_derive-1.0.217 \
-		serde_json-1.0.134 \
+		semver-1.0.25 \
+		serde-1.0.218 \
+		serde_derive-1.0.218 \
+		serde_json-1.0.139 \
 		serde_path_to_error-0.1.16 \
 		serde_repr-0.1.19 \
 		serde_spanned-0.6.8 \
 		serde_urlencoded-0.7.1 \
 		serde_with-3.12.0 \
 		serde_with_macros-3.12.0 \
-		sha1-0.10.6 \
 		sha2-0.10.8 \
 		shadow-rs-0.29.0 \
 		sharded-slab-0.1.7 \
@@ -406,8 +414,8 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		time-macros-0.2.19 \
 		timer-0.2.0 \
 		tinystr-0.7.6 \
-		tokio-1.42.0 \
-		tokio-macros-2.4.0 \
+		tokio-1.43.0 \
+		tokio-macros-2.5.0 \
 		tokio-stream-0.1.17 \
 		tokio-util-0.7.13 \
 		toml-0.8.19 \
@@ -497,6 +505,7 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		windows_x86_64_msvc-0.48.5 \
 		windows_x86_64_msvc-0.52.6 \
 		winnow-0.6.22 \
+		winnow-0.7.1 \
 		wl-clipboard-rs-0.8.1 \
 		wl-clipboard-rs-0.9.1 \
 		write16-1.0.0 \
@@ -506,9 +515,9 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		xdg-home-1.3.0 \
 		yoke-0.7.5 \
 		yoke-derive-0.7.5 \
-		zbus-4.4.0 \
-		zbus_macros-4.4.0 \
-		zbus_names-3.0.0 \
+		zbus-5.5.0 \
+		zbus_macros-5.5.0 \
+		zbus_names-4.1.1 \
 		zerocopy-0.7.35 \
 		zerocopy-derive-0.7.35 \
 		zerofrom-0.1.5 \
@@ -518,9 +527,9 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		zune-core-0.4.12 \
 		zune-inflate-0.2.54 \
 		zune-jpeg-0.4.14 \
-		zvariant-4.2.0 \
-		zvariant_derive-4.2.0 \
-		zvariant_utils-2.1.0
+		zvariant-5.4.0 \
+		zvariant_derive-5.4.0 \
+		zvariant_utils-3.1.0
 
 PLIST_FILES=	bin/clipcat-menu \
 		bin/clipcatctl \

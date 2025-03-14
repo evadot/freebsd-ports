@@ -1,8 +1,7 @@
 PORTNAME=	rpcs3
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.0.34-17373 # git rev-list --count HEAD
-DISTVERSIONSUFFIX=	-g6fddb31a07
-PORTREVISION=	1
+DISTVERSION=	0.0.35-17644 # git rev-list --count HEAD
+DISTVERSIONSUFFIX=	-ga108ce8015
 CATEGORIES=	emulators wayland
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -15,8 +14,7 @@ LICENSE_FILE_ISCL=	${WRKSRC_cubeb}/LICENSE
 LICENSE_FILE_ZLIB=	${WRKSRC_asmjit}/LICENSE.md
 
 BUILD_DEPENDS=	flatc:devel/flatbuffers
-LIB_DEPENDS=	libxxhash.so:devel/xxhash \
-		libcurl.so:ftp/curl \
+LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libpng.so:graphics/png \
 		libavcodec.so:multimedia/ffmpeg \
 		libpugixml.so:textproc/pugixml
@@ -29,7 +27,7 @@ GH_ACCOUNT=	RPCS3
 GH_TUPLE=	RPCS3:hidapi:hidapi-0.14.0-2-g8b43a97:hidapi/3rdparty/hidapi/hidapi \
 		RPCS3:soundtouch:2.3.1-68-g394e1f5:soundtouch/3rdparty/SoundTouch/soundtouch \
 		asmjit:asmjit:416f735:asmjit/3rdparty/asmjit/asmjit \
-		facebook:zstd:v1.4.7-2181-g97291fc5:zstd/3rdparty/zstd/zstd \
+		facebook:zstd:v1.5.7:zstd/3rdparty/zstd/zstd \
 		jbeder:yaml-cpp:0.8.0-11-g456c68f:yamlcpp/3rdparty/yaml-cpp/yaml-cpp \
 		KhronosGroup:glslang:13.1.1:glslang/3rdparty/glslang/glslang \
 		kcat:openal-soft:1.23.1:openal_soft/3rdparty/OpenAL/openal-soft \
@@ -37,9 +35,9 @@ GH_TUPLE=	RPCS3:hidapi:hidapi-0.14.0-2-g8b43a97:hidapi/3rdparty/hidapi/hidapi \
 		miniupnp:miniupnp:miniupnpd_2_3_6:miniupnp/3rdparty/miniupnp/miniupnp \
 		nothings:stb:013ac3b:stb/3rdparty/stblib/stb \
 		wolfSSL:wolfssl:v5.7.6-stable:wolfssl/3rdparty/wolfssl/wolfssl \
-		xioTechnologies:Fusion:v1.2.7:fusion/3rdparty/fusion/fusion
+		xioTechnologies:Fusion:v1.2.8:fusion/3rdparty/fusion/fusion
 
-USES=		cmake gl iconv:wchar_t llvm:min=16,lib localbase:ldflags \
+USES=		cmake gl iconv:wchar_t llvm:min=19,lib localbase:ldflags \
 		openal:soft pkgconfig python:build qt:6 xorg
 USE_GL=		gl glew
 USE_QT=		base multimedia svg
@@ -49,8 +47,8 @@ CMAKE_ON+=	BUNDLE_SPEEX # only used by cubeb tests
 CMAKE_OFF=	USE_NATIVE_INSTRUCTIONS USE_PRECOMPILED_HEADERS
 LDFLAGS+=	-Wl,--as-needed # GLU
 
-OPTIONS_DEFINE=	ALSA EVDEV FAUDIO OPENCV PULSEAUDIO JACK SDL SNDIO VULKAN
-OPTIONS_DEFAULT=EVDEV FAUDIO OPENCV PULSEAUDIO JACK SDL SNDIO VULKAN
+OPTIONS_DEFINE=	ALSA EVDEV FAUDIO JACK LTO OPENCV PULSEAUDIO SDL SNDIO VULKAN
+OPTIONS_DEFAULT=EVDEV FAUDIO JACK LTO OPENCV PULSEAUDIO SDL SNDIO VULKAN
 
 ALSA_BUILD_DEPENDS=	alsa-lib>0:audio/alsa-lib
 ALSA_CMAKE_BOOL=	USE_ALSA
@@ -62,11 +60,13 @@ EVDEV_LIB_DEPENDS=	libevdev.so:devel/libevdev \
 			libudev.so:devel/libudev-devd
 
 FAUDIO_DESC=		FAudio audio support
-FAUDIO_LIB_DEPENDS=	libFAudio.so:audio/faudio
+FAUDIO_LIB_DEPENDS=	libFAudio.so:audio/faudio@sdl3
 FAUDIO_CMAKE_BOOL=	USE_FAUDIO USE_SYSTEM_FAUDIO
 
 JACK_BUILD_DEPENDS=	jackit>0:audio/jack
 JACK_CMAKE_BOOL=	USE_JACK
+
+LTO_CMAKE_BOOL=		USE_LTO
 
 OPENCV_LIB_DEPENDS=	libopencv_imgproc.so:graphics/opencv
 OPENCV_CMAKE_BOOL=	USE_SYSTEM_OPENCV
@@ -75,7 +75,7 @@ PULSEAUDIO_BUILD_DEPENDS=pulseaudio>0:audio/pulseaudio
 PULSEAUDIO_CMAKE_BOOL=	USE_PULSE
 
 SDL_USES=		sdl
-SDL_USE=		SDL=sdl2
+SDL_USE=		SDL=sdl3
 SDL_CMAKE_BOOL=		USE_SDL USE_SYSTEM_SDL
 
 SNDIO_BUILD_DEPENDS=	sndio>0:audio/sndio

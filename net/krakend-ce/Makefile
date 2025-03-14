@@ -1,6 +1,6 @@
 PORTNAME=	krakend-ce
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.9.0
+DISTVERSION=	2.9.3
 CATEGORIES=	net
 
 MAINTAINER=	alster@vinterdalen.se

@@ -312,7 +312,7 @@ readarr:*:362:362::0:0:Readarr Daemon:/nonexistent:/usr/sbin/nologin
 victoria-logs:*:363:363::0:0:VictoriaLogs Daemon:/nonexistent:/usr/sbin/nologin
 elog:*:364:364::0:0:Elog server:/nonexistent:/usr/sbin/nologin
 gotify:*:365:365::0:0:Gotify User:/var/db/gotify:/usr/sbin/nologin
-# free: 366
+opengist:*:366:366::0:0:OpenGist User:/var/db/opengist:/usr/sbin/nologin
 # free: 367
 # free: 368
 # free: 369
@@ -446,8 +446,8 @@ openbao:*:482:482:daemon:0:0:OpenBao Daemon:/nonexistent:/usr/sbin/nologin
 # free: 497
 rustypaste:*:498:498::0:0:Minimal file upload/pastebin service:/nonexistent:/usr/sbin/nologin
 # free: 499
-# free: 500
-# free: 501
+qw:*:500:500::0:0:QuakeWorld Server:/nonexistent:/usr/sbin/nologin
+qwfwd:*:501:501::0:0:QuakeWorld Proxy:/nonexistent:/usr/sbin/nologin
 # free: 502
 # free: 503
 # free: 504
@@ -753,7 +753,7 @@ clickhouse:*:800:800::0:0:ClickHouse Daemon:/var/db/clickhouse:/usr/sbin/nologin
 # free: 803
 # free: 804
 # free: 805
-# free: 806
+act_runner:*:806:806::0:0:Act Runner User:/var/db/act_runner:/usr/sbin/nologin
 bosun:*:807:807::0:0:Bosun Daemon:/nonexistent:/usr/sbin/nologin
 clixon:*:808:808::0:0:Clixon Daemon:/nonexistent:/usr/sbin/nologin
 # free: 809
@@ -811,7 +811,7 @@ opensearch:*:855:855::0:0:opensearch user:/nonexistent:/usr/sbin/nologin
 # free: 861
 # free: 862
 # free: 863
-# free: 864
+mediamtx:*:864:864::0:0:mediamtx:/nonexistent:/usr/sbin/nologin
 z2m:*:865:865::0:0:zigbee2mqtt:/usr/local/z2m:/usr/sbin/nologin
 # free: 866
 sqlpage:*:867:867::0:0:SQLPage:/nonexistent:/usr/sbin/nologin

@@ -1,11 +1,14 @@
 PORTNAME=	marble
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
-PORTREVISION=	7
 CATEGORIES=	astro education kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Virtual globe and world atlas for KDE
 WWW=		https://marble.kde.org/
+
+PATCH_SITES=	https://invent.kde.org/education/marble/-/commit/
+PATCHFILES+=	8d21b43f569adcd3bb76d3f9d921f2aaddb2c303.patch:-p1 # Fix build with Qt 6.9
+PATCHFILES+=	a14a3a911f5a8f152783a97410267a6fd98cce48.patch:-p1 # Fix build with Qt 6.9
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
@@ -13,16 +16,14 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 LIB_DEPENDS=	libprotobuf.so:devel/protobuf
 
 USES=		cmake compiler:c++11-lang desktop-file-utils gettext \
-		kde:5 qt:5 shared-mime-info tar:xz xorg
+		kde:6 qt:6 shared-mime-info tar:xz xorg
 USE_KDE=	auth codecs completion config configwidgets coreaddons \
-		crash doctools i18n jobwidgets kio package parts phonon \
-		plasma-framework plasma-workspace-wallpapers runner service solid \
+		crash doctools i18n jobwidgets kio kirigami-addons package \
+		parts phonon plasma-workspace-wallpapers runner service solid \
 		sonnet textwidgets widgetsaddons windowsystem xmlgui \
 		ecm:build
 USE_LDCONFIG=	yes
-USE_QT=		concurrent core dbus declarative designer gui network \
-		printsupport serialport sql svg widgets xml \
-		buildtools:build qmake:build testlib:build
+USE_QT=		base declarative positioning svg
 USE_XORG=	x11
 
 CMAKE_OFF=	MOBILE
@@ -41,8 +42,8 @@ GPS_USE=		QT=location
 GPS_LIB_DEPENDS=	libgps.so:astro/gpsd
 GPS_CMAKE_BOOL_OFF=	CMAKE_DISABLE_FIND_PACKAGE_libgps
 
-WEBENGINE_DESC=		Build various plugins that require qt5-webengine
+WEBENGINE_DESC=		Build various plugins that require qt6-webengine
 WEBENGINE_USE=		QT=location,webchannel,webengine
-WEBENGINE_CMAKE_BOOL_OFF=	CMAKE_DISABLE_FIND_PACKAGE_Qt5WebEngineWidgets
+WEBENGINE_CMAKE_BOOL_OFF=	CMAKE_DISABLE_FIND_PACKAGE_Qt6WebEngineWidgets
 
 .include <bsd.port.mk>

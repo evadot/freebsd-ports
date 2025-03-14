@@ -20,14 +20,15 @@
     SUBDIR += aqbanking
     SUBDIR += beancount
     SUBDIR += beangulp
-    SUBDIR += beanquery
     SUBDIR += beanie
+    SUBDIR += beanquery
     SUBDIR += chiapos
     SUBDIR += electrs
     SUBDIR += electrum
     SUBDIR += expense
     SUBDIR += fabric
     SUBDIR += fava
+    SUBDIR += favagtk
     SUBDIR += fixc
     SUBDIR += freqtrade
     SUBDIR += frontaccounting

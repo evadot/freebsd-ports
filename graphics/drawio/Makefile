@@ -1,6 +1,6 @@
 PORTNAME=	drawio
-PORTVERSION=	24.7.17
-PORTREVISION=	3
+PORTVERSION=	26.0.9
+PORTREVISION=	2
 DISTVERSIONPREFIX=	x86_64-
 CATEGORIES=	graphics
 MASTER_SITES=	https://github.com/jgraph/drawio-desktop/releases/download/v${PORTVERSION}/

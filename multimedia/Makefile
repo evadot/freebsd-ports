@@ -35,6 +35,7 @@
     SUBDIR += cx88
     SUBDIR += dav1d
     SUBDIR += decord
+    SUBDIR += deforaos-camera
     SUBDIR += deforaos-player
     SUBDIR += dirac
     SUBDIR += dovi_tool
@@ -168,7 +169,6 @@
     SUBDIR += libdvdcss
     SUBDIR += libdvdnav
     SUBDIR += libdvdread
-    SUBDIR += libfame
     SUBDIR += libgav1
     SUBDIR += libhdhomerun
     SUBDIR += libmatroska
@@ -225,6 +225,7 @@
     SUBDIR += makemkv
     SUBDIR += mediaelch
     SUBDIR += mediainfo
+    SUBDIR += mediamtx
     SUBDIR += mencoder
     SUBDIR += minisatip
     SUBDIR += minitube
@@ -239,7 +240,6 @@
     SUBDIR += mp3cd
     SUBDIR += mp4v2
     SUBDIR += mpc-qt
-    SUBDIR += mpeg_encode
     SUBDIR += mplayer
     SUBDIR += mplayer-skins
     SUBDIR += mplex
@@ -261,6 +261,7 @@
     SUBDIR += nymphcast
     SUBDIR += nymphcastlib
     SUBDIR += nymphrpc
+    SUBDIR += obs-multi-rtmp
     SUBDIR += obs-recursion-effect
     SUBDIR += obs-streamfx
     SUBDIR += obs-studio
@@ -288,12 +289,12 @@
     SUBDIR += peek
     SUBDIR += phonon
     SUBDIR += phonon-designerplugin
+    SUBDIR += phonon-mpv
     SUBDIR += phonon-vlc
     SUBDIR += photofilmstrip
     SUBDIR += pipe-viewer
     SUBDIR += pipewire
     SUBDIR += pitivi
-    SUBDIR += plasma5-plank-player
     SUBDIR += plasmatube
     SUBDIR += playerctl
     SUBDIR += plexmediaserver

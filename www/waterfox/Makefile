@@ -1,6 +1,5 @@
 PORTNAME=	waterfox
-DISTVERSION=	6.5.3
-PORTREVISION=	1
+DISTVERSION=	6.5.5
 PORTEPOCH=	1
 CATEGORIES=	www
 
@@ -12,20 +11,23 @@ LICENSE=	MPL20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	nspr>=4.32:devel/nspr \
-		nss>=3.107:security/nss \
+		nss>=3.108:security/nss \
 		icu>=74.2:devel/icu \
 		libevent>=2.1.8:devel/libevent \
 		harfbuzz>=10.1.0:print/harfbuzz \
 		graphite2>=1.3.14:graphics/graphite2 \
-		png>=1.6.44:graphics/png \
+		png>=1.6.45:graphics/png \
 		dav1d>=1.0.0:multimedia/dav1d \
-		libvpx>=1.14.1:multimedia/libvpx \
+		libvpx>=1.15.0:multimedia/libvpx \
 		${PYTHON_PKGNAMEPREFIX}sqlite3>0:databases/py-sqlite3@${PY_FLAVOR} \
 		v4l_compat>0:multimedia/v4l_compat \
 		autoconf2.13:devel/autoconf2.13 \
 		nasm:devel/nasm \
 		yasm:devel/yasm \
-		zip:archivers/zip
+		zip:archivers/zip \
+		${LOCALBASE}/share/wasi-sysroot/lib/wasm32-wasi/libc++abi.a:devel/wasi-libcxx${LLVM_VERSION} \
+		${LOCALBASE}/share/wasi-sysroot/lib/wasm32-wasi/libc.a:devel/wasi-libc@${LLVM_VERSION} \
+		wasi-compiler-rt${LLVM_VERSION}>0:devel/wasi-compiler-rt${LLVM_VERSION}
 
 USE_GECKO=	gecko
 USE_GITHUB=	yes
@@ -39,6 +41,7 @@ USE_MOZILLA=	-sqlite
 CONFIGURE_ENV+=		BINDGEN_CFLAGS="-I${LOCALBASE}/include" \
 			MOZ_REQUIRE_SIGNING=""
 
+CFLAGS_powerpc64=	-DHWY_COMPILE_ONLY_SCALAR
 CFLAGS_powerpc64le=	-DSQLITE_BYTEORDER=1234
 
 BINARY_ALIAS+=		python3=${PYTHON_CMD}
@@ -64,6 +67,7 @@ MOZ_OPTIONS+=	--enable-application=browser \
 		--with-app-name=${MOZILLA} \
 		--with-unsigned-addon-scopes=app,system \
 		--enable-bootstrap \
+		--with-wasi-sysroot=${LOCALBASE}/share/wasi-sysroot \
 		MOZ_CRASHREPORTER=0 \
 		MOZ_DATA_REPORTING=0
 
@@ -77,16 +81,6 @@ FIREFOX_DESKTOP=	${MOZSRC}/taskcluster/docker/firefox-snap/firefox.desktop
 
 .if ${ARCH} == amd64
 MOZ_OPTIONS+=	--enable-rust-simd
-.endif
-
-.if ${ARCH} == powerpc64
-CFLAGS+=	-DHWY_COMPILE_ONLY_SCALAR
-MOZ_OPTIONS+=	--without-wasm-sandboxed-libraries
-.else
-BUILD_DEPENDS+=	${LOCALBASE}/share/wasi-sysroot/lib/wasm32-wasi/libc++abi.a:devel/wasi-libcxx${LLVM_VERSION} \
-		${LOCALBASE}/share/wasi-sysroot/lib/wasm32-wasi/libc.a:devel/wasi-libc@${LLVM_VERSION} \
-		wasi-compiler-rt${LLVM_VERSION}>0:devel/wasi-compiler-rt${LLVM_VERSION}
-MOZ_OPTIONS+=	--with-wasi-sysroot=${LOCALBASE}/share/wasi-sysroot
 .endif
 
 post-patch:

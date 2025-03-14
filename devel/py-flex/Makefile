@@ -1,6 +1,7 @@
 PORTNAME=	flex
 DISTVERSIONPREFIX=	v
 DISTVERSION=	6.14.1
+PORTREVISION=	1
 CATEGORIES=	devel python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -10,6 +11,8 @@ WWW=		https://github.com/pipermerriam/flex
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+DEPRECATED=	Upstream is inactive since 6 years
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}click>=3.3:devel/py-click@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}jsonpointer>=1.7:devel/py-jsonpointer@${PY_FLAVOR} \

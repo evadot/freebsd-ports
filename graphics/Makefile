@@ -4,12 +4,12 @@
     SUBDIR += 4va
     SUBDIR += Coin
     SUBDIR += GraphicsMagick
-    SUBDIR += Hermes
     SUBDIR += ImageMagick6
     SUBDIR += ImageMagick7
     SUBDIR += O2-tools
     SUBDIR += R-cran-DiagrammeR
     SUBDIR += R-cran-GDD
+    SUBDIR += R-cran-R.devices
     SUBDIR += R-cran-RColorBrewer
     SUBDIR += R-cran-colorspace
     SUBDIR += R-cran-cowplot
@@ -38,6 +38,7 @@
     SUBDIR += R-cran-viridis
     SUBDIR += R-cran-viridisLite
     SUBDIR += R-cran-visNetwork
+    SUBDIR += R-cran-webp
     SUBDIR += SciPlot
     SUBDIR += a2png
     SUBDIR += aalib
@@ -62,6 +63,7 @@
     SUBDIR += appleseed
     SUBDIR += argyllcms
     SUBDIR += art
+    SUBDIR += artem
     SUBDIR += asciinema-agg
     SUBDIR += asciio
     SUBDIR += aseprite
@@ -103,6 +105,7 @@
     SUBDIR += chafa
     SUBDIR += charls
     SUBDIR += cimg
+    SUBDIR += clang-uml
     SUBDIR += cloudcompare
     SUBDIR += clutter
     SUBDIR += clutter-gtk3
@@ -330,7 +333,6 @@
     SUBDIR += guile-cairo
     SUBDIR += guilib
     SUBDIR += gwenview
-    SUBDIR += gwenview-devel
     SUBDIR += h3
     SUBDIR += halftone
     SUBDIR += hdr_tools
@@ -410,7 +412,6 @@
     SUBDIR += khronos-texture
     SUBDIR += kimageannotator
     SUBDIR += kimagemapeditor
-    SUBDIR += kipi-plugins
     SUBDIR += klatexformula
     SUBDIR += kludge3d
     SUBDIR += kmscube
@@ -481,8 +482,6 @@
     SUBDIR += libjxr
     SUBDIR += libkdcraw
     SUBDIR += libkexiv2
-    SUBDIR += libkexiv2-devel
-    SUBDIR += libkipi
     SUBDIR += libksane
     SUBDIR += libliftoff
     SUBDIR += liblqr-1
@@ -512,6 +511,7 @@
     SUBDIR += libspiro
     SUBDIR += libspng
     SUBDIR += libsvgtiny
+    SUBDIR += libultrahdr
     SUBDIR += libvisual
     SUBDIR += libvisual04
     SUBDIR += libvisual04-plugins
@@ -561,6 +561,12 @@
     SUBDIR += linux-rl9-qt5-qtimageformats
     SUBDIR += linux-rl9-qt5-qtsvg
     SUBDIR += linux-rl9-qt5-qtwayland
+    SUBDIR += linux-rl9-sdl2_gfx
+    SUBDIR += linux-rl9-sdl2_image
+    SUBDIR += linux-rl9-sdl2_ttf
+    SUBDIR += linux-rl9-sdl_gfx
+    SUBDIR += linux-rl9-sdl_image
+    SUBDIR += linux-rl9-sdl_ttf
     SUBDIR += linux-rl9-shaderc
     SUBDIR += linux-rl9-spirv-tools
     SUBDIR += linux-rl9-tiff
@@ -625,6 +631,7 @@
     SUBDIR += nvidia-drm-510-kmod
     SUBDIR += nvidia-drm-515-kmod
     SUBDIR += nvidia-drm-61-kmod
+    SUBDIR += nvidia-drm-66-kmod
     SUBDIR += nvidia-drm-kmod
     SUBDIR += nvidia-texture-tools
     SUBDIR += ocaml-cairo
@@ -637,7 +644,6 @@
     SUBDIR += ogre3d19
     SUBDIR += oidn
     SUBDIR += okular
-    SUBDIR += okular-devel
     SUBDIR += open3d
     SUBDIR += opencollada
     SUBDIR += opencolorio
@@ -715,6 +721,7 @@
     SUBDIR += p5-Geo-GDAL-FFI
     SUBDIR += p5-Geo-GML
     SUBDIR += p5-Geo-Gpx
+    SUBDIR += p5-Geo-LibProj-FFI
     SUBDIR += p5-Geometry-Primitive
     SUBDIR += p5-Gimp
     SUBDIR += p5-Google-Chart
@@ -806,7 +813,6 @@
     SUBDIR += pecl-qrencode
     SUBDIR += pecl-vips
     SUBDIR += pencil2d
-    SUBDIR += peps
     SUBDIR += perceptualdiff
     SUBDIR += peruse
     SUBDIR += pfstools
@@ -841,6 +847,7 @@
     SUBDIR += pixie
     SUBDIR += plantuml
     SUBDIR += plasma-kmod
+    SUBDIR += plasma6-spectacle
     SUBDIR += plotutils
     SUBDIR += plutosvg
     SUBDIR += plutovg
@@ -1152,6 +1159,8 @@
     SUBDIR += sdl2_gpu
     SUBDIR += sdl2_image
     SUBDIR += sdl2_ttf
+    SUBDIR += sdl3_image
+    SUBDIR += sdl3_ttf
     SUBDIR += sdl_gfx
     SUBDIR += sdl_image
     SUBDIR += sdl_ttf
@@ -1166,7 +1175,6 @@
     SUBDIR += shared-color-profiles
     SUBDIR += sharpconstruct
     SUBDIR += shotwell
-    SUBDIR += showimage
     SUBDIR += silgraphite
     SUBDIR += simage
     SUBDIR += simple-scan
@@ -1174,8 +1182,6 @@
     SUBDIR += simpleviewer
     SUBDIR += skanlite
     SUBDIR += skanpage
-    SUBDIR += spectacle
-    SUBDIR += spectacle-devel
     SUBDIR += spirv-cross
     SUBDIR += spirv-tools
     SUBDIR += springgraph
@@ -1263,6 +1269,7 @@
     SUBDIR += xfractint
     SUBDIR += xglurbules
     SUBDIR += xgrasp
+    SUBDIR += xiccd
     SUBDIR += ximaging
     SUBDIR += xli
     SUBDIR += xmedcon
@@ -1276,7 +1283,6 @@
     SUBDIR += xpdf
     SUBDIR += xpdf3
     SUBDIR += xpdf4
-    SUBDIR += xpeps
     SUBDIR += xpx
     SUBDIR += xsane
     SUBDIR += xtexcad
