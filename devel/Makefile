@@ -176,6 +176,7 @@
     SUBDIR += aegis
     SUBDIR += agar
     SUBDIR += aifad
+    SUBDIR += air-go
     SUBDIR += aixlog
     SUBDIR += ald
     SUBDIR += alire
@@ -392,7 +393,6 @@
     SUBDIR += cccc
     SUBDIR += ccdoc
     SUBDIR += ccls
-    SUBDIR += ccrtp
     SUBDIR += cctz
     SUBDIR += cdecl
     SUBDIR += cdialog
@@ -658,6 +658,7 @@
     SUBDIR += electron31
     SUBDIR += electron32
     SUBDIR += electron33
+    SUBDIR += electron34
     SUBDIR += elf
     SUBDIR += elf-dissector
     SUBDIR += elfcat
@@ -6080,6 +6081,7 @@
     SUBDIR += py-typeshed-client
     SUBDIR += py-typing-extensions
     SUBDIR += py-typing-inspect
+    SUBDIR += py-typing-inspection
     SUBDIR += py-tzdata
     SUBDIR += py-tzlocal
     SUBDIR += py-u-msgpack-python
@@ -8388,6 +8390,7 @@
     SUBDIR += xeus-zmq
     SUBDIR += xfce4-dev-tools
     SUBDIR += xmake
+    SUBDIR += xmake-io
     SUBDIR += xmltooling
     SUBDIR += xopcodecalc
     SUBDIR += xorg-macros
