@@ -8,7 +8,7 @@ PKGNAMESUFFIX=	-anthy
 COMMENT=	Uim plugin using Anthy input method
 
 .if !defined(WITHOUT_X11)
-USE_GNOME=	cairo gdkpixbuf2 gtk30
+USE_GNOME=	cairo gdkpixbuf gtk30
 .endif
 
 LIB_DEPENDS=	libanthy.so:japanese/anthy \
@@ -24,6 +24,8 @@ CONFIGURE_ARGS=	--with-anthy --with-anthy-utf8
 .if !defined(WITHOUT_X11)
 CONFIGURE_ARGS+=	--with-gtk3 --enable-dict
 .endif
+
+CONFLICTS_INSTALL=	ja-uim-anthy-unicode
 
 UIM_SLAVE=	yes
 

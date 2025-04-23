@@ -215,7 +215,6 @@
     SUBDIR += myrddin
     SUBDIR += nawk
     SUBDIR += nbfc
-    SUBDIR += neko
     SUBDIR += neocmakelsp
     SUBDIR += nesasm
     SUBDIR += newlisp
@@ -303,7 +302,6 @@
     SUBDIR += python
     SUBDIR += python-doc-html
     SUBDIR += python-doc-pdf-a4
-    SUBDIR += python-doc-pdf-letter
     SUBDIR += python-doc-text
     SUBDIR += python-mode.el
     SUBDIR += python-tools
@@ -312,7 +310,7 @@
     SUBDIR += python3
     SUBDIR += python310
     SUBDIR += python311
-    SUBDIR += python38
+    SUBDIR += python312
     SUBDIR += python39
     SUBDIR += qmasm
     SUBDIR += quickjs
@@ -330,9 +328,10 @@
     SUBDIR += rhino
     SUBDIR += rizin
     SUBDIR += rizin-cutter
-    SUBDIR += ruby31
     SUBDIR += ruby32
     SUBDIR += ruby33
+    SUBDIR += ruby34
+    SUBDIR += ruby35
     SUBDIR += rubygem-rb_sys
     SUBDIR += rubygem-ruby_language_server
     SUBDIR += runawk
@@ -350,6 +349,7 @@
     SUBDIR += scheme48
     SUBDIR += scm
     SUBDIR += scratch
+    SUBDIR += scryer-prolog
     SUBDIR += sdcc
     SUBDIR += see
     SUBDIR += seed7
@@ -384,6 +384,7 @@
     SUBDIR += tclX
     SUBDIR += tolua
     SUBDIR += tolua++
+    SUBDIR += trealla-prolog
     SUBDIR += tuareg-mode.el
     SUBDIR += typstfmt
     SUBDIR += typstyle

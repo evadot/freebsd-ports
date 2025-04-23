@@ -1,10 +1,9 @@
 PORTNAME=	dotnet
 DISTVERSIONPREFIX=	v
-DISTVERSION=	${DOTNETVERSION}.2
-PORTREVISION=	2
+DISTVERSION=	${DOTNETVERSION}.4
 CATEGORIES=	lang devel
 MASTER_SITES=	https://github.com/dotnet/dotnet/releases/download/${DISTVERSIONPREFIX}${DISTVERSION}/release.json?dummy=/:dotnetmanifest \
-		https://github.com/sec/dotnet-core-freebsd-source-build/releases/download/${SDKVERSION}-vmr/:bootstrap
+		https://github.com/sec/dotnet-core-freebsd-source-build/releases/download/${BOOTSTRAP_SDKVERSION}-vmr/:bootstrap
 DISTFILES=	release.json-${PORTVERSION}:dotnetmanifest \
 		${BOOTSTRAP_SOURCEBUILT_ARTIFACTS_DISTNAME}${EXTRACT_SUFX}:bootstrap \
 		${BOOTSTRAP_SDK_DISTNAME}${EXTRACT_SUFX}:bootstrap
@@ -49,10 +48,10 @@ BOOTSTRAP_SOURCEBUILT_ARTIFACTS_DISTNAME=	Private.SourceBuilt.Artifacts.${BOOTST
 BOOTSTRAP_SDK_DISTNAME=				dotnet-sdk-${BOOTSTRAP_SDKVERSION}-${BOOTSTRAP_SDK_RID}
 
 DOTNETVERSION=		9.0
-SDKVERSION=		${DOTNETVERSION}.103
-SDKVERSIONSUFFIX=	-rtm.25067.4
-SDKSERVICESUFFIX=	-servicing.25071.1
-LIBPACKSUFFIX=		-servicing.25066.10
+SDKVERSION=		${DOTNETVERSION}.105
+SDKVERSIONSUFFIX=	-servicing.25164.3
+SDKSERVICESUFFIX=	-servicing.25165.1
+LIBPACKSUFFIX=		-servicing.25163.5
 MANIFESTSUFFIX=		${DOTNETVERSION}.100
 SDK_DISTNAME=		dotnet-sdk-${SDKVERSION}-${SDK_RID}
 SDK_RID=		freebsd.${_OSVERSION_MAJOR}-${DOTNET_ARCH}
@@ -104,10 +103,6 @@ post-extract:
 		${EXTRACT_AFTER_ARGS}
 
 	${ELFCTL} -e +noaslr ${WRKDIR}/bootstrap_sdk/dotnet
-
-post-patch:
-	${REINPLACE_CMD} -e 's|linux-${DOTNET_ARCH}|freebsd-${DOTNET_ARCH}|g' \
-		${WRKDIR}/bootstrap_sdk/sdk/${BOOTSTRAP_SDKVERSION}/Microsoft.NETCoreSdk.BundledVersions.props
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${DOTNET_ENV} ./build.sh \

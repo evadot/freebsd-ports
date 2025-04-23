@@ -1,10 +1,10 @@
 PORTNAME=	gogs
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.12.11
-PORTREVISION=	13
+PORTREVISION=	14
 CATEGORIES=	devel www
 
-MAINTAINER=	dmgk@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Painless self-hosted Git service
 WWW=		https://gogs.io/
 

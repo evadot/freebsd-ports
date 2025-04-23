@@ -693,7 +693,6 @@
     SUBDIR += mcelog
     SUBDIR += mcfly
     SUBDIR += mcron
-    SUBDIR += mcweject
     SUBDIR += mdcat
     SUBDIR += mdf2iso
     SUBDIR += megacli
@@ -965,6 +964,7 @@
     SUBDIR += polkit
     SUBDIR += polkit-gnome
     SUBDIR += polkit-qt-1
+    SUBDIR += pollinfo
     SUBDIR += popeye
     SUBDIR += porch
     SUBDIR += pot
@@ -974,7 +974,6 @@
     SUBDIR += powerman
     SUBDIR += powermon
     SUBDIR += pp
-    SUBDIR += pprotectd
     SUBDIR += prips
     SUBDIR += procenv
     SUBDIR += process-viewer
@@ -1029,7 +1028,6 @@
     SUBDIR += py-filelock
     SUBDIR += py-focker
     SUBDIR += py-glances
-    SUBDIR += py-google-compute-engine
     SUBDIR += py-hared
     SUBDIR += py-hcloud
     SUBDIR += py-honcho
@@ -1302,6 +1300,7 @@
     SUBDIR += snapraid
     SUBDIR += sndy
     SUBDIR += snmp_exporter
+    SUBDIR += snmp_exporter20
     SUBDIR += snooze
     SUBDIR += sockaddr
     SUBDIR += socklog
@@ -1387,6 +1386,7 @@
     SUBDIR += touchegg
     SUBDIR += toybox
     SUBDIR += tree
+    SUBDIR += treetop
     SUBDIR += triton
     SUBDIR += trueos-libqt5
     SUBDIR += ts
@@ -1396,6 +1396,7 @@
     SUBDIR += tuckr
     SUBDIR += tuptime
     SUBDIR += turbostat
+    SUBDIR += tvterm
     SUBDIR += tw_cli
     SUBDIR += twa-kmod
     SUBDIR += twmn

@@ -5,7 +5,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://dl.suckless.org/${PORTNAME}/
 PKGNAMESUFFIX=	-browser
 
-MAINTAINER=	dmgk@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simple Web browser based on WebKit2/GTK
 WWW=		https://surf.suckless.org
 
@@ -20,7 +20,7 @@ RUN_DEPENDS=	dmenu:x11/dmenu \
 		xterm:x11/xterm
 
 USES=		compiler:c11 cpe gnome pkgconfig xorg
-USE_GNOME=	gtk30 pango cairo gdkpixbuf2
+USE_GNOME=	gtk30 pango cairo gdkpixbuf
 USE_XORG=	x11
 
 CPE_VENDOR=	suckless

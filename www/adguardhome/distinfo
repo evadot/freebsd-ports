@@ -1,7 +1,7 @@
-TIMESTAMP = 1740071486
-SHA256 (go/www_adguardhome/adguardhome-v0.107.57/AdGuardHome_frontend.tar.gz) = fc0b57d80dece4219bfba833b48122ffe7a140ee2026cd3cf4c7181ccdcf8c9e
-SIZE (go/www_adguardhome/adguardhome-v0.107.57/AdGuardHome_frontend.tar.gz) = 2461334
-SHA256 (go/www_adguardhome/adguardhome-v0.107.57/v0.107.57.mod) = c7842e9be676b22094ca4e4a884a87ebb327a2f996392d90ea3c65e2585b7d57
-SIZE (go/www_adguardhome/adguardhome-v0.107.57/v0.107.57.mod) = 2723
-SHA256 (go/www_adguardhome/adguardhome-v0.107.57/v0.107.57.zip) = a1ec0847d815ead6d6bc46d215dd69309f1f53620fedc1eddf14944a691aa833
-SIZE (go/www_adguardhome/adguardhome-v0.107.57/v0.107.57.zip) = 2734429
+TIMESTAMP = 1744635103
+SHA256 (go/www_adguardhome/adguardhome-v0.107.60/AdGuardHome_frontend.tar.gz) = 470ecef6a019856a376ae661274ae3d60bbaaac2620bfc73fe8002d6dab7d96e
+SIZE (go/www_adguardhome/adguardhome-v0.107.60/AdGuardHome_frontend.tar.gz) = 2460509
+SHA256 (go/www_adguardhome/adguardhome-v0.107.60/v0.107.60.mod) = b4e32c59a3626e199b6e821760abc42dfe37bccc2660bf176b54c090c6898f71
+SIZE (go/www_adguardhome/adguardhome-v0.107.60/v0.107.60.mod) = 5720
+SHA256 (go/www_adguardhome/adguardhome-v0.107.60/v0.107.60.zip) = cd1d5771c636715de92cfa9dcaaf6b9502bb86135ffe85a45554c26eb303ae1d
+SIZE (go/www_adguardhome/adguardhome-v0.107.60/v0.107.60.zip) = 2721446

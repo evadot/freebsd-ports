@@ -114,12 +114,10 @@
     SUBDIR += py-matrix-synapse
     SUBDIR += py-mattermostdriver
     SUBDIR += py-nbxmpp
-    SUBDIR += py-punjab
     SUBDIR += py-python-telegram-bot
     SUBDIR += py-slack-sdk
     SUBDIR += py-slackeventsapi
     SUBDIR += py-slixmpp
-    SUBDIR += py-telepot
     SUBDIR += py-toxcore-c
     SUBDIR += py-unmessage
     SUBDIR += qTox
@@ -133,7 +131,6 @@
     SUBDIR += rubygem-termtter
     SUBDIR += rubygem-tinder
     SUBDIR += ruqola
-    SUBDIR += sayaka
     SUBDIR += scli
     SUBDIR += sendxmpp
     SUBDIR += signal-cli
@@ -156,9 +153,7 @@
     SUBDIR += telepathy-glib
     SUBDIR += telepathy-idle
     SUBDIR += telepathy-logger
-    SUBDIR += telepathy-logger-qt5
     SUBDIR += telepathy-mission-control
-    SUBDIR += telepathy-qt
     SUBDIR += telepathy-sofiasip
     SUBDIR += tg_owt
     SUBDIR += tkabber

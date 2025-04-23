@@ -1164,7 +1164,7 @@ OSVERSION!=	${AWK} '/^\#define[[:blank:]]__FreeBSD_version/ {print $$3}' < ${SRC
 .    endif
 _EXPORTED_VARS+=	OSVERSION
 
-.    if ${OPSYS} == FreeBSD && (${OSVERSION} < 1304000 || (${OSVERSION} >= 1400000 && ${OSVERSION} < 1401000))
+.    if ${OPSYS} == FreeBSD && (${OSVERSION} < 1304000 || (${OSVERSION} >= 1400000 && ${OSVERSION} < 1402000))
 _UNSUPPORTED_SYSTEM_MESSAGE=	Ports Collection support for your ${OPSYS} version has ended, and no ports\
 								are guaranteed to build on this system. Please upgrade to a supported release.
 .      if defined(ALLOW_UNSUPPORTED_SYSTEM)
@@ -1889,8 +1889,12 @@ _ALL_LIB_DIRS_32= /usr/lib32 ${LOCALBASE}/lib32 ${USE_LDCONFIG32}
 PKG_ENV+=	SHLIB_PROVIDE_PATHS_COMPAT_32="${_ALL_LIB_DIRS_32:O:u:ts,}"
 .    endif
 .    if ${LINUX_DEFAULT} == c7 || ${LINUX_DEFAULT} == rl9
+.      if ${ARCH} == i386
+PKG_ENV+=	SHLIB_PROVIDE_PATHS_COMPAT_LINUX="${LINUXBASE}/usr/lib"
+.      else
 PKG_ENV+=	SHLIB_PROVIDE_PATHS_COMPAT_LINUX="${LINUXBASE}/usr/lib64"
 PKG_ENV+=	SHLIB_PROVIDE_PATHS_COMPAT_LINUX_32="${LINUXBASE}/usr/lib"
+.      endif
 .    else
 .      warning "Unknown Linux distribution ${LINUX_DEFAULT}, SHLIB_PROVIDE_PATHS_COMPAT_LINUX will not be set!"
 .    endif
@@ -2042,6 +2046,7 @@ CFLAGS+=       -fno-strict-aliasing
 .    for lang in C CXX
 .      if defined(USE_${lang}STD)
 ${lang}FLAGS:=	${${lang}FLAGS:N-std=*} -std=${USE_${lang}STD}
+MAKE_ENV+=	${lang}STD=${USE_${lang}STD}
 .      endif
 
 ${lang}FLAGS+=	${${lang}FLAGS_${ARCH}}
@@ -5394,6 +5399,12 @@ show-dev-errors:
 .      endif
 .    endif #DEVELOPER
 
+.    if defined(HAS_SYMBOL_VERSION)
+stage-sanity: check_has_symbol_version
+check_has_symbol_version:
+		${SH} ${SCRIPTSDIR}/check_have_symbols.sh ${STAGEDIR} ${HAS_SYMBOL_VERSION}
+.    endif # HAS_SYMBOL_VERSION
+
 ${_PORTS_DIRECTORIES}:
 	@${MKDIR} ${.TARGET}
 
@@ -5463,8 +5474,8 @@ _STAGE_SEQ=		050:stage-message 100:stage-dir 150:run-depends \
 				860:install-rc-script 870:install-ldconfig-file \
 				880:install-license 890:install-desktop-entries \
 				900:add-plist-info 910:add-plist-docs 920:add-plist-examples \
-				930:add-plist-data 940:add-plist-post ${POST_PLIST:C/^/990:/} \
-				${_OPTIONS_install} ${_USES_install} \
+				930:add-plist-data 940:add-plist-post 994:stage-sanity \
+				${_OPTIONS_install} ${_USES_install} ${POST_PLIST:C/^/990:/} \
 				${_OPTIONS_stage} ${_USES_stage} ${_FEATURES_stage}
 .    if defined(DEVELOPER)
 _STAGE_SEQ+=	995:stage-qa

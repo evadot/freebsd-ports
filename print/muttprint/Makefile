@@ -1,6 +1,6 @@
 PORTNAME=	muttprint
 PORTVERSION=	0.73
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	print mail
 MASTER_SITES=	SF/muttprint/muttprint/muttprint-${PORTVERSION}
 
@@ -9,6 +9,9 @@ COMMENT=	Utility to print mail for most any mail client
 WWW=		https://muttprint.sourceforge.net/
 
 LICENSE=	GPLv2
+
+DEPRECATED=	Depends on expired textproc-docbook-utils
+EXPIRATION_DATE=2025-06-21
 
 BUILD_DEPENDS=	docbook2pdf:textproc/docbook-utils \
 		docbook-sgml>0:textproc/docbook-sgml

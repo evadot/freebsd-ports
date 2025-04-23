@@ -307,7 +307,7 @@ victoria-logs:*:363:
 elog:*:364:
 gotify:*:365:
 opengist:*:366:
-# free: 367
+velbustcpd:*:367:
 # free: 368
 # free: 369
 _wsdd:*:370:
@@ -317,9 +317,9 @@ _wsdd:*:370:
 # free: 374
 # free: 375
 # free: 376
-# free: 377
-# free: 378
-# free: 379
+hostd:*:377:
+walletd:*:378:
+renterd:*:379:
 spoofdpi:*:380:
 hydroxide:*:381:
 # free: 382
@@ -726,7 +726,7 @@ monero:*:781:
 zeek:*:782:
 # free: 783
 # free: 784
-# free: 785
+stirlingpdf:*:785:
 # free: 786
 # free: 787
 # free: 788

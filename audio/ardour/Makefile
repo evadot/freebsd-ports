@@ -1,11 +1,11 @@
 PORTNAME=	ardour
-DISTVERSION=	8.11.0
+DISTVERSION=	8.12.0
 CATEGORIES=	audio
 # Official source download is tailored to browsers, downloads from github are
 # deliberately made empty. Put the badly named distfile into a subdirectory.
 MASTER_SITES=	https://community.ardour.org/download/release/
 DISTNAME=	Ardour-${DISTVERSION}
-DISTFILES=	604
+DISTFILES=	610
 DIST_SUBDIR=	${DISTNAME}
 
 MAINTAINER=	dev@submerge.ch
@@ -48,7 +48,7 @@ USES=		compiler:c++14-lang desktop-file-utils gettext gnome \
 		libarchive pkgconfig python:build readline ssl tar:bzip2 \
 		waf xorg shared-mime-info
 USE_CXXSTD=	c++14
-USE_GNOME=	atk cairo cairomm gdkpixbuf2 glib20 glibmm gtk20 gtkmm24 libxml2 pango
+USE_GNOME=	atk cairo cairomm gdkpixbuf glib20 glibmm gtk20 gtkmm24 libxml2 pango
 USE_LDCONFIG=	yes
 USE_XORG=	x11
 

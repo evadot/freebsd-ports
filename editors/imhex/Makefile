@@ -32,7 +32,7 @@ LIB_DEPENDS=	libcurl.so:ftp/curl \
 
 USES=		cmake desktop-file-utils gl gnome pkgconfig python xorg
 USE_GL=		gl glu opengl
-USE_GNOME=	cairo gdkpixbuf2 gtk30
+USE_GNOME=	cairo gdkpixbuf gtk30
 USE_XORG=	x11 xcb xau xdmcp
 USE_GITHUB=	yes
 
@@ -116,9 +116,7 @@ IGNORE=	requires libc++ of LLVM 17 on the base system
 .endif
 
 # After LLVM 18 import into the base system
-.if ((${OSREL:R} == 15 && ${OSVERSION} >= 1500018) \
-    || (${OSREL:R} == 14 && ${OSVERSION} >= 1400511) \
-    || (${OSREL:R} == 13 && ${OSVERSION} >= 1303503))
+.if (${OSREL:R} == 15 && ${OSVERSION} >= 1500018) || ${OSREL:R} < 15
 CXXFLAGS+=	-fexperimental-library -D_LIBCPP_ENABLE_EXPERIMENTAL
 .endif
 

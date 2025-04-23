@@ -5,6 +5,106 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20250408:
+  AFFECTS: users of linux_base-c7 and any Linux application in Ports
+  AUTHOR: arrowd@FreeBSD.org
+
+  LINUX_DEFAULT was switched to "rl9" which corresponds to the Rocky Linux 9 base.
+  All architectures except i386 are affected. To stay on the old base add
+  DEFAULT_VERSIONS=linux=c7 to your /etc/make.conf
+
+  Note that some older amd64 hardware (pre-Nehalem) might not support the
+  instruction set that is targeted by Rocky Linux builders. If you're getting
+  SIGILL crashes when running Linux apps consider switching LINUX_DEFAULT back
+  to "c7".
+
+20250404:
+  AFFECTS: users of jetbrains-clion
+  AUTHOR: fernape@FreeBSD.org
+
+  The jetbrains-clion update to 2024.3.5 might fail under certain circumstances
+  that are not clear. If this happens users are encouraged to check the contents
+  of ~/.config/JetBrains/CLion2024.3/clion64.vmoptions and ensure that the
+  following option IS NOT present:
+
+  -Didea.suppressed.plugins.set.selector=radler
+
+  If it is, change the value to:
+
+  -Didea.suppressed.plugins.set.selector=classic
+
+  References:
+    https://youtrack.jetbrains.com/issue/CPP-44041#focus=Comments-27-11819516.0-0
+    https://youtrack.jetbrains.com/issue/IJPL-175884/Start-Failed#focus=Comments-27-11425743.0-0
+
+20250402:
+  AFFECTS: users of devel/glib20 and devel/gobject-introspection building outside of Poudriere
+  AUTHOR: arrowd@FreeBSD.org
+
+  New versions of glib started to require gobject-introspection as a build
+  dependency, while gobject-introspection requires glib to build. This forms a
+  dependency cycle that is dealt with by introducing the @bootstrap flavor for
+  mentioned ports. This solution is suggested by the upstream as well, see
+  https://discourse.gnome.org/t/dealing-with-glib-and-gobject-introspection-circular-dependency/18701
+
+  When building devel/glib20 in Poudriere no manual intervention is required.
+  The devel/glib20@bootstrap gets built first and provides for
+  devel/gobject-introspection@bootstrap. This in turn provides for a normal
+  devel/glib20 build, which finally fulfills a dependency for normal devel/gobject-introspection
+
+  Users that are building outside of the isolated environments will be ending
+  up with useless glib-bootstrap and gobject-introspection-bootstrap packages
+  installed after each update. These can be removed with
+
+  pkg remove glib-bootstrap gobject-introspection-bootstrap
+
+20250327:
+  AFFECTS: users of thunderbird
+  AUTHOR: cmt@FreeBSD.org
+
+  The mail/thunderbird port switched to Thunderbird's new release train,
+  with frequent major releases (ca. 4-weeks-cycle). Users wanting to
+  stay with the 128-releases for now and the ESR releases in general
+  should switch to the mail/thunderbird-esr port.
+
+20250325:
+  AFFECTS: users of TeX*
+  AUTHOR: bofh@FreeBSD.org
+
+  TeX system has been updated to 2025 from 2024. Normal pkg upgrade or
+  portmaster -a should handle all the upgrade properly. In case not please
+  create a ticket or send a mail to tex@FreeBSD.org
+
+  Previously users have reported to delete texlive-texmf prior to
+  starting update, or pkg-static will indicate there is a conflict
+  during the upgrade of texlive-base :
+
+  # pkg remove texlive-texmf
+
+20250321:
+  AFFECTS: users of mail/oama
+  AUTHOR: nivit@FreeBSD.org
+
+  Starting from version 0.15, when the GPG backend is used the encrypted
+  credentials are stored in the $XDG_STATE_HOME/oama directory.
+  If the XDG_STATE_HOME environment variable is not set then it defaults to
+  $HOME/.local/state.
+
+  That is a breaking change! If you use the GPG backend you need to manually
+  move your credential ~/.local/var/oama/*.oama files into the new directory.
+
+20250316:
+  AFFECTS: users of graphics/gdk-pixbuf2
+  AUTHOR: vishwin@FreeBSD.org
+
+  Loaders for ANI, BMP, ICNS, ICO, PNM, QTIF, TGA, XBM and XPM have
+  been moved to a separate graphics/gdk-pixbuf-extra port. Install
+  the aforementioned port if artefacts in those formats no longer
+  load or otherwise cause errors, and report them so that
+  USE_GNOME=gdkpixbufextra can be declared. Most should only need
+  USE_GNOME=gdkpixbufextra:run, but for those also needing these
+  loaders for build, leave out the :run.
+
 20250315:
   AFFECTS: users of sysutils/snmp_exporter
   AUTHOR: lexi@hemlock.eden.le-fay.org

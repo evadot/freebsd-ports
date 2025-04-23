@@ -1,12 +1,11 @@
 PORTNAME=	skyfield
-PORTVERSION=	1.49
-PORTREVISION=	1
+PORTVERSION=	1.53
 CATEGORIES=	astro python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	thierry@FreeBSD.org
-COMMENT=	Ephemerides computation
+COMMENT=	Elegant astronomy for Python
 WWW=		https://rhodesmill.org/skyfield/
 
 LICENSE=	MIT

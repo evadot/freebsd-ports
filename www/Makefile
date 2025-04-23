@@ -101,7 +101,6 @@
     SUBDIR += cgiwrap
     SUBDIR += checkbot
     SUBDIR += chisel
-    SUBDIR += choqok
     SUBDIR += chpasswd
     SUBDIR += chrome-gnome-shell
     SUBDIR += chromium
@@ -147,10 +146,12 @@
     SUBDIR += dolibarr17
     SUBDIR += dolibarr18
     SUBDIR += dolibarr19
+    SUBDIR += dolibarr20
     SUBDIR += domoticz
     SUBDIR += domoticz-devel
     SUBDIR += dooble
     SUBDIR += dot-http
+    SUBDIR += dothttp
     SUBDIR += dpp
     SUBDIR += drill
     SUBDIR += drupal10
@@ -218,10 +219,12 @@
     SUBDIR += gitlab
     SUBDIR += gitlab-pages
     SUBDIR += gitlab-workhorse
+    SUBDIR += glance
     SUBDIR += glassfish
     SUBDIR += glassfish4
     SUBDIR += glpi
     SUBDIR += gnome-user-share
+    SUBDIR += go-anubis
     SUBDIR += go-www
     SUBDIR += gobuffalo
     SUBDIR += gohugo
@@ -447,6 +450,7 @@
     SUBDIR += moodle43
     SUBDIR += moodle44
     SUBDIR += moodle45
+    SUBDIR += moodle50
     SUBDIR += morty
     SUBDIR += multisort
     SUBDIR += multiwatch
@@ -1055,6 +1059,7 @@
     SUBDIR += p5-Mojolicious-Plugin-HamlRenderer
     SUBDIR += p5-Mojolicious-Plugin-Mongodb
     SUBDIR += p5-Mojolicious-Plugin-OpenAPI
+    SUBDIR += p5-Mojolicious-Plugin-RenderFile
     SUBDIR += p5-Mojolicious-Plugin-SetUserGroup
     SUBDIR += p5-Mojolicious-Plugin-TtRenderer
     SUBDIR += p5-Mojolicious-Plugin-YamlConfig
@@ -1598,7 +1603,6 @@
     SUBDIR += py-django-hashid-field
     SUBDIR += py-django-haystack
     SUBDIR += py-django-hierarkey
-    SUBDIR += py-django-hijack
     SUBDIR += py-django-htmlmin
     SUBDIR += py-django-htmx
     SUBDIR += py-django-i18nfield
@@ -1666,6 +1670,7 @@
     SUBDIR += py-django42
     SUBDIR += py-django50
     SUBDIR += py-django51
+    SUBDIR += py-django52
     SUBDIR += py-django_compressor
     SUBDIR += py-djangocms-admin-style
     SUBDIR += py-djangoql
@@ -1719,7 +1724,6 @@
     SUBDIR += py-flask-restful
     SUBDIR += py-flask-restx
     SUBDIR += py-flask-script
-    SUBDIR += py-flask-security
     SUBDIR += py-flask-session
     SUBDIR += py-flask-simpleldap
     SUBDIR += py-flask-smorest
@@ -1748,6 +1752,7 @@
     SUBDIR += py-google-cloud-appengine-logging
     SUBDIR += py-google-cloud-audit-log
     SUBDIR += py-google-cloud-bigquery
+    SUBDIR += py-google-cloud-bigquery-storage
     SUBDIR += py-google-cloud-bigtable
     SUBDIR += py-google-cloud-compute
     SUBDIR += py-google-cloud-core
@@ -1790,6 +1795,7 @@
     SUBDIR += py-httpx
     SUBDIR += py-httpx-oauth
     SUBDIR += py-httpx-socks
+    SUBDIR += py-httpx-sse
     SUBDIR += py-httpx-ws
     SUBDIR += py-httpx_gssapi
     SUBDIR += py-hypercorn
@@ -1973,7 +1979,6 @@
     SUBDIR += radicale
     SUBDIR += rearx
     SUBDIR += reddsaver
-    SUBDIR += redmine50
     SUBDIR += redmine51
     SUBDIR += redmine60
     SUBDIR += rejik
@@ -2114,7 +2119,6 @@
     SUBDIR += rubygem-fuzzyurl
     SUBDIR += rubygem-geminabox
     SUBDIR += rubygem-gitlab-flowdock-git-hook
-    SUBDIR += rubygem-gitlab-gollum-lib
     SUBDIR += rubygem-gitlab-gollum-rugged_adapter
     SUBDIR += rubygem-gitlab-turbolinks-classic
     SUBDIR += rubygem-goldfinger
@@ -2151,6 +2155,7 @@
     SUBDIR += rubygem-http4
     SUBDIR += rubygem-http_router
     SUBDIR += rubygem-httparty
+    SUBDIR += rubygem-httparty-gitlab
     SUBDIR += rubygem-httparty021
     SUBDIR += rubygem-httpclient
     SUBDIR += rubygem-httpi
@@ -2213,6 +2218,7 @@
     SUBDIR += rubygem-less
     SUBDIR += rubygem-lighthouse-api
     SUBDIR += rubygem-link_header
+    SUBDIR += rubygem-llhttp
     SUBDIR += rubygem-llhttp-ffi
     SUBDIR += rubygem-lograge
     SUBDIR += rubygem-lograge-rails5
@@ -2279,6 +2285,7 @@
     SUBDIR += rubygem-rack-protection3
     SUBDIR += rubygem-rack-proxy
     SUBDIR += rubygem-rack-session
+    SUBDIR += rubygem-rack-session10
     SUBDIR += rubygem-rack-ssl
     SUBDIR += rubygem-rack-test
     SUBDIR += rubygem-rack-timeout
@@ -2286,6 +2293,7 @@
     SUBDIR += rubygem-rack22
     SUBDIR += rubygem-rack_csrf
     SUBDIR += rubygem-rackup
+    SUBDIR += rubygem-rackup10
     SUBDIR += rubygem-rackup21
     SUBDIR += rubygem-rails-settings-cached
     SUBDIR += rubygem-rails-settings-cached-rails5
@@ -2369,6 +2377,7 @@
     SUBDIR += rubygem-sinatra-respond_to
     SUBDIR += rubygem-sinatra1
     SUBDIR += rubygem-sinatra2
+    SUBDIR += rubygem-sinatra3
     SUBDIR += rubygem-sitemap_generator
     SUBDIR += rubygem-smashing
     SUBDIR += rubygem-socksify
@@ -2441,7 +2450,6 @@
     SUBDIR += snarf
     SUBDIR += so
     SUBDIR += sogo
-    SUBDIR += sogo-activesync
     SUBDIR += sogo2
     SUBDIR += sogo2-activesync
     SUBDIR += spawn-fcgi
@@ -2603,6 +2611,7 @@
     SUBDIR += websocketd
     SUBDIR += webstone
     SUBDIR += webtrees21
+    SUBDIR += webtrees22
     SUBDIR += wget2
     SUBDIR += wgetpaste
     SUBDIR += wiki-tui
@@ -2635,8 +2644,8 @@
     SUBDIR += yaws
     SUBDIR += you-get
     SUBDIR += yourls
+    SUBDIR += youtube
     SUBDIR += yt-dlp
-    SUBDIR += ytdl
     SUBDIR += yuicompressor
     SUBDIR += zenphoto
     SUBDIR += zerowait-httpd

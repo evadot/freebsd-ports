@@ -1,6 +1,5 @@
 PORTNAME=	dimod
-DISTVERSION=	0.12.18
-PORTREVISION=	1
+DISTVERSION=	0.12.20
 CATEGORIES=	science python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -11,14 +10,13 @@ WWW=		https://github.com/dwavesystems/dimod
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	${PYNUMPY} \
-		${PYTHON_PKGNAMEPREFIX}cython3>0:lang/cython3@${PY_FLAVOR}
+BUILD_DEPENDS=	${PYNUMPY}
 RUN_DEPENDS=	${PYNUMPY}
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}parameterized>0:devel/py-parameterized@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}mypy>0:devel/py-mypy@${PY_FLAVOR}
 
 USES=		compiler:c++11-lang python
-USE_PYTHON=	distutils autoplist unittest
+USE_PYTHON=	autoplist cython3 distutils unittest
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	dwavesystems
@@ -28,5 +26,7 @@ TEST_WRKSRC=	${WRKSRC}/tests
 
 post-install:
 	@${FIND} ${STAGEDIR}${PYTHON_SITELIBDIR}/${PORTNAME} -name "*${PYTHON_EXT_SUFFIX}.so" | ${XARGS} ${STRIP_CMD}
+
+# tests as of 0.12.20: Ran 2913 tests in 34.742s
 
 .include <bsd.port.mk>

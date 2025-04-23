@@ -1,5 +1,5 @@
 PORTNAME=	passenger
-PORTVERSION=	6.0.26
+PORTVERSION=	6.0.27
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG \
 		https://github.com/phusion/passenger/releases/download/release-${PORTVERSION}/
@@ -20,7 +20,7 @@ LIB_DEPENDS=	libapr-1.so:devel/apr1 \
 		libuv.so:devel/libuv
 RUN_DEPENDS=	rubygem-etc>=0:devel/rubygem-etc \
 		rubygem-rack>=1.6.13,3:www/rubygem-rack \
-		rubygem-rackup>=2.0.0:www/rubygem-rackup \
+		rubygem-rackup>=1.0.1:www/rubygem-rackup \
 		rubygem-rake>=12.3.3:devel/rubygem-rake
 
 USES=		compiler:c++11-lang cpe gem libtool python:env ssl
@@ -60,7 +60,6 @@ SYMLINK_SUB_LIST_OFF=	PASSENGER_INSTALL_DIR="${PREFIX}/${GEM_LIB_DIR}"
 
 post-patch:
 # Clean up bundled libraries
-	@${REINPLACE_CMD} 's|"src/cxx_supportlib/vendor-copy/[lu][^"]*".freeze, ||g' ${WRKSRC}/passenger.gemspec
 	@${RM} -r ${WRKSRC}/src/cxx_supportlib/vendor-copy/libuv/
 	@${RM} -r ${WRKSRC}/src/cxx_supportlib/vendor-copy/utf8*
 

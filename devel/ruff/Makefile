@@ -1,5 +1,5 @@
 PORTNAME=	ruff
-DISTVERSION=	0.9.10
+DISTVERSION=	0.11.5
 CATEGORIES=	devel python
 
 MAINTAINER=	yuri@FreeBSD.org

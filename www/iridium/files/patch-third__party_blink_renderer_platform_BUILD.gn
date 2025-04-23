@@ -1,4 +1,4 @@
---- third_party/blink/renderer/platform/BUILD.gn.orig	2025-02-22 18:06:53 UTC
+--- third_party/blink/renderer/platform/BUILD.gn.orig	2025-04-16 18:18:42 UTC
 +++ third_party/blink/renderer/platform/BUILD.gn
 @@ -2034,7 +2034,7 @@ static_library("test_support") {
    ]

@@ -1,10 +1,10 @@
 PORTNAME=	awless
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.1.11
-PORTREVISION=	26
+PORTREVISION=	27
 CATEGORIES=	devel
 
-MAINTAINER=	dmgk@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Fast, powerful and easy-to-use CLI for AWS
 WWW=		https://github.com/wallix/awless
 

@@ -3,7 +3,7 @@ DISTVERSION=	0.6
 PORTREVISION=	5
 CATEGORIES=	deskutils
 
-MAINTAINER=	dmgk@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simple markdown viewer, written in Vala and GTK 3
 WWW=		https://github.com/craigbarnes/showdown
 
@@ -15,7 +15,7 @@ LIB_DEPENDS=	libsoup-2.4.so:devel/libsoup \
 
 USES=		compiler:c++11-lang desktop-file-utils gmake gnome \
 		pkgconfig vala:build xorg
-USE_GNOME=	atk cairo gdkpixbuf2 glib20 gtk30 pango
+USE_GNOME=	atk cairo gdkpixbuf glib20 gtk30 pango
 USE_XORG=	x11
 USE_GITHUB=	yes
 GH_ACCOUNT=	craigbarnes

@@ -46,6 +46,7 @@
     SUBDIR += acidwarp-sdl
     SUBDIR += aeskulap
     SUBDIR += agg
+    SUBDIR += agg26
     SUBDIR += airsaned
     SUBDIR += akira
     SUBDIR += alembic
@@ -139,7 +140,6 @@
     SUBDIR += devil
     SUBDIR += dia
     SUBDIR += diff-pdf
-    SUBDIR += diffpdf
     SUBDIR += dify
     SUBDIR += digikam
     SUBDIR += dilay
@@ -232,6 +232,7 @@
     SUBDIR += gdal
     SUBDIR += gdal-grass
     SUBDIR += gdchart
+    SUBDIR += gdk-pixbuf-extra
     SUBDIR += gdk-pixbuf2
     SUBDIR += gdk-pixbuf2-xlib
     SUBDIR += gdtclft
@@ -258,6 +259,7 @@
     SUBDIR += gimp-lqr-plugin
     SUBDIR += gimp-refocus-plugin
     SUBDIR += gimp-resynthesizer
+    SUBDIR += gimp3-app
     SUBDIR += gkrellkam2
     SUBDIR += glad
     SUBDIR += glaxnimate
@@ -340,6 +342,7 @@
     SUBDIR += hiptext
     SUBDIR += hobbes-icons-xpm
     SUBDIR += hppsmtools
+    SUBDIR += hs-tart
     SUBDIR += hugin
     SUBDIR += hyprgraphics
     SUBDIR += icat
@@ -528,17 +531,13 @@
     SUBDIR += linux-c7-gdk-pixbuf2
     SUBDIR += linux-c7-glx-utils
     SUBDIR += linux-c7-graphite2
-    SUBDIR += linux-c7-jasper
-    SUBDIR += linux-c7-jbigkit
-    SUBDIR += linux-c7-jpeg
+    SUBDIR += linux-c7-imageformats-libs
     SUBDIR += linux-c7-libdrm
     SUBDIR += linux-c7-libepoxy
     SUBDIR += linux-c7-libglvnd
     SUBDIR += linux-c7-librsvg2
-    SUBDIR += linux-c7-png
     SUBDIR += linux-c7-sdl_image
     SUBDIR += linux-c7-sdl_ttf
-    SUBDIR += linux-c7-tiff
     SUBDIR += linux-c7-wayland
     SUBDIR += linux-rl9-cairo
     SUBDIR += linux-rl9-cairo-gobject
@@ -546,16 +545,12 @@
     SUBDIR += linux-rl9-gdk-pixbuf2
     SUBDIR += linux-rl9-graphene
     SUBDIR += linux-rl9-graphite2
-    SUBDIR += linux-rl9-jasper
-    SUBDIR += linux-rl9-jbigkit
-    SUBDIR += linux-rl9-jpeg
+    SUBDIR += linux-rl9-imageformats-libs
     SUBDIR += linux-rl9-libdrm
     SUBDIR += linux-rl9-libepoxy
     SUBDIR += linux-rl9-libglvnd
     SUBDIR += linux-rl9-libjxl
     SUBDIR += linux-rl9-librsvg2
-    SUBDIR += linux-rl9-openjpeg
-    SUBDIR += linux-rl9-png
     SUBDIR += linux-rl9-qt5-qt3d
     SUBDIR += linux-rl9-qt5-qtgraphicaleffects
     SUBDIR += linux-rl9-qt5-qtimageformats
@@ -569,10 +564,8 @@
     SUBDIR += linux-rl9-sdl_ttf
     SUBDIR += linux-rl9-shaderc
     SUBDIR += linux-rl9-spirv-tools
-    SUBDIR += linux-rl9-tiff
     SUBDIR += linux-rl9-vulkan
     SUBDIR += linux-rl9-wayland
-    SUBDIR += linux-rl9-webp
     SUBDIR += lua-gd
     SUBDIR += luminance-qt5
     SUBDIR += lunasvg
@@ -984,7 +977,6 @@
     SUBDIR += py-pydot
     SUBDIR += py-pydotplus
     SUBDIR += py-pyepsg
-    SUBDIR += py-pygal
     SUBDIR += py-pyganim
     SUBDIR += py-pygeoapi
     SUBDIR += py-pygeos

@@ -69,6 +69,7 @@ include/folly/MicroLock.h
 include/folly/MicroSpinLock.h
 include/folly/MoveWrapper.h
 include/folly/ObserverContainer.h
+include/folly/OperationCancelled.h
 include/folly/Optional.h
 include/folly/Overload.h
 include/folly/PackedSyncPtr.h
@@ -121,6 +122,8 @@ include/folly/algorithm/simd/detail/SimdForEach.h
 include/folly/algorithm/simd/detail/SimdPlatform.h
 include/folly/algorithm/simd/detail/Traits.h
 include/folly/algorithm/simd/detail/UnrollUtils.h
+include/folly/algorithm/simd/find_first_of.h
+include/folly/algorithm/simd/find_first_of_extra.h
 include/folly/base64.h
 include/folly/channels/Channel-fwd.h
 include/folly/channels/Channel-inl.h
@@ -160,6 +163,7 @@ include/folly/chrono/Conv.h
 include/folly/chrono/Hardware.h
 include/folly/cli/NestedCommandLineApp.h
 include/folly/cli/ProgramOptions.h
+include/folly/codec/Uuid.h
 include/folly/compression/Compression.h
 include/folly/compression/CompressionContextPool.h
 include/folly/compression/CompressionContextPoolSingletons.h
@@ -221,6 +225,7 @@ include/folly/container/SparseByteSet.h
 include/folly/container/View.h
 include/folly/container/WeightedEvictingCacheMap.h
 include/folly/container/detail/BitIteratorDetail.h
+include/folly/container/detail/BoolWrapper.h
 include/folly/container/detail/F14Defaults.h
 include/folly/container/detail/F14IntrinsicsAvailability.h
 include/folly/container/detail/F14MapFallback.h
@@ -238,6 +243,7 @@ include/folly/container/span.h
 include/folly/container/tape.h
 include/folly/container/test/F14TestUtil.h
 include/folly/container/test/TrackingTypes.h
+include/folly/container/vector_bool.h
 include/folly/coro/Accumulate-inl.h
 include/folly/coro/Accumulate.h
 include/folly/coro/AsyncGenerator.h
@@ -247,6 +253,7 @@ include/folly/coro/AsyncStack.h
 include/folly/coro/AutoCleanup-fwd.h
 include/folly/coro/AutoCleanup.h
 include/folly/coro/AwaitImmediately.h
+include/folly/coro/AwaitResult.h
 include/folly/coro/Baton.h
 include/folly/coro/BlockingWait.h
 include/folly/coro/BoundedQueue.h
@@ -268,7 +275,9 @@ include/folly/coro/Invoke.h
 include/folly/coro/Merge-inl.h
 include/folly/coro/Merge.h
 include/folly/coro/Mutex.h
+include/folly/coro/Noexcept.h
 include/folly/coro/Promise.h
+include/folly/coro/Ready.h
 include/folly/coro/Result.h
 include/folly/coro/Retry.h
 include/folly/coro/RustAdaptors.h
@@ -301,7 +310,15 @@ include/folly/coro/detail/InlineTask.h
 include/folly/coro/detail/Malloc.h
 include/folly/coro/detail/ManualLifetime.h
 include/folly/coro/detail/Traits.h
+include/folly/coro/safe/AsyncClosure-fwd.h
+include/folly/coro/safe/AsyncClosure.h
+include/folly/coro/safe/Captures.h
 include/folly/coro/safe/NowTask.h
+include/folly/coro/safe/SafeAlias.h
+include/folly/coro/safe/SafeTask.h
+include/folly/coro/safe/detail/AsyncClosure.h
+include/folly/coro/safe/detail/AsyncClosureBindings.h
+include/folly/coro/safe/detail/DefineMovableDeepConstLrefCopyable.h
 include/folly/crypto/Blake2xb.h
 include/folly/crypto/LtHash-inl.h
 include/folly/crypto/LtHash.h
@@ -814,6 +831,7 @@ include/folly/lang/Align.h
 include/folly/lang/Aligned.h
 include/folly/lang/Assume.h
 include/folly/lang/Badge.h
+include/folly/lang/Bindings.h
 include/folly/lang/Bits.h
 include/folly/lang/BitsClass.h
 include/folly/lang/Builtin.h
@@ -923,6 +941,7 @@ include/folly/portability/FmtCompile.h
 include/folly/portability/GFlags.h
 include/folly/portability/GMock.h
 include/folly/portability/GTest.h
+include/folly/portability/GTestProd.h
 include/folly/portability/IOVec.h
 include/folly/portability/Libgen.h
 include/folly/portability/Libunwind.h
@@ -952,6 +971,7 @@ include/folly/portability/Unistd.h
 include/folly/portability/Windows.h
 include/folly/portability/openat2.h
 include/folly/python/AsyncioExecutor.h
+include/folly/python/Weak.h
 include/folly/python/async_generator.h
 include/folly/python/coro.h
 include/folly/python/error.h
@@ -959,6 +979,9 @@ include/folly/python/executor.h
 include/folly/python/futures.h
 include/folly/python/import.h
 include/folly/python/iobuf.h
+include/folly/result/gtest_helpers.h
+include/folly/result/result.h
+include/folly/result/try.h
 include/folly/settings/CommandLineParser.h
 include/folly/settings/Immutables.h
 include/folly/settings/Observer.h

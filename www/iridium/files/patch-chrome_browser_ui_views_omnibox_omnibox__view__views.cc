@@ -1,6 +1,6 @@
---- chrome/browser/ui/views/omnibox/omnibox_view_views.cc.orig	2025-02-22 18:06:53 UTC
+--- chrome/browser/ui/views/omnibox/omnibox_view_views.cc.orig	2025-04-16 18:18:42 UTC
 +++ chrome/browser/ui/views/omnibox/omnibox_view_views.cc
-@@ -2054,7 +2054,7 @@ void OmniboxViewViews::MaybeAddSendTabToSelfItem(
+@@ -2064,7 +2064,7 @@ void OmniboxViewViews::MaybeAddSendTabToSelfItem(
  }
  
  void OmniboxViewViews::OnPopupOpened() {

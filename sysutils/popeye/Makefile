@@ -1,7 +1,7 @@
 PORTNAME=	popeye
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.22.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	sysutils
 
 MAINTAINER=	dutra@FreeBSD.org
@@ -10,6 +10,9 @@ WWW=		https://popeye.io/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+NOT_FOR_ARCHS_REASON=	Compilation fails due to integer overflow
+NOT_FOR_ARCHS=		armv7 i386
 
 USES=		go:1.23,modules
 

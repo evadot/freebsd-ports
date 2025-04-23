@@ -49,10 +49,6 @@
     SUBDIR += edyvalue
     SUBDIR += eijiro-fpw
     SUBDIR += epwutil
-    SUBDIR += esecanna
-    SUBDIR += esecanna-module-vje25
-    SUBDIR += esecanna-module-vje30
-    SUBDIR += esecanna-module-wnn6
     SUBDIR += eterm
     SUBDIR += fcitx-anthy
     SUBDIR += fcitx-mozc
@@ -285,6 +281,7 @@
     SUBDIR += today
     SUBDIR += tomoe
     SUBDIR += uim-anthy
+    SUBDIR += uim-anthy-unicode
     SUBDIR += uim-mozc
     SUBDIR += uim-tomoe-gtk
     SUBDIR += vera-fpw

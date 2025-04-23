@@ -1,5 +1,5 @@
-TIMESTAMP = 1741805287
-SHA256 (go/net_gitlab-agent/gitlab-agent-v17.9.2/v17.9.2.mod) = a2652235ef0a6e36f95f2e721cc1168145d1022ac9498a5bed465803cd8f6ef9
-SIZE (go/net_gitlab-agent/gitlab-agent-v17.9.2/v17.9.2.mod) = 9329
-SHA256 (go/net_gitlab-agent/gitlab-agent-v17.9.2/v17.9.2.zip) = ad33a6822cfa1cbf04ea2677e8f7de5d6a4a5bdbcb80d24d626b19589bb62030
-SIZE (go/net_gitlab-agent/gitlab-agent-v17.9.2/v17.9.2.zip) = 1564878
+TIMESTAMP = 1744779984
+SHA256 (go/net_gitlab-agent/gitlab-agent-v17.11.0/v17.11.0.mod) = 6c36855cd351c829e5b19c5aa99876db58a2b4bd7b934e05497e7777faa64f8f
+SIZE (go/net_gitlab-agent/gitlab-agent-v17.11.0/v17.11.0.mod) = 9293
+SHA256 (go/net_gitlab-agent/gitlab-agent-v17.11.0/v17.11.0.zip) = 8743da14abb59d181548d986929b211648b6edd854ea658427cfc0f923ce14eb
+SIZE (go/net_gitlab-agent/gitlab-agent-v17.11.0/v17.11.0.zip) = 1555374

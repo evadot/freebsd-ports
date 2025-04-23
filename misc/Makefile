@@ -107,6 +107,7 @@
     SUBDIR += exercism
     SUBDIR += explosions
     SUBDIR += ezc3d
+    SUBDIR += fabric
     SUBDIR += far2l
     SUBDIR += fastscapelib
     SUBDIR += felis
@@ -201,7 +202,6 @@
     SUBDIR += iso-codes
     SUBDIR += jargon
     SUBDIR += jbidwatcher
-    SUBDIR += jirust
     SUBDIR += jojodiff
     SUBDIR += json-tui
     SUBDIR += kbdscan
@@ -423,6 +423,7 @@
     SUBDIR += py-codecarbon
     SUBDIR += py-colorbrewer
     SUBDIR += py-colored
+    SUBDIR += py-colorzero
     SUBDIR += py-crudini
     SUBDIR += py-datasets
     SUBDIR += py-detecta
@@ -459,6 +460,7 @@
     SUBDIR += py-llm
     SUBDIR += py-llm-claude-3
     SUBDIR += py-log_symbols
+    SUBDIR += py-mcp
     SUBDIR += py-mffpy
     SUBDIR += py-mixpanel
     SUBDIR += py-mmcv
@@ -511,6 +513,7 @@
     SUBDIR += py-pytorch-lightning
     SUBDIR += py-pyviz-comms
     SUBDIR += py-safetensors
+    SUBDIR += py-schedulefree
     SUBDIR += py-scikit-fusion
     SUBDIR += py-scikit-quant
     SUBDIR += py-serverfiles
@@ -557,6 +560,7 @@
     SUBDIR += quantum++
     SUBDIR += quary
     SUBDIR += randomx
+    SUBDIR += rash
     SUBDIR += raspberrypi-gpioshutdown
     SUBDIR += raspbsd-led
     SUBDIR += ree
@@ -625,6 +629,7 @@
     SUBDIR += thrill
     SUBDIR += timetrace
     SUBDIR += timezonemap
+    SUBDIR += timr-tui
     SUBDIR += tkcron
     SUBDIR += tkinfo
     SUBDIR += tkregexp

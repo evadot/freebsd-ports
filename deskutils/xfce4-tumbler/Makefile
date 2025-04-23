@@ -1,5 +1,6 @@
 PORTNAME=	tumbler
 PORTVERSION=	4.20.0
+PORTREVISION=	3
 CATEGORIES=	deskutils xfce
 MASTER_SITES=	XFCE
 PKGNAMEPREFIX=	xfce4-
@@ -17,7 +18,7 @@ LIB_DEPENDS=	libpng16.so:graphics/png
 
 USES=		compiler:c11 gettext-tools gmake gnome libtool \
 		localbase:ldflags pathfix pkgconfig tar:bzip2 xfce
-USE_GNOME=	cairo gdkpixbuf2 glib20 libgsf
+USE_GNOME=	cairo gdkpixbuf glib20 libgsf
 USE_LDCONFIG=	yes
 USE_XFCE=	libutil
 
@@ -44,7 +45,7 @@ GSTREAMER_DESC=	GStreamer thumbnailer plugin
 COVER_LIB_DEPENDS=	libcurl.so:ftp/curl
 COVER_CONFIGURE_ENABLE=	cover-thumbnailer
 
-EPUB_LIB_DEPENDS=	libgepub-0.6.so:textproc/libgepub
+EPUB_LIB_DEPENDS=	libgepub-0.7.so:textproc/libgepub
 EPUB_CONFIGURE_ENABLE=	gepub-thumbnailer
 
 FFMPEG_LIB_DEPENDS=		libffmpegthumbnailer.so:multimedia/ffmpegthumbnailer

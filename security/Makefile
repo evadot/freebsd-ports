@@ -21,6 +21,7 @@
     SUBDIR += aespipe
     SUBDIR += afl++
     SUBDIR += afterglow
+    SUBDIR += agave
     SUBDIR += age
     SUBDIR += aide
     SUBDIR += amavisd-milter
@@ -68,7 +69,6 @@
     SUBDIR += caesarcipher
     SUBDIR += caldera
     SUBDIR += caldera-ot
-    SUBDIR += caldera4
     SUBDIR += calife
     SUBDIR += cardpeek
     SUBDIR += cargo-audit
@@ -215,7 +215,6 @@
     SUBDIR += heaan
     SUBDIR += headscale
     SUBDIR += heimdal
-    SUBDIR += heimdal-devel
     SUBDIR += helib
     SUBDIR += hexl
     SUBDIR += hidden-lake
@@ -397,6 +396,7 @@
     SUBDIR += monocypher
     SUBDIR += munge
     SUBDIR += n2n
+    SUBDIR += naabu
     SUBDIR += ncrack
     SUBDIR += ncrypt
     SUBDIR += nebula
@@ -412,6 +412,7 @@
     SUBDIR += nitrokey-app
     SUBDIR += nmap
     SUBDIR += nmap-devel
+    SUBDIR += node-sqlcipher
     SUBDIR += nss
     SUBDIR += nss_compat_ossl
     SUBDIR += nuclei
@@ -923,6 +924,7 @@
     SUBDIR += py-cryptography
     SUBDIR += py-cryptography-legacy
     SUBDIR += py-cryptography-vectors
+    SUBDIR += py-cryptojwt
     SUBDIR += py-ctypescrypto
     SUBDIR += py-cybox
     SUBDIR += py-detect-secrets
@@ -1205,7 +1207,6 @@
     SUBDIR += rubygem-origami
     SUBDIR += rubygem-pbkdf2-ruby
     SUBDIR += rubygem-pundit
-    SUBDIR += rubygem-pundit61
     SUBDIR += rubygem-pwned
     SUBDIR += rubygem-pyu-ruby-sasl
     SUBDIR += rubygem-rack-oauth2
@@ -1303,7 +1304,6 @@
     SUBDIR += softether-devel
     SUBDIR += softether5
     SUBDIR += softhsm2
-    SUBDIR += solana
     SUBDIR += sops
     SUBDIR += spass
     SUBDIR += spass-qt5
@@ -1339,6 +1339,7 @@
     SUBDIR += su-exec
     SUBDIR += subversion-gnome-keyring
     SUBDIR += sudo
+    SUBDIR += sudo-rs
     SUBDIR += sudoscript
     SUBDIR += super
     SUBDIR += suricata

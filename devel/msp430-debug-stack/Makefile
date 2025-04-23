@@ -1,6 +1,6 @@
 PORTNAME=	msp430-debug-stack
 PORTVERSION=	3.15.1.1
-PORTREVISION=	10
+PORTREVISION=	12
 CATEGORIES=	devel
 MASTER_SITES=	https://dr-download.ti.com/software-development/driver-or-library/MD-4vnqcP1Wk4/${PORTVERSION}/ \
 		LOCAL/lev:doc1 \
@@ -15,8 +15,6 @@ COMMENT=	TI MSP430 debugging interface library
 WWW=		http://www.ti.com/tool/mspds
 
 LICENSE=	BSD3CLAUSE
-
-BROKEN=		fails to build with Boost>=1.87
 
 LIB_DEPENDS=	libboost_filesystem.so:devel/boost-libs \
 		libhidapi.so:comms/hidapi
@@ -52,6 +50,6 @@ do-install:
 	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/slau320aj.pdf ${STAGEDIR}${DOCSDIR}/
 	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/slau656d.pdf ${STAGEDIR}${DOCSDIR}/
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/devd
-	${INSTALL_DATA} ${FILESDIR}/mspfet.conf ${STAGEDIR}${PREFIX}/etc/devd
+	${INSTALL_DATA} ${FILESDIR}/mspfet.conf.sample ${STAGEDIR}${PREFIX}/etc/devd
 
 .include <bsd.port.mk>

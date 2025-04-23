@@ -1,6 +1,5 @@
 PORTNAME=	mlterm
-PORTVERSION=	3.9.3
-PORTREVISION=	2
+PORTVERSION=	3.9.4
 CATEGORIES=	x11
 
 MAINTAINER=	nobutaka@FreeBSD.org
@@ -15,7 +14,7 @@ LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 
 USES=		cpe desktop-file-utils gettext gnome libtool perl5 pkgconfig xorg
 USE_GITHUB=	yes
-USE_GNOME=	cairo gdkpixbuf2 gtk30 vte3
+USE_GNOME=	cairo gdkpixbuf gtk30 vte3
 USE_LDCONFIG=	yes
 USE_PERL5=	build
 USE_XORG=	sm x11 xft

@@ -1,7 +1,6 @@
 PORTNAME=	dino
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.4.4
-PORTREVISION=	2
+DISTVERSION=	0.4.5
 CATEGORIES=	net-im
 
 MAINTAINER=	ashish@FreeBSD.org
@@ -39,7 +38,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 LDFLAGS+=	-Wl,--export-dynamic
 USE_LDCONFIG=	yes
 
-USE_GNOME=	cairo gdkpixbuf2 glib20 gnomeprefix gtk40 intlhack
+USE_GNOME=	cairo gdkpixbuf glib20 gnomeprefix gtk40 intlhack
 
 CANBERRA_DESC=	Notifications sounds support
 ICE_DESC=		ICE NAT traversal plugin

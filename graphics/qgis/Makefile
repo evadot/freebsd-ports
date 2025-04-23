@@ -1,6 +1,5 @@
 PORTNAME=	qgis
-DISTVERSION=	3.42.0
-PORTREVISION=	4
+DISTVERSION=	3.42.2
 CATEGORIES=	graphics geography
 MASTER_SITES=	https://qgis.org/downloads/
 
@@ -66,7 +65,7 @@ RUN_DEPENDS=	astyle:devel/astyle \
 		${PYTHON_PKGNAMEPREFIX}black>=22.10:devel/py-black@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}cycler>=0.11.0:devel/py-cycler@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}python-dateutil>=2.8.2:devel/py-python-dateutil@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}Fiona>=1.8.21:graphics/py-fiona@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}fiona>=1.8.21:graphics/py-fiona@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}future>=0.18.2:devel/py-future@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}gdal>=3.5.2:graphics/py-gdal@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}geojson>=2.3.0:devel/py-geojson@${PY_FLAVOR} \
@@ -114,7 +113,7 @@ USES=		bison cmake compiler:features desktop-file-utils \
 USE_GL=		gl
 USE_GNOME=	libxml2
 USE_LDCONFIG=	yes
-USE_PYQT=	pyqt5 pysip qscintilla2 qtbuilder:build sip:build
+USE_PYQT=	pyqt5 pysip qscintilla2 qtbuilder:build sip:build webengine
 USE_QT=		3d buildtools:build core concurrent dbus declarative \
 		designer:build qdoc:build gamepad gui linguist:build location \
 		multimedia network printsupport qmake:build script serialport \

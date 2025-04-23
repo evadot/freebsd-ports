@@ -472,7 +472,6 @@
     SUBDIR += lucene5
     SUBDIR += luceneplusplus
     SUBDIR += lv-aspell
-    SUBDIR += m17n-im-config
     SUBDIR += makefaq
     SUBDIR += makepatch
     SUBDIR += man2html
@@ -706,7 +705,6 @@
     SUBDIR += p5-PDF-Reuse
     SUBDIR += p5-PDF-Table
     SUBDIR += p5-PDF-Tiny
-    SUBDIR += p5-PDF-WebKit
     SUBDIR += p5-PDF-Writer
     SUBDIR += p5-POD2-Base
     SUBDIR += p5-POE-Filter-XML
@@ -1348,7 +1346,6 @@
     SUBDIR += py-charset-normalizer
     SUBDIR += py-chevron
     SUBDIR += py-citeproc-py
-    SUBDIR += py-citeproc-py-styles
     SUBDIR += py-cjkwrap
     SUBDIR += py-cloud_sptheme
     SUBDIR += py-cmarkgfm
@@ -1364,8 +1361,8 @@
     SUBDIR += py-dict2xml
     SUBDIR += py-diff-match-patch
     SUBDIR += py-docrepr
-    SUBDIR += py-docstring-parser
     SUBDIR += py-docstring-to-markdown
+    SUBDIR += py-docstring_parser
     SUBDIR += py-docutils
     SUBDIR += py-docx-generator
     SUBDIR += py-docx2txt
@@ -1405,7 +1402,6 @@
     SUBDIR += py-genshi
     SUBDIR += py-gensim
     SUBDIR += py-gi-docgen
-    SUBDIR += py-grapheme
     SUBDIR += py-graphemeu
     SUBDIR += py-grep-ast
     SUBDIR += py-griffe
@@ -1711,7 +1707,6 @@
     SUBDIR += py-wordcloud
     SUBDIR += py-wordnet
     SUBDIR += py-wordninja
-    SUBDIR += py-wstools
     SUBDIR += py-wtf-peewee
     SUBDIR += py-wtforms
     SUBDIR += py-xhtml2pdf
@@ -1803,7 +1798,6 @@
     SUBDIR += rubygem-babosa
     SUBDIR += rubygem-bourbon
     SUBDIR += rubygem-case_transform
-    SUBDIR += rubygem-case_transform61
     SUBDIR += rubygem-character_set
     SUBDIR += rubygem-charlock_holmes
     SUBDIR += rubygem-chef-gyoku
@@ -1821,7 +1815,7 @@
     SUBDIR += rubygem-cssmin
     SUBDIR += rubygem-cucumber-gherkin
     SUBDIR += rubygem-cucumber-gherkin27
-    SUBDIR += rubygem-cucumber-gherkin29
+    SUBDIR += rubygem-cucumber-gherkin30
     SUBDIR += rubygem-cucumber-html-formatter
     SUBDIR += rubygem-dartsass
     SUBDIR += rubygem-diff-lcs
@@ -1909,7 +1903,6 @@
     SUBDIR += rubygem-multi_xml
     SUBDIR += rubygem-nokogiri
     SUBDIR += rubygem-nokogiri-diff
-    SUBDIR += rubygem-nokogumbo
     SUBDIR += rubygem-octopress-escape-code
     SUBDIR += rubygem-opensearch-ruby-gitlab
     SUBDIR += rubygem-opml
@@ -2114,6 +2107,7 @@
     SUBDIR += tokay
     SUBDIR += tokyodystopia
     SUBDIR += toml-f
+    SUBDIR += tomlq
     SUBDIR += tr-aspell
     SUBDIR += trang
     SUBDIR += translate-shell

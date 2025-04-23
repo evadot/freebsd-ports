@@ -7,6 +7,7 @@
     SUBDIR += aggregate
     SUBDIR += aircrack-ng
     SUBDIR += alertmanager
+    SUBDIR += andwatch
     SUBDIR += ap-utils
     SUBDIR += argus3
     SUBDIR += argus3-clients
@@ -192,7 +193,6 @@
     SUBDIR += netdata-go
     SUBDIR += netdisco
     SUBDIR += netdisco-mibs
-    SUBDIR += netdot
     SUBDIR += netleak
     SUBDIR += netmagis-common
     SUBDIR += netmagis-database
@@ -312,6 +312,7 @@
     SUBDIR += prometheus-collectd-exporter
     SUBDIR += prometheus1
     SUBDIR += prometheus2
+    SUBDIR += prometheus3
     SUBDIR += promscale
     SUBDIR += promxy
     SUBDIR += pushgateway

@@ -83,7 +83,6 @@
     SUBDIR += chrony-lite
     SUBDIR += citrix_ica
     SUBDIR += cjdns
-    SUBDIR += clash
     SUBDIR += cloud-init
     SUBDIR += cloud-init-devel
     SUBDIR += cloudflared
@@ -139,6 +138,7 @@
     SUBDIR += dtcpclient
     SUBDIR += dual-dhclient
     SUBDIR += dual-dhclient-daemon
+    SUBDIR += dumbpipe
     SUBDIR += ecal
     SUBDIR += echoping
     SUBDIR += empty
@@ -149,6 +149,7 @@
     SUBDIR += evans
     SUBDIR += eventviews
     SUBDIR += exabgp4
+    SUBDIR += exoscale-cli
     SUBDIR += fb303
     SUBDIR += fiche
     SUBDIR += file2pcap
@@ -398,7 +399,6 @@
     SUBDIR += libmateweather
     SUBDIR += libmaxminddb
     SUBDIR += libmdf
-    SUBDIR += libmediawiki
     SUBDIR += libnatpmp
     SUBDIR += libndp
     SUBDIR += libnet
@@ -447,7 +447,6 @@
     SUBDIR += linux-c7-openldap
     SUBDIR += linux-c7-tcp_wrappers-libs
     SUBDIR += linux-rl9-avahi-libs
-    SUBDIR += linux-rl9-libproxy
     SUBDIR += linux-rl9-openldap
     SUBDIR += linux-rl9-sdl2_net
     SUBDIR += linux-rl9-sdl_net
@@ -476,6 +475,7 @@
     SUBDIR += micro_inetd
     SUBDIR += micro_proxy
     SUBDIR += microsocks
+    SUBDIR += mihomo
     SUBDIR += mimetreeparser
     SUBDIR += minidlna
     SUBDIR += minissdpd
@@ -552,7 +552,6 @@
     SUBDIR += nss-pam-ldapd
     SUBDIR += nss-pam-ldapd-sasl
     SUBDIR += nss_ldap
-    SUBDIR += nsscache
     SUBDIR += ntimed
     SUBDIR += ntopng
     SUBDIR += ntp
@@ -590,7 +589,6 @@
     SUBDIR += openpgm
     SUBDIR += openradius
     SUBDIR += openrsync
-    SUBDIR += opensips31
     SUBDIR += openslp
     SUBDIR += openvswitch
     SUBDIR += ortp
@@ -1059,7 +1057,6 @@
     SUBDIR += py-dpkt
     SUBDIR += py-duet
     SUBDIR += py-dugong
-    SUBDIR += py-ec2-cli-tools
     SUBDIR += py-ephemeral-port-reserve
     SUBDIR += py-err-backend-discord
     SUBDIR += py-err-backend-mattermost
@@ -1177,7 +1174,6 @@
     SUBDIR += py-sshuttle
     SUBDIR += py-stomp.py
     SUBDIR += py-suds
-    SUBDIR += py-tacacs_plus
     SUBDIR += py-terminado
     SUBDIR += py-tiny-proxy
     SUBDIR += py-tofu
@@ -1217,6 +1213,7 @@
     SUBDIR += rabbiteer
     SUBDIR += rabbitmq
     SUBDIR += rabbitmq-c
+    SUBDIR += rabbitmqadmin
     SUBDIR += radcli
     SUBDIR += raddump
     SUBDIR += radiator
@@ -1284,6 +1281,7 @@
     SUBDIR += rubygem-cloudflare
     SUBDIR += rubygem-connection_pool
     SUBDIR += rubygem-devfile
+    SUBDIR += rubygem-devfile-gitlab
     SUBDIR += rubygem-docker-api
     SUBDIR += rubygem-dogapi
     SUBDIR += rubygem-domain_name
@@ -1501,6 +1499,7 @@
     SUBDIR += self-service-password
     SUBDIR += sems
     SUBDIR += sendemail
+    SUBDIR += sendme
     SUBDIR += sendsms
     SUBDIR += sendsnpp
     SUBDIR += serveez

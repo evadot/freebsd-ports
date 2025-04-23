@@ -1,6 +1,6 @@
 PORTNAME=	rust
-PORTVERSION?=	1.85.0
-PORTREVISION?=	1
+PORTVERSION?=	1.86.0
+PORTREVISION?=	0
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/:src \
 		https://dev-static.rust-lang.org/dist/:src \
@@ -47,7 +47,7 @@ CONFLICTS_INSTALL?=	rust-nightly
 TMPDIR?=	${WRKDIR}
 
 OPTIONS_DEFINE=		DOCS GDB LTO PORT_LLVM SOURCES WASM
-OPTIONS_DEFAULT=	SOURCES WASM
+OPTIONS_DEFAULT=	DOCS SOURCES WASM
 OPTIONS_DEFINE_i386=	SSE2
 OPTIONS_DEFAULT_i386=	SSE2
 
@@ -60,8 +60,7 @@ WASM_DESC=	Build the WebAssembly target (wasm32-unknown-unknown)
 SSE2_EXTRA_PATCHES_OFF+=	${FILESDIR}/extra-patch-compiler_rustc__target_src_spec_targets_i686__unknown__freebsd.rs
 
 DOCS_VARS=		_RUST_BUILD_DOCS=true \
-			_COMPONENTS+="rust-docs-${_PACKAGE_VERS}-${_RUST_TARGET} rust-docs-json-${_PACKAGE_VERS}-${_RUST_TARGET}" \
-			_RUST_TOOLS+=rustdoc
+			_COMPONENTS+="rust-docs-${_PACKAGE_VERS}-${_RUST_TARGET} rust-docs-json-${_PACKAGE_VERS}-${_RUST_TARGET}"
 DOCS_VARS_OFF=		_RUST_BUILD_DOCS=false
 GDB_RUN_DEPENDS=	${LOCALBASE}/bin/gdb:devel/gdb
 PORT_LLVM_USES=		llvm:min=18,lib,noexport
@@ -72,8 +71,8 @@ WASM_VARS=		_COMPONENTS+="rust-analysis-${_PACKAGE_VERS}-wasm32-unknown-unknown 
 			_RUST_TARGETS+=wasm32-unknown-unknown
 
 # See WRKSRC/src/stage0 for the date and version values
-BOOTSTRAPS_DATE?=		2025-01-09
-RUST_BOOTSTRAP_VERSION?=	1.84.0
+BOOTSTRAPS_DATE?=		2025-02-20
+RUST_BOOTSTRAP_VERSION?=	1.85.0
 
 CARGO_VENDOR_DIR?=		${WRKSRC}/vendor
 
@@ -171,11 +170,7 @@ do-configure:
 	@${ECHO_CMD} 'vendor=true' >> ${WRKSRC}/config.toml
 	@${ECHO_CMD} 'extended=true' >> ${WRKSRC}/config.toml
 	@${ECHO_CMD} 'python="${PYTHON_CMD}"' >> ${WRKSRC}/config.toml
-.if ${ARCH} == "armv7"
-	@${ECHO_CMD} 'docs=false' >> ${WRKSRC}/config.toml
-.else
 	@${ECHO_CMD} 'docs=${_RUST_BUILD_DOCS}' >> ${WRKSRC}/config.toml
-.endif
 	@${ECHO_CMD} 'verbose=2' >> ${WRKSRC}/config.toml
 .if defined(NIGHTLY_DATE)
 	@${ECHO_CMD} 'profiler=true' >> ${WRKSRC}/config.toml

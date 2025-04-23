@@ -316,7 +316,7 @@ lib/libkwin.so.%%KDE_PLASMA_VERSION%%
 %%QT_PLUGINDIR%%/kwin/plugins/KeyNotificationPlugin.so
 %%QT_PLUGINDIR%%/kwin/plugins/StickyKeysPlugin.so
 %%QT_PLUGINDIR%%/kwin/plugins/buttonsrebind.so
-%%QT_PLUGINDIR%%/kwin/plugins/eis.so
+%%EI%%%%QT_PLUGINDIR%%/kwin/plugins/eis.so
 %%QT_PLUGINDIR%%/kwin/plugins/krunnerintegration.so
 %%QT_PLUGINDIR%%/kwin/plugins/nightlight.so
 %%QT_PLUGINDIR%%/kwin/plugins/screencast.so
@@ -1412,11 +1412,14 @@ share/locale/ms/LC_MESSAGES/kcmkwincompositing.mo
 share/locale/ms/LC_MESSAGES/kcmkwinscreenedges.mo
 share/locale/ms/LC_MESSAGES/kcmkwm.mo
 share/locale/ms/LC_MESSAGES/kwin.mo
+share/locale/nb/LC_MESSAGES/kcm_kwin_effects.mo
 share/locale/nb/LC_MESSAGES/kcm_kwin_scripts.mo
 share/locale/nb/LC_MESSAGES/kcm_kwin_virtualdesktops.mo
 share/locale/nb/LC_MESSAGES/kcm_kwindecoration.mo
 share/locale/nb/LC_MESSAGES/kcm_kwinrules.mo
 share/locale/nb/LC_MESSAGES/kcm_kwintabbox.mo
+share/locale/nb/LC_MESSAGES/kcm_kwinxwayland.mo
+share/locale/nb/LC_MESSAGES/kcm_virtualkeyboard.mo
 share/locale/nb/LC_MESSAGES/kcmkwincommon.mo
 share/locale/nb/LC_MESSAGES/kcmkwincompositing.mo
 share/locale/nb/LC_MESSAGES/kcmkwinscreenedges.mo
