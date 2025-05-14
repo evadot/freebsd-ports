@@ -97,13 +97,16 @@
     SUBDIR += gcc13-devel
     SUBDIR += gcc14
     SUBDIR += gcc14-devel
+    SUBDIR += gcc15
     SUBDIR += gcc15-devel
+    SUBDIR += gcc16-devel
     SUBDIR += gcc6-aux
     SUBDIR += gforth
     SUBDIR += ghc
     SUBDIR += ghc810
     SUBDIR += ghc92
     SUBDIR += ghc94
+    SUBDIR += ghc96
     SUBDIR += gir-to-d
     SUBDIR += gjs
     SUBDIR += gleam
