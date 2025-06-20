@@ -569,6 +569,7 @@
     SUBDIR += octave-forge-coder
     SUBDIR += octave-forge-communications
     SUBDIR += octave-forge-control
+    SUBDIR += octave-forge-csg-dataset
     SUBDIR += octave-forge-csg-toolkit
     SUBDIR += octave-forge-data-smoothing
     SUBDIR += octave-forge-database
@@ -626,6 +627,7 @@
     SUBDIR += octave-forge-nurbs
     SUBDIR += octave-forge-oct2mat
     SUBDIR += octave-forge-octave-pool
+    SUBDIR += octave-forge-octave_php_wrapper
     SUBDIR += octave-forge-octave_tar
     SUBDIR += octave-forge-octave_zstd
     SUBDIR += octave-forge-octclip
@@ -979,6 +981,7 @@
     SUBDIR += py-fenics-ufl
     SUBDIR += py-flax
     SUBDIR += py-formulaic
+    SUBDIR += py-formulaic-contrasts
     SUBDIR += py-fpylll
     SUBDIR += py-fraction
     SUBDIR += py-fsph
@@ -986,7 +989,6 @@
     SUBDIR += py-gau2grid
     SUBDIR += py-gimmik
     SUBDIR += py-gmpy2
-    SUBDIR += py-grandalf
     SUBDIR += py-graphillion
     SUBDIR += py-gym
     SUBDIR += py-gym-notices
@@ -1051,6 +1053,7 @@
     SUBDIR += py-pandas
     SUBDIR += py-pandas-datareader
     SUBDIR += py-patsy
+    SUBDIR += py-pcodec
     SUBDIR += py-pdal
     SUBDIR += py-permutation
     SUBDIR += py-petsc4py
@@ -1118,7 +1121,6 @@
     SUBDIR += py-spopt
     SUBDIR += py-spot
     SUBDIR += py-spreg
-    SUBDIR += py-spvcm
     SUBDIR += py-squarify
     SUBDIR += py-ssm
     SUBDIR += py-statsmodels
@@ -1133,6 +1135,7 @@
     SUBDIR += py-umap-learn
     SUBDIR += py-uncertainties
     SUBDIR += py-unyt
+    SUBDIR += py-vector
     SUBDIR += py-vincenty
     SUBDIR += py-yt
     SUBDIR += py-z3-solver
