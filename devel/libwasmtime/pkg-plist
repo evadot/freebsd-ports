@@ -10,6 +10,7 @@ include/wasmtime/component/component.h
 include/wasmtime/component/func.h
 include/wasmtime/component/instance.h
 include/wasmtime/component/linker.h
+include/wasmtime/component/val.h
 include/wasmtime/conf.h
 include/wasmtime/config.h
 include/wasmtime/config.hh
@@ -53,6 +54,7 @@ include/wasmtime/types/val.hh
 include/wasmtime/val.h
 include/wasmtime/val.hh
 include/wasmtime/wasi.hh
+include/wasmtime/wasip2.h
 include/wasmtime/wat.h
 include/wasmtime/wat.hh
 lib/libwasmtime.a

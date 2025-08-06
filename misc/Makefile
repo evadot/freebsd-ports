@@ -98,7 +98,6 @@
     SUBDIR += dtach
     SUBDIR += dvorak7min
     SUBDIR += dynomite
-    SUBDIR += e2fsprogs-libuuid
     SUBDIR += ecflow
     SUBDIR += edfbrowser
     SUBDIR += edflib
@@ -249,6 +248,7 @@
     SUBDIR += libsupertone
     SUBDIR += libsweep-lidar
     SUBDIR += libutf
+    SUBDIR += libuuid
     SUBDIR += libxdf
     SUBDIR += lifelines
     SUBDIR += lightgbm
@@ -270,6 +270,7 @@
     SUBDIR += mate-user-guide
     SUBDIR += mbuffer
     SUBDIR += mc
+    SUBDIR += mcp-probe
     SUBDIR += mdp
     SUBDIR += meshoptimizer
     SUBDIR += metalink-checker
@@ -311,11 +312,11 @@
     SUBDIR += opennn
     SUBDIR += openr2
     SUBDIR += openvdb
-    SUBDIR += orange3
     SUBDIR += orville-write
     SUBDIR += osinfo-db
     SUBDIR += ossp-uuid
     SUBDIR += otter
+    SUBDIR += outside
     SUBDIR += owrep
     SUBDIR += p5-Acme-ButFirst
     SUBDIR += p5-Array-Compare
@@ -398,6 +399,7 @@
     SUBDIR += php82-calendar
     SUBDIR += php83-calendar
     SUBDIR += php84-calendar
+    SUBDIR += php85-calendar
     SUBDIR += pinfo
     SUBDIR += pipe
     SUBDIR += posixtestsuite
@@ -428,10 +430,10 @@
     SUBDIR += py-colorbrewer
     SUBDIR += py-colored
     SUBDIR += py-colorzero
+    SUBDIR += py-cppman
     SUBDIR += py-crudini
     SUBDIR += py-datasets
     SUBDIR += py-detecta
-    SUBDIR += py-dictdiffer
     SUBDIR += py-eemeter
     SUBDIR += py-einops
     SUBDIR += py-emoji
@@ -443,6 +445,7 @@
     SUBDIR += py-fleep
     SUBDIR += py-fuzzy
     SUBDIR += py-gguf
+    SUBDIR += py-google-ai-generativelanguage
     SUBDIR += py-gpiozero
     SUBDIR += py-halo
     SUBDIR += py-hf-xet
@@ -455,6 +458,16 @@
     SUBDIR += py-ipyfastscape
     SUBDIR += py-jiwer
     SUBDIR += py-kartograph
+    SUBDIR += py-langchain
+    SUBDIR += py-langchain-anthropic
+    SUBDIR += py-langchain-core
+    SUBDIR += py-langchain-google-genai
+    SUBDIR += py-langchain-openai
+    SUBDIR += py-langchain-tests
+    SUBDIR += py-langchain-text-splitters
+    SUBDIR += py-langgraph-checkpoint
+    SUBDIR += py-langgraph-sdk
+    SUBDIR += py-langsmith
     SUBDIR += py-laspy
     SUBDIR += py-lazrs
     SUBDIR += py-lightgbm
@@ -485,11 +498,6 @@
     SUBDIR += py-openpaperwork-gtk
     SUBDIR += py-openvdb
     SUBDIR += py-optuna
-    SUBDIR += py-orange3-associate
-    SUBDIR += py-orange3-datafusion
-    SUBDIR += py-orange3-educational
-    SUBDIR += py-orange3-network
-    SUBDIR += py-orange3-timeseries
     SUBDIR += py-oterm
     SUBDIR += py-palettable
     SUBDIR += py-papermill
@@ -551,6 +559,7 @@
     SUBDIR += qbrew
     SUBDIR += qlas
     SUBDIR += qlcplus
+    SUBDIR += qman
     SUBDIR += qt5-doc
     SUBDIR += qt5-examples
     SUBDIR += qt5-l10n
@@ -610,9 +619,12 @@
     SUBDIR += snakemake
     SUBDIR += soapysdr
     SUBDIR += solarized
+    SUBDIR += spacenavd-devel
+    SUBDIR += spnavcfg-devel
     SUBDIR += sshbuddy
     SUBDIR += sssnips
     SUBDIR += star-history
+    SUBDIR += stormy
     SUBDIR += susv2
     SUBDIR += susv3
     SUBDIR += susv4

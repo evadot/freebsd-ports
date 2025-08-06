@@ -1,6 +1,6 @@
 PORTNAME=	scilab
 DISTVERSION=	6.1.1
-PORTREVISION=	22
+PORTREVISION=	24
 CATEGORIES=	math cad java
 MASTER_SITES=	https://www.scilab.org/download/${DISTVERSION}/
 DISTFILES=	${DISTNAME}-src${EXTRACT_SUFX}
@@ -84,7 +84,7 @@ _GUI_DEPENDS+=	${JAVALIBDIR}/commons-beanutils.jar:java/apache-commons-beanutils
 		${LOCALBASE}/bin/splint:devel/splint
 # Documentation building:
 _GUI_DEPENDS+=	${LOCALBASE}/share/xsl/docbook/javahelp/javahelp.xsl:textproc/docbook-xsl \
-		${JAVALIBDIR}/saxon-he-12.6.jar:textproc/saxon-he \
+		saxon-he>=12.8:textproc/saxon-he \
 		${_JAVADIR}/xml-commons/xml-apis-ext.jar:textproc/xml-commons \
 		xsltproc:textproc/libxslt
 # Other gui deps:
@@ -146,6 +146,7 @@ FFLAGS+=	-fallow-argument-mismatch
 post-patch:
 	@${REINPLACE_CMD} 's,/usr/local,${LOCALBASE},' ${WRKSRC}/etc/librarypath.xml
 	@${REINPLACE_CMD} -e 's, gfortran, ${FC},' ${WRKSRC}/modules/dynamic_link/src/scripts/configure
+	@${REINPLACE_CMD} -e 's,valgrind,X_X_NONEXIST_X_X,' ${WRKSRC}/configure
 .if ${COMPILER_TYPE} == clang
 	@${REINPLACE_CMD} -e 's|std::filesystem|std::__fs::filesystem|g' \
 		${WRKSRC}/modules/fileio/src/cpp/fullpath.cpp \

@@ -1,5 +1,5 @@
 PORTNAME=	git
-DISTVERSION=	2.49.0
+DISTVERSION=	2.50.1
 CATEGORIES=	devel
 MASTER_SITES=	KERNEL_ORG/software/scm/git
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
@@ -59,7 +59,6 @@ SHEBANG_FILES=	Documentation/*.perl \
 		contrib/*/*.pl \
 		contrib/*/*/*.perl \
 		contrib/*/*/*.pl \
-		contrib/buildsystems/generate \
 		contrib/contacts/git-contacts \
 		contrib/fast-import/import-zips.py \
 		contrib/hooks/update-paranoid \
@@ -105,7 +104,6 @@ PERL_RUN_DEPENDS=	p5-Error>=0:lang/p5-Error
 PERL_MAKE_ARGS_OFF=	NO_PERL=1
 
 GITWEB_IMPLIES=		PERL
-GITWEB_RUN_DEPENDS=	p5-CGI>=0:www/p5-CGI
 GITWEB_MAKE_ARGS_OFF=	NO_GITWEB=1
 
 PCRE2_LIB_DEPENDS=	libpcre2-8.so:devel/pcre2

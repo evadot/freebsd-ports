@@ -48,6 +48,7 @@
     SUBDIR += db
     SUBDIR += db18
     SUBDIR += db5
+    SUBDIR += dbeaver
     SUBDIR += dbf
     SUBDIR += dbh
     SUBDIR += dbixx
@@ -81,8 +82,6 @@
     SUBDIR += geoserver-mysql-plugin
     SUBDIR += gigabase
     SUBDIR += gmdb2
-    SUBDIR += gnats4
-    SUBDIR += gnatsweb4
     SUBDIR += go-carbon
     SUBDIR += go-pgweb
     SUBDIR += gobang
@@ -133,7 +132,6 @@
     SUBDIR += libgda5-postgresql
     SUBDIR += libgda5-ui
     SUBDIR += libgda6
-    SUBDIR += libgdamm5
     SUBDIR += libhsclient
     SUBDIR += libiodbc
     SUBDIR += libmemcache
@@ -145,6 +143,7 @@
     SUBDIR += libpbl
     SUBDIR += libpg_query
     SUBDIR += libsdb
+    SUBDIR += libvalkey
     SUBDIR += libzdb
     SUBDIR += linux-c7-sqlite3
     SUBDIR += linux-c7-unixODBC
@@ -167,6 +166,7 @@
     SUBDIR += mantis
     SUBDIR += mariadb-connector-c
     SUBDIR += mariadb-connector-odbc
+    SUBDIR += mariadb-java-client
     SUBDIR += mariadb1011-client
     SUBDIR += mariadb1011-server
     SUBDIR += mariadb105-client
@@ -183,7 +183,6 @@
     SUBDIR += memcached
     SUBDIR += metabase
     SUBDIR += mongodb-tools
-    SUBDIR += mongodb50
     SUBDIR += mongodb60
     SUBDIR += mongodb70
     SUBDIR += mongodb80
@@ -225,6 +224,8 @@
     SUBDIR += ods2sql
     SUBDIR += opendbviewer
     SUBDIR += opendbx
+    SUBDIR += openvoxdb-terminus8
+    SUBDIR += openvoxdb8
     SUBDIR += ora2pg
     SUBDIR += oracle8-client
     SUBDIR += p5-Amazon-SimpleDB
@@ -515,8 +516,6 @@
     SUBDIR += pear-DB_Table
     SUBDIR += pear-DB_ldap
     SUBDIR += pear-DB_ldap2
-    SUBDIR += pear-DoctrineCommon
-    SUBDIR += pear-DoctrineDBAL
     SUBDIR += pear-Horde_Db
     SUBDIR += pear-Horde_HashTable
     SUBDIR += pear-Horde_Imsp
@@ -635,6 +634,18 @@
     SUBDIR += php84-pdo_sqlite
     SUBDIR += php84-pgsql
     SUBDIR += php84-sqlite3
+    SUBDIR += php85-dba
+    SUBDIR += php85-mysqli
+    SUBDIR += php85-odbc
+    SUBDIR += php85-pdo
+    SUBDIR += php85-pdo_dblib
+    SUBDIR += php85-pdo_firebird
+    SUBDIR += php85-pdo_mysql
+    SUBDIR += php85-pdo_odbc
+    SUBDIR += php85-pdo_pgsql
+    SUBDIR += php85-pdo_sqlite
+    SUBDIR += php85-pgsql
+    SUBDIR += php85-sqlite3
     SUBDIR += phpliteadmin
     SUBDIR += phpminiadmin
     SUBDIR += phpmyadmin
@@ -647,6 +658,7 @@
     SUBDIR += postgis33
     SUBDIR += postgis34
     SUBDIR += postgis35
+    SUBDIR += postgis36
     SUBDIR += postgresql-cstore_fdw
     SUBDIR += postgresql-idn
     SUBDIR += postgresql-jdbc
@@ -708,6 +720,14 @@
     SUBDIR += postgresql17-plpython
     SUBDIR += postgresql17-pltcl
     SUBDIR += postgresql17-server
+    SUBDIR += postgresql18-client
+    SUBDIR += postgresql18-contrib
+    SUBDIR += postgresql18-docs
+    SUBDIR += postgresql18-pgtcl
+    SUBDIR += postgresql18-plperl
+    SUBDIR += postgresql18-plpython
+    SUBDIR += postgresql18-pltcl
+    SUBDIR += postgresql18-server
     SUBDIR += powa-archivist
     SUBDIR += powa-web
     SUBDIR += powerarchitect
@@ -730,6 +750,7 @@
     SUBDIR += py-Pyrseas
     SUBDIR += py-aesqlapius
     SUBDIR += py-agate-sql
+    SUBDIR += py-aiodataloader
     SUBDIR += py-aiomcache
     SUBDIR += py-aiomysql
     SUBDIR += py-aiopg
@@ -746,6 +767,7 @@
     SUBDIR += py-couchdb
     SUBDIR += py-cymysql
     SUBDIR += py-databases
+    SUBDIR += py-datafusion
     SUBDIR += py-dbf
     SUBDIR += py-dbt-core
     SUBDIR += py-dbt-duckdb
@@ -849,6 +871,7 @@
     SUBDIR += py-tiledb
     SUBDIR += py-txredisapi
     SUBDIR += py-unqlite
+    SUBDIR += py-valkey
     SUBDIR += py-varstack
     SUBDIR += py-whisper
     SUBDIR += py-xapian
@@ -885,7 +908,6 @@
     SUBDIR += rrdman
     SUBDIR += rrdmerge
     SUBDIR += rrdtool
-    SUBDIR += rrdtool12
     SUBDIR += ruby-bdb
     SUBDIR += ruby-qdbm
     SUBDIR += ruby-tokyocabinet
@@ -1058,6 +1080,7 @@
     SUBDIR += spatialite-tools
     SUBDIR += spatialite_gui
     SUBDIR += speedtables
+    SUBDIR += sq
     SUBDIR += sql-workbench
     SUBDIR += sqlcached
     SUBDIR += sqlcipher

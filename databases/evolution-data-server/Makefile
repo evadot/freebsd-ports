@@ -1,5 +1,6 @@
 PORTNAME=	evolution-data-server
 DISTVERSION=	3.56.2
+PORTREVISION=	1
 CATEGORIES=	databases gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome
@@ -23,12 +24,12 @@ LIB_DEPENDS=	libsoup-3.0.so:devel/libsoup3 \
 		libsecret-1.so:security/libsecret \
 		libcanberra-gtk3.so:audio/libcanberra-gtk3 \
 		libcanberra.so:audio/libcanberra \
-		libuuid.so:misc/e2fsprogs-libuuid \
+		libuuid.so:misc/libuuid \
 		libvulkan.so:graphics/vulkan-loader \
 		libgraphene-1.0.so:graphics/graphene
 
 USES=		cmake cpe desktop-file-utils gettext \
-		gnome gperf iconv:wchar_t localbase pathfix pkgconfig \
+		gnome gperf iconv:wchar_t localbase pkgconfig \
 		python:build sqlite tar:xz xorg
 USE_CXXSTD=	gnu++17
 USE_GNOME=	glib20 gtk30 gtk40 introspection:build libxml2

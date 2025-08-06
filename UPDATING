@@ -5,6 +5,148 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+
+20250804:
+  AFFECTS: users of databases/adminer
+  AUTHOR: pkaipila@gmail.com
+
+  Flavors have been added to the adminer port. Due to the change in PKGNAME,
+  pkg will not notice the update. Replace the package with a flavored one
+  such as php84-adminer.
+
+20250728:
+  AFFECTS: users of www/privatebin
+  AUTHOR: dvl@FreeBSD.org
+
+  This release changes configuration defaults including switching the template
+  and removing legacy features.
+
+  See details at https://github.com/PrivateBin/PrivateBin/releases/tag/2.0.0
+
+20250720:
+  AFFECTS: users of www/phpmyfaq
+  AUTHOR: flo@FreeBSD.org
+
+  Upgrading from 3.2.x is a major upgrade. Your existing templates will not
+  work with phpMyFAQ 4.0. Please make a full backup before you run the
+  upgrade! First, log in as admin into the admin section and enable the
+  maintenance mode. (Configuration >> Edit Configuration >> Set FAQ in
+  maintenance mode) Second, you have to delete all files except:
+
+    in the directory config/
+        keep the file database.php
+        only if using LDAP/ActiveDirectory support also keep the file ldap.php
+        only if using EntraID support also keep the file azure.php
+    the directory attachments/
+    the directory data/
+    the directory images/
+
+  Install the new version then open the following URL in your browser:
+
+  https://www.example.com/faq/update
+
+  Click the button of the update script, your version will automatically be updated.
+
+20250709:
+  AFFECTS: users of sysutils/bastille
+  AUTHOR: jdhurtado@orbiware.com
+
+  Potentially breaking changes since 1.0.20250714
+
+  Network: Bastille now handles all epairs dynamically, allowing both -V and -B
+  VNET jails to coexist. Previous versions only supported one type per system.
+  New naming scheme for network interfaces is e0a_jailname (host side) and
+  e0b_jailname (jail side). Additional interfaces: e1a_jailname, e1b_jailname, etc
+  (incrementing numbers). Long jail names are truncated with xx placeholder due to
+  interface name limitations
+
+  Required action after update:
+  Restart all jails (preferably one at a time) to trigger automatic conversion.
+  Bastille will auto-convert jail.conf and rc.conf files when jails are stopped.
+  Manual intervention required: If you previously used the network sub-command to
+  add interfaces, manually edit jail.conf and rc.conf files to update epair names
+  (increment numbers for additional interfaces).
+
+  Auto-conversion handles most cases, please report bugs if issues occur during the
+  transition.
+
+  Full release annoucement: https://github.com/BastilleBSD/bastille/releases/tag/1.0.20250714
+
+20250708:
+  AFFECTS: users of shells/bash
+  AUTHOR: michaelo@FreeBSD.org
+
+  The SYSBASHRC option is now enabled by default. For those who use bash
+  interactively the system-wide RC file shall be sourced automatically
+  giving the user the same experience as invoking it as a login shell.
+
+20250630:
+  AFFECTS: users of mail/bogofilter-bdb
+  AUTHOR: mandree@FreeBSD.org
+
+  The mail/bogofilter-bdb port has expired and will be removed.
+  
+  1. BEFORE uninstallation or changing to a different mail/bogofilter*
+  variant, please use bogoutil to export all user data bases (wordlist.db)
+  to text files, bogoutil has a -d option for that.
+  2. ONLY THEN install a different variant. The base port (bogofilter)
+  uses LMDB, the -kc variant uses KyotoCabinet and -sqlite uses SQLite3
+  for their database backends.
+  3. THEN re-import the word list for each user with bogoutil -l.
+
+20250629:
+  AFFECTS: users of japanese/anthy
+  AUTHOR: nobutaka@FreeBSD.org
+
+  japanese/anthy has been removed. Please use japanese/anthy-unicode as the
+  replacement.
+
+  japanese/anthy and japanese/anthy-unicode use different user dictionary
+  file location.
+
+  japanese/anthy: ~/.anthy/private_words_default
+  japanese/anthy-unicode: ~/.config/anthy/private_words_default
+
+  You can migrate your user dictionary for japanese/anthy with
+  anthy-dic-tool-unicode.
+
+  anthy-dic-tool-unicode --migrate
+
+  If you use the japanese-anthy or japanese-anthy-uim input method on Emacs,
+  please change them in your Emacs init file such as ~/.emacs.el and ~/.emacs
+  as follows:
+
+  japanese-anthy -> japanese-anthy-unicode
+  japanese-anthy-uim -> japanese-anthy-utf8-uim
+
+20250627:
+  AFFECTS: users of finance/ktoblzcheck
+  AUTHOR: jhale@FreeBSD.org
+
+  The bank data databases have been moved to finance/ktoblzcheck-data.
+  It may be necessary to remove ktoblzcheck < 1.59 before upgrading to
+  avoid conflicts.
+
+  pkg delete -f ktoblzcheck
+
+20250622:
+  AFFECTS: users of net-mgmt/netbox
+  AUTHOR: kai@FreeBSD.org
+
+  1. Please make sure that the PostgreSQL server for the NetBox instance is
+     running version 14 or higher.  This is because Django 5.2 requires
+     PostgreSQL 14 as a minimum.
+
+  2. Please also check the pkg-message and the changelogs for further info.
+
+20250620:
+  AFFECTS: users of x11/swww
+  AUTHOR: nivit@FreeBSD.org
+
+  Starting from version 0.10 the command swww init, previously deprecated, has
+  been properly deleted. The correct way of initializing the daemon is calling
+  swww-daemon directly.
+
 20250613:
   AFFECTS: users of devel/py-gql, games/DDNet, net/mosquitto
   AUTHOR: michaelo@FreeBSD.org

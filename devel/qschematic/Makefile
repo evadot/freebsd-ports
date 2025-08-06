@@ -1,5 +1,5 @@
 PORTNAME=	qschematic
-DISTVERSION=	3.0.0
+DISTVERSION=	3.0.2
 CATEGORIES=	devel
 
 MAINTAINER=	jbo@FreeBSD.org

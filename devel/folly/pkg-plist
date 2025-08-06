@@ -224,6 +224,7 @@ include/folly/container/Merge.h
 include/folly/container/RegexMatchCache.h
 include/folly/container/Reserve.h
 include/folly/container/SparseByteSet.h
+include/folly/container/StdBitset.h
 include/folly/container/View.h
 include/folly/container/WeightedEvictingCacheMap.h
 include/folly/container/detail/BitIteratorDetail.h
@@ -311,15 +312,16 @@ include/folly/coro/detail/Helpers.h
 include/folly/coro/detail/InlineTask.h
 include/folly/coro/detail/Malloc.h
 include/folly/coro/detail/ManualLifetime.h
+include/folly/coro/detail/PickTaskWrapper.h
 include/folly/coro/detail/Traits.h
 include/folly/coro/safe/AsyncClosure-fwd.h
 include/folly/coro/safe/AsyncClosure.h
+include/folly/coro/safe/BindCaptures.h
 include/folly/coro/safe/Captures.h
 include/folly/coro/safe/NowTask.h
-include/folly/coro/safe/SafeAlias.h
 include/folly/coro/safe/SafeTask.h
 include/folly/coro/safe/detail/AsyncClosure.h
-include/folly/coro/safe/detail/AsyncClosureBindings.h
+include/folly/coro/safe/detail/BindAsyncClosure.h
 include/folly/coro/safe/detail/DefineMovableDeepConstLrefCopyable.h
 include/folly/crypto/Blake2xb.h
 include/folly/crypto/LtHash-inl.h
@@ -443,7 +445,6 @@ include/folly/executors/thread_factory/ThreadFactory.h
 include/folly/experimental/EventCount.h
 include/folly/experimental/FlatCombiningPriorityQueue.h
 include/folly/experimental/FunctionScheduler.h
-include/folly/experimental/TestUtil.h
 include/folly/experimental/ThreadedRepeatingFunctionRunner.h
 include/folly/experimental/channels/Channel-fwd.h
 include/folly/experimental/channels/Channel-inl.h
@@ -704,6 +705,7 @@ include/folly/hash/MurmurHash.h
 include/folly/hash/SpookyHashV1.h
 include/folly/hash/SpookyHashV2.h
 include/folly/hash/detail/ChecksumDetail.h
+include/folly/hash/detail/RandomSeed.h
 include/folly/hash/rapidhash.h
 include/folly/hash/traits.h
 include/folly/init/Init.h
@@ -836,7 +838,6 @@ include/folly/lang/Align.h
 include/folly/lang/Aligned.h
 include/folly/lang/Assume.h
 include/folly/lang/Badge.h
-include/folly/lang/Bindings.h
 include/folly/lang/Bits.h
 include/folly/lang/BitsClass.h
 include/folly/lang/Builtin.h
@@ -855,7 +856,10 @@ include/folly/lang/Ordering.h
 include/folly/lang/Pretty.h
 include/folly/lang/PropagateConst.h
 include/folly/lang/RValueReferenceWrapper.h
+include/folly/lang/SafeAlias-fwd.h
+include/folly/lang/SafeAlias.h
 include/folly/lang/SafeAssert.h
+include/folly/lang/SafeClosure.h
 include/folly/lang/StaticConst.h
 include/folly/lang/Switch.h
 include/folly/lang/Thunk.h
@@ -863,7 +867,11 @@ include/folly/lang/ToAscii.h
 include/folly/lang/TypeInfo.h
 include/folly/lang/UncaughtExceptions.h
 include/folly/lang/VectorTraits.h
-include/folly/lang/named/Bindings.h
+include/folly/lang/bind/AsArgument.h
+include/folly/lang/bind/Bind.h
+include/folly/lang/bind/Named.h
+include/folly/lang/bind/NamedToStorage.h
+include/folly/lang/bind/ToStorage.h
 include/folly/logging/AsyncFileWriter.h
 include/folly/logging/AsyncLogWriter.h
 include/folly/logging/AutoTimer.h
@@ -987,10 +995,12 @@ include/folly/python/executor.h
 include/folly/python/futures.h
 include/folly/python/import.h
 include/folly/python/iobuf.h
+include/folly/random/hash.h
 include/folly/random/xoshiro256pp.h
 include/folly/result/gtest_helpers.h
 include/folly/result/result.h
 include/folly/result/try.h
+include/folly/result/value_only_result.h
 include/folly/settings/CommandLineParser.h
 include/folly/settings/Immutables.h
 include/folly/settings/Observer.h

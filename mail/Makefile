@@ -29,7 +29,6 @@
     SUBDIR += bincimap
     SUBDIR += bmf
     SUBDIR += bogofilter
-    SUBDIR += bogofilter-bdb
     SUBDIR += bogofilter-kc
     SUBDIR += bogofilter-sqlite
     SUBDIR += bsd-vacation
@@ -193,7 +192,6 @@
     SUBDIR += linux-r7-organizer
     SUBDIR += linux-r7-organizer-pro
     SUBDIR += listadmin
-    SUBDIR += lmtp2nntp
     SUBDIR += lookout
     SUBDIR += lurker
     SUBDIR += mail-expire
