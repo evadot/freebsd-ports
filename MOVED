@@ -1883,7 +1883,6 @@ x11/plasma5-kwayland-server|x11-wm/plasma5-kwin|2023-02-07|Reintegrated into x11
 finance/py-TA-Lib|finance/py-ta-lib|2023-02-12|Remove duplicate port
 x11-toolkits/gnocl||2023-02-13|Fails to build, newer snapshot depends on a removed port
 games/opendungeons||2023-02-14|Has expired: Broken for more than 6 months
-databases/mysql-connector-odbc|databases/mysql-connector-odbc-80|2023-02-18|Has expired: Requires EOLd mysql version
 devel/yaml-cpp03|devel/yaml-cpp|2023-02-21|Used by blender-lts28 which is EOL'd
 sysutils/uutils|sysutils/rust-coreutils|2023-02-22|Request by upstream
 print/harfbuzz-hb-view|print/harfbuzz-cairo|2023-02-23|Match feature and library name
@@ -3956,7 +3955,6 @@ sysutils/u-boot-duovero||2025-01-02|Unknown, port deleted long time ago, entry a
 sysutils/watchman450||2025-01-02|Unknown, port deleted long time ago, entry added to clean up portscout.freebsd.org
 textproc/checkbashisms||2025-01-02|Unknown, port deleted long time ago, entry added to clean up portscout.freebsd.org
 textproc/fmtlib||2025-01-02|Unknown, port deleted long time ago, entry added to clean up portscout.freebsd.org
-textproc/logseq||2025-01-02|Unknown, port deleted long time ago, entry added to clean up portscout.freebsd.org
 textproc/node-re2||2025-01-02|Unknown, port deleted long time ago, entry added to clean up portscout.freebsd.org
 textproc/py-elasticsearch-curator-py||2025-01-02|Unknown, port deleted long time ago, entry added to clean up portscout.freebsd.org
 textproc/rubygem-sassc-rails||2025-01-02|Unknown, port deleted long time ago, entry added to clean up portscout.freebsd.org
@@ -4522,7 +4520,6 @@ devel/artifactory||2025-06-17|Has expired: Outdated with known vulnerabilities a
 devel/m17n-inscript2||2025-06-23|Now included in devel/m17n-db
 devel/py-pytest4-cov||2025-06-23|Has expired: Depends on expiring devel/py-pytest4
 devel/py-spyder-unittest||2025-06-23|Has expired: Depends on expiring devel/spyder
-comms/py-pynitrokey||2025-06-23|Has expired: Depends on expiring comms/py-spsdk
 devel/bit||2025-06-23|Has expired: Upstream ceased development
 biology/py-orange3-single-cell||2025-06-23|Has expired: Depends on expired math/py-fastdtw and expiring misc/orange3
 biology/py-orange3-bioinformatics||2025-06-23|Has expired: Depends on expiring misc/orange3
@@ -4710,3 +4707,90 @@ security/openssl31||2025-08-04|Has expired: End-of-Life, will be removed when ne
 databases/pear-DoctrineDBAL||2025-08-04|Has expired: Upstream no longer serves through PEAR channel and has been moved to Composer
 www/py-wsaccel||2025-08-04|Has expired: Upstream ceased development
 databases/pear-DoctrineCommon||2025-08-05|Has expired: Upstream no longer serves through PEAR channel and has been moved to Composer
+devel/tclthread|devel/tcl8-thread|2025-08-07|Use tcl8-thread with Tcl8 and tcl9-thread Tcl9
+graphics/libkexiv2@qt5||2025-08-08|Unflavorize; Qt5 flavor is not needed anymore
+graphics/libkexiv2@qt6|graphics/libkexiv2|2025-08-08|Unflavorize; Qt5 flavor is not needed anymore
+databases/mariadb105-server||2025-08-09|Has expired: Upstream End-of-Life, please switch to databases/mariadb118-server
+databases/mariadb105-client||2025-08-09|Has expired: Upstream End-of-Life, please switch to databases/mariadb118-client
+japanese/font-moralerspace-hwnf|japanese/font-moralerspace-hw|2025-08-09|Moralerspace variants now include Nerd Fonts by default
+japanese/font-moralerspace-nf|japanese/font-moralerspace|2025-08-09|Moralerspace variants now include Nerd Fonts by default
+multimedia/gstreamer1-validate|devel/gstreamer1-devtools|2025-08-11|Project renamed
+devel/py-types-PyYAML|devel/py-types-pyyaml|2025-08-12|Move devel/py-types-PyYAML to devel/py-types-pyyaml
+devel/py-pluggy0|devel/py-pluggy|2025-08-12|Remove obsoleted port. Use devel/py-pluggy instead
+devel/py-types-click|devel/py-click|2025-08-12|Remove obsoleted port. The click package includes type annotations or type stubs since version 8.0. Use devel/py-click instead
+devel/py-types-cryptography|security/py-cryptography|2025-08-12|Remove obsoleted port. The cryptography package includes type annotations or type stubs since version 3.4.4. Use security/py-cryptography instead
+devel/py-types-Flask|www/py-flask|2025-08-12|Remove obsoleted port. The Flask package includes type annotations or type stubs since version 2.0. Use www/py-flask instead
+devel/py-types-futures||2025-08-12|Remove obsoleted port
+devel/py-types-Jinja2|devel/py-Jinja2|2025-08-12|Remove obsoleted port. The Jinja2 package includes type annotations or type stubs since version 3.0. Use devel/py-Jinja2 instead
+devel/py-types-MarkupSafe|textproc/py-markupsafe|2025-08-12|Remove obsoleted port. The MarkupSafe package includes type annotations or type stubs since version 2.0. Use textproc/py-markupsafe instead
+devel/py-types-Pillow|graphics/py-pillow|2025-08-12|Remove obsoleted port. The Pillow package includes type annotations or type stubs since version 10.3.0. Use graphics/py-pillow instead
+devel/py-types-typed-ast||2025-08-12|Remove obsoleted port. types-typed-ast is unmaintained and won't be updated
+devel/py-types-Werkzeug|www/py-werkzeug|2025-08-12|Remove obsoleted port. The Werkzeug package includes type annotations or type stubs since version 2.0. Use www/py-werkzeug instead
+devel/pear-channel-doctrine||2025-08-14|Has expired: Upstream no longer serves through PEAR channel and has been moved to Composer
+devel/qcoro@qt5||2025-08-15|Unflavorize; Qt5 flavor has no consumers
+devel/qcoro@qt6|devel/qcoro|2025-08-15|Unflavorize; Qt5 flavor has no consumers
+devel/cervisia||2025-08-15|Not ported to Qt6 and excluded from KDE Gear releases
+databases/mysql-connector-odbc-80|databases/mysql-connector-odbc@unixodbc|2025-08-21|Was tied to only mysql80 and now supports all MySQL versions
+textproc/randlm||2025-08-28|Unmaintained and broken
+lang/zig010|lang/zig|2025-08-31|Has expired: Old zig implementation, no consumers in ports
+databases/closql-devel|databases/closql|2025-09-01|Has expired: Use databases/closql instead
+databases/emacsql-devel|databases/emacsql|2025-09-01|Has expired: Use databases/emacsql instead
+devel/geany-themes|devel/geany|2025-09-01|Has expired: Themes have been included in the main geany distribution
+devel/transient-devel|devel/transient|2025-09-01|Has expired: Use devel/transient instead
+devel/ghub-devel|devel/ghub|2025-09-01|Has expired: Use devel/ghub instead
+devel/magit-devel|devel/magit|2025-09-01|Has expired: Use devel/magit instead
+devel/forge-devel|devel/forge|2025-09-01|Has expired: Use devel/forge instead
+editors/with-editor-devel|editors/with-editor|2025-09-01|Has expired: Use editors/with-editor instead
+converters/pdf2djvu||2025-09-01|Has expired: Port has been abandoned upstream for almost three years: https://groups.io/g/pdf2djvu/message/146
+multimedia/py-PySceneDetect|multimedia/py-scenedetect|2025-09-01|Renamed to match the registered PYPI package name
+finance/quba-viewer||2025-09-02|Has expired: Depends on expired devel/electron32
+devel/electron32||2025-09-02|Has expired: EOLed upstream, switch to newer version
+devel/rubygem-thor13|devel/rubygem-thor|2025-09-02|Remove obsoleted port. Use devel/rubygem-thor instead
+devel/rubygem-xdg2|devel/rubygem-xdg|2025-09-02|Remove obsoleted port. Use devel/rubygem-xdg instead
+math/libmissing||2025-09-02|Has expired: Old. FreeBSD's libm improved since 2012 when this was imported
+security/p5-Dancer2-Plugin-Auth-Extensible-Provider-Usergroup||2025-09-02|Has expired: Depends on expired security/p5-Data-Entropy via security/p5-Dancer2-Plugin-Passphrase
+security/p5-Dancer-Plugin-Auth-Extensible-Provider-Usergroup||2025-09-02|Has expired: Depends on expired security/p5-Data-Entropy via security/p5-Dancer-Plugin-Passphrase
+security/py-onlykey||2025-09-02|Has expired: Depends on expired security/libu2f-host
+textproc/opensearch-dashboards213||2025-09-02|Has expired: Depends on expired www/npm-node18
+textproc/opensearch-dashboards210||2025-09-02|Has expired: Depends on expired www/npm-node18
+textproc/opensearch-dashboards216||2025-09-02|Has expired: Depends on expired www/npm-node18
+net-mgmt/netdisco||2025-09-02|Has expired: Depends on expired security/p5-Data-Entropy via security/p5-Dancer-Plugin-Passphrase
+www/p5-Dancer2-Plugin-Interchange6||2025-09-02|Has expired: Depends on expired security/p5-Data-Entropy via databases/p5-Interchange6-Schema
+www/p5-Interchange6||2025-09-02|Has expired: Depends on expired security/p5-Data-Entropy via databases/p5-Interchange6-Schema
+security/p5-Dancer-Plugin-Passphrase||2025-09-02|Has expired: Depends on expired security/p5-Data-Entropy
+security/p5-Dancer2-Plugin-Passphrase||2025-09-02|Has expired: Depends on expired security/p5-Data-Entropy
+security/p5-Data-Entropy||2025-09-02|Has expired: The maintainer of this distribution has indicated that it is deprecated and no longer suitable for use
+security/libu2f-host||2025-09-02|Has expired: This project is deprecated and is no longer being maintained. libfido2 is a new project with support for U2F and FIDO2. Use security/libfido2 instead
+net-mgmt/nagcon||2025-09-02|Has expired: Obsolete, only supports legacy versions of Nagios
+www/yarn-node18||2025-09-02|Has expired: Depeneds on expired www/node18. Node.js 18.* has reached its EoL on 2025-04-30
+www/npm-node18||2025-09-03|Has expired: Depeneds on expired www/node18. Node.js 18.* has reached its EoL on 2025-04-30
+www/node18||2025-09-03|Has expired: Node.js 18.* has reached its EoL on 2025-04-30. Use Node.js 22.* (www/node22) instead
+devel/rubygem-hashie4|devel/rubygem-hashie|2025-09-07|Remove obsoleted port. Use devel/rubygem-hashie instead
+print/rubygem-afm0|print/rubygem-afm|2025-09-07|Remove obsoleted port. Use print/rubygem-afm instead
+www/rubygem-jwt29|www/rubygem-jwt|2025-09-07|Remove obsoleted port. Use www/rubygem-jwt instead
+www/mod_wsgi4|www/mod_wsgi|2025-09-08|Was tied to only major version 4, now upgraded to 5
+net-mgmt/netdata-go|net-mgmt/netdata|2025-09-08|The netdata-go plugin is included in the main netdata port
+finance/myphpmoney||2025-09-08|Has expired: Unmaintained upstream and most probably does not work with modern PHP versions
+databases/adminerevo||2025-09-09|Has expired: Abandoned upstream, repo archived Jan 24, 2025
+databases/redisdesktopmanager||2025-09-09|Has expired: RedisDesktopManager is no longer maintained upstream as the project has been replaced by RedisInsight
+games/palomino||2025-09-11|Has expired: Obsolete and abandoneed, last release in 2013, not playable
+graphics/osg34||2025-09-11|Has expired: Obsolete version released in 2015
+games/motogt||2025-09-11|Has expired: Depends on obsolete devel/sfml1
+devel/sfml1|devel/sfml|2025-09-11|Has expired: Broken obsolete version
+net/benthos|net/redpanda-connect|2025-09-12|Has expired: Superseded by net/redpanda-connect
+cad/cvc||2025-09-24|Has expired: Upstream stalled, needs EOL GCC 11 to build
+lang/gcc11||2025-09-24|Has expired: End-of-life upstream since mid 2024, newer versions available
+devel/util-linux|sysutils/util-linux|2025-09-29|Move to the proper category
+sysutils/linuxfdisk||2025-10-01|Has expired: Upstream distfile unavailable, way out of date, upstream distfile gone, use gpart instead
+sysutils/linrename||2025-10-01|Has expired: FreeBSD port unmaintained, use misc/mmv or rename from sysutils/util-linux instead
+security/botan2||2025-10-01|Has expired: End of life 2024-12-31 upstream, consider migrating to security/botan3
+security/openssl32||2025-10-01|Has expired: Please use security/openssl35 (LTS)
+devel/py-buildbot-react-console-view||2025-10-01|Has expired: No longer required by Buildbot 4.X
+audio/spotify-tui||2025-10-01|Has expired: dead upstream and doesn't build
+www/rubygem-rackup21||2025-10-01|Has expired: No consumers in ports tree
+audio/libopenspc|audio/libgme|2025-10-01|Has expired: Legacy library based on a very old emulator, consider using audio/libgme
+net/bosh-cli||2025-10-01|Has expired: Not updated in years, no demand for them
+net/bosh-bootloader||2025-10-01|Has expired: Not updated in years, no demand for them
+net/cf||2025-10-01|Has expired: Not updated in years, no demand for them
+net/concourse-fly||2025-10-01|Has expired: Not updated in years, no demand for them
+net/netatalk3|net/netatalk4|2025-10-05|Has expired: End of support; use net/netatalk4 instead

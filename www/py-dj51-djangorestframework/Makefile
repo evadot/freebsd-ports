@@ -1,5 +1,5 @@
 PORTNAME=	djangorestframework
-PORTVERSION=	3.16.0
+PORTVERSION=	3.16.1
 CATEGORIES=	www python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}dj51-
@@ -10,6 +10,9 @@ WWW=		https://www.django-rest-framework.org/
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
+
+DEPRECATED=	Extended support of Django 5.1 ends December 2025, upgrade to the Django 5.2+ version of this port. See https://www.djangoproject.com/download/
+EXPIRATION_DATE=2025-12-31
 
 BUILD_DEPENDS=	${PY_SETUPTOOLS} \
 		${PYTHON_PKGNAMEPREFIX}wheel>0:devel/py-wheel@${PY_FLAVOR}

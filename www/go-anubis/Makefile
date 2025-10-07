@@ -1,6 +1,6 @@
 PORTNAME=	anubis
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.21.3
+DISTVERSION=	1.22.0
 CATEGORIES=	www
 MASTER_SITES=	https://github.com/techarohq/${PORTNAME}/releases/download/${DISTVERSIONPREFIX}${DISTVERSION}/
 PKGNAMEPREFIX=	go-
@@ -16,15 +16,20 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 USES=		go:1.24,no_targets
 USE_RC_SUBR=	${PORTNAME}
 
-PLIST_FILES=	sbin/${PORTNAME} \
-		sbin/robots2policy
-
 ALL_TARGET=	prebaked-build
+
+MAKE_FLAGS=	VERSION=${DISTVERSION} GOFLAGS="-buildvcs=false"
+
+post-patch:
+	@${FIND} ${WRKSRC}/data \( -name "*.yaml" -or -name "*.json" \) \
+		| ${XARGS} ${REINPLACE_CMD} -i '' -e 's|(data)|${DATADIR}|g'
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/var/${PORTNAME} \
 		${STAGEDIR}${PREFIX}/sbin/${PORTNAME}
 	${INSTALL_PROGRAM} ${WRKSRC}/var/robots2policy \
 		${STAGEDIR}${PREFIX}/sbin/robots2policy
+	${MKDIR} ${STAGEDIR}${DATADIR}
+	cd ${WRKSRC}/data && ${COPYTREE_SHARE} . ${STAGEDIR}${DATADIR} '-not -name *.go'
 
 .include <bsd.port.mk>

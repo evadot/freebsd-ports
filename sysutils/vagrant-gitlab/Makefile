@@ -1,10 +1,10 @@
 PORTNAME=	vagrant
-PORTVERSION=	2.4.7
+PORTVERSION=	2.4.9
 DISTVERSIONPREFIX=	v
 CATEGORIES=	sysutils rubygems devel
 PKGNAMESUFFIX=	-gitlab
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	mfechner@FreeBSD.org
 COMMENT=	Vagrant Virtual Machine Manager
 WWW=		https://www.vagrantup.com/
 
@@ -19,6 +19,7 @@ RUN_DEPENDS=	ca_root_nss>=0:security/ca_root_nss \
 		rubygem-base6402>=0.2.0<0.3:converters/rubygem-base6402 \
 		rubygem-bcrypt_pbkdf>=1.1<2:security/rubygem-bcrypt_pbkdf \
 		rubygem-childprocess-gitlab>=5.1<6:devel/rubygem-childprocess-gitlab \
+		rubygem-csv>=3.3<4:devel/rubygem-csv \
 		rubygem-ed25519>=1.3.0:security/rubygem-ed25519 \
 		rubygem-erubi>=0:www/rubygem-erubi \
 		rubygem-hashicorp-checkpoint>=0.1.5<0.2:www/rubygem-hashicorp-checkpoint \
@@ -32,14 +33,15 @@ RUN_DEPENDS=	ca_root_nss>=0:security/ca_root_nss \
 		rubygem-net-scp>=4.0<5:security/rubygem-net-scp \
 		rubygem-net-sftp>=4.0<5:security/rubygem-net-sftp \
 		rubygem-net-ssh>=7.0,2<8,2:security/rubygem-net-ssh \
+		rubygem-ostruct>=0.6.0<0.7:devel/rubygem-ostruct \
 		rubygem-rb-kqueue>=0.2.0<0.3:devel/rubygem-rb-kqueue \
 		rubygem-rexml>=3.2<4:textproc/rubygem-rexml \
 		rubygem-rubyzip-gitlab>=2.3.2:archivers/rubygem-rubyzip-gitlab \
 		rubygem-vagrant_cloud-gitlab>=3.1.2<3.2:sysutils/rubygem-vagrant_cloud-gitlab \
 		rubygem-wdm>=0.2.0<0.3:devel/rubygem-wdm \
 		rubygem-winrm>=2.3.9<3:sysutils/rubygem-winrm \
-		rubygem-winrm-elevated>=1.2.3<2:sysutils/rubygem-winrm-elevated \
-		rubygem-winrm-fs>=1.3.5<2:filesystems/rubygem-winrm-fs
+		rubygem-winrm-elevated-gitlab>=1.2.3<2:sysutils/rubygem-winrm-elevated-gitlab \
+		rubygem-winrm-fs-gitlab>=1.3.5<2:filesystems/rubygem-winrm-fs-gitlab
 
 USES=		cpe ruby shebangfix
 CPE_VENDOR=	hashicorp

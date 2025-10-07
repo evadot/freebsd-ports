@@ -18,8 +18,8 @@ CONFLICTS=	nut-[0-9]*
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	networkupstools
-GH_TAGNAME=	8916ac8d1
-NUT_COMMIT_DATE=	2025.06.25
+GH_TAGNAME=	87008cfc7
+NUT_COMMIT_DATE=	2025.09.23
 
 MAKE_JOBS_UNSAFE=	yes
 GNU_CONFIGURE=	yes
@@ -88,7 +88,8 @@ CONFIGURE_ARGS=	--sysconfdir=${PREFIX}/etc/nut \
 		--with-python3=${PYTHON_CMD} \
 		--without-nut_monitor \
 		--with-ltdl --with-nut-scanner \
-		--without-augeas-lenses-dir
+		--without-augeas-lenses-dir \
+		--enable-extapi-enphase=no
 
 GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 

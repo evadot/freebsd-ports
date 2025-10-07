@@ -58,7 +58,6 @@
     SUBDIR += beacon
     SUBDIR += beanstalkd
     SUBDIR += belle-sip
-    SUBDIR += benthos
     SUBDIR += bindtest
     SUBDIR += binkd
     SUBDIR += bird2
@@ -68,8 +67,6 @@
     SUBDIR += boinc-client
     SUBDIR += boinc_curses
     SUBDIR += boinctui
-    SUBDIR += bosh-bootloader
-    SUBDIR += bosh-cli
     SUBDIR += bounce
     SUBDIR += bredbandskollen
     SUBDIR += brynet
@@ -81,7 +78,6 @@
     SUBDIR += c3270
     SUBDIR += calendarsupport
     SUBDIR += ccxstream
-    SUBDIR += cf
     SUBDIR += charm
     SUBDIR += chrony
     SUBDIR += chrony-lite
@@ -93,7 +89,6 @@
     SUBDIR += cloudquery
     SUBDIR += clusterit
     SUBDIR += cnd
-    SUBDIR += concourse-fly
     SUBDIR += containernetworking-plugins
     SUBDIR += corkscrew
     SUBDIR += corosync2
@@ -117,6 +112,7 @@
     SUBDIR += dbeacon
     SUBDIR += delegate
     SUBDIR += deltachat-rpc-server
+    SUBDIR += devfile
     SUBDIR += deviceatlas-enterprise-c
     SUBDIR += dgd
     SUBDIR += dgd-kernel
@@ -209,6 +205,7 @@
     SUBDIR += gnu-radius
     SUBDIR += go-bapu
     SUBDIR += go-cs
+    SUBDIR += go-pkgsite
     SUBDIR += go-tcping
     SUBDIR += gobgp
     SUBDIR += gofish
@@ -296,6 +293,7 @@
     SUBDIR += ipxe
     SUBDIR += irrd
     SUBDIR += isboot-kmod
+    SUBDIR += isboot-kmod-devel
     SUBDIR += isc-dhcp44-client
     SUBDIR += isc-dhcp44-relay
     SUBDIR += isc-dhcp44-server
@@ -513,6 +511,7 @@
     SUBDIR += nats-nsc
     SUBDIR += nats-server
     SUBDIR += nats-streaming-server
+    SUBDIR += nats-surveyor
     SUBDIR += nats-top
     SUBDIR += natscli
     SUBDIR += nbd-server
@@ -524,13 +523,13 @@
     SUBDIR += ndproxy
     SUBDIR += neatvnc
     SUBDIR += nemesis
-    SUBDIR += netatalk3
     SUBDIR += netatalk4
     SUBDIR += netcat
     SUBDIR += netdiscover
     SUBDIR += netembryo
     SUBDIR += nethogs
     SUBDIR += netmap
+    SUBDIR += netpeek
     SUBDIR += netpipes
     SUBDIR += netscript
     SUBDIR += netsed
@@ -593,6 +592,7 @@
     SUBDIR += openvswitch
     SUBDIR += ortp
     SUBDIR += osrtspproxy
+    SUBDIR += ovhcloud-cli
     SUBDIR += owamp
     SUBDIR += p5-Acme-HTTP
     SUBDIR += p5-AddressBook
@@ -1067,6 +1067,7 @@
     SUBDIR += py-gdown
     SUBDIR += py-geopy
     SUBDIR += py-gntp
+    SUBDIR += py-google-cloud-pubsub
     SUBDIR += py-greenstalk
     SUBDIR += py-gspread
     SUBDIR += py-h11
@@ -1193,6 +1194,7 @@
     SUBDIR += py-urlextract
     SUBDIR += py-urllib3
     SUBDIR += py-urllib3-future
+    SUBDIR += py-urllib31
     SUBDIR += py-whois
     SUBDIR += py-wmi-query
     SUBDIR += py-wsdd
@@ -1559,6 +1561,7 @@
     SUBDIR += sup
     SUBDIR += svnup
     SUBDIR += syncthing
+    SUBDIR += syncthing1
     SUBDIR += tableutil
     SUBDIR += tac_plus4
     SUBDIR += tacacs

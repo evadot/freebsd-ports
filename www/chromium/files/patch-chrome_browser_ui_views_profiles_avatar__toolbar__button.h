@@ -1,6 +1,6 @@
---- chrome/browser/ui/views/profiles/avatar_toolbar_button.h.orig	2025-07-02 06:08:04 UTC
+--- chrome/browser/ui/views/profiles/avatar_toolbar_button.h.orig	2025-09-06 10:01:20 UTC
 +++ chrome/browser/ui/views/profiles/avatar_toolbar_button.h
-@@ -90,7 +90,7 @@ class AvatarToolbarButton : public ToolbarButton {
+@@ -96,7 +96,7 @@ class AvatarToolbarButton : public ToolbarButton,
    // Attempts showing the In-Produce-Help for profile Switching.
    void MaybeShowProfileSwitchIPH();
  

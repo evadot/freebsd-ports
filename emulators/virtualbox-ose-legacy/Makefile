@@ -44,7 +44,9 @@ CONFLICTS_INSTALL=	virtualbox-ose \
 			virtualbox-ose-70 \
 			virtualbox-ose-nox11-70 \
 			virtualbox-ose-71 \
-			virtualbox-ose-nox11-71
+			virtualbox-ose-nox11-71 \
+			virtualbox-ose-72 \
+			virtualbox-ose-nox11-72
 
 PORTSCOUT=	limit:^5\.
 SUB_LIST=	VBOXDIR=${VBOX_DIR} \
@@ -312,6 +314,8 @@ post-patch:
 	@${REINPLACE_CMD} \
 	    -e 's|^versions =.*|versions = ["${PYTHON_VER}${PYTHON_ABIVER}"]|' \
 	    ${WRKSRC}/src/libs/xpcom18a4/python/gen_python_deps.py
+	@${REINPLACE_CMD} -e 's|curl_proxytype|long|g' \
+	    ${WRKSRC}/src/VBox/Runtime/generic/http-curl.cpp
 
 do-build:
 	cd ${WRKSRC} && ${SH} -c '. ${WRKSRC}/env.sh && \

@@ -1,7 +1,7 @@
 PORTNAME=	PrusaSlicer
 DISTVERSIONPREFIX=version_
 DISTVERSION=	2.9.2
-PORTREVISION=	3
+PORTREVISION=	7
 CATEGORIES=	cad
 DIST_SUBDIR=	PrusaSlicer
 
@@ -61,10 +61,15 @@ CMAKE_ARGS+=	-DwxWidgets_CONFIG_EXECUTABLE="${WX_CONFIG}" \
 		-DSLIC3R_GTK=3 \
 		-DSLIC3R_FHS=1 \
 		-DSLIC3R_PCH=OFF \
-		-DSLIC3R_BUILD_TESTS=OFF
+		-DSLIC3R_BUILD_TESTS=OFF \
+		-Wno-dev
 
 PORTDATA=	*
+
 post-patch:
 	${MKDIR} ${WRKSRC}/bundled_deps/hidapi/libusb
 	${CP} ${FILESDIR}/hid.c ${WRKSRC}/bundled_deps/hidapi/libusb/hid.c
+	@${REINPLACE_CMD} -e '/_boost_/s|system;||' \
+		${WRKSRC}/CMakeLists.txt
+
 .include <bsd.port.mk>

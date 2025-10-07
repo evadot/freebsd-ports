@@ -1,8 +1,9 @@
 PORTNAME=	php85
-DISTVERSION=	8.5.0alpha3
+DISTVERSION=	8.5.0RC1
 PORTREVISION?=	0
 CATEGORIES?=	lang devel www
-MASTER_SITES=	LOCAL/bofh/lang/${PORTNAME}
+MASTER_SITES=	https://downloads.php.net/~edorian/ \
+		https://downloads.php.net/~daniels/
 DISTNAME=	php-${DISTVERSION}
 
 MAINTAINER=	bofh@FreeBSD.org
@@ -15,8 +16,6 @@ USES+=		compiler:c11 cpe gnome localbase pkgconfig #tar:xz
 CPE_PRODUCT=	php
 PHP_VER=	85
 
-PHP_WRKSRC=		php-src-php-${DISTVERSION}
-WRKSRC=		${WRKDIR}/${PHP_WRKSRC}
 CONFLICTS_INSTALL?=	php[0-9][0-9]${PKGNAMESUFFIX}
 
 .if !defined(PKGNAMESUFFIX)
@@ -204,7 +203,7 @@ PHP_MODNAME=	${PKGNAMESUFFIX:S/-//}
 PHP_VER=	85
 IGNORE_WITH_PHP=	81 82 83 84
 
-EXTSUBDIR=	${PHP_WRKSRC}/ext/${PHP_MODNAME}
+EXTSUBDIR=	${DISTNAME}/ext/${PHP_MODNAME}
 WRKSRC=		${WRKDIR}/${EXTSUBDIR}
 PATCHDIR=	${.CURDIR}/files
 PLIST=		${NONEXISTENT}
@@ -324,7 +323,7 @@ CONFIGURE_ARGS+=	--enable-gd \
 			--with-external-gd
 
 EXTRACT_AFTER_ARGS=	--no-same-owner --no-same-permissions --exclude libgd \
-			${PHP_WRKSRC}/ext/gd
+			php-${DISTVERSION}/ext/gd
 
 OPTIONS_DEFINE=	JIS WEBP X11
 

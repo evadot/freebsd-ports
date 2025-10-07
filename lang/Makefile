@@ -89,7 +89,6 @@
     SUBDIR += gauche
     SUBDIR += gawk
     SUBDIR += gcc
-    SUBDIR += gcc11
     SUBDIR += gcc12
     SUBDIR += gcc12-devel
     SUBDIR += gcc13
@@ -127,6 +126,7 @@
     SUBDIR += go122
     SUBDIR += go123
     SUBDIR += go124
+    SUBDIR += go125
     SUBDIR += gomacro
     SUBDIR += gprolog
     SUBDIR += gptscript
@@ -333,6 +333,7 @@
     SUBDIR += rust
     SUBDIR += rust-bootstrap
     SUBDIR += rust-nightly
+    SUBDIR += rust188
     SUBDIR += rustpython
     SUBDIR += s7
     SUBDIR += s7-nrepl
@@ -381,6 +382,7 @@
     SUBDIR += tolua++
     SUBDIR += trealla-prolog
     SUBDIR += tuareg-mode.el
+    SUBDIR += typescript
     SUBDIR += typstfmt
     SUBDIR += typstyle
     SUBDIR += ucc
@@ -396,6 +398,5 @@
     SUBDIR += ypsilon
     SUBDIR += zephir
     SUBDIR += zig
-    SUBDIR += zig010
 
 .include <bsd.port.subdir.mk>

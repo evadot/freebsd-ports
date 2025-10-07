@@ -1,4 +1,4 @@
---- content/common/features.cc.orig	2025-07-02 06:08:04 UTC
+--- content/common/features.cc.orig	2025-09-06 10:01:20 UTC
 +++ content/common/features.cc
 @@ -170,7 +170,7 @@ BASE_FEATURE(kEmbeddingRequiresOptIn,
               base::FEATURE_DISABLED_BY_DEFAULT);

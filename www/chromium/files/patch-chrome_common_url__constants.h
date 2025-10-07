@@ -1,4 +1,4 @@
---- chrome/common/url_constants.h.orig	2025-07-02 06:08:04 UTC
+--- chrome/common/url_constants.h.orig	2025-10-02 04:28:32 UTC
 +++ chrome/common/url_constants.h
 @@ -997,7 +997,7 @@ inline constexpr char kOutdatedPluginLearnMoreURL[] =
  inline constexpr char kPhoneHubPermissionLearnMoreURL[] =

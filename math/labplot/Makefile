@@ -1,6 +1,6 @@
 PORTNAME=	labplot
 DISTVERSION=	2.11.80
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	math kde
 MASTER_SITES=	KDE/stable/${PORTNAME}/
 DIST_SUBDIR=	KDE/invent.kde.org
@@ -31,6 +31,8 @@ USE_QT=		base mqtt serialport svg
 USE_XORG=	x11 xcb
 
 KDE_INVENT=	110f258e44a45354c5219e497409a22185fa2933 education labplot
+
+CXXFLAGS+=	-Wno-error=undef
 
 PLIST_SUB=	SHLIB_VER=${PORTVERSION}
 
@@ -68,8 +70,8 @@ NETCDF_LIB_DEPENDS=	libnetcdf.so:science/netcdf
 NETCDF_CMAKE_BOOL=	ENABLE_NETCDF
 
 ORCUS_DESC=		Spreadsheet processing filters (via liborcus)
-ORCUS_LIB_DEPENDS=	libixion-0.18.so:textproc/libixion \
-			liborcus-0.18.so:devel/liborcus
+ORCUS_LIB_DEPENDS=	libixion-0.20.so:textproc/libixion \
+			liborcus-0.20.so:devel/liborcus
 ORCUS_CMAKE_BOOL=	ENABLE_ORCUS
 
 ORIGINLAB_DESC=		OriginLab project files support

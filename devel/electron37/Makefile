@@ -5,13 +5,16 @@ PORTREVISION=	1
 PULSEMV=	16
 PULSEV=		${PULSEMV}.1
 CATEGORIES=	devel
-MASTER_SITES=	https://commondatastorage.googleapis.com/chromium-browser-official/:chromium \
+MASTER_SITES=	https://github.com/tagattie/FreeBSD-Electron/releases/download/v37.5.0/:chromium \
 		https://freedesktop.org/software/pulseaudio/releases/:pulseaudio
 PKGNAMESUFFIX=	${ELECTRON_VER_MAJOR}
-DISTFILES=	chromium-${CHROMIUM_VER}${EXTRACT_SUFX}:chromium \
+DISTFILES=	chromium-${CHROMIUM_VER}${EXTRACT_SUFX}.0:chromium \
+		chromium-${CHROMIUM_VER}${EXTRACT_SUFX}.1:chromium \
+		chromium-${CHROMIUM_VER}${EXTRACT_SUFX}.2:chromium \
 		pulseaudio-${PULSEV}.tar.gz:pulseaudio \
 		electron-yarn-cache-${ELECTRON_VER}${EXTRACT_SUFX}:prefetch
 DIST_SUBDIR=	${PORTNAME}
+EXTRACT_ONLY=	${DISTFILES:C/:[^:]+$//:C/chromium-${CHROMIUM_VER}${EXTRACT_SUFX}\.[0-9]//}
 
 MAINTAINER=	tagattie@FreeBSD.org
 COMMENT=	Build cross-platform desktop apps with JavaScript, HTML, and CSS
@@ -21,6 +24,7 @@ LICENSE=	BSD3CLAUSE LGPL21 MPL11 MIT
 LICENSE_COMB=	multi
 LICENSE_FILE=	${WRKSRC}/electron/LICENSE
 
+BROKEN_i386=	fetch fails: node process stalls during fetch phase and eats up all CPUs
 ONLY_FOR_ARCHS=	aarch64 amd64 i386
 
 FETCH_DEPENDS=	yarn${NODEJS_SUFFIX}>0:www/yarn${NODEJS_SUFFIX}
@@ -213,7 +217,7 @@ PIPEWIRE_VARS_OFF=	GN_ARGS+=rtc_use_pipewire=false \
 			GN_ARGS+=rtc_link_pipewire=false
 
 PULSEAUDIO_VARS=	GN_ARGS+=use_pulseaudio=true \
-			PINCLUDES="-I${WRKDIR}/${PORTNAME}-${ELECTRON_VER}/pulseaudio-${PULSEV}/src -DPA_MAJOR=${PULSEMV}"
+			PINCLUDES="-I${WRKSRC:H}/pulseaudio-${PULSEV}/src -DPA_MAJOR=${PULSEMV}"
 PULSEAUDIO_VARS_OFF=	GN_ARGS+=use_pulseaudio=false
 
 SNDIO_LIB_DEPENDS=	libsndio.so:audio/sndio
@@ -221,9 +225,9 @@ SNDIO_VARS=		GN_ARGS+=use_sndio=true
 SNDIO_VARS_OFF=		GN_ARGS+=use_sndio=false
 
 # See ${WRKSRC}/electron/DEPS for CHROMIUM_VER
-CHROMIUM_VER=			138.0.7204.168
+CHROMIUM_VER=			138.0.7204.251
 # See ${WRKSRC}/electron/DEPS for NODE_VER
-NODE_VER=			22.17.1
+NODE_VER=			22.19.0
 # See ${WRKSRC}/electron/DEPS for NAN_VER
 NAN_VER=			e14bdcd1f72d62bca1d541b66da43130384ec213
 # See ${WRKSRC}/electron/DEPS for SQUIRREL_MAC_VER
@@ -321,25 +325,33 @@ pre-fetch:
 		${RM} -r ${WRKDIR}; \
 	fi
 
+pre-extract:
+# Chromium source tarball is splitted into multiple fragments. Concatenate them
+# into a single one and manually extract it into WRKDIR.
+	@${CAT} ${DISTDIR}/${DIST_SUBDIR}/chromium-${CHROMIUM_VER}${EXTRACT_SUFX}.? > \
+		${WRKSRC:H}/chromium-${CHROMIUM_VER}${EXTRACT_SUFX}
+	@cd ${WRKSRC:H} && \
+	${EXTRACT_CMD} ${EXTRACT_BEFORE_ARGS} \
+		chromium-${CHROMIUM_VER}${EXTRACT_SUFX} ${EXTRACT_AFTER_ARGS}
+
 post-extract:
 # Move extracted sources to appropriate locations
-	${MV} ${WRKDIR}/${PORTNAME}-${ELECTRON_VER}/chromium-${CHROMIUM_VER} ${WRKSRC}
-	${MV} ${WRKDIR}/${PORTNAME}-${ELECTRON_VER}/${PORTNAME}-${ELECTRON_VER} ${WRKSRC}/electron
-	${MV} ${WRKDIR}/${PORTNAME}-${ELECTRON_VER}/${GH_PROJECT_nan}-${NAN_VER} \
-		${WRKSRC}/third_party/nan
-	${MV} ${WRKDIR}/${PORTNAME}-${ELECTRON_VER}/${GH_PROJECT_node}-${NODE_VER} \
+	${MV} ${WRKSRC:H}/chromium-${CHROMIUM_VER} ${WRKSRC}
+	${MV} ${WRKSRC:H}/${PORTNAME}-${ELECTRON_VER} ${WRKSRC}/electron
+	${MV} ${WRKSRC:H}/${GH_PROJECT_nan}-${NAN_VER} ${WRKSRC}/third_party/nan
+	${MV} ${WRKSRC:H}/${GH_PROJECT_node}-${NODE_VER} \
 		${WRKSRC}/third_party/electron_node
-	${MV} ${WRKDIR}/${PORTNAME}-${ELECTRON_VER}/${GH_PROJECT_squirrel_mac}-${SQUIRREL_MAC_VER} \
+	${MV} ${WRKSRC:H}/${GH_PROJECT_squirrel_mac}-${SQUIRREL_MAC_VER} \
 		${WRKSRC}/third_party/squirrel.mac
-	${MKDIR} ${WRKSRC}/third_party/squirrel.mac/vendor
-	${MV} ${WRKDIR}/${PORTNAME}-${ELECTRON_VER}/${GH_PROJECT_reactiveobjc}-${REACTIVEOBJC_VER} \
+	@${MKDIR} ${WRKSRC}/third_party/squirrel.mac/vendor
+	${MV} ${WRKSRC:H}/${GH_PROJECT_reactiveobjc}-${REACTIVEOBJC_VER} \
 		${WRKSRC}/third_party/squirrel.mac/vendor/ReactiveObjC
-	${MV} ${WRKDIR}/${PORTNAME}-${ELECTRON_VER}/${GH_PROJECT_mantle}-${MANTLE_VER} \
+	${MV} ${WRKSRC:H}/${GH_PROJECT_mantle}-${MANTLE_VER} \
 		${WRKSRC}/third_party/squirrel.mac/vendor/Mantle
-	${MV} ${WRKDIR}/${PORTNAME}-${ELECTRON_VER}/${GH_PROJECT_reclient_configs}-${ENGFLOW_RECLIENT_CONFIGS_VER} \
+	${MV} ${WRKSRC:H}/${GH_PROJECT_reclient_configs}-${ENGFLOW_RECLIENT_CONFIGS_VER} \
 		${WRKSRC}/third_party/engflow-reclient-configs
 # Install node modules for electron
-	${MV} ${WRKDIR}/${PORTNAME}-${ELECTRON_VER}/yarn-offline-cache ${WRKDIR}
+	${MV} ${WRKSRC:H}/yarn-offline-cache ${WRKDIR}
 	${ECHO_CMD} 'yarn-offline-mirror "../../../yarn-offline-cache"' >> ${WRKSRC}/electron/.yarnrc
 	${MV} ${WRKSRC}/electron/package.json ${WRKSRC}/electron/package.json.bak
 	${CP} ${FILESDIR}/package.json ${WRKSRC}/electron
@@ -369,7 +381,7 @@ pre-configure:
 .for _e in config.h config.asm config_components.h libavcodec libavformat libavutil
 	-${CP} -pR ${FFMPEG_BDIR}/${_e} ${FFMPEG_CDIR}
 .endfor
-	touch ${WRKDIR}/${PORTNAME}-${ELECTRON_VER}/pulseaudio-${PULSEV}/src/pulse/version.h
+	touch ${WRKSRC:H}/pulseaudio-${PULSEV}/src/pulse/version.h
 	@${REINPLACE_CMD} -e 's|$${LOCALBASE}|${LOCALBASE}|;s|$${MODCLANG_VERSION}|${LLVM_DEFAULT}|' \
 		${WRKSRC}/build/rust/rust_bindgen.gni \
 		${WRKSRC}/build/rust/rust_bindgen_generator.gni

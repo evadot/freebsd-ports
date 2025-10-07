@@ -1,9 +1,9 @@
 PORTNAME=	tor-browser
-DISTVERSION=	14.5.5
+DISTVERSION=	15.0a3
 PORTREVISION=	1
 CATEGORIES=	www net security wayland
-TAG_BASE=	8600afeb12fdae895c37618e1386c1a1ac2f5308
-TAG_TOR=	9fe8a13ee4c69f91cd545dc3c575ca8f4851d58e
+TAG_BASE=	7a4673ab420d7c52cd3fa7366d0d9cdaa5a37937
+TAG_TOR=	db5e90248e74338ce72ff118bdb749fea6ea2606
 MASTER_SITES=	TOR \
 		LOCAL/vvd \
 		https://build-sources.tbb.torproject.org/:source1 \
@@ -18,9 +18,9 @@ MASTER_SITES=	TOR \
 		LOCAL/vvd:source5
 MASTER_SITE_SUBDIR=	torbrowser/${DISTVERSION}/:DEFAULT \
 			download/releases/:source3
-DISTNAME=	src-firefox-tor-browser-128.13.0esr-14.5-1-build2
+DISTNAME=	src-firefox-tor-browser-140.3.0esr-15.0-1-build3
 MANUAL=		manual_215922.zip
-NOSCRIPT=	noscript-13.0.8.xpi
+NOSCRIPT=	noscript-13.0.9.xpi
 DISTFILES=	${DISTNAME}.tar.xz \
 		${MANUAL}:source1 \
 		fonts-3--4348e1.tar.zst:source2 \
@@ -36,12 +36,12 @@ LICENSE=	MPL20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	nspr>=4.32:devel/nspr \
-		nss>=3.101:security/nss \
+		nss>=3.112:security/nss \
 		icu>=76.1:devel/icu \
 		libevent>=2.1.8:devel/libevent \
-		harfbuzz>=8.5.0:print/harfbuzz \
+		harfbuzz>=10.1.0:print/harfbuzz \
 		graphite2>=1.3.14:graphics/graphite2 \
-		png>=1.6.43:graphics/png \
+		png>=1.6.45:graphics/png \
 		dav1d>=1.0.0:multimedia/dav1d \
 		libvpx>=1.14:multimedia/libvpx \
 		${PYTHON_PKGNAMEPREFIX}sqlite3>0:databases/py-sqlite3@${PY_FLAVOR} \
@@ -57,7 +57,7 @@ USES=		compiler:c++11-lib libtool localbase:ldflags perl5 pkgconfig \
 		python shebangfix tar:xz
 USE_GECKO=	gecko
 USE_GITHUB=	nodefault
-TAG_L10N=	fcd0300e8478d1ec4d1c097a073ddb8e1e0351e3
+TAG_L10N=	468bb10
 GH_TUPLE=	mozilla-l10n:firefox-l10n:${TAG_L10N}:ffl10n
 USE_MOZILLA=	-sqlite
 
@@ -105,14 +105,10 @@ MOZ_OPTIONS=	--with-base-browser-version=${DISTVERSION} \
 
 .include <bsd.port.options.mk>
 
-.if ${ARCH} == i386
-BUILD_DEPENDS+=	node${NODEJS_VERSION}>=24:www/node${NODEJS_VERSION}
-USES+=		nodejs:24,build,env
-.  if ${MACHINE_CPU:Msse2}
+.if ${ARCH} == i386 && ${MACHINE_CPU:Msse2}
 # is not enabled on i386 by default
 # Fix for error: always_inline function '_mm_setzero_si64' requires target feature 'sse2'
 CFLAGS_i386+=	-msse2
-.  endif
 .endif
 
 .if ${ARCH} == amd64

@@ -1,4 +1,4 @@
---- chrome/updater/configurator.cc.orig	2025-07-02 06:08:04 UTC
+--- chrome/updater/configurator.cc.orig	2025-10-02 04:28:32 UTC
 +++ chrome/updater/configurator.cc
 @@ -91,7 +91,7 @@ Configurator::Configurator(scoped_refptr<UpdaterPrefs>
          return std::nullopt;

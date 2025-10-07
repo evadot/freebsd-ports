@@ -1,11 +1,8 @@
 PORTNAME=	copyq
-DISTVERSION=	10.0.0
+DISTVERSION=	12.0.1
 CATEGORIES=	deskutils
 MASTER_SITES=	https://github.com/hluk/CopyQ/releases/download/v${DISTVERSION}/
 DISTNAME=	Copyq-${DISTVERSION}
-
-PATCH_SITES=	https://github.com/hluk/CopyQ/commit/
-PATCHFILES+=	f08c0d46a239362c5d3525ef9c3ba943bb00f734.patch:-p1 # Fix build with Qt >= 6.9.0
 
 MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	Qt6 based clipboard manager
@@ -22,8 +19,6 @@ USE_GL=		opengl
 USE_KDE=	notifications ecm:build statusnotifieritem
 USE_QT=		base declarative svg wayland translations:build
 USE_XORG=	ice sm x11 xext xfixes xtst
-
-CMAKE_ARGS=	-DWITH_QT6:BOOL=TRUE
 
 PORTSCOUT=	limit:^d\.d\.
 

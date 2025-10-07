@@ -127,8 +127,8 @@ AOOVERSION2=	2
 AOOVERSION3=	0
 # From solenv/inc/minor.mk SOURCEREVISION LAST_MINOR BUILD
 AOOTAG=		AOO420m6\(Build:9825\)
-GITREVISION=	518a110c8f
-TIMESTAMP=	1750013453
+GITREVISION=	adfffba115
+TIMESTAMP=	1758052376
 #AOORC=rc3
 EXTSRC=		ApacheOpenOffice.ext_sources.${AOOVERSION1}.x.x.20150707.tar.gz
 
@@ -228,7 +228,7 @@ WITH=	SDK
 
 .if ${OPSYS} == FreeBSD && ${OSVERSION} < 1500000
 # nm: '../unxfbsdi.pro/slo/b2dcubicbezier.o': Invalid argument
-MAKE_JOBS_UNSAFE=	yes
+EXTRA_PATCHES+=         ${FILESDIR}/extra-patch-nm
 .endif
 
 .if defined(WITH_DEBUG)

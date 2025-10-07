@@ -1,6 +1,7 @@
     COMMENT = Things that used to be on the desktop before computers were invented
 
     SUBDIR += R-cran-exams
+    SUBDIR += R-cran-exams2forms
     SUBDIR += affiche
     SUBDIR += akonadi-calendar-tools
     SUBDIR += akonadi-import-wizard
@@ -41,6 +42,8 @@
     SUBDIR += copyq
     SUBDIR += coregarage
     SUBDIR += countdown
+    SUBDIR += crengine-ng
+    SUBDIR += crqt-ng
     SUBDIR += dailystrips
     SUBDIR += deforaos-notes
     SUBDIR += deforaos-todo
@@ -91,6 +94,7 @@
     SUBDIR += gnome-shell-extension-openweather
     SUBDIR += gnome-shell-extension-panel-osd
     SUBDIR += gnome-shell-extension-recent-items
+    SUBDIR += gnome-shell-extension-simple-weather
     SUBDIR += gnome-shell-extension-trash
     SUBDIR += gnome-shell-extension-weather
     SUBDIR += gnome-shell-extension-windowoverlay-icons
@@ -220,6 +224,7 @@
     SUBDIR += plasma6-sddm-kcm
     SUBDIR += plasma6-xdg-desktop-portal-kde
     SUBDIR += plopfolio
+    SUBDIR += podman-desktop
     SUBDIR += preferences
     SUBDIR += presage
     SUBDIR += projectlibre
@@ -275,6 +280,7 @@
     SUBDIR += tasksh
     SUBDIR += taskwarrior
     SUBDIR += taskwarrior-tui
+    SUBDIR += tatuin
     SUBDIR += teapot
     SUBDIR += terminal-image-viewer
     SUBDIR += thinkingrock
@@ -318,6 +324,7 @@
     SUBDIR += ydotool
     SUBDIR += zanshin
     SUBDIR += zim
+    SUBDIR += zk
     SUBDIR += znotes
     SUBDIR += zorro
 

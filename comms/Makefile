@@ -62,6 +62,7 @@
     SUBDIR += hamlib
     SUBDIR += hcidump
     SUBDIR += hidapi
+    SUBDIR += hydrasdr
     SUBDIR += ibp
     SUBDIR += iceoryx
     SUBDIR += inspectrum
@@ -144,6 +145,7 @@
     SUBDIR += py-nkdfu
     SUBDIR += py-pylink-square
     SUBDIR += py-pymodbus
+    SUBDIR += py-pynitrokey
     SUBDIR += py-pyocd
     SUBDIR += py-pyocd-pemicro
     SUBDIR += py-pyserial

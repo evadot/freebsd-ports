@@ -104,6 +104,7 @@
     SUBDIR += R-cran-mitools
     SUBDIR += R-cran-mnormt
     SUBDIR += R-cran-moments
+    SUBDIR += R-cran-mpoly
     SUBDIR += R-cran-mvtnorm
     SUBDIR += R-cran-ncdf4
     SUBDIR += R-cran-nloptr
@@ -111,6 +112,7 @@
     SUBDIR += R-cran-nortest
     SUBDIR += R-cran-numDeriv
     SUBDIR += R-cran-numbers
+    SUBDIR += R-cran-orthopolynom
     SUBDIR += R-cran-outliers
     SUBDIR += R-cran-partitions
     SUBDIR += R-cran-pbkrtest
@@ -461,7 +463,6 @@
     SUBDIR += libformfactor
     SUBDIR += libhomfly
     SUBDIR += libmesh
-    SUBDIR += libmissing
     SUBDIR += libnormaliz
     SUBDIR += libocas
     SUBDIR += liborigin
@@ -608,6 +609,10 @@
     SUBDIR += octave-forge-ltfat
     SUBDIR += octave-forge-mapping
     SUBDIR += octave-forge-matgeom
+    SUBDIR += octave-forge-mboct-fem-pkg
+    SUBDIR += octave-forge-mboct-mbdyn-pkg
+    SUBDIR += octave-forge-mboct-numerical-pkg
+    SUBDIR += octave-forge-mboct-octave-pkg
     SUBDIR += octave-forge-mccabe-thiele
     SUBDIR += octave-forge-mechanics
     SUBDIR += octave-forge-miscellaneous
@@ -957,6 +962,7 @@
     SUBDIR += py-cmyt
     SUBDIR += py-colormath
     SUBDIR += py-contourpy
+    SUBDIR += py-conway-polynomials
     SUBDIR += py-cryptominisat
     SUBDIR += py-cvxopt
     SUBDIR += py-cvxpy
@@ -996,6 +1002,7 @@
     SUBDIR += py-hdmedians
     SUBDIR += py-hepstats
     SUBDIR += py-heyoka
+    SUBDIR += py-highspy
     SUBDIR += py-hmmlearn
     SUBDIR += py-hypernetx
     SUBDIR += py-igraph
@@ -1261,6 +1268,7 @@
     SUBDIR += tinyexpr
     SUBDIR += tinymt
     SUBDIR += tlapack
+    SUBDIR += tlfloat
     SUBDIR += tmv
     SUBDIR += tomsfastmath
     SUBDIR += topaz

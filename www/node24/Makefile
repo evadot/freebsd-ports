@@ -42,6 +42,7 @@ CONFIGURE_ARGS=	--prefix=${PREFIX:S|^${DESTDIR}||} \
 		--shared-zstd \
 		--with-intl=system-icu \
 		--without-npm
+CXXFLAGS_powerpc64=	-mpower8-vector
 HAS_CONFIGURE=	yes
 MAKE_ENV=	CC.host="${CCACHE_BIN} ${CC}" \
 		CFLAGS.host="${CFLAGS}" \
@@ -100,5 +101,8 @@ post-configure:
 
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/node
+
+post-install-BUNDLED_SSL-on:
+	cd ${STAGEDIR}${PREFIX} && ${FIND} include/node/openssl/ -type f >> ${TMPPLIST}
 
 .include <bsd.port.mk>

@@ -313,16 +313,17 @@ neo4j:*:369:
 _wsdd:*:370:
 reposilite:*:371:
 beam:*:372:
-# free: 373
-# free: 374
-# free: 375
-# free: 376
+mautrix-whatsapp:*:373:
+traccar:*:374:
+unpackerr:*:375:
+athens:*:376:
 hostd:*:377:
 walletd:*:378:
 renterd:*:379:
 spoofdpi:*:380:
 hydroxide:*:381:
 _tlsrpt:*:382:
+cascade:*:383:
 # free: 383
 # free: 384
 # free: 385
@@ -798,7 +799,7 @@ _geodns:*:853:
 ebusd:*:854:
 opensearch:*:855:
 # free: 856
-# free: 857
+kanidmd:*:857:
 umurmur:*:858:
 kanidm:*:859:
 plocate:*:860:

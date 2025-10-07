@@ -1,6 +1,6 @@
---- sandbox/policy/openbsd/sandbox_openbsd.cc.orig	2025-07-02 06:08:04 UTC
+--- sandbox/policy/openbsd/sandbox_openbsd.cc.orig	2025-10-02 04:28:32 UTC
 +++ sandbox/policy/openbsd/sandbox_openbsd.cc
-@@ -0,0 +1,400 @@
+@@ -0,0 +1,396 @@
 +// Copyright (c) 2012 The Chromium Authors. All rights reserved.
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
@@ -38,7 +38,6 @@
 +#include "base/time/time.h"
 +#include "build/build_config.h"
 +#include "crypto/crypto_buildflags.h"
-+#include "ppapi/buildflags/buildflags.h"
 +#include "sandbox/constants.h"
 +#include "sandbox/linux/services/credentials.h"
 +#include "sandbox/linux/services/namespace_sandbox.h"
@@ -62,6 +61,7 @@
 +#endif
 +
 +#include "third_party/boringssl/src/include/openssl/crypto.h"
++#include "third_party/skia/experimental/rust_png/ffi/FFI.rs.h"
 +
 +#include <fontconfig/fontconfig.h>
 +#include "ui/gfx/linux/fontconfig_util.h"
@@ -127,6 +127,8 @@
 +      crypto::EnsureNSSInit();
 +#endif
 +      CRYPTO_pre_sandbox_init();
++
++      rust_png::initialize_cpudetect();
 +
 +      base::FilePath cache_directory, local_directory;
 +
@@ -343,12 +345,6 @@
 +    case sandbox::mojom::Sandbox::kOnDeviceModelExecution:
 +      SetPledge("stdio drm inet rpath flock cpath wpath prot_exec recvfd sendfd tmppath unix", NULL);
 +      break;
-+#if BUILDFLAG(ENABLE_PPAPI)
-+    case sandbox::mojom::Sandbox::kPpapi:
-+      // prot_exec needed by v8
-+      SetPledge("stdio rpath prot_exec recvfd sendfd", NULL);
-+      break;
-+#endif
 +    case sandbox::mojom::Sandbox::kAudio:
 +      SetPledge(NULL, "/etc/chromium/pledge.utility_audio");
 +      break;

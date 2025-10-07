@@ -1,3 +1,3 @@
-TIMESTAMP = 1750872455
-SHA256 (containers-podman-v5.5.2_GH0.tar.gz) = a2dbd8280cd92d4741f32f5a99d385d7fc6f0dd36bc9cc90a7273767e26d43d9
-SIZE (containers-podman-v5.5.2_GH0.tar.gz) = 21334872
+TIMESTAMP = 1759417077
+SHA256 (containers-podman-v5.6.2_GH0.tar.gz) = c6de8f347ee93e4626d7c82e3adcb1b34e64175b5ca9959e790e52a0b4bbf2a1
+SIZE (containers-podman-v5.6.2_GH0.tar.gz) = 20916839

@@ -1,5 +1,5 @@
 PORTNAME=	mkdocs-material
-DISTVERSION=	9.6.16
+DISTVERSION=	9.6.21
 CATEGORIES=	textproc python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -42,7 +42,7 @@ IMAGING_DESC=		Support for image processing
 RECOMMENDED_DESC=	Install a recommended set of MkDocs plugins
 
 IMAGING_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cairosvg>=2.6<3:graphics/py-cairosvg@${PY_FLAVOR} \
-			${PYTHON_PKGNAMEPREFIX}pillow>=10.2:graphics/py-pillow@${PY_FLAVOR}
+			${PYTHON_PKGNAMEPREFIX}pillow>=10.2<12.0:graphics/py-pillow@${PY_FLAVOR}
 
 RECOMMENDED_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}mkdocs-minify-plugin>=0.7<1:textproc/py-mkdocs-minify-plugin@${PY_FLAVOR} \
 				${PYTHON_PKGNAMEPREFIX}mkdocs-redirects>=1.2<2:textproc/py-mkdocs-redirects@${PY_FLAVOR} \

@@ -1,7 +1,6 @@
 PORTNAME=	vulkan-tools
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.4.321
-PORTREVISION=	1
+DISTVERSION=	1.4.327
 CATEGORIES=	graphics
 
 MAINTAINER=	atanubiswas484@gmail.com
@@ -9,6 +8,7 @@ COMMENT=	Tools and demos for the Vulkan graphics API
 WWW=		https://github.com/KhronosGroup/Vulkan-Tools
 
 LICENSE=	APACHE20
+LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 BUILD_DEPENDS=	glslangValidator:graphics/glslang \
 		vulkan-headers>0:graphics/vulkan-headers

@@ -1,5 +1,5 @@
 PORTNAME=	vscode
-DISTVERSION=	1.102.3
+DISTVERSION=	1.104.2
 PORTREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	https://github.com/tagattie/FreeBSD-VSCode/releases/download/${DISTVERSION}/:node_modules
@@ -30,7 +30,6 @@ LIB_DEPENDS=	libatk-bridge-2.0.so:accessibility/at-spi2-core \
 		libopus.so:audio/opus \
 		libsndio.so:audio/sndio \
 		libdbus-1.so:devel/dbus \
-		libicuuc.so:devel/icu \
 		libepoll-shim.so:devel/libepoll-shim \
 		libevent.so:devel/libevent \
 		libffi.so:devel/libffi \
@@ -69,7 +68,7 @@ USES=		desktop-file-utils gl gmake gnome gssapi:mit iconv:wchar_t \
 USE_GITHUB=	yes
 GH_ACCOUNT=	microsoft
 
-SOURCE_COMMIT_HASH=	488a1f239235055e34e673291fb8d8c810886f81
+SOURCE_COMMIT_HASH=	e3a5acfb517a443235981655413d566533107e92
 
 BINARY_ALIAS=	python=${PYTHON_CMD}
 
@@ -78,7 +77,7 @@ USE_XORG=	x11 xcb xcomposite xcursor xdamage xext xfixes xi xkbfile \
 USE_GL=		gbm gl glesv2
 USE_GNOME=	atk cairo pango gdkpixbuf gtk30 libxml2 libxslt
 
-SHEBANG_REGEX=	./(extensions|node_modules|resources|scripts|src)/.*\.sh$$
+SHEBANG_REGEX=	./(extensions|node_modules|resources|scripts|src)/.*(\.(pl|py|sh)|makeBlacker|makeFF)$$
 PATHFIX_FILES=	src/vs/workbench/contrib/debug/node/terminals.ts
 
 DATADIR=	${PREFIX}/share/code-oss
@@ -98,7 +97,7 @@ TEST_ENV=	${MAKE_ENV:C/TMPDIR=.*//}
 
 NODEJS_DIR=	${.CURDIR:H:H}/www/node22
 .include "${NODEJS_DIR}/Makefile.version"
-ELECTRON_DIR=	${.CURDIR:H:H}/devel/electron35
+ELECTRON_DIR=	${.CURDIR:H:H}/devel/electron37
 .include "${ELECTRON_DIR}/Makefile.version"
 
 ELECTRON_DOWNLOAD_URL=	https://github.com/electron/electron/releases/download/v${ELECTRON_VER}
@@ -287,15 +286,21 @@ build-remote-extension-host: configure pre-build
 	# cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} npm run gulp vscode-reh-web-linux-${ELECTRON_ARCH}-min
 
 ### targets for port maintainer(s)
-make-node-modules-archive: extract
+patch-package-json: extract
+# add node module for signature verification of extensions from Open VSX Registry
+	@${PATCH} -s -p0 -d ${WRKSRC} < ${FILESDIR}/patch-package.json
+
+make-node-modules-archive: extract patch-package-json
 	@${ECHO_MSG} "===>  Fetching and installing node modules in ${WRKSRC}"
 	@cd ${WRKSRC} && \
-	${SETENV} ${MAKE_ENV} npm install --ignore-scripts --no-progress --no-audit --no-fund && \
+	${SETENV} ${MAKE_ENV} npm install \
+		--ignore-scripts --no-progress --no-audit --no-fund --no-update-notifier && \
 	${TAR} -czf ${WRKDIR}/vscode-.-node-modules${EXTRACT_SUFX} node_modules
 	@for dir in `node -p "JSON.stringify(require('${WRKSRC}/build/npm/dirs').dirs)" | jq -r '.[]'`; do \
 		cd ${WRKSRC}/$${dir} && \
 		${ECHO_MSG} "===>  Fetching and installing node modules in ${WRKSRC}/$${dir}" && \
-		${SETENV} ${MAKE_ENV} npm install --ignore-scripts --no-progress --no-audit --no-fund && \
+		${SETENV} ${MAKE_ENV} npm install \
+			--ignore-scripts --no-progress --no-audit --no-fund --no-update-notifier && \
 		if [ -d node_modules ]; then \
 			${TAR} -czf ${WRKDIR}/vscode-`echo $${dir} | tr _ __ | tr / _`-node-modules${EXTRACT_SUFX} node_modules; \
 		fi; \

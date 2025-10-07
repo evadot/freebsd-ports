@@ -1,9 +1,8 @@
 PORTNAME=	forgejo
 DISTVERSIONPREFIX=	v
-DISTVERSION=	11.0.2
-PORTREVISION=	1
+DISTVERSION=	12.0.4
 CATEGORIES=	www
-MASTER_SITES=	https://codeberg.org/forgejo/forgejo/releases/download/${DISTVERSIONPREFIX}${DISTVERSION}/
+MASTER_SITES=	https://codeberg.org/forgejo/forgejo/releases/download/${DISTVERSIONFULL}/
 DISTNAME=	forgejo-src-${DISTVERSION}
 
 MAINTAINER=	stb@lassitu.de
@@ -17,6 +16,8 @@ RUN_DEPENDS=	git:devel/git
 
 USES=		cpe gmake go:no_targets
 USE_RC_SUBR=	forgejo
+
+PIE_UNSAFE=	yes
 
 CONFLICTS_INSTALL=	forgejo[0-79]*
 
@@ -58,9 +59,9 @@ SUB_LIST+=	DAEMONARGS="${DAEMONARGS}"
 SSP_UNSAFE=	true
 LDFLAGS+=	"'-X "forgejo.org/modules/setting.CustomPath=${PREFIX}/etc/forgejo"'" \
 		"'-X "forgejo.org/modules/setting.AppWorkPath=${PREFIX}/share/forgejo"'"
-MAKE_ARGS=	GOPATH=${WRKDIR} \
-		TAGS="${GO_TAGS}" \
-		GOFLAGS="-buildvcs=false"
+MAKE_ARGS=	GOFLAGS="-buildvcs=false" \
+		GOPATH=${WRKDIR} \
+		TAGS="${GO_TAGS}"
 ALL_TARGET=	backend
 MAKE_JOBS_UNSAFE=	yes
 

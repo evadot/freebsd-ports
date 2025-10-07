@@ -42,7 +42,9 @@ CONFLICTS_INSTALL=	virtualbox-ose-legacy \
 			virtualbox-ose-70 \
 			virtualbox-ose-nox11-70 \
 			virtualbox-ose-71 \
-			virtualbox-ose-nox11-71
+			virtualbox-ose-nox11-71 \
+			virtualbox-ose-72 \
+			virtualbox-ose-nox11-72
 
 PORTSCOUT=	limit:^6\.
 SUB_FILES=	pkg-message
@@ -326,6 +328,8 @@ post-patch:
 	@${REINPLACE_CMD} \
 	    -e 's|^versions =.*|versions = ["${PYTHON_VER}${PYTHON_ABIVER}"]|' \
 	    ${WRKSRC}/src/libs/xpcom18a4/python/gen_python_deps.py
+	@${REINPLACE_CMD} -e 's|curl_proxytype|long|g' \
+	    ${WRKSRC}/src/VBox/Runtime/generic/http-curl.cpp
 
 post-patch-AIO-off:
 	@${REINPLACE_CMD} 's|r3/freebsd/fileaio-freebsd.cpp|r3/posix/fileaio-posix.cpp|' \

@@ -1,13 +1,11 @@
---- chrome/browser/chrome_browser_interface_binders_webui.cc.orig	2025-07-02 06:08:04 UTC
+--- chrome/browser/chrome_browser_interface_binders_webui.cc.orig	2025-10-02 04:28:32 UTC
 +++ chrome/browser/chrome_browser_interface_binders_webui.cc
-@@ -48,20 +48,20 @@
- #include "content/public/browser/web_ui_controller_interface_binder.h"
+@@ -51,18 +51,18 @@
+ #include "mojo/public/cpp/bindings/binder_map.h"
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
 -    BUILDFLAG(IS_CHROMEOS)
 +    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
- #include "chrome/browser/ui/webui/connectors_internals/connectors_internals.mojom.h"
- #include "chrome/browser/ui/webui/connectors_internals/connectors_internals_ui.h"
  #include "ui/webui/resources/cr_components/app_management/app_management.mojom.h"
  #endif
  
@@ -24,16 +22,7 @@
  #include "chrome/browser/ui/webui/app_settings/web_app_settings_ui.h"
  #include "chrome/browser/ui/webui/on_device_translation_internals/on_device_translation_internals_ui.h"
  #include "chrome/browser/ui/webui/signin/history_sync_optin/history_sync_optin.mojom.h"
-@@ -460,7 +460,7 @@ void PopulateChromeWebUIFrameBinders(
- #endif
- 
- #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
--    BUILDFLAG(IS_CHROMEOS)
-+    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
-   RegisterWebUIControllerInterfaceBinder<
-       connectors_internals::mojom::PageHandler,
-       enterprise_connectors::ConnectorsInternalsUI>(map);
-@@ -471,7 +471,7 @@ void PopulateChromeWebUIFrameBinders(
+@@ -489,7 +489,7 @@ void PopulateChromeWebUIFrameBinders(
                                           policy::DlpInternalsUI>(map);
  #endif
  
@@ -42,7 +31,7 @@
    RegisterWebUIControllerInterfaceBinder<
        app_management::mojom::PageHandlerFactory, WebAppSettingsUI>(map);
  
-@@ -609,14 +609,14 @@ void PopulateChromeWebUIFrameBinders(
+@@ -642,14 +642,14 @@ void PopulateChromeWebUIFrameBinders(
          HistoryClustersSidePanelUI, NewTabPageUI, BookmarksSidePanelUI>(map);
    }
  
@@ -59,7 +48,7 @@
        WhatsNewUI,
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
        NewTabPageUI>(map);
-@@ -1154,7 +1154,7 @@ void PopulateChromeWebUIFrameBinders(
+@@ -1200,7 +1200,7 @@ void PopulateChromeWebUIFrameBinders(
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

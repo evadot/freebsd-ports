@@ -1,5 +1,5 @@
-TIMESTAMP = 1752994939
-SHA256 (go/dns_dnscontrol/dnscontrol-v4.22.0/v4.22.0.mod) = d016e01c03ac3dc38ebe9b9282596a56bbabeed625cccc305dfca0aadedc3ade
-SIZE (go/dns_dnscontrol/dnscontrol-v4.22.0/v4.22.0.mod) = 7399
-SHA256 (go/dns_dnscontrol/dnscontrol-v4.22.0/v4.22.0.zip) = 91452c68e8a6f13612a6ea76738cf533eda78370513e0fe37602b122adbd8737
-SIZE (go/dns_dnscontrol/dnscontrol-v4.22.0/v4.22.0.zip) = 5532324
+TIMESTAMP = 1758621544
+SHA256 (go/dns_dnscontrol/dnscontrol-v4.25.0/v4.25.0.mod) = 187c4544894940bee4ffaf8169721041c2476aaab267b35e414070628c8bd2c0
+SIZE (go/dns_dnscontrol/dnscontrol-v4.25.0/v4.25.0.mod) = 7706
+SHA256 (go/dns_dnscontrol/dnscontrol-v4.25.0/v4.25.0.zip) = f8ef4ee86115e168be244948f103730614f0544f8153c940b198f8adfd0e9478
+SIZE (go/dns_dnscontrol/dnscontrol-v4.25.0/v4.25.0.zip) = 5562087

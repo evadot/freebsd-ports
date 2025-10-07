@@ -1,6 +1,6 @@
---- content/browser/renderer_host/render_process_host_impl.cc.orig	2025-07-02 06:08:04 UTC
+--- content/browser/renderer_host/render_process_host_impl.cc.orig	2025-10-02 04:28:32 UTC
 +++ content/browser/renderer_host/render_process_host_impl.cc
-@@ -222,7 +222,7 @@
+@@ -226,7 +226,7 @@
  #include "third_party/blink/public/mojom/android_font_lookup/android_font_lookup.mojom.h"
  #endif
  
@@ -18,7 +18,7 @@
    struct rlimit limit;
    if (getrlimit(RLIMIT_NPROC, &limit) != 0)
      return kUnknownPlatformProcessLimit;
-@@ -1333,7 +1333,7 @@ RenderProcessHostImpl::IOThreadHostImpl::~IOThreadHost
+@@ -1351,7 +1351,7 @@ RenderProcessHostImpl::IOThreadHostImpl::~IOThreadHost
  
  void RenderProcessHostImpl::IOThreadHostImpl::SetPid(
      base::ProcessId child_pid) {
@@ -27,7 +27,7 @@
    child_thread_type_switcher_.SetPid(child_pid);
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  }
-@@ -3426,7 +3426,7 @@ void RenderProcessHostImpl::AppendRendererCommandLine(
+@@ -3459,7 +3459,7 @@ void RenderProcessHostImpl::AppendRendererCommandLine(
              base::TimeTicks::UnixEpoch().since_origin().InMicroseconds()));
    }
  
@@ -36,7 +36,7 @@
    // Append `kDisableVideoCaptureUseGpuMemoryBuffer` flag if there is no support
    // for NV12 GPU memory buffer.
    if (switches::IsVideoCaptureUseGpuMemoryBufferEnabled() &&
-@@ -3480,6 +3480,7 @@ void RenderProcessHostImpl::PropagateBrowserCommandLin
+@@ -3515,6 +3515,7 @@ void RenderProcessHostImpl::PropagateBrowserCommandLin
        switches::kDisableSkiaRuntimeOpts,
        switches::kDisableSpeechAPI,
        switches::kDisableThreadedCompositing,
@@ -44,7 +44,7 @@
        switches::kDisableV8IdleTasks,
        switches::kDisableVideoCaptureUseGpuMemoryBuffer,
        switches::kDisableWebGLImageChromium,
-@@ -5329,7 +5330,7 @@ uint64_t RenderProcessHostImpl::GetPrivateMemoryFootpr
+@@ -5417,7 +5418,7 @@ uint64_t RenderProcessHostImpl::GetPrivateMemoryFootpr
    // - Win: https://crbug.com/707022 .
    uint64_t total_size = 0;
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || \

@@ -1,5 +1,5 @@
 PORTNAME=	zstd
-PORTVERSION=	0.14.0
+PORTVERSION=	0.15.2
 CATEGORIES=	archivers
 
 MAINTAINER=	sunpoet@FreeBSD.org
@@ -16,14 +16,8 @@ USES=		php:pecl pkgconfig
 
 CONFIGURE_ARGS=	--with-libzstd
 
-.include <bsd.port.pre.mk>
-
 post-patch:
-.if ${PHP_VER} >= 85
-	${REINPLACE_CMD} -e 's|ext/standard/php_smart_string|Zend/zend_smart_string|' \
-		${WRKSRC}/zstd.c
-.endif
 # Clean up bundled libraries
 	@${RM} -r ${WRKSRC}/zstd/
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

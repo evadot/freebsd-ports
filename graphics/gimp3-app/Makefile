@@ -1,5 +1,6 @@
 PORTNAME=	gimp
 DISTVERSION=	3.0.4
+PORTREVISION=	2
 CATEGORIES?=	graphics gnome
 MASTER_SITES=	GIMP/gimp/v${PORTVERSION:R}
 PKGNAMESUFFIX=	3-app
@@ -34,7 +35,6 @@ LIB_DEPENDS=	libpng.so:graphics/png \
 		libappstream-glib.so:devel/appstream-glib \
 		libImath.so:math/Imath \
 		libwebp.so:graphics/webp \
-		libgjs.so:lang/gjs \
 		libOpenEXR.so:graphics/openexr \
 		libIex.so:graphics/openexr \
 		libjson-glib-1.0.so:devel/json-glib \
@@ -49,8 +49,7 @@ LIB_DEPENDS_powerpc64le=	libunwind.so:devel/libunwind
 
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:misc/iso-codes \
 		glib-networking>=0:net/glib-networking \
-		mypaint-brushes>0:graphics/mypaint-brushes \
-		gjs-console:lang/gjs
+		mypaint-brushes>0:graphics/mypaint-brushes
 
 USES=		cpe desktop-file-utils gettext gnome jpeg libarchive \
 		localbase:ldflags meson ninja perl5 pkgconfig python:3.7+ \
@@ -77,8 +76,8 @@ MESON_ARGS=	-Dappdata-test=disabled \
 		-Diff=disabled \
 		-Dfits=disabled
 
-OPTIONS_DEFINE?=	AALIB GHOSTSCRIPT HEIF HELP OPENJPEG JXL LIBMNG WMF DOCS VALA CFITSIO
-OPTIONS_DEFAULT?=	AALIB GHOSTSCRIPT HEIF OPENJPEG JXL WMF DOCS VALA LUA CFITSIO
+OPTIONS_DEFINE?=	AALIB GHOSTSCRIPT HEIF HELP OPENJPEG JS JXL LIBMNG WMF DOCS VALA CFITSIO
+OPTIONS_DEFAULT?=	AALIB GHOSTSCRIPT HEIF OPENJPEG JS JXL WMF DOCS VALA LUA CFITSIO
 OPTIONS_SINGLE=		SCRIPTS
 OPTIONS_SINGLE_SCRIPTS=	LUA LUAJIT LUA_NONE
 OPTIONS_SUB=	yes
@@ -112,6 +111,11 @@ WMF_LIB_DEPENDS=	libexpat.so:textproc/expat2 \
 			libwmf.so:graphics/libwmf
 WMF_MESON_ENABLED=	wmf
 
+JS_DESC=                Install Javascript plug-ins
+JS_LIB_DEPENDS=         libgjs.so:lang/gjs
+JS_RUN_DEPENDS=         gjs-console:lang/gjs
+JS_MESON_ENABLED=       javascript
+
 DOCS_BUILD_DEPENDS=	gi-docgen:textproc/py-gi-docgen
 DOCS_MESON_ENABLED=	gi-docgen
 
@@ -125,6 +129,7 @@ LUA_RUN_DEPENDS=	${LUA_REFMODLIBDIR}/lgi/corelgilua${LUA_VER_STR}.so:devel/lua-l
 
 LUAJIT_DESC?=		Lua scripting language support via Luajit
 LUAJIT_USES=		luajit
+LUAJIT_BROKEN=		LuaJIT cannot use devel/lua-lgi module yet
 
 LUA_NONE_DESC?=		Disable Lua scripting language support
 LUA_NONE_MESON_FALSE=	lua

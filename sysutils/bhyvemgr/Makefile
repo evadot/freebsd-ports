@@ -1,6 +1,7 @@
 PORTNAME=	bhyvemgr
 DISTVERSIONPREFIX=	v
-PORTVERSION=	1.7.1
+PORTVERSION=	1.12.0
+PORTREVISION=	1
 CATEGORIES=	sysutils
 PKGNAMESUFFIX=	${LAZARUS_PKGNAMESUFFIX}
 
@@ -20,10 +21,13 @@ USE_XORG=	x11
 USE_GITHUB=	yes
 GH_ACCOUNT=	alonsobsd
 
-OPTIONS_DEFINE=		FREERDP3
+OPTIONS_DEFINE=		FREERDP3 QEMU-TOOLS
 
 FREERDP3_DESC=		Install freerdp3 to enable rdp connection option
 FREERDP3_RUN_DEPENDS=	freerdp3>0:net/freerdp3
+
+QEMU-TOOLS_DESC=	Install qemu-img tool
+QEMU-TOOLS_RUN_DEPENDS=	qemu-img:emulators/qemu@tools
 
 .include <bsd.port.pre.mk>
 
@@ -57,13 +61,13 @@ USE_GNOME+=	${USE_GNOME_${FLAVOR}}
 SUB_FILES=	pkg-message
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 	${INSTALL_DATA} ${WRKSRC}/setup/${PORTNAME}.desktop ${STAGEDIR}${PREFIX}/share/applications/${PORTNAME}.desktop
 	@${MKDIR} ${STAGEDIR}${PREFIX}/share/icons/hicolor/512x512/apps
 	${INSTALL_DATA} ${WRKSRC}/setup/${PORTNAME}.png ${STAGEDIR}${PREFIX}/share/icons/hicolor/512x512/apps/${PORTNAME}.png
 	@${MKDIR} ${STAGEDIR}${PREFIX}/share/icons/hicolor/scalable/apps
 	${INSTALL_DATA} ${WRKSRC}/setup/${PORTNAME}.svg ${STAGEDIR}${PREFIX}/share/icons/hicolor/scalable/apps/${PORTNAME}.svg
 	@${MKDIR} ${STAGEDIR}${DATADIR}
-	cd ${WRKSRC} && ${COPYTREE_SHARE} "images" ${STAGEDIR}${DATADIR}
+	cd ${WRKSRC} && ${COPYTREE_SHARE} "images languages samples templates" ${STAGEDIR}${DATADIR}
 
 .include <bsd.port.post.mk>

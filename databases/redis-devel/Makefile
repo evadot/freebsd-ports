@@ -1,5 +1,5 @@
 PORTNAME=	redis
-DISTVERSION=	8.0.2.20250528
+DISTVERSION=	8.2.1.20250930
 CATEGORIES=	databases
 PKGNAMESUFFIX=	-devel
 
@@ -15,17 +15,17 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 LICENSE_PERMS_RSALv2=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 LICENSE_PERMS_SSPLv1=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
-USES+=		compiler:c11 cpe gmake tcl:test
+USES=		compiler:c11 cpe gmake tcl:test pkgconfig
 CPE_VENDOR=	redislabs
 USE_GITHUB=	yes
-GH_TAGNAME=	7f60945bc
+GH_TAGNAME=	161130f41
 USE_RC_SUBR=	redis sentinel
 
 MAKE_ENV=	OPTIMIZATION= \
 		V=yo
 
 CFLAGS+=	-Wno-deprecated-declarations
-LDFLAGS+=	-lpthread -lm -lexecinfo
+LDFLAGS+=	-L/usr/lib -lexecinfo
 
 CONFLICTS_INSTALL=	redis redis62 redis72 redis74
 
