@@ -1,11 +1,13 @@
 PORTNAME=	cascade
 DISTVERSION=	0.1.0-RC1
+PORTREVISION=	3
 CATEGORIES=	dns net
+PKGNAMESUFFIX=	-dns
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Friendly DNSSEC signing solution
 WWW=		https://github.com/NLnetLabs/cascade
-#
+
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
@@ -15,7 +17,7 @@ USES=		cargo cpe ssl
 CPE_VENDOR=	nlnetlabs
 USE_GITHUB=	yes
 GH_ACCOUNT=	NLnetLabs
-GH_TAGNAME=	e30aba3ed
+GH_TAGNAME=	3bd316689
 USE_RC_SUBR=	${PORTNAME}
 
 SUB_LIST=	USERS=${USERS} \

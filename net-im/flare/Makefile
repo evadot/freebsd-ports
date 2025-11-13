@@ -1,6 +1,6 @@
 PORTNAME=	flare
-DISTVERSION=	0.17.0
-PORTREVISION=	2
+DISTVERSION=	0.17.2
+PORTREVISION=	1
 CATEGORIES=	net-im
 
 MAINTAINER=	nxjoseph@protonmail.com
@@ -14,7 +14,8 @@ BUILD_DEPENDS=	blueprint-compiler:devel/blueprint-compiler \
 		protoc:devel/protobuf
 LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libsecret-1.so:security/libsecret
-RUN_DEPENDS=	gnome-keyring:security/gnome-keyring
+RUN_DEPENDS=	gnome-keyring:security/gnome-keyring \
+		noto-emoji>=0:x11-fonts/noto-emoji
 
 USES=		cargo gettext-tools gnome meson pkgconfig python:build
 USE_GITLAB=	yes

@@ -73,7 +73,7 @@ GUILE_DEFAULT?=		2.2
 # Format:	     version[-flavor]
 # Examples:	     6-nox11, 7
 IMAGEMAGICK_DEFAULT?=	7
-# Possible values: 8, 11, 17, 18, 19, 20, 21, 22, 23, 24
+# Possible values: 8, 11, 17, 18, 19, 20, 21, 22, 23, 24, 25
 JAVA_DEFAULT?=		8
 # Possible values: 4.2, 4.99
 .  if (defined(WANT_LAZARUS_DEVEL) && !empty(WANT_LAZARUS_DEVEL)) || ${ARCH:Maarch64}
@@ -97,7 +97,7 @@ LINUX_DEFAULT?=		rl9
 LLVM_DEFAULT?=		19
 # Possible values: 5.1, 5.2, 5.3, 5.4
 LUA_DEFAULT?=		5.4
-# Possible values: luajit, luajit-devel, luajit-openresty
+# Possible values: luajit, luajit-openresty
 .  if ${ARCH:Mpowerpc64*}
 LUAJIT_DEFAULT?=	luajit-openresty
 .  else
@@ -105,11 +105,11 @@ LUAJIT_DEFAULT?=	luajit
 .  endif
 # Possible values: 5.10, 5.20, 6.8
 MONO_DEFAULT?=		5.20
-# Possible values: 8.0, 8.4, 9.1, 10.6m, 10.11m, 11.4m, 11.8m
+# Possible values: 8.0, 8.4, 9.1, 9.4, 10.6m, 10.11m, 11.4m, 11.8m
 MYSQL_DEFAULT?=		8.0
 # Possible values: ninja, samurai
 NINJA_DEFAULT?=		ninja
-# Possible value: 20, 22, 24, current, lts (Note: current = 24 and lts = 22)
+# Possible value: 20, 22, 24, 25, current, lts (Note: current = 25 and lts = 24)
 NODEJS_DEFAULT?=	lts
 # Possible value: 25, 26
 OPENLDAP_DEFAULT?=	26
@@ -130,7 +130,7 @@ _PERL5_FROM_BIN!=	${LOCALBASE}/bin/perl -e 'printf "%vd\n", $$^V;'
 _EXPORTED_VARS+=	_PERL5_FROM_BIN
 PERL5_DEFAULT:=		${_PERL5_FROM_BIN:R}
 .  endif
-# Possible values: 13, 14, 15, 16, 17
+# Possible values: 13, 14, 15, 16, 17, 18
 PGSQL_DEFAULT?=		17
 # Possible values: 8.1, 8.2, 8.3, 8.4, 8.5
 PHP_DEFAULT?=		8.3
@@ -140,7 +140,7 @@ PYCRYPTOGRAPHY_DEFAULT?=	rust
 .  else
 PYCRYPTOGRAPHY_DEFAULT?=	legacy
 .  endif
-# Possible values: 3.9, 3.10, 3.11, 3.12
+# Possible values: 3.10, 3.11, 3.12, 3.13, 3.13t, 3.14
 PYTHON_DEFAULT?=	3.11
 # Possible values: 2.7
 PYTHON2_DEFAULT?=	2.7
@@ -148,7 +148,7 @@ PYTHON2_DEFAULT?=	2.7
 RUBY_DEFAULT?=		3.3
 # Possible values: rust, rust-nightly
 RUST_DEFAULT?=		rust
-# Possible values: 4.16, 4.19, 4.20
+# Possible values: 4.16, 4.19, 4.20, 4.22
 SAMBA_DEFAULT?=		4.16
 # When updating this, please also update the same list in ssl.mk and the checks
 # for USES=ssl in qa.sh!
@@ -189,6 +189,8 @@ check-makevars::
 # Make sure we have a default in the end
 SSL_DEFAULT?=	base
 .  endif
+# Possible values: default, sssd
+SUDO_DEFAULT?=		default
 # Possible values: 8.6, 9.0
 TCLTK_DEFAULT?=		8.6
 # Possible values: 6, 7

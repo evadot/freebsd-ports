@@ -46,6 +46,7 @@
     SUBDIR += dhall
     SUBDIR += dlang-tools
     SUBDIR += dotnet
+    SUBDIR += dotnet-devel
     SUBDIR += dotnet-host
     SUBDIR += dotnet8
     SUBDIR += duktape
@@ -162,6 +163,7 @@
     SUBDIR += julia
     SUBDIR += jython
     SUBDIR += kawa
+    SUBDIR += kefir
     SUBDIR += kf5-kross
     SUBDIR += kotlin
     SUBDIR += kturtle
@@ -290,6 +292,7 @@
     SUBDIR += ptoc
     SUBDIR += purescript
     SUBDIR += py-dhall
+    SUBDIR += py-gherkin-official
     SUBDIR += py-hy
     SUBDIR += py-lupa
     SUBDIR += py-sly
@@ -306,7 +309,9 @@
     SUBDIR += python310
     SUBDIR += python311
     SUBDIR += python312
-    SUBDIR += python39
+    SUBDIR += python313
+    SUBDIR += python313t
+    SUBDIR += python314
     SUBDIR += qmasm
     SUBDIR += quickjs
     SUBDIR += quickjs-ng

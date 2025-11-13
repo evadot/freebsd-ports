@@ -1,7 +1,6 @@
 PORTNAME=	mesa
-DISTVERSION=	25.2-branchpoint-4196
-DISTVERSIONSUFFIX=	-ge02a1bb173e
-PORTREVISION=	1
+DISTVERSION=	25.3-branchpoint-1115
+DISTVERSIONSUFFIX=	-g8c427aae924
 CATEGORIES=	graphics
 PKGNAMESUFFIX=	-devel
 
@@ -52,6 +51,7 @@ OPTIONS_DEFAULT=	DRM LLVM LTO OPENCL VAAPI VKLAYERS WAYLAND X11 ZSTD
 OPTIONS_GROUP=		GALLIUM VULKAN
 OPTIONS_GROUP_GALLIUM=	crocus iris panfrost r600 radeonsi
 OPTIONS_GROUP_VULKAN=	anv hasvk radv
+OPTIONS_EXCLUDE_aarch64=LTO # OPENCL fails to build
 OPTIONS_EXCLUDE_i386=	LTO # anv: vkcube fails on vkCreateSwapchainKHR
 OPTIONS_EXCLUDE+=	${ARCH:Naarch64:C/.+/panfrost/}
 OPTIONS_EXCLUDE+=	${ARCH:Namd64:Ni386:Nx86_64:C/.+/crocus hasvk/}
@@ -147,8 +147,8 @@ ZSTD_MESON_ENABLED=	zstd
 
 post-patch:
 # Extract (snapshot) version from the port instead of empty string
-	@${REINPLACE_CMD} '/MESA_GIT_SHA1/s/@VCS_TAG@/" (git-${DISTVERSIONSUFFIX:C/.*-g//})"/' \
-		${WRKSRC}/src/git_sha1.h.in
+	@${REINPLACE_CMD} '/MESA_GIT_SHA1/s/""/" (git-${DISTVERSIONSUFFIX:C/.*-g//})"/' \
+		${WRKSRC}/bin/git_sha1_gen.py
 
 post-patch-COINST-on:
 	@${MV} ${WRKSRC}/src/util/00-${PORTNAME}-defaults.conf \

@@ -1,6 +1,6 @@
 PORTNAME=	veryl
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.16.4
+DISTVERSION=	0.17.0
 PORTREVISION=	1
 CATEGORIES=	cad
 
@@ -16,7 +16,8 @@ LICENSE_FILE_MIT=	${WRKSRC}/LICENSE-MIT
 USES=		cargo
 USE_GITHUB=	yes
 GH_ACCOUNT=	dalance
-GH_TUPLE=	veryl-lang:doc:43ded381:doc/doc \
+
+GH_TUPLE=	veryl-lang:doc:52363272:doc/doc \
 		veryl-lang:rouge:86eb7159:rouge/support/rouge \
 		veryl-lang:sourcemap-resolver:380f8c18:sourcemapresolver/support/sourcemap-resolver \
 		veryl-lang:veryl.vim:597048f6:verylvim/support/vim

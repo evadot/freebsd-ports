@@ -6,6 +6,7 @@
     SUBDIR += R-cran-xfun
     SUBDIR += aclgen
     SUBDIR += actiona
+    SUBDIR += adiak
     SUBDIR += adios2
     SUBDIR += aichat
     SUBDIR += air
@@ -166,6 +167,7 @@
     SUBDIR += ggml
     SUBDIR += gimp-help-en
     SUBDIR += github-copilot-cli
+    SUBDIR += github-copilot-language-server
     SUBDIR += gkrellm-gamma
     SUBDIR += gkrellm-xkb
     SUBDIR += gkrellmbgchg2
@@ -199,6 +201,7 @@
     SUBDIR += hulgalugha
     SUBDIR += hwdata
     SUBDIR += hxtools
+    SUBDIR += hyprqt6engine
     SUBDIR += ignition-fuel-tools
     SUBDIR += iio-oscilloscope
     SUBDIR += imerge
@@ -294,6 +297,7 @@
     SUBDIR += molequeue
     SUBDIR += mtx
     SUBDIR += najitool
+    SUBDIR += nanocoder
     SUBDIR += navi
     SUBDIR += ncnn
     SUBDIR += netron
@@ -608,6 +612,7 @@
     SUBDIR += quantum++
     SUBDIR += quary
     SUBDIR += radio_datetime_analyzer
+    SUBDIR += raja
     SUBDIR += randomx
     SUBDIR += rash
     SUBDIR += raspberrypi-gpioshutdown
@@ -637,6 +642,7 @@
     SUBDIR += rubygem-rabbit
     SUBDIR += rubygem-vpim
     SUBDIR += rump
+    SUBDIR += rustlings
     SUBDIR += ruut
     SUBDIR += schilytools
     SUBDIR += sdformat

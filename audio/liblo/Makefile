@@ -1,5 +1,5 @@
 PORTNAME=	liblo
-PORTVERSION=	0.32
+PORTVERSION=	0.34
 CATEGORIES=	audio
 MASTER_SITES=	SF
 
@@ -21,6 +21,7 @@ OPTIONS_SUB=	yes
 DOXYGEN_IMPLIES=DOCS
 
 DOXYGEN_BUILD_DEPENDS=	doxygen:devel/doxygen
+DOXYGEN_CONFIGURE_ENABLE=	doc
 
 .include <bsd.port.options.mk>
 

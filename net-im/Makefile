@@ -9,6 +9,7 @@
     SUBDIR += coyim
     SUBDIR += cutegram
     SUBDIR += debugtox
+    SUBDIR += deltachat-desktop
     SUBDIR += dendrite
     SUBDIR += dino
     SUBDIR += discordo
@@ -48,7 +49,7 @@
     SUBDIR += libpurple
     SUBDIR += libqtelegram-ae
     SUBDIR += libquotient
-    SUBDIR += libsignal-client
+    SUBDIR += libsignal
     SUBDIR += libsignal-node
     SUBDIR += libsignon-glib
     SUBDIR += libstrophe
@@ -66,6 +67,7 @@
     SUBDIR += meanwhile
     SUBDIR += mikutter
     SUBDIR += mtxclient
+    SUBDIR += nchat
     SUBDIR += neochat
     SUBDIR += nextcloud-spreed-signaling
     SUBDIR += nextcloud-talk
@@ -137,7 +139,6 @@
     SUBDIR += sendxmpp
     SUBDIR += signal-cli
     SUBDIR += signal-desktop
-    SUBDIR += signald
     SUBDIR += slack-term
     SUBDIR += snac
     SUBDIR += spectral
@@ -145,7 +146,6 @@
     SUBDIR += sshout
     SUBDIR += tde2e
     SUBDIR += tdlib
-    SUBDIR += tdlib-purple
     SUBDIR += telegram-cli
     SUBDIR += telegram-desktop
     SUBDIR += telegramqml

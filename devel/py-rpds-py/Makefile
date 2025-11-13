@@ -1,5 +1,5 @@
 PORTNAME=	rpds-py
-PORTVERSION=	0.27.1
+PORTVERSION=	0.28.0
 PORTREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	PYPI \
@@ -17,7 +17,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}maturin>=1.9<2.0:devel/py-maturin@${PY_FLAVOR}
 
-USES=		cargo dos2unix python
+USES=		cargo python
 USE_PYTHON=	autoplist concurrent pep517
 
 CARGO_BUILD=	no

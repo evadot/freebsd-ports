@@ -1,7 +1,6 @@
 PORTNAME=	openjdk
 DISTVERSIONPREFIX=	jdk-
 DISTVERSION=	${JDK_MAJOR_VERSION}.${JDK_MINOR_VERSION}.${JDK_PATCH_VERSION}+${JDK_BUILD_NUMBER}-${BSD_JDK_VERSION}
-PORTREVISION=	4
 CATEGORIES=	java devel
 PKGNAMESUFFIX?=	${JDK_MAJOR_VERSION}
 
@@ -66,8 +65,8 @@ NOPRECIOUSMAKEVARS=	yes
 
 JDK_MAJOR_VERSION=	17
 JDK_MINOR_VERSION=	0
-JDK_PATCH_VERSION=	16
-JDK_BUILD_NUMBER=	8
+JDK_PATCH_VERSION=	17
+JDK_BUILD_NUMBER=	10
 BSD_JDK_VERSION=	1
 
 JDK_BUG_URL=	https://bugs.freebsd.org/bugzilla/enter_bug.cgi?product=Ports%20%26%20Packages&component=Individual%20Port(s)&short_desc=java/${PORTNAME}${JDK_MAJOR_VERSION}%3A%20
@@ -118,8 +117,8 @@ JDK_BUILD_TYPE=		release
 .include <bsd.port.pre.mk>
 
 # portsfallout.com shows flapping builds on 13.5 and 14.2
-.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1403000
-MAKE_JOBS_UNSAFE=	yes
+.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1500000
+MAKE_JOBS_NUMBER_LIMIT=	3
 .endif
 
 BOOTSTRAP_JDKS=	${LOCALBASE}/openjdk17 ${LOCALBASE}/bootstrap-openjdk17

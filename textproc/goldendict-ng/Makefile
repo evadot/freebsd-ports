@@ -2,9 +2,10 @@ PORTNAME=	goldendict-ng
 DISTVERSIONPREFIX=	v
 DISTVERSION=	25.10.1
 DISTVERSIONSUFFIX=	-Release.85f9a3d5
+PORTREVISION=	1
 CATEGORIES=	textproc
 
-MAINTAINER=	mew14930xvi@inbox.lv
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Advanced dictionary lookup program, supporting many formats
 WWW=		https://xiaoyifang.github.io/goldendict-ng/
 
