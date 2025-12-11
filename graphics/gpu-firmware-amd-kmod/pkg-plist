@@ -389,7 +389,7 @@
 %%SDMA_6_0_3%%/%%KMODDIR%%/amdgpu_sdma_6_0_3_bin.ko
 %%SDMA_6_1_0%%/%%KMODDIR%%/amdgpu_sdma_6_1_0_bin.ko
 %%SMU_13_0_0%%/%%KMODDIR%%/amdgpu_smu_13_0_0_bin.ko
-%%SMU_13_0_7%6/%%KMODDIR%%/amdgpu_smu_13_0_6_bin.ko
+%%SMU_13_0_6%%/%%KMODDIR%%/amdgpu_smu_13_0_6_bin.ko
 %%SMU_13_0_7%%/%%KMODDIR%%/amdgpu_smu_13_0_7_bin.ko
 %%SMU_13_0_10%%/%%KMODDIR%%/amdgpu_smu_13_0_10_bin.ko
 %%SMU_14_0_2%%/%%KMODDIR%%/amdgpu_smu_14_0_2_bin.ko
