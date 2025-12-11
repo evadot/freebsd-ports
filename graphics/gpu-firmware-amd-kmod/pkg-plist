@@ -501,7 +501,7 @@
 %%VERDE%%/%%KMODDIR%%/amdgpu_verde_rlc_bin.ko
 %%VERDE%%/%%KMODDIR%%/amdgpu_verde_smc_bin.ko
 %%VERDE%%/%%KMODDIR%%/amdgpu_verde_uvd_bin.ko
-%%VPE_6_1_0%%/%%KMODDIR%%/amdgpu_vpe_6_1_0.bin
+%%VPE_6_1_0%%/%%KMODDIR%%/amdgpu_vpe_6_1_0.bin.ko
 %%DIMGREY_CAVEFISH%%/%%KMODDIR%%/amdgpu_dimgrey_cavefish_ce_bin.ko
 %%DIMGREY_CAVEFISH%%/%%KMODDIR%%/amdgpu_dimgrey_cavefish_dmcub_bin.ko
 %%DIMGREY_CAVEFISH%%/%%KMODDIR%%/amdgpu_dimgrey_cavefish_me_bin.ko
