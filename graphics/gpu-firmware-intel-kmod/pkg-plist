@@ -53,3 +53,8 @@
 %%ALDERLAKE%%/%%KMODDIR%%/i915_adlp_guc_62_0_3_bin.ko
 %%ALDERLAKE%%/%%KMODDIR%%/i915_adlp_guc_70_bin.ko
 %%ALDERLAKE%%/%%KMODDIR%%/i915_adls_dmc_ver2_01_bin.ko
+%%METEORLAKE%%/%%KMODDIR%%/mtl_dmc.bin
+%%METEORLAKE%%/%%KMODDIR%%/mtl_dmc_ver2_10.bin
+%%METEORLAKE%%/%%KMODDIR%%/mtl_gsc_1.bin
+%%METEORLAKE%%/%%KMODDIR%%/mtl_guc_70.bin
+%%METEORLAKE%%/%%KMODDIR%%/mtl_huc_gsc.bin
